@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_TemporalityCapacity" />
+  <version value="3.0" />
+  <name value="TemporalityCapacity" />
+  <status value="draft" />
+  <date value="2022-10-05T00:00:00+02:00" />
+  <description value="Paramètre de recherche pour récupérer les affectations temporaires" />
+  <code value="temporality-capacity" />
+  <base value="Location" />
+  <type value="token" />
+  <expression value="Location.extension('http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_supportedCapacity').extension.where(url='TemporalityCapacity').value" />
+</SearchParameter>

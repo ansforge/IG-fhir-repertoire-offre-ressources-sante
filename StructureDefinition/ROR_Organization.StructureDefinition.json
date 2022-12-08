@@ -1,0 +1,708 @@
+{
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "lastUpdated": "2022-08-30T13:30:16.129063+00:00"
+  },
+  "url": "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR-Organization",
+  "version": "3.0",
+  "name": "ROR_Organization",
+  "status": "active",
+  "date": "2021-05-14T13:30:25.2187439+00:00",
+  "publisher": "ANS",
+  "contact": [
+    {
+      "name": "monserviceclient.annuaire@asipsante.fr"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "http://interopsante.org/fhir/structuredefinition/resource/fr-organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.id",
+        "path": "Organization.id",
+        "min": 1
+      },
+      {
+        "id": "Organization.meta",
+        "path": "Organization.meta",
+        "min": 1
+      },
+      {
+        "id": "Organization.meta.source",
+        "path": "Organization.meta.source",
+        "fixedUri": "https://annuaire.sante.fr"
+      },
+      {
+        "id": "Organization.meta.profile",
+        "path": "Organization.meta.profile",
+        "fixedCanonical": "https://apifhir.annuaire.sante.fr/exposed/structuredefinition/organization-rass"
+      },
+      {
+        "id": "Organization.extension",
+        "path": "Organization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Organization.extension:description",
+        "path": "Organization.extension",
+        "sliceName": "description",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Organization.extension:pharmacyLicence",
+        "path": "Organization.extension",
+        "sliceName": "pharmacyLicence",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/organization-pharmacyLicence"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Organization.extension:digitalCertificate",
+        "path": "Organization.extension",
+        "sliceName": "digitalCertificate",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/digitalCertificate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Organization.extension:mailboxMSS",
+        "path": "Organization.extension",
+        "sliceName": "mailboxMSS",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/mailboxMSS"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Organization.extension:HealthCareTerritorial",
+        "path": "Organization.extension",
+        "sliceName": "HealthCareTerritorial",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthCareTerritorial"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:price",
+        "path": "Organization.extension",
+        "sliceName": "price",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationPrice"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:dropZone",
+        "path": "Organization.extension",
+        "sliceName": "dropZone",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_dropZone"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:financialHelpType",
+        "path": "Organization.extension",
+        "sliceName": "financialHelpType",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationFinancialHelpType"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:accomodationFamily",
+        "path": "Organization.extension",
+        "sliceName": "accomodationFamily",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationAccomodationFamily"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:NbPermanentSocialHelpPlace",
+        "path": "Organization.extension",
+        "sliceName": "NbPermanentSocialHelpPlace",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationNbPermanentSocialHelpPlace"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:NbTemporarySocialHelpPlace",
+        "path": "Organization.extension",
+        "sliceName": "NbTemporarySocialHelpPlace",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationNbTemporarySocialHelpPlace"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:period",
+        "path": "Organization.extension",
+        "sliceName": "period",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/ROR_organization-period"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:accessibilityLocation",
+        "path": "Organization.extension",
+        "sliceName": "accessibilityLocation",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_accessibilityLocation"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.extension:accessibilityLocation.value[x]",
+        "path": "Organization.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J50-AccessibiliteLieu-ROR/FHIR/JDV-J50-AccessibiliteLieu-ROR/"
+        }
+      },
+      {
+        "id": "Organization.extension:levelRecourseORSAN",
+        "path": "Organization.extension",
+        "sliceName": "levelRecourseORSAN",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_levelRecourseORSAN"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Organization.identifier.use",
+        "path": "Organization.identifier.use",
+        "fixedCode": "official"
+      },
+      {
+        "id": "Organization.type:organisationType",
+        "path": "Organization.type",
+        "sliceName": "organisationType",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "description": "Binding JDV_J203-TypeOrganisationInterne-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J203-TypeOrganisationInterne-ROR/FHIR/JDV6J203-TypeOrganisationInterne-ROR/"
+        }
+      },
+      {
+        "id": "Organization.type:organizationActivityField",
+        "path": "Organization.type",
+        "sliceName": "organizationActivityField",
+        "max": "0"
+      },
+      {
+        "id": "Organization.type:activiteINSEE",
+        "path": "Organization.type",
+        "sliceName": "activiteINSEE",
+        "max": "0"
+      },
+      {
+        "id": "Organization.type:statutJuridiqueINSEE",
+        "path": "Organization.type",
+        "sliceName": "statutJuridiqueINSEE",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "description": "Binding JDV_J199-StatutJuridique-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J199-StatutJuridique-ROR/FHIR/JDV-J199-StatutJuridique-ROR/"
+        }
+      },
+      {
+        "id": "Organization.type:CategorieEtablissement",
+        "path": "Organization.type",
+        "sliceName": "CategorieEtablissement",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Binding JDV_J55-CategorieEG-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/JDV_J55-CategorieEG-ROR.pdf"
+        }
+      },
+      {
+        "id": "Organization.type:CategorieEtablissement.coding.system",
+        "path": "Organization.type.coding.system",
+        "fixedUri": "urn:oid:1.2.250.1.213.1.6.1.8"
+      },
+      {
+        "id": "Organization.type:SPHparticipation",
+        "path": "Organization.type",
+        "sliceName": "SPHparticipation",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "Binding JDV_J202-ESPIC-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J202-ESPIC-ROR/FHIR/JDV-J202-ESPIC-ROR/"
+        }
+      },
+      {
+        "id": "Organization.type:SPHparticipation.coding.system",
+        "path": "Organization.type.coding.system",
+        "fixedUri": "urn:oid:1.2.250.1.213.1.6.1.45"
+      },
+      {
+        "id": "Organization.type:sousEnsembleAgregatStatutJuridique",
+        "path": "Organization.type",
+        "sliceName": "sousEnsembleAgregatStatutJuridique",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J200-SousEnsembleAgregatStatutJuridique-ROR/FHIR/JDV-J200-SousEnsembleAgregatStatutJuridique-ROR/"
+        }
+      },
+      {
+        "id": "Organization.name",
+        "path": "Organization.name",
+        "min": 1
+      },
+      {
+        "id": "Organization.alias",
+        "path": "Organization.alias",
+        "max": "1"
+      },
+      {
+        "id": "Organization.address",
+        "path": "Organization.address",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/fr-address-extended"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Organization.address.extension",
+        "path": "Organization.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Organization.address.extension:inseeCode",
+        "path": "Organization.address.extension",
+        "sliceName": "inseeCode",
+        "min": 0
+      },
+      {
+        "id": "Organization.address.extension:inseeCode.value[x]",
+        "path": "Organization.address.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "description": "JDV_J230-CommuneOM-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J230-CommuneOM-ROR/FHIR/JDV-J230-CommuneOM-ROR/"
+        }
+      },
+      {
+        "id": "Organization.address.extension:name",
+        "path": "Organization.address.extension",
+        "sliceName": "name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressName"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.address.extension:description",
+        "path": "Organization.address.extension",
+        "sliceName": "description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressDescription"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.address.extension:status",
+        "path": "Organization.address.extension",
+        "sliceName": "status",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressStatus"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.address.extension:geolocation",
+        "path": "Organization.address.extension",
+        "sliceName": "geolocation",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/ROR_geolocation"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.address.extension:CalculatedDistance",
+        "path": "Organization.address.extension",
+        "sliceName": "CalculatedDistance",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressCalculatedDistance"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.address.line.extension",
+        "path": "Organization.address.line.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Organization.address.line.extension:careOf",
+        "path": "Organization.address.line.extension",
+        "sliceName": "careOf",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.address.line.extension:additionalLocator",
+        "path": "Organization.address.line.extension",
+        "sliceName": "additionalLocator",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.address.line.extension:houseNumber",
+        "path": "Organization.address.line.extension",
+        "sliceName": "houseNumber",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.address.line.extension:buildingNumberSuffix",
+        "path": "Organization.address.line.extension",
+        "sliceName": "buildingNumberSuffix",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.address.line.extension:streetNameType",
+        "path": "Organization.address.line.extension",
+        "sliceName": "streetNameType",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.address.line.extension:streetNameType.value[x]:valueString",
+        "path": "Organization.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "binding": {
+          "strength": "required",
+          "description": "JDV_J219-TypeVoie-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR/"
+        }
+      },
+      {
+        "id": "Organization.address.line.extension:streetNamebase",
+        "path": "Organization.address.line.extension",
+        "sliceName": "streetNamebase",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.address.line.extension:postBox",
+        "path": "Organization.address.line.extension",
+        "sliceName": "postBox",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.address.line.extension:locality",
+        "path": "Organization.address.line.extension",
+        "sliceName": "locality",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationAddressLineISO21090-adxp-locality"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.contact.extension",
+        "path": "Organization.contact.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Organization.contact.extension:description",
+        "path": "Organization.contact.extension",
+        "sliceName": "description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactDescription"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.contact.extension:fonctionContact",
+        "path": "Organization.contact.extension",
+        "sliceName": "fonctionContact",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactFonctionContact"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.contact.extension:confidentialityLevel",
+        "path": "Organization.contact.extension",
+        "sliceName": "confidentialityLevel",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactConfidentialityLevel"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.contact.purpose",
+        "path": "Organization.contact.purpose",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR/"
+        }
+      },
+      {
+        "id": "Organization.contact.telecom.extension",
+        "path": "Organization.contact.telecom.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Organization.contact.telecom.extension:confidentialityLevel",
+        "path": "Organization.contact.telecom.extension",
+        "sliceName": "confidentialityLevel",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactTelecomConfidentialityLevel"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.contact.telecom.extension:usage",
+        "path": "Organization.contact.telecom.extension",
+        "sliceName": "usage",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactTelecomUsage"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Organization.contact.telecom.system",
+        "path": "Organization.contact.telecom.system",
+        "min": 1
+      },
+      {
+        "id": "Organization.contact.telecom.value",
+        "path": "Organization.contact.telecom.value",
+        "min": 1
+      },
+      {
+        "id": "Organization.endpoint",
+        "path": "Organization.endpoint",
+        "max": "0"
+      }
+    ]
+  }
+}

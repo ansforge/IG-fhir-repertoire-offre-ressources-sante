@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressDescription" />
+  <version value="3.0" />
+  <name value="ROR_addressDescription" />
+  <status value="draft" />
+  <date value="2022-06-30" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Organization.address" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressDescription" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

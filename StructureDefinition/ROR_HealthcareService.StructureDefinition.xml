@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService" />
+  <version value="1.0" />
+  <name value="ROR_HealthcareService" />
+  <status value="active" />
+  <date value="2022-06-30" />
+  <publisher value="ANS" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="HealthcareService" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HealthcareService.id">
+      <path value="HealthcareService.id" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.meta">
+      <path value="HealthcareService.meta" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.extension">
+      <path value="HealthcareService.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="HealthcareService.extension:ROR_HealhcareService_PatientType">
+      <path value="HealthcareService.extension" />
+      <sliceName value="ROR_HealhcareService_PatientType" />
+      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService_PatientType" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.extension:ROR_HealthcareService_InterventionZone">
+      <path value="HealthcareService.extension" />
+      <sliceName value="ROR_HealthcareService_InterventionZone" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService_InterventionZone" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.extension:ROR_HealthcareService_PsychiatricSector">
+      <path value="HealthcareService.extension" />
+      <sliceName value="ROR_HealthcareService_PsychiatricSector" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService_PsychiatricSector" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.extension:ROR_HealthcareService_SensitiveUnit">
+      <path value="HealthcareService.extension" />
+      <sliceName value="ROR_HealthcareService_SensitiveUnit" />
+      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService_SensitiveUnit" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.extension:noConsentHabilitation">
+      <path value="HealthcareService.extension" />
+      <sliceName value="noConsentHabilitation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareServiceNoConsentHabilitation" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.extension:interventionZone">
+      <path value="HealthcareService.extension" />
+      <sliceName value="interventionZone" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService_InterventionZone" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.extension:interventionZone.extension">
+      <path value="HealthcareService.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="HealthcareService.extension:interventionZone.extension:type">
+      <path value="HealthcareService.extension.extension" />
+      <sliceName value="type" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR/" />
+      </binding>
+    </element>
+    <element id="HealthcareService.extension:careWithoutPatientApproval">
+      <path value="HealthcareService.extension" />
+      <sliceName value="careWithoutPatientApproval" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_careWithoutPatientApproval" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.extension:specificCompetence">
+      <path value="HealthcareService.extension" />
+      <sliceName value="specificCompetence" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_specificCompetence" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.identifier">
+      <path value="HealthcareService.identifier" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="HealthcareService.category">
+      <path value="HealthcareService.category" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J34-CategorieOrganisation-ROR/" />
+      </binding>
+    </element>
+    <element id="HealthcareService.type">
+      <path value="HealthcareService.type" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.type.coding">
+      <path value="HealthcareService.type.coding" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/" />
+      </binding>
+    </element>
+    <element id="HealthcareService.type.coding.system">
+      <path value="HealthcareService.type.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite" />
+    </element>
+    <element id="HealthcareService.specialty">
+      <path value="HealthcareService.specialty" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.specialty:operationalActivity">
+      <path value="HealthcareService.specialty" />
+      <sliceName value="operationalActivity" />
+      <short value="An operational activity handled by the HealthcareService" />
+      <definition value="Collection of operational activities handled by the service site. This is more of a medical term." />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="An operational activity that a healthcare service may provide." />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.specialty:operationalActivityFamily">
+      <path value="HealthcareService.specialty" />
+      <sliceName value="operationalActivityFamily" />
+      <short value="Family of operational activities handled by the HealthcareService" />
+      <definition value="Collection of operational activity families, except Serafin." />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="A family of operationnal activities that a healthcare service may provide." />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.specialty:operationalActivityFamily.coding.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R266-FamilleActiviteOperationnelleHorsSerafin/FHIR/TRE-R266-FamilleActiviteOperationnelleHorsSerafin" />
+    </element>
+    <element id="HealthcareService.location">
+      <path value="HealthcareService.location" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.characteristic">
+      <path value="HealthcareService.characteristic" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="HealthcareService.characteristic:careMode">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="careMode" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:careMode.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge" />
+    </element>
+    <element id="HealthcareService.characteristic:receptionModality">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="receptionModality" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J226-ModaliteAccueil-ROR/FHIR/JDV-J226-ModaliteAccueil-ROR/" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:managementType">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="managementType" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:managementType.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R236-ModeGestion/FHIR/TRE-R236-ModeGestion" />
+    </element>
+    <element id="HealthcareService.characteristic:receptionType">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="receptionType" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:takingCareSpeciality">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="takingCareSpeciality" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J35-SpecialisationDePriseEnCharge-ROR/FHIR/JDV-J35-SpecialisationDePriseEnCharge-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:takingCareSpeciality.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R245-SpecialisationDePriseEnCharge/FHIR/TRE-R245-SpecialisationDePriseEnCharge" />
+    </element>
+    <element id="HealthcareService.characteristic:annualOpening">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="annualOpening" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J28-OuvertureAnnuelle-ROR/FHIR/JDV-J28-OuvertureAnnuelle-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:annualOpening.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle" />
+    </element>
+    <element id="HealthcareService.characteristic:specificAct">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="specificAct" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:specificAct.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique" />
+    </element>
+    <element id="HealthcareService.characteristic:ressourceProfession">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="ressourceProfession" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J186-ProfessionRessource-ROR/FHIR/JDV_J186-ProfessionRessource-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:specificCompetence">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="specificCompetence" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:specificCompetence.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R243-CompetenceSpecifique/FHIR/TRE-R243-CompetenceSpecifique" />
+    </element>
+    <element id="HealthcareService.characteristic:expertiseLevel">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="expertiseLevel" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J227-NiveauExpertise-ROR/FHIR/JDV-J227-NiveauExpertise-ROR/" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:expertiseLevel.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite" />
+    </element>
+    <element id="HealthcareService.characteristic:temporalityStopService">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="temporalityStopService" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR/" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:outsideOfficeAct">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="outsideOfficeAct" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR" />
+      </binding>
+    </element>
+    <element id="HealthcareService.availableTime.extension">
+      <path value="HealthcareService.availableTime.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="HealthcareService.availableTime.extension:EffectiveOpeningClosingDate">
+      <path value="HealthcareService.availableTime.extension" />
+      <sliceName value="EffectiveOpeningClosingDate" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr//fhir/StructureDefinition/ROR_AvailableTime_EffectiveOpeningClosingDate" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.availableTime.extension:NumberDaysofWeek">
+      <path value="HealthcareService.availableTime.extension" />
+      <sliceName value="NumberDaysofWeek" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_AvailableTime_NumberDaysofWeek" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.availableTime.extension:typeOfTime">
+      <path value="HealthcareService.availableTime.extension" />
+      <sliceName value="typeOfTime" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService_AvailableTime_TypeOfTime" />
+      </type>
+      <isModifier value="false" />
+    </element>
+  </differential>
+</StructureDefinition>

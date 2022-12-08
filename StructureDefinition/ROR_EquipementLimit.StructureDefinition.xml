@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_EquipementLimit" />
+  <version value="3" />
+  <name value="ROR_EquipementLimit" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Location" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="Extension.extension:equipementFeature">
+      <path value="Extension.extension" />
+      <sliceName value="equipementFeature" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:equipementFeature.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="equipementFeature" />
+    </element>
+    <element id="Extension.extension:equipementFeature.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:limitValue">
+      <path value="Extension.extension" />
+      <sliceName value="limitValue" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:limitValue.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="limitValue" />
+    </element>
+    <element id="Extension.extension:limitValue.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_EquipementLimit" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
