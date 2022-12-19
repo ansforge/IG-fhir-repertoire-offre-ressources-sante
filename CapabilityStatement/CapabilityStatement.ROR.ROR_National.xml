@@ -5,7 +5,7 @@
    <title value="CI-SIS ROR - ROR_National"></title>
    <status value="active"></status>
    <experimental value="false"></experimental>
-   <date value="2022-10-20T16:15:34+02:00"></date>
+   <date value="2022-12-15T15:31:21+01:00"></date>
    <publisher value="ANS"></publisher>
    <description value="Système ROR National Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."></description>
    <kind value="requirements"></kind>
@@ -38,70 +38,10 @@ d’information de santé (CI-SIS)"></description>
             <documentation value="Identifiant logique du lieu de réalisation de l'offre"></documentation>
          </searchParam>
          <searchParam>
-            <name value="type"></name>
-            <definition value="http://hl7.org/fhir/SearchParameter/Location-type"></definition>
-            <type value="token"></type>
-            <documentation value="Fonction du lieu de réalisation de l'offre"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="address"></name>
-            <definition value="http://hl7.org/fhir/SearchParameter/Location-address"></definition>
-            <type value="string"></type>
-            <documentation value="Adresse du lieu de réalisation de l'offre"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="status"></name>
-            <definition value="http://hl7.org/fhir/SearchParameter/Location-status"></definition>
-            <type value="token"></type>
-            <documentation value="Fonction du lieu de réalisation de l'offre"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="address-postalcode"></name>
-            <definition value="http://hl7.org/fhir/SearchParameter/Location-address-postalcode"></definition>
-            <type value="string"></type>
-            <documentation value="Code postale du lieu de réalisation de l'offre"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="address-city"></name>
-            <definition value="http://hl7.org/fhir/SearchParameter/Location-address-city"></definition>
-            <type value="string"></type>
-            <documentation value="Code postale du lieu de réalisation de l'offre"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="nearINSEECode"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/Location-nearINSEECode"></definition>
-            <type value="special"></type>
-            <documentation value="Lieux proches du lieu de réalisation de l'offre via le code COG INSEE"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="near"></name>
-            <definition value="http://hl7.org/fhir/SearchParameter/Location-near"></definition>
-            <type value="special"></type>
-            <documentation value="Lieux proches du lieu de réalisation de l'offre"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="temporary-assignement"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_TemporaryAssignement"></definition>
-            <type value="token"></type>
-            <documentation value="Affectation temporaire"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="capacity-type"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_CapacityType"></definition>
-            <type value="token"></type>
-            <documentation value="Nature de la capacité"></documentation>
-         </searchParam>
-         <searchParam>
             <name value="capacity-status"></name>
             <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_CapacityStatus"></definition>
             <type value="token"></type>
             <documentation value="Statut de la capacité"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="temporality-capacity"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_TemporalityCapacity"></definition>
-            <type value="token"></type>
-            <documentation value="Temporalité de la capacité"></documentation>
          </searchParam>
          <searchParam>
             <name value="nb-capacity"></name>
@@ -110,64 +50,44 @@ d’information de santé (CI-SIS)"></description>
             <documentation value="Nombre de capacité"></documentation>
          </searchParam>
          <searchParam>
-            <name value="gender-capacity"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_GenderCapacityAvailable"></definition>
-            <type value="token"></type>
-            <documentation value="Genre de la capacité disponible"></documentation>
-         </searchParam>
-         <searchParam>
             <name value="capacity-update"></name>
             <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_CapacityUpdateDate"></definition>
             <type value="date"></type>
             <documentation value="Date de la mise a jour de la capacité"></documentation>
          </searchParam>
          <searchParam>
-            <name value="capacity-closing-type"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_CapacityClosingType"></definition>
+            <name value="_lastUpdated"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"></definition>
+            <type value="date"></type>
+            <documentation value="Date de la dernière mise a jour"></documentation>
+         </searchParam>
+      </resource>
+      <resource>
+         <type value="HealthcareService"></type>
+         <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService"></profile>
+         <interaction>
+            <code value="search-type"></code>
+         </interaction>
+         <interaction>
+            <code value="read"></code>
+         </interaction>
+         <searchParam>
+            <name value="_id"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"></definition>
             <type value="token"></type>
-            <documentation value="Type de la fermeture de la capacité"></documentation>
+            <documentation value="Identifiant logique de la ressource"></documentation>
          </searchParam>
          <searchParam>
-            <name value="additional-bed-type"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_AdditionalBedType"></definition>
+            <name value="_id"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-location"></definition>
+            <type value="reference"></type>
+            <documentation value="Référence à la ressource Location"></documentation>
+         </searchParam>
+         <searchParam>
+            <name value="identifier"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"></definition>
             <type value="token"></type>
-            <documentation value="Type de lit supplémentaire"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="crisis-type"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_CrisisType"></definition>
-            <type value="token"></type>
-            <documentation value="Type de crise"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="equipment-feature"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_EquipmentFeature"></definition>
-            <type value="token"></type>
-            <documentation value="Type de caractéristique"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="limit-value"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_LimitValue"></definition>
-            <type value="quantity"></type>
-            <documentation value="Valeur limite"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="equipement-type"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_EquipementType"></definition>
-            <type value="token"></type>
-            <documentation value="Type d'équipement"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="residential-number"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_ResidentialNumber"></definition>
-            <type value="number"></type>
-            <documentation value="Nombre d'habitation"></documentation>
-         </searchParam>
-         <searchParam>
-            <name value="residential-type"></name>
-            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_ResidentialType"></definition>
-            <type value="token"></type>
-            <documentation value="Type d'habitation"></documentation>
+            <documentation value="Identifiant métier de l’offre"></documentation>
          </searchParam>
       </resource>
    </rest>

@@ -75,6 +75,70 @@
       </type>
       <isModifier value="false" />
     </element>
+    <element id="Location.identifier">
+      <path value="Location.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Location.identifier:idExterneSynchro">
+      <path value="Location.identifier" />
+      <sliceName value="idExterneSynchro" />
+      <max value="1" />
+    </element>
+    <element id="Location.identifier:idExterneSynchro.type">
+      <path value="Location.identifier.type" />
+      <code>
+        <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+        <code value="10" />
+      </code>
+      <min value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+          <code value="26" />
+        </coding>
+      </fixedCodeableConcept>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+      </binding>
+    </element>
+    <element id="Location.identifier:identifiant">
+      <path value="Location.identifier" />
+      <sliceName value="identifiant" />
+      <max value="1" />
+    </element>
+    <element id="Location.identifier:identifiant.type">
+      <path value="Location.identifier.type" />
+      <min value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+          <code value="25" />
+        </coding>
+      </fixedCodeableConcept>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+      </binding>
+    </element>
     <element id="Location.telecom.extension">
       <path value="Location.telecom.extension" />
       <slicing>

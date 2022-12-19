@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2022-12-16T10:19:37.2984799+00:00" />
+  </meta>
+  <url value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR-Organization" />
+  <version value="3.0" />
+  <name value="ROR_Organization" />
+  <status value="active" />
+  <date value="2021-05-14T13:30:25.2187439+00:00" />
+  <publisher value="ANS" />
+  <contact>
+    <name value="monserviceclient.annuaire@asipsante.fr" />
+  </contact>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://interopsante.org/fhir/structuredefinition/resource/fr-organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization.id">
+      <path value="Organization.id" />
+      <min value="1" />
+    </element>
+    <element id="Organization.meta">
+      <path value="Organization.meta" />
+      <min value="1" />
+    </element>
+    <element id="Organization.meta.source">
+      <path value="Organization.meta.source" />
+      <fixedUri value="https://annuaire.sante.fr" />
+    </element>
+    <element id="Organization.meta.profile">
+      <path value="Organization.meta.profile" />
+      <fixedCanonical value="https://apifhir.annuaire.sante.fr/exposed/structuredefinition/organization-rass" />
+    </element>
+    <element id="Organization.extension">
+      <path value="Organization.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Organization.extension:description">
+      <path value="Organization.extension" />
+      <sliceName value="description" />
+      <min value="0" />
+      <max value="0" />
+    </element>
+    <element id="Organization.extension:pharmacyLicence">
+      <path value="Organization.extension" />
+      <sliceName value="pharmacyLicence" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/organization-pharmacyLicence" />
+      </type>
+    </element>
+    <element id="Organization.extension:digitalCertificate">
+      <path value="Organization.extension" />
+      <sliceName value="digitalCertificate" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/digitalCertificate" />
+      </type>
+    </element>
+    <element id="Organization.extension:mailboxMSS">
+      <path value="Organization.extension" />
+      <sliceName value="mailboxMSS" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/mailboxMSS" />
+      </type>
+    </element>
+    <element id="Organization.extension:HealthCareTerritorial">
+      <path value="Organization.extension" />
+      <sliceName value="HealthCareTerritorial" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthCareTerritorial" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:price">
+      <path value="Organization.extension" />
+      <sliceName value="price" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationPrice" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:dropZone">
+      <path value="Organization.extension" />
+      <sliceName value="dropZone" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_dropZone" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:financialHelpType">
+      <path value="Organization.extension" />
+      <sliceName value="financialHelpType" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationFinancialHelpType" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:accomodationFamily">
+      <path value="Organization.extension" />
+      <sliceName value="accomodationFamily" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationAccomodationFamily" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:NbPermanentSocialHelpPlace">
+      <path value="Organization.extension" />
+      <sliceName value="NbPermanentSocialHelpPlace" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationNbPermanentSocialHelpPlace" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:NbTemporarySocialHelpPlace">
+      <path value="Organization.extension" />
+      <sliceName value="NbTemporarySocialHelpPlace" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationNbTemporarySocialHelpPlace" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:period">
+      <path value="Organization.extension" />
+      <sliceName value="period" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/ROR_organization-period" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:accessibilityLocation">
+      <path value="Organization.extension" />
+      <sliceName value="accessibilityLocation" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_accessibilityLocation" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.extension:accessibilityLocation.value[x]">
+      <path value="Organization.extension.value[x]" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J50-AccessibiliteLieu-ROR/FHIR/JDV-J50-AccessibiliteLieu-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.extension:levelRecourseORSAN">
+      <path value="Organization.extension" />
+      <sliceName value="levelRecourseORSAN" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_levelRecourseORSAN" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier.use">
+      <path value="Organization.identifier.use" />
+      <fixedCode value="official" />
+    </element>
+    <element id="Organization.identifier:iDNat_Struct">
+      <path value="Organization.identifier" />
+      <sliceName value="iDNat_Struct" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:iDNat_Struct.type">
+      <path value="Organization.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+          <code value="40" />
+        </coding>
+      </fixedCodeableConcept>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.identifier:numFINESS">
+      <path value="Organization.identifier" />
+      <sliceName value="numFINESS" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:numFINESS.type">
+      <path value="Organization.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+          <code value="1" />
+        </coding>
+      </fixedCodeableConcept>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.identifier:numSIREN">
+      <path value="Organization.identifier" />
+      <sliceName value="numSIREN" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:numSIREN.type">
+      <path value="Organization.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+          <code value="2" />
+        </coding>
+      </fixedCodeableConcept>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.identifier:numSIRET">
+      <path value="Organization.identifier" />
+      <sliceName value="numSIRET" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:numSIRET.type">
+      <path value="Organization.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+          <code value="3" />
+        </coding>
+      </fixedCodeableConcept>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.identifier:numEGRPPS">
+      <path value="Organization.identifier" />
+      <sliceName value="numEGRPPS" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:numEGRPPS.type">
+      <path value="Organization.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+          <code value="4" />
+        </coding>
+      </fixedCodeableConcept>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.identifier:identifiantOI">
+      <path value="Organization.identifier" />
+      <sliceName value="identifiantOI" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:identifiantOI.type">
+      <path value="Organization.identifier.type" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+          <code value="42" />
+        </coding>
+      </fixedCodeableConcept>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV_J236-TypeIdentifiant-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.type:organisationType">
+      <path value="Organization.type" />
+      <sliceName value="organisationType" />
+      <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="required" />
+        <description value="Binding JDV_J203-TypeOrganisationInterne-ROR" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J203-TypeOrganisationInterne-ROR/FHIR/JDV6J203-TypeOrganisationInterne-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.type:organizationActivityField">
+      <path value="Organization.type" />
+      <sliceName value="organizationActivityField" />
+      <max value="0" />
+    </element>
+    <element id="Organization.type:activiteINSEE">
+      <path value="Organization.type" />
+      <sliceName value="activiteINSEE" />
+      <max value="0" />
+    </element>
+    <element id="Organization.type:statutJuridiqueINSEE">
+      <path value="Organization.type" />
+      <sliceName value="statutJuridiqueINSEE" />
+      <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="required" />
+        <description value="Binding JDV_J199-StatutJuridique-ROR" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J199-StatutJuridique-ROR/FHIR/JDV-J199-StatutJuridique-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.type:CategorieEtablissement">
+      <path value="Organization.type" />
+      <sliceName value="CategorieEtablissement" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="required" />
+        <description value="Binding JDV_J55-CategorieEG-ROR" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/JDV_J55-CategorieEG-ROR.pdf" />
+      </binding>
+    </element>
+    <element id="Organization.type:CategorieEtablissement.coding.system">
+      <path value="Organization.type.coding.system" />
+      <fixedUri value="urn:oid:1.2.250.1.213.1.6.1.8" />
+    </element>
+    <element id="Organization.type:SPHparticipation">
+      <path value="Organization.type" />
+      <sliceName value="SPHparticipation" />
+      <max value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="required" />
+        <description value="Binding JDV_J202-ESPIC-ROR" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J202-ESPIC-ROR/FHIR/JDV-J202-ESPIC-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.type:SPHparticipation.coding.system">
+      <path value="Organization.type.coding.system" />
+      <fixedUri value="urn:oid:1.2.250.1.213.1.6.1.45" />
+    </element>
+    <element id="Organization.type:sousEnsembleAgregatStatutJuridique">
+      <path value="Organization.type" />
+      <sliceName value="sousEnsembleAgregatStatutJuridique" />
+      <max value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J200-SousEnsembleAgregatStatutJuridique-ROR/FHIR/JDV-J200-SousEnsembleAgregatStatutJuridique-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <min value="1" />
+    </element>
+    <element id="Organization.alias">
+      <path value="Organization.alias" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <type>
+        <code value="Address" />
+        <profile value="https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/fr-address-extended" />
+      </type>
+    </element>
+    <element id="Organization.address.extension">
+      <path value="Organization.address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Organization.address.extension:inseeCode">
+      <path value="Organization.address.extension" />
+      <sliceName value="inseeCode" />
+      <min value="0" />
+    </element>
+    <element id="Organization.address.extension:inseeCode.value[x]">
+      <path value="Organization.address.extension.value[x]" />
+      <binding>
+        <strength value="required" />
+        <description value="JDV_J230-CommuneOM-ROR" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J230-CommuneOM-ROR/FHIR/JDV-J230-CommuneOM-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.address.extension:name">
+      <path value="Organization.address.extension" />
+      <sliceName value="name" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressName" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.address.extension:description">
+      <path value="Organization.address.extension" />
+      <sliceName value="description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressDescription" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.address.extension:status">
+      <path value="Organization.address.extension" />
+      <sliceName value="status" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressStatus" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.address.extension:geolocation">
+      <path value="Organization.address.extension" />
+      <sliceName value="geolocation" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/ROR_geolocation" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.address.extension:CalculatedDistance">
+      <path value="Organization.address.extension" />
+      <sliceName value="CalculatedDistance" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_addressCalculatedDistance" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.address.line.extension">
+      <path value="Organization.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Organization.address.line.extension:careOf">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="careOf" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line.extension:additionalLocator">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="additionalLocator" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line.extension:houseNumber">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="houseNumber" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line.extension:buildingNumberSuffix">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="buildingNumberSuffix" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line.extension:streetNameType">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="streetNameType" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line.extension:streetNameType.value[x]:valueString">
+      <path value="Organization.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <binding>
+        <strength value="required" />
+        <description value="JDV_J219-TypeVoie-ROR" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.address.line.extension:streetNamebase">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="streetNamebase" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line.extension:postBox">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="postBox" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address.line.extension:locality">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="locality" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationAddressLineISO21090-adxp-locality" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.contact.extension">
+      <path value="Organization.contact.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Organization.contact.extension:description">
+      <path value="Organization.contact.extension" />
+      <sliceName value="description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactDescription" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.contact.extension:fonctionContact">
+      <path value="Organization.contact.extension" />
+      <sliceName value="fonctionContact" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactFonctionContact" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.contact.extension:confidentialityLevel">
+      <path value="Organization.contact.extension" />
+      <sliceName value="confidentialityLevel" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactConfidentialityLevel" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.contact.purpose">
+      <path value="Organization.contact.purpose" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ContactPartyType" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR/" />
+      </binding>
+    </element>
+    <element id="Organization.contact.telecom.extension">
+      <path value="Organization.contact.telecom.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Organization.contact.telecom.extension:confidentialityLevel">
+      <path value="Organization.contact.telecom.extension" />
+      <sliceName value="confidentialityLevel" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactTelecomConfidentialityLevel" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.contact.telecom.extension:usage">
+      <path value="Organization.contact.telecom.extension" />
+      <sliceName value="usage" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactTelecomUsage" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Organization.contact.telecom.system">
+      <path value="Organization.contact.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="Organization.contact.telecom.value">
+      <path value="Organization.contact.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.endpoint">
+      <path value="Organization.endpoint" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
