@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationPrice" />
+  <version value="3.0" />
+  <name value="ROR_organizationPrice" />
+  <status value="draft" />
+  <date value="2022-06-29" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Organization" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="9" />
+    </element>
+    <element id="Extension.extension:priceType">
+      <path value="Extension.extension" />
+      <sliceName value="priceType" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:priceType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="priceType" />
+    </element>
+    <element id="Extension.extension:priceType.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J36-TypeTarif-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:priceUnit">
+      <path value="Extension.extension" />
+      <sliceName value="priceUnit" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:priceUnit.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="priceUnit" />
+    </element>
+    <element id="Extension.extension:priceUnit.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J205-UnitePrix-ROR/FHIR/JDV-J205-UnitePrix-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:Amount">
+      <path value="Extension.extension" />
+      <sliceName value="Amount" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:Amount.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="Amount" />
+    </element>
+    <element id="Extension.extension:Amount.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Money" />
+      </type>
+    </element>
+    <element id="Extension.extension:startDate">
+      <path value="Extension.extension" />
+      <sliceName value="startDate" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:startDate.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="startDate" />
+    </element>
+    <element id="Extension.extension:startDate.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Extension.extension:under60">
+      <path value="Extension.extension" />
+      <sliceName value="under60" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:under60.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="under60" />
+    </element>
+    <element id="Extension.extension:under60.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.extension:deliveryIncluded">
+      <path value="Extension.extension" />
+      <sliceName value="deliveryIncluded" />
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:deliveryIncluded.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="deliveryIncluded" />
+    </element>
+    <element id="Extension.extension:deliveryIncluded.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:othersDeliveryIncluded">
+      <path value="Extension.extension" />
+      <sliceName value="othersDeliveryIncluded" />
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:othersDeliveryIncluded.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="othersDeliveryIncluded" />
+    </element>
+    <element id="Extension.extension:othersDeliveryIncluded.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:residentialType">
+      <path value="Extension.extension" />
+      <sliceName value="residentialType" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:residentialType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="residentialType" />
+    </element>
+    <element id="Extension.extension:residentialType.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:specialPrice">
+      <path value="Extension.extension" />
+      <sliceName value="specialPrice" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:specialPrice.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="specialPrice" />
+    </element>
+    <element id="Extension.extension:specialPrice.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J39-ConditionTarifaire-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:welcomeType">
+      <path value="Extension.extension" />
+      <sliceName value="welcomeType" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:welcomeType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="welcomeType" />
+    </element>
+    <element id="Extension.extension:welcomeType.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:mealDeliveryName">
+      <path value="Extension.extension" />
+      <sliceName value="mealDeliveryName" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:mealDeliveryName.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="mealDeliveryName" />
+    </element>
+    <element id="Extension.extension:mealDeliveryName.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:dependencyLevel">
+      <path value="Extension.extension" />
+      <sliceName value="dependencyLevel" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:dependencyLevel.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="dependencyLevel" />
+    </element>
+    <element id="Extension.extension:dependencyLevel.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J27-GroupeTarifaireDependance-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:humanHelpPriceName">
+      <path value="Extension.extension" />
+      <sliceName value="humanHelpPriceName" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:humanHelpPriceName.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="humanHelpPriceName" />
+    </element>
+    <element id="Extension.extension:humanHelpPriceName.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:managementType">
+      <path value="Extension.extension" />
+      <sliceName value="managementType" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:managementType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="managementType" />
+    </element>
+    <element id="Extension.extension:managementType.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:surchargePriceName">
+      <path value="Extension.extension" />
+      <sliceName value="surchargePriceName" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:surchargePriceName.extension">
+      <path value="Extension.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:surchargePriceName.extension:string">
+      <path value="Extension.extension.extension" />
+      <sliceName value="string" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:surchargePriceName.extension:string.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="string" />
+    </element>
+    <element id="Extension.extension:surchargePriceName.extension:string.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:surchargePriceName.extension:codeableConcept">
+      <path value="Extension.extension.extension" />
+      <sliceName value="codeableConcept" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:surchargePriceName.extension:codeableConcept.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="codeableConcept" />
+    </element>
+    <element id="Extension.extension:surchargePriceName.extension:codeableConcept.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.extension:surchargePriceName.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="surchargePriceName" />
+    </element>
+    <element id="Extension.extension:surchargePriceName.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_organizationPrice" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,94 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+   <url value="http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/ROR_Consommateur"></url>
+   <version value="3.0"></version>
+   <name value="ROR_Consommateur"></name>
+   <title value="CI-SIS ROR - ROR_Consommateur"></title>
+   <status value="active"></status>
+   <experimental value="false"></experimental>
+   <date value="2022-12-15T15:31:21+01:00"></date>
+   <publisher value="ANS"></publisher>
+   <description value="Système qui est autorisé à consommer les données du ROR. "></description>
+   <kind value="requirements"></kind>
+   <fhirVersion value="4.0.1"></fhirVersion>
+   <format value="application/fhir+xml"></format>
+   <format value="application/fhir+json"></format>
+   <implementationGuide value="http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/ROR"></implementationGuide>
+   <rest>
+      <mode value="client"></mode>
+      <documentation value="Recherche et consultation des lieux de réalisation de l'offre"></documentation>
+      <security>
+         <cors value="false"></cors>
+         <description value="L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S
+) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes
+d’information de santé (CI-SIS)"></description>
+      </security>
+      <resource>
+         <type value="Location"></type>
+         <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_Location"></profile>
+         <interaction>
+            <code value="search-type"></code>
+         </interaction>
+         <interaction>
+            <code value="read"></code>
+         </interaction>
+         <searchParam>
+            <name value="identifier"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/Location-identifier"></definition>
+            <type value="token"></type>
+            <documentation value="Identifiant logique du lieu de réalisation de l'offre"></documentation>
+         </searchParam>
+         <searchParam>
+            <name value="capacity-status"></name>
+            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_CapacityStatus"></definition>
+            <type value="token"></type>
+            <documentation value="Statut de la capacité"></documentation>
+         </searchParam>
+         <searchParam>
+            <name value="nb-capacity"></name>
+            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_NbCapacity"></definition>
+            <type value="number"></type>
+            <documentation value="Nombre de capacité"></documentation>
+         </searchParam>
+         <searchParam>
+            <name value="capacity-update"></name>
+            <definition value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_CapacityUpdateDate"></definition>
+            <type value="date"></type>
+            <documentation value="Date de la mise a jour de la capacité"></documentation>
+         </searchParam>
+         <searchParam>
+            <name value="_lastUpdated"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"></definition>
+            <type value="date"></type>
+            <documentation value="Date de la dernière mise a jour"></documentation>
+         </searchParam>
+      </resource>
+      <resource>
+         <type value="HealthcareService"></type>
+         <profile value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_HealthcareService"></profile>
+         <interaction>
+            <code value="search-type"></code>
+         </interaction>
+         <interaction>
+            <code value="read"></code>
+         </interaction>
+         <searchParam>
+            <name value="_id"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"></definition>
+            <type value="token"></type>
+            <documentation value="Identifiant logique de la ressource"></documentation>
+         </searchParam>
+         <searchParam>
+            <name value="_id"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-location"></definition>
+            <type value="reference"></type>
+            <documentation value="Référence à la ressource Location"></documentation>
+         </searchParam>
+         <searchParam>
+            <name value="identifier"></name>
+            <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"></definition>
+            <type value="token"></type>
+            <documentation value="Identifiant métier de l’offre"></documentation>
+         </searchParam>
+      </resource>
+   </rest>
+</CapabilityStatement>

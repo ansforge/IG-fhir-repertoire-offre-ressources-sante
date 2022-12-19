@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactTelecomConfidentialityLevel" />
+  <version value="3.0" />
+  <name value="ROR_contactTelecomConfidentialityLevel" />
+  <status value="draft" />
+  <date value="2022-07-01" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Organization.contact.telecom" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_contactTelecomConfidentialityLevel" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="Binding JDV-J222-NiveauConfidentialite-ROR" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR/" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

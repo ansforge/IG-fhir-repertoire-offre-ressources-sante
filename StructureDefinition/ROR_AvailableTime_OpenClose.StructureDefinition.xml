@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr//fhir/StructureDefinition/ROR_AvailableTime_EffectiveOpeningClosingDate" />
+  <version value="3.0" />
+  <name value="ROR_AvailableTime_EffectiveOpeningClosingDate" />
+  <status value="draft" />
+  <date value="2022-06-30" />
+  <publisher value="ANS" />
+  <description value="Extension de l'élément HealthcareService.availableTime pour répondre au besoin de transmettre les dates effectives de début et de fin de l'ouverture ou de lafermeture, permettant de caractériser les jours d'ouverture ou de fermeture." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="HealthcareService.availableTime" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="PractitionerRole.availableTime" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://esante.gouv.fr//fhir/StructureDefinition/ROR_AvailableTime_EffectiveOpeningClosingDate" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr/fhir/StructureDefinition/ROR_PractitionerRole_UnitExerciseMode" />
+  <version value="1.0" />
+  <name value="ROR_PractitionerRole_UnitExerciseMode" />
+  <status value="active" />
+  <date value="2022-06-30" />
+  <publisher value="ANS" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="PractitionerRole" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://esante.gouv.fr//fhir/StructureDefinition/ROR_PractitionerRole_UnitExerciseMode" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Extension.value[x].coding">
+      <path value="Extension.value[x].coding" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J217-ModeExercice-ROR/FHIR/JDV-J217-ModeExercice-ROR" />
+      </binding>
+    </element>
+    <element id="Extension.value[x].coding.system">
+      <path value="Extension.value[x].coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice" />
+    </element>
+  </differential>
+</StructureDefinition>

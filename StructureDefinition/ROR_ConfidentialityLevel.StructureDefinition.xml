@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_ConfidentialityLevel" />
+  <version value="3" />
+  <name value="ROR_ConfidentialityLevel" />
+  <status value="draft" />
+  <date value="2022-06-28T00:00:00+02:00" />
+  <description value="Extension permettant de définir le niveau de confidentialité pour répondre au besoin de transmettre le niveau de restriction de l'accès aux attributs des éléments telecom et contact." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="ContactPoint" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="BackboneElement" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/ROR_ConfidentialityLevel" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR/" />
+      </binding>
+    </element>
+    <element id="Extension.value[x].coding">
+      <path value="Extension.value[x].coding" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR" />
+      </binding>
+    </element>
+    <element id="Extension.value[x].coding.system">
+      <path value="Extension.value[x].coding.system" />
+      <fixedUri value="https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/TRE_R283-NiveauConfidentialite" />
+    </element>
+  </differential>
+</StructureDefinition>
