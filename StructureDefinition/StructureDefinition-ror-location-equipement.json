@@ -1,0 +1,96 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-location-equipement",
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location-equipement",
+  "version": "3.0",
+  "name": "RORLocationEquipement",
+  "status": "active",
+  "publisher": "ANS",
+  "description": "Extension créée dans le cadre du ROR",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Location"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:equipementType",
+        "path": "Extension.extension",
+        "sliceName": "equipementType",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:equipementType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "equipementType"
+      },
+      {
+        "id": "Extension.extension:equipementType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/JDV-J18-EquipementSpecifique-ROR"
+        }
+      },
+      {
+        "id": "Extension.extension:nbInService",
+        "path": "Extension.extension",
+        "sliceName": "nbInService",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:nbInService.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "nbInService"
+      },
+      {
+        "id": "Extension.extension:nbInService.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location-equipement"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

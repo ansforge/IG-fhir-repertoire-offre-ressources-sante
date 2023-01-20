@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-contact-telecom-confidentiality-level",
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-contact-telecom-confidentiality-level",
+  "version": "3.0",
+  "name": "RORContactTelecomConfidentialityLevel",
+  "status": "active",
+  "date": "2022-07-01",
+  "publisher": "ANS",
+  "description": "Extension créée dans le cadre du ROR",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Organization.contact.telecom"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-contact-telecom-confidentiality-level"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Binding JDV-J222-NiveauConfidentialite-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "ror-serveur",
+  "url": "http://esante.gouv.fr/fhir/ror/CapabilityStatement/ror-serveur",
+  "version": "3.0",
+  "name": "RORServeur",
+  "title": "ROR-RORServeur",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-01-18T16:05:38+01:00",
+  "publisher": "ANS",
+  "description": "Système ROR National Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national.",
+  "kind": "requirements",
+  "fhirVersion": "4.0.1",
+  "format": [
+    "application/fhir+xml",
+    "application/fhir+json"
+  ],
+  "implementationGuide": [
+    "http://esante.gouv.fr/fhir/ror/ImplementationGuide/ror-ig"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "documentation": "Recherche et consultation des lieux de réalisation de l'offre",
+      "security": {
+        "cors": false,
+        "description": "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
+      },
+      "resource": [
+        {
+          "type": "Location",
+          "profile": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "read"
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Location-identifier",
+              "type": "token",
+              "documentation": "Identifiant logique du lieu de réalisation de l'offre"
+            },
+            {
+              "name": "capacity-status",
+              "definition": "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-capacity-status",
+              "type": "token",
+              "documentation": "Statut de la capacité"
+            },
+            {
+              "name": "nb-capacity",
+              "definition": "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-nb-capacity",
+              "type": "number",
+              "documentation": "Nombre de capacité"
+            },
+            {
+              "name": "_lastUpdated",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+              "type": "date",
+              "documentation": "Date de la dernière mise a jour"
+            }
+          ]
+        },
+        {
+          "type": "HealthcareService",
+          "profile": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "read"
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "_id",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
+              "type": "token",
+              "documentation": "Identifiant logique de la ressource"
+            },
+            {
+              "name": "location",
+              "definition": "http://hl7.org/fhir/SearchParameter/HealthcareService-location",
+              "type": "reference",
+              "documentation": "Référence à la ressource Location"
+            },
+            {
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier",
+              "type": "token",
+              "documentation": "Identifiant métier de l’offre"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-organization-period",
+  "meta": {
+    "lastUpdated": "2023-01-18T10:51:18.056967+00:00"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "pa"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-organization-period",
+  "version": "3.0",
+  "name": "ROROrganizationPeriod",
+  "title": "Period",
+  "status": "active",
+  "date": "2021-03-25T16:52:52.2657+00:00",
+  "publisher": "ANS",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "HL7"
+        }
+      ]
+    }
+  ],
+  "description": "Extension créée dans le cadre du ROR",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Organization"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "definition": "The date range that this organization should be considered available.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Extension.extension:period",
+        "path": "Extension.extension",
+        "sliceName": "period",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:period.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "period"
+      },
+      {
+        "id": "Extension.extension:period.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:closingType",
+        "path": "Extension.extension",
+        "sliceName": "closingType",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:closingType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "closingType"
+      },
+      {
+        "id": "Extension.extension:closingType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR/"
+        }
+      },
+      {
+        "id": "Extension.extension:reopeningDate",
+        "path": "Extension.extension",
+        "sliceName": "reopeningDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:reopeningDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "reopeningDate"
+      },
+      {
+        "id": "Extension.extension:reopeningDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:temporalityClosing",
+        "path": "Extension.extension",
+        "sliceName": "temporalityClosing",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:temporalityClosing.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "temporalityClosing"
+      },
+      {
+        "id": "Extension.extension:temporalityClosing.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J185-typeFermeture-ROR/FHIR/JDV-J185-typeFermeture-ROR/"
+        }
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-organization-period"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x]:valuePeriod",
+        "path": "Extension.value[x]",
+        "sliceName": "valuePeriod",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x]:valueCodeableConcept",
+        "path": "Extension.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR/"
+        }
+      }
+    ]
+  }
+}

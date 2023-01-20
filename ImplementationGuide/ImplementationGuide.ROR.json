@@ -1,0 +1,65 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ror-ig",
+  "url": "http://esante.gouv.fr/fhir/ror/ImplementationGuide/ror-ig",
+  "version": "3.0",
+  "name": "ROR",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-01-18T16:05:40+01:00",
+  "publisher": "ANS",
+  "description": "Il s'agit du guide d'implémentation du ROR.",
+  "packageId": "ROR.fhir",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location"
+        }
+      },
+      {
+        "reference": {
+          "reference": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice"
+        }
+      },
+      {
+        "reference": {
+          "reference": "http://hl7.org/fhir/SearchParameter/Location-identifier"
+        }
+      },
+      {
+        "reference": {
+          "reference": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
+        }
+      },
+      {
+        "reference": {
+          "reference": "http://hl7.org/fhir/SearchParameter/Resource-id"
+        }
+      },
+      {
+        "reference": {
+          "reference": "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-capacity-status"
+        }
+      },
+      {
+        "reference": {
+          "reference": "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-nb-capacity"
+        }
+      },
+      {
+        "reference": {
+          "reference": "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
+        }
+      },
+      {
+        "reference": {
+          "reference": "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"
+        }
+      }
+    ]
+  }
+}

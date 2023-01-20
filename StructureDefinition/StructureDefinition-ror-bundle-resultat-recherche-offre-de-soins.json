@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-bundle-resultat-recherche-offre-de-soins",
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-bundle-resultat-recherche-offre-de-soins",
+  "version": "3.0",
+  "name": "RORBundleResultatRechercheOffreDeSoins",
+  "status": "active",
+  "publisher": "ANS",
+  "description": "Profil créé dans le cadre du ROR",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "fixedCode": "searchset"
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resource"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Bundle.entry:HealthcareService",
+        "path": "Bundle.entry",
+        "sliceName": "HealthcareService"
+      },
+      {
+        "id": "Bundle.entry:HealthcareService.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Resource",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

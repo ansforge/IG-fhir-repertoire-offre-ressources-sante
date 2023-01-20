@@ -1,0 +1,114 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-healthcareservice-patient-type",
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
+  "version": "3.0",
+  "name": "RORHealthcareServicePatientType",
+  "status": "active",
+  "date": "2022-06-30",
+  "publisher": "ANS",
+  "description": "Extension créée dans le cadre du ROR",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "HealthcareService"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:supportedPatientInfo",
+        "path": "Extension.extension",
+        "sliceName": "supportedPatientInfo",
+        "min": 0
+      },
+      {
+        "id": "Extension.extension:supportedPatientInfo.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "supportedPatientInfo"
+      },
+      {
+        "id": "Extension.extension:supportedPatientInfo.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Supported patient type",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR"
+        }
+      },
+      {
+        "id": "Extension.extension:ageRange",
+        "path": "Extension.extension",
+        "sliceName": "ageRange",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:ageRange.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "ageRange"
+      },
+      {
+        "id": "Extension.extension:ageRange.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:ageRange.value[x].low",
+        "path": "Extension.extension.value[x].low",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:ageRange.value[x].high",
+        "path": "Extension.extension.value[x].high",
+        "min": 1
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

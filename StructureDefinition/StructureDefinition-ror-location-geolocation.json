@@ -1,0 +1,115 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-location-geolocation",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    }
+  ],
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location-geolocation",
+  "version": "3.0",
+  "name": "RORGeolocationLocation",
+  "title": "Geolocation",
+  "status": "active",
+  "date": "2013-12-05",
+  "publisher": "ANS",
+  "description": "The absolute geographic location of the Location, expressed using the WGS84 datum (This    is the same co-ordinate system used in KML).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Address"
+    },
+    {
+      "type": "element",
+      "expression": "Location.position"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "The absolute geographic location",
+        "definition": "The absolute geographic location of the Location, expressed using the WGS84 datum (This        is the same co-ordinate system used in KML).",
+        "comment": "The extension can be further extended to include unique geolocation identifiers, confidence,        altitude, etc.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:geodicSystem",
+        "path": "Extension.extension",
+        "sliceName": "geodicSystem",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:geodicSystem.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "geodicSystem"
+      },
+      {
+        "id": "Extension.extension:geodicSystem.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:reliablePosition",
+        "path": "Extension.extension",
+        "sliceName": "reliablePosition",
+        "min": 0
+      },
+      {
+        "id": "Extension.extension:reliablePosition.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "reliablePosition"
+      },
+      {
+        "id": "Extension.extension:reliablePosition.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location-geolocation"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

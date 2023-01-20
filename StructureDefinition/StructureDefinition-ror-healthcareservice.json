@@ -1,0 +1,447 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-healthcareservice",
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice",
+  "version": "3.0",
+  "name": "RORHealthcareService",
+  "status": "active",
+  "date": "2022-06-30",
+  "publisher": "ANS",
+  "description": "Profil créé dans le cadre du ROR",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "HealthcareService",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthcareService.extension",
+        "path": "HealthcareService.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.extension:ror-healthcareservice-psychiatric-sector",
+        "path": "HealthcareService.extension",
+        "sliceName": "ror-healthcareservice-psychiatric-sector",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice-psychiatric-sector"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.extension:ror-healthcareservice-no-consent-habilitation",
+        "path": "HealthcareService.extension",
+        "sliceName": "ror-healthcareservice-no-consent-habilitation",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice-no-consent-habilitation"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.extension:ror-care-without-patient-approval",
+        "path": "HealthcareService.extension",
+        "sliceName": "ror-care-without-patient-approval",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-care-without-patient-approval"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.extension:ror-specific-competence",
+        "path": "HealthcareService.extension",
+        "sliceName": "ror-specific-competence",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-specific-competence"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.extension:ror-healthcareservice-patient-type",
+        "path": "HealthcareService.extension",
+        "sliceName": "ror-healthcareservice-patient-type",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.extension:ror-healthcareservice-sensitive-unit",
+        "path": "HealthcareService.extension",
+        "sliceName": "ror-healthcareservice-sensitive-unit",
+        "min": 1,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.extension:ror-healthcareservice-intervention-zone",
+        "path": "HealthcareService.extension",
+        "sliceName": "ror-healthcareservice-intervention-zone",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice-intervention-zone"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.identifier",
+        "path": "HealthcareService.identifier",
+        "max": "1"
+      },
+      {
+        "id": "HealthcareService.category",
+        "path": "HealthcareService.category",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J34-CategorieOrganisation-ROR/FHIR/JDV-J34-CategorieOrganisation-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.type",
+        "path": "HealthcareService.type",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty",
+        "path": "HealthcareService.specialty",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty:operationalActivity",
+        "path": "HealthcareService.specialty",
+        "sliceName": "operationalActivity",
+        "short": "An operational activity handled by the HealthcareService",
+        "definition": "Collection of operational activities handled by the service site. This is more of a medical term.",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "An operational activity that a healthcare service may provide.",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty:operationalActivityFamily",
+        "path": "HealthcareService.specialty",
+        "sliceName": "operationalActivityFamily",
+        "short": "Family of operational activities handled by the HealthcareService",
+        "definition": "Collection of operational activity families, except Serafin.",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "A family of operationnal activities that a healthcare service may provide.",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic",
+        "path": "HealthcareService.characteristic",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "id"
+            }
+          ],
+          "rules": "open"
+        },
+        "max": "1"
+      },
+      {
+        "id": "HealthcareService.characteristic:careMode",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "careMode",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:careMode.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "careMode"
+      },
+      {
+        "id": "HealthcareService.characteristic:receptionModality",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "receptionModality",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J226-ModaliteAccueil-ROR/FHIR/JDV-J226-ModaliteAccueil-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:receptionModality.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "receptionModality"
+      },
+      {
+        "id": "HealthcareService.characteristic:managementType",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "managementType",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:managementType.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "managementType"
+      },
+      {
+        "id": "HealthcareService.characteristic:receptionType",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "receptionType",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:receptionType.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "receptionType"
+      },
+      {
+        "id": "HealthcareService.characteristic:takingCareSpeciality",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "takingCareSpeciality",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J35-SpecialisationDePriseEnCharge-ROR/FHIR/JDV-J35-SpecialisationDePriseEnCharge-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:takingCareSpeciality.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "takingCareSpeciality"
+      },
+      {
+        "id": "HealthcareService.characteristic:annualOpening",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "annualOpening",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J28-OuvertureAnnuelle-ROR/FHIR/JDV-J28-OuvertureAnnuelle-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:annualOpening.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "annualOpening"
+      },
+      {
+        "id": "HealthcareService.characteristic:specificAct",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "specificAct",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:specificAct.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "specificAct"
+      },
+      {
+        "id": "HealthcareService.characteristic:ressourceProfession",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "ressourceProfession",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J186-ProfessionRessource-ROR/FHIR/JDV-J186-ProfessionRessource-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:ressourceProfession.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "ressourceProfession"
+      },
+      {
+        "id": "HealthcareService.characteristic:specificCompetence",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "specificCompetence",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:specificCompetence.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "specificCompetence"
+      },
+      {
+        "id": "HealthcareService.characteristic:expertiseLevel",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "expertiseLevel",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J227-NiveauExpertise-ROR/FHIR/JDV-J227-NiveauExpertise-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:expertiseLevel.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "expertiseLevel"
+      },
+      {
+        "id": "HealthcareService.characteristic:temporalityStopService",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "temporalityStopService",
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:temporalityStopService.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "temporalityStopService"
+      },
+      {
+        "id": "HealthcareService.characteristic:outsideOfficeAct",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "outsideOfficeAct",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:outsideOfficeAct.id",
+        "path": "HealthcareService.characteristic.id",
+        "fixedString": "outsideOfficeAct"
+      },
+      {
+        "id": "HealthcareService.availableTime.extension",
+        "path": "HealthcareService.availableTime.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date",
+        "path": "HealthcareService.availableTime.extension",
+        "sliceName": "ror-available-time-effective-opening-closing-date",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.availableTime.extension:ror-available-time-number-days-of-week",
+        "path": "HealthcareService.availableTime.extension",
+        "sliceName": "ror-available-time-number-days-of-week",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "HealthcareService.availableTime.extension:ror-healthcareservice-available-time-type-of-time",
+        "path": "HealthcareService.availableTime.extension",
+        "sliceName": "ror-healthcareservice-available-time-type-of-time",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-healthcareservice-available-time-type-of-time"
+            ]
+          }
+        ],
+        "isModifier": false
+      }
+    ]
+  }
+}

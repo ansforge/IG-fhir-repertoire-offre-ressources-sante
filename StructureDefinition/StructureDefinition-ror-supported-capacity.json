@@ -1,0 +1,316 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-supported-capacity",
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-supported-capacity",
+  "name": "RORSupportedCapacity",
+  "status": "active",
+  "publisher": "ANS",
+  "description": "Extension créée dans le cadre du ROR",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Location"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 8
+      },
+      {
+        "id": "Extension.extension:capacityType",
+        "path": "Extension.extension",
+        "sliceName": "capacityType",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:capacityType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "capacityType"
+      },
+      {
+        "id": "Extension.extension:capacityType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR"
+        }
+      },
+      {
+        "id": "Extension.extension:capacityStatus",
+        "path": "Extension.extension",
+        "sliceName": "capacityStatus",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:capacityStatus.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "capacityStatus"
+      },
+      {
+        "id": "Extension.extension:capacityStatus.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR"
+        }
+      },
+      {
+        "id": "Extension.extension:temporalityCapacity",
+        "path": "Extension.extension",
+        "sliceName": "temporalityCapacity",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:temporalityCapacity.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "temporalityCapacity"
+      },
+      {
+        "id": "Extension.extension:temporalityCapacity.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR"
+        }
+      },
+      {
+        "id": "Extension.extension:nbCapacity",
+        "path": "Extension.extension",
+        "sliceName": "nbCapacity",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:nbCapacity.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "nbCapacity"
+      },
+      {
+        "id": "Extension.extension:nbCapacity.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:capacitySourceType",
+        "path": "Extension.extension",
+        "sliceName": "capacitySourceType",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:capacitySourceType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "capacitySourceType"
+      },
+      {
+        "id": "Extension.extension:capacitySourceType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"
+        }
+      },
+      {
+        "id": "Extension.extension:genderCapacityAvailable",
+        "path": "Extension.extension",
+        "sliceName": "genderCapacityAvailable",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:genderCapacityAvailable.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "genderCapacityAvailable"
+      },
+      {
+        "id": "Extension.extension:genderCapacityAvailable.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite"
+        }
+      },
+      {
+        "id": "Extension.extension:capacityUpdateDate",
+        "path": "Extension.extension",
+        "sliceName": "capacityUpdateDate",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:capacityUpdateDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "capacityUpdateDate"
+      },
+      {
+        "id": "Extension.extension:capacityUpdateDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:capacityClosingType",
+        "path": "Extension.extension",
+        "sliceName": "capacityClosingType",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:capacityClosingType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "capacityClosingType"
+      },
+      {
+        "id": "Extension.extension:capacityClosingType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite"
+        }
+      },
+      {
+        "id": "Extension.extension:additionalBedType",
+        "path": "Extension.extension",
+        "sliceName": "additionalBedType",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:additionalBedType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "additionalBedType"
+      },
+      {
+        "id": "Extension.extension:additionalBedType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/TRE_R334-TypeLitSupplementaire/FHIR/TRE-R334-TypeLitSupplementaire"
+        }
+      },
+      {
+        "id": "Extension.extension:crisisType",
+        "path": "Extension.extension",
+        "sliceName": "crisisType",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:crisisType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "crisisType"
+      },
+      {
+        "id": "Extension.extension:crisisType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/TRE_R336-TypeCrise/FHIR/TRE-R336-TypeCrise"
+        }
+      },
+      {
+        "id": "Extension.extension:temporaryAssignement",
+        "path": "Extension.extension",
+        "sliceName": "temporaryAssignement",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:temporaryAssignement.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "temporaryAssignement"
+      },
+      {
+        "id": "Extension.extension:temporaryAssignement.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"
+        }
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-supported-capacity"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

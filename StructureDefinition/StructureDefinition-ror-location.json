@@ -1,0 +1,327 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ror-location",
+  "url": "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location",
+  "version": "3.0",
+  "name": "RORLocation",
+  "status": "active",
+  "publisher": "ANS",
+  "description": "Extension créée dans le cadre du ROR",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Location.extension",
+        "path": "Location.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 2
+      },
+      {
+        "id": "Location.extension:ror-location-status",
+        "path": "Location.extension",
+        "sliceName": "ror-location-status",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location-status"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Location.extension:ror-location-equipement",
+        "path": "Location.extension",
+        "sliceName": "ror-location-equipement",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location-equipement"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Location.extension:ror-residential-capacity",
+        "path": "Location.extension",
+        "sliceName": "ror-residential-capacity",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-residential-capacity"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Location.extension:ror-supported-capacity",
+        "path": "Location.extension",
+        "sliceName": "ror-supported-capacity",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-supported-capacity"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Location.extension:ror-equipement-limit",
+        "path": "Location.extension",
+        "sliceName": "ror-equipement-limit",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-equipement-limit"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Location.identifier",
+        "path": "Location.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Location.identifier:idExterneSynchro",
+        "path": "Location.identifier",
+        "sliceName": "idExterneSynchro",
+        "max": "1"
+      },
+      {
+        "id": "Location.identifier:idExterneSynchro.type",
+        "path": "Location.identifier.type",
+        "min": 1,
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR",
+              "code": "26"
+            }
+          ]
+        },
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR"
+        }
+      },
+      {
+        "id": "Location.identifier:identifiant",
+        "path": "Location.identifier",
+        "sliceName": "identifiant",
+        "max": "1"
+      },
+      {
+        "id": "Location.identifier:identifiant.type",
+        "path": "Location.identifier.type",
+        "min": 1,
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR",
+              "code": "25"
+            }
+          ]
+        },
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR"
+        }
+      },
+      {
+        "id": "Location.telecom.extension",
+        "path": "Location.telecom.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Location.telecom.extension:ror-confidentiality-level",
+        "path": "Location.telecom.extension",
+        "sliceName": "ror-confidentiality-level",
+        "min": 1,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-confidentiality-level"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Location.telecom.extension:ror-telecom-usage",
+        "path": "Location.telecom.extension",
+        "sliceName": "ror-telecom-usage",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-telecom-usage"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Location.telecom.system",
+        "path": "Location.telecom.system",
+        "min": 1
+      },
+      {
+        "id": "Location.telecom.value",
+        "path": "Location.telecom.value",
+        "min": 1
+      },
+      {
+        "id": "Location.address",
+        "path": "Location.address",
+        "type": [
+          {
+            "code": "Address",
+            "profile": [
+              "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/fr-address-extended"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Location.address.extension",
+        "path": "Location.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Location.address.extension:inseeCode",
+        "path": "Location.address.extension",
+        "sliceName": "inseeCode",
+        "min": 0
+      },
+      {
+        "id": "Location.address.extension:inseeCode.value[x]",
+        "path": "Location.address.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "description": "JDV_J230-CommuneOM-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J230-CommuneOM-ROR/FHIR/JDV-J230-CommuneOM-ROR"
+        }
+      },
+      {
+        "id": "Location.address.line.extension",
+        "path": "Location.address.line.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "Location.address.line.extension:streetNameType",
+        "path": "Location.address.line.extension",
+        "sliceName": "streetNameType",
+        "min": 0
+      },
+      {
+        "id": "Location.address.line.extension:streetNameType.value[x]:valueString",
+        "path": "Location.address.line.extension.value[x]",
+        "sliceName": "valueString",
+        "binding": {
+          "strength": "required",
+          "description": "JDV_J219-TypeVoie-ROR",
+          "valueSet": "https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR"
+        }
+      },
+      {
+        "id": "Location.position.extension",
+        "path": "Location.position.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Location.position.extension:ror-location-geolocation",
+        "path": "Location.position.extension",
+        "sliceName": "ror-location-geolocation",
+        "min": 1,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-location-geolocation"
+            ]
+          }
+        ],
+        "isModifier": false
+      }
+    ]
+  }
+}
