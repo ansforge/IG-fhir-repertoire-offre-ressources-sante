@@ -1,37 +1,19 @@
-name: fhir-validator-junit-engine
+title: Human readable name of the Test Suite.
+validator:
+  version: "4.0"
+  ig:
+    - ../dependency/hl7.fhir.fr.core-1.1.0.tgz
+    - ../dependency/ans.annuaire.fhir.r4-0.2.0.tgz
+    - ../dependency/NOS
+    - ../StructureDefinition
+tests:
+  
+  # 2. Test has multiple file-matches and will generate multiple tests, non of which expects any errors.
+  - fileMatch:
+      - ../StructureDefinition/**
+      - ../SearchParameter/**
+      - ../Ressources conformités/**      
+      - "!../StructureDefinition/package.json*"
+      - "!../StructureDefinition/fhirpkg.lock.json*"
 
-on:
-  pull_request:
-    branches:
-      - main
-      
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: 🗂️ Cache FHIR Packages
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.fhir/packages
-          key: fhir-packages
-
-      - name: 📥 Download test tools
-        run: |
-          wget -q https://github.com/navikt/fhir-validator-junit-engine/releases/latest/download/fhir-validator-junit-engine.jar
-          wget -q https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
-          wget -q https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.8.1/junit-platform-console-standalone-1.8.1.jar
-          
-      - name: ✔️ Run tests
-        run: java -jar junit-platform-console-standalone-1.8.1.jar -cp fhir-validator-junit-engine.jar:validator_cli.jar -f ./test/*.yaml --reports-dir ./test-results
-        continue-on-error: true
-
-      - name: 📤 Publish test results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        with:
-          commit: ${{ github.event.workflow_run.head_sha }}
-          files: "./test-results/TEST-*.xml"
+    tags: ig
