@@ -1,3 +1,4 @@
+[![Workflow sushi/test/Publish](https://github.com/ansforge/ROR_ressource-conformance-3.0/actions/workflows/fhir-worklows.yml/badge.svg?branch=sd%2FFSHTransformation3.0)](https://github.com/ansforge/ROR_ressource-conformance-3.0/actions/workflows/fhir-worklows.yml)
 # Description
 Ceci est exemple d'ImplementationGuide très simplifié qui servira de template pour les prochains développement d'IGs. Pour créer un nouvel IG, il suffit de forker ce document, puis de faire les modifications :
 
