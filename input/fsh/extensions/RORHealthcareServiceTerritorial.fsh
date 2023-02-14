@@ -1,8 +1,5 @@
 Extension: RORHealthcareServiceTerritorial
 Id: ror-healthcareservice-territorial
-* ^version = "3.0"
-* ^date = "2022-06-28"
-* ^publisher = "ANS"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * extension ^slicing.discriminator.type = #value

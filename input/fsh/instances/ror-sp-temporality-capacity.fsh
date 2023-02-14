@@ -1,12 +1,10 @@
 Instance: ror-sp-temporality-capacity
 InstanceOf: SearchParameter
 Usage: #definition
+* status = #active 
+* date = "2023-01-12T14:27:51+01:00"
 * url = "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-temporality-capacity"
-* version = "3.0"
 * name = "RORSPTemporalityCapacity"
-* status = #active
-* date = "2022-10-05T00:00:00+02:00"
-* publisher = "ANS"
 * description = "Paramètre de recherche pour récupérer les affectations temporaires"
 * code = #temporality-capacity
 * base = #Location

@@ -1,14 +1,12 @@
 Instance: ror-serveur
 InstanceOf: CapabilityStatement
 Usage: #definition
+* status = #active 
+* date = "2023-01-12T14:27:51+01:00"
 * url = "http://esante.gouv.fr/fhir/ror/CapabilityStatement/ror-serveur"
-* version = "3.0"
 * name = "RORServeur"
 * title = "ROR-RORServeur"
-* status = #active
 * experimental = false
-* date = "2023-01-18T16:05:38+01:00"
-* publisher = "ANS"
 * description = "Système ROR National Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."
 * kind = #requirements
 * fhirVersion = #4.0.1

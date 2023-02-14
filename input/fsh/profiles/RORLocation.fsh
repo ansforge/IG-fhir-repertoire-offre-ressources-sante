@@ -2,9 +2,6 @@ Profile: RORLocation
 Parent: Location
 Id: ror-location
 Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^status = #active
-* ^publisher = "ANS"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -16,7 +13,6 @@ Description: "Extension créée dans le cadre du ROR"
     ROREquipementLimit named ror-equipement-limit 1..1
 * extension[ror-location-status] ^isModifier = false
 * extension[ror-location-equipement] ^isModifier = false
-* extension[ror-residential-capacity] ^min = 0
 * extension[ror-residential-capacity] ^isModifier = false
 * extension[ror-supported-capacity] ^isModifier = false
 * extension[ror-equipement-limit] ^isModifier = false
@@ -38,10 +34,7 @@ Description: "Extension créée dans le cadre du ROR"
 * telecom.extension contains
     RORConfidentialityLevel named ror-confidentiality-level 1..1 and
     RORTelecomUsage named ror-telecom-usage 0..1
-//* telecom.extension[ror-confidentiality-level] only RORConfidentialityLevel
-//* telecom.extension[ror-confidentiality-level] ^sliceName = "ror-confidentiality-level"
 * telecom.extension[ror-confidentiality-level] ^isModifier = false
-//* telecom.extension contains RORTelecomUsage named ror-telecom-usage 0..1
 * telecom.extension[ror-telecom-usage] ^isModifier = false
 * telecom.system 1..
 * telecom.value 1..
@@ -49,17 +42,13 @@ Description: "Extension créée dans le cadre du ROR"
 * address.extension ^slicing.discriminator.type = #value
 * address.extension ^slicing.discriminator.path = "url"
 * address.extension ^slicing.rules = #open
-* address.extension ^min = 0
 * address.extension[inseeCode] ^sliceName = "inseeCode"
-* address.extension[inseeCode] ^min = 0
 * address.extension[inseeCode].value[x] from $JDV-J230-CommuneOM-ROR (required)
 * address.extension[inseeCode].value[x] ^binding.description = "JDV_J230-CommuneOM-ROR"
 * address.line.extension ^slicing.discriminator.type = #value
 * address.line.extension ^slicing.discriminator.path = "url"
 * address.line.extension ^slicing.rules = #open
-* address.line.extension ^min = 0
 * address.line.extension[streetNameType] ^sliceName = "streetNameType"
-* address.line.extension[streetNameType] ^min = 0
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 * address.line.extension[streetNameType].valueString ^sliceName = "valueString"
 * address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"

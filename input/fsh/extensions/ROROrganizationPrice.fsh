@@ -1,9 +1,6 @@
 Extension: ROROrganizationPrice
 Id: ror-organization-price
 Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^date = "2022-06-29"
-* ^publisher = "ANS"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * extension ^slicing.discriminator.type = #value
@@ -32,10 +29,8 @@ Description: "Extension créée dans le cadre du ROR"
 * extension[amount].value[x] only Money
 * extension[startDate].value[x] only dateTime
 * extension[under60].value[x] only boolean
-* extension[deliveryIncluded] ^min = 0
 * extension[deliveryIncluded].value[x] only CodeableConcept
 * extension[deliveryIncluded].value[x] from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)
-* extension[othersDeliveryIncluded] ^min = 0
 * extension[othersDeliveryIncluded].value[x] only string
 * extension[residentialType].value[x] only CodeableConcept
 * extension[residentialType].value[x] from $JDV-J32-TypeHabitation-ROR (required)

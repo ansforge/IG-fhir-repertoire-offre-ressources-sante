@@ -2,10 +2,6 @@ Profile: ROR_PractitionerRole
 Parent: PractitionerRole
 Id: ror-practitionerrole
 Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^status = #active
-* ^date = "2022-06-30"
-* ^publisher = "ANS"
 * meta 1..
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -14,8 +10,8 @@ Description: "Extension créée dans le cadre du ROR"
     $practitionerRole-name named name 0..1 and
     $practitionerRole-contracted named contracted 0..1 and
     $practitionerRole-vitaleAccepted named vitalAccepted 0..1 and
-    $practitionerRole-hasCAS named optionCAAS 0..1 and
-    RORUnitExerciseMode named ror-unit-exercise-mode 1..*
+    $practitionerRole-hasCAS named optionCAS 0..1 and
+    RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..*
 * extension[name] ^isModifier = false
 * extension[name].value[x].family 1..
 * extension[contracted] ^isModifier = false
@@ -23,8 +19,8 @@ Description: "Extension créée dans le cadre du ROR"
 * extension[contracted].value[x] ^binding.description = "JDV_J218-CNAMAmeliSecteurConventionnement-RASS dérivé de la TRE_ R282-CNAMAmeliSecteurConventionnement"
 * extension[contracted].value[x].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_R282-CNAMAmeliSecteurConventionnement/FHIR/TRE-R282-CNAMAmeliSecteurConventionnement" (exactly)
 * extension[vitalAccepted] ^isModifier = false
-* extension[optionCAAS] ^isModifier = false
-* extension[ror-unit-exercise-mode] ^isModifier = false
+* extension[optionCAS] ^isModifier = false
+* extension[ror-practitionerrole-unit-exercise-mode] ^isModifier = false
 * practitioner 1..
 * code 1..1
 * code from $JDV-J229-ProfessionSante-ROR (required)
@@ -61,11 +57,7 @@ Description: "Extension créée dans le cadre du ROR"
     RORTelecomUsage named usage 0..1 and
     RORCommunicationChannel named communicationChannel 1.. and
     RORConfidentialityLevel named confidentialityLevel 1..
-//* telecom.extension[communicationChannel] only RORCommunicationChannel
-//* telecom.extension[communicationChannel] ^sliceName = "communicationChannel"
 * telecom.extension[communicationChannel] ^isModifier = false
-//* telecom.extension[confidentialityLevel] only RORConfidentialityLevel
-//* telecom.extension[confidentialityLevel] ^sliceName = "confidentialityLevel"
 * telecom.extension[confidentialityLevel] ^isModifier = false
 * telecom.extension[usage] ^isModifier = false
 * telecom.value 1..
@@ -73,11 +65,8 @@ Description: "Extension créée dans le cadre du ROR"
 * availableTime.extension ^slicing.discriminator.type = #value
 * availableTime.extension ^slicing.discriminator.path = "url"
 * availableTime.extension ^slicing.rules = #open
-* availableTime.extension ^min = 0
 * availableTime.extension contains
     RORAvailableTimeEffectiveOpeningClosingDate named effectiveOpeningClosingDate 0..* and
     RORHealthcareServiceAvailableTimeTypeOfTime named typeOfTime 0..*
-* availableTime.extension[effectiveOpeningClosingDate] ^min = 0
 * availableTime.extension[effectiveOpeningClosingDate] ^isModifier = false
-* availableTime.extension[typeOfTime] ^min = 0
 * availableTime.extension[typeOfTime] ^isModifier = false

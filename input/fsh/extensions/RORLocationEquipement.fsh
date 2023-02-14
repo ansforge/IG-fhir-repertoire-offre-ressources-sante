@@ -1,8 +1,6 @@
 Extension: RORLocationEquipement
 Id: ror-location-equipement
 Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^publisher = "ANS"
 * ^context.type = #element
 * ^context.expression = "Location"
 * extension ^slicing.discriminator.type = #value

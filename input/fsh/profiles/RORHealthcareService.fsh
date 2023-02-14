@@ -2,10 +2,6 @@ Profile: RORHealthcareService
 Parent: HealthcareService
 Id: ror-healthcareservice
 Description: "Profil créé dans le cadre du ROR"
-* ^version = "3.0"
-* ^status = #active
-* ^date = "2022-06-30"
-* ^publisher = "ANS"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -17,17 +13,12 @@ Description: "Profil créé dans le cadre du ROR"
     RORHealthcareServicePatientType named ror-healthcareservice-patient-type 0..* and
     RORHealthcareServiceSensitiveUnit named ror-healthcareservice-sensitive-unit 1..* and
     RORHealthcareServiceInterventionZone named ror-healthcareservice-intervention-zone 0..*
-* extension[ror-healthcareservice-psychiatric-sector] ^min = 0
 * extension[ror-healthcareservice-psychiatric-sector] ^isModifier = false
 * extension[ror-healthcareservice-no-consent-habilitation] ^isModifier = false
-* extension[ror-care-without-patient-approval] ^min = 0
 * extension[ror-care-without-patient-approval] ^isModifier = false
-* extension[ror-specific-competence] ^min = 0
 * extension[ror-specific-competence] ^isModifier = false
-* extension[ror-healthcareservice-patient-type] ^min = 0
 * extension[ror-healthcareservice-patient-type] ^isModifier = false
 * extension[ror-healthcareservice-sensitive-unit] ^isModifier = false
-* extension[ror-healthcareservice-intervention-zone] ^min = 0
 * extension[ror-healthcareservice-intervention-zone] ^isModifier = false
 * identifier ..1
 * category ..1
@@ -91,13 +82,10 @@ Description: "Profil créé dans le cadre du ROR"
 * availableTime.extension ^slicing.discriminator.type = #value
 * availableTime.extension ^slicing.discriminator.path = "url"
 * availableTime.extension ^slicing.rules = #open
-* availableTime.extension ^min = 0
 * availableTime.extension contains
     RORAvailableTimeEffectiveOpeningClosingDate named ror-available-time-effective-opening-closing-date 0..* and
     RORAvailableTimeNumberDaysofWeek named ror-available-time-number-days-of-week 0..1 and
     RORHealthcareServiceAvailableTimeTypeOfTime named ror-healthcareservice-available-time-type-of-time 0..*
-* availableTime.extension[ror-available-time-effective-opening-closing-date] ^min = 0
 * availableTime.extension[ror-available-time-effective-opening-closing-date] ^isModifier = false
 * availableTime.extension[ror-available-time-number-days-of-week] ^isModifier = false
-* availableTime.extension[ror-healthcareservice-available-time-type-of-time] ^min = 0
 * availableTime.extension[ror-healthcareservice-available-time-type-of-time] ^isModifier = false

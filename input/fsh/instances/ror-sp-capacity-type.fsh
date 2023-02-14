@@ -1,12 +1,9 @@
-Instance: ror-sp-CapacityType
+Instance: ror-sp-capacity-type
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-CapacityType"
-* version = "3.0"
+* url = "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-capacity-type"
 * name = "RORSPCapacityType"
 * status = #active
-* date = "2022-10-05"
-* publisher = "ANS"
 * description = "Paramètre de recherche pour récupérer la nature de la capacité."
 * code = #capacity-type
 * base = #Location

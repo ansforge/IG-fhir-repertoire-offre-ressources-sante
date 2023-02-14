@@ -1,11 +1,10 @@
 Instance: ror-sp-capacity-status
 InstanceOf: SearchParameter
 Usage: #definition
+* status = #active 
+* date = "2023-01-12T14:27:51+01:00"
 * url = "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-capacity-status"
-* version = "3.0"
 * name = "RORSPCapacityStatus"
-* status = #active
-* date = "2022-10-06T00:00:00+02:00"
 * description = "Paramètre de recherche pour récupérer le statut de la capacité."
 * code = #capacity-status
 * base = #Location

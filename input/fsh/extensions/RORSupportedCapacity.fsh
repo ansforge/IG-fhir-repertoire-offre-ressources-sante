@@ -1,7 +1,6 @@
 Extension: RORSupportedCapacity
 Id: ror-supported-capacity
 Description: "Extension créée dans le cadre du ROR"
-* ^publisher = "ANS"
 * ^context.type = #element
 * ^context.expression = "Location"
 * extension ^slicing.discriminator.type = #value

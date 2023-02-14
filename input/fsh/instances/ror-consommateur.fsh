@@ -1,14 +1,12 @@
 Instance: ror-consommateur
 InstanceOf: CapabilityStatement
 Usage: #definition
+* status = #active 
+* date = "2023-01-12T14:27:51+01:00"
 * url = "http://esante.gouv.fr/fhir/ror/CapabilityStatement/ror-consommateur"
-* version = "3.0"
 * name = "RORConsommateur"
-* title = "ROR-RORConsommateur"
-* status = #active
+* title = "ROR-Consommateur"
 * experimental = false
-* date = "2023-01-18T16:05:38+01:00"
-* publisher = "ANS"
 * description = "Système qui est autorisé à consommer les données du ROR."
 * kind = #requirements
 * fhirVersion = #4.0.1

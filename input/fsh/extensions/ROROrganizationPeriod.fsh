@@ -7,19 +7,14 @@ Description: "Extension créée dans le cadre du ROR"
 * ^extension[=].valueCode = #pa
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^version = "3.0"
-* ^date = "2021-03-25T16:52:52.2657+00:00"
-* ^publisher = "ANS"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "HL7"
 * ^context.type = #element
 * ^context.expression = "Organization"
-* . ..1
 * . ^definition = "The date range that this organization should be considered available."
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension contains
     period 0..1 and
     closingType 0..1 and
@@ -27,16 +22,8 @@ Description: "Extension créée dans le cadre du ROR"
     temporalityClosing 0..1
 * extension[period].value[x] only Period
 * extension[closingType].value[x] only CodeableConcept
-* extension[closingType].value[x] from $_2 (required)
+* extension[closingType].value[x] from $JDV-201-TypeFermeture-ROR (required)
 * extension[reopeningDate].value[x] only date
 * extension[temporalityClosing].value[x] only CodeableConcept
-* extension[temporalityClosing].value[x] from $_3 (required)
+* extension[temporalityClosing].value[x] from $JDV_J185-typeFermeture-ROR (required)
 * url only uri
-//* value[x] ^slicing.discriminator.type = #type
-//* value[x] ^slicing.discriminator.path = "$this"
-//* value[x] ^slicing.rules = #closed
-//* valuePeriod only Period
-//* valuePeriod ^sliceName = "valuePeriod"
-//* valueCodeableConcept only CodeableConcept
-//* valueCodeableConcept from $_2 (required)
-//* valueCodeableConcept ^sliceName = "valueCodeableConcept"
