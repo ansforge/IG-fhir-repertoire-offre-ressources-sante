@@ -10,4 +10,4 @@ Usage: #definition
 * code = #near-insee-code
 * base = #HealthcareService
 * type = #special
-* expression = "Location.address.extension.where(url='http://www.interopsante.org/fhir/structuredefinition/datatype/fr-address-insee-code').valueCode"
+* expression = "Location.address.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror30/structuredefinition/datatype/fr-address-insee-code').valueCode"

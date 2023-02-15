@@ -6,8 +6,8 @@ Usage: #definition
 
 * date = "2022-06-09T00:00:00+02:00"
 
-* description = "Paramètre de recherche décrivrant le secteur psychiatrique de l'unité élémentaire"
+* description = "Paramètre de recherche décrivrant le secteur psychiatrique de l'offre opérationnelle"
 * code = #psychiatric-sector
 * base = #HealthcareService
 * type = #string
-* expression = "HealthcareService.extension.where(url = 'http://interop.esante.gouv.fr/fhir/ig/ror24/StructureDefinition/ror-healthcareservice-psychiatric-sector').valueString"
+* expression = "HealthcareService.extension.where(url = 'http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-healthcareservice-psychiatric-sector').valueString"

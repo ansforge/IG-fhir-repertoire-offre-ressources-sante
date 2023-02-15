@@ -1,6 +1,6 @@
 Extension: ROROrganizationPrice
 Id: ror-organization-price
-Description: "Extension créée dans le cadre du ROR"
+Description: "Extension créée dans le cadre du ROR pour permettre de définir les tarifs des prestations et services d'une entité géographique."
 * ^context.type = #element
 * ^context.expression = "Organization"
 * extension ^slicing.discriminator.type = #value
@@ -53,4 +53,4 @@ Description: "Extension créée dans le cadre du ROR"
 * extension[surchargePriceName].extension[string].value[x] only string
 * extension[surchargePriceName].extension[codeableConcept].value[x] only CodeableConcept
 * extension[surchargePriceName].extension[codeableConcept].value[x] from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)
-* url = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuide/ROR/StructureDefinition/ror-organization-price" (exactly)
+* url = "http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-organization-price" (exactly)

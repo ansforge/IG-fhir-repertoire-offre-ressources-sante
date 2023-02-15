@@ -1,7 +1,7 @@
 Profile: RORLocation
 Parent: Location
 Id: ror-location
-Description: "Extension créée dans le cadre du ROR"
+Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui peuvent être mis en œuvre pour réaliser la prestation"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -22,10 +22,10 @@ Description: "Extension créée dans le cadre du ROR"
 * identifier contains
     idExterneSynchro 0..1 and
     identifiant 0..1
-* identifier[idExterneSynchro].type 1..
+* identifier[idExterneSynchro].type 1..1
 * identifier[idExterneSynchro].type = $JDV-J236-TypeIdentifiant-ROR#26 (exactly)
 * identifier[idExterneSynchro].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[identifiant].type 1..
+* identifier[identifiant].type 1..1
 * identifier[identifiant].type = $JDV-J236-TypeIdentifiant-ROR#25 (exactly)
 * identifier[identifiant].type from $JDV-J236-TypeIdentifiant-ROR (required)
 * telecom.extension ^slicing.discriminator.type = #value
@@ -36,8 +36,8 @@ Description: "Extension créée dans le cadre du ROR"
     RORTelecomUsage named ror-telecom-usage 0..1
 * telecom.extension[ror-confidentiality-level] ^isModifier = false
 * telecom.extension[ror-telecom-usage] ^isModifier = false
-* telecom.system 1..
-* telecom.value 1..
+* telecom.system 1..1
+* telecom.value 1..1 
 * address only $fr-address-extended
 * address.extension ^slicing.discriminator.type = #value
 * address.extension ^slicing.discriminator.path = "url"

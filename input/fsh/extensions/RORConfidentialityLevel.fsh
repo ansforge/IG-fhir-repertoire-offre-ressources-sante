@@ -11,6 +11,6 @@ Description: "Extension créée dans le cadre du ROR"
 * ^context[=].expression = "Location.telecom"
 * ^context[+].type = #element
 * ^context[=].expression = "PractitionerRole.telecom"
-* value[x] 1..
+* value[x] 1..1
 * value[x] only CodeableConcept
 * value[x] from $JDV-J222-NiveauConfidentialite-ROR (required)

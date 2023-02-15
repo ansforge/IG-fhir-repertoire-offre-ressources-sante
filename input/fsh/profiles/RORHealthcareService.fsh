@@ -1,27 +1,25 @@
 Profile: RORHealthcareService
 Parent: HealthcareService
 Id: ror-healthcareservice
-Description: "Profil créé dans le cadre du ROR"
+Description: "Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne "
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
     RORHealthcareServicePsychiatricSector named ror-healthcareservice-psychiatric-sector 0..* and
     RORHealthcareServiceNoConsentHabilitation named ror-healthcareservice-no-consent-habilitation 0..1 and
-    RORCareWithoutPatientApproval named ror-care-without-patient-approval 0..* and
     RORSpecificCompetence named ror-specific-competence 0..* and
     RORHealthcareServicePatientType named ror-healthcareservice-patient-type 0..* and
     RORHealthcareServiceSensitiveUnit named ror-healthcareservice-sensitive-unit 1..* and
     RORHealthcareServiceInterventionZone named ror-healthcareservice-intervention-zone 0..*
 * extension[ror-healthcareservice-psychiatric-sector] ^isModifier = false
 * extension[ror-healthcareservice-no-consent-habilitation] ^isModifier = false
-* extension[ror-care-without-patient-approval] ^isModifier = false
 * extension[ror-specific-competence] ^isModifier = false
 * extension[ror-healthcareservice-patient-type] ^isModifier = false
 * extension[ror-healthcareservice-sensitive-unit] ^isModifier = false
 * extension[ror-healthcareservice-intervention-zone] ^isModifier = false
-* identifier ..1
-* category ..1
+* identifier 1..1
+* category 0..1
 * category from $JDV-J34-CategorieOrganisation-ROR (required)
 * type from $JDV-J20-ChampActivite-ROR (required)
 * specialty ^slicing.discriminator.type = #value
@@ -38,7 +36,7 @@ Description: "Profil créé dans le cadre du ROR"
 * specialty[operationalActivityFamily] ^short = "Family of operational activities handled by the HealthcareService"
 * specialty[operationalActivityFamily] ^definition = "Collection of operational activity families, except Serafin."
 * specialty[operationalActivityFamily] ^binding.description = "A family of operationnal activities that a healthcare service may provide."
-* characteristic ..1
+* characteristic 0..1
 * characteristic ^slicing.discriminator.type = #value
 * characteristic ^slicing.discriminator.path = "id"
 * characteristic ^slicing.rules = #open

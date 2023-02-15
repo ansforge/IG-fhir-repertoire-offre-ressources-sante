@@ -10,4 +10,4 @@ Usage: #definition
 * code = #commune-cog
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror24/StructureDefinition/ror-commune-cog').valueCodeableConcept"
+* expression = "Location.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-commune-cog').valueCodeableConcept"

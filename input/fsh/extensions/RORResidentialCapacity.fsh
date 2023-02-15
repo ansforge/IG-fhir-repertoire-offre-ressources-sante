@@ -1,6 +1,6 @@
 Extension: RORResidentialCapacity
 Id: ror-residential-capacity
-Description: "Extension créée dans le cadre du ROR"
+Description: "Extension créée dans le cadre du ROR qui décrit un type d'habitation adapté à la réalisation d'une offre."
 * ^context.type = #element
 * ^context.expression = "Location"
 * extension ^slicing.discriminator.type = #value

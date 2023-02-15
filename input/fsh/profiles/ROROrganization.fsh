@@ -1,25 +1,24 @@
 Profile: ROROrganization
 Parent: $FrOrganization
 Id: ror-organization
-Description: "Profil créé dans le cadre du ROR"
+Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
     ROROrganizationPrice named ror-organization-price 0..1 and
     $mailboxMSS named mailboxMSS 0.. and
-    RORHealthcareServiceTerritorial named ror-healthcareservice-territorial 0.. and
+    ROROrganizationTerritorial named ror-organization-territorial 0.. and
     ROROrganizationFinancialHelpType named ror-organization-financial-help-type 0.. and
     ROROrganizationAccomodationFamily named ror-organization-accomodation-family 0.. and
     ROROrganizationNbPermanentSocialHelpPlace named ror-organization-nb-permanent-social-help-place 0.. and
     ROROrganizationNbTemporarySocialHelpPlace named ror-organization-nb-temporary-social-help-place 0.. and
     RORAccessibilityLocation named ror-accessibility-location 0.. and
     RORLevelRecourseORSAN named ror-level-recours-orsan 0.. and
-    RORCareWithoutPatientApproval named ror-care-without-patient-approval 0.. and
     ROROrganizationPeriod named ror-organization-period 0.. and
     RORDropZone named ror-drop-zone 0..1
 * extension[mailboxMSS] ^isModifier = false
-* extension[ror-healthcareservice-territorial] ^isModifier = false
+* extension[ror-organization-territorial] ^isModifier = false
 * extension[ror-organization-price] ^isModifier = false
 * extension[ror-drop-zone] ^isModifier = false
 * extension[ror-organization-financial-help-type] ^isModifier = false
@@ -28,9 +27,8 @@ Description: "Profil créé dans le cadre du ROR"
 * extension[ror-organization-nb-temporary-social-help-place] ^isModifier = false
 * extension[ror-accessibility-location] ^isModifier = false
 * extension[ror-level-recours-orsan] ^isModifier = false
-* extension[ror-care-without-patient-approval] ^isModifier = false
 * extension[ror-organization-period] ^isModifier = false
-* identifier ..1
+* identifier 1..1
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
@@ -71,7 +69,7 @@ Description: "Profil créé dans le cadre du ROR"
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[sphParticipation] ^binding.description = "Binding JDV_J202-ESPIC-ROR"
 * type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
-* alias ..1
+* alias 0..1
 * address.extension ^slicing.discriminator.type = #value
 * address.extension ^slicing.discriminator.path = "url"
 * address.extension ^slicing.rules = #open

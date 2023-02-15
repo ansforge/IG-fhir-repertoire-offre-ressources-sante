@@ -1,6 +1,6 @@
 Extension: RORSupportedCapacity
 Id: ror-supported-capacity
-Description: "Extension créée dans le cadre du ROR"
+Description: "Extension créée dans le cadre du ROR qui indique une série d’enregistrements indiquant la quantité de lit (ou de place) de l'entité pour un statut et une temporalité donnés."
 * ^context.type = #element
 * ^context.expression = "Location"
 * extension ^slicing.discriminator.type = #value

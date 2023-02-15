@@ -1,6 +1,6 @@
 Extension: ROREquipementLimit
 Id: ror-equipement-limit
-Description: "Extension créée dans le cadre du ROR"
+Description: "Extension créée dans le cadre du ROR qui précise les limites que peut supporter l'équipement le plus tolérant parmis les équipements spécifiques de même type dans cette organisation."
 * ^context.type = #element
 * ^context.expression = "Location"
 * extension ^slicing.discriminator.type = #value

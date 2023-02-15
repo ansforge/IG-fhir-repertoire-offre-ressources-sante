@@ -1,11 +1,13 @@
 Instance: ror-sp-gender-capacity-available
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-gender-capacity-available"
-* name = "RORSPGenderCapacityAvailable"
 * status = #active
+* name = "RORSPGenderCapacityAvailable"
+
+* date = "2023-01-12T14:27:51+01:00"
+
 * description = "Paramètre de recherche pour récupérer le genre disponnible de la capacité."
 * code = #gender-capacity
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-supported-capacity').extension(url='genderCapacityAvailable').valueCode"
+* expression = "Location.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-supported-capacity').extension(url='genderCapacityAvailable').valueCode"

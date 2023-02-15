@@ -2,7 +2,6 @@ Instance: ror-sp-healthcareservice-age-range-low
 InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
-
 * name = "RORHealthcareServiceAgeRangeLow"
 
 * date = "2022-06-09T00:00:00+02:00"
@@ -11,7 +10,7 @@ Usage: #definition
 * code = #age-range-low
 * base = #HealthcareService
 * type = #quantity
-* expression = "HealthcareService.extension.where(url = 'http://interop.esante.gouv.fr/fhir/ig/ror24/StructureDefinition/ror-healthcareservice-patient-type').extension(url = 'ageRange').valueRange.low"
+* expression = "HealthcareService.extension.where(url = 'http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-healthcareservice-patient-type').extension(url = 'ageRange').valueRange.low"
 * comparator[0] = #eq
 * comparator[+] = #ne
 * comparator[+] = #gt

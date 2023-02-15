@@ -55,7 +55,6 @@ Alias: $JDV-J29-PublicPrisEnCharge-ROR = https://mos.esante.gouv.fr/NOS/JDV_J29-
 Alias: $JDV-J204-NiveauRecoursORSAN-ROR = https://mos.esante.gouv.fr/NOS/JDV_J204-NiveauRecoursORSAN-ROR/FHIR/JDV-J204-NiveauRecoursORSAN-ROR
 Alias: $JDV-J18-EquipementSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/JDV-J18-EquipementSpecifique-ROR
 Alias: $JDV-J31-AideFinanciere-ROR = https://mos.esante.gouv.fr/NOS/JDV_J31-AideFinanciere-ROR/FHIR/JDV-J31-AideFinanciere-ROR
-Alias: $JDV-201-TypeFermeture-ROR = https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR/
 Alias: $JDV_J185-typeFermeture-ROR = https://mos.esante.gouv.fr/NOS/JDV_J185-typeFermeture-ROR/FHIR/JDV-J185-typeFermeture-ROR/
 Alias: $JDV-J36-TypeTarif-ROR = https://mos.esante.gouv.fr/NOS/JDV_J36-TypeTarif-ROR/FHIR/JDV-J36-TypeTarif-ROR
 Alias: $JDV-J205-UnitePrix-ROR = https://mos.esante.gouv.fr/NOS/JDV_J205-UnitePrix-ROR/FHIR/JDV-J205-UnitePrix-ROR
