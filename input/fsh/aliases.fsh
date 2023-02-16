@@ -4,6 +4,7 @@ Alias: $FrOrganization = http://interopsante.org/fhir/StructureDefinition/FrOrga
 Alias: $fr-address-extended = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/fr-address-extended
 Alias: $mailboxMSS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/mailboxMSS
 Alias: $practitionerRole-name = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-name
+Alias: $FrHumanName = http://www.interopsante.org/fhir/structuredefinition/datatype/fr-human-name
 Alias: $practitionerRole-contracted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted
 Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted
 Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS
