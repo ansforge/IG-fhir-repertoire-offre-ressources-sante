@@ -13,7 +13,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     $practitionerRole-hasCAS named optionCAS 0..1 and
     RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..*
 * extension[name] ^isModifier = false
-* extension[name].value[x].given 1..1
+* extension[name].value[x].family 1..1
 * extension[contracted] ^isModifier = false
 * extension[contracted].value[x] from $JDV-J218-CNAMAmeliSecteurConventionnement-ROR (required)
 * extension[contracted].value[x] ^binding.description = "JDV_J218-CNAMAmeliSecteurConventionnement-RASS dérivé de la TRE_ R282-CNAMAmeliSecteurConventionnement"
