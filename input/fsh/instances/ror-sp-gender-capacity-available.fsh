@@ -3,9 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
 * name = "RORSPGenderCapacityAvailable"
-
-* date = "2023-01-12T14:27:51+01:00"
-
 * description = "Paramètre de recherche pour récupérer le genre disponnible de la capacité."
 * code = #gender-capacity
 * base = #Location

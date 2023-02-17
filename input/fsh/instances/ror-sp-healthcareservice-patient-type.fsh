@@ -3,9 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
 * name = "RORHealthcareServiceSupportedPatientType"
-
-* date = "2022-06-09"
-
 * description = "Paramètre de recherche décrivant le public pris en charge"
 * code = #supported-patient-type
 * base = #HealthcareService

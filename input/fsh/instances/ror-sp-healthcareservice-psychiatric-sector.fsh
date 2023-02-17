@@ -3,9 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
 * name = "RORHealthcareServicePsychiatricSector"
-
-* date = "2022-06-09T00:00:00+02:00"
-
 * description = "Paramètre de recherche décrivrant le secteur psychiatrique de l'offre opérationnelle"
 * code = #psychiatric-sector
 * base = #HealthcareService

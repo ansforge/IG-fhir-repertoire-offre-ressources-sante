@@ -3,9 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active 
 * name = "RORSPCapacityStatus"
-
-* date = "2023-01-12T14:27:51+01:00"
-
 * description = "Paramètre de recherche pour récupérer le statut de la capacité."
 * code = #capacity-status
 * base = #Location

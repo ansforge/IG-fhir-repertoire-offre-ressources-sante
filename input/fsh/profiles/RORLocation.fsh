@@ -2,6 +2,8 @@ Profile: RORLocation
 Parent: Location
 Id: ror-location
 Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui peuvent être mis en œuvre pour réaliser la prestation"
+* meta.tag 0..1
+* meta.tag from $JDV_J237-RegionOM-ROR (required)
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open

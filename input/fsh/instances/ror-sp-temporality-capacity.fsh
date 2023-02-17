@@ -6,7 +6,7 @@ Usage: #definition
 
 * date = "2023-01-12T14:27:51+01:00"
 
-* description = "Paramètre de recherche pour récupérer les affectations temporaires"
+* description = "Paramètre de recherche pour récupérer le moment où la capacité sera effective"
 * code = #temporality-capacity
 * base = #Location
 * type = #token

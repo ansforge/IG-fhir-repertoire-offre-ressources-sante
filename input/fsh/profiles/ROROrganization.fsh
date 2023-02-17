@@ -2,6 +2,8 @@ Profile: ROROrganization
 Parent: $FrOrganization
 Id: ror-organization
 Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
+* meta.tag 0..1
+* meta.tag from $JDV_J237-RegionOM-ROR (required)
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open

@@ -1,8 +1,9 @@
-Profile: ROR_PractitionerRole
+Profile: RORPractitionerRole
 Parent: PractitionerRole
 Id: ror-practitionerrole
 Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre"
-* meta 1..1
+* meta.tag 0..1
+* meta.tag from $JDV_J237-RegionOM-ROR (required)
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -11,6 +12,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     $practitionerRole-contracted named contracted 0..1 and
     $practitionerRole-vitaleAccepted named vitalAccepted 0..1 and
     $practitionerRole-hasCAS named optionCAS 0..1 and
+    $mailboxMSS named mailboxMSS 0..* and
     RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..*
 * extension[name] ^isModifier = false
 * extension[name].valueHumanName.family 1..1
@@ -20,9 +22,11 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * extension[contracted].value[x].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_R282-CNAMAmeliSecteurConventionnement/FHIR/TRE-R282-CNAMAmeliSecteurConventionnement" (exactly)
 * extension[vitalAccepted] ^isModifier = false
 * extension[optionCAS] ^isModifier = false
+* extension[mailboxMSS] ^isModifier = false
 * extension[ror-practitionerrole-unit-exercise-mode] ^isModifier = false
 * practitioner 1..1 
 * code 1..1
+* identifier 0..1
 * code from $JDV-J229-ProfessionSante-ROR (required)
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "coding.system"

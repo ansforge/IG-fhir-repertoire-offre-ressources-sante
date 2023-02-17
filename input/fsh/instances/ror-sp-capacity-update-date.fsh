@@ -3,9 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
 * name = "RORSPCapacityUpdateDate"
-
-* date = "2023-01-12T14:27:51+01:00"
-
 * description = "Paramètre de recherche pour récupérer la date à jour de la capacité"
 * code = #capacity-update
 * base = #Location

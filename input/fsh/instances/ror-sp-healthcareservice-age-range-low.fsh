@@ -3,9 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
 * name = "RORHealthcareServiceAgeRangeLow"
-
-* date = "2022-06-09T00:00:00+02:00"
-
 * description = "Paramètre de recherche décrivant l'age minimum de la patientèle"
 * code = #age-range-low
 * base = #HealthcareService
