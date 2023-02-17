@@ -1,8 +1,8 @@
 Extension: RORHealthcareServiceContact
 Id: ror-healthcareservice-contact
 Description: "Extension créée dans le cadre du ROR"
-* ^context.type = #Extension
-* ^context.expression = "healthcareservice"
+* ^context.type = #element
+* ^context.expression = "Healthcareservice"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open

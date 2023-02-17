@@ -6,7 +6,6 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * meta.tag 0..1
 * meta.tag from $JDV_J237-RegionOM-ROR (required)
 * identifier 1..1
-
 * telecom 0..1
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
