@@ -8,7 +8,6 @@ Alias: $FrHumanName = http://www.interopsante.org/fhir/structuredefinition/datat
 Alias: $practitionerRole-contracted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted
 Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted
 Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS
-Alias: $JDV-J34-CategorieOrganisation-ROR = https://mos.esante.gouv.fr/NOS/JDV_J34-CategorieOrganisation-ROR/FHIR/JDV-J34-CategorieOrganisation-ROR
 Alias: $JDV-J20-ChampActivite-ROR = https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR
 Alias: $JDV-J17-ActiviteOperationnelle-ROR = https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR
 Alias: $JDV-J51-FamilleActiviteOperationnelle-ROR = https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR

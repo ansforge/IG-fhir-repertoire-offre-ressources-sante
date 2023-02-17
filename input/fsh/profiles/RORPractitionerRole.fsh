@@ -4,6 +4,7 @@ Id: ror-practitionerrole
 Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre"
 * meta.tag 0..1
 * meta.tag from $JDV_J237-RegionOM-ROR (required)
+
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
