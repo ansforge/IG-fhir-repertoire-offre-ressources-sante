@@ -225,7 +225,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-period-end)
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de fermeture de l'entité géographique"
-* rest.resource[+].type = #Practioner
+* rest.resource[+].type = #Practitioner
 * rest.resource[=].profile = Canonical(ror-practitioner)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
@@ -237,7 +237,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
-* rest.resource[+].type = #PractionerRole
+* rest.resource[+].type = #PractitionerRole
 * rest.resource[=].profile = Canonical(ror-practitionerrole)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
