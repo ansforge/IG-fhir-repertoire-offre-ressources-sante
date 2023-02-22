@@ -11,7 +11,6 @@ Description: "Extension créée dans le cadre du ROR pour définir les période 
 * ^contact.telecom.value = "HL7"
 * ^context.type = #element
 * ^context.expression = "Organization"
-* . ^definition = "The date range that this organization should be considered available."
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open

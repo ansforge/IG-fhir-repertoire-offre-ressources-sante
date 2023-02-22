@@ -7,12 +7,14 @@ Description: "Extension créée dans le cadre du ROR"
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    nom 0..1 and
-    RORContactFonctionContact named FonctionContact 0..1 and
-    natureContact 0..1 and
+    name 0..1 and
+    RORContactFunctionContact named ror-function-contact 0..1 and
+    purposeContact 0..1 and
     description 0..1 and
-    RORConfidentialityLevel named ConfidentialityLevel 1..1
-* extension[nom].value[x] only string
+    RORConfidentialityLevel named ConfidentialityLevel 1..1 and
+    telecom 0..*
+* extension[name].value[x] only string
 * extension[description].value[x] only string
-* extension[natureContact].value[x] only CodeableConcept
-* extension[natureContact].value[x] from $JDV-J221-NatureContact-ROR (required)
+* extension[purposeContact].value[x] only CodeableConcept
+* extension[purposeContact].value[x] from $JDV-J221-NatureContact-ROR (required)
+* extension[telecom].value[x] only ContactPoint //TODO

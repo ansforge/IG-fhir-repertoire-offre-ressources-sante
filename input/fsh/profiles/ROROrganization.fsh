@@ -2,12 +2,86 @@ Profile: ROROrganization
 Parent: $FrOrganization
 Id: ror-organization
 Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
+/* Données techniques */
+* id 1..1
 * meta.tag 0..1
 * meta.tag from $JDV_J237-RegionOM-ROR (required)
+/* Références*/
+
+/* Données fonctionnelles */
+* name 1..1
+* alias 0..1
+// Slice identifier //TODO
+* identifier 1..1
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier contains
+    idNatStruct 1..1 and
+    numFINESS 0..1 and
+    numSIREN 0..1 and
+    numRPPS 0..1 and
+    numSIRET 0..1 and 
+    identifierOI 0..1 and
+    numADELI 0..1
+* identifier[idNatStruct].type = $JDV-J236-TypeIdentifiant-ROR#40 (exactly)
+* identifier[idNatStruct].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[numFINESS].type = $JDV-J236-TypeIdentifiant-ROR#1 (exactly)
+* identifier[numFINESS].type from $JDV-J236-TypeIdentifiant-ROR (required) 
+* identifier[numSIREN].type from $JDV-J236-TypeIdentifiant-ROR (required) 
+* identifier[numSIREN].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
+* identifier[numRPPS].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[numRPPS].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
+* identifier[numSIRET].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[numSIRET].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
+* identifier[identifierOI].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[identifierOI].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
+* identifier[numADELI].type = $JDV-J236-TypeIdentifiant-ROR#0 (exactly)
+* identifier[numADELI].type from $JDV-J236-TypeIdentifiant-ROR (required)
+// SLice type //TODO anglais
+* type 1..* //TODO cardinalité
+* type ^slicing.discriminator.type = #value
+* type ^slicing.discriminator.path = "coding.system"
+* type ^slicing.rules = #open
+* type contains
+    statutJuridiqueINSEE 1..1 and
+    categorieEtablissement 1..1 and
+    sphParticipation 0..1 and
+    sousEnsembleAgregatStatutJuridique 0..1
+* type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
+* type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
+* type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
+* type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
+// Contact
+* contact 0..*
+* contact.extension ^slicing.discriminator.type = #value
+* contact.extension ^slicing.discriminator.path = "url"
+* contact.extension ^slicing.rules = #open
+* contact.extension contains
+    RORContactDescription named ror-contact-description 0..1 and
+    RORContactFunctionContact named ror-contact-function-contact 0..1 and
+    RORContactConfidentialityLevel named ror-contact-confidentiality-level 0..1
+* contact.extension[ror-contact-description] ^isModifier = false
+* contact.extension[ror-contact-function-contact] ^isModifier = false
+* contact.extension[ror-contact-confidentiality-level] ^isModifier = false
+* contact.purpose from $JDV-J221-NatureContact-ROR (required)
+* contact.telecom.extension ^slicing.discriminator.type = #value
+* contact.telecom.extension ^slicing.discriminator.path = "url"
+* contact.telecom.extension ^slicing.rules = #open
+* contact.telecom.extension contains
+    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
+    RORTelecomUsage named ror-telecom-usage 0..1 and
+    RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
+* contact.telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
+* contact.telecom.extension[ror-telecom-usage] ^isModifier = false
+* contact.telecom.extension[ror-telecom-communication-channel] ^isModifier = false
+* endpoint ..0 //TODO
+//TODO
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
+    RORPeriodClosingType named ror-period-closing-type 0..1 and //TODO dateOuverture dateFermeture
     ROROrganizationPrice named ror-organization-price 0..1 and
     $mailboxMSS named mailboxMSS 0.. and
     ROROrganizationTerritorial named ror-organization-territorial 0.. and
@@ -19,6 +93,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORLevelRecourseORSAN named ror-level-recours-orsan 0.. and
     ROROrganizationPeriod named ror-organization-period 0.. and
     RORDropZone named ror-drop-zone 0..1
+* extension[ror-period-closing-type] ^isModifier = false
 * extension[mailboxMSS] ^isModifier = false
 * extension[ror-organization-territorial] ^isModifier = false
 * extension[ror-organization-price] ^isModifier = false
@@ -30,48 +105,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-accessibility-location] ^isModifier = false
 * extension[ror-level-recours-orsan] ^isModifier = false
 * extension[ror-organization-period] ^isModifier = false
-* identifier 1..1
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type"
-* identifier ^slicing.rules = #open
-* identifier contains
-    idNatStruct 1..1 and
-    numFINESS 0..1 and
-    numSIREN 0..1 and
-    numRPPS 0..1 and
-    numSIRET 0..1 and
-    identifiantOI 0..1 and
-    numADELI 0..1
-* identifier[idNatStruct].type = $TRE-R254-TypeEvenement#40 (exactly)
-* identifier[idNatStruct].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numFINESS].type = $JDV-J236-TypeIdentifiant-ROR#1 (exactly)
-* identifier[numFINESS].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numSIREN].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numSIREN].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
-* identifier[numRPPS].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numRPPS].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
-* identifier[numSIRET].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numSIRET].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
-* identifier[identifiantOI].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[identifiantOI].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
-* identifier[numADELI].type = $JDV-J236-TypeIdentifiant-ROR#0 (exactly)
-* identifier[numADELI].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* type[organizationType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
-* type[organizationType] ^sliceName = "organizationType"
-* type[organizationType] ^binding.description = "Binding JDV_J203-TypeOrganisationInterne-ROR"
-* type contains
-    statutJuridiqueINSEE 0..1 and
-    categorieEtablissement 0..1 and
-    sphParticipation 0..1 and
-    sousEnsembleAgregatStatutJuridique 0..1
-* type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
-* type[statutJuridiqueINSEE] ^binding.description = "Binding JDV_J199-StatutJuridique-ROR"
-* type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
-* type[categorieEtablissement] ^binding.description = "Binding JDV_J55-CategorieEG-ROR"
-* type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
-* type[sphParticipation] ^binding.description = "Binding JDV_J202-ESPIC-ROR"
-* type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
-* alias 0..1
+// Adresse //TODO relire
 * address.extension ^slicing.discriminator.type = #value
 * address.extension ^slicing.discriminator.path = "url"
 * address.extension ^slicing.rules = #open
@@ -82,11 +116,11 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORAddressName named ror-address-name 0..1 and
     RORAddressDescription named ror-address-description 0..1 and
     RORAddressStatus named ror-address-status 0..1 and
-    RORAddressCalculatedDistance named ror-address-calculated-distance 0..1
+    RORCalculatedDistance named ror-calculated-distance 0..1
 * address.extension[ror-address-name] ^isModifier = false
 * address.extension[ror-address-description] ^isModifier = false
 * address.extension[ror-address-status] ^isModifier = false
-* address.extension[ror-address-calculated-distance] ^isModifier = false
+* address.extension[ror-calculated-distance] ^isModifier = false
 * address.line.extension ^slicing.discriminator.type = #value
 * address.line.extension ^slicing.discriminator.path = "url"
 * address.line.extension ^slicing.rules = #open
@@ -99,23 +133,3 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.line.extension contains ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..1
 * address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^isModifier = false
 * partOf only Reference($FrOrganization or ROROrganization)
-* contact.extension ^slicing.discriminator.type = #value
-* contact.extension ^slicing.discriminator.path = "url"
-* contact.extension ^slicing.rules = #open
-* contact.extension contains
-    RORContactDescription named ror-contact-description 0..1 and
-    RORContactFonctionContact named ror-contact-fonction-contact 0..1 and
-    RORContactConfidentialityLevel named ror-contact-confidentiality-level 0..1
-* contact.extension[ror-contact-description] ^isModifier = false
-* contact.extension[ror-contact-fonction-contact] ^isModifier = false
-* contact.extension[ror-contact-confidentiality-level] ^isModifier = false
-* contact.purpose from $JDV-J221-NatureContact-ROR (required)
-* contact.telecom.extension ^slicing.discriminator.type = #value
-* contact.telecom.extension ^slicing.discriminator.path = "url"
-* contact.telecom.extension ^slicing.rules = #open
-* contact.telecom.extension contains
-    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 0..1 and
-    RORContactTelecomUsage named ror-contact-telecom-usage 0..1
-* contact.telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
-* contact.telecom.extension[ror-contact-telecom-usage] ^isModifier = false
-* endpoint ..0

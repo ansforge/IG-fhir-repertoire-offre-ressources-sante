@@ -14,4 +14,4 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
 * extension[type].value[x] only CodeableConcept
 * extension[type].value[x] from $JDV-J223-TypeDivisionTerritoriale-ROR (required)
 * extension[code].value[x] 1..1
-* extension[code].value[x] only CodeableConcept
+* extension[code].value[x] only CodeableConcept //TODO
