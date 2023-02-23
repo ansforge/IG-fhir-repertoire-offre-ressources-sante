@@ -36,13 +36,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numFINESS].type = $JDV-J236-TypeIdentifiant-ROR#1 (exactly)
 * identifier[numFINESS].type from $JDV-J236-TypeIdentifiant-ROR (required) 
 * identifier[numSIREN].type from $JDV-J236-TypeIdentifiant-ROR (required) 
-* identifier[numSIREN].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
 * identifier[numRPPS].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numRPPS].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
 * identifier[numSIRET].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numSIRET].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
 * identifier[identifierOI].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[identifierOI].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
 * identifier[numADELI].type = $JDV-J236-TypeIdentifiant-ROR#0 (exactly)
 * identifier[numADELI].type from $JDV-J236-TypeIdentifiant-ROR (required)
 // SLice type //TODO anglais

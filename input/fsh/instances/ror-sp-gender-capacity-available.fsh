@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
 * name = "RORSPGenderCapacityAvailable"
-* description = "Paramètre de recherche pour récupérer le genre disponnible de la capacité."
+* description = "Paramètre de recherche pour récupérer le genre disponible de la capacité."
 * code = #gender-capacity
 * base = #Location
 * type = #token

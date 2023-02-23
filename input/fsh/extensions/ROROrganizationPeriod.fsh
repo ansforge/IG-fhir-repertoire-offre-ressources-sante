@@ -1,14 +1,11 @@
 Extension: ROROrganizationPeriod
 Id: ror-organization-period
-Title: "Period"
 Description: "Extension créée dans le cadre du ROR pour définir les période d'ouverture et de fermeture de l'organisation interne"
 * ^meta.lastUpdated = "2023-01-18T10:51:18.056967+00:00"
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #pa
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "HL7"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * extension ^slicing.discriminator.type = #value
@@ -25,4 +22,3 @@ Description: "Extension créée dans le cadre du ROR pour définir les période 
 * extension[reopeningDate].value[x] only date
 * extension[temporalityClosing].value[x] only CodeableConcept
 * extension[temporalityClosing].value[x] from $JDV_J185-typeFermeture-ROR (required)
-* url only uri
