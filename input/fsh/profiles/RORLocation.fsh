@@ -32,8 +32,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * identifier[idLocation].type = $JDV-J236-TypeIdentifiant-ROR#25 (exactly)
 * identifier[idLocation].type from $JDV-J236-TypeIdentifiant-ROR (required)
 // Telecomunnication
-* telecom 0..1
-* telecom.value 1..1
+* telecom 0..1 
+// telecom.value 1..1 testDebug
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
