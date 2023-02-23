@@ -7,4 +7,4 @@ Usage: #definition
 * code = #psychiatric-sector
 * base = #HealthcareService
 * type = #string
-* expression = "HealthcareService.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror30StructureDefinition/ror-healthcareservice-psychiatric-sector').valueString"
+* expression = "HealthcareService.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-healthcareservice-psychiatric-sector').valueString"

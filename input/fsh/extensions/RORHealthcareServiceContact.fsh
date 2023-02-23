@@ -12,9 +12,9 @@ Description: "Extension créée dans le cadre du ROR pour décrire la personne o
     purposeContact 0..1 and
     description 0..1 and
     RORConfidentialityLevel named ConfidentialityLevel 1..1 and
-    telecom 0..*
+    telecommunication 0..*
 * extension[name].value[x] only string
 * extension[description].value[x] only string
 * extension[purposeContact].value[x] only CodeableConcept
 * extension[purposeContact].value[x] from $JDV-J221-NatureContact-ROR (required)
-* extension[telecom].value[x] only ContactPoint //TODO ContactPoint étendu avec nos extensions (organization)
+* extension[telecommunication].value[x] only ContactPoint //TODO ContactPoint étendu avec nos extensions (organization)

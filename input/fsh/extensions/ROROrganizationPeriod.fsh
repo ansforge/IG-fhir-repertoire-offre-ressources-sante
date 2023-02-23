@@ -15,7 +15,6 @@ Description: "Extension créée dans le cadre du ROR pour définir les période 
     closingType 0..1 and
     reopeningDate 0..1 and
     temporalityClosing 0..1
-* extension[openingClosingDate].value[x] only Period
 * extension[closingType].value[x] only CodeableConcept
 * extension[closingType].value[x] from $JDV-J201-TypeFermeture-ROR (required)
 * extension[reopeningDate].value[x] only date

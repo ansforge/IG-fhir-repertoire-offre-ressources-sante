@@ -18,7 +18,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 /* Données fonctionnelles */
 * name 1..1
 * alias 0..1
-// Slice identifier //TODO
+// Slice identifier 
 * identifier 1..1
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
@@ -30,19 +30,26 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     numRPPS 0..1 and
     numSIRET 0..1 and 
     identifierOI 0..1 and
-    numADELI 0..1
+    numADELI 0..1 and
+    identifierEG 0..1
 * identifier[idNatStruct].type = $JDV-J236-TypeIdentifiant-ROR#40 (exactly)
 * identifier[idNatStruct].type from $JDV-J236-TypeIdentifiant-ROR (required)
 * identifier[numFINESS].type = $JDV-J236-TypeIdentifiant-ROR#1 (exactly)
 * identifier[numFINESS].type from $JDV-J236-TypeIdentifiant-ROR (required) 
 * identifier[numSIREN].type from $JDV-J236-TypeIdentifiant-ROR (required) 
+* identifier[numSIREN].type = $JDV-J236-TypeIdentifiant-ROR#2 (exactly)
 * identifier[numRPPS].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[numRPPS].type = $JDV-J236-TypeIdentifiant-ROR#4 (exactly)
 * identifier[numSIRET].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[identifierOI].type = $JDV-J236-TypeIdentifiant-ROR#3 (exactly)
 * identifier[identifierOI].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[numSIRET].type = $JDV-J236-TypeIdentifiant-ROR#42 (exactly)
 * identifier[numADELI].type = $JDV-J236-TypeIdentifiant-ROR#0 (exactly)
 * identifier[numADELI].type from $JDV-J236-TypeIdentifiant-ROR (required)
-// SLice type //TODO anglais
-* type 1..* //TODO cardinalité 1..1
+* identifier[identifierEG].type = $JDV-J236-TypeIdentifiant-ROR#41 (exactly)
+* identifier[identifierEG].type from $JDV-J236-TypeIdentifiant-ROR (required)
+// SLice type 
+* type 1..* 
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "coding.system"
 * type ^slicing.rules = #open
@@ -51,11 +58,13 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     categorieEtablissement 1..1 and
     sphParticipation 0..1 and
     sousEnsembleAgregatStatutJuridique 0..1 and
+    fonctionLieu 0..1 and
     OIType 1..1
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
 * type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
+* type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
 * type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
 // Contact
 * contact 0..*
@@ -80,7 +89,19 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * contact.telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
 * contact.telecom.extension[ror-telecom-usage] ^isModifier = false
 * contact.telecom.extension[ror-telecom-communication-channel] ^isModifier = false
-* endpoint ..0 //TODO
+
+//telecommunication
+* telecom.value 1..1
+* telecom.extension ^slicing.discriminator.type = #value
+* telecom.extension ^slicing.discriminator.path = "url"
+* telecom.extension ^slicing.rules = #open
+* telecom.extension contains 
+    RORTelecomUsage named ror-telecom-usage 0..1 and
+    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
+    RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
+* telecom.extension[ror-telecom-usage] ^isModifier = false
+* telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
+* telecom.extension[ror-telecom-communication-channel] ^isModifier = false
 // Extension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -95,9 +116,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationAccessibilityLocation named ror-organization-accessibility-location 0..1 and
     ROROrganizationLevelRecourseORSAN named ror-organization-level-recourse-orsan 0..1 and
     ROROrganizationPeriod named ror-organization-period 0.. and
-    $period named openingClosingDate 0..1 and 
+    $period named openingClosingDate 0..1 and
+    RORCommuneCog named ror-commune-cog 1..1 and 
     ROROrganizationDropZone named ror-organization-drop-zone 0..1
-* extension[ror-period-closing-type] ^isModifier = false
 * extension[ror-territorial-division] ^isModifier = false
 * extension[ror-organization-price] ^isModifier = false
 * extension[ror-organization-drop-zone] ^isModifier = false
@@ -108,7 +129,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-accessibility-location] ^isModifier = false
 * extension[ror-organization-level-recourse-orsan] ^isModifier = false
 * extension[ror-organization-period] ^isModifier = false
-// Adresse //TODO relire
+* extension[openingClosingDate] ^isModifier = false
+* extension[ror-commune-cog] ^isModifier = false
+* extension[ror-organization-drop-zone] ^isModifier = false
+// Adresse 
 * address.extension ^slicing.discriminator.type = #value
 * address.extension ^slicing.discriminator.path = "url"
 * address.extension ^slicing.rules = #open
@@ -119,21 +143,28 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORAddressName named ror-address-name 0..1 and
     RORAddressDescription named ror-address-description 0..1 and
     RORAddressStatus named ror-address-status 0..1 and
-    RORCalculatedDistance named ror-calculated-distance 0..1
+    RORCalculatedDistance named ror-calculated-distance 0..1 and 
+    RORGeolocationLocation named ror-geolocation 0..1
 * address.extension[ror-address-name] ^isModifier = false
 * address.extension[ror-address-description] ^isModifier = false
 * address.extension[ror-address-status] ^isModifier = false
-* address.extension[ror-calculated-distance] ^isModifier = false
+* address.extension[ror-calculated-distance] ^isModifier = false 
+* address.extension[ror-geolocation] ^isModifier = false 
 * address.line.extension ^slicing.discriminator.type = #value
 * address.line.extension ^slicing.discriminator.path = "url"
 * address.line.extension ^slicing.rules = #open
 * address.line.extension contains
-    iso21090-ADXP-streetNameType named streetNameType 0.. 
+    ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..* and
+    $careOf named careOf 0..* and
+    $additionalLocator named additionalLocator 0..* and
+    $houseNumber named houseNumber 0..* and
+    $buildingNumberSuffix named buildingNumberSuffix 0..* and
+    $streetNameType named streetNameType 0..* and
+    $streetNameBase named streetNameBase 0..* and
+    $postBox named postalBox 0..*
 * address.line.extension[streetNameType] ^sliceName = "streetNameType"
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
-* address.line.extension[streetNameType].valueString ^sliceName = "valueString"
-* address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"
-* address.line.extension contains ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..1
+/** address.line.extension[streetNameType].valueString ^sliceName = "valueString"
+* address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
 * address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^isModifier = false
 * partOf only Reference($FrOrganization or ROROrganization)
-// TODO LieuEG

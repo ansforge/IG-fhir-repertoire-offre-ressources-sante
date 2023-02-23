@@ -7,4 +7,4 @@ Usage: #definition
 * code = #intervention-zone
 * base = #HealthcareService
 * type = #token
-* expression = "HealthcareService.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30StructureDefinition/ror-healthcareservice-intervention-zone').extension(url='interventionZone').valueCodeableConcept"
+* expression = "HealthcareService.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-healthcareservice-intervention-zone').extension(url='interventionZone').valueCodeableConcept"

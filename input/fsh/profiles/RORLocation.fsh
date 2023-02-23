@@ -51,21 +51,22 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * position.extension ^slicing.rules = #open
 * position.extension contains RORGeolocationLocation named ror-location-geolocation 1..*
 * position.extension[ror-location-geolocation] ^isModifier = false
-// Adresse //TODO
-* address only $fr-address-extended
-* address.extension ^slicing.discriminator.type = #value
-* address.extension ^slicing.discriminator.path = "url"
-* address.extension ^slicing.rules = #open
-* address.extension[inseeCode] ^sliceName = "inseeCode"
-* address.extension[inseeCode].value[x] from $JDV-J230-CommuneOM-ROR (required)
-* address.extension[inseeCode].value[x] ^binding.description = "JDV_J230-CommuneOM-ROR"
+// Adresse 
 * address.line.extension ^slicing.discriminator.type = #value
 * address.line.extension ^slicing.discriminator.path = "url"
 * address.line.extension ^slicing.rules = #open
-* address.line.extension[streetNameType] ^sliceName = "streetNameType"
+* address.line.extension contains 
+    ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..1 and
+    $careOf named careOf 0..1 and
+    $additionalLocator named additionalLocator 0..1 and
+    $houseNumber named houseNumber 0..1 and
+    $buildingNumberSuffix named buildingNumberSuffix 0..1 and
+    $streetNameType named streetNameType 0..1 and
+    $streetNameBase named streetNameBase 0..1 and
+    $postBox named postalBox 0..1
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
-* address.line.extension[streetNameType].valueString ^sliceName = "valueString"
-* address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"
+/** address.line.extension[streetNameType].valueString ^sliceName = "valueString"
+* address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
 // Extension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -76,10 +77,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
     RORLocationResidentialCapacity named ror-location-residential-capacity 0..* and
     RORLocationSupportedCapacity named ror-location-supported-capacity 0..* and
     RORLocationEquipmentLimit named ror-location-equipment-limit 0..* and
-    RORLocationCommuneCog named ror-location-commune-cog 1..1
+    RORCommuneCog named ror-commune-cog 1..1
 * extension[ror-location-status] ^isModifier = false
 * extension[ror-location-equipment] ^isModifier = false
 * extension[ror-location-residential-capacity] ^isModifier = false
 * extension[ror-location-supported-capacity] ^isModifier = false
 * extension[ror-location-equipment-limit] ^isModifier = false
-* extension[ror-location-commune-cog] ^isModifier = false
+* extension[ror-commune-cog] ^isModifier = false

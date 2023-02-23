@@ -7,4 +7,4 @@ Usage: #definition
 * code = #crisis-type
 * base = #Location
 * type = #token
-* expression = "Location.extensionwhere(url='https://interop.esante.gouv.fr/ig/fhir/ror30StructureDefinition/ror-supported-capacity').extension(url='crisisType').valueCode"
+* expression = "Location.extensionwhere(url='https://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-supported-capacity').extension(url='crisisType').valueCode"

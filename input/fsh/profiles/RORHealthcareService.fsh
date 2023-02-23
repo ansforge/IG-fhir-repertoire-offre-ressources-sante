@@ -65,8 +65,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic[outsideOfficeAct].id = "outsideOfficeAct" (exactly)
 //
 * notAvailable 0..1
-* notAvailable ^slicing.discriminator.type = #value //TODO
-* notAvailable ^slicing.discriminator.path = "id" //TODO
+* notAvailable ^slicing.discriminator.type = #value 
+* notAvailable ^slicing.discriminator.path = "id" 
 * notAvailable ^slicing.rules = #open
 * notAvailable contains
     closingDate 0..1 and

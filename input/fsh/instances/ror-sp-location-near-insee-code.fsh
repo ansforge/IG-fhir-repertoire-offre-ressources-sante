@@ -7,4 +7,4 @@ Usage: #definition
 * code = #near-insee-code
 * base = #Location
 * type = #special
-* expression = "Location.address.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30structuredefinition/datatype/fr-address-insee-code').valueCode"
+* expression = "Location.address.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30/structuredefinition/datatype/fr-address-insee-code').valueCode"

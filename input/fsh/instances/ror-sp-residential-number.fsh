@@ -7,4 +7,4 @@ Usage: #definition
 * code = #residential-number
 * base = #Location
 * type = #number
-* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30StructureDefinition/ROR_ResidentialCapacity').extension(url='residentialNumber').valueInteger"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ROR_ResidentialCapacity').extension(url='residentialNumber').valueInteger"

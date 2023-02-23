@@ -7,4 +7,4 @@ Usage: #definition
 * code = #nb-capacity
 * base = #Location
 * type = #number
-* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30StructureDefinition/ror-supported-capacity').extension(url='NbCapacity').valueInteger"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-supported-capacity').extension(url='NbCapacity').valueInteger"
