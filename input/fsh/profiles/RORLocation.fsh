@@ -5,7 +5,14 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 /* Données techniques */
 * id 1..1
 * meta.tag 0..1
-* meta.tag from $JDV_J237-RegionOM-ROR (required)
+* meta.tag ^slicing.discriminator.type = #value
+* meta.tag ^slicing.discriminator.path = "url"
+* meta.tag ^slicing.rules = #open
+* meta.tag ^slicing.description = "Slicing pour gérer le code région définissant la région source des données"
+* meta.tag ^slicing.ordered = false
+* meta.tag contains
+    codeRegion 0..1
+* meta.tag[codeRegion] from $JDV_J237-RegionOM-ROR (required)
 /* Références*/
 
 /* Données fonctionnelles */
