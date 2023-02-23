@@ -81,8 +81,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * specialty[operationalActivity] from $JDV-J17-ActiviteOperationnelle-ROR (required)
 * specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR (required)
 // BoiteLettreMSS
-// telecom 0..1 TestDebug
-// telecom.value 1..1
+* telecom 0..1
+* telecom.value 1..1
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open

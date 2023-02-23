@@ -31,9 +31,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * identifier[idLocation].type 1..1
 * identifier[idLocation].type = $JDV-J236-TypeIdentifiant-ROR#25 (exactly)
 * identifier[idLocation].type from $JDV-J236-TypeIdentifiant-ROR (required)
-// Telecomunnication
-* telecom 0..1 
-// telecom.value 1..1 testDebug
+// Telecommunication
+/* * telecom 0..1 
+* telecom.value 1..1
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
@@ -43,7 +43,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
 * telecom.extension[ror-telecom-usage] ^isModifier = false
 * telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
-* telecom.extension[ror-telecom-communication-channel] ^isModifier = false
+* telecom.extension[ror-telecom-communication-channel] ^isModifier = false */
 // CoordonneeGeographique
 * position 0..1
 * position.extension ^slicing.discriminator.type = #value
@@ -65,7 +65,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
     $streetNameBase named streetNameBase 0..1 and
     $postBox named postalBox 0..1
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
-/** address.line.extension[streetNameType].valueString ^sliceName = "valueString"
+/* * address.line.extension[streetNameType].valueString ^sliceName = "valueString"
 * address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
 // Extension
 * extension ^slicing.discriminator.type = #value
