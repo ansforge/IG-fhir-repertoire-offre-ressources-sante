@@ -53,4 +53,3 @@ Description: "Extension créée dans le cadre du ROR pour permettre de définir 
 * extension[surchargePriceName].extension[string].value[x] only string
 * extension[surchargePriceName].extension[codeableConcept].value[x] only CodeableConcept
 * extension[surchargePriceName].extension[codeableConcept].value[x] from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)
-* url = "http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-organization-price" (exactly)
