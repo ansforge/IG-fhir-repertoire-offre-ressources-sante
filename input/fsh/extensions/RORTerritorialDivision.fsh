@@ -1,9 +1,11 @@
-Extension: RORHealthcareServiceInterventionZone
-Id: ror-healthcareservice-intervention-zone
+Extension: RORTerritorialDivision //TODO a relire
+Id: ror-territorial-division
 Description: "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. 
 Cela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent."
 * ^context.type = #element
 * ^context.expression = "HealthcareService"
+* ^context.type = #element
+* ^context.expression = "Organization"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -14,4 +16,4 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
 * extension[type].value[x] only CodeableConcept
 * extension[type].value[x] from $JDV-J223-TypeDivisionTerritoriale-ROR (required)
 * extension[code].value[x] 1..1
-* extension[code].value[x] only CodeableConcept //TODO
+* extension[code].value[x] only CodeableConcept //TODO plusieurs JDV (commune, région) ou laisser comme ça

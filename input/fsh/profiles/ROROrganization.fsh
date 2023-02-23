@@ -42,7 +42,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numADELI].type = $JDV-J236-TypeIdentifiant-ROR#0 (exactly)
 * identifier[numADELI].type from $JDV-J236-TypeIdentifiant-ROR (required)
 // SLice type //TODO anglais
-* type 1..* //TODO cardinalité
+* type 1..* //TODO cardinalité 1..1
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "coding.system"
 * type ^slicing.rules = #open
@@ -50,11 +50,13 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     statutJuridiqueINSEE 1..1 and
     categorieEtablissement 1..1 and
     sphParticipation 0..1 and
-    sousEnsembleAgregatStatutJuridique 0..1
+    sousEnsembleAgregatStatutJuridique 0..1 and
+    OIType 1..1
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
 * type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
+* type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
 // Contact
 * contact 0..*
 * contact.extension ^slicing.discriminator.type = #value
@@ -79,34 +81,32 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * contact.telecom.extension[ror-telecom-usage] ^isModifier = false
 * contact.telecom.extension[ror-telecom-communication-channel] ^isModifier = false
 * endpoint ..0 //TODO
-//TODO
+// Extension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    RORPeriodClosingType named ror-period-closing-type 0..1 and //TODO dateOuverture dateFermeture
-    ROROrganizationPrice named ror-organization-price 0..1 and
-    $mailboxMSS named mailboxMSS 0.. and
-    ROROrganizationTerritorial named ror-organization-territorial 0.. and
-    ROROrganizationFinancialHelpType named ror-organization-financial-help-type 0.. and
-    ROROrganizationAccomodationFamily named ror-organization-accomodation-family 0.. and
-    ROROrganizationNbPermanentSocialHelpPlace named ror-organization-nb-permanent-social-help-place 0.. and
-    ROROrganizationNbTemporarySocialHelpPlace named ror-organization-nb-temporary-social-help-place 0.. and
-    RORAccessibilityLocation named ror-accessibility-location 0.. and
-    RORLevelRecourseORSAN named ror-level-recours-orsan 0.. and
-    ROROrganizationPeriod named ror-organization-period 0.. and
-    RORDropZone named ror-drop-zone 0..1
+    RORPeriodClosingType named ror-period-closing-type 0..1 and //TODO dateOuverture dateFermeture datePrevisionnelleReouverture
+    ROROrganizationPrice named ror-organization-price 0..* and
+    RORTerritorialDivision named ror-territorial-division 0..* and
+    ROROrganizationFinancialHelpType named ror-organization-financial-help-type 0..* and
+    ROROrganizationAccomodationFamily named ror-organization-accomodation-family 0..1 and
+    ROROrganizationNbPermanentSocialHelpPlace named ror-organization-nb-permanent-social-help-place 0..1 and
+    ROROrganizationNbTemporarySocialHelpPlace named ror-organization-nb-temporary-social-help-place 0..1 and
+    ROROrganizationAccessibilityLocation named ror-organization-accessibility-location 0..1 and
+    ROROrganizationLevelRecourseORSAN named ror-organization-level-recourse-orsan 0..1 and
+    ROROrganizationPeriod named ror-organization-period 0.. and //TODO à supprimer ? (periodclosingtype)
+    ROROrganizationDropZone named ror-organization-drop-zone 0..1
 * extension[ror-period-closing-type] ^isModifier = false
-* extension[mailboxMSS] ^isModifier = false
-* extension[ror-organization-territorial] ^isModifier = false
+* extension[ror-territorial-division] ^isModifier = false
 * extension[ror-organization-price] ^isModifier = false
-* extension[ror-drop-zone] ^isModifier = false
+* extension[ror-organization-drop-zone] ^isModifier = false
 * extension[ror-organization-financial-help-type] ^isModifier = false
 * extension[ror-organization-accomodation-family] ^isModifier = false
 * extension[ror-organization-nb-permanent-social-help-place] ^isModifier = false
 * extension[ror-organization-nb-temporary-social-help-place] ^isModifier = false
-* extension[ror-accessibility-location] ^isModifier = false
-* extension[ror-level-recours-orsan] ^isModifier = false
+* extension[ror-organization-accessibility-location] ^isModifier = false
+* extension[ror-organization-level-recourse-orsan] ^isModifier = false
 * extension[ror-organization-period] ^isModifier = false
 // Adresse //TODO relire
 * address.extension ^slicing.discriminator.type = #value
@@ -136,3 +136,4 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.line.extension contains ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..1
 * address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^isModifier = false
 * partOf only Reference($FrOrganization or ROROrganization)
+// TODO LieuEG

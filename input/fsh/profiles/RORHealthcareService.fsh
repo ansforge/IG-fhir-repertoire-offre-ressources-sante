@@ -59,7 +59,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic[specificCompetence].id = "specificCompetence" (exactly)
 * characteristic[expertiseLevel] from $JDV-J227-NiveauExpertise-ROR (required)
 * characteristic[expertiseLevel].id = "expertiseLevel" (exactly)
-* characteristic[temporalityStopService] from $JDV-J201-TypeFermeture-ROR (required)
+* characteristic[temporalityStopService] from $JDV-J185-TypeFermeture-ROR (required)
 * characteristic[temporalityStopService].id = "temporalityStopService" (exactly)
 * characteristic[outsideOfficeAct] from $JDV-J16-ActeSpecifique-ROR (required)
 * characteristic[outsideOfficeAct].id = "outsideOfficeAct" (exactly)
@@ -116,14 +116,14 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORHealthcareServiceNoConsentHabilitation named ror-healthcareservice-no-consent-habilitation 0..1 and
     RORHealthcareServicePatientType named ror-healthcareservice-patient-type 1..1 and
     RORHealthcareServiceSensitiveUnit named ror-healthcareservice-sensitive-unit 1..* and
-    RORHealthcareServiceInterventionZone named ror-healthcareservice-intervention-zone 0..* and
+    RORTerritorialDivision named ror-territorial-division 0..* and
     RORHealthcareServiceContact named ror-healthcareservice-contact 1..1 and
     RORCalculatedDistance named RORCalculatedDistance 0..1
 * extension[ror-healthcareservice-psychiatric-sector] ^isModifier = false
 * extension[ror-healthcareservice-no-consent-habilitation] ^isModifier = false
 * extension[ror-healthcareservice-patient-type] ^isModifier = false
 * extension[ror-healthcareservice-sensitive-unit] ^isModifier = false
-* extension[ror-healthcareservice-intervention-zone] ^isModifier = false
+* extension[ror-territorial-division] ^isModifier = false
 * extension[ror-healthcareservice-contact] ^isModifier = false
 
 

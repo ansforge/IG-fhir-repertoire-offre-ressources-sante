@@ -21,7 +21,8 @@ Description: "Extension créée dans le cadre du ROR pour permettre de définir 
     dependencyLevel 1..1 and
     humanHelpPriceName 0..1 and
     managementType 1..1 and
-    surchargePriceName 1..1
+    otherAdditionalServiceName 1..1 and
+    additionalServiceName 0..1
 * extension[priceType].value[x] only CodeableConcept
 * extension[priceType].value[x] from $JDV-J36-TypeTarif-ROR (required)
 * extension[priceUnit].value[x] only CodeableConcept
@@ -44,12 +45,6 @@ Description: "Extension créée dans le cadre du ROR pour permettre de définir 
 * extension[humanHelpPriceName].value[x] only string
 * extension[managementType].value[x] only CodeableConcept
 * extension[managementType].value[x] from $JDV-J26-ModeGestion-ROR (required)
-* extension[surchargePriceName].extension ^slicing.discriminator.type = #value
-* extension[surchargePriceName].extension ^slicing.discriminator.path = "url"
-* extension[surchargePriceName].extension ^slicing.rules = #open
-* extension[surchargePriceName].extension contains
-    string 1..1 and
-    codeableConcept 0..1
-* extension[surchargePriceName].extension[string].value[x] only string
-* extension[surchargePriceName].extension[codeableConcept].value[x] only CodeableConcept
-* extension[surchargePriceName].extension[codeableConcept].value[x] from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)
+* extension[otherAdditionalServiceName].value[x] only string 
+* extension[additionalServiceName].value[x] only CodeableConcept
+* extension[additionalServiceName].value[x] from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)

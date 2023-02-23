@@ -17,4 +17,4 @@ Description: "Extension créée dans le cadre du ROR"
 * extension[description].value[x] only string
 * extension[purposeContact].value[x] only CodeableConcept
 * extension[purposeContact].value[x] from $JDV-J221-NatureContact-ROR (required)
-* extension[telecom].value[x] only ContactPoint //TODO
+* extension[telecom].value[x] only ContactPoint //TODO ContactPoint étendu avec nos extensions (organization)
