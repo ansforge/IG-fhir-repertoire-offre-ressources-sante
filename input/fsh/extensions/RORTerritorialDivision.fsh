@@ -10,10 +10,10 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    type 1..1 and
-    code 1..1
-* extension[type].value[x] 1..1
-* extension[type].value[x] only CodeableConcept
-* extension[type].value[x] from $JDV-J223-TypeDivisionTerritoriale-ROR (required)
-* extension[code].value[x] 1..1
-* extension[code].value[x] only CodeableConcept //TODO plusieurs JDV (commune, région) ou laisser comme ça
+    typeTerritorialDivision 1..1 and
+    codeTerritorialDivision 1..1
+* extension[typeTerritorialDivision].value[x] 1..1
+* extension[typeTerritorialDivision].value[x] only CodeableConcept
+* extension[typeTerritorialDivision].value[x] from $JDV-J223-TypeDivisionTerritoriale-ROR (required)
+* extension[codeTerritorialDivision].value[x] 1..1
+* extension[codeTerritorialDivision].value[x] only CodeableConcept 

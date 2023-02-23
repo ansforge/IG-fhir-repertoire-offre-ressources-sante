@@ -7,4 +7,4 @@ Usage: #definition
 * code = #closing-type
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-period-closing-type').extension(url='closingType').valueCodeableConcept"
+* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30StructureDefinition/ror-period-closing-type').extension(url='closingType').valueCodeableConcept"

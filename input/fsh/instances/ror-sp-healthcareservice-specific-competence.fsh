@@ -7,4 +7,4 @@ Usage: #definition
 * code = #specific-competence
 * base = #HealthcareService
 * type = #token
-* expression = "HealthcareService.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-healthcareservice-competence-ressource').extension(url='specificCompetence').valueCode"
+* expression = "HealthcareService.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30StructureDefinition/ror-healthcareservice-competence-ressource').extension(url='specificCompetence').valueCode"

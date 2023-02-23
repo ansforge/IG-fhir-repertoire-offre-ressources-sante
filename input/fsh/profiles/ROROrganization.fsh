@@ -86,7 +86,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    RORPeriodClosingType named ror-period-closing-type 0..1 and //TODO dateOuverture dateFermeture datePrevisionnelleReouverture
     ROROrganizationPrice named ror-organization-price 0..* and
     RORTerritorialDivision named ror-territorial-division 0..* and
     ROROrganizationFinancialHelpType named ror-organization-financial-help-type 0..* and
@@ -95,7 +94,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationNbTemporarySocialHelpPlace named ror-organization-nb-temporary-social-help-place 0..1 and
     ROROrganizationAccessibilityLocation named ror-organization-accessibility-location 0..1 and
     ROROrganizationLevelRecourseORSAN named ror-organization-level-recourse-orsan 0..1 and
-    ROROrganizationPeriod named ror-organization-period 0.. and //TODO à supprimer ? (periodclosingtype)
+    ROROrganizationPeriod named ror-organization-period 0.. and
+    $period named openingClosingDate 0..1 and 
     ROROrganizationDropZone named ror-organization-drop-zone 0..1
 * extension[ror-period-closing-type] ^isModifier = false
 * extension[ror-territorial-division] ^isModifier = false

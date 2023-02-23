@@ -7,4 +7,4 @@ Usage: #definition
 * code = #residential-type
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-residential-capacity').extension(url='residentialType').valueCodeableConcept"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30StructureDefinition/ror-residential-capacity').extension(url='residentialType').valueCodeableConcept"

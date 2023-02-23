@@ -74,3 +74,4 @@ Alias: $JDV-J195-AffectationTemporaire-ROR = https://mos.esante.gouv.fr/NOS/JDV_
 Alias: $JDV-J198-FonctionLieu-ROR = https://mos.esante.gouv.fr/NOS/JDV_J198-FonctionLieu-ROR/FHIR/JDV-J198-FonctionLieu-ROR
 Alias: $JDV_J237-RegionOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR
 Alias: $geolocation = http://hl7.org/fhir/StructureDefinition/geolocation
+Alias: $period = http://hl7.org/fhir/StructureDefinition/organization-period

@@ -12,13 +12,12 @@ Description: "Extension créée dans le cadre du ROR pour définir les période 
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    period 0..1 and
     closingType 0..1 and
     reopeningDate 0..1 and
     temporalityClosing 0..1
-* extension[period].value[x] only Period
+* extension[openingClosingDate].value[x] only Period
 * extension[closingType].value[x] only CodeableConcept
 * extension[closingType].value[x] from $JDV-J201-TypeFermeture-ROR (required)
 * extension[reopeningDate].value[x] only date
 * extension[temporalityClosing].value[x] only CodeableConcept
-* extension[temporalityClosing].value[x] from $JDV-J185-TypeFermeture-ROR (required) //TODO 201
+* extension[temporalityClosing].value[x] from $JDV-J201-TypeFermeture-ROR (required)
