@@ -49,7 +49,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * position.extension ^slicing.discriminator.type = #value
 * position.extension ^slicing.discriminator.path = "url"
 * position.extension ^slicing.rules = #open
-* position.extension contains RORGeolocationLocation named ror-location-geolocation 1..*
+* position.extension contains RORGeolocationLocation named ror-location-geolocation 0..1
 * position.extension[ror-location-geolocation] ^isModifier = false
 // Adresse 
 * address.line.extension ^slicing.discriminator.type = #value

@@ -24,7 +24,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 // Slice characteristic
 * characteristic 0..*
 * characteristic ^slicing.discriminator.type = #value
-* characteristic ^slicing.discriminator.path = "id"
+* characteristic ^slicing.discriminator.path = "url"
 * characteristic ^slicing.rules = #open
 * characteristic contains
     careMode 1..1 and
@@ -40,39 +40,25 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     temporalityStopService 0..1 and
     outsideOfficeAct 0..*
 * characteristic[careMode] from $JDV-J19-ModePriseEnCharge-ROR (required)
-* characteristic[careMode].id = "careMode" (exactly)
 * characteristic[receptionModality] from $JDV-J226-ModaliteAccueil-ROR (required)
-* characteristic[receptionModality].id = "receptionModality" (exactly)
 * characteristic[managementType] from $JDV-J26-ModeGestion-ROR (required)
-* characteristic[managementType].id = "managementType" (exactly)
 * characteristic[receptionType] from $JDV-J30-TemporaliteAccueil-ROR (required)
-* characteristic[receptionType].id = "receptionType" (exactly)
 * characteristic[takingCareSpeciality] from $JDV-J35-SpecialisationDePriseEnCharge-ROR (required)
-* characteristic[takingCareSpeciality].id = "takingCareSpeciality" (exactly)
 * characteristic[annualOpening] from $JDV-J28-OuvertureAnnuelle-ROR (required)
-* characteristic[annualOpening].id = "annualOpening" (exactly)
 * characteristic[specificAct] from $JDV-J16-ActeSpecifique-ROR (required)
-* characteristic[specificAct].id = "specificAct" (exactly)
 * characteristic[ressourceProfession] from $JDV-J186-ProfessionRessource-ROR (required)
-* characteristic[ressourceProfession].id = "ressourceProfession" (exactly)
 * characteristic[specificCompetence] from $JDV-J33-CompetenceSpecifique-ROR (required)
-* characteristic[specificCompetence].id = "specificCompetence" (exactly)
 * characteristic[expertiseLevel] from $JDV-J227-NiveauExpertise-ROR (required)
-* characteristic[expertiseLevel].id = "expertiseLevel" (exactly)
 * characteristic[temporalityStopService] from $JDV-J185-TypeFermeture-ROR (required)
-* characteristic[temporalityStopService].id = "temporalityStopService" (exactly)
 * characteristic[outsideOfficeAct] from $JDV-J16-ActeSpecifique-ROR (required)
-* characteristic[outsideOfficeAct].id = "outsideOfficeAct" (exactly)
 //
 * notAvailable 0..1
 * notAvailable ^slicing.discriminator.type = #value 
-* notAvailable ^slicing.discriminator.path = "id" 
+* notAvailable ^slicing.discriminator.path = "url" 
 * notAvailable ^slicing.rules = #open
 * notAvailable contains
     closingDate 0..1 and
     previsionalReopeningDate 0..1
-* notAvailable[closingDate].id = "closingDate" (exactly)
-* notAvailable[previsionalReopeningDate].id = "previsionalReopeningDate" (exactly)
 // Horaire
 * availableTime 0..1
 * availableTime.extension ^slicing.discriminator.type = #value
