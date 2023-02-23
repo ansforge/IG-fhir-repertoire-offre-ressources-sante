@@ -1,5 +1,5 @@
-Extension: RORLocationEquipement
-Id: ror-location-equipement
+Extension: RORLocationEquipment
+Id: ror-location-equipment
 Description: "Extension créée dans le cadre du ROR pour décrire une ressource matérielle discriminante pour la réalisation d'une prestation."
 * ^context.type = #element
 * ^context.expression = "Location"

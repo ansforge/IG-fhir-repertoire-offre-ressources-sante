@@ -1,5 +1,5 @@
-Extension: RORSupportedCapacity
-Id: ror-supported-capacity
+Extension: RORLocationSupportedCapacity
+Id: ror-location-supported-capacity
 Description: "Extension créée dans le cadre du ROR qui indique une série d’enregistrements indiquant la quantité de lit (ou de place) de l'entité pour un statut et une temporalité donnés."
 * ^context.type = #element
 * ^context.expression = "Location"
@@ -16,7 +16,7 @@ Description: "Extension créée dans le cadre du ROR qui indique une série d’
     capacityUpdateDate 1..1 and
     capacityClosingType 0..1 and
     additionalBedType 0..1 and
-    crisisType 1..1 and
+    crisisType 0..1 and
     temporaryAssignement 1..1
 * extension[capacityType].value[x] only code
 * extension[capacityType].value[x] from $JDV-J187-NatureCapacite-ROR (required)
@@ -26,15 +26,15 @@ Description: "Extension créée dans le cadre du ROR qui indique une série d’
 * extension[temporalityCapacity].value[x] from $JDV-J189-TemporaliteCapacite-ROR (required)
 * extension[nbCapacity].value[x] only integer
 * extension[capacitySourceType].value[x] only code
-* extension[capacitySourceType].value[x] from $TRE-R335-TypeSourceCapacite (required)
+* extension[capacitySourceType].value[x] from $JDV-J193-TypeSourceCapacite-ROR (required)
 * extension[genderCapacityAvailable].value[x] only code
-* extension[genderCapacityAvailable].value[x] from $TRE-R332-GenreCapacite (required)
+* extension[genderCapacityAvailable].value[x] from $JDV-J190-GenreCapacite-ROR (required)
 * extension[capacityUpdateDate].value[x] only dateTime
 * extension[capacityClosingType].value[x] only code
-* extension[capacityClosingType].value[x] from $TRE-R333-TypeFermetureCapacite (required)
+* extension[capacityClosingType].value[x] from $JDV-J191-TypeFermetureCapacite-ROR (required)
 * extension[additionalBedType].value[x] only code
-* extension[additionalBedType].value[x] from $TRE-R334-TypeLitSupplementaire (required)
+* extension[additionalBedType].value[x] from $JDV-J192-TypeLitSupplementaire-ROR (required)
 * extension[crisisType].value[x] only code
-* extension[crisisType].value[x] from $TRE-R336-TypeCrise (required)
+* extension[crisisType].value[x] from $JDV-J194-TypeCrise-ROR (required)
 * extension[temporaryAssignement].value[x] only CodeableConcept
-* extension[temporaryAssignement].value[x] from $TRE-R337-AffectationTemporaire (required)
+* extension[temporaryAssignement].value[x] from $JDV-J195-AffectationTemporaire-ROR (required)

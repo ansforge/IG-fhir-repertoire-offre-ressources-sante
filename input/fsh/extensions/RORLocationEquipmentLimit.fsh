@@ -1,5 +1,5 @@
-Extension: ROREquipementLimit
-Id: ror-equipement-limit
+Extension: RORLocationEquipmentLimit
+Id: ror-location-equipment-limit
 Description: "Extension créée dans le cadre du ROR qui précise les limites que peut supporter l'équipement le plus tolérant parmis les équipements spécifiques de même type dans cette organisation."
 * ^context.type = #element
 * ^context.expression = "Location"
@@ -7,8 +7,8 @@ Description: "Extension créée dans le cadre du ROR qui précise les limites qu
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    equipementFeature 1..1 and
+    equipmentFeature 1..1 and
     limitValue 1..1
-* extension[equipementFeature].value[x] only CodeableConcept
-* extension[equipementFeature].value[x] from $JDV-J228-TypeCaracteristiqueEquipement-ROR (required)
+* extension[equipmentFeature].value[x] only CodeableConcept
+* extension[equipmentFeature].value[x] from $JDV-J228-TypeCaracteristiqueEquipement-ROR (required)
 * extension[limitValue].value[x] only Quantity
