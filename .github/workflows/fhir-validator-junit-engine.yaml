@@ -54,7 +54,9 @@ jobs:
       - name: 📥 Download test tools
         run: |
           wget -q https://github.com/navikt/fhir-validator-junit-engine/releases/latest/download/fhir-validator-junit-engine.jar
-          wget -q https://github.com/hapifhir/org.hl7.fhir.core/releases/download/5.6.91/validator_cli.jar
+
+          wget -q https://github.com/hapifhir/org.hl7.fhir.core/releases/download/5.6.99/validator_cli.jar
+
           wget -q https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.8.1/junit-platform-console-standalone-1.8.1.jar
           
       - name: ✔️ Run tests
