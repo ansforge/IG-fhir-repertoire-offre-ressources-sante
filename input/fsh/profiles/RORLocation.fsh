@@ -1,5 +1,5 @@
 Profile: RORLocation
-Parent: $Location
+Parent: Location
 Id: ror-location
 Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui peuvent être mis en œuvre pour réaliser la prestation"
 /* Données techniques */
