@@ -4,8 +4,8 @@ on:
   workflow_call:
   workflow_dispatch:
 
-env:
-  IG: MessagingCore
+
+
 
 # The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
 # https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
@@ -76,6 +76,14 @@ jobs:
       - name: 🏃‍♂️ Run IG Publisher
         run : java -jar publisher.jar publisher -ig .  -publish https://m-priour.github.io/ans-test/
 
+      - name: Get branch names
+        id: branch-name
+        uses: tj-actions/branch-names@v4.3
+        
+        
+          
+      
+        
       # Publishes the HTML page to a seperate branch in order to host it using GitHub-Pages.
       # This will overwrite the currently published HTML page.
       - name: 🚀 Deploy to GitHub-Pages
@@ -83,6 +91,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
-          destination_dir: ig/
+          destination_dir: ig/${{ steps.branch-name.outputs.current_branch }}
           exclude_assets: '**.zip,**.tgz,**.pack'
           commit_message: ' ${{ github.event.head_commit.message }}'
