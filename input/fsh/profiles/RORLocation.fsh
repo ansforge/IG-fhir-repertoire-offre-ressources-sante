@@ -35,7 +35,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * type from $JDV-J198-FonctionLieu-ROR (required)
 
 // Telecommunication
-* telecom 0..1 
 * telecom.value 1..1
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
