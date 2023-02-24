@@ -14,24 +14,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
     codeRegion 0..1
 * meta.tag[codeRegion] from $JDV_J237-RegionOM-ROR (required)
 /* Références*/
+
 /* Données fonctionnelles */
-// Extension
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension contains
-    RORLocationStatus named ror-location-status 0..1 and
-    RORLocationEquipment named ror-location-equipment 0..* and
-    RORLocationResidentialCapacity named ror-location-residential-capacity 0..* and
-    RORLocationSupportedCapacity named ror-location-supported-capacity 0..* and
-    RORLocationEquipmentLimit named ror-location-equipment-limit 0..* and
-    RORCommuneCog named ror-commune-cog 1..1
-* extension[ror-location-status] ^isModifier = false
-* extension[ror-location-equipment] ^isModifier = false
-* extension[ror-location-residential-capacity] ^isModifier = false
-* extension[ror-location-supported-capacity] ^isModifier = false
-* extension[ror-location-equipment-limit] ^isModifier = false
-* extension[ror-commune-cog] ^isModifier = false
+
 // Slice identifier
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
@@ -48,6 +33,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 //
 * type 0..1
 * type from $JDV-J198-FonctionLieu-ROR (required)
+
 // Telecommunication
 * telecom 0..1 
 * telecom.value 1..1
@@ -93,3 +79,21 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * position.extension ^slicing.rules = #open
 * position.extension contains RORGeolocationLocation named ror-location-geolocation 0..1
 * position.extension[ror-location-geolocation] ^isModifier = false
+
+// Extension
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension contains
+    RORLocationStatus named ror-location-status 0..1 and
+    RORLocationEquipment named ror-location-equipment 0..* and
+    RORLocationResidentialCapacity named ror-location-residential-capacity 0..* and
+    RORLocationSupportedCapacity named ror-location-supported-capacity 0..* and
+    RORLocationEquipmentLimit named ror-location-equipment-limit 0..* and
+    RORCommuneCog named ror-commune-cog 1..1
+* extension[ror-location-status] ^isModifier = false
+* extension[ror-location-equipment] ^isModifier = false
+* extension[ror-location-residential-capacity] ^isModifier = false
+* extension[ror-location-supported-capacity] ^isModifier = false
+* extension[ror-location-equipment-limit] ^isModifier = false
+* extension[ror-commune-cog] ^isModifier = false
