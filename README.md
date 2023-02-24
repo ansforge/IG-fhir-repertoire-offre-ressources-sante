@@ -23,8 +23,7 @@ Les pipelines mis de ce repository permettent :
 
 ![image](https://user-images.githubusercontent.com/101335975/215342980-61686171-e3f8-40c5-865c-efdfc3dd52b4.png)
 
-# ROR_ressource-conformance-3.0
-
+# Pull Request
 Faire la PR sur la branche main (livraisons 3.0)
 
 # Notes
