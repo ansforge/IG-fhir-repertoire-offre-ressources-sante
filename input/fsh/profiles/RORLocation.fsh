@@ -1,5 +1,5 @@
 Profile: RORLocation
-Parent: Location
+Parent: $Location
 Id: ror-location
 Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui peuvent être mis en œuvre pour réaliser la prestation"
 /* Données techniques */
@@ -30,13 +30,13 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * identifier[idLocation].type 1..1
 * identifier[idLocation].type = $JDV-J236-TypeIdentifiant-ROR#25 (exactly)
 * identifier[idLocation].type from $JDV-J236-TypeIdentifiant-ROR (required)
-//
+//FonctionLieu
 * type 0..1
 * type from $JDV-J198-FonctionLieu-ROR (required)
 
 // Telecommunication
-* telecom 1..
-* telecom.value 1..
+* telecom 0..1 
+* telecom.value 1..1
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
@@ -68,8 +68,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * address.line.extension[houseNumber] ^isModifier = false
 * address.line.extension[buildingNumberSuffix] ^isModifier = false
 * address.line.extension[streetNameBase] ^isModifier = false
-
-
 /* * address.line.extension[streetNameType].valueString ^sliceName = "valueString"
 * address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
 // CoordonneeGeographique

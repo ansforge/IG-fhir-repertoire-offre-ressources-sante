@@ -82,3 +82,4 @@ Alias: $buildingNumberSuffix = http://hl7.org/fhir/StructureDefinition/iso21090-
 Alias: $streetNameType = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType
 Alias: $streetNameBase = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase
 Alias: $postBox = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox
+Alias: $Location = http://hl7.org/fhir/StructureDefinition/Location
