@@ -1,4 +1,4 @@
-Instance: ror-sp-location-commune-cog //TODO à revoir selon communecog
+Instance: ror-sp-location-commune-cog
 InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
