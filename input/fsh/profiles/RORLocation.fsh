@@ -15,6 +15,23 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * meta.tag[codeRegion] from $JDV_J237-RegionOM-ROR (required)
 /* Références*/
 /* Données fonctionnelles */
+// Extension
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension contains
+    RORLocationStatus named ror-location-status 0..1 and
+    RORLocationEquipment named ror-location-equipment 0..* and
+    RORLocationResidentialCapacity named ror-location-residential-capacity 0..* and
+    RORLocationSupportedCapacity named ror-location-supported-capacity 0..* and
+    RORLocationEquipmentLimit named ror-location-equipment-limit 0..* and
+    RORCommuneCog named ror-commune-cog 1..1
+* extension[ror-location-status] ^isModifier = false
+* extension[ror-location-equipment] ^isModifier = false
+* extension[ror-location-residential-capacity] ^isModifier = false
+* extension[ror-location-supported-capacity] ^isModifier = false
+* extension[ror-location-equipment-limit] ^isModifier = false
+* extension[ror-commune-cog] ^isModifier = false
 // Slice identifier
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
@@ -37,7 +54,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
-* telecom.extension contains 
+* telecom.extension contains
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
@@ -48,7 +65,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * address.line.extension ^slicing.discriminator.type = #value
 * address.line.extension ^slicing.discriminator.path = "url"
 * address.line.extension ^slicing.rules = #open
-* address.line.extension contains 
+* address.line.extension contains
     ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..1 and
     $careOf named careOf 0..1 and
     $additionalLocator named additionalLocator 0..1 and
@@ -67,20 +84,3 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * position.extension ^slicing.rules = #open
 * position.extension contains RORGeolocationLocation named ror-location-geolocation 0..1
 * position.extension[ror-location-geolocation] ^isModifier = false
-// Extension
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension contains
-    RORLocationStatus named ror-location-status 0..1 and
-    RORLocationEquipment named ror-location-equipment 0..* and
-    RORLocationResidentialCapacity named ror-location-residential-capacity 0..* and
-    RORLocationSupportedCapacity named ror-location-supported-capacity 0..* and
-    RORLocationEquipmentLimit named ror-location-equipment-limit 0..* and
-    RORCommuneCog named ror-commune-cog 1..1
-* extension[ror-location-status] ^isModifier = false
-* extension[ror-location-equipment] ^isModifier = false
-* extension[ror-location-residential-capacity] ^isModifier = false
-* extension[ror-location-supported-capacity] ^isModifier = false
-* extension[ror-location-equipment-limit] ^isModifier = false
-* extension[ror-commune-cog] ^isModifier = false
