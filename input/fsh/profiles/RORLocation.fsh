@@ -17,19 +17,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 /* Données fonctionnelles */
 * type 0..1
 * type from $JDV-J198-FonctionLieu-ROR (required)
-// Slice identifier
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type"
-* identifier ^slicing.rules = #open
-* identifier contains
-    idExterneSynchro 0..1 and
-    idLocation 0..1
-* identifier[idExterneSynchro].type 1..1
-* identifier[idExterneSynchro].type = $JDV-J236-TypeIdentifiant-ROR#26 (exactly)
-* identifier[idExterneSynchro].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[idLocation].type 1..1
-* identifier[idLocation].type = $JDV-J236-TypeIdentifiant-ROR#25 (exactly)
-* identifier[idLocation].type from $JDV-J236-TypeIdentifiant-ROR (required)
 // Telecommunication
 * telecom 0..1 
 * telecom.value 1..1
@@ -43,6 +30,19 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * telecom.extension[ror-telecom-usage] ^isModifier = false
 * telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
 * telecom.extension[ror-telecom-communication-channel] ^isModifier = false 
+// Slice identifier
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier contains
+    idExterneSynchro 0..1 and
+    idLocation 0..1
+* identifier[idExterneSynchro].type 1..1
+* identifier[idExterneSynchro].type = $JDV-J236-TypeIdentifiant-ROR#26 (exactly)
+* identifier[idExterneSynchro].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[idLocation].type 1..1
+* identifier[idLocation].type = $JDV-J236-TypeIdentifiant-ROR#25 (exactly)
+* identifier[idLocation].type from $JDV-J236-TypeIdentifiant-ROR (required)
 // CoordonneeGeographique
 * position 0..1
 * position.extension ^slicing.discriminator.type = #value
