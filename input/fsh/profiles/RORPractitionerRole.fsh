@@ -75,10 +75,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    $practitionerRole-name named name 0..1 and //TODO
-    $practitionerRole-contracted named contracted 0..1 and //TODO
-    $practitionerRole-vitaleAccepted named vitalAccepted 0..1 and //TODO
-    $practitionerRole-hasCAS named optionCAS 0..1 and //TODO
+    $practitionerRole-name named name 0..1 and 
+    $practitionerRole-contracted named contracted 0..1 and 
+    $practitionerRole-vitaleAccepted named vitalAccepted 0..1 and 
+    $practitionerRole-hasCAS named optionCAS 0..1 and 
     RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..1
 * extension[name] ^isModifier = false
 * extension[name].valueHumanName.family 1..1
