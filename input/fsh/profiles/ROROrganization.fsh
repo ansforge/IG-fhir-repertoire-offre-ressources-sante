@@ -138,7 +138,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.extension ^slicing.rules = #open
 * address.extension[inseeCode] ^sliceName = "inseeCode"
 * address.extension[inseeCode].value[x] from $JDV-J230-CommuneOM-ROR (required)
-* address.extension[inseeCode].value[x] ^binding.description = "JDV_J102-1-CommuneOM-ROR"
 * address.extension contains
     RORAddressName named ror-address-name 0..1 and
     RORAddressDescription named ror-address-description 0..1 and
