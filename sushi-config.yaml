@@ -1,0 +1,61 @@
+# Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
+
+id: ans.fhir.fr.ROR
+canonical: http://esante.gouv.fr/ci-sis/fhir/ImplementationGuide/ROR
+name: ROR
+title: ROR
+publisher: 
+  name: ANS
+  url: https://esante.gouv.fr
+dependencies:
+  ans.annuaire.fhir.r4: 0.2.0
+  hl7.fhir.fr.core: 1.1.0
+status: active
+version: "3.0"
+fhirVersion: 4.0.1
+copyrightYear: 2020+
+releaseLabel: ci-build
+
+parameters:
+    shownav: 'true'
+
+
+
+pages:
+    index.md:
+        title: Accueil
+    #    construction_des_flux.md:
+    #    st_flux1.md:
+    #        title: Flux 01
+    #    st_flux2.md:
+    #        title: Flux 02
+    specifications_fonctionnelles.md:
+    #     sf_ajout.md:
+    #         title: Fonctionnalité 1
+    specifications_techniques.md:
+    autres_ressources.md:
+        title: Autres Ressources
+        securite.md:
+            title: Sécurité
+        downloads.md:
+            title: Téléchargements et usages
+    about.md:
+        title: A propos de ce guide
+
+menu:
+    Accueil: index.html
+    #Description des flux:
+    #    Construction des flux: construction_des_flux.html
+    #    Flux 01: st_flux1.html
+    #    Flux 02: st_flux2.html
+    Spécifications fonctionnelles:
+         Spécifications fonctionnelles: specifications_fonctionnelles.html
+    #     Fonctionnalité 1: sf_ajout.html
+    Spécifications techniques:
+         Spécifications techniques: specifications_techniques.html
+    Ressources de conformance: artifacts.html
+    Autres ressources:
+        Téléchargements et usage: downloads.html
+        "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
+        "Site de l'ANS ": new-tab https://esante.gouv.fr/
+    A propos de ce guide: about.html
