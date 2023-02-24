@@ -75,6 +75,15 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
     $streetNameBase named streetNameBase 0..1 and
     $postBox named postalBox 0..1
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
+* address.line.extension[streetNameType] ^isModifier = false
+* address.line.extension[careOf] ^isModifier = false
+* address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^isModifier = false
+* address.line.extension[additionalLocator] ^isModifier = false
+* address.line.extension[houseNumber] ^isModifier = false
+* address.line.extension[buildingNumberSuffix] ^isModifier = false
+* address.line.extension[streetNameBase] ^isModifier = false
+
+
 /* * address.line.extension[streetNameType].valueString ^sliceName = "valueString"
 * address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
 // CoordonneeGeographique
