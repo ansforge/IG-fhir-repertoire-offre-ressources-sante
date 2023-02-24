@@ -15,6 +15,20 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * meta.tag[codeRegion] from $JDV_J237-RegionOM-ROR (required)
 /* Références*/
 /* Données fonctionnelles */
+// Slice identifier
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier contains
+    idExterneSynchro 0..1 and
+    idLocation 0..1
+* identifier[idExterneSynchro].type 1..1
+* identifier[idExterneSynchro].type = $JDV-J236-TypeIdentifiant-ROR#26 (exactly)
+* identifier[idExterneSynchro].type from $JDV-J236-TypeIdentifiant-ROR (required)
+* identifier[idLocation].type 1..1
+* identifier[idLocation].type = $JDV-J236-TypeIdentifiant-ROR#25 (exactly)
+* identifier[idLocation].type from $JDV-J236-TypeIdentifiant-ROR (required)
+//
 * type 0..1
 * type from $JDV-J198-FonctionLieu-ROR (required)
 // Telecommunication
@@ -30,26 +44,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * telecom.extension[ror-telecom-usage] ^isModifier = false
 * telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
 * telecom.extension[ror-telecom-communication-channel] ^isModifier = false 
-// Slice identifier
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type"
-* identifier ^slicing.rules = #open
-* identifier contains
-    idExterneSynchro 0..1 and
-    idLocation 0..1
-* identifier[idExterneSynchro].type 1..1
-* identifier[idExterneSynchro].type = $JDV-J236-TypeIdentifiant-ROR#26 (exactly)
-* identifier[idExterneSynchro].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[idLocation].type 1..1
-* identifier[idLocation].type = $JDV-J236-TypeIdentifiant-ROR#25 (exactly)
-* identifier[idLocation].type from $JDV-J236-TypeIdentifiant-ROR (required)
-// CoordonneeGeographique
-* position 0..1
-* position.extension ^slicing.discriminator.type = #value
-* position.extension ^slicing.discriminator.path = "url"
-* position.extension ^slicing.rules = #open
-* position.extension contains RORGeolocationLocation named ror-location-geolocation 0..1
-* position.extension[ror-location-geolocation] ^isModifier = false
 // Adresse 
 * address.line.extension ^slicing.discriminator.type = #value
 * address.line.extension ^slicing.discriminator.path = "url"
@@ -66,6 +60,13 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 /* * address.line.extension[streetNameType].valueString ^sliceName = "valueString"
 * address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
+// CoordonneeGeographique
+* position 0..1
+* position.extension ^slicing.discriminator.type = #value
+* position.extension ^slicing.discriminator.path = "url"
+* position.extension ^slicing.rules = #open
+* position.extension contains RORGeolocationLocation named ror-location-geolocation 0..1
+* position.extension[ror-location-geolocation] ^isModifier = false
 // Extension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
