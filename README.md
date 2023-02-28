@@ -7,7 +7,8 @@ Les acteurs de santé ont convergé sur une vision commune de l’offre de sant�
 Le ROR, en tant que référentiel de description de l’offre de santé (au sens gisement de données), a une couverture nationale. Il doit permettre à toute application autorisée de rechercher une offre de santé.
 
 ## Contexte technique du projet
-L'objectif de ceproejt est de définir les profils ROR pour pouvoir consommer ce référentiel via l'API FHIR.
+L'objectif de ce projet est de définir les profils ROR pour pouvoir consommer ce référentiel via l'API FHIR.
+Le modèle d'exposition cible du ROR est ici le modèle 3.0.
 Les ressources profilées pour ce cas d'usage spécifique sont :
 * http://hl7.org/fhir/R4/healthcareservice.html
 * https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrOrganization
