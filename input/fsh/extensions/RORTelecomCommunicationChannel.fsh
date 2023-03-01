@@ -5,4 +5,4 @@ Description: "Extension créée dans le cadre du ROR spécifiant le canal ou la 
 * ^context.expression = "ContactPoint"
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $JDV-225-CanalCommunication-ROR (required)
+* valueCodeableConcept from $JDV-225-CanalCommunication-ROR (required)

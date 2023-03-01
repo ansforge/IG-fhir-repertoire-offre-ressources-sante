@@ -7,4 +7,4 @@ Description: "Extension créée dans le cadre du ROR qui indique un titre, une p
 * ^context.expression = "BackboneElement" //TODO question Tristan --> verif Backbone
 
 * value[x] only CodeableConcept
-* value[x] from $JDV-J220-FonctionContact-ROR (required)
+* valueCodeableConcept from $JDV-J220-FonctionContact-ROR (required)

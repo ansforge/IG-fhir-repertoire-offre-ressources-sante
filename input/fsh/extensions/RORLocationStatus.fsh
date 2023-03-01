@@ -4,4 +4,4 @@ Description: "Extension créée dans le cadre du ROR pour indiquer si le lieu es
 * ^context.type = #element
 * ^context.expression = "Location"
 * value[x] only CodeableConcept
-* value[x] from $JDV-J224-StatutLieu-ROR (required)
+* valueCodeableConcept from $JDV-J224-StatutLieu-ROR (required)

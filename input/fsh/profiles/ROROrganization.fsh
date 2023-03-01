@@ -4,7 +4,6 @@ Id: ror-organization
 Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
 /* Données techniques */
 * id 1..1
-* meta.tag 0..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -67,7 +66,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
 * type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
 // Contact
-* contact 0..*
 * contact.extension ^slicing.discriminator.type = #value
 * contact.extension ^slicing.discriminator.path = "url"
 * contact.extension ^slicing.rules = #open
@@ -116,7 +114,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationAccessibilityLocation named ror-organization-accessibility-location 0..1 and
     ROROrganizationLevelRecourseORSAN named ror-organization-level-recourse-orsan 0..1 and
     ROROrganizationPeriod named ror-organization-period 0.. and
-    $period named openingClosingDate 0..1 and
+    organization-period named openingClosingDate 0..1 and
     RORCommuneCog named ror-commune-cog 1..1 and 
     ROROrganizationDropZone named ror-organization-drop-zone 0..1
 * extension[ror-territorial-division] ^isModifier = false
@@ -137,7 +135,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.extension ^slicing.discriminator.path = "url"
 * address.extension ^slicing.rules = #open
 * address.extension[inseeCode] ^sliceName = "inseeCode"
-* address.extension[inseeCode].value[x] from $JDV-J230-CommuneOM-ROR (required)
+* address.extension[inseeCode].valueCoding from $JDV-J230-CommuneOM-ROR (required)
 * address.extension contains
     RORAddressName named ror-address-name 0..1 and
     RORAddressDescription named ror-address-description 0..1 and
@@ -160,7 +158,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     $buildingNumberSuffix named buildingNumberSuffix 0..* and
     $streetNameType named streetNameType 0..* and
     $streetNameBase named streetNameBase 0..* and
-    $postBox named postalBox 0..*
+    iso21090-ADXP-postBox named postalBox 0..*
 * address.line.extension[streetNameType] ^sliceName = "streetNameType"
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 /** address.line.extension[streetNameType].valueString ^sliceName = "valueString"

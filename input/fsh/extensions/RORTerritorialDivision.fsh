@@ -14,6 +14,6 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
     codeTerritorialDivision 1..1
 * extension[typeTerritorialDivision].value[x] 1..1
 * extension[typeTerritorialDivision].value[x] only CodeableConcept
-* extension[typeTerritorialDivision].value[x] from $JDV-J223-TypeDivisionTerritoriale-ROR (required)
+* extension[typeTerritorialDivision].valueCodeableConcept from $JDV-J223-TypeDivisionTerritoriale-ROR (required)
 * extension[codeTerritorialDivision].value[x] 1..1
 * extension[codeTerritorialDivision].value[x] only CodeableConcept // Possible de limiter les valeurs à 2 ou plus JDV ?

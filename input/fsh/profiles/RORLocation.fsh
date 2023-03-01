@@ -4,7 +4,6 @@ Id: ror-location
 Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui peuvent être mis en œuvre pour réaliser la prestation"
 /* Données techniques */
 * id 1..1
-* meta.tag 0..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -59,8 +58,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
     $buildingNumberSuffix named buildingNumberSuffix 0..1 and
     $streetNameType named streetNameType 0..1 and
     $streetNameBase named streetNameBase 0..1 and
-    $postBox named postalBox 0..1
-* address.line.extension[streetNameType].value[x] from $JDV-J219-TypeVoie-ROR (required)
+    iso21090-ADXP-postBox named postalBox 0..1
+* address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 * address.line.extension[streetNameType] ^isModifier = false
 * address.line.extension[careOf] ^isModifier = false
 * address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^isModifier = false
@@ -68,8 +67,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les moyens qui pe
 * address.line.extension[houseNumber] ^isModifier = false
 * address.line.extension[buildingNumberSuffix] ^isModifier = false
 * address.line.extension[streetNameBase] ^isModifier = false
-/* * address.line.extension[streetNameType].valueString ^sliceName = "valueString"
-* address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
 // CoordonneeGeographique
 * position 0..1
 * position.extension ^slicing.discriminator.type = #value

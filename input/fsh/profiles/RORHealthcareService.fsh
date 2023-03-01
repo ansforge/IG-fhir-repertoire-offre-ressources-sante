@@ -4,7 +4,6 @@ Id: ror-healthcareservice
 Description: "Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne "
 /* Données techniques */
 * id 1..1
-* meta.tag 0..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -51,8 +50,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic[expertiseLevel] from $JDV-J227-NiveauExpertise-ROR (required)
 * characteristic[temporalityStopService] from $JDV-J185-TypeFermeture-ROR (required)
 * characteristic[outsideOfficeAct] from $JDV-J16-ActeSpecifique-ROR (required)
-//
-* notAvailable 0..1
+
 * notAvailable ^slicing.discriminator.type = #value 
 * notAvailable ^slicing.discriminator.path = "url" 
 * notAvailable ^slicing.rules = #open
@@ -60,7 +58,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     closingDate 0..1 and
     previsionalReopeningDate 0..1
 // Horaire
-* availableTime 0..1
 * availableTime.extension ^slicing.discriminator.type = #value
 * availableTime.extension ^slicing.discriminator.path = "url"
 * availableTime.extension ^slicing.rules = #open

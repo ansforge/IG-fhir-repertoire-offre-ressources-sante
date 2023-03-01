@@ -18,23 +18,23 @@ Description: "Extension créée dans le cadre du ROR qui indique une série d’
     additionalBedType 0..1 and
     crisisType 0..1 and
     temporaryAssignement 1..1
-* extension[capacityType].value[x] only code
-* extension[capacityType].value[x] from $JDV-J187-NatureCapacite-ROR (required)
-* extension[capacityStatus].value[x] only code
-* extension[capacityStatus].value[x] from $JDV-J188-TypeStatutCapacite-ROR (required)
-* extension[temporalityCapacity].value[x] only code
-* extension[temporalityCapacity].value[x] from $JDV-J189-TemporaliteCapacite-ROR (required)
+* extension[capacityType].value[x] only CodeableConcept
+* extension[capacityType].valueCodeableConcept from $JDV-J187-NatureCapacite-ROR (required)
+* extension[capacityStatus].value[x] only CodeableConcept
+* extension[capacityStatus].valueCodeableConcept from $JDV-J188-TypeStatutCapacite-ROR (required)
+* extension[temporalityCapacity].value[x] only CodeableConcept
+* extension[temporalityCapacity].valueCodeableConcept from $JDV-J189-TemporaliteCapacite-ROR (required)
 * extension[nbCapacity].value[x] only integer
-* extension[capacitySourceType].value[x] only code
-* extension[capacitySourceType].value[x] from $JDV-J193-TypeSourceCapacite-ROR (required)
-* extension[genderCapacityAvailable].value[x] only code
-* extension[genderCapacityAvailable].value[x] from $JDV-J190-GenreCapacite-ROR (required)
+* extension[capacitySourceType].value[x] only CodeableConcept
+* extension[capacitySourceType].valueCodeableConcept from $JDV-J193-TypeSourceCapacite-ROR (required)
+* extension[genderCapacityAvailable].value[x] only CodeableConcept
+* extension[genderCapacityAvailable].valueCodeableConcept from $JDV-J190-GenreCapacite-ROR (required)
 * extension[capacityUpdateDate].value[x] only dateTime
-* extension[capacityClosingType].value[x] only code
-* extension[capacityClosingType].value[x] from $JDV-J191-TypeFermetureCapacite-ROR (required)
-* extension[additionalBedType].value[x] only code
-* extension[additionalBedType].value[x] from $JDV-J192-TypeLitSupplementaire-ROR (required)
-* extension[crisisType].value[x] only code
-* extension[crisisType].value[x] from $JDV-J194-TypeCrise-ROR (required)
+* extension[capacityClosingType].value[x] only CodeableConcept
+* extension[capacityClosingType].valueCodeableConcept from $JDV-J191-TypeFermetureCapacite-ROR (required)
+* extension[additionalBedType].value[x] only CodeableConcept
+* extension[additionalBedType].valueCodeableConcept from $JDV-J192-TypeLitSupplementaire-ROR (required)
+* extension[crisisType].value[x] only CodeableConcept
+* extension[crisisType].valueCodeableConcept from $JDV-J194-TypeCrise-ROR (required)
 * extension[temporaryAssignement].value[x] only CodeableConcept
-* extension[temporaryAssignement].value[x] from $JDV-J195-AffectationTemporaire-ROR (required)
+* extension[temporaryAssignement].valueCodeableConcept from $JDV-J195-AffectationTemporaire-ROR (required)

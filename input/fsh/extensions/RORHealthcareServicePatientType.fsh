@@ -11,7 +11,7 @@ Description: "Extension créée dans le cadre du ROR pour décrire un ensemble d
     ageRange 1..1
 * extension[supportedPatientInfo].value[x] 1..1
 * extension[supportedPatientInfo].value[x] only CodeableConcept
-* extension[supportedPatientInfo].value[x] from $JDV-J29-PublicPrisEnCharge-ROR (required)
+* extension[supportedPatientInfo].valueCodeableConcept from $JDV-J29-PublicPrisEnCharge-ROR (required)
 * extension[ageRange].value[x] 1..1
 * extension[ageRange].value[x] only Range
 * extension[ageRange].value[x].low 1..1

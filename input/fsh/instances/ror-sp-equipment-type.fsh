@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
 * name = "RORSPEquipmentType"
-* description = "Paramètre de recherche pour récupérer le type d'un equipement."
+* description = "Paramètre de recherche pour récupérer le type d'un équipement."
 * code = #equipment-type
 * base = #Location
 * type = #token

@@ -4,4 +4,4 @@ Description: "Extension créée dans le cadre du ROR qui précise dans quelle me
 * ^context.type = #element
 * ^context.expression = "Organization"
 * value[x] only CodeableConcept
-* value[x] from $JDV-J50-AccessibiliteLieu-ROR (required)
+* valueCodeableConcept from $JDV-J50-AccessibiliteLieu-ROR (required)

@@ -16,5 +16,5 @@ Description: "Extension créée dans le cadre du ROR pour décrire la personne o
 * extension[name].value[x] only string
 * extension[description].value[x] only string
 * extension[purposeContact].value[x] only CodeableConcept
-* extension[purposeContact].value[x] from $JDV-J221-NatureContact-ROR (required)
+* extension[purposeContact].valueCodeableConcept from $JDV-J221-NatureContact-ROR (required)
 * extension[telecommunication].value[x] only ContactPoint //TODO ContactPoint étendu avec nos extensions (organization)

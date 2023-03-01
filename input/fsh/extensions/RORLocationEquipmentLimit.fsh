@@ -10,5 +10,5 @@ Description: "Extension créée dans le cadre du ROR qui précise les limites qu
     equipmentFeature 1..1 and
     limitValue 1..1
 * extension[equipmentFeature].value[x] only CodeableConcept
-* extension[equipmentFeature].value[x] from $JDV-J228-TypeCaracteristiqueEquipement-ROR (required)
+* extension[equipmentFeature].valueCodeableConcept from $JDV-J228-TypeCaracteristiqueEquipement-ROR (required)
 * extension[limitValue].value[x] only Quantity

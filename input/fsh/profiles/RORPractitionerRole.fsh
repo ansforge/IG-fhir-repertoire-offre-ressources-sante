@@ -4,7 +4,6 @@ Id: ror-practitionerrole
 Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre"
 /* Données techniques */
 * id 1..1
-* meta.tag 0..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -83,7 +82,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * extension[name] ^isModifier = false
 * extension[name].valueHumanName.family 1..1
 * extension[contracted] ^isModifier = false
-* extension[contracted].value[x] from $JDV-J218-CNAMAmeliSecteurConventionnement-ROR (required)
+* extension[contracted].valueCodeableConcept from $JDV-J218-CNAMAmeliSecteurConventionnement-ROR (required)
 * extension[contracted].value[x] ^binding.description = "JDV_J218-CNAMAmeliSecteurConventionnement-RASS dérivé de la TRE_ R282-CNAMAmeliSecteurConventionnement"
 * extension[contracted].value[x].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_R282-CNAMAmeliSecteurConventionnement/FHIR/TRE-R282-CNAMAmeliSecteurConventionnement" (exactly)
 * extension[vitalAccepted] ^isModifier = false

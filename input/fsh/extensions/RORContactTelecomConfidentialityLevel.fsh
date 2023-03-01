@@ -4,4 +4,4 @@ Description: "Extension créée dans le cadre du ROR"
 * ^context.type = #element
 * ^context.expression = "Organization.contact.telecom"
 * value[x] only CodeableConcept
-* value[x] from $JDV-J222-NiveauConfidentialite-ROR (required)
+* valueCodeableConcept from $JDV-J222-NiveauConfidentialite-ROR (required)

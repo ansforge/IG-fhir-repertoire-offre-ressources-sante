@@ -4,4 +4,4 @@ Description: "Extension créée dans le cadre du ROR pour décrire une hiérarch
 * ^context.type = #element
 * ^context.expression = "Organization"
 * value[x] only CodeableConcept
-* value[x] from $JDV-J204-NiveauRecoursORSAN-ROR (required)
+* valueCodeableConcept from $JDV-J204-NiveauRecoursORSAN-ROR (required)

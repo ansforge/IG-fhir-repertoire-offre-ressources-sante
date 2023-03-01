@@ -5,4 +5,4 @@ Description: "Extension créée dans le cadre du ROR qui correspond au statut du
 * ^context.expression = "PractitionerRole"
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $JDV-J217-ModeExercice-ROR (required)
+* valueCodeableConcept from $JDV-J217-ModeExercice-ROR (required)

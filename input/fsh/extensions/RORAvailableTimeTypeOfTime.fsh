@@ -5,8 +5,5 @@ Description: "Extension créée dans le cadre du ROR pour apporter un contexte �
 * ^context[=].expression = "HealthcareService.availableTime"
 * ^context[+].type = #element
 * ^context[=].expression = "PractitionerRole.availableTime"
-* value[x] only CodeableConcept
-* value[x] from $JDV-J41-TypeHoraire-ROR (required)
-// value[x] ^binding.description = "Type of time" TestDebug
-// value[x].coding from $JDV-J41-TypeHoraire-ROR (required) TestDebug
-// value[x].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire" (exactly) TestDebug
+* value[x] only CodeableConcept 
+* valueCodeableConcept from $JDV-J41-TypeHoraire-ROR (required)
