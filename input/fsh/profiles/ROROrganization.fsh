@@ -1,9 +1,8 @@
 Profile: ROROrganization
-Parent: $FrOrganization
+Parent: fr-organization
 Id: ror-organization
 Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
 /* Données techniques */
-* id 1..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -18,7 +17,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * name 1..1
 * alias 0..1
 // Slice identifier 
-* identifier 1..1
+* identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
@@ -152,16 +151,16 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.line.extension ^slicing.rules = #open
 * address.line.extension contains
     ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..* and
-    $careOf named careOf 0..* and
-    $additionalLocator named additionalLocator 0..* and
-    $houseNumber named houseNumber 0..* and
-    $buildingNumberSuffix named buildingNumberSuffix 0..* and
-    $streetNameType named streetNameType 0..* and
-    $streetNameBase named streetNameBase 0..* and
+    iso21090-ADXP-careOf named careOf 0..* and
+    iso21090-ADXP-additionalLocator named additionalLocator 0..* and
+    iso21090-ADXP-houseNumber named houseNumber 0..* and
+    iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..* and
+    iso21090-ADXP-streetNameType named streetNameType 0..* and
+    iso21090-ADXP-streetNameBase named streetNameBase 0..* and
     iso21090-ADXP-postBox named postalBox 0..*
 * address.line.extension[streetNameType] ^sliceName = "streetNameType"
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 /** address.line.extension[streetNameType].valueString ^sliceName = "valueString"
 * address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
 * address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^isModifier = false
-* partOf only Reference($FrOrganization or ROROrganization)
+* partOf only Reference(fr-organization or ROROrganization)

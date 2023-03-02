@@ -11,7 +11,7 @@ Description: "Extension créée dans le cadre du ROR pour décrire la personne o
     RORContactFunctionContact named ror-function-contact 0..1 and
     purposeContact 0..1 and
     description 0..1 and
-    RORConfidentialityLevel named ConfidentialityLevel 1..1 and
+    RORConfidentialityLevel named ror-confidentiality-level 1..1 and
     telecommunication 0..*
 * extension[name].value[x] only string
 * extension[description].value[x] only string

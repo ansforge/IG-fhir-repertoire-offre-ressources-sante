@@ -1,5 +1,5 @@
 Extension: RORGeolocationLocation
-Parent: $geolocation
+Parent: geolocation
 Id: ror-location-geolocation
 * ^context[0].type = #element
 * ^context[=].expression = "Address"

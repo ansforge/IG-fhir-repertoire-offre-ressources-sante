@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
 * name = "RORSPLimitValue"
-* description = "Paramètre de recherche pour récupérer la valeur limite"
+* description = "Paramètre de recherche pour récupérer la valeur limite (poids, taille, etc..) de l'équipement"
 * code = #limit-value
 * base = #Location
 * type = #quantity
