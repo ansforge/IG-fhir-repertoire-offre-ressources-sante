@@ -1,7 +1,6 @@
 CodeSystem: InputTaskRORCodeSystem
-Id: input-task-ror-codesystem 
+Id: input-task-ror-codesystem
 Description: "Code System pour la définition des éléments spécifiques de input dans ressource RORTask"
-* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^compositional = false
 * ^content = #complete
 * #ruleErrorId "ruleErrorId" "Identifiant de la règle à l'origine de l'anomalie"
