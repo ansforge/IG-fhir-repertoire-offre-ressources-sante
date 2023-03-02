@@ -1,5 +1,4 @@
 Alias: $JDV-J236-TypeIdentifiant-ROR = https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR
-//Alias: $FrOrganization = http://interopsante.org/fhir/StructureDefinition/FrOrganization
 Alias: $practitionerRole-name = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-name
 Alias: $practitionerRole-contracted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted
 Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted

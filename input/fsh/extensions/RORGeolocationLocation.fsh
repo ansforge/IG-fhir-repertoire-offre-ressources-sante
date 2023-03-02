@@ -12,5 +12,4 @@ Id: ror-location-geolocation
     geodicSystem 1..1 and
     reliablePosition 0..*
 * extension[geodicSystem].value[x] only string
-* extension[geodicSystem].value[x] 1..1
 * extension[reliablePosition].value[x] only boolean
