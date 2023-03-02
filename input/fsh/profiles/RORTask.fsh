@@ -4,8 +4,8 @@ Id: ror-task
 Description: "Anomalie concerant une donnée dans une ressource du ROR"
 
 /* Données techniques */
-* id 1..
-* meta 1..
+* id 1..1
+* meta 1..1
 
 /* Données fonctionnelles */
 * identifier 1..1
