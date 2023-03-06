@@ -70,7 +70,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * output[newValue] ^short = "Valeur corrigée"
 * output[newValue].type = OutputTaskRORCodeSystem#newValue
 * output[newValue].value[x] only string
-* output[identifierAnalyst] ^short = "identifiant du destinataire du traitement de la demande" / Ne pas mettre dans output. Une autre solution doit être trouvée
+* output[identifierAnalyst] ^short = "identifiant du destinataire du traitement de la demande" // Ne pas mettre dans output. Une autre solution doit être trouvée
 * output[identifierAnalyst].type = OutputTaskRORCodeSystem#identifierAnalyst
 * output[identifierAnalyst].value[x] only Identifier
 * executionPeriod.start MS
