@@ -65,12 +65,12 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * output ^slicing.description = "slicing concernant le traitement de l'anomalie"
 * output ^slicing.ordered = false
 * output contains
-    newValue 0..* MS and //incohérence cardinalité?
+    newValue 0..* MS and
     identifierAnalyst 0..1 MS
-* output[newValue] ^short = "Nouvelle valeur renseignée"
+* output[newValue] ^short = "Valeur corrigée"
 * output[newValue].type = OutputTaskRORCodeSystem#newValue
 * output[newValue].value[x] only string
-* output[identifierAnalyst] ^short = "identifiant du destinataire du traitement de la demande"
+* output[identifierAnalyst] ^short = "identifiant du destinataire du traitement de la demande" / Ne pas mettre dans output. Une autre solution doit être trouvée
 * output[identifierAnalyst].type = OutputTaskRORCodeSystem#identifierAnalyst
 * output[identifierAnalyst].value[x] only Identifier
 * executionPeriod.start MS
