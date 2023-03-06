@@ -1,3 +1,5 @@
+[![Workflow Init](https://github.com/ansforge/FIG_ans.fhir.fr.ror30/actions/workflows/fhir-worklows.yml/badge.svg)](https://github.com/ansforge/FIG_ans.fhir.fr.ror30/actions/workflows/fhir-worklows.yml)
+
 # Contexte
 
 ## Contexte métier du projet
