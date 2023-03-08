@@ -4,7 +4,7 @@ Description: "Extension créée dans le cadre du ROR qui indique un titre, une p
 * ^context.type = #element
 * ^context.expression = "Organization.contact"
 * ^context.type = #extension
-* ^context.expression = "BackboneElement" //TODO question Tristan --> verif Backbone
+* ^context.expression = "https://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-contact-function-contact" //TODO question Tristan --> verif Backbone
 
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J220-FonctionContact-ROR (required)
