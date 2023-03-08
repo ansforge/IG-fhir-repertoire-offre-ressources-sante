@@ -42,9 +42,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
-* telecom.extension[ror-telecom-usage] ^isModifier = false
-* telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
-* telecom.extension[ror-telecom-communication-channel] ^isModifier = false 
 // Adresse 
 * address.line.extension ^slicing.discriminator.type = #value
 * address.line.extension ^slicing.discriminator.path = "url"
@@ -59,20 +56,12 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
     iso21090-ADXP-postBox named postalBox 0..1
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
-* address.line.extension[streetNameType] ^isModifier = false
-* address.line.extension[careOf] ^isModifier = false
-* address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^isModifier = false
-* address.line.extension[additionalLocator] ^isModifier = false
-* address.line.extension[houseNumber] ^isModifier = false
-* address.line.extension[buildingNumberSuffix] ^isModifier = false
-* address.line.extension[streetNameBase] ^isModifier = false
 // CoordonneeGeographique
 * position 0..1
 * position.extension ^slicing.discriminator.type = #value
 * position.extension ^slicing.discriminator.path = "url"
 * position.extension ^slicing.rules = #open
 * position.extension contains RORGeolocationLocation named ror-location-geolocation 0..1
-* position.extension[ror-location-geolocation] ^isModifier = false
 
 // Extension
 * extension ^slicing.discriminator.type = #value
@@ -85,9 +74,3 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     RORLocationSupportedCapacity named ror-location-supported-capacity 0..* and
     RORLocationEquipmentLimit named ror-location-equipment-limit 0..* and
     RORCommuneCog named ror-commune-cog 1..1
-* extension[ror-location-status] ^isModifier = false
-* extension[ror-location-equipment] ^isModifier = false
-* extension[ror-location-residential-capacity] ^isModifier = false
-* extension[ror-location-supported-capacity] ^isModifier = false
-* extension[ror-location-equipment-limit] ^isModifier = false
-* extension[ror-commune-cog] ^isModifier = false

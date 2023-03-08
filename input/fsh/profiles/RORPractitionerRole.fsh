@@ -52,9 +52,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     RORAvailableTimeEffectiveOpeningClosingDate named ror-available-time-effective-opening-closing-date 0..1 and
     RORAvailableTimeTypeOfTime named ror-available-time-type-of-time 0..1 and
     RORAvailableTimeNumberDaysofWeek named ror-available-time-number-days-of-week 0..1
-* availableTime.extension[ror-available-time-effective-opening-closing-date] ^isModifier = false
-* availableTime.extension[ror-available-time-type-of-time] ^isModifier = false
-* availableTime.extension[ror-available-time-number-days-of-week] ^isModifier = false
 // Telecomunnication
 * telecom 0..1
 * telecom.value 1..1
@@ -65,9 +62,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
-* telecom.extension[ror-telecom-usage] ^isModifier = false
-* telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
-* telecom.extension[ror-telecom-communication-channel] ^isModifier = false
 // Extension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -78,13 +72,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     $practitionerRole-vitaleAccepted named vitalAccepted 0..1 and 
     $practitionerRole-hasCAS named optionCAS 0..1 and 
     RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..1
-* extension[name] ^isModifier = false
 * extension[name].valueHumanName.family 1..1
-* extension[contracted] ^isModifier = false
 * extension[contracted].valueCodeableConcept from $JDV-J218-CNAMAmeliSecteurConventionnement-ROR (required)
 * extension[contracted].value[x] ^binding.description = "JDV_J218-CNAMAmeliSecteurConventionnement-RASS dérivé de la TRE_ R282-CNAMAmeliSecteurConventionnement"
 * extension[contracted].value[x].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_R282-CNAMAmeliSecteurConventionnement/FHIR/TRE-R282-CNAMAmeliSecteurConventionnement" (exactly)
-* extension[vitalAccepted] ^isModifier = false
-* extension[optionCAS] ^isModifier = false
-* extension[ror-practitionerrole-unit-exercise-mode] ^isModifier = false 
 

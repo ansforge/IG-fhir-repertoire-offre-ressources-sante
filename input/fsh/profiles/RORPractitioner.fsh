@@ -23,6 +23,3 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
-* telecom.extension[ror-telecom-usage] ^isModifier = false
-* telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
-* telecom.extension[ror-telecom-communication-channel] ^isModifier = false

@@ -72,9 +72,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORContactDescription named ror-contact-description 0..1 and
     RORContactFunctionContact named ror-contact-function-contact 0..1 and
     RORContactConfidentialityLevel named ror-contact-confidentiality-level 0..1
-* contact.extension[ror-contact-description] ^isModifier = false
-* contact.extension[ror-contact-function-contact] ^isModifier = false
-* contact.extension[ror-contact-confidentiality-level] ^isModifier = false
 * contact.purpose from $JDV-J221-NatureContact-ROR (required)
 * contact.telecom.extension ^slicing.discriminator.type = #value
 * contact.telecom.extension ^slicing.discriminator.path = "url"
@@ -83,9 +80,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
-* contact.telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
-* contact.telecom.extension[ror-telecom-usage] ^isModifier = false
-* contact.telecom.extension[ror-telecom-communication-channel] ^isModifier = false
 
 //telecommunication
 * telecom.value 1..1
@@ -96,9 +90,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
-* telecom.extension[ror-telecom-usage] ^isModifier = false
-* telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
-* telecom.extension[ror-telecom-communication-channel] ^isModifier = false
 // Extension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -116,19 +107,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     organization-period named openingClosingDate 0..1 and
     RORCommuneCog named ror-commune-cog 1..1 and 
     ROROrganizationDropZone named ror-organization-drop-zone 0..1
-* extension[ror-territorial-division] ^isModifier = false
-* extension[ror-organization-price] ^isModifier = false
-* extension[ror-organization-drop-zone] ^isModifier = false
-* extension[ror-organization-financial-help-type] ^isModifier = false
-* extension[ror-organization-accomodation-family] ^isModifier = false
-* extension[ror-organization-nb-permanent-social-help-place] ^isModifier = false
-* extension[ror-organization-nb-temporary-social-help-place] ^isModifier = false
-* extension[ror-organization-accessibility-location] ^isModifier = false
-* extension[ror-organization-level-recourse-orsan] ^isModifier = false
-* extension[ror-organization-period] ^isModifier = false
-* extension[openingClosingDate] ^isModifier = false
-* extension[ror-commune-cog] ^isModifier = false
-* extension[ror-organization-drop-zone] ^isModifier = false
 // Adresse 
 * address.extension ^slicing.discriminator.type = #value
 * address.extension ^slicing.discriminator.path = "url"
@@ -141,11 +119,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORAddressStatus named ror-address-status 0..1 and
     RORCalculatedDistance named ror-calculated-distance 0..1 and 
     RORGeolocationLocation named ror-geolocation 0..1
-* address.extension[ror-address-name] ^isModifier = false
-* address.extension[ror-address-description] ^isModifier = false
-* address.extension[ror-address-status] ^isModifier = false
-* address.extension[ror-calculated-distance] ^isModifier = false 
-* address.extension[ror-geolocation] ^isModifier = false 
 * address.line.extension ^slicing.discriminator.type = #value
 * address.line.extension ^slicing.discriminator.path = "url"
 * address.line.extension ^slicing.rules = #open
@@ -162,5 +135,4 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 /** address.line.extension[streetNameType].valueString ^sliceName = "valueString"
 * address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
-* address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^isModifier = false
 * partOf only Reference(fr-organization or ROROrganization)

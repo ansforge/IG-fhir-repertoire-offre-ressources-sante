@@ -64,9 +64,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORAvailableTimeEffectiveOpeningClosingDate named ror-available-time-effective-opening-closing-date 0..1 and
     RORAvailableTimeTypeOfTime named ror-available-time-type-of-time 0..1 and
     RORAvailableTimeNumberDaysofWeek named ror-available-time-number-days-of-week 0..1
-* availableTime.extension[ror-available-time-effective-opening-closing-date] ^isModifier = false
-* availableTime.extension[ror-available-time-type-of-time] ^isModifier = false
-* availableTime.extension[ror-available-time-number-days-of-week] ^isModifier = false
 // ActiviteOperationnelle
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "coding.system"
@@ -86,9 +83,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
-* telecom.extension[ror-telecom-usage] ^isModifier = false
-* telecom.extension[ror-telecom-confidentiality-level] ^isModifier = false
-* telecom.extension[ror-telecom-communication-channel] ^isModifier = false
 // Extension
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -101,11 +95,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORTerritorialDivision named ror-territorial-division 0..* and
     RORHealthcareServiceContact named ror-healthcareservice-contact 1..1 and
     RORCalculatedDistance named RORCalculatedDistance 0..1
-* extension[ror-healthcareservice-psychiatric-sector] ^isModifier = false
-* extension[ror-healthcareservice-no-consent-habilitation] ^isModifier = false
-* extension[ror-healthcareservice-patient-type] ^isModifier = false
-* extension[ror-healthcareservice-sensitive-unit] ^isModifier = false
-* extension[ror-territorial-division] ^isModifier = false
-* extension[ror-healthcareservice-contact] ^isModifier = false
+
 
 
