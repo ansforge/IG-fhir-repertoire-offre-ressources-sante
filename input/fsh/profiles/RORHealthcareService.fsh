@@ -96,7 +96,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 
 * specialty 1..*
 * specialty ^slicing.discriminator.type = #value 
-* specialty ^slicing.discriminator.path = "coding.system" 
+* specialty ^slicing.discriminator.path = "url" 
 * specialty ^slicing.rules = #open
 * specialty contains
     operationalActivity 1..1 and

@@ -27,14 +27,14 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * identifier contains
     idExterneSynchro 0..1 and
     idLocation 0..1
-* identifier[idExterneSynchro] ^short = "idExterneSynchro (Location) : Identifiant défini par le porteur d’offre pour la zone d’hébergement des lits" 
+* identifier[idExterneSynchro] ^short = "idExterneSynchro (LieuRealisationOffre) : Identifiant défini par le porteur d’offre pour la zone d’hébergement des lits" 
 * identifier[idExterneSynchro].type 1..1
 * identifier[idExterneSynchro].type = $TRE-XXX-TypeIdentifiantRessourceOperationnelle#26
 * identifier[idLocation] ^short = "identifiant (LieuRealisationOffre) : Identifiant fonctionnel du lieu"
 * identifier[idLocation].type 1..1
 * identifier[idLocation].type = $TRE-XXX-TypeIdentifiantRessourceOperationnelle#25
 
-* telecom 0..1
+* telecom 0..*
 * telecom ^short = "telecommunication (LieuRealisationOffre) : Adresse(s) de télécommunication du lieu"
 * telecom.value 1..1
 * telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communica"
@@ -63,8 +63,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     iso21090-ADXP-streetNameType named streetNameType 0..1 and
     iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
     iso21090-ADXP-streetNameBase named streetNameHamlet 0..1 and
-    iso21090-ADXP-postBox named postalBox 0..1 and
-    ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..1
+    iso21090-ADXP-postBox named postalBox 0..1
 * address.line.extension[careOf] ^short = "pointRemise (Adresse) : Lieu où le destinataire prend possession de son courrier"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse) : Un complément de l'adresse au point géographique"
 * address.line.extension[houseNumber] ^short = "numeroVoie (Adresse) : Un numéro dans la voie"
@@ -74,7 +73,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse) : Appellation qui est donnée à la voie par les municipalités"
 * address.line.extension[streetNameHamlet] ^short = "lieuDit (Adresse) : Lieu qui porte un nom rappelant une particularité topographique ou historique"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse) : Mentions particulières de distribution"
-* address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^short = "(Adresse)"
 
 * position ^short = "coordonneeGeographique (LieuRealisationOffre) : Coordonnées géographiques du lieu"
 * position.latitude ^short = "latitude (CoordonneeGeographique) : Une mesure de la distance angulaire nord ou sud depuis l'équateur jusqu'au parallèle du spécifique"

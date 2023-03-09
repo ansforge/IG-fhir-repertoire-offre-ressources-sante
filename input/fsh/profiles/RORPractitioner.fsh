@@ -17,7 +17,7 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * identifier 1..1
 * identifier ^short = "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
 
-* telecom 0..1
+* telecom 0..*
 * telecom ^short = "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel"
 * telecom.value 1..1
 * telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"

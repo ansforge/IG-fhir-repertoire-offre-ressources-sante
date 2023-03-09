@@ -53,16 +53,16 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
 * identifier[identifierOI].type 1..1
 * identifier[identifierOI].type = $TRE-XXX-TypeIdentifiantAutre#42
-* identifier[numADELI] ^short = "numADELI : "
+* identifier[numADELI] ^short = "TODO"
 * identifier[numADELI].type 1..1
 * identifier[numADELI].type = $TRE-G07-TypeIdentifiantStructure#0
-* identifier[identifierEG] ^short = "identifiantEG : "
+* identifier[identifierEG] ^short = "TODO"
 * identifier[identifierEG].type 1..1
 * identifier[identifierEG].type = $TRE-G07-TypeIdentifiantStructure#41
 
 * type 3..* 
 * type ^slicing.discriminator.type = #value
-* type ^slicing.discriminator.path = "coding.system"
+* type ^slicing.discriminator.path = "url"
 * type ^slicing.rules = #open
 * type contains
     statutJuridiqueINSEE 1..1 and
@@ -132,8 +132,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     iso21090-ADXP-streetNameType named streetNameType 0..1 and
     iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
     iso21090-ADXP-streetNameBase named streetNameHamlet 0..1 and
-    iso21090-ADXP-postBox named postalBox 0..1 and
-    ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..1
+    iso21090-ADXP-postBox named postalBox 0..1
 * address.line.extension[careOf] ^short = "pointRemise (Adresse)"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse)"
 * address.line.extension[houseNumber] ^short = "numeroVoie(Adresse)"
@@ -143,7 +142,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse)"
 * address.line.extension[streetNameHamlet] ^short = "lieuDit (Adresse)"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
-* address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^short = "(Adresse)"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -159,8 +157,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationLevelRecourseORSAN named ror-organization-level-recourse-orsan 0..1 and
     RORCommuneCog named ror-commune-cog 1..1 and 
     ROROrganizationDropZone named ror-organization-drop-zone 0..1 and
-    ROROrganizationPeriod named ror-organization-period 0.. and
-    organization-period named openingClosingDate 0..1
+    ROROrganizationPeriod named ror-organization-period 0..1 and
+    organization-period named openingClosingDate 0..1 
 * extension[ror-organization-price] ^short = "Tarif"
 * extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique"
 * extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
@@ -171,5 +169,5 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
 * extension[ror-commune-cog] ^short = "TODO"
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
-* extension[ror-organization-period] ^short = "TODO"
-* extension[openingClosingDate] ^short = "TODO"
+* extension[ror-organization-period] ^short = "typeFermeture (EG + OI) + datePrevisionnelleReouverture (OI)"
+* extension[openingClosingDate] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"

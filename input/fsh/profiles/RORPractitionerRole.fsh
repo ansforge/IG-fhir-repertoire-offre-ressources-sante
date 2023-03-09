@@ -56,7 +56,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 
 * specialty 1..*
 * specialty ^slicing.discriminator.type = #value
-* specialty ^slicing.discriminator.path = "coding.system"
+* specialty ^slicing.discriminator.path = "url"
 * specialty ^slicing.rules = #open
 * specialty contains
     expertiseType 1..1 and
@@ -95,13 +95,12 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * extension ^slicing.rules = #open
 * extension contains
     RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..1 and
-    $practitionerRole-name named name 0..1 and 
+    RORPractitionerRoleName named ror-practitionerrole-name 0..1 and
     $practitionerRole-contracted named contracted 0..1 and
     $practitionerRole-hasCAS named optionCAS 0..1 and 
     $practitionerRole-vitaleAccepted named vitalAccepted 0..1
 * extension[ror-practitionerrole-unit-exercise-mode] ^short = "modeExerciceOffre (SituationOperationnelle) : statut du professionnel lorsqu'il exerce dans le cadre de l'offre décrite"
-* extension[name] ^short = "civiliteExercice (ExerciceProfessionnel) : Civilité d’exercice du professionnel"
-* extension[name].valueHumanName.family 1..1
+* extension[ror-practitionerrole-name] ^short = "civiliteExercie + nomExercice + prenomExercice (ExerciceProfessionnel)"
 * extension[contracted] ^short = "secteurConventionnement (SituationOperationnelle) : Secteur de conventionnement du professionnel libéral auquel il a adhéré auprès de l'Assurance Maladie"
 * extension[contracted].valueCodeableConcept from $JDV-J218-CNAMAmeliSecteurConventionnement-ROR (required)
 * extension[contracted].value[x] ^binding.description = "JDV_J218-CNAMAmeliSecteurConventionnement-RASS dérivé de la TRE_ R282-CNAMAmeliSecteurConventionnement"
