@@ -74,13 +74,3 @@ Alias: $JDV-J232-Competence-ROR = https://mos.esante.gouv.fr/NOS/JDV_J232-Compet
 Alias: $JDV-J236-TypeIdentifiant-ROR = https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR
 Alias: $JDV_J237-RegionOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR
 Alias: $JDV-J238-TypeOffre-ROR = https://mos.esante.gouv.fr/NOS/JDV_J238-TypeOffre-ROR/FHIR/JDV-J238-TypeOffre-ROR
-
-//Alias: $geolocation = http://hl7.org/fhir/StructureDefinition/geolocation
-//Alias: $period = http://hl7.org/fhir/StructureDefinition/organization-period
-//Alias: $careOf = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-careOf
-//Alias: $additionalLocator = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator
-//Alias: $houseNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber
-//Alias: $buildingNumberSuffix = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix
-//Alias: $streetNameType = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType
-//Alias: $streetNameBase = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase
-//Alias: $postBox = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox

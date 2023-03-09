@@ -36,20 +36,28 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     numADELI 0..1 and
     identifierEG 0..1
 * identifier[idNatStruct] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
+* identifier[idNatStruct].type 1..1
 * identifier[idNatStruct].type = $TRE-G07-TypeIdentifiantStructure#40 
 * identifier[numFINESS] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
+* identifier[numFINESS].type 1..1
 * identifier[numFINESS].type = $TRE-G07-TypeIdentifiantStructure#1 
 * identifier[numSIREN] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
+* identifier[numSIREN].type 1..1
 * identifier[numSIREN].type = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[numRPPS] ^short = ""
+* identifier[numRPPS] ^short = "TODO"
+* identifier[numRPPS].type 1..1
 * identifier[numRPPS].type = $TRE-G07-TypeIdentifiantStructure#4
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
+* identifier[numSIRET].type 1..1
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
+* identifier[identifierOI].type 1..1
 * identifier[identifierOI].type = $TRE-XXX-TypeIdentifiantAutre#42
 * identifier[numADELI] ^short = "numADELI : "
+* identifier[numADELI].type 1..1
 * identifier[numADELI].type = $TRE-G07-TypeIdentifiantStructure#0
 * identifier[identifierEG] ^short = "identifiantEG : "
+* identifier[identifierEG].type 1..1
 * identifier[identifierEG].type = $TRE-G07-TypeIdentifiantStructure#41
 
 * type 3..* 
@@ -73,7 +81,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[OIType] ^short = "typeOI (OI) : Type d'organisation interne"
 * type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
-* type[fonctionLieu] ^short = ""
+* type[fonctionLieu] ^short = "TODO"
 * type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
 
 * contact.name ^short  = "Nom (Contact) : Un nom de la personne ou du service à contacter"
@@ -161,7 +169,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-nb-temporary-social-help-place] ^short = "nbPlaceAideSocialPermanent (EG) : nombre de places permanentes dédiées à l'aide sociale dans l'établissement"
 * extension[ror-organization-accessibility-location] ^short = "accessibiliteLieu (EG) : Précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public"
 * extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
-* extension[ror-commune-cog] ^short = ""
+* extension[ror-commune-cog] ^short = "TODO"
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
-* extension[ror-organization-period] ^short = "typeFermeture + datePrevisionnelleReouverture + "
-* extension[openingClosingDate] ^short = ""
+* extension[ror-organization-period] ^short = "TODO"
+* extension[openingClosingDate] ^short = "TODO"
