@@ -2,6 +2,10 @@ Profile: ROROrganization
 Parent: fr-organization
 Id: ror-organization
 Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
+
+/* Références*/
+* partOf only Reference(fr-organization or ROROrganization)
+
 /* Données techniques */
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
@@ -11,12 +15,13 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * meta.tag contains
     codeRegion 0..1
 * meta.tag[codeRegion] from $JDV_J237-RegionOM-ROR (required)
-/* Références*/
 
 /* Données fonctionnelles */
 * name 1..1
+* name ^short = "raisonSociale (EJ) : Raison sociale complète de l'entité juridique"
 * alias 0..1
-// Slice identifier 
+* alias ^short = "complementRaisonSociale (EJ) : Suite de la raison sociale, si elle existe"
+
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
@@ -30,49 +35,62 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     identifierOI 0..1 and
     numADELI 0..1 and
     identifierEG 0..1
-* identifier[idNatStruct].type = $JDV-J236-TypeIdentifiant-ROR#40 (exactly)
-* identifier[idNatStruct].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numFINESS].type = $JDV-J236-TypeIdentifiant-ROR#1 (exactly)
-* identifier[numFINESS].type from $JDV-J236-TypeIdentifiant-ROR (required) 
-* identifier[numSIREN].type from $JDV-J236-TypeIdentifiant-ROR (required) 
-* identifier[numSIREN].type = $JDV-J236-TypeIdentifiant-ROR#2 (exactly)
-* identifier[numRPPS].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numRPPS].type = $JDV-J236-TypeIdentifiant-ROR#4 (exactly)
-* identifier[numSIRET].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[identifierOI].type = $JDV-J236-TypeIdentifiant-ROR#3 (exactly)
-* identifier[identifierOI].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numSIRET].type = $JDV-J236-TypeIdentifiant-ROR#42 (exactly)
-* identifier[numADELI].type = $JDV-J236-TypeIdentifiant-ROR#0 (exactly)
-* identifier[numADELI].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[identifierEG].type = $JDV-J236-TypeIdentifiant-ROR#41 (exactly)
-* identifier[identifierEG].type from $JDV-J236-TypeIdentifiant-ROR (required)
-// SLice type 
-* type 1..* 
+* identifier[idNatStruct] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
+* identifier[idNatStruct].type = $TRE-G07-TypeIdentifiantStructure#40 
+* identifier[numFINESS] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
+* identifier[numFINESS].type = $TRE-G07-TypeIdentifiantStructure#1 
+* identifier[numSIREN] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
+* identifier[numSIREN].type = $TRE-G07-TypeIdentifiantStructure#2 
+* identifier[numRPPS] ^short = ""
+* identifier[numRPPS].type = $TRE-G07-TypeIdentifiantStructure#4
+* identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
+* identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
+* identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
+* identifier[identifierOI].type = $TRE-XXX-TypeIdentifiantAutre#42
+* identifier[numADELI] ^short = "numADELI : "
+* identifier[numADELI].type = $TRE-G07-TypeIdentifiantStructure#0
+* identifier[identifierEG] ^short = "identifiantEG : "
+* identifier[identifierEG].type = $TRE-G07-TypeIdentifiantStructure#41
+
+* type 3..* 
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "coding.system"
 * type ^slicing.rules = #open
 * type contains
     statutJuridiqueINSEE 1..1 and
+    sousEnsembleAgregatStatutJuridique 0..1 and
     categorieEtablissement 1..1 and
     sphParticipation 0..1 and
-    sousEnsembleAgregatStatutJuridique 0..1 and
-    fonctionLieu 0..1 and
-    OIType 1..1
+    OIType 1..1 and
+    fonctionLieu 0..1
+* type[statutJuridiqueINSEE] ^short = "statutJuridique (EJ) : Situation juridique de l’établissement"
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
-* type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
-* type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
+* type[sousEnsembleAgregatStatutJuridique] ^short = "sousEnsembleAgregatStatutJuridique (EJ) : Deuxième niveau dans l’arborescence des statuts juridiques"
 * type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
-* type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
+* type[categorieEtablissement] ^short = "categorieEG (EG) : "
+* type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
+* type[sphParticipation] ^short = "modaliteParticipationSPH (EG) : Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
+* type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
+* type[OIType] ^short = "typeOI (OI) : Type d'organisation interne"
 * type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
-// Contact
+* type[fonctionLieu] ^short = ""
+* type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
+
+* contact.name ^short  = "Nom (Contact) : Un nom de la personne ou du service à contacter"
 * contact.extension ^slicing.discriminator.type = #value
 * contact.extension ^slicing.discriminator.path = "url"
 * contact.extension ^slicing.rules = #open
 * contact.extension contains
-    RORContactDescription named ror-contact-description 0..1 and
     RORContactFunctionContact named ror-contact-function-contact 0..1 and
+    RORContactDescription named ror-contact-description 0..1 and
     RORContactConfidentialityLevel named ror-contact-confidentiality-level 0..1
+* contact.extension[ror-contact-function-contact] ^short = "fonctionContact (Contact) : Un titre, une position ou une fonction de la personne assurant le contact au sein de l'organisation"
+* contact.extension[ror-contact-description] ^short = "description (Contact) : Une description du contact"
+* contact.extension[ror-contact-confidentiality-level] ^short = "niveauConfidentialite (Contact) : Niveau de restriction de l'accès aux attributs de la classe Contact"
+* contact.purpose ^short = "natureContact (Contact) : Un service ou un guichet assurant le contact au sein de l'organisation"
 * contact.purpose from $JDV-J221-NatureContact-ROR (required)
+* contact.telecom.value 1..1
+* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
 * contact.telecom.extension ^slicing.discriminator.type = #value
 * contact.telecom.extension ^slicing.discriminator.path = "url"
 * contact.telecom.extension ^slicing.rules = #open
@@ -80,17 +98,45 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
+* contact.telecom.extension[ror-telecom-communication-channel] ^short = "Canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
+* contact.telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
+* contact.telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
-//telecommunication
-* telecom.value 1..1
-* telecom.extension ^slicing.discriminator.type = #value
-* telecom.extension ^slicing.discriminator.path = "url"
-* telecom.extension ^slicing.rules = #open
-* telecom.extension contains 
-    RORTelecomUsage named ror-telecom-usage 0..1 and
-    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
-    RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1
-// Extension
+* address ^short = "adresseEJ (EJ) : Adresse géopostale du siège de l'entité juridique"
+* address.postalCode ^short = "codePostal (Adresse) : Code Postal ou code postal spécifique CEDEX"
+* address.city ^short = "localité (Adresse) : Localité ou Libellé du bureau distributeur CEDEX"
+* address.extension ^slicing.discriminator.type = #value
+* address.extension ^slicing.discriminator.path = "url"
+* address.extension ^slicing.rules = #open
+* address.extension[inseeCode] ^sliceName = "inseeCode"
+* address.extension[inseeCode].valueCoding from $JDV-J230-CommuneOM-ROR (required)
+* address.extension contains
+    RORAddressName named ror-address-name 0..1 and
+    RORAddressDescription named ror-address-description 0..1 and
+    RORAddressStatus named ror-address-status 0..1 and
+    RORCalculatedDistance named ror-calculated-distance 0..1 and 
+    RORGeolocationLocation named ror-geolocation 0..1
+* address.line.extension contains
+    iso21090-ADXP-careOf named careOf 0..1 and
+    iso21090-ADXP-additionalLocator named additionalLocator 0..1 and
+    iso21090-ADXP-houseNumber named houseNumber 0..1 and
+    iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..1 and
+    iso21090-ADXP-streetNameType named streetNameType 0..1 and
+    iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
+    iso21090-ADXP-streetNameBase named streetNameHamlet 0..1 and
+    iso21090-ADXP-postBox named postalBox 0..1 and
+    ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..1
+* address.line.extension[careOf] ^short = "pointRemise (Adresse)"
+* address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse)"
+* address.line.extension[houseNumber] ^short = "numeroVoie(Adresse)"
+* address.line.extension[buildingNumberSuffix] ^short = "(Adresse)"
+* address.line.extension[streetNameType] ^short = "typeVoie (Adresse)"
+* address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
+* address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse)"
+* address.line.extension[streetNameHamlet] ^short = "lieuDit (Adresse)"
+* address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
+* address.line.extension[ror-organization-address-line-iso-21090-adxp-locality] ^short = "(Adresse)"
+
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -103,36 +149,19 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationNbTemporarySocialHelpPlace named ror-organization-nb-temporary-social-help-place 0..1 and
     ROROrganizationAccessibilityLocation named ror-organization-accessibility-location 0..1 and
     ROROrganizationLevelRecourseORSAN named ror-organization-level-recourse-orsan 0..1 and
-    ROROrganizationPeriod named ror-organization-period 0.. and
-    organization-period named openingClosingDate 0..1 and
     RORCommuneCog named ror-commune-cog 1..1 and 
-    ROROrganizationDropZone named ror-organization-drop-zone 0..1
-// Adresse 
-* address.extension ^slicing.discriminator.type = #value
-* address.extension ^slicing.discriminator.path = "url"
-* address.extension ^slicing.rules = #open
-* address.extension[inseeCode] ^sliceName = "inseeCode"
-* address.extension[inseeCode].valueCoding from $JDV-J230-CommuneOM-ROR (required)
-* address.extension contains
-    RORAddressName named ror-address-name 0..1 and
-    RORAddressDescription named ror-address-description 0..1 and
-    RORAddressStatus named ror-address-status 0..1 and
-    RORCalculatedDistance named ror-calculated-distance 0..1 and 
-    RORGeolocationLocation named ror-geolocation 0..1
-* address.line.extension ^slicing.discriminator.type = #value
-* address.line.extension ^slicing.discriminator.path = "url"
-* address.line.extension ^slicing.rules = #open
-* address.line.extension contains
-    ROROrganizationAddressLineISO21090AdxpLocality named ror-organization-address-line-iso-21090-adxp-locality 0..* and
-    iso21090-ADXP-careOf named careOf 0..* and
-    iso21090-ADXP-additionalLocator named additionalLocator 0..* and
-    iso21090-ADXP-houseNumber named houseNumber 0..* and
-    iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..* and
-    iso21090-ADXP-streetNameType named streetNameType 0..* and
-    iso21090-ADXP-streetNameBase named streetNameBase 0..* and
-    iso21090-ADXP-postBox named postalBox 0..*
-* address.line.extension[streetNameType] ^sliceName = "streetNameType"
-* address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
-/** address.line.extension[streetNameType].valueString ^sliceName = "valueString"
-* address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"*/
-* partOf only Reference(fr-organization or ROROrganization)
+    ROROrganizationDropZone named ror-organization-drop-zone 0..1 and
+    ROROrganizationPeriod named ror-organization-period 0.. and
+    organization-period named openingClosingDate 0..1
+* extension[ror-organization-price] ^short = "Tarif"
+* extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique"
+* extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
+* extension[ror-organization-accomodation-family] ^short = "hebergementFamille (EG) : Indique si l'établissement peut héberger les familles des personnes prises en charge"
+* extension[ror-organization-nb-permanent-social-help-place] ^short = "nbPlaceAideSocialTemporaire (EG) : nombre de places temporaires dédiées à l'aide sociale dans l'établissement"
+* extension[ror-organization-nb-temporary-social-help-place] ^short = "nbPlaceAideSocialPermanent (EG) : nombre de places permanentes dédiées à l'aide sociale dans l'établissement"
+* extension[ror-organization-accessibility-location] ^short = "accessibiliteLieu (EG) : Précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public"
+* extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
+* extension[ror-commune-cog] ^short = ""
+* extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
+* extension[ror-organization-period] ^short = "typeFermeture + datePrevisionnelleReouverture + "
+* extension[openingClosingDate] ^short = ""

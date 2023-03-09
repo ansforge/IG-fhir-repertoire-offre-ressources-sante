@@ -3,6 +3,11 @@ Alias: $practitionerRole-contracted = https://apifhir.annuaire.sante.fr/ws-sync/
 Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted
 Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS
 
+Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure/
+// A compléter selon DM
+Alias: $TRE-XXX-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gouv.fr/NOS/TRE_XXX-TypeIdentifiantRessourceOperationnelle/FHIR/TRE_XXX-TypeIdentifiantRessourceOperationnelle
+Alias: $TRE-XXX-TypeIdentifiantAutre = https://mos.esante.gouv.fr/NOS/TRE_XXX-TypeIdentifiantAutre/FHIR/TRE_XXX-TypeIdentifiantAutre
+
 Alias: $JDV-J16-ActeSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR
 Alias: $JDV-J17-ActiviteOperationnelle-ROR = https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR
 Alias: $JDV-J18-EquipementSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/JDV-J18-EquipementSpecifique-ROR
