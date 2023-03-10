@@ -15,7 +15,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * meta.tag ^slicing.ordered = false
 * meta.tag contains
     codeRegion 0..1
-* meta.tag[codeRegion] from $JDV_J237-RegionOM-ROR (required)
+* meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
 * identifier 0..1 

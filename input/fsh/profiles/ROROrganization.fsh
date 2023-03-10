@@ -14,7 +14,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * meta.tag ^slicing.ordered = false
 * meta.tag contains
     codeRegion 0..1
-* meta.tag[codeRegion] from $JDV_J237-RegionOM-ROR (required)
+* meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
 * name 1..1
@@ -62,7 +62,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 * type 3..* 
 * type ^slicing.discriminator.type = #value
-* type ^slicing.discriminator.path = "coding.system"
+* type ^slicing.discriminator.path = "url"
 * type ^slicing.rules = #open
 * type contains
     statutJuridiqueINSEE 1..1 and
