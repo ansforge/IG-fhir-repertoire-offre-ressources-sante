@@ -41,10 +41,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     nomExterneSynchro 0..1
 * alias ^slicing.description = "nomExterneSynchro (LieuRealisationOffre) : Nom de la zone d’hébergement des lits"
 
-* telecom.extension 0..*
-* telecom.extension ^short = "telecommunication (LieuRealisationOffre) : Adresse(s) de télécommunication du lieu"
-* telecom.extension.value 1..1
-* telecom.extension.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communica"
+* telecom 0..*
+* telecom ^short = "telecommunication (LieuRealisationOffre) : Adresse(s) de télécommunication du lieu"
+* telecom.value 1..1
+* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communica"
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
