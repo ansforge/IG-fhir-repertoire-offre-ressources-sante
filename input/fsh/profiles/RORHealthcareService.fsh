@@ -5,7 +5,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 
 /* Données techniques */
 * meta.tag ^slicing.discriminator.type = #value
-* meta.tag ^slicing.discriminator.path = "url"
+* meta.tag ^slicing.discriminator.path = "type"
 * meta.tag ^slicing.rules = #open
 * meta.tag ^slicing.description = "Slicing pour gérer le code région définissant la région source des données"
 * meta.tag ^slicing.ordered = false

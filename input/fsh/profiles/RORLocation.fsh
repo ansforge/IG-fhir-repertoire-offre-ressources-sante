@@ -22,17 +22,17 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 
 * identifier 0..*
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
     idExterneSynchro 0..1 and
     idLocation 0..1
 * identifier[idExterneSynchro] ^short = "idExterneSynchro (LieuRealisationOffre) : Identifiant défini par le porteur d’offre pour la zone d’hébergement des lits" 
 * identifier[idExterneSynchro].type 1..1
-* identifier[idExterneSynchro].type = $TRE-XXX-TypeIdentifiantRessourceOperationnelle#26
+* identifier[idExterneSynchro].type.coding.code = $TRE-XXX-TypeIdentifiantRessourceOperationnelle#26
 * identifier[idLocation] ^short = "identifiant (LieuRealisationOffre) : Identifiant fonctionnel du lieu"
 * identifier[idLocation].type 1..1
-* identifier[idLocation].type = $TRE-XXX-TypeIdentifiantRessourceOperationnelle#25
+* identifier[idLocation].type.coding.code = $TRE-XXX-TypeIdentifiantRessourceOperationnelle#25
 
 * telecom 0..*
 * telecom ^short = "telecommunication (LieuRealisationOffre) : Adresse(s) de télécommunication du lieu"

@@ -24,7 +24,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
     idNatStruct 1..1 and
@@ -37,28 +37,28 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     identifierEG 0..1
 * identifier[idNatStruct] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
 * identifier[idNatStruct].type 1..1
-* identifier[idNatStruct].type = $TRE-G07-TypeIdentifiantStructure#40 
+* identifier[idNatStruct].type.coding.code = $TRE-G07-TypeIdentifiantStructure#40 
 * identifier[numFINESS] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
 * identifier[numFINESS].type 1..1
-* identifier[numFINESS].type = $TRE-G07-TypeIdentifiantStructure#1 
+* identifier[numFINESS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#1 
 * identifier[numSIREN] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
 * identifier[numSIREN].type 1..1
-* identifier[numSIREN].type = $TRE-G07-TypeIdentifiantStructure#2 
+* identifier[numSIREN].type.coding.code = $TRE-G07-TypeIdentifiantStructure#2 
 * identifier[numRPPS] ^short = "TODO"
 * identifier[numRPPS].type 1..1
-* identifier[numRPPS].type = $TRE-G07-TypeIdentifiantStructure#4
+* identifier[numRPPS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#4
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1
-* identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
+* identifier[numSIRET].type.coding.code = $TRE-G07-TypeIdentifiantStructure#3
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
 * identifier[identifierOI].type 1..1
-* identifier[identifierOI].type = $TRE-XXX-TypeIdentifiantAutre#42
+* identifier[identifierOI].type.coding.code = $TRE-XXX-TypeIdentifiantAutre#42
 * identifier[numADELI] ^short = "TODO"
 * identifier[numADELI].type 1..1
-* identifier[numADELI].type = $TRE-G07-TypeIdentifiantStructure#0
+* identifier[numADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
 * identifier[identifierEG] ^short = "TODO"
 * identifier[identifierEG].type 1..1
-* identifier[identifierEG].type = $TRE-G07-TypeIdentifiantStructure#41
+* identifier[identifierEG].type.coding.code = $TRE-G07-TypeIdentifiantStructure#41
 
 * type 3..* 
 * type ^slicing.discriminator.type = #value
@@ -81,7 +81,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[OIType] ^short = "typeOI (OI) : Type d'organisation interne"
 * type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
-* type[fonctionLieu] ^short = "TODO"
+* type[fonctionLieu] ^short = "fonctionLieu (LieuEG) :  La fonction correspond à la destination d'usage du lieu"
 * type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
 
 * contact.name ^short  = "Nom (Contact) : Un nom de la personne ou du service à contacter"
@@ -98,7 +98,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * contact.purpose ^short = "natureContact (Contact) : Un service ou un guichet assurant le contact au sein de l'organisation"
 * contact.purpose from $JDV-J221-NatureContact-ROR (required)
 * contact.telecom.value 1..1
-* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
+* contact.telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
 * contact.telecom.extension ^slicing.discriminator.type = #value
 * contact.telecom.extension ^slicing.discriminator.path = "url"
 * contact.telecom.extension ^slicing.rules = #open
@@ -122,8 +122,13 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORAddressName named ror-address-name 0..1 and
     RORAddressDescription named ror-address-description 0..1 and
     RORAddressStatus named ror-address-status 0..1 and
-    RORCalculatedDistance named ror-calculated-distance 0..1 and 
+    RORCalculatedDistance named ror-calculated-distance 0..1 and
     RORGeolocationLocation named ror-geolocation 0..1
+* address.extension[ror-address-name] ^short = "nom (LieuEG) : Nom, exprimé sous la forme de texte, du lieu"
+* address.extension[ror-address-description] ^short = "description (LieuEG) : Description textuelle du lieu, indiquant comment l'atteindre"
+* address.extension[ror-address-status] ^short = "statut (lieuEG) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
+* address.extension[ror-calculated-distance] ^short = "TODO"
+* address.extension[ror-geolocation] ^short = "TODO"
 * address.line.extension contains
     iso21090-ADXP-careOf named careOf 0..1 and
     iso21090-ADXP-additionalLocator named additionalLocator 0..1 and
@@ -167,7 +172,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-nb-temporary-social-help-place] ^short = "nbPlaceAideSocialPermanent (EG) : nombre de places permanentes dédiées à l'aide sociale dans l'établissement"
 * extension[ror-organization-accessibility-location] ^short = "accessibiliteLieu (EG) : Précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public"
 * extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
-* extension[ror-commune-cog] ^short = "TODO"
+* extension[ror-commune-cog] ^short = "communeCog (LieuEG) : Code officiel géographique (COG) de la commune dans laquelle le lieu est situé"
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
 * extension[ror-organization-period] ^short = "typeFermeture (EG + OI) + datePrevisionnelleReouverture (OI)"
 * extension[openingClosingDate] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
