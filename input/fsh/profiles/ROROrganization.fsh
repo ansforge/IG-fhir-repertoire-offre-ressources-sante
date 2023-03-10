@@ -72,17 +72,17 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     OIType 1..1 and
     fonctionLieu 0..1
 * type[statutJuridiqueINSEE] ^short = "statutJuridique (EJ) : Situation juridique de l’établissement"
-* type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
+//* type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
 * type[sousEnsembleAgregatStatutJuridique] ^short = "sousEnsembleAgregatStatutJuridique (EJ) : Deuxième niveau dans l’arborescence des statuts juridiques"
-* type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
+//* type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
 * type[categorieEtablissement] ^short = "categorieEG (EG) : "
-* type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
+//* type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
 * type[sphParticipation] ^short = "modaliteParticipationSPH (EG) : Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
-* type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
+//* type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[OIType] ^short = "typeOI (OI) : Type d'organisation interne"
-* type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
+//* type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
 * type[fonctionLieu] ^short = "fonctionLieu (LieuEG) :  La fonction correspond à la destination d'usage du lieu"
-* type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
+//* type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
 
 * contact.name ^short  = "Nom (Contact) : Un nom de la personne ou du service à contacter"
 * contact.extension ^slicing.discriminator.type = #value
