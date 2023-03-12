@@ -1,14 +1,13 @@
 Instance: ror-sp-residential-type
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-residential-type"
-* version = "3.0"
-* name = "RORSPResidentialType"
 * status = #active
-* date = "2022-10-06"
-* publisher = "ANS"
+* name = "RORSPResidentialType"
+
+* date = "2023-01-12T14:27:51+01:00"
+
 * description = "Paramètre de recherche pour récupérer le type d'habitation"
 * code = #residential-type
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-residential-capacity').extension(url='residentialType').valueCodeableConcept"
+* expression = "Location.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-residential-capacity').extension(url='residentialType').valueCodeableConcept"

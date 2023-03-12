@@ -1,15 +1,10 @@
 Extension: RORHealthcareServiceAvailableTimeTypeOfTime
 Id: ror-healthcareservice-available-time-type-of-time
-Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^date = "2022-06-30"
-* ^publisher = "ANS"
+Description: "Extension créée dans le cadre du ROR pour apporter un contexte à la plage horaire définie par la suite. Un planning peut être constitué de plusieurs plages horaires du même type ou de type différent."
 * ^context[0].type = #element
 * ^context[=].expression = "HealthcareService.availableTime"
 * ^context[+].type = #element
 * ^context[=].expression = "PractitionerRole.availableTime"
-* . ..1
-* value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $JDV-J41-TypeHoraire-ROR (required)
 * value[x] ^binding.description = "Type of time"
