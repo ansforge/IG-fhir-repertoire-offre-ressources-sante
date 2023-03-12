@@ -1,6 +1,8 @@
-## Le ROR, référentiel de données de description de l'offre de santé
+## Description fonctionnelle de l'API
 
-### Le référentiel ROR
+### Le ROR, référentiel de données de description de l'offre de santé
+
+#### Le référentiel ROR
 
 Le Répertoire de l'Offre et des Ressources en santé et accompagnement
 médico-social (ROR) est le référentiel (au sens gisement de données) de
@@ -15,17 +17,17 @@ réalisation de ces activités opérationnelles sur un lieu donné. Ces
 ressources concernent principalement les équipements spécifiques, les
 capacités d'accueil et les compétences que l'on souhaite identifier pour
 cette offre.
+<div class="figure">
+    <img src="image5.png" alt="ROR Modèle d'exposition v3" width="1238" height="922" title="ROR Modèle d'exposition v3">
+</div>
 
-
-![ROR Modèle d'exposition v3](image5.png "ROR Modèle d'exposition v3")
-
-Figure 1- Référentiel ROR
+**Figure 1- Référentiel ROR**
 
 Le ROR, en tant que référentiel de description de l'offre de santé (au
 sens gisement de données), a une couverture nationale. Il doit permettre
 à toute application autorisée de rechercher une offre de santé.
 
-### Instances des ROR régionaux
+#### Instances des ROR régionaux
 
 Dans les faits, chaque région met en œuvre, alimente et exploite une
 partie du référentiel limité à une couverture régionale, sans
@@ -46,7 +48,7 @@ région s'appuie sur des services proposés par chaque ROR régional, et
 nécessite que chaque instance régionale soit interconnectée avec les
 instances des 17 autres régions.
 
-### Instance du ROR national
+#### Instance du ROR national
 
 Dans un contexte de sollicitation croissante des ROR régionaux, la
 nécessité d'améliorer la qualité du service rendu aux utilisateurs et le
@@ -75,9 +77,9 @@ permet aux systèmes consommateurs de réaliser une recherche sur les
 informations capacitaires en lits/places, sous réserve de disposer des
 droits d'accès adaptés.
 
-## Modélisation
+### Modélisation
 
-### Données utilisées pour la modélisation UML
+#### Données utilisées pour la modélisation UML
 
 Les attributs de description de l'offre, fournis en résultat d'une
 recherche, sont décrits dans le document ROR-modèle d'exposition
@@ -89,7 +91,7 @@ Ces attributs sont associés à des règles de gestion communes qui sont
 également présentées dans le document ROR-modèle d'exposition
 \[Ref_01\].
 
-### Nomenclatures
+#### Nomenclatures
 
 La capacité à échanger de l'information entre les ROR et les systèmes
 consommateurs repose sur l'interopérabilité sémantique et syntaxique des
@@ -116,9 +118,261 @@ pouvoir intégrer les évolutions régulières des nomenclatures (ajout de
 code, modification de libellé, mise en obsolescence d'un code,
 réactivation de code).
 
-### Auteurs et contributeurs
+### Documents de référence
 
-| Role  | Nom | Organisation | Contact |
-| --- | --- | --- | --- |
-| **Primary Editor** | Nicolas Riss | Agence du Numérique en Santé | nicolas.riss@esante.gouv.fr |
-| **Secondary Editor** | Sylvain Demey | Agence du Numérique en Santé | sylvain.demey@esante.gouv.fr |
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" align="left" width="100%" style="border-collapse:collapse;mso-table-layout-alt:fixed;
+ border:none;mso-border-alt:solid #AD0000 1.0pt;mso-yfti-tbllook:672;
+ mso-table-lspace:7.05pt;margin-left:4.8pt;mso-table-rspace:7.05pt;margin-right:
+ 4.8pt;mso-table-anchor-vertical:paragraph;mso-table-anchor-horizontal:margin;
+ mso-table-left:left;mso-table-top:3.65pt;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+ <thead>
+  <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:23.2pt;mso-height-rule:
+   exactly">
+   <td width="100%" colspan="3" valign="top" style="width:100.0%;border:none;
+   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
+   exactly">
+   <p class="TableParagraph" align="center" style="margin-top:5.35pt;margin-right:
+   0cm;margin-bottom:0cm;margin-left:5.15pt;margin-bottom:.0001pt;text-align:
+   center;mso-element:frame;mso-element-frame-hspace:7.05pt;mso-element-wrap:
+   around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
+   margin;mso-element-top:3.65pt;mso-height-rule:exactly"><b><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+   mso-bidi-font-family:&quot;Times New Roman&quot;;color:white;mso-ansi-language:FR">Documents
+   de<span style="letter-spacing:-.35pt"> </span>référence<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+  <tr style="mso-yfti-irow:1;height:18.7pt">
+   <td width="34%" valign="top" style="width:34.72%;border:none;background:#70706F;
+   padding:0cm 5.4pt 0cm 5.4pt;height:18.7pt">
+   <p class="TableParagraph" align="center" style="margin-top:3.2pt;margin-right:
+   .05pt;margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:
+   center;mso-element:frame;mso-element-frame-hspace:7.05pt;mso-element-wrap:
+   around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
+   margin;mso-element-top:3.65pt;mso-height-rule:exactly"><b><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+   mso-bidi-font-family:&quot;Times New Roman&quot;;color:white;mso-ansi-language:FR">Référence</span></b><b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+   Arial;color:white;mso-ansi-language:FR"><o:p></o:p></span></b></p>
+   </td>
+   <td width="9%" valign="top" style="width:9.72%;border:none;background:#70706F;
+   padding:0cm 5.4pt 0cm 5.4pt;height:18.7pt">
+   <p class="TableParagraph" align="center" style="margin-top:3.2pt;text-align:
+   center;mso-element:frame;mso-element-frame-hspace:7.05pt;mso-element-wrap:
+   around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
+   margin;mso-element-top:3.65pt;mso-height-rule:exactly"><b><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+   mso-hansi-font-family:Calibri;mso-bidi-font-family:&quot;Times New Roman&quot;;
+   color:white;mso-ansi-language:FR">Version</span></b><b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+   Arial;color:white;mso-ansi-language:FR"><o:p></o:p></span></b></p>
+   </td>
+   <td width="55%" valign="top" style="width:55.56%;border:none;background:#70706F;
+   padding:0cm 5.4pt 0cm 5.4pt;height:18.7pt">
+   <p class="TableParagraph" align="center" style="margin-top:3.2pt;text-align:
+   center;mso-element:frame;mso-element-frame-hspace:7.05pt;mso-element-wrap:
+   around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
+   margin;mso-element-top:3.65pt;mso-height-rule:exactly"><b><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+   mso-hansi-font-family:Calibri;mso-bidi-font-family:&quot;Times New Roman&quot;;
+   color:white;mso-ansi-language:FR">Descriptif<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tbody><tr style="mso-yfti-irow:2;height:44.2pt;mso-height-rule:exactly">
+  <td width="34%" style="width:34.72%;border:solid #5B9BD5 1.0pt;mso-border-alt:
+  solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;mso-height-rule:
+  exactly">
+  <p class="TableParagraph" style="margin-top:6.0pt;margin-right:5.1pt;
+  margin-bottom:6.0pt;margin-left:5.1pt;mso-element:frame;mso-element-frame-hspace:
+  7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;
+  mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;mso-height-rule:
+  exactly"><a name="Ref_01"><span style="font-size:10.0pt;mso-ansi-language:
+  FR">[</span></a><span style="mso-bookmark:Ref_01"><span style="font-size:
+  10.0pt;mso-bidi-font-size:11.0pt;mso-ansi-language:FR">Ref_01</span></span><span style="mso-bookmark:Ref_01"><span style="font-size:10.0pt;mso-ansi-language:
+  FR">] </span></span><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;
+  color:#0070C0;mso-ansi-language:FR">ROR – Modèle d’exposition</span><b><span style="font-size:10.0pt;mso-ansi-language:FR"><o:p></o:p></span></b></p>
+  </td>
+  <td width="9%" style="width:9.72%;border:solid #5B9BD5 1.0pt;border-left:
+  none;mso-border-left-alt:solid #5B9BD5 .5pt;mso-border-alt:solid #5B9BD5 .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;mso-height-rule:exactly">
+  <p class="TableParagraph" align="center" style="margin-top:6.0pt;margin-right:
+  0cm;margin-bottom:6.0pt;margin-left:0cm;text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
+  mso-height-rule:exactly"><span style="font-size:10.0pt;mso-ascii-font-family:
+  Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Arial;
+  mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">3.0<o:p></o:p></span></p>
+  </td>
+  <td width="55%" style="width:55.56%;border:solid #5B9BD5 1.0pt;border-left:
+  none;mso-border-left-alt:solid #5B9BD5 .5pt;mso-border-alt:solid #5B9BD5 .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;mso-height-rule:exactly">
+  <p class="MsoNormal" style="mso-element:frame;mso-element-frame-hspace:7.05pt;
+  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
+  margin;mso-element-top:3.65pt;mso-height-rule:exactly"><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
+  mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+  minor-latin">Description des données communes aux échanges entre les ROR et
+  les SI externes.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;height:44.2pt;mso-height-rule:exactly">
+  <td width="34%" style="width:34.72%;border:solid #5B9BD5 1.0pt;border-top:
+  none;mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-alt:solid #5B9BD5 .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;mso-height-rule:exactly">
+  <p class="TableParagraph" style="margin-top:6.0pt;margin-right:5.1pt;
+  margin-bottom:6.0pt;margin-left:5.1pt;mso-element:frame;mso-element-frame-hspace:
+  7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;
+  mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;mso-height-rule:
+  exactly"><a name="Ref_03"><span lang="EN-US" style="font-size:10.0pt">[</span></a><span style="mso-bookmark:Ref_03"><span lang="EN-US" style="font-size:10.0pt;
+  mso-bidi-font-size:11.0pt">Ref_</span></span><span style="mso-bookmark:Ref_03"><span lang="EN-US" style="font-size:10.0pt">02] </span></span><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-size:11.0pt;color:#0070C0">ROR -Mapping
+  FHIR 3.0</span><span lang="EN-GB" style="font-size:10.0pt;mso-ansi-language:
+  EN-GB"><o:p></o:p></span></p>
+  </td>
+  <td width="9%" style="width:9.72%;border-top:none;border-left:none;
+  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
+  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
+  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
+  mso-height-rule:exactly">
+  <p class="TableParagraph" align="center" style="margin-top:6.0pt;margin-right:
+  0cm;margin-bottom:6.0pt;margin-left:0cm;text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
+  mso-height-rule:exactly"><span style="font-size:10.0pt;mso-ascii-font-family:
+  Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Arial;
+  mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">1.0<o:p></o:p></span></p>
+  </td>
+  <td width="55%" style="width:55.56%;border-top:none;border-left:none;
+  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
+  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
+  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
+  mso-height-rule:exactly">
+  <p class="MsoNormal" style="mso-element:frame;mso-element-frame-hspace:7.05pt;
+  mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
+  margin;mso-element-top:3.65pt;mso-height-rule:exactly"><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
+  mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+  minor-latin">Description du mapping des concepts</span> <span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
+  mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+  minor-latin">du modèle d’exposition ROR au format FHIR.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;height:44.2pt;mso-height-rule:exactly">
+  <td width="34%" style="width:34.72%;border:solid #5B9BD5 1.0pt;border-top:
+  none;mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-alt:solid #5B9BD5 .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;mso-height-rule:exactly">
+  <p class="TableParagraph" style="margin-top:6.0pt;margin-right:5.1pt;
+  margin-bottom:6.0pt;margin-left:5.1pt;mso-element:frame;mso-element-frame-hspace:
+  7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;
+  mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;mso-height-rule:
+  exactly"><span style="font-size:10.0pt;mso-ansi-language:FR">[</span><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;mso-ansi-language:FR">Ref_</span><span style="font-size:10.0pt;mso-ansi-language:FR">03] </span><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;color:#0070C0;mso-ansi-language:
+  FR">Swagger du WS de recherche FHIR 3.0</span><span style="font-size:10.0pt;
+  mso-ansi-language:FR"><o:p></o:p></span></p>
+  </td>
+  <td width="9%" style="width:9.72%;border-top:none;border-left:none;
+  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
+  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
+  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
+  mso-height-rule:exactly">
+  <p class="TableParagraph" align="center" style="margin-top:6.0pt;margin-right:
+  0cm;margin-bottom:6.0pt;margin-left:0cm;text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
+  mso-height-rule:exactly"><span style="font-size:10.0pt;mso-ascii-font-family:
+  Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Arial;
+  mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">2.0<o:p></o:p></span></p>
+  </td>
+  <td width="55%" style="width:55.56%;border-top:none;border-left:none;
+  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
+  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
+  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
+  mso-height-rule:exactly">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-element:frame;
+  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
+  mso-height-rule:exactly"><span style="mso-bidi-font-size:10.0pt;line-height:
+  115%;font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+  mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin">Description
+  d’interface de l’API de recherche<br>
+  </span><a href="https://app.swaggerhub.com/apis-docs/kereval1/WSROR/2.0.0"><span style="font-size:9.0pt;mso-bidi-font-size:11.0pt;line-height:115%;font-family:
+  Comfortaa">https://app.swaggerhub.com/apis-docs/kereval1/WSROR/2.0.0</span></a><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
+  mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+  minor-latin"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:5;height:44.2pt;mso-height-rule:exactly">
+  <td width="34%" style="width:34.72%;border:solid #5B9BD5 1.0pt;border-top:
+  none;mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-alt:solid #5B9BD5 .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;mso-height-rule:exactly">
+  <p class="TableParagraph" style="margin-top:6.0pt;margin-right:5.1pt;
+  margin-bottom:6.0pt;margin-left:5.1pt;mso-element:frame;mso-element-frame-hspace:
+  7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;
+  mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;mso-height-rule:
+  exactly"><a name="Ref_04"><span style="font-size:10.0pt;mso-ansi-language:
+  FR">[Ref_04] </span></a><span style="font-size:10.0pt;mso-bidi-font-size:
+  11.0pt;color:#0070C0;mso-ansi-language:FR">Politique d’accès</span><span style="font-size:10.0pt;mso-ansi-language:FR"><o:p></o:p></span></p>
+  </td>
+  <td width="9%" style="width:9.72%;border-top:none;border-left:none;
+  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
+  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
+  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
+  mso-height-rule:exactly">
+  <p class="TableParagraph" align="center" style="margin-top:6.0pt;margin-right:
+  0cm;margin-bottom:6.0pt;margin-left:0cm;text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
+  mso-height-rule:exactly"><span style="font-size:10.0pt;mso-ascii-font-family:
+  Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Arial;
+  mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">2.5<o:p></o:p></span></p>
+  </td>
+  <td width="55%" style="width:55.56%;border-top:none;border-left:none;
+  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
+  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
+  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
+  mso-height-rule:exactly">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-element:frame;
+  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
+  mso-height-rule:exactly"><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif">Annexe
+  "Politique d'accès" de la doctrine d'urbanisation</span></a><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
+  mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+  minor-latin"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:6;mso-yfti-lastrow:yes;height:44.2pt;mso-height-rule:
+  exactly">
+  <td width="34%" style="width:34.72%;border:solid #5B9BD5 1.0pt;border-top:
+  none;mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-alt:solid #5B9BD5 .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;mso-height-rule:exactly">
+  <p class="TableParagraph" style="margin-top:6.0pt;margin-right:5.1pt;
+  margin-bottom:6.0pt;margin-left:5.1pt;mso-element:frame;mso-element-frame-hspace:
+  7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;
+  mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;mso-height-rule:
+  exactly"><a name="Ref_05"><span style="font-size:10.0pt;mso-ansi-language:
+  FR">[Ref_05] </span></a><span style="font-size:10.0pt;mso-bidi-font-size:
+  11.0pt;color:#0070C0;mso-ansi-language:FR">Annexe sources de données personnes
+  et structures</span><span style="font-size:10.0pt;mso-ansi-language:FR"><o:p></o:p></span></p>
+  </td>
+  <td width="9%" style="width:9.72%;border-top:none;border-left:none;
+  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
+  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
+  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
+  mso-height-rule:exactly">
+  <p class="TableParagraph" align="center" style="margin-top:6.0pt;margin-right:
+  0cm;margin-bottom:6.0pt;margin-left:0cm;text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
+  mso-height-rule:exactly"><span style="font-size:10.0pt;mso-ascii-font-family:
+  Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Arial;
+  mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">1.5<o:p></o:p></span></p>
+  </td>
+  <td width="55%" style="width:55.56%;border-top:none;border-left:none;
+  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
+  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
+  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
+  mso-height-rule:exactly">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-element:frame;
+  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
+  mso-height-rule:exactly"><a href="https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures"><span style="font-size:9.0pt;line-height:115%;font-family:&quot;Segoe UI&quot;,sans-serif">https://esante.gouv.fr/annexe-sources-des-donnees-personnes-et-structures</span></a><span class="cf01"><span style="font-size:9.0pt;line-height:115%"> </span></span><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
+  mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+  minor-latin"><o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
