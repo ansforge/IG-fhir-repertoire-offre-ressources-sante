@@ -4,9 +4,14 @@ Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-s
 Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS
 
 Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure/
-// A compléter selon DM
+// A compléter
 Alias: $TRE-XXX-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gouv.fr/NOS/TRE_XXX-TypeIdentifiantRessourceOperationnelle/FHIR/TRE_XXX-TypeIdentifiantRessourceOperationnelle
 Alias: $TRE-XXX-TypeIdentifiantAutre = https://mos.esante.gouv.fr/NOS/TRE_XXX-TypeIdentifiantAutre/FHIR/TRE_XXX-TypeIdentifiantAutre
+
+// A compléter
+Alias: $JDV-JXXX-DepartementOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_JXXX-DepartementOM-ROR/FHIR/JDV-JXXX-DepartementOM-ROR
+Alias: $JDV-JXXX-TerritoireSante-ROR = https://mos.esante.gouv.fr/NOS/JDV_JXXX-TerritoireSante-ROR/FHIR/JDV-JXXX-TerritoireSante-ROR
+Alias: $JDV-JXXX-Pays-ROR = https://mos.esante.gouv.fr/NOS/JDV_JXXX-Pays-ROR/FHIR/JDV-JXXX-Pays-ROR
 
 Alias: $JDV-J16-ActeSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR
 Alias: $JDV-J17-ActiviteOperationnelle-ROR = https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR
