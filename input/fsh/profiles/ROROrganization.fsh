@@ -138,6 +138,21 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.line.extension[streetNameHamlet] ^short = "lieuDit (Adresse)"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
 
+* telecom.value 1..1
+* telecom ^short = "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
+* telecom.value 1..1
+* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
+* telecom.extension ^slicing.discriminator.type = #value
+* telecom.extension ^slicing.discriminator.path = "url"
+* telecom.extension ^slicing.rules = #open
+* telecom.extension contains 
+    RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1 and
+    RORTelecomUsage named ror-telecom-usage 0..1 and
+    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1
+* telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
+* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication "
+* telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
+
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -154,7 +169,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationDropZone named ror-organization-drop-zone 0..1 and
     ROROrganizationPeriod named ror-organization-period 0..1 and
     organization-period named openingClosingDate 0..1 and
-    ROROrganizationEGLocation named ror-organization-eg-location 0..1
+    ROROrganizationEGLocation named ror-organization-eg-location 0..1 and 
+    ROROrganizationEGName named ror-organization-eg-name 0..1 and
+    ROROrganizationOIName named ror-organization-oi-name 1..1
 * extension[ror-organization-price] ^short = "Tarif"
 * extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique"
 * extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
@@ -166,4 +183,5 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
 * extension[ror-organization-period] ^short = "typeFermeture (EG + OI) + datePrevisionnelleReouverture (OI)"
 * extension[openingClosingDate] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
-* extension[ror-organization-eg-location] ^short = "lieuEG (EG)"
+* extension[ror-organization-eg-name] ^short = "denominationEG + complementDenominationEG + nomOperationnel + commentaire (EG)"
+* extension[ror-organization-oi-name] ^short = "nomOI (OI)"
