@@ -44,12 +44,12 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Statut de la ressource"
-* rest.resource[=].searchParam[+].name = "adress-postalcode"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-adress-postalcode"
+* rest.resource[=].searchParam[+].name = "address-postalcode"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-address-postalcode"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Code Postal ou code postal spécifique CEDEX"
-* rest.resource[=].searchParam[+].name = "adress-city"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-adress-city"
+* rest.resource[=].searchParam[+].name = "address-city"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-address-city"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Localité ou Libellé du bureau distributeur CEDEX"
 * rest.resource[=].searchParam[+].name = "capacity-status"
@@ -149,19 +149,19 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Dénomination sous laquelle l'offre est identifiée"
 * rest.resource[=].searchParam[+].name = "service-category"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-category"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-service-category"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Type d'offre"
 * rest.resource[=].searchParam[+].name = "service-type"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-type"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Domaine dans lequel s'inscrit l'offre"
 * rest.resource[=].searchParam[+].name = "characteristic"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Caractéristiques de l'offre"
-* rest.resource[=].searchParam[+].name = "speciality"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-speciality"
+* rest.resource[=].searchParam[+].name = "specialty"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-specialty"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
 * rest.resource[=].searchParam[+].name = "age-range-high"
@@ -209,7 +209,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Nom de l'organisation interne"
 * rest.resource[=].searchParam[+].name = "type"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organiztion-type"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
 * rest.resource[=].searchParam[+].name = "closing-type"
