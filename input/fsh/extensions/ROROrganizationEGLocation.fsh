@@ -20,7 +20,7 @@ Description: "Extension créée dans le cadre du ROR décrire le lieu de l'entit
     streetNameType 0..1 and
     streetNameBase 0..1 and
     streetNameHamlet 0..1 and
-    postalBox 0..1 and
+    postBox 0..1 and
     RORGeolocation 0..1 and
     latitude 1..1 and
     longitude 1..1 and
@@ -43,7 +43,7 @@ Description: "Extension créée dans le cadre du ROR décrire le lieu de l'entit
 * extension[streetNameType].valueCodeableConcept from $JDV-J219-TypeVoie-ROR (required)
 * extension[streetNameBase].value[x] only string
 * extension[streetNameHamlet].value[x] only string
-* extension[postalBox].value[x] only CodeableConcept
+* extension[postBox].value[x] only CodeableConcept
 * extension[latitude].value[x] only decimal
 * extension[longitude].value[x] only decimal 
 * extension[telecomAddress].value[x] only string
