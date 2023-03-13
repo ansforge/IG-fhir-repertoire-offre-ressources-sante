@@ -1,11 +1,11 @@
-## Description fonctionnelle de l'API
+### Description fonctionnelle de l'API
 
-### Le ROR, référentiel de données de description de l'offre de santé
+#### Le ROR, référentiel de données de description de l'offre de santé
 
-#### Le référentiel ROR
+##### Le référentiel ROR
 
 Le Répertoire de l'Offre et des Ressources en santé et accompagnement
-médico-social (ROR) est le référentiel (au sens gisement de données) de
+médico-social ([ROR](https://esante.gouv.fr/produits-services/repertoire-ror)) est le référentiel (au sens gisement de données) de
 description de l'offre de santé des établissements sanitaires, des
 établissements et services du médico-social et des structures de ville.
 
@@ -18,7 +18,7 @@ ressources concernent principalement les équipements spécifiques, les
 capacités d'accueil et les compétences que l'on souhaite identifier pour
 cette offre.
 <div class="figure">
-    <img src="image5.png" alt="ROR Modèle d'exposition v3" width="1238" height="922" title="ROR Modèle d'exposition v3">
+    <img src="image5.png" alt="ROR Modèle d'exposition v3" width="1038" height="722" title="ROR Modèle d'exposition v3">
 </div>
 
 **Figure 1- Référentiel ROR**
@@ -27,7 +27,7 @@ Le ROR, en tant que référentiel de description de l'offre de santé (au
 sens gisement de données), a une couverture nationale. Il doit permettre
 à toute application autorisée de rechercher une offre de santé.
 
-#### Instances des ROR régionaux
+##### Instances des ROR régionaux
 
 Dans les faits, chaque région met en œuvre, alimente et exploite une
 partie du référentiel limité à une couverture régionale, sans
@@ -48,7 +48,7 @@ région s'appuie sur des services proposés par chaque ROR régional, et
 nécessite que chaque instance régionale soit interconnectée avec les
 instances des 17 autres régions.
 
-#### Instance du ROR national
+##### Instance du ROR national
 
 Dans un contexte de sollicitation croissante des ROR régionaux, la
 nécessité d'améliorer la qualité du service rendu aux utilisateurs et le
@@ -77,9 +77,9 @@ permet aux systèmes consommateurs de réaliser une recherche sur les
 informations capacitaires en lits/places, sous réserve de disposer des
 droits d'accès adaptés.
 
-### Modélisation
+#### Modélisation
 
-#### Données utilisées pour la modélisation UML
+##### Données utilisées pour la modélisation UML
 
 Les attributs de description de l'offre, fournis en résultat d'une
 recherche, sont décrits dans le document ROR-modèle d'exposition
@@ -91,7 +91,7 @@ Ces attributs sont associés à des règles de gestion communes qui sont
 également présentées dans le document ROR-modèle d'exposition
 \[Ref_01\].
 
-#### Nomenclatures
+##### Nomenclatures
 
 La capacité à échanger de l'information entre les ROR et les systèmes
 consommateurs repose sur l'interopérabilité sémantique et syntaxique des
@@ -118,7 +118,7 @@ pouvoir intégrer les évolutions régulières des nomenclatures (ajout de
 code, modification de libellé, mise en obsolescence d'un code,
 réactivation de code).
 
-### Documents de référence
+#### Documents de référence
 
 <table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" align="left" width="100%" style="border-collapse:collapse;mso-table-layout-alt:fixed;
  border:none;mso-border-alt:solid #AD0000 1.0pt;mso-yfti-tbllook:672;

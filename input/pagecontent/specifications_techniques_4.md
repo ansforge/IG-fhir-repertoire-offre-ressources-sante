@@ -1,4 +1,4 @@
-## Recherche d'offre avec données capacitaires
+<!-- ## Recherche d'offre avec données capacitaires -->
 
 ### Caractéristiques de l'API
 <table width="100%">

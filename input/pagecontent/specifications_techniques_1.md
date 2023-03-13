@@ -1,5 +1,4 @@
-## Consultation des données capacitaires
-
+<!-- Consultation des données capacitaires -->
 ### Caractéristiques de l'API
 
 <table width="25%">

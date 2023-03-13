@@ -1,4 +1,4 @@
-## Recherche d'offre sur critères principaux
+<!-- ## Recherche d'offre sur critères principaux -->
 
 ### Caractéristiques de l'API
 

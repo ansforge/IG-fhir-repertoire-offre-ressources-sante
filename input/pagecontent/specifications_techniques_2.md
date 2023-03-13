@@ -1,4 +1,4 @@
-## Consultation de l'offre (synchronisation)
+<!-- ## Consultation de l'offre (synchronisation) -->
 
 ### Caractéristiques de l'API 
 

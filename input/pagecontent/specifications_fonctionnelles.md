@@ -24,9 +24,9 @@ A ce jour, le webservice répond au cas d'usage suivants :
     -   L'exécution des transactions ne provoquera aucune modification sur
         les données sources extraites.
 
-## Consultation des données capacitaires
+### Consultation des données capacitaires
 
-### Description du cas d'usage
+#### Description du cas d'usage
 
 Un consommateur cherche les capacités des lieux de réalisation de
 l'offre à partir de critères de recherche.
@@ -44,7 +44,7 @@ offres opérationnelles liées.
 
 **Figure 2 -- Recherche capacité (modèle expo V3.0)**
 
-### Scénarios
+#### Scénarios
 
 -   Scénario 1 : Données capacitaires de France
 
@@ -84,9 +84,9 @@ offres opérationnelles liées.
         lui ayant renvoyé les identifiants de ces offres, il les passe en
         paramètre de la recherche 3.0.
 
-## Consultation de l'offre (synchronisation)
+### Consultation de l'offre (synchronisation)
 
-### Description du cas d'usage
+#### Description du cas d'usage
 
 Un consommateur souhaite :
 
@@ -129,7 +129,7 @@ partielle offre)">
 
 **Figure 4 - Synchronisation partielle offre**
 
-### Scénarios
+#### Scénarios
 
 -   Scénario 1 : Synchronisation complète
 
@@ -174,9 +174,9 @@ partielle offre)">
         informations de l\'offre, il souhaite ne recevoir que ces
         informations.
 
-## Recherche d'offre sur critères principaux
+### Recherche d'offre sur critères principaux
 
-### Description du cas d'usage
+#### Description du cas d'usage
 
 Un consommateur cherche des offres opérationnelles à partir de
 critère(s) de recherche.
@@ -193,7 +193,7 @@ l'offre opérationnelle.
 </div>
 **Figure 5 -- Recherche offre**
 
-### Scénarios
+#### Scénarios
 
 -   Scenario 1 : Recherche sur un critère en saisissant une valeur
 
@@ -253,9 +253,9 @@ l'offre opérationnelle.
     -   Un consommateur recherche les offres proposant une modalité
         d\'accueil et un niveau d\'expertise (critères modèle 3.0)
 
-## Recherche d'offre avec données capacitaires
+### Recherche d'offre avec données capacitaires
 
-### Description du cas d'usage
+#### Description du cas d'usage
 
 Un consommateur cherche les capacités des lieux de réalisation de
 l'offre à partir de critère(s) de recherche.
@@ -273,7 +273,7 @@ l'offre liés.
 
 **Figure 6 -- Recherche offre avec données capacitaires**
 
-### Scénarios
+#### Scénarios
 
 -   Scenario 1 : Recherche sur un critère capacitaire #1
 

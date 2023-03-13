@@ -1,9 +1,11 @@
-# Critères de recherche 
+<!-- # Critères de recherche --> 
 
 ## StructureDefinition-ror-location
 <table width="100%">
 <tbody>
-<tr>
+<tr style="width:100.0%;border:none;
+   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
+   exactly">
 <td width="28%">
 <p><strong>Attribut ME 3.0</strong></p>
 </td>
@@ -486,7 +488,9 @@
 Critères de recherches applicables à la ressource HealthcareService.
 <table width="100%">
 <tbody>
-<tr>
+<tr style="width:100.0%;border:none;
+   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
+   exactly">
 <td width="22%">
 <p><strong>Attribut ME 3.0</strong></p>
 </td>
@@ -832,7 +836,9 @@ Critères de recherches applicables à la ressource Organization.
 
 <table width="100%">
 <tbody>
-<tr>
+<tr style="width:100.0%;border:none;
+   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
+   exactly">
 <td width="17%">
 <p><strong>Attribut ME 3.0</strong></p>
 </td>
@@ -1013,7 +1019,9 @@ Critères de recherches applicables à la ressource Practioner.
 
 <table width="100%">
 <tbody>
-<tr>
+<tr style="width:100.0%;border:none;
+   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
+   exactly">
 <td width="17%">
 <p><strong>Attribut ME 3.0</strong></p>
 </td>
@@ -1073,7 +1081,9 @@ Critères de recherches applicables à la ressource PractionerRole.
 
 <table width="100%">
 <tbody>
-<tr>
+<tr style="width:100.0%;border:none;
+   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
+   exactly">
 <td width="17%">
 <p><strong>Attribut ME 3.0</strong></p>
 </td>
