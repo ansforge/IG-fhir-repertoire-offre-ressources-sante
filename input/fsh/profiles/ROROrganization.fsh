@@ -81,8 +81,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[OIType] ^short = "typeOI (OI) : Type d'organisation interne"
 * type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
-* type[fonctionLieu] ^short = "fonctionLieu (LieuEG) :  La fonction correspond à la destination d'usage du lieu"
-* type[fonctionLieu] from $JDV-J198-FonctionLieu-ROR (required)
 
 * contact.name ^short  = "Nom (Contact) : Un nom de la personne ou du service à contacter"
 * contact.extension ^slicing.discriminator.type = #value
@@ -119,14 +117,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.extension[inseeCode] ^sliceName = "inseeCode"
 * address.extension[inseeCode].valueCoding from $JDV-J230-CommuneOM-ROR (required)
 * address.extension contains
-    RORAddressName named ror-address-name 0..1 and
-    RORAddressDescription named ror-address-description 0..1 and
-    RORAddressStatus named ror-address-status 0..1 and
     RORCalculatedDistance named ror-calculated-distance 0..1 and
     RORGeolocationLocation named ror-geolocation 0..1
-* address.extension[ror-address-name] ^short = "nom (LieuEG) : Nom, exprimé sous la forme de texte, du lieu"
-* address.extension[ror-address-description] ^short = "description (LieuEG) : Description textuelle du lieu, indiquant comment l'atteindre"
-* address.extension[ror-address-status] ^short = "statut (lieuEG) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
 * address.extension[ror-calculated-distance] ^short = "TODO"
 * address.extension[ror-geolocation] ^short = "TODO"
 * address.line.extension contains
@@ -163,7 +155,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORCommuneCog named ror-commune-cog 1..1 and 
     ROROrganizationDropZone named ror-organization-drop-zone 0..1 and
     ROROrganizationPeriod named ror-organization-period 0..1 and
-    organization-period named openingClosingDate 0..1 
+    organization-period named openingClosingDate 0..1 and
+    ROROrganizationEGLocation named ror-organization-eg-location 0..1
 * extension[ror-organization-price] ^short = "Tarif"
 * extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique"
 * extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
@@ -172,7 +165,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-nb-temporary-social-help-place] ^short = "nbPlaceAideSocialPermanent (EG) : nombre de places permanentes dédiées à l'aide sociale dans l'établissement"
 * extension[ror-organization-accessibility-location] ^short = "accessibiliteLieu (EG) : Précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public"
 * extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
-* extension[ror-commune-cog] ^short = "communeCog (LieuEG) : Code officiel géographique (COG) de la commune dans laquelle le lieu est situé"
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
 * extension[ror-organization-period] ^short = "typeFermeture (EG + OI) + datePrevisionnelleReouverture (OI)"
 * extension[openingClosingDate] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
+* extension[ror-organization-eg-location] ^short = "lieuEG (EG)"
