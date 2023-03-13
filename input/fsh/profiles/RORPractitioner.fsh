@@ -31,3 +31,10 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
 * telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication "
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication"
+
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension contains
+    RORPractitionerTitle named ror-practitioner-title 0..1
+* extension[ror-practitioner-title] ^short = "civilite (PersonnePhysique) : Civilité de la personne physique"
