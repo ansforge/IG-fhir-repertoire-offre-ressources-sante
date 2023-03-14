@@ -261,7 +261,9 @@ applicables à ce cas d'usage sont :
 
 **Requête :**
 
-`get[BASE]/HealthcareService?_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -280,7 +282,9 @@ par un établissement dont l'identifiant est = XX
 
 **Requête :**
 
-`get[BASE]/HealthcareService?organization:identifier=XX_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?organization:identifier=XX_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -301,7 +305,9 @@ rechercher une offre de santé\
 
 **Requête :**
 
-`get[BASE]/HealthcareService?identifier=XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner` 
+```
+get[BASE]/HealthcareService?identifier=XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner 
+```
 
 **Requête expliquée :**
 
@@ -320,7 +326,9 @@ mise à jour depuis une certaine date \>= (06/11/2022)
 
 **Requête :**
 
-`get[BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -341,7 +349,9 @@ certaine date \>= (06/11/2022)
 
 **Requête :**
 
-`get[BASE]/HealthcareService?providedBy._lastUpdated=ge2022-11-06T15:00&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?providedBy._lastUpdated=ge2022-11-06T15:00&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -361,7 +371,9 @@ date \>= (06/11/2022)
 
 **Requête :**
 
-`get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or providedBy:_lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or providedBy:_lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -381,7 +393,9 @@ ne recevoir que ces informations.
 
 **Requête :**
 
-`get[BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_elements=identifier &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_elements=identifier &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
