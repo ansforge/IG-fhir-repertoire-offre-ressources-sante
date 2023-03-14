@@ -62,7 +62,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 * type 3..* 
 * type ^slicing.discriminator.type = #value
-* type ^slicing.discriminator.path = "url"
+* type ^slicing.discriminator.path = "coding.system"
 * type ^slicing.rules = #open
 * type contains
     statutJuridiqueINSEE 1..1 and
