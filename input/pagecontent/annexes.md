@@ -1,6 +1,6 @@
-# Annexes
+<!-- # Annexes -->
 
-## Jeu de données pour exemple
+### Jeu de données d'exemples pour la [consultation des données capacitaires](specifications_techniques_1.html)
 
 <div class="figure">
     <img src="image13.png" alt="Jeu de données d'exemples: les relations" width="1238" height="922" title="Jeu de données d'exemples: les relations)">

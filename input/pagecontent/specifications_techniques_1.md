@@ -57,12 +57,44 @@
 
 ###  Construction de la requête de base
 
-|                                  |                                                         |
-|----------------------------------|---------------------------------------------------------|
-| **Interaction FHIR**             | Search                                                  |
-| **Méthode http associée**        | GET                                                     |
-| **Ressource recherchée**         | Location                                                |
-| **Construction requête de base** | `GET[base]/Location{?[parameters]{&_format=[mime-type]}}` |
+<table>
+<tbody>
+<tr>
+<td width="215">
+<p><strong>Interaction FHIR</strong></p>
+</td>
+<td width="465">
+<p>Search<a href="#_ftn1" name="_ftnref1">[1]</a></p>
+</td>
+</tr>
+<tr>
+<td width="215">
+<p><strong>M&eacute;thode http associ&eacute;e</strong></p>
+</td>
+<td width="465">
+<p>GET</p>
+</td>
+</tr>
+<tr>
+<td width="215">
+<p><strong>Ressource recherch&eacute;e</strong></p>
+</td>
+<td width="465">
+<p>Location</p>
+</td>
+</tr>
+<tr>
+<td width="215">
+<p><strong>Construction requ&ecirc;te de base</strong></p>
+</td>
+<td width="465">
+<p><code>GET[base]/Location{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
@@ -112,22 +144,98 @@ Plus de précision sur la spécification FHIR :
     **StructureDefinition-ror-location** applicables à ce cas d'usage
     sont :
 
-|                       |                             |                        |
-|-----------------------|-----------------------------|------------------------|
-| \_lastUpdated         | capacity\-closing\-type     | identifier             |
-| address\-postalcode   | crisis\-type                | limit\-value           |
-| address\-city         | capacity-update ?           | residential\-type      |
-| additional\-bed\-type | equipment\-type             | residential\-number    |
-| capacity\-status      | equipment\-feature          | temporary\-assignement |
-| capacity\-type        | gender\-capacity\-available | temporality\-capacity  |
+<table>
+<tbody>
+<tr>
+<td width="230">
+<p>_lastUpdated</p>
+</td>
+<td width="230">
+<p>capacity-closing-type</p>
+</td>
+<td width="230">
+<p>identifier</p>
+</td>
+</tr>
+<tr>
+<td width="230">
+<p>address-postalcode</p>
+</td>
+<td width="230">
+<p>crisis-type</p>
+</td>
+<td width="230">
+<p>limit-value</p>
+</td>
+</tr>
+<tr>
+<td width="230">
+<p>address-city</p>
+</td>
+<td width="230">
+<p>capacity-update?</p>
+</td>
+<td width="230">
+<p>residential-type</p>
+</td>
+</tr>
+<tr>
+<td width="230">
+<p>additional-bed-type</p>
+</td>
+<td width="230">
+<p>equipment-type</p>
+</td>
+<td width="230">
+<p>residential-number</p>
+</td>
+</tr>
+<tr>
+<td width="230">
+<p>capacity-status</p>
+</td>
+<td width="230">
+<p>equipment-feature</p>
+</td>
+<td width="230">
+<p>temporary-assignement</p>
+</td>
+</tr>
+<tr>
+<td width="230">
+<p>capacity-type</p>
+</td>
+<td width="230">
+<p>gender-capacity-available</p>
+</td>
+<td width="230">
+<p>temporality-capacity</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 -   Les critères de recherche, définis au paragraphe 4.2, de
     **StructureDefinition-ror-healthcareservice** applicables à ce cas
     d'usage sont :
 
-|            |          |
-|------------|----------|
-| Identifier | location |
+<table>
+<tbody>
+<tr>
+<td width="230">
+<p>Identifier</p>
+</td>
+<td width="230">
+<p>location</p>
+</td>
+<td width="230">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 Ces critères de recherche sont applicables à la ressource Location,
 grâce au chainage[^4]. Pour cela utiliser la syntaxe suivante :

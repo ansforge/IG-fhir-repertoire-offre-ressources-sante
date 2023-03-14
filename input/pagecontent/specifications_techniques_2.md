@@ -58,12 +58,44 @@
 
 ### Construction de la requête de base
 
-|                                  |                                                                              |
-|----------------------------------|------------------------------------------------------------------------------|
-| **Interaction FHIR**             | [Search](https://www.hl7.org/fhir/http.html#search) ([voir les psécifications FHIR](https://www.hl7.org/fhir/http.html#general))                                                                      |
-| **Méthode http associée**        | GET                                                                          |
-| **Ressource recherchée**         | HealthcareService                                                            |
-| **Construction requête de base** | `GET[base]/HealthcareService{?[parameters]{&_format=[mime-type]}}` |
+<table>
+<tbody>
+<tr>
+<td width="149">
+<p><strong>Interaction FHIR</strong></p>
+</td>
+<td width="531">
+<p>Search<a href="#_ftn1" name="_ftnref1">[1]</a></p>
+</td>
+</tr>
+<tr>
+<td width="149">
+<p><strong>M&eacute;thode http associ&eacute;e</strong></p>
+</td>
+<td width="531">
+<p>GET</p>
+</td>
+</tr>
+<tr>
+<td width="149">
+<p><strong>Ressource recherch&eacute;e</strong></p>
+</td>
+<td width="531">
+<p>HealthcareService</p>
+</td>
+</tr>
+<tr>
+<td width="149">
+<p><strong>Construction requ&ecirc;te de base</strong></p>
+</td>
+<td width="531">
+<p><code>GET[base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
@@ -113,17 +145,41 @@ Plus de précision sur la spécification FHIR :
     **StructureDefinition-ror-healthcareservice** applicables à ce cas
     d'usage sont :
 
- |              |            |
-|--------------|------------|
-| \_lastUpdated | identifier |
+<table>
+<tbody>
+<tr>
+<td width="230">
+<p>_lastUpdated</p>
+</td>
+<td width="230">
+<p>identifier</p>
+</td>
+<td width="230">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 -   Les critères de recherche, définis au [paragraphe dédié](specifications_techniques.html#structuredefinition-ror-organization), de
     **StructureDefinition-ror-organization** applicables à ce cas
     d'usage sont :
 
-|              |            |
-|--------------|------------|
-| \_lastUpdated | identifier |
+<table>
+<tbody>
+<tr>
+<td width="230">
+<p>_lastUpdated</p>
+</td>
+<td width="230">
+<p>identifier</p>
+</td>
+<td width="230">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 Ces critères de recherche sont applicables à la ressource
 HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/search.html#chaining). Pour cela utiliser la syntaxe
@@ -133,9 +189,15 @@ suivante : `location:[NOM CRITERE]`
     **StructureDefinition-ror-location** applicables à ce cas d'usage
     sont :
 
-|              |
-|--------------|
-| \_lastUpdated |
+<table>
+<tbody>
+<tr>
+<td width="230">
+<p>_lastUpdated</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 Ces critères de recherche sont applicables à la ressource
 HealthcareService, grâce au chainage. Pour cela utiliser la syntaxe
@@ -145,9 +207,15 @@ suivante : `location:[NOM CRITERE]`
     **StructureDefinition-ror-practitioner** applicables à ce cas
     d'usage sont :
 
-|              |
-|--------------|
-| \_lastUpdated |
+<table>
+<tbody>
+<tr>
+<td width="230">
+<p>_lastUpdated</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 Ces critères de recherche sont applicables à la ressource Location,
 grâce au [chainage](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
@@ -157,9 +225,15 @@ grâce au [chainage](https://www.hl7.org/fhir/search.html#has). Pour cela utilis
     **StructureDefinition-ror-practitionerrole** applicables à ce cas
     d'usage sont :
 
-|              |
-|--------------|
-| \_lastUpdated |
+<table>
+<tbody>
+<tr>
+<td width="230">
+<p>_lastUpdated</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 Ces critères de recherche sont applicables à la ressource Location,
 grâce au [chainage](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :

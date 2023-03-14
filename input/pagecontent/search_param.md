@@ -1,6 +1,6 @@
 <!-- # Critères de recherche --> 
 
-## StructureDefinition-ror-location
+### StructureDefinition-ror-location
 <table width="100%">
 <tbody>
 <tr style="width:100.0%;border:none;
@@ -483,7 +483,7 @@
 </tbody>
 </table>
 
-## StructureDefinition-ror-healthcareservice
+### StructureDefinition-ror-healthcareservice
 
 Critères de recherches applicables à la ressource HealthcareService.
 <table width="100%">
@@ -830,7 +830,7 @@ Critères de recherches applicables à la ressource HealthcareService.
 </tbody>
 </table>
 
-## StructureDefinition-ror-organization
+### StructureDefinition-ror-organization
 
 Critères de recherches applicables à la ressource Organization.
 
@@ -1013,7 +1013,7 @@ Critères de recherches applicables à la ressource Organization.
 </tbody>
 </table>
 
-## StructureDefinition-ror-practioner
+### StructureDefinition-ror-practioner
 
 Critères de recherches applicables à la ressource Practioner.
 
@@ -1075,7 +1075,7 @@ Critères de recherches applicables à la ressource Practioner.
 </tbody>
 </table>
 
-## StructureDefinition-ror-practionerrole
+### StructureDefinition-ror-practionerrole
 
 Critères de recherches applicables à la ressource PractionerRole.
 

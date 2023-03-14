@@ -18,7 +18,7 @@ ressources concernent principalement les équipements spécifiques, les
 capacités d'accueil et les compétences que l'on souhaite identifier pour
 cette offre.
 <div class="figure">
-    <img src="image5.png" alt="ROR Modèle d'exposition v3" width="1038" height="722" title="ROR Modèle d'exposition v3">
+    <img src="image5.png" alt="ROR Modèle d'exposition v3" width="1238" height="922" title="ROR Modèle d'exposition v3">
 </div>
 
 **Figure 1- Référentiel ROR**

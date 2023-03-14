@@ -1,4 +1,4 @@
-# Paramètres et modificateurs de requêtes FHIR
+<!-- # Paramètres et modificateurs de requêtes FHIR -->
 
 <table width="100%">
 <tbody>
