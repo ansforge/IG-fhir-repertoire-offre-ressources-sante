@@ -1,1814 +1,1814 @@
 ### Mapping profil [RORHealthcareService](StructureDefinition-ror-healthcareservice.html)
 
-<table width="1421">
+<table>
 <tbody>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p><strong>FHIR path</strong></p>
 </td>
-<td width="165">
+<td>
 <p><strong>FHIR type</strong></p>
 </td>
-<td width="33">
+<td>
 <p><strong>Card</strong></p>
 </td>
-<td width="45">
+<td>
 <p><strong>Status</strong></p>
 </td>
-<td width="83">
+<td>
 <p><strong>Valeur fix&eacute;e</strong></p>
 </td>
-<td width="313">
+<td>
 <p><strong>ValueSet</strong></p>
 </td>
-<td width="68">
+<td>
 <p><strong>Binding</strong></p>
 </td>
-<td width="157">
+<td>
 <p><strong>Classe ROR</strong></p>
 </td>
-<td width="260">
+<td>
 <p><strong>Attribut ROR</strong></p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p><strong>Donn&eacute;es techniques</strong></p>
 </td>
-<td width="165">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="33">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="45">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="83">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="313">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="68">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="157">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="260">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>id</p>
 </td>
-<td width="260">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="165">
+<td>
 <p>Id</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>-</p>
 </td>
-<td width="260">
+<td>
 <p>-</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>meta</p>
 </td>
-<td width="260">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="165">
+<td>
 <p>Meta</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Metadonnee</p>
 </td>
-<td width="260">
+<td>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>tag (slice)</p>
 </td>
-<td width="165">
+<td>
 <p>Coding</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>-</p>
 </td>
-<td width="260">
+<td>
 <p>-</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>&nbsp;&nbsp;&nbsp; codeRegion</p>
 </td>
-<td width="165">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR">JDV_J237-RegionOM-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR">JDV_J237-RegionOM-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>Metadonnee</p>
 </td>
-<td width="260">
+<td>
 <p>codeRegion</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p><strong>References</strong></p>
 </td>
-<td width="165">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="33">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="45">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="83">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="313">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="68">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="157">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="260">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>providedBy</p>
 </td>
-<td width="165">
+<td>
 <p>Reference(Organization)</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>-</p>
 </td>
-<td width="260">
+<td>
 <p>-</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p><strong>Donn&eacute;es fonctionnelles</strong></p>
 </td>
-<td width="165">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="33">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="45">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="83">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="313">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="68">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="157">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="260">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>identifier</p>
 </td>
-<td width="165">
+<td>
 <p>Identifier</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>identifiantOffre</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>name</p>
 </td>
-<td width="260">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="165">
+<td>
 <p>string</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>nomOffre</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>category</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>JDV-J238-TypeOffre-ROR</p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>typeOffre</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>type</p>
 </td>
-<td width="260">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR">JDV_J20-ChampActivite-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR">JDV_J20-ChampActivite-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>champActivite</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>availableTime</p>
 </td>
-<td width="165">
+<td>
 <p>BackboneElement</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>horaire</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>availableStartTime</p>
 </td>
-<td width="165">
+<td>
 <p>Time</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Horaire</p>
 </td>
-<td width="260">
+<td>
 <p>heureDebut</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>availableEndTime</p>
 </td>
-<td width="165">
+<td>
 <p>Time</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Horaire</p>
 </td>
-<td width="260">
+<td>
 <p>heureFin</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>RORAvailableTimeTypeOfTime</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR">JDV_J41-TypeHoraire-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR">JDV_J41-TypeHoraire-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>Horaire</p>
 </td>
-<td width="260">
+<td>
 <p>typePlageHoraire</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>RORAvailableTimeOpeningClosingDate</p>
 </td>
-<td width="165">
+<td>
 <p>Period</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Horaire</p>
 </td>
-<td width="260">
+<td>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>&nbsp;&nbsp; effectiveOpeningClosingDate.start</p>
 </td>
-<td width="165">
+<td>
 <p>DateTime</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Horaire</p>
 </td>
-<td width="260">
+<td>
 <p>debutDateEffective</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>&nbsp;&nbsp; effectiveOpeningClosingDate.end</p>
 </td>
-<td width="165">
+<td>
 <p>DateTime</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Horaire</p>
 </td>
-<td width="260">
+<td>
 <p>finDateEffective</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>RORAvailableTimeNumberDaysOfWeek</p>
 </td>
-<td width="165">
+<td>
 <p>Integer</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Horaire</p>
 </td>
-<td width="260">
+<td>
 <p>jourSemaine</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>telecom</p>
 </td>
-<td width="165">
+<td>
 <p>ContactPoint</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>boiteLettreMSS</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>characteristic (slice)</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>-</p>
 </td>
-<td width="260">
+<td>
 <p>-</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>receptionType</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR/">JDV_J30-TemporaliteAccueil-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR/">JDV_J30-TemporaliteAccueil-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>temporaliteAccueil</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>careMode</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR">JDV_J19-ModePriseEnCharge-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR">JDV_J19-ModePriseEnCharge-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>modePriseEnCharge</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>receptionModality</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J226-ModaliteAccueil-ROR/FHIR/JDV-J226-ModaliteAccueil-ROR">JDV_J226-ModaliteAccueil-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J226-ModaliteAccueil-ROR/FHIR/JDV-J226-ModaliteAccueil-ROR">JDV_J226-ModaliteAccueil-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>modalit&eacute;Accueil</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>managementType</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR">JDV_J26-ModeGestion-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR">JDV_J26-ModeGestion-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>modeGestion</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>specificAct</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR">JDV_J16-ActeSpecifique-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR">JDV_J16-ActeSpecifique-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>acteSpecifique</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>outsideOfficeAct</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR">JDV_J16-ActeSpecifique-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR">JDV_J16-ActeSpecifique-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>acteRealiseHorsCabinet</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>takingCareSpeciality</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J35-SpecialisationDePriseEnCharge-ROR/FHIR/JDV-J35-SpecialisationDePriseEnCharge-ROR">JDV_J35-SpecialisationDePriseEnCharge-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J35-SpecialisationDePriseEnCharge-ROR/FHIR/JDV-J35-SpecialisationDePriseEnCharge-ROR">JDV_J35-SpecialisationDePriseEnCharge-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>specialisationPriseEnCharge</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>annualOpening</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J28-OuvertureAnnuelle-ROR/FHIR/JDV-J28-OuvertureAnnuelle-ROR">JDV_J28-OuvertureAnnuelle-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J28-OuvertureAnnuelle-ROR/FHIR/JDV-J28-OuvertureAnnuelle-ROR">JDV_J28-OuvertureAnnuelle-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>ouvertureAnnuelle</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>ressourceProfession</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J186-ProfessionRessource-ROR/FHIR/JDV-J186-ProfessionRessource-ROR">JDV_J186-ProfessionRessource-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J186-ProfessionRessource-ROR/FHIR/JDV-J186-ProfessionRessource-ROR">JDV_J186-ProfessionRessource-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>professionRessource</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>specificCompetence</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR">JDV_J33-CompetenceSpecifique-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR">JDV_J33-CompetenceSpecifique-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>competenceSpecifique</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>expertiseLevel</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J227-NiveauExpertise-ROR/FHIR/JDV-J227-NiveauExpertise-ROR">JDV_J227-NiveauExpertise-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J227-NiveauExpertise-ROR/FHIR/JDV-J227-NiveauExpertise-ROR">JDV_J227-NiveauExpertise-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>niveauExpertise</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>temporalityStopService</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR">JDV_J201-TypeFermeture-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR">JDV_J201-TypeFermeture-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>typeFermeture</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>specialty (slice)</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Activite Operationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>-</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>operationalActivity</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR">JDV_J17-ActiviteOperationnelle-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR">JDV_J17-ActiviteOperationnelle-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>Activite Operationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>activiteOperationnelle</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>operationalActivityFamily</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR">JDV_J51-FamilleActiviteOperationnelle-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR">JDV_J51-FamilleActiviteOperationnelle-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>Activite Operationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>familleActiviteOperationnelle</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>notAvailable (slice)</p>
 </td>
-<td width="165">
+<td>
 <p>BackboneElement</p>
 </td>
-<td width="33">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>-</p>
 </td>
-<td width="260">
+<td>
 <p>-</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>closingDate</p>
 </td>
-<td width="165">
+<td>
 <p>dateTime</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>dateFermeture</p>
 </td>
 </tr>
 <tr>
-<td width="36">&nbsp;</td>
-<td width="260">
+<td>&nbsp;</td>
+<td>
 <p>previsionalReopeningDate</p>
 </td>
-<td width="165">
+<td>
 <p>dateTime</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>datePrevisionnelleReouverture</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p><strong>Extensions</strong></p>
 </td>
-<td width="165">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="33">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="45">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="83">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="313">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="68">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="157">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="260">
+<td>
 <p><strong>&nbsp;</strong></p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>RORTerritorialDivision</p>
 </td>
-<td width="165">
+<td>
 <p>ComplexeType</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>zoneIntervention</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>type</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR">JDV_J223-TypeDivisionTerritoriale-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR">JDV_J223-TypeDivisionTerritoriale-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>zoneIntervention.type</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>code</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>zoneIntervention.code</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>RORHealthcareServiceSensitiveUnit</p>
 </td>
-<td width="165">
+<td>
 <p>boolean</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>uniteSensible</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>RORHealthcareServiceNoConsentHabilitation</p>
 </td>
-<td width="165">
+<td>
 <p>boolean</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>habilitationAuxSoinsSansConsentement</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>RORHealthcareServicePsychiatricSector</p>
 </td>
-<td width="165">
+<td>
 <p>string</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>secteurPsychiatrique</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>RORCalculatedDistance</p>
 </td>
-<td width="165">
+<td>
 <p>Quantity</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>OffreOp&eacute;rationnelle</p>
 </td>
-<td width="260">
+<td>
 <p>eloignementCalcule</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>RORHealthcareServicePatientType</p>
 </td>
-<td width="165">
+<td>
 <p>ComplexeType</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Patient&egrave;le</p>
 </td>
-<td width="260">
+<td>
 <p>-</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>supportedPatientInfo</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR">JDV_J29-PublicPrisEnCharge-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR">JDV_J29-PublicPrisEnCharge-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>Required</p>
 </td>
-<td width="157">
+<td>
 <p>Patient&egrave;le</p>
 </td>
-<td width="260">
+<td>
 <p>publicPrisEnCharge</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>ageRange.low</p>
 </td>
-<td width="165">
+<td>
 <p>Quantity</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Patient&egrave;le</p>
 </td>
-<td width="260">
+<td>
 <p>ageMin</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>ageRange.high</p>
 </td>
-<td width="165">
+<td>
 <p>Quantity</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Patient&egrave;le</p>
 </td>
-<td width="260">
+<td>
 <p>ageMax</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="296">
+<td>
 <p>RORHealthcareServiceContact</p>
 </td>
-<td width="165">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="33">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Contact</p>
 </td>
-<td width="260">
+<td>
 <p>-</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>name</p>
 </td>
-<td width="165">
+<td>
 <p>string</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Contact</p>
 </td>
-<td width="260">
+<td>
 <p>name</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>purpose</p>
 </td>
-<td width="165">
+<td>
 <p>CodeableConcept</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR">JDV_J221-NatureContact-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR">JDV_J221-NatureContact-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Contact</p>
 </td>
-<td width="260">
+<td>
 <p>natureContact</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>description</p>
 </td>
-<td width="165">
+<td>
 <p>string</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Contact</p>
 </td>
-<td width="260">
+<td>
 <p>description</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>RORContactFunctionContact</p>
 </td>
-<td width="165">
+<td>
 <p>Extension</p>
 </td>
-<td width="33">
+<td>
 <p>0..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J220-FonctionContact-ROR/FHIR/JDV-J220-FonctionContact-ROR">JDV_220-FonctionContact</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J220-FonctionContact-ROR/FHIR/JDV-J220-FonctionContact-ROR">JDV_220-FonctionContact</a></p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Contact</p>
 </td>
-<td width="260">
+<td>
 <p>fonctionContact</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>RORConfidentialityLevel</p>
 </td>
-<td width="165">
+<td>
 <p>Extension</p>
 </td>
-<td width="33">
+<td>
 <p>1..1</p>
 </td>
-<td width="45">
+<td>
 <p>1</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
-<p><u><a href="https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR">JDV_J222-NiveauConfidentialite-ROR</a></u></p>
+<td>
+<p><a href="https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR">JDV_J222-NiveauConfidentialite-ROR</a></p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Contact</p>
 </td>
-<td width="260">
+<td>
 <p>niveauConfidentiality</p>
 </td>
 </tr>
 <tr>
-<td width="36">
+<td>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="260">
+<td>
 <p>telecom</p>
 </td>
-<td width="165">
+<td>
 <p>ContactPoint</p>
 </td>
-<td width="33">
+<td>
 <p>0..*</p>
 </td>
-<td width="45">
+<td>
 <p>0</p>
 </td>
-<td width="83">
+<td>
 <p>-</p>
 </td>
-<td width="313">
+<td>
 <p>-</p>
 </td>
-<td width="68">
+<td>
 <p>&nbsp;</p>
 </td>
-<td width="157">
+<td>
 <p>Contact</p>
 </td>
-<td width="260">
+<td>
 <p>telecommunication</p>
 </td>
 </tr>

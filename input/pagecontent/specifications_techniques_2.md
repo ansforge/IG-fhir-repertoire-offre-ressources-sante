@@ -154,9 +154,6 @@ Plus de précision sur la spécification FHIR :
 <td width="230">
 <p>identifier</p>
 </td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
 </tr>
 </tbody>
 </table>
@@ -173,9 +170,6 @@ Plus de précision sur la spécification FHIR :
 </td>
 <td width="230">
 <p>identifier</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
 </td>
 </tr>
 </tbody>

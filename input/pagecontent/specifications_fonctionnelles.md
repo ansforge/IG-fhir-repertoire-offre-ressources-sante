@@ -38,11 +38,20 @@ Le ROR National répond au consommateur les lieux de réalisation de
 l'offre correspondant aux critères de recherche et les identifiants des
 offres opérationnelles liées.
 
-<div class="figure" align="center">
-    <img src="image6.png" alt="Recherche capacité (modèle expo V3.0)" width="650" height="450" title="Recherche capacité (modèle expo V3.0)">
-</div>
-
-**Figure 2 -- Recherche capacité (modèle expo V3.0)**
+<table align="center">
+    <tr>
+    <td>
+        <div class="figure">
+            <img src="image6.png" alt="Recherche capacité (modèle expo V3.0)" title="Recherche capacité (modèle expo V3.0)">
+        </div>
+    </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 2 - Recherche capacité (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
 
 #### Scénarios
 
@@ -115,19 +124,30 @@ Il y a deux cas possibles :
     recevoir. Le ROR National répond au consommateur les attributs
     demandés des offres opérationnelles correspondant aux critères de
     recherche et les organisations liées à ces offres opérationnelles.
-<div class="figure" align="center">
-    <img src="image7.png" alt="Synchronisation complète offre" width="650" height="450" title="Synchronisation complète offre)">
-</div>
 
-**Figure 3 -- Synchronisation complète offre**
+<table align="center">
+    <tr>
+    <td>
+        <div class="figure">
+            <img src="image7.png" alt="Synchronisation complète offre" title="Synchronisation complète offre)">
+        </div>
+    </td>
+     <td>
+        <div class="figure">
+            <img src="image8.png" alt="Synchronisation partielle offre"  title="Synchronisation partielle offre)">
+        </div>
+    </td>        
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 3 -- Synchronisation complète de l'offre</b>
+        </td>
+        <td align ="center">
+            <b>Figure 4 - Synchronisation partielle de l'offre</b>
+        </td>
+    </tr>
+</table>
 
-<div class="figure" align="center">
-    <img src="image8.png" alt="Synchronisation
-partielle offre" width="650" height="450" title="Synchronisation
-partielle offre)">
-</div>
-
-**Figure 4 - Synchronisation partielle offre**
 
 #### Scénarios
 
@@ -187,10 +207,21 @@ Le ROR National répond au consommateur les offres opérationnelles
 correspondant aux critères de recherche et toutes les classes liées à
 l'offre opérationnelle.
 
-<div class="figure" align="center">
-    <img src="image9.png" alt="Recherche offre" width="650" height="450" title="Recherche offre)">
-</div>
-**Figure 5 -- Recherche offre**
+<table align="center">
+    <tr>
+    <td>
+        <div class="figure">
+            <img src="image9.png" alt="Recherche offre" title="Recherche offre">
+        </div>
+    </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 5 - Recherche offre</b>
+        </td>
+    </tr>
+</table>
+
 
 #### Scénarios
 
@@ -266,11 +297,20 @@ Le ROR National répond au consommateur les offres opérationnelles
 correspondant aux critères de recherche et les lieux de réalisation de
 l'offre liés.
 
-<div class="figure" align="center">
-    <img src="image10.png" alt="Recherche offre avec données capacitaires" width="650" height="450" title="Recherche offre avec données capacitaires)">
-    </div>
-
-**Figure 6 -- Recherche offre avec données capacitaires**
+<table align="center">
+    <tr>
+    <td>
+        <div class="figure">
+            <img src="image10.png" alt="Recherche offre avec données capacitaires" title="Recherche offre avec données capacitaires">
+        </div>
+    </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Figure 6 - Recherche offre avec données capacitaires</b>
+        </td>
+    </tr>
+</table>
 
 #### Scénarios
 

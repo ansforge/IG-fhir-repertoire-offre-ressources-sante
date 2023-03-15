@@ -230,9 +230,6 @@ Plus de précision sur la spécification FHIR :
 <td width="230">
 <p>location</p>
 </td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
 </tr>
 </tbody>
 </table>

@@ -17,11 +17,20 @@ réalisation de ces activités opérationnelles sur un lieu donné. Ces
 ressources concernent principalement les équipements spécifiques, les
 capacités d'accueil et les compétences que l'on souhaite identifier pour
 cette offre.
-<div class="figure">
-    <img src="image5.png" alt="ROR Modèle d'exposition v3" width="1238" height="922" title="ROR Modèle d'exposition v3">
-</div>
-
-**Figure 1- Référentiel ROR**
+<table align="center">
+    <tr>
+    <td>
+        <div class="figure">
+            <img src="image5.png" alt="ROR Modèle d'exposition v3" title="ROR Modèle d'exposition v3">
+        </div>
+    </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Figure 1 - Référentiel ROR</b>
+        </td>
+    </tr>
+</table>
 
 Le ROR, en tant que référentiel de description de l'offre de santé (au
 sens gisement de données), a une couverture nationale. Il doit permettre
