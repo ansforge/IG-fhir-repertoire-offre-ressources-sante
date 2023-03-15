@@ -56,9 +56,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numADELI] ^short = "TODO"
 * identifier[numADELI].type 1..1
 * identifier[numADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
-* identifier[identifierEG] ^short = "TODO"
-* identifier[identifierEG].type 1..1
-* identifier[identifierEG].type.coding.code = $TRE-G07-TypeIdentifiantStructure#41
 
 * type 3..* 
 * type ^slicing.discriminator.type = #value
