@@ -312,13 +312,5 @@
   recherches comparatives<o:p></o:p></span></p>
   </td>
  </tr>
- <![if !supportMisalignedColumns]>
- <tr height=0>
-  <td width=81 style='border:none'></td>
-  <td width=36 style='border:none'></td>
-  <td width=232 style='border:none'></td>
-  <td width=112 style='border:none'></td>
- </tr>
- <![endif]>
 </table>
 
