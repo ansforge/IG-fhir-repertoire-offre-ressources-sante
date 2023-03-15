@@ -282,7 +282,9 @@ une activité opérationnelle = XXX
 
 **Requête :**
 
-`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -300,7 +302,9 @@ offres ayant à une activité opérationnelle = XXX ou YYY (TRE_R211-ActiviteOpe
 
 **Requête :**
 
-`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX,YYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX,YYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -319,7 +323,9 @@ offres ayant un type d'offre = XXX (TRE_R244-CategorieOrganisation) **ET** une m
 
 **Requête :**
 
-`get[BASE]/HealthcareService?service-category= https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX& characteristic= https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|YYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?service-category= https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX& characteristic= https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|YYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 ```sh
@@ -338,7 +344,9 @@ offres ayant à un type d'offre = XXX (TRE_R244-CategorieOrganisation) **OU** un
 
 **Requête :**
 
-`get[BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX) or (speciality eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|YYY))&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX) or (speciality eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|YYY))&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -355,7 +363,9 @@ get[BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gou
 
 **Requête :**
 
-`get[BASE]/HealthcareService?_filter=((providedBy:type eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY))&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?_filter=((providedBy:type eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY))&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -374,7 +384,9 @@ offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnell
 
 **Requête :**
 
-`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location:near=latitude|longitude |YY|unite &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location:near=latitude|longitude |YY|unite &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -392,7 +404,9 @@ get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 
 **Requête :**
 
-`get[BASE]/HealthcareService?location:intervention-zone=XXX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?location:intervention-zone=XXX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -409,7 +423,9 @@ get[BASE]/HealthcareService?location:intervention-zone=XXX #critère de recherch
 
 **Requête :**
 
-`get[BASE]/HealthcareService?location:address-postalcode=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?location:address-postalcode=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -427,7 +443,9 @@ get[BASE]/HealthcareService?location:address-postalcode=XX # critère de recherc
 
 **Requête :**
 
-`get[BASE]/HealthcareService?location:address=postalcode=XXXX,YYYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?location:address=postalcode=XXXX,YYYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -444,7 +462,9 @@ get[BASE]/HealthcareService?location:address-postalcode=XXXX,YYYY#critère de re
 
 **Requête :**
 
-`get[BASE]/HealthcareService?location:commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|XX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?location:commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|XX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
@@ -461,7 +481,9 @@ get[BASE]/HealthcareService?location:commune-cog=https://mos.esante.gouv.fr/NOS/
 
 **Requête :**
 
-`get[BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|XX&characteristic= https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite|YY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+get[BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|XX&characteristic= https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite|YY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 
