@@ -1,132 +1,324 @@
 <!-- # Paramètres et modificateurs de requêtes FHIR -->
-
-<table width="100%">
-<tbody>
-<tr>
-<td width="13%">
-<p>&nbsp;</p>
-</td>
-<td colspan="2" width="38%">
-<p><strong>Lien vers sp&eacute;cification</strong></p>
-</td>
-<td width="47%">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td colspan="4" width="100%">
-<p><strong>Param&egrave;tres et modificateurs : inclusion</strong></p>
-</td>
-</tr>
-<tr>
-<td width="13%">
-<p><strong>_revinclude</strong></p>
-</td>
-<td colspan="2" width="38%">
-<p><a href="https://www.hl7.org/fhir/search.html#revinclude">https://www.hl7.org/fhir/search.html#revinclude</a></p>
-</td>
-<td width="47%">
-<p>Indique que les ressources qui font r&eacute;f&eacute;rence &agrave; HealthcareService doivent &ecirc;tre incluses dans la r&eacute;ponse</p>
-</td>
-</tr>
-<tr>
-<td width="13%">
-<p><strong>_include</strong></p>
-</td>
-<td colspan="2" width="38%">
-<p><a href="https://www.hl7.org/fhir/search.html#include">https://www.hl7.org/fhir/search.html#include</a></p>
-</td>
-<td width="47%">
-<p>Indique que les ressources r&eacute;f&eacute;renc&eacute;es par HealthcareService doivent &ecirc;tre incluses dans la r&eacute;ponse</p>
-</td>
-</tr>
-<tr>
-<td width="13%">
-<p><strong>:iterate</strong></p>
-</td>
-<td colspan="2" width="38%">
-<p>&nbsp;</p>
-</td>
-<td width="47%">
-<p>Le processus d&rsquo;inclusion peut &ecirc;tre it&eacute;ratif si le modificateur :iterate est ajout&eacute; dans la requ&ecirc;te.</p>
-</td>
-</tr>
-<tr>
-<td colspan="3" width="52%">
-<p><strong>Param&egrave;tres et modificateurs : chainage invers&eacute; </strong></p>
-</td>
-<td width="47%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="13%">
-<p><strong>_has</strong></p>
-</td>
-<td colspan="2" width="38%">
-<p><a href="http://hl7.org/fhir/search.html#has">http://hl7.org/fhir/search.html#has</a></p>
-</td>
-<td width="47%">
-<p>Permet d&rsquo;utiliser les param&egrave;tres de recherche des ressources faisant r&eacute;f&eacute;rence &agrave; la ressource Location</p>
-</td>
-</tr>
-<tr>
-<td colspan="4" width="100%">
-<p><strong>Param&egrave;tres et modificateurs&nbsp;: r&eacute;ponses</strong></p>
-</td>
-</tr>
-<tr>
-<td width="13%">
-<p><strong>_count</strong></p>
-</td>
-<td colspan="2" width="38%">
-<p><a href="https://www.hl7.org/fhir/search.html#count">https://www.hl7.org/fhir/search.html#count</a></p>
-</td>
-<td width="47%">
-<p>Indique le nombre souhait&eacute; par le consommateur de r&eacute;sultat par page.</p>
-<p><strong><u>RG_RECH_52&nbsp;:</u></strong> Par d&eacute;faut la recherche retourne 200 r&eacute;sultats maximum par page.</p>
-</td>
-</tr>
-<tr>
-<td width="13%">
-<p><strong>_sort</strong></p>
-</td>
-<td colspan="2" width="38%">
-<p><a href="http://hl7.org/fhir/search.html#_sort">http://hl7.org/fhir/search.html#_sort</a></p>
-</td>
-<td width="47%">
-<p>Indique dans quel ordre renvoyer les r&eacute;sultats</p>
-</td>
-</tr>
-<tr>
-<td width="13%">
-<p><strong>_elements</strong></p>
-</td>
-<td colspan="2" width="38%">
-<p><a href="https://www.hl7.org/fhir/search.html#elements">https://www.hl7.org/fhir/search.html#elements</a></p>
-</td>
-<td width="47%">
-<p>Permet au consommateur de demander les &eacute;l&eacute;ments &agrave; retourner de la ressource recherch&eacute;e.</p>
-</td>
-</tr>
-<tr>
-<td colspan="3" width="52%">
-<p><strong>P</strong><strong>r&eacute;fixe de comparaison</strong></p>
-</td>
-<td width="47%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td colspan="2" width="19%">
-<p><strong>gt, lt, ge, le, sa &amp; eb</strong></p>
-</td>
-<td width="33%">
-<p><a href="https://www.hl7.org/fhir/search.html#date">https://www.hl7.org/fhir/search.html#date</a></p>
-</td>
-<td width="47%">
-<p>Permet d&rsquo;effectuer des recherches comparatives</p>
-</td>
-</tr>
-</tbody>
+<table class=MsoTable15List4Accent5 border=1 cellspacing=0 cellpadding=0
+ width="100%" style='width:100.0%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes'>
+  <td width="13%" style='width:13.86%;border:solid #4472C4 1.0pt;border-right:
+  none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:solid #4472C4 .5pt;
+  mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:5'><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:white'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:1'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:white'>Lien
+  vers spécification<o:p></o:p></span></b></p>
+  </td>
+  <td width="47%" style='width:47.22%;border:solid #4472C4 1.0pt;border-left:
+  none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:1'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:white'>Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width="100%" colspan=4 style='width:100.0%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:68'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Paramètres et modificateurs : inclusion</span></b><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
+  border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>_<span
+  class=SpellE>revinclude</span><o:p></o:p></span></b></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><a
+  href="https://www.hl7.org/fhir/search.html#revinclude"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#revinclude</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Indique que les ressources
+  qui font référence à <span class=SpellE>HealthcareService</span> doivent être
+  incluses dans la réponse<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
+  border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:68'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>_<span
+  class=SpellE>include</span><o:p></o:p></span></b></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><a
+  href="https://www.hl7.org/fhir/search.html#include"><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#include</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> <o:p></o:p></span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Indique
+  que les ressources référencées par <span class=SpellE>HealthcareService</span>
+  doivent être incluses dans la réponse<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
+  border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><span
+  class=GramE><b><span style='font-size:9.0pt;mso-bidi-font-size:10.0pt;
+  line-height:115%'>:<span class=SpellE>iterate</span></span></b></span><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Le processus d’inclusion
+  peut être itératif si le modificateur<span class=GramE> :<span class=SpellE>iterate</span></span>
+  est ajouté dans la requête.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="52%" colspan=3 style='width:52.78%;border-top:none;border-left:
+  solid #8EAADB 1.0pt;border-bottom:solid #8EAADB 1.0pt;border-right:none;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-bottom-alt:solid #8EAADB .5pt;
+  background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:68'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Paramètres et modificateurs : chainage inversé </span><o:p></o:p></b></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
+  border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>_has<o:p></o:p></span></b></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><a
+  href="http://hl7.org/fhir/search.html#has"><span style='font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;line-height:115%'>http://hl7.org/fhir/search.html#has</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> </span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Permet d’utiliser les
+  paramètres de recherche des ressources faisant référence à la ressource
+  Location<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="100%" colspan=4 style='width:100.0%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:68'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Paramètres et modificateurs&nbsp;: réponses</span></b><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
+  border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>_count<o:p></o:p></span></b></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/search.html#count"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#count</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Indique le nombre souhaité
+  par le consommateur de résultat par page. <o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><b><u><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:#4472C4;
+  mso-themecolor:accent5'>RG_RECH_52&nbsp;:</span></u></b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:#4472C4;
+  mso-themecolor:accent5'> Par défaut la recherche retourne 200 résultats
+  maximum par page. </span><span style='font-size:9.0pt;mso-bidi-font-size:
+  10.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
+  border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:68'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>_sort<o:p></o:p></span></b></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:64'><a
+  href="http://hl7.org/fhir/search.html#_sort"><span style='font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;line-height:115%'>http://hl7.org/fhir/search.html#_sort</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> </span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Indique
+  dans quel ordre renvoyer les résultats<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
+  border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>_<span
+  class=SpellE>elements</span><o:p></o:p></span></b></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/search.html#elements"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#elements</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> <o:p></o:p></span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Permet au consommateur de
+  demander les éléments à retourner de la ressource recherchée.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width="52%" colspan=3 style='width:52.78%;border-top:none;border-left:
+  solid #8EAADB 1.0pt;border-bottom:solid #8EAADB 1.0pt;border-right:none;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-bottom-alt:solid #8EAADB .5pt;
+  background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:68'><b><span style='font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>P</span></b><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:11.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>réfixe de comparaison</span><o:p></o:p></b></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td width="19%" colspan=2 style='width:19.22%;border-top:none;border-left:
+  solid #8EAADB 1.0pt;border-bottom:solid #8EAADB 1.0pt;border-right:none;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-bottom-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><span
+  class=GramE><b><span style='font-size:9.0pt;mso-bidi-font-size:10.0pt;
+  line-height:115%'>gt</span></b></span><b><span style='font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;line-height:115%'>, <span class=SpellE>lt</span>, <span
+  class=SpellE>ge</span>, le, sa &amp; <span class=SpellE>eb</span><o:p></o:p></span></b></p>
+  </td>
+  <td width="33%" style='width:33.56%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/search.html#date"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#date</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> </span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Permet d’effectuer des
+  recherches comparatives<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <![if !supportMisalignedColumns]>
+ <tr height=0>
+  <td width=81 style='border:none'></td>
+  <td width=36 style='border:none'></td>
+  <td width=232 style='border:none'></td>
+  <td width=112 style='border:none'></td>
+ </tr>
+ <![endif]>
 </table>
+

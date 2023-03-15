@@ -1,1138 +1,3068 @@
 <!-- # Critères de recherche --> 
 
 ### StructureDefinition-ror-location
-<table width="100%">
-<tbody>
-<tr style="width:100.0%;border:none;
-   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
-   exactly">
-<td width="28%">
-<p><strong>Attribut ME 3.0</strong></p>
-</td>
-<td width="14%">
-<p><strong>Search parameters </strong></p>
-</td>
-<td width="6%">
-<p><strong>Natif FHIR</strong></p>
-</td>
-<td width="6%">
-<p><strong>Type FHIR</strong></p>
-</td>
-<td width="43%">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p><strong>-</strong></p>
-</td>
-<td width="14%">
-<p>near</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>special</p>
-</td>
-<td width="43%">
-<p>Recherche positionnelle (coordonn&eacute;es g&eacute;ographique)&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p><strong>-</strong></p>
-</td>
-<td width="14%">
-<p>near-insee-code</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>special</p>
-</td>
-<td width="43%">
-<p>Recherche positionnelle (code INSEE commune)</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p><strong>-</strong></p>
-</td>
-<td width="14%">
-<p>status</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Statut de la ressource</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>Metadonnee/dateMiseJour</p>
-</td>
-<td width="14%">
-<p>_lastUpdated</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>date</p>
-</td>
-<td width="43%">
-<p>Date de derni&egrave;re mise &agrave; jour.</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>Metadonnee/regionSource</p>
-</td>
-<td width="14%">
-<p>_tag</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Code de la r&eacute;gion de la source de la donn&eacute;e.</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>idExterneSynchro</p>
-</td>
-<td width="14%">
-<p>identifier</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>L&rsquo;identifiant externe de synchronisation est l&rsquo;identifiant d&eacute;fini par le porteur d&rsquo;offre pour la zone d&rsquo;h&eacute;bergement des lits.</p>
-<p>Location.identifier.type = 26 | JDV_J236</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>identifiant</p>
-</td>
-<td width="14%">
-<p>identifier</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Identifiant fonctionnel du lieu.</p>
-<p>Location.identifier.type = 25 | JDV_J236</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>fonctionLieu</p>
-</td>
-<td width="14%">
-<p>type</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>La fonction correspond &agrave; la destination d'usage du lieu.</p>
-<p>JDV_J198-FonctionLieu-ROR issu de la TRE_R343-FonctionLieu</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>Adresse/codePostal</p>
-</td>
-<td width="14%">
-<p>address-postalcode</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>string</p>
-</td>
-<td width="43%">
-<p>Code Postal ou code postal sp&eacute;cifique CEDEX</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>Adresse/localite</p>
-</td>
-<td width="14%">
-<p>address-city</p>
-</td>
-<td width="6%">
-<p>Oui</p>
-</td>
-<td width="6%">
-<p>string</p>
-</td>
-<td width="43%">
-<p>Localit&eacute; ou Libell&eacute; du bureau distributeur CEDEX</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>Lieu/communeCOG</p>
-</td>
-<td width="14%">
-<p>commune-cog</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Code officiel g&eacute;ographique (COG) de la commune dans laquelle le lieu est situ&eacute;.</p>
-<p>JDV_J230-CommuneOM-ROR issu de la TRE_R13-CommuneOM</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/statutCapacite</p>
-</td>
-<td width="14%">
-<p>capacity-status</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Permet de pr&eacute;ciser le statut des lits d&eacute;crits.</p>
-<p>JDV_J188-TypeStatutCapacite-ROR issu de la TRE_R330-StatutCapacite</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/nombreCapacite</p>
-</td>
-<td width="14%">
-<p>nb-capacity</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>number</p>
-</td>
-<td width="43%">
-<p>Quantit&eacute; de lits ou places de la capacit&eacute; exprim&eacute;e.</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/natureCapacite</p>
-</td>
-<td width="14%">
-<p>capacity-type</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Indique si la capacit&eacute; est exprim&eacute;e en lits ou en places.</p>
-<p>JDV_J187-NatureCapacite-ROR issu de la TRE_R329-NatureCapacite</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/temporaliteCapacite</p>
-</td>
-<td width="14%">
-<p>temporality-capacity</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Indique le moment o&ugrave; cette capacit&eacute; sera effective. Il est ainsi possible de d&eacute;crire la situation imm&eacute;diate, ou de fournir des informations prospectives de capacit&eacute;s, prenant notamment en compte les entr&eacute;es et sorties d&eacute;j&agrave; identifi&eacute;s de patients.</p>
-<p>JDV_J189-TemporaliteCapacite-ROR issu de la TRE_R331-Temporalite</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/genreCapaciteDispo</p>
-</td>
-<td width="14%">
-<p>gender-capacity-available</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Genre des patients qui peuvent &ecirc;tre install&eacute;s dans des lits disponibles.</p>
-<p>JDV_J190-GenreCapacite-ROR issu de la TRE_R332-GenreCapacite</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/typeFermetureCapacite</p>
-</td>
-<td width="14%">
-<p>capacity-closing-type</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Indique le statut de lits ferm&eacute;s, permettant d&rsquo;identifier le nombre de lits ferm&eacute;s qui peuvent &ecirc;tre r&eacute;activ&eacute;s en cas de besoin et le nombre de ceux qui ne peuvent pas l&rsquo;&ecirc;tre.</p>
-<p>JDV_J191-TypeFermetureCapacite-ROR issu de la TRE_R333-TypeFermetureCapacite</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/typeLitSupplementaire</p>
-</td>
-<td width="14%">
-<p>additional-bed-type</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Indique le statut de lits suppl&eacute;mentaires, pour identifier le nombre de lits suppl&eacute;mentaires d&eacute;j&agrave; mobilis&eacute;s et, par typologie de mobilisation possible, le nombre de lits qui ne le sont pas encore.</p>
-<p>JDV_J192-TypeLitSupplementaire-ROR issu de la TRE_R334-TypeLitSupplementaire</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/typeCrise</p>
-</td>
-<td width="14%">
-<p>crisis-type</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Indique le type de crise qui permet de mobiliser le nombre de lits suppl&eacute;mentaires d&eacute;crits.</p>
-<p>JDV_J194-TypeCrise-ROR issu de la TRE_R336-TypeCrise</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteAccueilOperationnelle/dateMAJCapacite</p>
-</td>
-<td width="14%">
-<p>capacity-update-date</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>date</p>
-</td>
-<td width="43%">
-<p>Date &agrave; laquelle la capacit&eacute; d&rsquo;accueil a &eacute;t&eacute; mise &agrave; jour dans la source.</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>EquipementSpecifique/typeEquipement</p>
-</td>
-<td width="14%">
-<p>equipment-type</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Les &eacute;quipements sp&eacute;cifiques d&eacute;crits sont des ressources propres de la structure ou mises &agrave; disposition dans le cadre d&rsquo;une convention &agrave; la condition qu'elles soient utilis&eacute;es sur site.</p>
-<p>JDV_J18-EquipementSpecifique-ROR issu de la TRE_R212-Equipement</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>LimiteCaracteristiqueEquipement<strong>/</strong>typeCaracteristique</p>
-</td>
-<td width="14%">
-<p>equipment-feature</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Indique la caract&eacute;ristique de l'&eacute;quipement pour laquelle une valeur limite est pr&eacute;cis&eacute;e.</p>
-<p>JDV_J228-TypeCaracteristiqueEquipement-ROR</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>LimiteCaracteristiqueEquipement/valeurLimite</p>
-</td>
-<td width="14%">
-<p>limit-value</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>quantity</p>
-</td>
-<td width="43%">
-<p>Correspond &agrave; la valeur extr&ecirc;me associ&eacute;e &agrave; une caract&eacute;ristique de l'&eacute;quipement</p>
-<p>TRE_R247-UcumUniteMesure</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteHabitation/typeHabitation</p>
-</td>
-<td width="14%">
-<p>residential-type</p>
-</td>
-<td width="6%">
-<p>&nbsp;Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>Le type d&rsquo;habitation renseigne sur la taille et le nombre de pi&egrave;ces d&rsquo;un logement.</p>
-<p>JDV_J32-TypeHabitation-ROR issu de la TRE_R242-TypeHabitation</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapaciteHabitation/nbHabitation</p>
-</td>
-<td width="14%">
-<p>residential-number</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>number</p>
-</td>
-<td width="43%">
-<p>Nombre d'habitations du m&ecirc;me type.</p>
-</td>
-</tr>
-<tr>
-<td width="28%">
-<p>CapacitePriseCharge/affectationTemporaire</p>
-</td>
-<td width="14%">
-<p>temporary-assignement</p>
-</td>
-<td width="6%">
-<p>Non</p>
-</td>
-<td width="6%">
-<p>token</p>
-</td>
-<td width="43%">
-<p>L&rsquo;affectation temporaire permet de r&eacute;server tout ou partie des lits d&rsquo;une zone d&rsquo;h&eacute;bergement pour des patients selon qu&rsquo;ils soient &ndash;ou non- concern&eacute;s par une pathologie (Covid+, Covid-, &hellip;) ou un &eacute;v&egrave;nement (catastrophe naturelle, attentat, &hellip;).</p>
-<p>JDV_J195-AffectationTemporaire-ROR issu de la TRE_R337-AffectationTemporaire</p>
-</td>
-</tr>
-</tbody>
+
+<table class=MsoTable15Grid4Accent5 border=1 cellspacing=0 cellpadding=0
+ width="100%" style='width:100.0%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #4472C4 1.0pt;
+  border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
+  solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><a
+  name="_Hlk126842158"><b><span style='font-size:8.0pt;line-height:115%;
+  color:white'>Attribut ME 3.0<o:p></o:p></span></b></a></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842158'></span>
+  <td width="14%" valign=top style='width:14.68%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126842158'><span class=SpellE><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Search</span></b></span></span><span
+  style='mso-bookmark:_Hlk126842158'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'> <span class=SpellE>parameters</span> <o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842158'></span>
+  <td width="6%" valign=top style='width:6.38%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126842158'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Natif FHIR<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842158'></span>
+  <td width="6%" valign=top style='width:6.64%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126842158'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Type FHIR<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842158'></span>
+  <td width="43%" valign=top style='width:43.32%;border:solid #4472C4 1.0pt;
+  border-left:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:
+  solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126842158'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Description<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842158'></span>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:64'><b><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-</span></b><b><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>near</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>special</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Recherche
+  positionnelle (coordonnées géographique)<span style='mso-spacerun:yes'> 
+  </span></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:8.0pt;line-height:115%'>-<o:p></o:p></span></b></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>near</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'>-<span class=SpellE>insee</span>-code<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>special</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Recherche positionnelle (code INSEE commune)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:64'><b><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-</span></b><b><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>status</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Statut
+  de la ressource</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>Metadonnee</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>dateMiseJour</span><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>_<span class=SpellE>lastUpdated</span><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%'>date</span></span><span
+  style='font-size:8.0pt;line-height:115%'> <o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Date de dernière mise à jour.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Metadonnee</span></span><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>regionSource</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>_tag</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Code
+  de la région de la source de la donnée. </span><span style='font-size:8.0pt;
+  line-height:115%;background:yellow;mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;mso-bidi-font-weight:
+  bold'>idExterneSynchro</span></span></span><span style='font-size:8.0pt;
+  line-height:115%;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%'>identifier</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>L’identifiant externe de synchronisation est
+  l’identifiant défini par le porteur d’offre pour la zone d’hébergement des
+  lits.<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>Location.identifier.type</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'> = 26 | JDV_J236<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext;mso-bidi-font-weight:bold'>identifiant</span></span><span
+  style='font-size:8.0pt;line-height:115%;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>identifier</span></span><span style='font-size:
+  8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identifiant
+  fonctionnel du lieu.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>Location.identifier.type</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>
+  = 25 | JDV_J236</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>fonctionLieu</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%'>type</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>La fonction correspond à la destination d'usage du
+  lieu.<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J198-FonctionLieu-ROR issu de la
+  TRE_R343-FonctionLieu<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Adresse/<span
+  class=SpellE>codePostal</span></span><span style='font-size:8.0pt;line-height:
+  115%;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>address</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-postalcode</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>string</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Code
+  Postal ou code postal spécifique CEDEX</span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Adresse/<span class=SpellE>localite</span><span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>address</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'>-city<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%'>string</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Localité ou Libellé du bureau distributeur CEDEX<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Lieu/<span
+  class=SpellE>communeCOG</span></span><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>commune</span></span><span style='font-size:8.0pt;
+  line-height:115%;color:black;mso-color-alt:windowtext'>-<span class=SpellE>cog</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:64'><span style='font-size:8.0pt;
+  line-height:115%;color:black;mso-color-alt:windowtext'>Code officiel
+  géographique (COG) de la commune dans laquelle le lieu est situé.</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-yfti-cnfc:64'><span style='font-size:8.0pt;
+  line-height:115%;color:black;mso-color-alt:windowtext'>JDV_J230-CommuneOM-ROR
+  issu de la TRE_R13-CommuneOM</span><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>statutCapacite</span><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>capacity</span></span><span
+  style='font-size:8.0pt;line-height:115%'>-status</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Permet de préciser le statut des lits décrits.<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J188-TypeStatutCapacite-ROR issu de la TRE_R330-StatutCapacite<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>nombreCapacite</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>nb</span></span><span style='font-size:8.0pt;
+  line-height:115%;color:black;mso-color-alt:windowtext'>-<span class=SpellE>capacity</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>number</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Quantité
+  de lits ou places de la capacité exprimée.</span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>natureCapacite</span><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>capacity</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'>-type<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Indique si la capacité est exprimée en lits ou en
+  places.<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J187-NatureCapacite-ROR issu de la
+  TRE_R329-NatureCapacite<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>temporaliteCapacite</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>temporality</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-capacity</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Indique
+  le moment où cette capacité sera effective. Il est ainsi possible de décrire
+  la situation immédiate, ou de fournir des informations prospectives de
+  capacités, prenant notamment en compte les entrées et sorties déjà identifiés
+  de patients.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>JDV_J189-TemporaliteCapacite-ROR
+  issu de la TRE_R331-Temporalite</span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>genreCapaciteDispo</span><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>gender</span></span><span
+  style='font-size:8.0pt;line-height:115%'>-capacity-available</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Genre des patients qui peuvent être installés dans
+  des lits disponibles. <o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J190-GenreCapacite-ROR issu de la
+  TRE_R332-GenreCapacite<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>typeFermetureCapacite</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>capacity</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-<span
+  class=SpellE>closing</span>-type</span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Indique
+  le statut de lits fermés, permettant d’identifier le nombre de lits fermés
+  qui peuvent être réactivés en cas de besoin et le nombre de ceux qui ne
+  peuvent pas l’être.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>JDV_J191-TypeFermetureCapacite-ROR
+  issu de la TRE_R333-TypeFermetureCapacite</span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>typeLitSupplementaire</span><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>additional</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'>-<span class=SpellE>bed</span>-type<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Indique le statut de lits supplémentaires, pour
+  identifier le nombre de lits supplémentaires déjà mobilisés et, par typologie
+  de mobilisation possible, le nombre de lits qui ne le sont pas encore.<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J192-TypeLitSupplementaire-ROR issu de la
+  TRE_R334-TypeLitSupplementaire<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>typeCrise</span></span><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>crisis</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-type</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Indique
+  le type de crise qui permet de mobiliser le nombre de lits supplémentaires
+  décrits.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>JDV_J194-TypeCrise-ROR
+  issu de la TRE_R336-TypeCrise</span><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>CapaciteAccueilOperationnelle</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>dateMAJCapacite</span><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>capacity</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'>-update-date<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%'>date</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Date à laquelle la capacité d’accueil a été mise à
+  jour dans la source.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>EquipementSpecifique</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE><span style='mso-bidi-font-weight:bold'>typeEquipement</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext;mso-bidi-font-weight:bold'>equipment</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext;
+  mso-bidi-font-weight:bold'>-type</span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext;
+  mso-bidi-font-weight:bold'>Non</span><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext;mso-bidi-font-weight:bold'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext;
+  mso-bidi-font-weight:bold'>Les équipements spécifiques décrits sont des
+  ressources propres de la structure ou mises à disposition dans le cadre d’une
+  convention à la condition qu'elles soient utilisées sur site. </span><span
+  style='font-size:8.0pt;line-height:115%;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext;
+  mso-bidi-font-weight:bold'>JDV_J18-EquipementSpecifique-ROR issu de la
+  TRE_R212-Equipement</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>LimiteCaracteristiqueEquipement</span></span><b><span
+  style='font-size:8.0pt;line-height:115%'>/</span></b><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%;mso-bidi-font-weight:bold'>typeCaracteristique</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>equipment</span></span><span
+  style='font-size:8.0pt;line-height:115%'>-feature</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Indique la caractéristique de l'équipement pour
+  laquelle une valeur limite est précisée.<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J228-TypeCaracteristiqueEquipement-ROR<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>LimiteCaracteristiqueEquipement</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE><span style='mso-bidi-font-weight:bold'>valeurLimite</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>limit</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-value</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>quantity</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Correspond
+  à la valeur extrême associée à une caractéristique de l'équipement</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>TRE_R247-UcumUniteMesure</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>CapaciteHabitation</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>typeHabitation</span><span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>residential</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'>-type<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'><span style='mso-spacerun:yes'> </span>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Le type d’habitation renseigne sur la taille et le
+  nombre de pièces d’un logement.<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J32-TypeHabitation-ROR issu de la
+  TRE_R242-TypeHabitation<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>CapaciteHabitation</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>nbHabitation</span></span><span style='font-size:8.0pt;
+  line-height:115%;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>residential</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-number</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>number</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Nombre
+  d'habitations du même type.</span><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;mso-yfti-lastrow:yes'>
+  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>CapacitePriseCharge</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>affectationTemporaire</span><span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>temporary</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'>-assignement<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>L’affectation temporaire permet de réserver tout ou
+  partie des lits d’une zone d’hébergement pour des patients selon qu’ils
+  soient –ou non- concernés par une pathologie (Covid+, Covid-, …) ou un
+  évènement (catastrophe naturelle, attentat, …).<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J195-AffectationTemporaire-ROR issu de la TRE_R337-AffectationTemporaire
+  <o:p></o:p></span></p>
+  </td>
+ </tr>
 </table>
 
 ### StructureDefinition-ror-healthcareservice
 
 Critères de recherches applicables à la ressource HealthcareService.
-<table width="100%">
-<tbody>
-<tr style="width:100.0%;border:none;
-   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
-   exactly">
-<td width="22%">
-<p><strong>Attribut ME 3.0</strong></p>
-</td>
-<td width="16%">
-<p><strong>Search parameters </strong></p>
-</td>
-<td width="7%">
-<p><strong>Natif FHIR</strong></p>
-</td>
-<td width="9%">
-<p><strong>Type FHIR</strong></p>
-</td>
-<td width="44%">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p><strong>-</strong></p>
-</td>
-<td width="16%">
-<p>location</p>
-</td>
-<td width="7%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>reference</p>
-</td>
-<td width="44%">
-<p>R&eacute;f&eacute;rence &agrave; la ressource Location</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>Metadonnee/dateMiseJour</p>
-</td>
-<td width="16%">
-<p>_lastUpdated</p>
-</td>
-<td width="7%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>date</p>
-</td>
-<td width="44%">
-<p>Date de derni&egrave;re mise &agrave; jour.</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>Metadonnee/regionSource</p>
-</td>
-<td width="16%">
-<p>_tag</p>
-</td>
-<td width="7%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="44%">
-<p>Code r&eacute;gion de la source de la donn&eacute;e.</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>identifiantOffre</p>
-</td>
-<td width="16%">
-<p>identifier</p>
-</td>
-<td width="7%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="44%">
-<p>Identifiant de l&rsquo;offre</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>nomOffre (remplace nomOI)</p>
-</td>
-<td width="16%">
-<p>name</p>
-</td>
-<td width="7%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>string</p>
-</td>
-<td width="44%">
-<p>D&eacute;nomination sous laquelle l'offre est identifi&eacute;e par le porteur d'offre et r&eacute;sultant de l'application de r&egrave;gles de bonne pratique pour &ecirc;tre affichable aupr&egrave;s des professionnels comme du grand public.</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>typeOffre (remplace categorieOrganisation)</p>
-</td>
-<td width="16%">
-<p>service-category</p>
-</td>
-<td width="7%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="44%">
-<p>Le type d'offre permet de distinguer les offres et de les classer en fonction de leur nature particuli&egrave;re, li&eacute;e &agrave; un agr&eacute;ment, un personnel sp&eacute;cialement form&eacute; ou un environnement particuli&egrave;rement adapt&eacute; &agrave; l'&eacute;tat de sant&eacute; des patients.</p>
-<p>JDV_J238-TypeOffre-ROR issu de la TRE_R244-CategorieOrganisation</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>champActivite</p>
-</td>
-<td width="16%">
-<p>service-type</p>
-</td>
-<td width="7%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="44%">
-<p>Un champ d&rsquo;activit&eacute; indique le domaine dans lequel s'inscrit l'offre.</p>
-<p>JDV_J20-ChampActivite-ROR issu de la TRE_R227-ChampActivite</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>secteurPsychiatrique</p>
-</td>
-<td width="16%">
-<p>psychiatric-sector</p>
-</td>
-<td width="7%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>string</p>
-</td>
-<td width="44%">
-<p>Le secteur de psychiatrie (ou sectorisation) correspond &agrave; une aire g&eacute;ographique &agrave; laquelle sont rattach&eacute;es des structures de relais et de soins qui prennent en charge des patients r&eacute;sidants sur ce secteur.</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>modaliteAccueil (remplace accueilSequentielAccepte)</p>
-</td>
-<td rowspan="7" width="16%">
-<p>characteristic</p>
-</td>
-<td rowspan="7" width="7%">
-<p>Oui</p>
-</td>
-<td rowspan="7" width="9%">
-<p>&nbsp;</p>
-<p>token</p>
-<p>&nbsp;</p>
-</td>
-<td width="44%">
-<p>Une modalit&eacute; d&rsquo;accueil permet de pr&eacute;ciser le mode de prise en charge g&eacute;ographiquement (ex. : sur le lieu de vie), technologiquement (ex. : t&eacute;l&eacute;consultation) ou organisationnellement (ex. : accueil s&eacute;quentiel).</p>
-<p>JDV_J226-ModaliteAccueil-ROR issu de la TRE_R338-ModaliteAccueil</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>specialisationPriseEnCharge</p>
-</td>
-<td width="44%">
-<p>Une sp&eacute;cialisation de prise en charge correspond &agrave; un regroupement de troubles, de pathologies ou de d&eacute;ficiences qui n&eacute;cessitent la mobilisation d'expertises, de comp&eacute;tences et/ou d'&eacute;quipements sp&eacute;cifiques pouvant &ecirc;tre discriminants dans le choix d&rsquo;orientation du patient.</p>
-<p>JDV_J35-SpecialisationDePriseEnCharge-ROR issu de la TRE_R245-SpecialisationDePriseEnCharge</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>modePriseEnCharge</p>
-</td>
-<td width="44%">
-<p>Le mode de prise en charge caract&eacute;rise l'h&eacute;bergement ainsi que le niveau de technicit&eacute; et d'intensit&eacute; des soins.</p>
-<p>JDV_J19-ModePriseEnCharge-ROR issu de la TRE_R213-ModePriseEnCharge</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>temporaliteAccueil</p>
-</td>
-<td width="44%">
-<p>La temporalit&eacute; d&rsquo;accueil apporte une pr&eacute;cision sur le mode de prise en charge. Elle indique si l'&eacute;tablissement m&eacute;dico-social accepte un accueil pour une dur&eacute;e limit&eacute;e dans le temps, de 90 jours maximum par an.</p>
-<p>JDV_J30-TemporaliteAccueil-ROR issu de la TRE_R240-TemporaliteAccueil</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>acteSpecifique</p>
-</td>
-<td width="44%">
-<p>Un acte sp&eacute;cifique est une action men&eacute;e par un ou plusieurs acteur(s) de sant&eacute; dans le cadre d&rsquo;une activit&eacute;. Cet acte peut correspondre &agrave; une technique sp&eacute;cialis&eacute;e ou traduire une expertise discriminante dans le parcours de sant&eacute;.</p>
-<p>JDV_J16-ActeSpecifique-ROR issu de la TRE_R210-ActeSpecifique</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>professionRessource</p>
-</td>
-<td width="44%">
-<p>La profession ressource traduit la mobilisation de m&eacute;tiers qui constituent un facteur diff&eacute;renciant dans la r&eacute;alisation de la prestation.</p>
-<p>JDV_J186-ProfessionRessource-ROR issu de la</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>niveauExpertise</p>
-</td>
-<td width="44%">
-<p>Le niveau d'expertise atteste du niveau de ressources humaines et mat&eacute;rielles engag&eacute;es dans la r&eacute;alisation de l'offre et d&eacute;fini dans un cahier des charges officiel.</p>
-<p>JDV-J227-NiveauExpertise-ROR issu de la TRE_R253-TypeMaternite</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>competenceSpecifique</p>
-</td>
-<td width="16%">
-<p>specific-competence</p>
-</td>
-<td width="7%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="44%">
-<p>La comp&eacute;tence sp&eacute;cifique correspond &agrave; une capacit&eacute; ou connaissance reconnue qui permet ou facilite l&rsquo;accueil d&rsquo;une personne. La comp&eacute;tence sp&eacute;cifique n&rsquo;est ni une sp&eacute;cialit&eacute; ordinale, ni une profession</p>
-<p>JDV-J33-CompetenceSpecifique-ROR issu de la TRE_R243-CompetenceSpecifique</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>zoneIntervention</p>
-</td>
-<td width="16%">
-<p>intervention-zone</p>
-</td>
-<td width="7%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="44%">
-<p>Correspond au p&eacute;rim&egrave;tre g&eacute;ographique dans lequel habitent les personnes pouvant &ecirc;tre prises en charge pour la prestation d&eacute;crite.</p>
-<p>JDV-J223-TypeDivisionTerritoriale-ROR issu de la TRE_R201-TypeDivisionTerritoriale</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>ActiviteOperationnelle/ activiteOperationnelle</p>
-</td>
-<td width="16%">
-<p>speciality</p>
-</td>
-<td width="7%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="44%">
-<p>Une activit&eacute; op&eacute;rationnelle est un ensemble coh&eacute;rent d&rsquo;actions et de pratiques mises en &oelig;uvre pour r&eacute;pondre aux besoins en Sant&eacute; de la personne.</p>
-<p>JDV_J17-ActiviteOperationnelle-ROR issu de la TRE_R211-ActiviteOperationnelle</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>Patientele/publicPrisEnCharge</p>
-</td>
-<td width="16%">
-<p>patient-type</p>
-</td>
-<td width="7%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="44%">
-<p>Ensemble de personnes qui pr&eacute;sentent des caract&egrave;ristiques psychologiques, intellectuelles, physiques, psycho-motrices, comportementales leur pemettant de b&eacute;n&eacute;ficier de la prestation d&eacute;crite.</p>
-<p>JDV-J29-PublicPrisEnCharge-ROR issu de la TRE_R239-PublicPrisEnCharge</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>Patientele/ageMin</p>
-</td>
-<td width="16%">
-<p>age-range-low</p>
-</td>
-<td width="7%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>quantity</p>
-</td>
-<td width="44%">
-<p>Age minimum (inclus) des personnes leur permettant de b&eacute;n&eacute;ficier de la prestation d&eacute;crite.</p>
-<p>JDV_J37-UcumUniteTemps issu de la TRE_R247-UcumUniteMesure</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p>Patientele/ageMax</p>
-</td>
-<td width="16%">
-<p>age-range-high</p>
-</td>
-<td width="7%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>quantity</p>
-</td>
-<td width="44%">
-<p>Age maximum (inclus) des personnes leur permettant de b&eacute;n&eacute;ficier de la prestation d&eacute;crite.</p>
-<p>JDV_J37-UcumUniteTemps issu de la TRE_R247-UcumUniteMesure</p>
-</td>
-</tr>
-</tbody>
+
+<table class=MsoTable15Grid4Accent5 border=1 cellspacing=0 cellpadding=0
+ width="100%" style='width:100.0%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #4472C4 1.0pt;
+  border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
+  solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126766943'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Attribut ME 3.0<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Search</span></b></span></span><span
+  style='mso-bookmark:_Hlk126766943'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'> <span class=SpellE>parameters</span> <o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126766943'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Natif FHIR<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126766943'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Type FHIR<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border:solid #4472C4 1.0pt;
+  border-left:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:
+  solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126766943'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Description<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><b><span style='font-size:8.0pt;
+  line-height:115%;color:black;mso-color-alt:windowtext'>-</span></b></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>location</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Oui</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>reference</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Référence à la ressource Location</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span style='font-size:8.0pt;line-height:
+  115%'>Metadonnee</span></span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>dateMiseJour</span><b><o:p></o:p></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>_<span
+  class=SpellE>lastUpdated</span><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Oui<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=GramE><span style='font-size:8.0pt;line-height:
+  115%'>date</span></span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'> <o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Date de
+  dernière mise à jour.<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Metadonnee</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>/<span class=SpellE>regionSource</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><b><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>_tag</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Oui</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Code région de la source de la
+  donnée.</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>identifiantOffre</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=GramE><span style='font-size:8.0pt;line-height:
+  115%'>identifier</span></span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Oui<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Identifiant de
+  l’offre<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>nomOffre</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'> (remplace <span class=SpellE>nomOI</span>)</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>name</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Oui</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>string</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Dénomination sous laquelle l'offre
+  est identifiée par le porteur d'offre et résultant de l'application de règles
+  de bonne pratique pour être affichable auprès des professionnels comme du
+  grand public.</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>typeOffre</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'> (remplace <span class=SpellE>categorieOrganisation</span>)<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=GramE><span style='font-size:8.0pt;line-height:
+  115%'>service</span></span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'>-<span class=SpellE>category</span><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Oui<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Le type d'offre
+  permet de distinguer les offres et de les classer en fonction de leur nature
+  particulière, liée à un agrément, un personnel spécialement formé ou un
+  environnement particulièrement adapté à l'état de santé des patients.<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV_J238-TypeOffre-ROR
+  issu de la TRE_R244-CategorieOrganisation<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>champActivite</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%;background:lime;mso-highlight:lime'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>service</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>-type</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Oui</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%;background:lime;mso-highlight:lime'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Un champ d’activité indique le
+  domaine dans lequel s'inscrit l'offre.</span></span><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV_J20-ChampActivite-ROR issu de
+  la TRE_R227-ChampActivite</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%;background:lime;mso-highlight:lime'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>secteurPsychiatrique</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;background:lime;mso-highlight:lime'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>psychiatric</span></span><span style='font-size:8.0pt;
+  line-height:115%'>-sector</span></span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Non<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=GramE><span style='font-size:8.0pt;line-height:
+  115%'>string</span></span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Le secteur de
+  psychiatrie (ou sectorisation) correspond à une aire géographique à laquelle
+  sont rattachées des structures de relais et de soins qui prennent en charge
+  des patients résidants sur ce secteur. <span style='background:lime;
+  mso-highlight:lime'><o:p></o:p></span></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>modaliteAccueil</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'> (remplace <span class=SpellE>accueilSequentielAccepte</span>)</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" rowspan=7 valign=top style='width:16.48%;border-top:none;
+  border-left:none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>characteristic</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" rowspan=7 valign=top style='width:7.36%;border-top:none;
+  border-left:none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Oui</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" rowspan=7 valign=top style='width:9.36%;border-top:none;
+  border-left:none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p>&nbsp;</o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Une modalité d’accueil permet de
+  préciser le mode de prise en charge géographiquement (ex. : sur le lieu de
+  vie), technologiquement (ex. : téléconsultation) ou <span class=SpellE>organisationnellement</span>
+  (ex. : accueil séquentiel).</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV_J226-ModaliteAccueil-ROR issu
+  de la TRE_R338-ModaliteAccueil</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>specialisationPriseEnCharge</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Une
+  spécialisation de prise en charge correspond à un regroupement de troubles,
+  de pathologies ou de déficiences qui nécessitent la mobilisation
+  d'expertises, de compétences et/ou d'équipements spécifiques pouvant être
+  discriminants dans le choix d’orientation du patient.<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV_J35-SpecialisationDePriseEnCharge-ROR
+  issu de la TRE_R245-SpecialisationDePriseEnCharge<span style='background:
+  lime;mso-highlight:lime'><o:p></o:p></span></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>modePriseEnCharge</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Le mode de prise en charge
+  caractérise l'hébergement ainsi que le niveau de technicité et d'intensité
+  des soins.</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV_J19-ModePriseEnCharge-ROR issu
+  de la TRE_R213-ModePriseEnCharge</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>temporaliteAccueil</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>La temporalité
+  d’accueil apporte une précision sur le mode de prise en charge. Elle indique
+  si l'établissement médico-social accepte un accueil pour une durée limitée
+  dans le temps, de 90 jours maximum par an.<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV_J30-TemporaliteAccueil-ROR
+  issu de la TRE_R240-TemporaliteAccueil<span style='background:lime;
+  mso-highlight:lime'><o:p></o:p></span></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>acteSpecifique</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Un acte spécifique est une action
+  menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité.
+  Cet acte peut correspondre à une technique spécialisée ou traduire une
+  expertise discriminante dans le parcours de santé. </span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV_J16-ActeSpecifique-ROR issu de
+  la TRE_R210-ActeSpecifique</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>professionRessource</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>La profession
+  ressource traduit la mobilisation de métiers qui constituent un facteur
+  différenciant dans la réalisation de la prestation.<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV_J186-ProfessionRessource-ROR
+  <span style='background:yellow;mso-highlight:yellow'>issu de la</span><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>niveauExpertise</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:64'><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Le
+  niveau d'expertise atteste du niveau de ressources humaines et matérielles
+  engagées dans la réalisation de l'offre et défini dans un cahier des charges
+  officiel.</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV-J227-NiveauExpertise-ROR issu
+  de la TRE_R253-TypeMaternite</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>competenceSpecifique</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;background:lime;mso-highlight:lime'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>specific</span></span><span style='font-size:8.0pt;
+  line-height:115%'>-competence</span></span></span><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Non<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>La compétence
+  spécifique correspond à une capacité ou connaissance reconnue qui permet ou
+  facilite l’accueil d’une personne. La compétence spécifique n’est ni une
+  spécialité ordinale, ni une profession<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV-J33-CompetenceSpecifique-ROR
+  issu de la TRE_R243-CompetenceSpecifique<span style='background:lime;
+  mso-highlight:lime'><o:p></o:p></span></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>zoneIntervention</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>intervention</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>-zone</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Non</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Correspond au périmètre
+  géographique dans lequel habitent les personnes pouvant être prises en charge
+  pour la prestation décrite. </span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV-J223-TypeDivisionTerritoriale-ROR
+  issu de la TRE_R201-TypeDivisionTerritoriale</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;background:yellow;mso-highlight:yellow'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span style='font-size:8.0pt;line-height:
+  115%'>ActiviteOperationnelle</span></span></span><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>/ <span
+  class=SpellE>activiteOperationnelle</span><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>speciality</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Oui<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Une activité
+  opérationnelle est un ensemble cohérent d’actions et de pratiques mises en
+  œuvre pour répondre aux besoins en Santé de la personne. <o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV_J17-ActiviteOperationnelle-ROR
+  issu de la TRE_R211-ActiviteOperationnelle<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Patientele</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>/<span class=SpellE>publicPrisEnCharge</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>patient</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>-type</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Non</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>token</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Ensemble de personnes qui
+  présentent des <span class=SpellE>caractèristiques</span> psychologiques,
+  intellectuelles, physiques, <span class=SpellE>psycho-motrices</span>,
+  comportementales leur <span class=SpellE>pemettant</span> de bénéficier de la
+  prestation décrite.</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV-J29-PublicPrisEnCharge-ROR
+  issu de la TRE_R239-PublicPrisEnCharge</span></span><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span style='font-size:8.0pt;line-height:
+  115%'>Patientele</span></span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>ageMin</span><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>age</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'>-range-<span class=SpellE>low</span><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Non<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
+  8.0pt;line-height:115%'>quantity</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Age minimum
+  (inclus) des personnes leur permettant de bénéficier de la prestation
+  décrite.<o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
+  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV_J37-UcumUniteTemps
+  issu de la TRE_R247-UcumUniteMesure<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
+ <tr style='mso-yfti-irow:20;mso-yfti-lastrow:yes'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Patientele</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>/<span class=SpellE>ageMax</span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="16%" valign=top style='width:16.48%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>age</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>-range-high</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="7%" valign=top style='width:7.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Non</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>quantity</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Age maximum (inclus) des personnes
+  leur permettant de bénéficier de la prestation décrite.</span></span><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV_J37-UcumUniteTemps issu de la
+  TRE_R247-UcumUniteMesure</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
 </table>
 
 ### StructureDefinition-ror-organization
 
 Critères de recherches applicables à la ressource Organization.
 
-<table width="100%">
-<tbody>
-<tr style="width:100.0%;border:none;
-   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
-   exactly">
-<td width="17%">
-<p><strong>Attribut ME 3.0</strong></p>
-</td>
-<td width="17%">
-<p><strong>Search parameters </strong></p>
-</td>
-<td width="8%">
-<p><strong>Natif FHIR</strong></p>
-</td>
-<td width="9%">
-<p><strong>Type FHIR</strong></p>
-</td>
-<td width="46%">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>Metadonnee/dateMiseJour</p>
-</td>
-<td width="17%">
-<p>_lastUpdated</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>Date</p>
-</td>
-<td width="46%">
-<p>Date de derni&egrave;re mise &agrave; jour.</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>Metadonnee/regionSource</p>
-</td>
-<td width="17%">
-<p>_tag</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="46%">
-<p>Code r&eacute;gion de la source de la donn&eacute;e.</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>idNat_Struct&nbsp;</p>
-</td>
-<td width="17%">
-<p>identifier</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>Token</p>
-</td>
-<td width="46%">
-<p>Identification nationale de l'Entit&eacute; G&eacute;ographique d&eacute;finie dans le CI-SIS.</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>nomOI</p>
-</td>
-<td width="17%">
-<p>name</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>string</p>
-</td>
-<td width="46%">
-<p>Nom de l'organisation interne.</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>numFINESS</p>
-</td>
-<td width="17%">
-<p>identifier</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>Token</p>
-</td>
-<td width="46%">
-<p>Num&eacute;ro FINESS de l'entit&eacute; g&eacute;ographique.</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>categorieEG</p>
-</td>
-<td width="17%">
-<p>type</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>Token</p>
-</td>
-<td width="46%">
-<p>La cat&eacute;gorie d'&eacute;tablissement est le cadre r&eacute;glementaire dans lequel s'exerce l'activit&eacute; de l'entit&eacute; g&eacute;ographique.</p>
-<p>JDV_J55-CategorieEG-ROR issu de TRE_R66-CategorieEtablissement, TRE_R316-AutreCategorieEtablissement et TRE_R02-SecteurActivite</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>zonePoser</p>
-</td>
-<td width="17%">
-<p>drop-zone</p>
-</td>
-<td width="8%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>Token</p>
-</td>
-<td width="46%">
-<p>Cet indicateur pr&eacute;cise l&rsquo;existence d&rsquo;une zone de poser pour h&eacute;licopt&egrave;re</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>typeFermeture</p>
-</td>
-<td width="17%">
-<p>closing-type</p>
-</td>
-<td width="8%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>Token</p>
-</td>
-<td width="46%">
-<p>Type de fermeture de l'entit&eacute; g&eacute;ographique, au sens des r&egrave;gles de gestion du SI FINESS (par exemple: fermeture d&eacute;finitive, fermeture provisoire).</p>
-<p>JDV-J201-TypeFermeture-ROR issu de la TRE_R286-TypeFermeture</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>dateFermeture</p>
-</td>
-<td width="17%">
-<p>period-end</p>
-</td>
-<td width="8%">
-<p>Non</p>
-</td>
-<td width="9%">
-<p>Date</p>
-</td>
-<td width="46%">
-<p>Date de fermeture de l'entit&eacute; g&eacute;ographique. La date doit &ecirc;tre sup&eacute;rieure &agrave; la date d&rsquo;ouverture.</p>
-</td>
-</tr>
-</tbody>
+<table class=MsoTable15Grid4Accent5 border=1 cellspacing=0 cellpadding=0
+ width="100%" style='width:100.0%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #4472C4 1.0pt;
+  border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
+  solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><a
+  name="_Hlk126842234"><b><span style='font-size:8.0pt;line-height:115%;
+  color:white'>Attribut ME 3.0<o:p></o:p></span></b></a></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842234'></span>
+  <td width="17%" valign=top style='width:17.92%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126842234'><span class=SpellE><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Search</span></b></span></span><span
+  style='mso-bookmark:_Hlk126842234'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'> <span class=SpellE>parameters</span> <o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842234'></span>
+  <td width="8%" valign=top style='width:8.8%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126842234'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Natif FHIR<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842234'></span>
+  <td width="9%" valign=top style='width:9.36%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126842234'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Type FHIR<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842234'></span>
+  <td width="46%" valign=top style='width:46.04%;border:solid #4472C4 1.0pt;
+  border-left:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:
+  solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  style='mso-bookmark:_Hlk126842234'><b><span style='font-size:8.0pt;
+  line-height:115%;color:white'>Description<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126842234'></span>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Metadonnee</span></span><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>dateMiseJour</span></span><b><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>_<span
+  class=SpellE>lastUpdated</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  </span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  de dernière mise à jour.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>Metadonnee</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>regionSource</span><b><o:p></o:p></b></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>_tag<o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Code région de la source de la donnée.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>idNat</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>_Struct</span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'><span
+  style='mso-spacerun:yes'>  </span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>identifier</span></span><span style='font-size:
+  8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Token</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identification
+  nationale de l'Entité Géographique définie dans le CI-SIS.</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>nomOI</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>name</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%'>string</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Nom de l'organisation interne.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>numFINESS</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>identifier</span></span><span style='font-size:
+  8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Token</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Numéro
+  FINESS de l'entité géographique.</span><span style='font-size:8.0pt;
+  line-height:115%;background:lime;mso-highlight:lime'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>categorieEG</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%'>type</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>Token</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>La catégorie d'établissement est le cadre
+  réglementaire dans lequel s'exerce l'activité de l'entité géographique.<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV_J55-CategorieEG-ROR issu de
+  TRE_R66-CategorieEtablissement, TRE_R316-AutreCategorieEtablissement et
+  TRE_R02-SecteurActivite<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>zonePoser</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>drop</span></span><span style='font-size:8.0pt;
+  line-height:115%;color:black;mso-color-alt:windowtext'>-zone</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Token</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Cet
+  indicateur précise l’existence d’une zone de poser pour hélicoptère</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>typeFermeture</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>closing</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'>-type<o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>Token</span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Type de fermeture de l'entité géographique, au sens
+  des règles de gestion du SI FINESS (par <span class=GramE>exemple:</span>
+  fermeture définitive, fermeture provisoire).<o:p></o:p></span></p>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>JDV-J201-TypeFermeture-ROR issu de la TRE_R286-TypeFermeture<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>dateFermeture</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext'>period</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-end</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  de fermeture de l'entité géographique. La date doit être supérieure à la date
+  d’ouverture.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
 </table>
 
 ### StructureDefinition-ror-practioner
 
 Critères de recherches applicables à la ressource Practioner.
 
-<table width="100%">
-<tbody>
-<tr style="width:100.0%;border:none;
-   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
-   exactly">
-<td width="17%">
-<p><strong>Attribut ME 3.0</strong></p>
-</td>
-<td width="17%">
-<p><strong>Search parameters </strong></p>
-</td>
-<td width="8%">
-<p><strong>Natif FHIR</strong></p>
-</td>
-<td width="9%">
-<p><strong>Type FHIR</strong></p>
-</td>
-<td width="46%">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>Metadonnee/dateMiseJour</p>
-</td>
-<td width="17%">
-<p>_lastUpdated</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>Date</p>
-</td>
-<td width="46%">
-<p>Date de derni&egrave;re mise &agrave; jour.</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>Metadonnee/regionSource</p>
-</td>
-<td width="17%">
-<p>_tag</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="46%">
-<p>Code r&eacute;gion de la source de la donn&eacute;e.</p>
-</td>
-</tr>
-</tbody>
+<table class=MsoTable15Grid4Accent5 border=1 cellspacing=0 cellpadding=0
+ width="100%" style='width:100.0%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #4472C4 1.0pt;
+  border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
+  solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Attribut ME 3.0<o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  class=SpellE><b><span style='font-size:8.0pt;line-height:115%;color:white'>Search</span></b></span><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'> <span class=SpellE>parameters</span>
+  <o:p></o:p></span></b></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Natif FHIR<o:p></o:p></span></b></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Type FHIR<o:p></o:p></span></b></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border:solid #4472C4 1.0pt;
+  border-left:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:
+  solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Metadonnee</span></span><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>dateMiseJour</span></span><b><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>_<span
+  class=SpellE>lastUpdated</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  </span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  de dernière mise à jour.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>Metadonnee</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>regionSource</span><b><o:p></o:p></b></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>_tag<o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Code région de la source de la donnée.<o:p></o:p></span></p>
+  </td>
+ </tr>
 </table>
 
 ### StructureDefinition-ror-practionerrole
 
 Critères de recherches applicables à la ressource PractionerRole.
 
-<table width="100%">
-<tbody>
-<tr style="width:100.0%;border:none;
-   background:#1D70B8;padding:0cm 5.4pt 0cm 5.4pt;height:23.2pt;mso-height-rule:
-   exactly">
-<td width="17%">
-<p><strong>Attribut ME 3.0</strong></p>
-</td>
-<td width="17%">
-<p><strong>Search parameters </strong></p>
-</td>
-<td width="8%">
-<p><strong>Natif FHIR</strong></p>
-</td>
-<td width="9%">
-<p><strong>Type FHIR</strong></p>
-</td>
-<td width="46%">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>Metadonnee/dateMiseJour</p>
-</td>
-<td width="17%">
-<p>_lastUpdated</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>Date</p>
-</td>
-<td width="46%">
-<p>Date de derni&egrave;re mise &agrave; jour.</p>
-</td>
-</tr>
-<tr>
-<td width="17%">
-<p>Metadonnee/regionSource</p>
-</td>
-<td width="17%">
-<p>_tag</p>
-</td>
-<td width="8%">
-<p>Oui</p>
-</td>
-<td width="9%">
-<p>token</p>
-</td>
-<td width="46%">
-<p>Code r&eacute;gion de la source de la donn&eacute;e.</p>
-</td>
-</tr>
-</tbody>
+<table class=MsoTable15Grid4Accent5 border=1 cellspacing=0 cellpadding=0
+ width="100%" style='width:100.0%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #4472C4 1.0pt;
+  border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
+  solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Attribut ME 3.0<o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  class=SpellE><b><span style='font-size:8.0pt;line-height:115%;color:white'>Search</span></b></span><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'> <span class=SpellE>parameters</span>
+  <o:p></o:p></span></b></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Natif FHIR<o:p></o:p></span></b></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Type FHIR<o:p></o:p></span></b></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border:solid #4472C4 1.0pt;
+  border-left:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:
+  solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><b><span
+  style='font-size:8.0pt;line-height:115%;color:white'>Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Metadonnee</span></span><span style='font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
+  class=SpellE>dateMiseJour</span></span><b><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>_<span
+  class=SpellE>lastUpdated</span></span><span style='font-size:8.0pt;
+  line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  </span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  de dernière mise à jour.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  style='font-size:8.0pt;line-height:115%'>Metadonnee</span></span><span
+  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>regionSource</span><b><o:p></o:p></b></span></p>
+  </td>
+  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>_tag<o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  8.0pt;line-height:115%'>Code région de la source de la donnée.<o:p></o:p></span></p>
+  </td>
+ </tr>
 </table>
