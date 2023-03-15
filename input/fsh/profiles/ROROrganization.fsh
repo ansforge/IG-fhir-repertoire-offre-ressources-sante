@@ -33,8 +33,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     numRPPS 0..1 and
     numSIRET 0..1 and 
     identifierOI 0..1 and
-    numADELI 0..1 and
-    identifierEG 0..1
+    numADELI 0..1
 * identifier[idNatStruct] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
 * identifier[idNatStruct].type 1..1
 * identifier[idNatStruct].type.coding.code = $TRE-G07-TypeIdentifiantStructure#40 
