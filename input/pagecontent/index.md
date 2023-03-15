@@ -19,11 +19,11 @@ capacités d'accueil et les compétences que l'on souhaite identifier pour
 cette offre.
 <table align="center">
     <tr>
-    <td>
-        <div class="figure">
-            <img src="image5.png" alt="ROR Modèle d'exposition v3" title="ROR Modèle d'exposition v3">
-        </div>
-    </td>    
+        <td>
+            <div class="figure">
+                <img src="image5.png" alt="ROR Modèle d'exposition v3" title="ROR Modèle d'exposition v3">
+            </div>
+        </td>    
     </tr>
     <tr>
         <td align="center">

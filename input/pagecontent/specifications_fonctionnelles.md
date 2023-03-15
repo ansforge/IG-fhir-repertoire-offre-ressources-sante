@@ -40,11 +40,11 @@ offres opérationnelles liées.
 
 <table align="center">
     <tr>
-    <td>
-        <div class="figure">
-            <img src="image6.png" alt="Recherche capacité (modèle expo V3.0)" title="Recherche capacité (modèle expo V3.0)">
-        </div>
-    </td>    
+        <td align ="center">
+            <div class="figure">
+                <img src="image6.png" alt="Recherche capacité (modèle expo V3.0)" title="Recherche capacité (modèle expo V3.0)">
+            </div>
+        </td>    
     </tr>
     <tr>
         <td align ="center">
@@ -127,16 +127,16 @@ Il y a deux cas possibles :
 
 <table align="center">
     <tr>
-    <td>
-        <div class="figure">
-            <img src="image7.png" alt="Synchronisation complète offre" title="Synchronisation complète offre)">
+        <td align ="center">
+            <div class="figure">
+                <img src="image7.png" alt="Synchronisation complète offre" title="Synchronisation complète offre)">
         </div>
-    </td>
-     <td>
-        <div class="figure">
-            <img src="image8.png" alt="Synchronisation partielle offre"  title="Synchronisation partielle offre)">
-        </div>
-    </td>        
+        </td>
+         <td align ="center">
+            <div class="figure">
+                <img src="image8.png" alt="Synchronisation partielle offre"  title="Synchronisation partielle offre)">
+            </div>
+        </td>        
     </tr>
     <tr>
         <td align ="center">
@@ -209,11 +209,11 @@ l'offre opérationnelle.
 
 <table align="center">
     <tr>
-    <td>
+        <td align ="center">
         <div class="figure">
             <img src="image9.png" alt="Recherche offre" title="Recherche offre">
         </div>
-    </td>    
+        </td>    
     </tr>
     <tr>
         <td align ="center">
@@ -299,11 +299,11 @@ l'offre liés.
 
 <table align="center">
     <tr>
-    <td>
-        <div class="figure">
-            <img src="image10.png" alt="Recherche offre avec données capacitaires" title="Recherche offre avec données capacitaires">
-        </div>
-    </td>    
+        <td align ="center">
+            <div class="figure">
+                <img src="image10.png" alt="Recherche offre avec données capacitaires" title="Recherche offre avec données capacitaires">
+            </div>
+        </td>    
     </tr>
     <tr>
         <td align ="center">
