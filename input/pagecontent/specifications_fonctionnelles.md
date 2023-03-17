@@ -12,31 +12,22 @@ A ce jour, le webservice répond au cas d'usage suivants :
 
 -   Les préconditions sont :
 
-    -   Le système consommateur dispose des points d'accès et des moyens
-        d'authentification (authentification mTLS avec des certificats
-        IGC-Santé) pour accéder aux données du ROR National.
-
-    -   Le système consommateur peut uniquement effectuer les recherches
-        autorisées par son profil d'accès aux données. Plus d'information [ici](https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf) .
+    -   Le système consommateur dispose des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé) pour accéder aux             données du ROR National.
+    
+    -   Le système consommateur peut uniquement effectuer les recherches autorisées par son profil d'accès aux données. Plus d'information [ici]       (https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf) .
 
 -   Les postconditions sont :
-
-    -   L'exécution des transactions ne provoquera aucune modification sur
-        les données sources extraites.
+    -   L'exécution des transactions ne provoquera aucune modification sur les données sources extraites.
 
 ### Consultation des données capacitaires
 
 #### Description du cas d'usage
 
-Un consommateur cherche les capacités des lieux de réalisation de
-l'offre à partir de critères de recherche.
+Un consommateur cherche les capacités des lieux de réalisation de l'offre à partir de critères de recherche.
 
-Le consommateur renseigne son (ses) critère(s) de recherche parmi les
-critères disponibles.
+Le consommateur renseigne son (ses) critère(s) de recherche parmi les critères disponibles.
 
-Le ROR National répond au consommateur les lieux de réalisation de
-l'offre correspondant aux critères de recherche et les identifiants des
-offres opérationnelles liées.
+Le ROR National répond au consommateur les lieux de réalisation de l'offre correspondant aux critères de recherche et les identifiants des offres opérationnelles liées.
 
 <table align="center">
     <tr>
