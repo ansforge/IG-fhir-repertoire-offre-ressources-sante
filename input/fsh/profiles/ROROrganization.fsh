@@ -1,69 +1,36 @@
 Profile: ROROrganization
 Parent: $FrOrganization
 Id: ror-organization
-Description: "Profil créé dans le cadre du ROR"
-* ^publisher = "ANS"
+Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
+* meta.tag 0..1
+* meta.tag from $JDV_J237-RegionOM-ROR (required)
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension contains
-    //description 0..0 and
     ROROrganizationPrice named ror-organization-price 0..1 and
     $mailboxMSS named mailboxMSS 0.. and
-    RORHealthcareServiceTerritorial named ror-healthcareservice-territorial 0.. and
+    ROROrganizationTerritorial named ror-organization-territorial 0.. and
     ROROrganizationFinancialHelpType named ror-organization-financial-help-type 0.. and
     ROROrganizationAccomodationFamily named ror-organization-accomodation-family 0.. and
     ROROrganizationNbPermanentSocialHelpPlace named ror-organization-nb-permanent-social-help-place 0.. and
     ROROrganizationNbTemporarySocialHelpPlace named ror-organization-nb-temporary-social-help-place 0.. and
     RORAccessibilityLocation named ror-accessibility-location 0.. and
     RORLevelRecourseORSAN named ror-level-recours-orsan 0.. and
-    RORCareWithoutPatientApproval named ror-care-without-patient-approval 0.. and
     ROROrganizationPeriod named ror-organization-period 0.. and
     RORDropZone named ror-drop-zone 0..1
-//* extension[mailboxMSS] only $mailboxMSS
-//* extension[mailboxMSS] ^sliceName = "mailboxMSS"
-//* extension[mailboxMSS] ^min = 0
 * extension[mailboxMSS] ^isModifier = false
-//* extension[ror-healthcareservice-territorial] only RORHealthcareServiceTerritorial
-//* extension[ror-healthcareservice-territorial] ^sliceName = "ror-healthcareservice-territorial"
-//* extension[ror-healthcareservice-territorial] ^min = 0
-* extension[ror-healthcareservice-territorial] ^isModifier = false
+* extension[ror-organization-territorial] ^isModifier = false
 * extension[ror-organization-price] ^isModifier = false
 * extension[ror-drop-zone] ^isModifier = false
-//* extension[ror-organization-financial-help-type] only ROROrganizationFinancialHelpType
-//* extension[ror-organization-financial-help-type] ^sliceName = "ror-organization-financial-help-type"
-//* extension[ror-organization-financial-help-type] ^min = 0
 * extension[ror-organization-financial-help-type] ^isModifier = false
-//* extension[ror-organization-accomodation-family] only ROROrganizationAccomodationFamily
-//* extension[ror-organization-accomodation-family] ^sliceName = "ror-organization-accomodation-family"
-//* extension[ror-organization-accomodation-family] ^min = 0
 * extension[ror-organization-accomodation-family] ^isModifier = false
-//* extension[ror-organization-nb-permanent-social-help-place] only ROROrganizationNbPermanentSocialHelpPlace
-//* extension[ror-organization-nb-permanent-social-help-place] ^sliceName = "ror-organization-nb-permanent-social-help-place"
-//* extension[ror-organization-nb-permanent-social-help-place] ^min = 0
 * extension[ror-organization-nb-permanent-social-help-place] ^isModifier = false
-//* extension[ror-organization-nb-temporary-social-help-place] only ROROrganizationNbTemporarySocialHelpPlace
-//* extension[ror-organization-nb-temporary-social-help-place] ^sliceName = "ror-organization-nb-temporary-social-help-place"
-//* extension[ror-organization-nb-temporary-social-help-place] ^min = 0
 * extension[ror-organization-nb-temporary-social-help-place] ^isModifier = false
-//* extension[ror-accessibility-location] only RORAccessibilityLocation
-//* extension[ror-accessibility-location] ^sliceName = "ror-accessibility-location"
-//* extension[ror-accessibility-location] ^min = 0
 * extension[ror-accessibility-location] ^isModifier = false
-//* extension[ror-level-recours-orsan] only RORLevelRecourseORSAN
-//* extension[ror-level-recours-orsan] ^sliceName = "ror-level-recours-orsan"
-//* extension[ror-level-recours-orsan] ^min = 0
 * extension[ror-level-recours-orsan] ^isModifier = false
-//* extension[ror-care-without-patient-approval] only RORCareWithoutPatientApproval
-//* extension[ror-care-without-patient-approval] ^sliceName = "ror-care-without-patient-approval"
-//* extension[ror-care-without-patient-approval] ^min = 0
-* extension[ror-care-without-patient-approval] ^isModifier = false
-//* extension[ror-organization-period] only ROROrganizationPeriod
-//* extension[ror-organization-period] ^sliceName = "ror-organization-period"
-//* extension[ror-organization-period] ^min = 0
 * extension[ror-organization-period] ^isModifier = false
-* identifier ..1
+* identifier 1..1
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
@@ -77,7 +44,7 @@ Description: "Profil créé dans le cadre du ROR"
     numADELI 0..1
 * identifier[idNatStruct].type = $TRE-R254-TypeEvenement#40 (exactly)
 * identifier[idNatStruct].type from $JDV-J236-TypeIdentifiant-ROR (required)
-* identifier[numFINESS].type = $#1 (exactly)
+* identifier[numFINESS].type = $JDV-J236-TypeIdentifiant-ROR#1 (exactly)
 * identifier[numFINESS].type from $JDV-J236-TypeIdentifiant-ROR (required)
 * identifier[numSIREN].type from $JDV-J236-TypeIdentifiant-ROR (required)
 * identifier[numSIREN].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
@@ -87,14 +54,12 @@ Description: "Profil créé dans le cadre du ROR"
 * identifier[numSIRET].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
 * identifier[identifiantOI].type from $JDV-J236-TypeIdentifiant-ROR (required)
 * identifier[identifiantOI].type ^fixedCodeableConcept.coding.system = "https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR/"
-* identifier[numADELI].type = $#0 (exactly)
+* identifier[numADELI].type = $JDV-J236-TypeIdentifiant-ROR#0 (exactly)
 * identifier[numADELI].type from $JDV-J236-TypeIdentifiant-ROR (required)
 * type[organizationType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
 * type[organizationType] ^sliceName = "organizationType"
 * type[organizationType] ^binding.description = "Binding JDV_J203-TypeOrganisationInterne-ROR"
 * type contains
-    //secteurActiviteRASS 0..0 and
-    //categorieEtablissementRASS 0..0 and
     statutJuridiqueINSEE 0..1 and
     categorieEtablissement 0..1 and
     sphParticipation 0..1 and
@@ -106,14 +71,11 @@ Description: "Profil créé dans le cadre du ROR"
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[sphParticipation] ^binding.description = "Binding JDV_J202-ESPIC-ROR"
 * type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
-* alias ..1
-//* address only $fr-address-extended
+* alias 0..1
 * address.extension ^slicing.discriminator.type = #value
 * address.extension ^slicing.discriminator.path = "url"
 * address.extension ^slicing.rules = #open
-* address.extension ^min = 0
 * address.extension[inseeCode] ^sliceName = "inseeCode"
-* address.extension[inseeCode] ^min = 0
 * address.extension[inseeCode].value[x] from $JDV-J230-CommuneOM-ROR (required)
 * address.extension[inseeCode].value[x] ^binding.description = "JDV_J102-1-CommuneOM-ROR"
 * address.extension contains
@@ -131,7 +93,6 @@ Description: "Profil créé dans le cadre du ROR"
 * address.line.extension contains
     iso21090-ADXP-streetNameType named streetNameType 0.. 
 * address.line.extension[streetNameType] ^sliceName = "streetNameType"
-* address.line.extension[streetNameType] ^min = 0
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 * address.line.extension[streetNameType].valueString ^sliceName = "valueString"
 * address.line.extension[streetNameType].valueString ^binding.description = "JDV_J219-TypeVoie-ROR"
@@ -141,7 +102,6 @@ Description: "Profil créé dans le cadre du ROR"
 * contact.extension ^slicing.discriminator.type = #value
 * contact.extension ^slicing.discriminator.path = "url"
 * contact.extension ^slicing.rules = #open
-* contact.extension ^min = 0
 * contact.extension contains
     RORContactDescription named ror-contact-description 0..1 and
     RORContactFonctionContact named ror-contact-fonction-contact 0..1 and
@@ -153,7 +113,6 @@ Description: "Profil créé dans le cadre du ROR"
 * contact.telecom.extension ^slicing.discriminator.type = #value
 * contact.telecom.extension ^slicing.discriminator.path = "url"
 * contact.telecom.extension ^slicing.rules = #open
-* contact.telecom.extension ^min = 0
 * contact.telecom.extension contains
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 0..1 and
     RORContactTelecomUsage named ror-contact-telecom-usage 0..1

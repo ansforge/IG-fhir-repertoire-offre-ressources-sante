@@ -1,9 +1,6 @@
 Extension: ROROrganizationPrice
 Id: ror-organization-price
-Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^date = "2022-06-29"
-* ^publisher = "ANS"
+Description: "Extension créée dans le cadre du ROR pour permettre de définir les tarifs des prestations et services d'une entité géographique."
 * ^context.type = #element
 * ^context.expression = "Organization"
 * extension ^slicing.discriminator.type = #value
@@ -32,10 +29,8 @@ Description: "Extension créée dans le cadre du ROR"
 * extension[amount].value[x] only Money
 * extension[startDate].value[x] only dateTime
 * extension[under60].value[x] only boolean
-* extension[deliveryIncluded] ^min = 0
 * extension[deliveryIncluded].value[x] only CodeableConcept
 * extension[deliveryIncluded].value[x] from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)
-* extension[othersDeliveryIncluded] ^min = 0
 * extension[othersDeliveryIncluded].value[x] only string
 * extension[residentialType].value[x] only CodeableConcept
 * extension[residentialType].value[x] from $JDV-J32-TypeHabitation-ROR (required)
@@ -58,4 +53,4 @@ Description: "Extension créée dans le cadre du ROR"
 * extension[surchargePriceName].extension[string].value[x] only string
 * extension[surchargePriceName].extension[codeableConcept].value[x] only CodeableConcept
 * extension[surchargePriceName].extension[codeableConcept].value[x] from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)
-* url = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuide/ROR/StructureDefinition/ror-organization-price" (exactly)
+* url = "https://interop.esante.gouv.fr/fhir/ig/ror/StructureDefinition/ror-organization-price" (exactly)

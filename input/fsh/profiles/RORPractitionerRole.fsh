@@ -1,12 +1,9 @@
-Profile: ROR_PractitionerRole
+Profile: RORPractitionerRole
 Parent: PractitionerRole
 Id: ror-practitionerrole
-Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^status = #active
-* ^date = "2022-06-30"
-* ^publisher = "ANS"
-* meta 1..
+Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre"
+* meta.tag 0..1
+* meta.tag from $JDV_J237-RegionOM-ROR (required)
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
@@ -14,19 +11,22 @@ Description: "Extension créée dans le cadre du ROR"
     $practitionerRole-name named name 0..1 and
     $practitionerRole-contracted named contracted 0..1 and
     $practitionerRole-vitaleAccepted named vitalAccepted 0..1 and
-    $practitionerRole-hasCAS named optionCAAS 0..1 and
-    RORUnitExerciseMode named ror-unit-exercise-mode 1..*
+    $practitionerRole-hasCAS named optionCAS 0..1 and
+    $mailboxMSS named mailboxMSS 0..* and
+    RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..*
 * extension[name] ^isModifier = false
-* extension[name].value[x].family 1..
+* extension[name].valueHumanName.family 1..1
 * extension[contracted] ^isModifier = false
 * extension[contracted].value[x] from $JDV-J218-CNAMAmeliSecteurConventionnement-ROR (required)
 * extension[contracted].value[x] ^binding.description = "JDV_J218-CNAMAmeliSecteurConventionnement-RASS dérivé de la TRE_ R282-CNAMAmeliSecteurConventionnement"
 * extension[contracted].value[x].coding.system = "https://mos.esante.gouv.fr/NOS/TRE_R282-CNAMAmeliSecteurConventionnement/FHIR/TRE-R282-CNAMAmeliSecteurConventionnement" (exactly)
 * extension[vitalAccepted] ^isModifier = false
-* extension[optionCAAS] ^isModifier = false
-* extension[ror-unit-exercise-mode] ^isModifier = false
-* practitioner 1..
+* extension[optionCAS] ^isModifier = false
+* extension[mailboxMSS] ^isModifier = false
+* extension[ror-practitionerrole-unit-exercise-mode] ^isModifier = false
+* practitioner 1..1 
 * code 1..1
+* identifier 0..1
 * code from $JDV-J229-ProfessionSante-ROR (required)
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "coding.system"
@@ -53,31 +53,24 @@ Description: "Extension créée dans le cadre du ROR"
 * specialty[droitExerciceComplementaireR97] from $JDV-J216-DroitExerciceCompl-ROR (required)
 * specialty[competenceSpecifiqueR243] from $JDV-J33-CompetenceSpecifique-ROR (required)
 * healthcareService 1..1
-* telecom ..1
+* telecom 0..1 
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
 * telecom.extension contains 
     RORTelecomUsage named usage 0..1 and
-    RORCommunicationChannel named communicationChannel 1.. and
-    RORConfidentialityLevel named confidentialityLevel 1..
-//* telecom.extension[communicationChannel] only RORCommunicationChannel
-//* telecom.extension[communicationChannel] ^sliceName = "communicationChannel"
+    RORCommunicationChannel named communicationChannel 1..1 and
+    RORConfidentialityLevel named confidentialityLevel 1..1 
 * telecom.extension[communicationChannel] ^isModifier = false
-//* telecom.extension[confidentialityLevel] only RORConfidentialityLevel
-//* telecom.extension[confidentialityLevel] ^sliceName = "confidentialityLevel"
 * telecom.extension[confidentialityLevel] ^isModifier = false
 * telecom.extension[usage] ^isModifier = false
-* telecom.value 1..
-* availableTime ..1
+* telecom.value 1..1
+* availableTime 0..1
 * availableTime.extension ^slicing.discriminator.type = #value
 * availableTime.extension ^slicing.discriminator.path = "url"
 * availableTime.extension ^slicing.rules = #open
-* availableTime.extension ^min = 0
 * availableTime.extension contains
     RORAvailableTimeEffectiveOpeningClosingDate named effectiveOpeningClosingDate 0..* and
     RORHealthcareServiceAvailableTimeTypeOfTime named typeOfTime 0..*
-* availableTime.extension[effectiveOpeningClosingDate] ^min = 0
 * availableTime.extension[effectiveOpeningClosingDate] ^isModifier = false
-* availableTime.extension[typeOfTime] ^min = 0
 * availableTime.extension[typeOfTime] ^isModifier = false

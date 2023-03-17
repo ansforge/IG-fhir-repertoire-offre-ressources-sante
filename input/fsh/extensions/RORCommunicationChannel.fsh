@@ -1,13 +1,8 @@
 Extension: RORCommunicationChannel
 Id: ror-communication-channel
-Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^date = "2022-06-30"
-* ^publisher = "ANS"
+Description: "Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication "
 * ^context.type = #element
 * ^context.expression = "ContactPoint"
-* . ..1
-* url = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuide/ROR/StructureDefinition/ror-communication-channel" (exactly)
-* value[x] 1..
+* value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from $_1 (required)
+* value[x] from $JDV-225-CanalCommunication-ROR (required)

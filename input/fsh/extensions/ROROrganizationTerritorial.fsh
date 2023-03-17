@@ -1,8 +1,6 @@
-Extension: RORHealthcareServiceTerritorial
-Id: ror-healthcareservice-territorial
-* ^version = "3.0"
-* ^date = "2022-06-28"
-* ^publisher = "ANS"
+Extension: ROROrganizationTerritorial
+Id: ror-organization-territorial
+Description: "Extension créée dans le cadre du ROR pour décrire les territoire(s) de santé où est située l'entité géographique"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * extension ^slicing.discriminator.type = #value

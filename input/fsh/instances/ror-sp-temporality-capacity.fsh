@@ -1,14 +1,13 @@
 Instance: ror-sp-temporality-capacity
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://esante.gouv.fr/fhir/ror/SearchParameter/ror-sp-temporality-capacity"
-* version = "3.0"
+* status = #active 
 * name = "RORSPTemporalityCapacity"
-* status = #active
-* date = "2022-10-05T00:00:00+02:00"
-* publisher = "ANS"
-* description = "Paramètre de recherche pour récupérer les affectations temporaires"
+
+* date = "2023-01-12T14:27:51+01:00"
+
+* description = "Paramètre de recherche pour récupérer le moment où la capacité sera effective"
 * code = #temporality-capacity
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='http://esante.gouv.fr/fhir/ror/StructureDefinition/ror-supported-capacity').extension(url='temporalityCapacity').valueCode"
+* expression = "Location.extension.where(url='http://interop.esante.gouv.fr/fhir/ig/ror30/StructureDefinition/ror-supported-capacity').extension(url='temporalityCapacity').valueCode"
