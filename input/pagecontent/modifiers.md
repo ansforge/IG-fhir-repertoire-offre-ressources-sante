@@ -243,7 +243,7 @@
   mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><b><span
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>_<span
-  class=SpellE>elements</span><o:p></o:p></span></b></p><![endif]>
+  class=SpellE>elements</span><o:p></o:p></span></b></p>
   </td>
   <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
