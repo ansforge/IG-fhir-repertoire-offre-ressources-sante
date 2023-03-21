@@ -56,10 +56,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numADELI].type 1..1
 * identifier[numADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
 
+// Slice déjà défini dans FrOrganization
 * type 3..* 
-* type ^slicing.discriminator.type = #value
-* type ^slicing.discriminator.path = "coding.system"
-* type ^slicing.rules = #open
 * type contains
     statutJuridiqueINSEE 1..1 and
     sousEnsembleAgregatStatutJuridique 0..1 and
