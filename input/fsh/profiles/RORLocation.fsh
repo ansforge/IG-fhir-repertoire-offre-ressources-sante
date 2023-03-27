@@ -4,6 +4,7 @@ Id: ror-location
 Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre." 
 
 /* Données techniques */
+* meta.lastUpdated 1..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -99,10 +100,12 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     RORLocationEquipment named ror-location-equipment 0..* and
     RORLocationEquipmentLimit named ror-location-equipment-limit 0..* and
     RORLocationResidentialCapacity named ror-location-residential-capacity 0..* and
-    RORLocationSupportedCapacity named ror-location-supported-capacity 0..*
+    RORLocationSupportedCapacity named ror-location-supported-capacity 0..* and
+    RORMetaCreationDate named ror-meta-creation-date 1..1
 * extension[ror-location-status] ^short = "statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
 * extension[ror-commune-cog] ^short = "communeCog (LieuRealisationOffre) : Code officiel géographique (COG) de la commune dans laquelle le lieu est situé"
 * extension[ror-location-equipment] ^short = "EquipementSpecifique : Ressource matérielle discriminante pour la réalisation d'une prestation"
 * extension[ror-location-equipment-limit] ^short = "LimiteCaracteristiqueEquipement : limites que peut supporter l'équipement le plus tolérant parmi les équipements spécifiques de même type dans cette organisation"
 * extension[ror-location-residential-capacity] ^short = "CapaciteHabitation : type d'habitation adapté à la réalisation d'une offre"
 * extension[ror-location-supported-capacity] ^short = "CapacitePriseCharge :  + CapaciteAccueilOperationnelle"
+* extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"

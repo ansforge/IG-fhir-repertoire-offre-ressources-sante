@@ -4,6 +4,7 @@ Id: ror-healthcareservice
 Description: "Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne "
 
 /* Données techniques */
+* meta.lastUpdated 1..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -21,8 +22,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * category ^short = "typeOffre (OffreOperationnelle) : Permet de distinguer les offres et de les classer en fonction de leur nature particulière"
 * category from $JDV-J238-TypeOffre-ROR (required)
 * type 1..1
-* type ^short = "champActivite (OffreOperationnelle) : domaine dans lequel s'inscrit l'offre"
+* type ^short = "champActivite (OffreOperationnelle) : Domaine dans lequel s'inscrit l'offre"
 * type from $JDV-J20-ChampActivite-ROR (required)
+* comment ^short = "commentaire (Metadonnee) : Commentaire qui peut être associé à chaque objet"
 
 * availableTime 0..1
 * availableTime ^short = "horaire (OffreOperationnelle) : heureDebut + heureFin"
@@ -125,10 +127,12 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORHealthcareServicePsychiatricSector named ror-healthcareservice-psychiatric-sector 0..* and
     RORCalculatedDistance named RORCalculatedDistance 0..1 and
     RORHealthcareServicePatientType named ror-healthcareservice-patient-type 1..1 and
-    RORHealthcareServiceContact named ror-healthcareservice-contact 0..*
+    RORHealthcareServiceContact named ror-healthcareservice-contact 0..* and
+    RORMetaCreationDate named ror-meta-creation-date 1..1
 * extension[ror-territorial-division] ^short = "zoneIntervention (OffreOperationnelle) : Périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite"
 * extension[ror-healthcareservice-sensitive-unit] ^short = "uniteSensible (OffreOperationnelle) : Permet de signaler que toutes les informations de description d'une offre sont confidentielles"
 * extension[ror-healthcareservice-no-consent-habilitation] ^short = "habilitationAuxSoinsSansConsentement (OffreOperationnelle) : permet d'identifier les offres pour lesquelles un établissement est autorisé à prendre en charge des patients sans leur consentement"
 * extension[ror-healthcareservice-psychiatric-sector] ^short = "secteurPsychiatrique (OffreOperationnelle) : aire géographique à laquelle sont rattachées des structures de relais et de soins qui prennent en charge des patients résidants sur ce secteur"
 * extension[ror-healthcareservice-patient-type] ^short = "publicPrisEnCharge (Patientele) : Ensemble de personnes qui présentent des caractéristiques psychologiques, intellectuelles, physiques, psycho-motrices, comportementales leur permettant de bénéficier de la prestation décrite"
 * extension[ror-healthcareservice-contact] ^short = "contact (OffreOperationnelle) : Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service"
+* extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"

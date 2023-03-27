@@ -7,6 +7,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * partOf only Reference(fr-organization or ROROrganization)
 
 /* Données techniques */
+* meta.lastUpdated 1..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -165,7 +166,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     organization-period named openingClosingDate 0..1 and
     ROROrganizationEGLocation named ror-organization-eg-location 0..1 and 
     ROROrganizationEGName named ror-organization-eg-name 0..1 and
-    ROROrganizationOIName named ror-organization-oi-name 1..1
+    ROROrganizationOIName named ror-organization-oi-name 1..1 and
+    RORMetaComment named ror-meta-comment 0..1 and
+    RORMetaComment named ror-meta-creation-date 1..1
 * extension[ror-organization-price] ^short = "Tarif"
 * extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique"
 * extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
@@ -179,3 +182,5 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[openingClosingDate] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
 * extension[ror-organization-eg-name] ^short = "denominationEG + complementDenominationEG + nomOperationnel + commentaire (EG)"
 * extension[ror-organization-oi-name] ^short = "nomOI (OI)"
+* extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
+* extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"

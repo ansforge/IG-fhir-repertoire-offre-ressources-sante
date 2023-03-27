@@ -4,6 +4,7 @@ Id: ror-practitioner
 Description: "Profil créée dans le cadre du ROR pour décrire les données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel"
 
 /* Données techniques */
+* meta.lastUpdated 1..1
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
@@ -36,5 +37,7 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    RORPractitionerTitle named ror-practitioner-title 0..1
+    RORPractitionerTitle named ror-practitioner-title 0..1 and
+    RORMetaCreationDate named ror-meta-creation-date 1..1
 * extension[ror-practitioner-title] ^short = "civilite (PersonnePhysique) : Civilité de la personne physique"
+* extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
