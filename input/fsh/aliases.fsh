@@ -3,10 +3,10 @@ Alias: $practitionerRole-contracted = https://apifhir.annuaire.sante.fr/ws-sync/
 Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted
 Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS
 
-Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure/
-// A compléter
-Alias: $TRE-XXX-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gouv.fr/NOS/TRE_XXX-TypeIdentifiantRessourceOperationnelle/FHIR/TRE_XXX-TypeIdentifiantRessourceOperationnelle
-Alias: $TRE-XXX-TypeIdentifiantAutre = https://mos.esante.gouv.fr/NOS/TRE_XXX-TypeIdentifiantAutre/FHIR/TRE_XXX-TypeIdentifiantAutre
+Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure
+Alias: $TRE-R345-TypeIdentifiantAutre = https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre
+Alias: $TRE-R354-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gouv.fr/NOS/TRE_R354-TypeIdentifiantRessourceOperationnelle/FHIR/TRE_R354-TypeIdentifiantRessourceOperationnelle
+
 
 // A compléter
 Alias: $JDV-JXXX-DepartementOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_JXXX-DepartementOM-ROR/FHIR/JDV-JXXX-DepartementOM-ROR

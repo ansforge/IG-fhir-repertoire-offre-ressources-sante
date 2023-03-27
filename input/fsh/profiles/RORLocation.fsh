@@ -30,10 +30,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     idLocation 0..1
 * identifier[idExterneSynchro] ^short = "idExterneSynchro (LieuRealisationOffre) : Identifiant défini par le porteur d’offre pour la zone d’hébergement des lits" 
 * identifier[idExterneSynchro].type 1..1
-* identifier[idExterneSynchro].type.coding.code = $TRE-XXX-TypeIdentifiantRessourceOperationnelle#26
+* identifier[idExterneSynchro].type.coding.code = $TRE-R354-TypeIdentifiantRessourceOperationnelle#26
 * identifier[idLocation] ^short = "identifiant (LieuRealisationOffre) : Identifiant fonctionnel du lieu"
 * identifier[idLocation].type 1..1
-* identifier[idLocation].type.coding.code = $TRE-XXX-TypeIdentifiantRessourceOperationnelle#25
+* identifier[idLocation].type.coding.code = $TRE-R354-TypeIdentifiantRessourceOperationnelle#25
 
 * alias ^slicing.discriminator.type = #value
 * alias ^slicing.discriminator.path = "url"

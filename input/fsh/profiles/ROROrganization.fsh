@@ -52,7 +52,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numSIRET].type.coding.code = $TRE-G07-TypeIdentifiantStructure#3
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
 * identifier[identifierOI].type 1..1
-* identifier[identifierOI].type.coding.code = $TRE-XXX-TypeIdentifiantAutre#42
+* identifier[identifierOI].type.coding.code = $TRE-R345-TypeIdentifiantAutre#42
 * identifier[numADELI] ^short = "TODO"
 * identifier[numADELI].type 1..1
 * identifier[numADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
