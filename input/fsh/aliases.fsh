@@ -7,12 +7,6 @@ Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G0
 Alias: $TRE-R345-TypeIdentifiantAutre = https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre
 Alias: $TRE-R354-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gouv.fr/NOS/TRE_R354-TypeIdentifiantRessourceOperationnelle/FHIR/TRE_R354-TypeIdentifiantRessourceOperationnelle
 
-
-// A compléter
-Alias: $JDV-JXXX-DepartementOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_JXXX-DepartementOM-ROR/FHIR/JDV-JXXX-DepartementOM-ROR
-Alias: $JDV-JXXX-TerritoireSante-ROR = https://mos.esante.gouv.fr/NOS/JDV_JXXX-TerritoireSante-ROR/FHIR/JDV-JXXX-TerritoireSante-ROR
-Alias: $JDV-JXXX-Pays-ROR = https://mos.esante.gouv.fr/NOS/JDV_JXXX-Pays-ROR/FHIR/JDV-JXXX-Pays-ROR
-
 Alias: $JDV-J16-ActeSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR
 Alias: $JDV-J17-ActiviteOperationnelle-ROR = https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR
 Alias: $JDV-J18-EquipementSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/JDV-J18-EquipementSpecifique-ROR
@@ -80,3 +74,6 @@ Alias: $JDV-J232-Competence-ROR = https://mos.esante.gouv.fr/NOS/JDV_J232-Compet
 Alias: $JDV-J236-TypeIdentifiant-ROR = https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR
 Alias: $JDV-J237-RegionOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR
 Alias: $JDV-J238-TypeOffre-ROR = https://mos.esante.gouv.fr/NOS/JDV_J238-TypeOffre-ROR/FHIR/JDV-J238-TypeOffre-ROR
+Alias: $JDV-J247-Pays-ROR = https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR
+Alias: $JDV-J248-DepartementOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR
+Alias: $JDV-J249-TerritoireSante-ROR = https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR
