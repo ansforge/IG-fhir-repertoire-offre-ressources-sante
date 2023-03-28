@@ -20,6 +20,10 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-location)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].searchParam[+].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
@@ -32,15 +36,15 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Destination d'usage du lieu"
-* rest.resource[=].searchParam[0].name = "identifier"
+* rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique du lieu de réalisation de l'offre"
-* rest.resource[=].searchParam[0].name = "near"
+* rest.resource[=].searchParam[+].name = "near"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-near"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Lieux proches du lieu de réalisation de l'offre"
-* rest.resource[=].searchParam[0].name = "status"
+* rest.resource[=].searchParam[+].name = "status"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Statut de la ressource"
@@ -60,63 +64,63 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-nb-capacity)
 * rest.resource[=].searchParam[=].type = #number
 * rest.resource[=].searchParam[=].documentation = "Nombre de capacité"
-* rest.resource[=].searchParam[0].name = "additional-bed-type"
+* rest.resource[=].searchParam[+].name = "additional-bed-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-additional-bed-type)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Types des lits disponnibles"
-* rest.resource[=].searchParam[0].name = "capacity-closing-type"
+* rest.resource[=].searchParam[+].name = "capacity-closing-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-capacity-closing-type)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Type de la fermeture de la capacité"
-* rest.resource[=].searchParam[0].name = "capacity-type"
+* rest.resource[=].searchParam[+].name = "capacity-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-capacity-type)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Nature de la capacité"
-* rest.resource[=].searchParam[0].name = "capacity-update-date"
+* rest.resource[=].searchParam[+].name = "capacity-update-date"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-capacity-update-date)
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date à jour de la capacité"
-* rest.resource[=].searchParam[0].name = "crisis-type"
+* rest.resource[=].searchParam[+].name = "crisis-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-crisis-type)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Type de la crise"
-* rest.resource[=].searchParam[0].name = "equipment-type"
+* rest.resource[=].searchParam[+].name = "equipment-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-equipment-type)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Type d'un equipement"
-* rest.resource[=].searchParam[0].name = "equipment-feature"
+* rest.resource[=].searchParam[+].name = "equipment-feature"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-equipment-feature)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Caractéristique d'un equipement"
-* rest.resource[=].searchParam[0].name = "gender-capacity-available"
+* rest.resource[=].searchParam[+].name = "gender-capacity-available"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-gender-capacity-available)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Genre disponnible de la capacité"
-* rest.resource[=].searchParam[0].name = "limit-value"
+* rest.resource[=].searchParam[+].name = "limit-value"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-limit-value)
 * rest.resource[=].searchParam[=].type = #quantity
 * rest.resource[=].searchParam[=].documentation = "Valeur limite"
-* rest.resource[=].searchParam[0].name = "commune-cog"
+* rest.resource[=].searchParam[+].name = "commune-cog"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-location-commune-cog)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Indique s'il y a une zone poser sur le site concerné"
-* rest.resource[=].searchParam[0].name = "near-insee-code"
+* rest.resource[=].searchParam[=].documentation = "Code officiel géographique (cog) de la commune dans laquelle le lieu est situé"
+* rest.resource[=].searchParam[+].name = "near-insee-code"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-location-near-insee-code)
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Lieux proches du lieu de réalisation de l'offre via le code COG INSEE"
-* rest.resource[=].searchParam[0].name = "residential-number"
+* rest.resource[=].searchParam[+].name = "residential-number"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-residential-number)
 * rest.resource[=].searchParam[=].type = #number
 * rest.resource[=].searchParam[=].documentation = "Nombre d'habitation"
-* rest.resource[=].searchParam[0].name = "residential-type"
+* rest.resource[=].searchParam[+].name = "residential-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-residential-type)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Type d'habitation"
-* rest.resource[=].searchParam[0].name = "temporality-capacity"
+* rest.resource[=].searchParam[+].name = "temporality-capacity"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-temporality-capacity)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Affectations temporaires"
-* rest.resource[=].searchParam[0].name = "temporary-assignement"
+* rest.resource[=].searchParam[+].name = "temporary-assignement"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-temporary-assignement)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Affectations temporaires"
@@ -124,7 +128,7 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-healthcareservice)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-* rest.resource[=].searchParam[0].name = "_id"
+* rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
@@ -192,6 +196,10 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-organization)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].searchParam[+].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
@@ -228,6 +236,10 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-practitioner)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].searchParam[+].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
@@ -240,6 +252,10 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-practitionerrole)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].searchParam[+].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
