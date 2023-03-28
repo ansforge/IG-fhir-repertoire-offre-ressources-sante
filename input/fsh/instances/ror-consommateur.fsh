@@ -100,10 +100,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-limit-value)
 * rest.resource[=].searchParam[=].type = #quantity
 * rest.resource[=].searchParam[=].documentation = "Valeur limite"
-* rest.resource[=].searchParam[+].name = "Code officiel géographique (cog) de la commune dans laquelle le lieu est situé"
+* rest.resource[=].searchParam[+].name = "commune-cog"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-location-commune-cog)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Indique s'il y a une zone poser sur le site concerné"
+* rest.resource[=].searchParam[=].documentation = "Code officiel géographique (cog) de la commune dans laquelle le lieu est situé"
 * rest.resource[=].searchParam[+].name = "near-insee-code"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-location-near-insee-code)
 * rest.resource[=].searchParam[=].type = #special
