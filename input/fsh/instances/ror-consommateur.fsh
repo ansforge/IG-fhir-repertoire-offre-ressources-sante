@@ -60,7 +60,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-nb-capacity)
 * rest.resource[=].searchParam[=].type = #number
 * rest.resource[=].searchParam[=].documentation = "Nombre de capacité"
-* rest.resource[=].searchParam[0].name = "additional-bed-type"
+* rest.resource[=].searchParam[+].name = "additional-bed-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-additional-bed-type)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Types des lits disponnibles"
