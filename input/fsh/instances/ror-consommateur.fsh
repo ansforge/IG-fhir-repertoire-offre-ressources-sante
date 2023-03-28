@@ -180,7 +180,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-healthcareservice-intervention-zone)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Zone d'intervention"
-* rest.resource[=].searchParam[+].name = "supported-patient-type"
+* rest.resource[=].searchParam[+].name = "patient-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-healthcareservice-patient-type)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Public pris en charge"
