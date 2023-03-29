@@ -100,7 +100,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     $practitionerRole-contracted named contracted 0..1 and
     $practitionerRole-hasCAS named optionCAS 0..1 and 
     $practitionerRole-vitaleAccepted named vitalAccepted 0..1 and
-    RORMetaCreationDate named ror-meta-creation-date 1..1
+    RORMetaCreationDate named ror-meta-creation-date 1..1 and
+    RORMetaComment named ror-meta-comment 0..1
 * extension[ror-practitionerrole-unit-exercise-mode] ^short = "modeExerciceOffre (SituationOperationnelle) : statut du professionnel lorsqu'il exerce dans le cadre de l'offre décrite"
 * extension[ror-practitionerrole-name] ^short = "civiliteExercie + nomExercice + prenomExercice (ExerciceProfessionnel)"
 * extension[contracted] ^short = "secteurConventionnement (SituationOperationnelle) : Secteur de conventionnement du professionnel libéral auquel il a adhéré auprès de l'Assurance Maladie"
@@ -109,3 +110,4 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * extension[optionCAS] ^short = "optionContratAccèsAuxSoins (SituationOperationnelle) : L'Option pratique tarifaire maîtrisée (OPTAM) a remplacé le Contrat d'accès aux soins (CAS) en 2017"
 * extension[vitalAccepted] ^short = "carteVitaleAcceptee (SituationOperationnelle) : Précise si le professionnel, dans le cadre de cette situation opérationnelle, dispose des moyens techniques pour prendre en charge la carte vitale ou pas"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+* extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"

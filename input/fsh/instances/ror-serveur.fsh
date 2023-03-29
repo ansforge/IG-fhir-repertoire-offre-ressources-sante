@@ -188,10 +188,6 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-healthcareservice-psychiatric-sector)
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Secteur psychiatrique de l'offre opérationnelle"
-* rest.resource[=].searchParam[+].name = "specific-competence"
-* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-healthcareservice-specific-competence)
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Compétence spécifique"
 * rest.resource[+].type = #Organization
 * rest.resource[=].profile = Canonical(ror-organization)
 * rest.resource[=].interaction[0].code = #search-type
@@ -212,8 +208,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identification nationale de l'Entité Géographique définie dans le CI-SIS"
-* rest.resource[=].searchParam[+].name = "name"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-name"
+* rest.resource[=].searchParam[+].name = "oi-name"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-oi-name)
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Nom de l'organisation interne"
 * rest.resource[=].searchParam[+].name = "type"

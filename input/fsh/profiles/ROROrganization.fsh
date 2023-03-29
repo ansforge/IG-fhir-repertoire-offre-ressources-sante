@@ -31,10 +31,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     idNatStruct 1..1 and
     numFINESS 0..1 and
     numSIREN 0..1 and
-    numRPPS 0..1 and
+    numero_cabinet_RPPS 0..1 and
     numSIRET 0..1 and 
     identifierOI 0..1 and
-    numADELI 0..1
+    numero_cabinet_ADELI 0..1
 * identifier[idNatStruct] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
 * identifier[idNatStruct].type 1..1
 * identifier[idNatStruct].type.coding.code = $TRE-G07-TypeIdentifiantStructure#40 
@@ -44,18 +44,18 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numSIREN] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
 * identifier[numSIREN].type 1..1
 * identifier[numSIREN].type.coding.code = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[numRPPS] ^short = "TODO"
-* identifier[numRPPS].type 1..1
-* identifier[numRPPS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#4
+* identifier[numero_cabinet_RPPS] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang "
+* identifier[numero_cabinet_RPPS].type 1..1
+* identifier[numero_cabinet_RPPS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#4
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1
 * identifier[numSIRET].type.coding.code = $TRE-G07-TypeIdentifiantStructure#3
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
 * identifier[identifierOI].type 1..1
 * identifier[identifierOI].type.coding.code = $TRE-R345-TypeIdentifiantAutre#42
-* identifier[numADELI] ^short = "TODO"
-* identifier[numADELI].type 1..1
-* identifier[numADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
+* identifier[numero_cabinet_ADELI] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang "
+* identifier[numero_cabinet_ADELI].type 1..1
+* identifier[numero_cabinet_ADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
 
 // Slice déjà défini dans FrOrganization
 * type 3..* 
@@ -168,7 +168,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationEGName named ror-organization-eg-name 0..1 and
     ROROrganizationOIName named ror-organization-oi-name 1..1 and
     RORMetaComment named ror-meta-comment 0..1 and
-    RORMetaComment named ror-meta-creation-date 1..1
+    RORMetaCreationDate named ror-meta-creation-date 1..1
 * extension[ror-organization-price] ^short = "Tarif"
 * extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique"
 * extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
@@ -181,6 +181,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-period] ^short = "typeFermeture (EG + OI) + datePrevisionnelleReouverture (OI)"
 * extension[openingClosingDate] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
 * extension[ror-organization-eg-name] ^short = "denominationEG + complementDenominationEG + nomOperationnel + commentaire (EG)"
-* extension[ror-organization-oi-name] ^short = "nomOI (OI)"
+* extension[ror-organization-oi-name] ^short = "nomOI (OI) : Nom de l'organisation interne"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
