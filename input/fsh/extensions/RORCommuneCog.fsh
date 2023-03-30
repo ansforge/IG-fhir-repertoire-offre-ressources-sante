@@ -6,6 +6,6 @@ Description: "Extension créée dans le cadre du ROR pour représenter le code o
 * ^context.type = #element
 * ^context.expression = "Organization"
 * ^context.type = #extension
-* ^context.expression = "https://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-organization-eg-location"
+* ^context.expression = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-eg-location"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J230-CommuneOM-ROR (required)

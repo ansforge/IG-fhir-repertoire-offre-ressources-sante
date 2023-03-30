@@ -7,4 +7,4 @@ Usage: #definition
 * code = #limit-value
 * base = #Location
 * type = #quantity
-* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-location-equipment-limit').extension(url='limitValue').valueQuantity"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit').extension(url='limitValue').valueQuantity"
