@@ -1,4 +1,7 @@
 [![Workflow Init](https://github.com/ansforge/FIG_ans.fhir.fr.ror30/actions/workflows/fhir-worklows.yml/badge.svg)](https://github.com/ansforge/FIG_ans.fhir.fr.ror30/actions/workflows/fhir-worklows.yml)
+<figure>
+<img alt="Le Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social (ROR)" src="https://esante.gouv.fr/sites/default/files/styles/658_x_425_hub_banner_ds/public/2023-02/Visuel_ROR_esante.png?itok=22mgg7g_" width="300" height="200" align="middle">
+</figure>
 
 # Contexte
 
@@ -24,7 +27,7 @@ Les ressources profilées pour ce cas d'usage spécifique sont :
 Les pipelines mis de ce repository permettent : 
 * Executer  Sushi
 * Faire les tests avec le validator_cli
-* Publier les pages :  https://ansforge.github.io/FIG_ans.fhir.fr.ror30/ig/main
+* Publier les pages :  https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/ig/main/
 
 ![image](https://user-images.githubusercontent.com/101335975/215342980-61686171-e3f8-40c5-865c-efdfc3dd52b4.png)
 
