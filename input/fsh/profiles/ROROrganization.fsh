@@ -3,6 +3,8 @@ Parent: fr-organization
 Id: ror-organization
 Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
 
+/* Règles de gestions */
+* obeys organization-eg and organization-ej and organization-oi
 /* Références*/
 * partOf only Reference(fr-organization or ROROrganization)
 
@@ -18,17 +20,22 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
-* name 1..1
 * name ^short = "raisonSociale (EJ) : Raison sociale complète de l'entité juridique"
-* alias 0..1
-* alias ^short = "complementRaisonSociale (EJ) : Suite de la raison sociale, si elle existe"
+* name.extension ^slicing.discriminator.type = #value
+* name.extension ^slicing.discriminator.path = "url"
+* name.extension ^slicing.rules = #open
+* name.extension contains
+    ROROrganizationAdditionalName named ror-organization-additional-name 0..1
+* name.extension[ror-organization-additional-name] ^short = "complementRaisonSociale (EJ) : Suite de la raison sociale, si elle existe"
+
+* alias ^short = "nomOI (OI) : Nom de l'organisation interne"
 
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
-    idNatStruct 1..1 and
+    idNatStruct 0..1 and
     numFINESS 0..1 and
     numSIREN 0..1 and
     numero_cabinet_RPPS 0..1 and
@@ -60,19 +67,19 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 // Slice déjà défini dans FrOrganization
 * type 3..* 
 * type contains
-    statutJuridiqueINSEE 1..1 and
+    statutJuridiqueINSEE 0..1 and
     sousEnsembleAgregatStatutJuridique 0..1 and
-    categorieEtablissement 1..1 and
+    categorieEtablissement 0..1 and
     sphParticipation 0..1 and
-    OIType 1..1 and
+    OIType 0..1 and
     fonctionLieu 0..1
 * type[statutJuridiqueINSEE] ^short = "statutJuridique (EJ) : Situation juridique de l’établissement"
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
 * type[sousEnsembleAgregatStatutJuridique] ^short = "sousEnsembleAgregatStatutJuridique (EJ) : Deuxième niveau dans l’arborescence des statuts juridiques"
 * type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
-* type[categorieEtablissement] ^short = "categorieEG (EG) : "
+* type[categorieEtablissement] ^short = "categorieEG (EG) : Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
 * type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
-* type[sphParticipation] ^short = "modaliteParticipationSPH (EG) : Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
+* type[sphParticipation] ^short = "modaliteParticipationSPH (EG) : Modalités de participation au service public hospitalier"
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[OIType] ^short = "typeOI (OI) : Type d'organisation interne"
 * type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
@@ -160,15 +167,15 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationNbTemporarySocialHelpPlace named ror-organization-nb-temporary-social-help-place 0..1 and
     ROROrganizationAccessibilityLocation named ror-organization-accessibility-location 0..1 and
     ROROrganizationLevelRecourseORSAN named ror-organization-level-recourse-orsan 0..1 and
-    RORCommuneCog named ror-commune-cog 1..1 and 
     ROROrganizationDropZone named ror-organization-drop-zone 0..1 and
-    ROROrganizationPeriod named ror-organization-period 0..1 and
-    organization-period named openingClosingDate 0..1 and
-    ROROrganizationEGLocation named ror-organization-eg-location 0..1 and 
+    ROROrganizationReopeningDate named ror-organization-reopening-date 0..1 and
+    ROROrganizationCreationDate named ror-organization-creation-date 0..1 and
+    ROROrganizationClosingType named ror-organization-closing-type 0..1 and
+    organization-period named organization-period 0..1 and
     ROROrganizationEGName named ror-organization-eg-name 0..1 and
-    ROROrganizationOIName named ror-organization-oi-name 1..1 and
     RORMetaComment named ror-meta-comment 0..1 and
-    RORMetaCreationDate named ror-meta-creation-date 1..1
+    RORMetaCreationDate named ror-meta-creation-date 1..1 and 
+    ROROrganizationComment named ror-organization-comment 0..1
 * extension[ror-organization-price] ^short = "Tarif"
 * extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique"
 * extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
@@ -178,9 +185,30 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-accessibility-location] ^short = "accessibiliteLieu (EG) : Précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public"
 * extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
-* extension[ror-organization-period] ^short = "typeFermeture (EG + OI) + datePrevisionnelleReouverture (OI)"
-* extension[openingClosingDate] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
+* extension[ror-organization-reopening-date] ^short = "datePrevisionnelleReouverture (OI) : "
+* extension[ror-organization-creation-date] ^short = "dateCreation (EJ) : Date de création de l'entité juridique"
+* extension[ror-organization-closing-type] ^short = "typeFermeture (EJ + EG + OI) : Date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
+* extension[organization-period] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
 * extension[ror-organization-eg-name] ^short = "denominationEG + complementDenominationEG + nomOperationnel + commentaire (EG)"
-* extension[ror-organization-oi-name] ^short = "nomOI (OI) : Nom de l'organisation interne"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+* extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
+
+
+Invariant:   organization-oi
+Description: "Si l'élément identifierOI est rempli alors il faut que le nomOI, le typeOI soient remplis"
+Expression:  "alias.nomOI.exists() or type.OIType.exists() or identifier.identifierOI.exists().not()"
+Severity:    #error
+
+
+
+Invariant:   organization-eg
+Description: "Si l'élément identifierEG est rempli alors il faut que la dénominationEG, la catégorieEG soient remplis"
+Expression:  "identifier.idNatStruct.exists() or  alias.nomEG.exists() or type.categorieEtablissement.exists() or identifier.numSIRET.exists().not()"
+Severity:    #error
+
+
+Invariant:   organization-ej
+Description: "Si l'élément identifierEJ est rempli alors il faut que la raison sociale, le statut juridique soient remplis "
+Expression:  "identifier.idNatStruct.exists() or name.exists() or type.statutJuridiqueINSEE.exists() identifier.numSIREN.exists().not()"
+Severity:    #error

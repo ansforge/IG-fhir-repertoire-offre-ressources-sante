@@ -15,6 +15,8 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
+* name.prefix from $JDV-J207-Civilite-ROR (extensible)
+* name.prefix ^short = "Civilite (PersonnePhysique) : Civilite de la personne physique "
 * identifier 1..1
 * identifier ^short = "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
 
@@ -37,7 +39,5 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    RORPractitionerTitle named ror-practitioner-title 0..1 and
     RORMetaCreationDate named ror-meta-creation-date 1..1
-* extension[ror-practitioner-title] ^short = "civilite (PersonnePhysique) : Civilité de la personne physique"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"

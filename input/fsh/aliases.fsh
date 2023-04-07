@@ -46,6 +46,7 @@ Alias: $JDV-J203-TypeOrganisationInterne-ROR = https://mos.esante.gouv.fr/NOS/JD
 Alias: $JDV-J204-NiveauRecoursORSAN-ROR = https://mos.esante.gouv.fr/NOS/JDV_J204-NiveauRecoursORSAN-ROR/FHIR/JDV-J204-NiveauRecoursORSAN-ROR
 Alias: $JDV-J205-UnitePrix-ROR = https://mos.esante.gouv.fr/NOS/JDV_J205-UnitePrix-ROR/FHIR/JDV-J205-UnitePrix-ROR
 Alias: $JDV-J206-PrestationNonObligatoireIncluse-ROR = https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR
+Alias: $JDV-J207-Civilite-ROR = https://mos.esante.gouv.fr/NOS/JDV_J207-Civilite-ROR/FHIR/JDV-J207-Civilite-ROR
 Alias: $JDV-J208-CiviliteExcercice-ROR = https://mos.esante.gouv.fr/NOS/JDV_J208-CiviliteExcercice-ROR/FHIR/JDV-J208-CiviliteExcercice-ROR
 Alias: $JDV-J209-TypeSavoirFaire-ROR = https://mos.esante.gouv.fr/NOS/JDV_J209-TypeSavoirFaire-ROR/FHIR/JDV-J209-TypeSavoirFaire-ROR
 Alias: $JDV-J210-SpecialiteOrdinale-ROR = https://mos.esante.gouv.fr/NOS/JDV_J210-SpecialiteOrdinale-ROR/FHIR/JDV-J210-SpecialiteOrdinale-ROR

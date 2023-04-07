@@ -9,10 +9,9 @@ Description: "Extension créée dans le cadre du ROR pour désigner l'entité g�
 * extension contains
     denomination 1..1 and
     additionalDenomination 0..1 and
-    operationalName 0..1 and 
-    comment 0..1
+    operationalName 0..1
 * extension[denomination].value[x] only string
 * extension[additionalDenomination].value[x] only string
 * extension[operationalName].value[x] only string
-* extension[comment].value[x] only string
+
 

@@ -5,6 +5,4 @@ Description: "Extension créée dans le cadre du ROR qui précise l'utilisation 
 * ^context.expression = "ContactPoint"
 * ^context.type = #extension
 * ^context.expression = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"
-* ^context.type = #extension
-* ^context.expression = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-eg-location"
 * value[x] only string
