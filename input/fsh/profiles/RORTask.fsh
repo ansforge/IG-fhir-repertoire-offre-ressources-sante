@@ -3,7 +3,7 @@ Parent: Task
 Id: ror-task
 Description: "Anomalie concerant une donnée dans une ressource du ROR"
 /* Données fonctionnelles */
-* identifier 1..1
+* identifier 0..1
 * identifier ^short = "Identifiant de l'anomalie"
 * status MS //Status required doit correspondre au valueset exigé par FHIR dans TaskStatus https://www.hl7.org/FHIR/valueset-task-status.html
 * businessStatus 1..1
