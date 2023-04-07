@@ -3,8 +3,6 @@ Parent: fr-organization
 Id: ror-organization
 Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
 
-/* Règles de gestions */
-* obeys organization-eg and organization-ej and organization-oi
 /* Références*/
 * partOf only Reference(fr-organization or ROROrganization)
 
@@ -28,7 +26,22 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationAdditionalName named ror-organization-additional-name 0..1
 * name.extension[ror-organization-additional-name] ^short = "complementRaisonSociale (EJ) : Suite de la raison sociale, si elle existe"
 
-* alias ^short = "nomOI (OI) : Nom de l'organisation interne"
+* alias ^slicing.discriminator.type = #value
+* alias ^slicing.discriminator.path = "id"
+* alias ^slicing.rules = #open
+* alias contains   
+    OIName 0..1 and
+    denomination 0..1 and
+    additionalDenomination 0..1 and
+    operationalName 0..1
+* alias[OIName] ^short = "nomOI (OI) : Nom de l'organisation interne"
+* alias[OIName].id = "OIName"
+* alias[denomination] ^short = "denominationEG (EG) : Nom sous lequel l'entité géographique exerce son activité"
+* alias[denomination].id = "denomination"
+* alias[additionalDenomination] ^short = "complementDenominationEG (EG) : Suite de la dénomination de l'entité géographique, si elle existe"
+* alias[additionalDenomination].id = "additionalDenomination"
+* alias[operationalName].id = "operationalName"
+* alias[operationalName] ^short = "nomOperationnel (EG) : Appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
@@ -193,22 +206,3 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
-
-
-Invariant:   organization-oi
-Description: "Si l'élément identifierOI est rempli alors il faut que le nomOI, le typeOI soient remplis"
-Expression:  "alias.nomOI.exists() and type.OIType.exists() and identifier.identifierOI.exists().not()"
-Severity:    #error
-
-
-
-Invariant:   organization-eg
-Description: "Si l'élément identifierEG est rempli alors il faut que la dénominationEG, la catégorieEG soient remplis"
-Expression:  "identifier.idNatStruct.exists() and  alias.nomEG.exists() and type.categorieEtablissement.exists() and identifier.numSIRET.exists().not()"
-Severity:    #error
-
-
-Invariant:   organization-ej
-Description: "Si l'élément identifierEJ est rempli alors il faut que la raison sociale, le statut juridique soient remplis "
-Expression:  "identifier.idNatStruct.exists() and name.exists() and type.statutJuridiqueINSEE.exists() and identifier.numSIREN.exists().not()"
-Severity:    #error
