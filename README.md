@@ -1,7 +1,9 @@
 [![Workflow Init](https://github.com/ansforge/FIG_ans.fhir.fr.ror30/actions/workflows/fhir-worklows.yml/badge.svg)](https://github.com/ansforge/FIG_ans.fhir.fr.ror30/actions/workflows/fhir-worklows.yml)
+<div align="center">
 <figure>
 <img alt="Le Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social (ROR)" src="https://esante.gouv.fr/sites/default/files/styles/658_x_425_hub_banner_ds/public/2023-02/Visuel_ROR_esante.png?itok=22mgg7g_" width="300" height="200" align="middle">
 </figure>
+</div>
 
 # Contexte
 
