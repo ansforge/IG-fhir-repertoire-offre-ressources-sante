@@ -43,7 +43,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * alias[operationalName].id = "operationalName"
 * alias[operationalName] ^short = "nomOperationnel (EG) : Appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
-* identifier 1..*
+* identifier 0..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
@@ -78,7 +78,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numero_cabinet_ADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
 
 // Slice déjà défini dans FrOrganization
-* type 3..* 
+* type 0..* 
 * type contains
     statutJuridiqueINSEE 0..1 and
     sousEnsembleAgregatStatutJuridique 0..1 and
