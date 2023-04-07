@@ -197,18 +197,18 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 Invariant:   organization-oi
 Description: "Si l'élément identifierOI est rempli alors il faut que le nomOI, le typeOI soient remplis"
-Expression:  "alias.nomOI.exists() or type.OIType.exists() or identifier.identifierOI.exists().not()"
+Expression:  "alias.nomOI.exists() and type.OIType.exists() and identifier.identifierOI.exists().not()"
 Severity:    #error
 
 
 
 Invariant:   organization-eg
 Description: "Si l'élément identifierEG est rempli alors il faut que la dénominationEG, la catégorieEG soient remplis"
-Expression:  "identifier.idNatStruct.exists() or  alias.nomEG.exists() or type.categorieEtablissement.exists() or identifier.numSIRET.exists().not()"
+Expression:  "identifier.idNatStruct.exists() and  alias.nomEG.exists() and type.categorieEtablissement.exists() and identifier.numSIRET.exists().not()"
 Severity:    #error
 
 
 Invariant:   organization-ej
 Description: "Si l'élément identifierEJ est rempli alors il faut que la raison sociale, le statut juridique soient remplis "
-Expression:  "identifier.idNatStruct.exists() or name.exists() or type.statutJuridiqueINSEE.exists() identifier.numSIREN.exists().not()"
+Expression:  "identifier.idNatStruct.exists() and name.exists() and type.statutJuridiqueINSEE.exists() and identifier.numSIREN.exists().not()"
 Severity:    #error
