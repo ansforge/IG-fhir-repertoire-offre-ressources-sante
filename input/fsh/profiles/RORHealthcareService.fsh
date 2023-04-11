@@ -1,7 +1,7 @@
 Profile: RORHealthcareService
 Parent: HealthcareService
 Id: ror-healthcareservice
-Description: "Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne "
+Description: "Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne"
 
 /* Données techniques */
 * meta.lastUpdated 1..1
@@ -51,7 +51,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1
 * telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
-* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication "
+* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * characteristic 1..*
@@ -91,7 +91,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic[ressourceProfession] from $JDV-J186-ProfessionRessource-ROR (required)
 * characteristic[specificCompetence] ^short = "competenceSpecifique (OffreOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne"
 * characteristic[specificCompetence] from $JDV-J33-CompetenceSpecifique-ROR (required)
-* characteristic[expertiseLevel] ^short = "niveauExpertise (OffreOperationnelle) : Niveau de ressources humaines et matérielles engagées dans la réalisation de l'offre "
+* characteristic[expertiseLevel] ^short = "niveauExpertise (OffreOperationnelle) : Niveau de ressources humaines et matérielles engagées dans la réalisation de l'offre"
 * characteristic[expertiseLevel] from $JDV-J227-NiveauExpertise-ROR (required)
 * characteristic[temporalityStopService] ^short = "typeFermeture (OffreOperationnelle) : Temporalité d'arrêt de réalisation de la prestation"
 * characteristic[temporalityStopService] from $JDV-J185-TypeFermeture-ROR (required)

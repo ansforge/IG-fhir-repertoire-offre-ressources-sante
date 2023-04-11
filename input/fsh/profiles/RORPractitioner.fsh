@@ -16,7 +16,7 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 
 /* Données fonctionnelles */
 * name.prefix from $JDV-J207-Civilite-ROR (extensible)
-* name.prefix ^short = "Civilite (PersonnePhysique) : Civilite de la personne physique "
+* name.prefix ^short = "Civilite (PersonnePhysique) : Civilite de la personne physique"
 * identifier 1..1
 * identifier ^short = "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
 
@@ -32,7 +32,7 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1
 * telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
-* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication "
+* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * extension ^slicing.discriminator.type = #value

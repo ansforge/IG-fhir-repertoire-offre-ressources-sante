@@ -45,7 +45,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * telecom 0..*
 * telecom ^short = "telecommunication (LieuRealisationOffre) : Adresse(s) de télécommunication du lieu"
 * telecom.value 1..1
-* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communica"
+* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
@@ -53,8 +53,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1 and
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1
-* telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication "
-* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication "
+* telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
+* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * address ^short = "adresse (LieuRealisationOffre) : Adresse géopostale du lieu"

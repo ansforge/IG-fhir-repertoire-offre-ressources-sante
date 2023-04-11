@@ -64,7 +64,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numSIREN] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
 * identifier[numSIREN].type 1..1
 * identifier[numSIREN].type.coding.code = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[numero_cabinet_RPPS] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang "
+* identifier[numero_cabinet_RPPS] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[numero_cabinet_RPPS].type 1..1
 * identifier[numero_cabinet_RPPS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#4
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
@@ -73,7 +73,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
 * identifier[identifierOI].type 1..1
 * identifier[identifierOI].type.coding.code = $TRE-R345-TypeIdentifiantAutre#42
-* identifier[numero_cabinet_ADELI] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang "
+* identifier[numero_cabinet_ADELI] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[numero_cabinet_ADELI].type 1..1
 * identifier[numero_cabinet_ADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
 
@@ -165,7 +165,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORTelecomUsage named ror-telecom-usage 0..1 and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1
 * telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
-* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication "
+* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * extension ^slicing.discriminator.type = #value
@@ -198,7 +198,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-accessibility-location] ^short = "accessibiliteLieu (EG) : Précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public"
 * extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
-* extension[ror-organization-reopening-date] ^short = "datePrevisionnelleReouverture (OI) : "
+* extension[ror-organization-reopening-date] ^short = "datePrevisionnelleReouverture (OI)"
 * extension[ror-organization-creation-date] ^short = "dateCreation (EJ) : Date de création de l'entité juridique"
 * extension[ror-organization-closing-type] ^short = "typeFermeture (EJ + EG + OI) : Date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
 * extension[organization-period] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
