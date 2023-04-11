@@ -1,4 +1,4 @@
-<!-- ## Consultation de l'offre (synchronisation) -->
+<!-- ## Consultation de l'offre (Extraction) -->
 
 ### Caractéristiques de l'API 
 
@@ -177,7 +177,7 @@ Plus de précision sur la spécification FHIR :
 
 Ces critères de recherche sont applicables à la ressource
 HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/search.html#chaining). Pour cela utiliser la syntaxe
-suivante : `location:[NOM CRITERE]`
+suivante : `organization.[NOM CRITERE]`
 
 -   Les critères de recherche, définis au [paragraphe dédié](specifications_techniques.html#structuredefinition-ror-location), de
     **StructureDefinition-ror-location** applicables à ce cas d'usage
@@ -195,7 +195,7 @@ suivante : `location:[NOM CRITERE]`
 
 Ces critères de recherche sont applicables à la ressource
 HealthcareService, grâce au chainage. Pour cela utiliser la syntaxe
-suivante : `location:[NOM CRITERE]`
+suivante : `location.[NOM CRITERE]`
 
 -   Les critères de recherche, définis au [paragraphe dédié](specifications_techniques.html#structuredefinition-ror-practioner), de
     **StructureDefinition-ror-practitioner** applicables à ce cas
@@ -211,7 +211,7 @@ suivante : `location:[NOM CRITERE]`
 </tbody>
 </table>
 
-Ces critères de recherche sont applicables à la ressource Location,
+Ces critères de recherche sont applicables à la ressource HealthcareService,
 grâce au [chainage](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]`
 
@@ -229,13 +229,13 @@ grâce au [chainage](https://www.hl7.org/fhir/search.html#has). Pour cela utilis
 </tbody>
 </table>
 
-Ces critères de recherche sont applicables à la ressource Location,
+Ces critères de recherche sont applicables à la ressource HealthcareService,
 grâce au [chainage](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:PractitionerRole:service:[NOM CRITERE]`
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits au paragraphe 5
+Les paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html)
 applicables à ce cas d'usage sont :
 
 -   \_revinclude, \_include, :iterate
