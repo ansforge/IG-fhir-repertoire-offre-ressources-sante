@@ -4,4 +4,4 @@ Description: "Extension créée dans le cadre du ROR pour préciser l'aide finan
 * ^context.type = #element
 * ^context.expression = "Organization"
 * value[x] only CodeableConcept
-* value[x] from $JDV-J31-AideFinanciere-ROR (required)
+* valueCodeableConcept from $JDV-J31-AideFinanciere-ROR (required)
