@@ -1,33 +1,43 @@
 Profile: RORPractitioner
 Parent: Practitioner
 Id: ror-practitioner
-Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^status = #active
-* ^publisher = "ANS"
-* id 1..
-* meta 1..
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension ^min = 0
-* extension contains $mailboxMSS named mailBoxMSS 0..*
-* extension[mailBoxMSS] ^min = 0
-* extension[mailBoxMSS] ^isModifier = false
+Description: "Profil créée dans le cadre du ROR pour décrire les données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel"
+
+/* Données techniques */
+* meta.lastUpdated 1..1
+* meta.tag ^slicing.discriminator.type = #value
+* meta.tag ^slicing.discriminator.path = "url"
+* meta.tag ^slicing.rules = #open
+* meta.tag ^slicing.description = "Slicing pour gérer le code région définissant la région source des données"
+* meta.tag ^slicing.ordered = false
+* meta.tag contains
+    codeRegion 0..1
+* meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
+
+/* Données fonctionnelles */
+* name.prefix from $JDV-J207-Civilite-ROR (extensible)
+* name.prefix ^short = "Civilite (PersonnePhysique) : Civilite de la personne physique"
 * identifier 1..1
-* name.suffix ..1
-* name.suffix from $StructureDefinition (required)
-* telecom ..1
+* identifier ^short = "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
+
+* telecom 0..*
+* telecom ^short = "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel"
+* telecom.value 1..1
+* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
 * telecom.extension contains 
-    RORTelecomUsage named usage 0..1 and
-    RORConfidentialityLevel named ConfidentialityLevel 1..
-* telecom.extension[usage] ^isModifier = false
-//* telecom.extension[ConfidentialityLevel] only RORConfidentialityLevel
-//* telecom.extension[ConfidentialityLevel] ^sliceName = "ConfidentialityLevel"
-//* telecom.extension[ConfidentialityLevel] ^isModifier = false
-* telecom.system 1..
-* telecom.system from $JDV-J225-CanalCommunication-ROR (required)
-* telecom.value 1..
+    RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1 and
+    RORTelecomUsage named ror-telecom-usage 0..1 and
+    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1
+* telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
+* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
+* telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication"
+
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
+* extension contains
+    RORMetaCreationDate named ror-meta-creation-date 1..1
+* extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"

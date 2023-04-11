@@ -1,9 +1,10 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
-id: ans.fhir.fr.ROR
-canonical: http://esante.gouv.fr/ci-sis/fhir/ImplementationGuide/ROR
+id: ans.fhir.fr.ror
+canonical: https://interop.esante.gouv.fr/ig/fhir/ror
 name: ROR
-title: ROR
+title: Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social
+description: Ressources de conformité basées sur le modèle d'exposition 3.0 du ROR
 publisher: 
   name: ANS
   url: https://esante.gouv.fr
@@ -11,7 +12,7 @@ dependencies:
   ans.annuaire.fhir.r4: 0.2.0
   hl7.fhir.fr.core: 1.1.0
 status: active
-version: "3.0"
+version: "0.1.0"
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
@@ -24,38 +25,49 @@ parameters:
 pages:
     index.md:
         title: Accueil
-    #    construction_des_flux.md:
-    #    st_flux1.md:
-    #        title: Flux 01
-    #    st_flux2.md:
-    #        title: Flux 02
     specifications_fonctionnelles.md:
-    #     sf_ajout.md:
-    #         title: Fonctionnalité 1
-    specifications_techniques.md:
-    autres_ressources.md:
-        title: Autres Ressources
+    specifications_techniques_1.md:
+        title: Consultation des données capacitaires
+    specifications_techniques_2.md:
+        title: Consultation de l'offre (synchronisation)
+    specifications_techniques_3.md:
+        title: Recherche d'offre sur critères principaux
+    specifications_techniques_4.md:
+        title: Recherche d'offre avec données capacitaires
+    search_param.md:
+        title: Critères de recherche
+    modifiers.md:
+        title: Paramètres et modificateurs de requêtes FHIR
+    annexes.md:
+        title: Annexes    
+    mapping.md:
+        title: Mapping FHIR du modèle de données du ROR
+    downloads.md:
+        title: Téléchargements et usages
         securite.md:
-            title: Sécurité
-        downloads.md:
-            title: Téléchargements et usages
+                title: Sécurité
+    autres_ressources.md:
+            title: Autres Ressources
     about.md:
         title: A propos de ce guide
 
 menu:
     Accueil: index.html
-    #Description des flux:
-    #    Construction des flux: construction_des_flux.html
-    #    Flux 01: st_flux1.html
-    #    Flux 02: st_flux2.html
-    Spécifications fonctionnelles:
-         Spécifications fonctionnelles: specifications_fonctionnelles.html
-    #     Fonctionnalité 1: sf_ajout.html
-    Spécifications techniques:
-         Spécifications techniques: specifications_techniques.html
-    Ressources de conformance: artifacts.html
+    Spécifications fonctionnelles: specifications_fonctionnelles.html
+    Spécifications techniques: 
+        Consultation des données capacitaires: specifications_techniques_1.html
+        Consultation de l'offre (synchronisation): specifications_techniques_2.html
+        Recherche d'offre sur critères principaux: specifications_techniques_3.html
+        Recherche d'offre avec données capacitaires: specifications_techniques_4.html
+        Critères de recherche: search_param.html
+        Paramètres et modificateurs de requêtes FHIR: modifiers.html
+        Annexes: annexes.html
+    Mapping FHIR du modèle de données: mapping.html
+    Ressources de conformité: artifacts.html
+    Téléchargements et usage: 
+        Téléchargements: downloads.html
+        Sécurité: securite.html
     Autres ressources:
-        Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
     A propos de ce guide: about.html

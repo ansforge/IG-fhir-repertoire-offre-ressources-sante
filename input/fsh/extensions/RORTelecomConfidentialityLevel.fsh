@@ -1,10 +1,9 @@
 Extension: RORTelecomConfidentialityLevel
 Id: ror-telecom-confidentiality-level
-Description: "Extension créée dans le cadre du ROR"
-* ^version = "3.0"
-* ^date = "2022-06-28T00:00:00+02:00"
-* ^publisher = "ANS"
+Description: "Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication."
 * ^context.type = #element
-* ^context.expression = "Practitioner.telecom"
+* ^context.expression = "ContactPoint"
+* ^context.type = #extension
+* ^context.expression = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"
 * value[x] only CodeableConcept
-* value[x] from $JDV-J222-NiveauConfidentialite-ROR (required)
+* valueCodeableConcept from $JDV-J222-NiveauConfidentialite-ROR (required)
