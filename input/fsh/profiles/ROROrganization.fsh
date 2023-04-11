@@ -185,7 +185,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationCreationDate named ror-organization-creation-date 0..1 and
     ROROrganizationClosingType named ror-organization-closing-type 0..1 and
     organization-period named organization-period 0..1 and
-    ROROrganizationEGName named ror-organization-eg-name 0..1 and
     RORMetaComment named ror-meta-comment 0..1 and
     RORMetaCreationDate named ror-meta-creation-date 1..1 and 
     ROROrganizationComment named ror-organization-comment 0..1
@@ -202,7 +201,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-creation-date] ^short = "dateCreation (EJ) : Date de création de l'entité juridique"
 * extension[ror-organization-closing-type] ^short = "typeFermeture (EJ + EG + OI) : Date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
 * extension[organization-period] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
-* extension[ror-organization-eg-name] ^short = "denominationEG + complementDenominationEG + nomOperationnel + commentaire (EG)"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
