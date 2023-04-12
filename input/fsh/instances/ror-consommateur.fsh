@@ -11,7 +11,7 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* implementationGuide = "http://esante.gouv.fr/fhir/ror/ImplementationGuide/ror-ig"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
 * rest.mode = #client
 * rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre"
 * rest.security.cors = false
@@ -264,13 +264,9 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-task)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-* rest.resource[=].searchParam[+].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
-* rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Date de la dernière mise a jour"
-* rest.resource[=].searchParam[+].name = "_tag"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
+* rest.resource[=].searchParam[+].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
+* rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].interaction[+].code = #create
-* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #patch

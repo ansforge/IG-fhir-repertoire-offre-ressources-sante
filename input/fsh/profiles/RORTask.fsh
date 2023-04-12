@@ -2,19 +2,17 @@ Profile: RORTask
 Parent: Task
 Id: ror-task
 Description: "Anomalie concerant une donnée dans une ressource du ROR"
-
-/* Données techniques */
-* id 1..
-* meta 1..
+* ^status = #draft
 
 /* Données fonctionnelles */
-* identifier 1..1
+* identifier 0..1
 * identifier ^short = "Identifiant de l'anomalie"
 * status MS //Status required doit correspondre au valueset exigé par FHIR dans TaskStatus https://www.hl7.org/FHIR/valueset-task-status.html
 * businessStatus 1..1
 * businessStatus ^short = "différent type d statut métier de l'anomalie"
 * code 1..1
 * code ^short = "Thématique de l'anomalie exemples :Exactitude, Complétude, Exhaustivité"
+* code from $JDV-J241-ThematiqueAnomalie-ROR
 * description MS
 * description ^short = "Description de l'anomalie"
 * focus 1..1
@@ -25,6 +23,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * lastModified ^short = "Date de dernière modification"
 * reasonCode 1..1
 * reasonCode ^short = "Type d'action proposée en réponse"
+* reasonCode from $JDV-J242-ActionAnomalie-ROR
 * input ^short = "Eléments en entrée pour définir l'anomalie"
 //slices input
 * input ^slicing.discriminator.type = #pattern
@@ -41,7 +40,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
     identifierRequester 0..1 MS // identifiant du déclarant de l'anomalie
 * input[ruleErrorId] ^short = "Identifiant de la règle à l'origine de l'anomalie"
 * input[ruleErrorId].type = InputTaskRORCodeSystem#ruleErrorId
-* input[ruleErrorId].value[x] only CodeableConcept
+* input[ruleErrorId].value[x] only string
 * input[errorValue] ^short = "donnée erronée"
 * input[errorValue].type = InputTaskRORCodeSystem#errorValue
 * input[errorValue].value[x] only string
@@ -65,12 +64,12 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * output ^slicing.description = "slicing concernant le traitement de l'anomalie"
 * output ^slicing.ordered = false
 * output contains
-    newValue 0..* MS and //incohérence cardinalité?
+    newValue 0..* MS and
     identifierAnalyst 0..1 MS
-* output[newValue] ^short = "Nouvelle valeur renseignée"
+* output[newValue] ^short = "Valeur corrigée"
 * output[newValue].type = OutputTaskRORCodeSystem#newValue
 * output[newValue].value[x] only string
-* output[identifierAnalyst] ^short = "identifiant du destinataire du traitement de la demande"
+* output[identifierAnalyst] ^short = "identifiant du destinataire du traitement de la demande" // Ne pas mettre dans output. Une autre solution doit être trouvée
 * output[identifierAnalyst].type = OutputTaskRORCodeSystem#identifierAnalyst
 * output[identifierAnalyst].value[x] only Identifier
 * executionPeriod.start MS
