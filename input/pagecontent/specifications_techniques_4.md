@@ -119,10 +119,8 @@ Lien vers la spécification FHIR :
 [https://www.hl7.org/fhir/operationoutcome.html](https://www.hl7.org/fhir/operationoutcome.html)
 
 Si la recherche échoue, le serveur doit répondre :
-
-Un header avec un un code erreur HTTP 4XX ou 5XX
-
-Un body contenant une ressource OperationOutcome qui donne les
+-   Un header avec un un code erreur HTTP 4XX ou 5XX
+-   Un body contenant une ressource OperationOutcome qui donne les
 détails sur la raison de l'échec
 
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
@@ -132,7 +130,7 @@ Plus de précision sur la spécification FHIR :
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](./specifications_techniques.html#structuredefinition-ror-healthcareservice), de
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
     **StructureDefinition-ror-healthcareservice** applicables à ce cas
     d'usage sont :
 <table>
@@ -145,7 +143,7 @@ Plus de précision sur la spécification FHIR :
 </tbody>
 </table>
 
--   Les critères de recherche, définis au [paragraphe dédié](./specifications_techniques.html#structuredefinition-ror-location), de
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-location), de
     **StructureDefinition-ror-location** applicables à ce cas d'usage
     sont :
 <table>
@@ -202,12 +200,12 @@ Plus de précision sur la spécification FHIR :
 <p>limit-value</p>
 </td>
 <td width="230">
-<p>&nbsp;</p>
+<p>_lastUpdated</p>
 </td>
 </tr>
 <tr>
 <td width="230">
-<p>capacity-update-date</p>
+<p>capacity-update-date*</p>
 </td>
 <td width="230">
 <p>temporality-capacity</p>
@@ -218,40 +216,76 @@ Plus de précision sur la spécification FHIR :
 </tr>
 </tbody>
 </table>
+*<i>Critères de recherche qui seront applicables ultérieurement</i>
 
 Ces critères de recherche sont applicables à la ressource
 HealthcareService, grâce au chainage. Pour cela utiliser la syntaxe
-suivante : `location:[NOM CRITERE]`
+suivante : `location.[NOM CRITERE]`
+
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-task), de **StructureDefinition-ror-task** applicables à ce cas d'usage sont :
+
+<table>
+<tbody>
+<tr>
+<td width="228">
+<p>business-status*</p>
+</td>
+<td width="226">
+<p>_id</p>
+</td>
+<td width="226">
+<p>_lastUpdated*</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Identifier*</p>
+</td>
+<td width="226">
+<p>authoredOn*</p>
+</td>
+<td width="226">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+*<i>Critères de recherche qui seront applicables ultérieurement</i>
+
+Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Tous les paramètres et modificateurs de requêtes décrits au paragraphe (à compléter)
+Tous les paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html)
 sont applicables à ce cas d'usage.
 
 ### Exemple de requêtes
 
 #### Scénario 1 : Recherche sur un critère capacitaire #1
 
-**Description du scénario :** Un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit disponible = (02 (TRE-R330-StatutCapacite) et \>0 pour la quantité)
+**Description du scénario :** Un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit disponible = 02 (TRE-R330-StatutCapacite) et disposant d’un nombre de lits supérieur à 0.
 
 **Requête :**
 
-`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location:capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02&_revinclude=Location:healthcareservice`
+`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02&location.nb-capacity=gt0&__revinclude=Location:healthcareservice`
 
 **Requête expliquée :**
 
 ```sh
 get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
-&location:capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02 #critère de recherche sur la disponibilité d’un lit
-&_revinclude=Location:healthcareservice #inclus les Location qui référencent les HealthcareService
+&location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02 #critère de recherche sur la disponibilité d’un lit
+&location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
+&_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
+
 #### Scénario 2 : Recherche un critère capacitaire #2
 
-**Description du scénario :** Un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit fermé réouvrable = 01 (TRE-R333-TypeFermetureCapacite)
+**Description du scénario :** Un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit réouvrable = 01 (TRE-R333-TypeFermetureCapacite)  et disposant d’un lit fermé = 05 (TRE-R330-TypeStatutCapacite) et disposant d’un nombre de lits supérieur à 0.
+
 
 **Requête :**
 
-`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location:capacity-closing-type= https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&_revinclude=Location:healthcareservice`
+`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&location.nb-capacity=gt0&_ include=Healthcareservice:location`
 
 **Requête expliquée :**
 
@@ -272,7 +306,9 @@ TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025 #critère de recherche sur l’offre de chirurgie traumatologique
-&location:equipment-type= https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83 #critère de recherche sur l’appareil de radiologie adapté à l’obésité du patient
-&_revinclude=Location:healthcareservice #inclus les Location qui référencent les HealthcareService
+get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
+&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 #critère de recherche sur le lit réouvrable
+&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 #critère de recherche sur le lit fermé
+&location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
+&_ include=Healthcareservice:location  #inclus les Location qui qui sont référencés par les HealthcareService
 ```

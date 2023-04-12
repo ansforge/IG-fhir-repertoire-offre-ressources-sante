@@ -6,9 +6,22 @@ A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants 
 -   Signalement d’anomalie
 -   Mise à jour d’anomalie
 -   Consultation d’anomalie
+  
+<blockquote class="stu-note">
+<p><b>Définition d’une Anomalie dans le ROR:</b>
+  : Une anomalie est une irrégularité sur une description d’offre de santé. (exemple adresse, numéro de téléphone, numéro FINESS, RPPS, spécialité etc…)
 
-    Pour les cas d'usage couverts par ce webservice :
+Il existe différents types d’anomalies dans le contexte ROR national:
+-   Le non-respect d’une exigence qualité : toute offre ne respectant pas une exigence qualité sera être indiquée en écart par rapport à cette règle. 
+    Exemple d’exigence : Les établissements sont peuplés selon les critères de peuplement définis par l'ANS → cet écart sera remonté au responsable d'établissement
+-   L’utilisation d’une nomenclature obsolète.
+-   Une anomalie déclarée sur une offre :  un utilisateur peut en effet identifier qu’une information n’est pas correcte sur la description d’une offre.
 
+Toute suspicion d’anomalie peut être jugée infondée par le responsable de l’offre ou un responsable qualité régional ou de l’établissement concerné.
+</p>
+</blockquote>
+
+Pour les cas d'usage couverts par ce webservice :
 -   Les préconditions sont :
     -   Le système consommateur dispose des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé) pour accéder aux             données du ROR National.   
     -   Le système consommateur peut uniquement effectuer les recherches autorisées par son profil d'accès aux données. Plus d'information [ici](https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf) .
@@ -360,9 +373,9 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 
     -	Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d'un élément.
 
-_	Scénario 3 : Consultation de la liste des anomalies sur un périmètre
+-   Scénario 3 : Consultation de la liste des anomalies sur un périmètre
     
-    _	Un responsable qualité souhaite consulter la liste des anomalies sur son périmètre (région, établissement, département).
+    -	Un responsable qualité souhaite consulter la liste des anomalies sur son périmètre (région, établissement, département).
 
 -	Scénario 4 : Consommation de toutes les anomalies
 

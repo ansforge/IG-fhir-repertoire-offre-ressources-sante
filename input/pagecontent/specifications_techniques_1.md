@@ -235,7 +235,7 @@ Plus de précision sur la spécification FHIR :
 </table>
 
 Ces critères de recherche sont applicables à la ressource Location,
-grâce au chainage inversé[^4]. Pour cela utiliser la syntaxe suivante :
+grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:HealthcareService:location:[NOM CRITERE]`
 
 - 	Les critères de recherche, définis au paragraphe 4.6, de StructureDefinition-ror-task applicables à ce cas d’usage sont :
