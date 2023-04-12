@@ -9,14 +9,14 @@ A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants 
   
 <blockquote class="stu-note">
 <p><b>Définition d’une Anomalie dans le ROR:</b>
-  : Une anomalie est une irrégularité sur une description d’offre de santé. (exemple adresse, numéro de téléphone, numéro FINESS, RPPS, spécialité etc…)
-
+ Une anomalie est une irrégularité sur une description d’offre de santé. (exemple adresse, numéro de téléphone, numéro FINESS, RPPS, spécialité etc…)
 Il existe différents types d’anomalies dans le contexte ROR national:
--   Le non-respect d’une exigence qualité : toute offre ne respectant pas une exigence qualité sera être indiquée en écart par rapport à cette règle. 
-    Exemple d’exigence : Les établissements sont peuplés selon les critères de peuplement définis par l'ANS → cet écart sera remonté au responsable d'établissement
--   L’utilisation d’une nomenclature obsolète.
--   Une anomalie déclarée sur une offre :  un utilisateur peut en effet identifier qu’une information n’est pas correcte sur la description d’une offre.
-
+  <ul>
+    <li>Le non-respect d’une exigence qualité : toute offre ne respectant pas une exigence qualité sera être indiquée en écart par rapport à cette règle. 
+    Exemple d’exigence : Les établissements sont peuplés selon les critères de peuplement définis par l'ANS → cet écart sera remonté au responsable d'établissement</li>
+    <li>L’utilisation d’une nomenclature obsolète.</li>
+    <li>Une anomalie déclarée sur une offre :  un utilisateur peut en effet identifier qu’une information n’est pas correcte sur la description d’une offre.</li>
+  </ul>
 Toute suspicion d’anomalie peut être jugée infondée par le responsable de l’offre ou un responsable qualité régional ou de l’établissement concerné.
 </p>
 </blockquote>
