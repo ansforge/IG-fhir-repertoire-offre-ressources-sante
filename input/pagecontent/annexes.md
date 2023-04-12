@@ -3,7 +3,7 @@
 ### Jeu de données d'exemples pour la [consultation des données capacitaires](specifications_techniques_1.html)
 
 <div class="figure">
-    <img src="image13.png" alt="Jeu de données d'exemples: les relations" width="1238" height="922" title="Jeu de données d'exemples: les relations)">
+    <img src="image16.png" alt="Jeu de données d'exemples: les relations" width="1238" height="922" title="Jeu de données d'exemples: les relations)">
 </div>
 **Figure 7 : Relations entre les données d'exemples**
 

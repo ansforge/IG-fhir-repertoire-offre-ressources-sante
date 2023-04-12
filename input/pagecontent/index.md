@@ -215,7 +215,7 @@ réactivation de code).
   margin;mso-element-top:3.65pt;mso-height-rule:exactly"><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
   mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
   minor-latin">Description des données communes aux échanges entre les ROR et
-  les SI externes.<o:p></o:p></span></p>
+  les SI externes. (lien bientôt disponible)<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:3;height:44.2pt;mso-height-rule:exactly">
@@ -228,7 +228,7 @@ réactivation de code).
   mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;mso-height-rule:
   exactly"><a name="Ref_03"><span lang="EN-US" style="font-size:10.0pt">[</span></a><span style="mso-bookmark:Ref_03"><span lang="EN-US" style="font-size:10.0pt;
   mso-bidi-font-size:11.0pt">Ref_</span></span><span style="mso-bookmark:Ref_03"><span lang="EN-US" style="font-size:10.0pt">02] </span></span><span lang="EN-US" style="font-size:10.0pt;mso-bidi-font-size:11.0pt;color:#0070C0">ROR -Mapping
-  FHIR 3.0</span><span lang="EN-GB" style="font-size:10.0pt;mso-ansi-language:
+  FHIR et modèle d'exposition 3.0</span><span lang="EN-GB" style="font-size:10.0pt;mso-ansi-language:
   EN-GB"><o:p></o:p></span></p>
   </td>
   <td width="9%" style="width:9.72%;border-top:none;border-left:none;
@@ -256,7 +256,8 @@ réactivation de code).
   mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
   minor-latin">Description du mapping des concepts</span> <span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
   mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
-  minor-latin">du modèle d’exposition ROR au format FHIR.<o:p></o:p></span></p>
+  minor-latin">du modèle d’exposition ROR au format FHIR.</span></p>
+  <a href="mapping.html#mapping-fhir-du-mod%C3%A8le-de-donn%C3%A9es-du-ror"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif">Mapping FHIR du modèle de données du ROR</span></a>
   </td>
  </tr>
  <tr style="mso-yfti-irow:4;height:44.2pt;mso-height-rule:exactly">
@@ -268,7 +269,7 @@ réactivation de code).
   7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;
   mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;mso-height-rule:
   exactly"><span style="font-size:10.0pt;mso-ansi-language:FR">[</span><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;mso-ansi-language:FR">Ref_</span><span style="font-size:10.0pt;mso-ansi-language:FR">03] </span><span style="font-size:10.0pt;mso-bidi-font-size:11.0pt;color:#0070C0;mso-ansi-language:
-  FR">Swagger du WS de recherche FHIR 3.0</span><span style="font-size:10.0pt;
+  FR">Swagger du WS de recherche FHIR du ROR</span><span style="font-size:10.0pt;
   mso-ansi-language:FR"><o:p></o:p></span></p>
   </td>
   <td width="9%" style="width:9.72%;border-top:none;border-left:none;
@@ -297,8 +298,9 @@ réactivation de code).
   115%;font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
   mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin">Description
   d’interface de l’API de recherche<br>
-  </span><a href="https://app.swaggerhub.com/apis-docs/kereval1/WSROR/2.0.0"><span style="font-size:9.0pt;mso-bidi-font-size:11.0pt;line-height:115%;font-family:
-  Comfortaa">https://app.swaggerhub.com/apis-docs/kereval1/WSROR/2.0.0</span></a><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
+  (en cours de construction)
+  </span>
+  <span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
   mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
   minor-latin"><o:p></o:p></span></p>
   </td>
