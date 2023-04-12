@@ -1,6 +1,7 @@
 CodeSystem: InputTaskRORCodeSystem
 Id: input-task-ror-codesystem
 Description: "Code System pour la définition des éléments spécifiques de input dans ressource RORTask"
+* ^caseSensitive = true 
 * ^compositional = false
 * ^content = #complete
 * #ruleErrorId "ruleErrorId" "Identifiant de la règle à l'origine de l'anomalie"

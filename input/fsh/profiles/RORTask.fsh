@@ -8,6 +8,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * status MS //Status required doit correspondre au valueset exigé par FHIR dans TaskStatus https://www.hl7.org/FHIR/valueset-task-status.html
 * businessStatus 1..1
 * businessStatus ^short = "différent type d statut métier de l'anomalie"
+* businessStatus from $JDV-J241-ThematiqueAnomalie-ROR
 * code 1..1
 * code ^short = "Thématique de l'anomalie exemples :Exactitude, Complétude, Exhaustivité"
 * description MS
@@ -20,6 +21,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * lastModified ^short = "Date de dernière modification"
 * reasonCode 1..1
 * reasonCode ^short = "Type d'action proposée en réponse"
+* reasonCode from $JDV-J242-ActionAnomalie-ROR
 * input ^short = "Eléments en entrée pour définir l'anomalie"
 //slices input
 * input ^slicing.discriminator.type = #pattern
@@ -36,7 +38,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
     identifierRequester 0..1 MS // identifiant du déclarant de l'anomalie
 * input[ruleErrorId] ^short = "Identifiant de la règle à l'origine de l'anomalie"
 * input[ruleErrorId].type = InputTaskRORCodeSystem#ruleErrorId
-* input[ruleErrorId].value[x] only CodeableConcept
+* input[ruleErrorId].value[x] only string
 * input[errorValue] ^short = "donnée erronée"
 * input[errorValue].type = InputTaskRORCodeSystem#errorValue
 * input[errorValue].value[x] only string
