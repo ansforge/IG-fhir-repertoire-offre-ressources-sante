@@ -8,8 +8,11 @@ A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants 
 -   Consultation d’anomalie
   
 <blockquote class="stu-note">
-<p><b>Définition d’une Anomalie dans le ROR:</b>
- Une anomalie est une irrégularité sur une description d’offre de santé. (exemple adresse, numéro de téléphone, numéro FINESS, RPPS, spécialité etc…)
+<p>
+  <b>Définition d’une Anomalie dans le ROR:</b>
+  <br>
+ Une anomalie est une irrégularité sur une description d’offre de santé. (exemple adresse, numéro de téléphone, numéro FINESS, RPPS, spécialité etc…).
+  <br>
 Il existe différents types d’anomalies dans le contexte ROR national:
   <ul>
     <li>Le non-respect d’une exigence qualité : toute offre ne respectant pas une exigence qualité sera être indiquée en écart par rapport à cette règle. 
