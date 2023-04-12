@@ -264,13 +264,7 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-task)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-* rest.resource[=].searchParam[+].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
-* rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Date de la dernière mise a jour"
-* rest.resource[=].searchParam[+].name = "_tag"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
+* rest.resource[=].searchParam[+].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].interaction[+].code = #create
-* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #patch
