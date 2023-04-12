@@ -140,7 +140,7 @@ Plus de précision sur la spécification FHIR :
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au paragraphe 4.1, de
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-location), de
     **StructureDefinition-ror-location** applicables à ce cas d'usage
     sont :
 
@@ -173,7 +173,7 @@ Plus de précision sur la spécification FHIR :
 <p>address-city</p>
 </td>
 <td width="230">
-<p>capacity-update?</p>
+<p></p>
 </td>
 <td width="230">
 <p>residential-type</p>
@@ -217,7 +217,7 @@ Plus de précision sur la spécification FHIR :
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
--   Les critères de recherche, définis au paragraphe 4.2, de
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
     **StructureDefinition-ror-healthcareservice** applicables à ce cas
     d'usage sont :
 
@@ -235,10 +235,43 @@ Plus de précision sur la spécification FHIR :
 </table>
 
 Ces critères de recherche sont applicables à la ressource Location,
-grâce au chainage[^4]. Pour cela utiliser la syntaxe suivante :
+grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:HealthcareService:location:[NOM CRITERE]`
 
-Paramètres et modificateurs de requêtes FHIR
+- 	Les critères de recherche, définis au paragraphe 4.6, de StructureDefinition-ror-task applicables à ce cas d’usage sont :
+<table>
+<tbody>
+<tr>
+<td width="228">
+<p>business-status*</p>
+</td>
+<td width="226">
+<p>_id</p>
+</td>
+<td width="226">
+<p>_lastUpdated*</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>identifier*</p>
+</td>
+<td width="226">
+<p>authoredOn*</p>
+</td>
+<td width="226">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+*<i>Critères de recherche qui seront applicables ultérieurement</i>
+
+Ces critères de recherche sont applicables à la ressource Location,
+grâce au chainage inversé[^4]. Pour cela utiliser la syntaxe suivante :
+`_has:Location:focus:[[NOM CRITERE]`
+
+### Paramètres et modificateurs de requêtes FHIR
 
 Les paramètres et modificateurs de requêtes décrits au [paragraphe dédié](specifications_techniques.html#param%C3%A8tres-et-modificateurs-de-requ%C3%AAtes-fhir-1)
 applicables à ce cas d'usage sont :
@@ -251,11 +284,9 @@ applicables à ce cas d'usage sont :
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Données capacitaires de France
+#### Scénario 1 : Données capacitaires sur le périmètre national
 
-**Description du scénario :** un consommateur souhaite
-récupérer l\'ensemble des données capacitaires de France afin de mettre
-à jour son système
+**Description du scénario :** un consommateur souhaite récupérer l\'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système.
 
 **Requête :**
 
@@ -282,9 +313,7 @@ HTTP 200 OK
 ```
 #### Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
 
-**Description du scénario :** un consommateur souhaite mettre
-à jour dans son système les données de capacité sur un lieu de prise en
-charge = Location1
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1
 
 **Requête :**
 
@@ -311,9 +340,7 @@ HTTP 200 OK
 ```
 #### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
 
-**Description du scénario :** un consommateur souhaite mettre
-à jour dans son système les données de capacité sur plusieurs lieux de
-prise en charge = Location1 ou Location2
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur plusieurs lieux de prise en charge = Location1 ou Location2
 
 **Requête :**
 
@@ -341,10 +368,7 @@ HTTP 200 OK
 ```
 ####  Scénario 4 : Données capacitaires à partir d'une date de mise à jour
 
-**Description du scénario :** un consommateur souhaite mettre
-à jour dans son système les données de capacité
-
-à partir d\'une date de mise à jour \>= 06/11/2022-15h00
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité à partir d\'une date de mise à jour \>= 06/11/2022-15h00
 
 **Requête :**
 
@@ -368,14 +392,11 @@ HTTP 200 OK
 
 #### Scénario 5 : Données capacitaires d'une offre opérationnelle
 
-**Prérequis :** un consommateur recherche au préalable une
-offre de santé correspondant à ses critères via le service de recherche
-en 2.4. Le service de recherche envoie les identifiants des offres
-correspondant aux critères.
+**Prérequis :** un consommateur recherche au préalable une offre de santé correspondant à ses critères via le service de recherche
+sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les identifiants des offres correspondant aux critères.
 
-**Description du scénario :** un consommateur souhaite
-connaitre la situation des capacités pour les offres identifiées via le
-service 2.4 = UE1 ou UE2 ou UE3
+**Description du scénario :** un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche
+sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3
 
 **Requête :**
 

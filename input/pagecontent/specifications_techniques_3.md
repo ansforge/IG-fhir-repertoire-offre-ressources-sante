@@ -141,7 +141,7 @@ Plus de précision sur la spécification FHIR :
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](./specifications_techniques.html#structuredefinition-ror-healthcareservice), de
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
     **StructureDefinition-ror-healthcareservice** applicables à ce cas
     d'usage sont :
 <table>
@@ -193,7 +193,7 @@ Plus de précision sur la spécification FHIR :
 </tbody>
 </table>
 
--   Les critères de recherche, définis au [paragraphe dédié](./specifications_techniques.html#structuredefinition-ror-organization), de
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-organization), de
     **StructureDefinition-ror-organization** applicables à ce cas
     d'usage sont :
 <table>
@@ -225,9 +225,9 @@ Plus de précision sur la spécification FHIR :
 
 Ces critères de recherche sont applicables à la ressource
 HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/search.html#chaining). Pour cela utiliser la syntaxe
-suivante : `providedBy:[NOM CRITERE]`
+suivante : `organization.[NOM CRITERE]`
 
--   Les critères de recherche, définis au [paragraphe dédié](./specifications_techniques.html#structuredefinition-ror-location), de
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-location), de
     **StructureDefinition-ror-location** applicables à ce cas d'usage
     sont :
 <table>
@@ -259,11 +259,45 @@ suivante : `providedBy:[NOM CRITERE]`
 
 Ces critères de recherche sont applicables à la ressource
 HealthcareService, grâce au chainage. Pour cela utiliser la syntaxe
-suivante : `location:[NOM CRITERE]`
+suivante : `location.[NOM CRITERE]`
+
+-   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-task), de
+    **StructureDefinition-ror-task** applicables à ce cas d'usage
+    sont :
+<table>
+<tbody>
+<tr>
+<td width="228">
+<p>business-status*</p>
+</td>
+<td width="226">
+<p>_id</p>
+</td>
+<td width="226">
+<p>_lastUpdated*</p>
+</td>
+</tr>
+<tr>
+<td width="228">
+<p>Identifier*</p>
+</td>
+<td width="226">
+<p>authoredOn*</p>
+</td>
+<td width="226">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+*<i>Critères de recherche qui seront applicables ultérieurement</i>
+
+Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`
+
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits au paragraphe dédié (à completer)
+Les paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html)
 applicables à ce cas d'usage sont :
 
 -   \_revinclude, \_include, :iterate
@@ -276,9 +310,7 @@ applicables à ce cas d'usage sont :
 
 #### Scénario 1 : Recherche sur un critère en saisissant une valeur
 
-**Description du scénario :** Un consommateur cherche les
-offres ayant\
-une activité opérationnelle = XXX
+**Description du scénario :** Un consommateur cherche les offres ayant\ une activité opérationnelle = XXX
 
 **Requête :**
 
@@ -297,8 +329,7 @@ get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 ```
 #### Scénario 2 : Recherche sur un critère en saisissant une liste de valeur
 
-**Description du scénario :** Un consommateur cherche les
-offres ayant à une activité opérationnelle = XXX ou YYY (TRE_R211-ActiviteOperationnelle)
+**Description du scénario :** Un consommateur cherche les offres ayant à une activité opérationnelle = XXX ou YYY (TRE_R211-ActiviteOperationnelle)
 
 **Requête :**
 
@@ -318,8 +349,7 @@ get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 ```
 #### Scénario 3 : Recherche multicritères #1 - ET
 
-**Description du scénario :** Un consommateur cherche les
-offres ayant un type d'offre = XXX (TRE_R244-CategorieOrganisation) **ET** une modalité d'accueil = YYY (TRE_R338-ModaliteAccueil)
+**Description du scénario :** Un consommateur cherche les offres ayant un type d'offre = XXX (TRE_R244-CategorieOrganisation) **ET** une modalité d'accueil = YYY (TRE_R338-ModaliteAccueil)
 
 **Requête :**
 
@@ -338,8 +368,7 @@ get[BASE]/HealthcareService?service-category= https://mos.esante.gouv.fr/NOS/TRE
 ```
 #### Scénario 4 : Recherche multicritères #2 - OU
 
-**Description du scénario :** Un consommateur cherche les
-offres ayant à un type d'offre = XXX (TRE_R244-CategorieOrganisation) **OU** une activité opérationnelle = YYY
+**Description du scénario :** Un consommateur cherche les offres ayant à un type d'offre = XXX (TRE_R244-CategorieOrganisation) **OU** une activité opérationnelle = YYY
 (TRE_R211-ActiviteOperationnelle)
 
 **Requête :**
@@ -475,7 +504,7 @@ get[BASE]/HealthcareService?location:commune-cog=https://mos.esante.gouv.fr/NOS/
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 11 : Recherche sur un critère modèle 3.0
+#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR
 
 **Description du scénario :** Un consommateur recherche les offres proposant une modalité d\'accueil = XX (TRE-R338-ModaliteAccueil) et un niveau d\'expertise (critères modèle 3.0) = YY (TRE_R253-TypeMaternite)
 
@@ -494,4 +523,30 @@ get[BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R3
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
+
+#### Scénario 12 : Recherche d’offre en anomalie sur une région avec un statut à traiter ou à vérifier
+
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+Cette partie de la spécification est en cours de construction.
+</p>
+
+**Description du scénario :** Un responsable qualité recherche les offres en anomalie (c’est-à-dire des anomalies dont le businessStatus = 2 ou 10) de sa région = XX et ses données associées (organisation, professionnels, etc).
+
+**Requête :**
+
+```
+get[BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_has:Task:focus:business-status=https://mos.esante.gouv.fr/NOS/TRE_RXXX-StatutAnomalie/FHIR/TRE-RXXX-StatutAnomalie|2,10&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner&_revinclude=Task:focus
+```
+
+**Requête expliquée :**
+
+```sh
+get[BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX #critère de recherche sur la région source
+&_has:Task:focus:business-status=https://mos.esante.gouv.fr/NOS/TRE_RXXX-StatutAnomalie/FHIR/TRE-RXXX-StatutAnomalie|2,10 #anomalie active
+&_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+&_revinclude=Task:focus #inclus les Task qui référencent le HealthcareService
 ```
