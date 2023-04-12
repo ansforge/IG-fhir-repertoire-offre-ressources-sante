@@ -2,6 +2,8 @@ Profile: RORTask
 Parent: Task
 Id: ror-task
 Description: "Anomalie concerant une donnée dans une ressource du ROR"
+* ^status = #draft
+
 /* Données fonctionnelles */
 * identifier 0..1
 * identifier ^short = "Identifiant de l'anomalie"
