@@ -34,7 +34,7 @@ Les pipelines de ce repository permettent :
 ![image](https://user-images.githubusercontent.com/101335975/215342980-61686171-e3f8-40c5-865c-efdfc3dd52b4.png)
 
 # Pull Request
-Faire la PR sur la branche main (livraisons 3.0)
+Faire la PR sur la branche main.
 
 # Notes
 Ce sample IG a été créé à partir du sample-ig fhir : https://github.com/FHIR/sample-ig.
