@@ -2,10 +2,10 @@ Extension: RORTerritorialDivision
 Id: ror-territorial-division
 Description: "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. 
 Cela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent."
-* ^context.type = #element
-* ^context.expression = "HealthcareService"
-* ^context.type = #element
-* ^context.expression = "Organization"
+* ^context[0].type = #element
+* ^context[=].expression = "HealthcareService"
+* ^context[+].type = #element
+* ^context[=].expression = "Organization"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
