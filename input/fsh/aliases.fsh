@@ -10,7 +10,7 @@ Alias: $TRE-R354-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gou
 
 Alias: $JDV-J16-ActeSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR
 Alias: $JDV-J17-ActiviteOperationnelle-ROR = https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR
-Alias: $JDV-J18-EquipementSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/JDV-J18-EquipementSpecifique-ROR
+Alias: $JDV-J18-EquipementSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR
 Alias: $JDV-J19-ModePriseEnCharge-ROR = https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR
 Alias: $JDV-J20-ChampActivite-ROR = https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR
 Alias: $JDV-J26-ModeGestion-ROR = https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR
