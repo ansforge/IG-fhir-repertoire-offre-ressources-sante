@@ -9,4 +9,6 @@ Description: "Extension créée dans le cadre du ROR qui correspond à la date d
 * ^context[=].expression = "Practitioner"
 * ^context[+].type = #element
 * ^context[=].expression = "PractitionerRole"
+* ^context[+].type = #element
+* ^context[=].expression = "HealthcareService"
 * value[x] only dateTime
