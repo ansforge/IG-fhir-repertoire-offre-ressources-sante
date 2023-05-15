@@ -82,14 +82,14 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * address.line.extension[streetNameHamlet] ^short = "lieuDit (Adresse) : Lieu qui porte un nom rappelant une particularité topographique ou historique"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse) : Mentions particulières de distribution"
 
-* position ^short = "coordonneeGeographique (LieuRealisationOffre) : Coordonnées géographiques du lieu"
+* position ^short = "coordonneeGeographique (LieuRealisationOffre) : Coordonnées géographiques du lieu (système géodésique : WGS84)"
 * position.latitude ^short = "latitude (CoordonneeGeographique) : Une mesure de la distance angulaire nord ou sud depuis l'équateur jusqu'au parallèle du spécifique"
-* position.longitude ^short = "longitude(CoordonneeGeographique) : Une mesure de la distance angulaire est ou ouest depuis le méridien de Greenwich jusqu'au méridien du point spécifique"
+* position.longitude ^short = "longitude (CoordonneeGeographique) : Une mesure de la distance angulaire est ou ouest depuis le méridien de Greenwich jusqu'au méridien du point spécifique"
 * position.extension ^slicing.discriminator.type = #value
 * position.extension ^slicing.discriminator.path = "url"
 * position.extension ^slicing.rules = #open
-* position.extension contains RORGeolocationLocation named ror-location-geolocation 0..1
-* position.extension[ror-location-geolocation] ^short = "systemeGeodesique : Une identification du système de référence fixant les règles de mesure des positions géographiques (CoordonneeGeographique)"
+* position.extension contains RORCoordinateReliability named ror-coordinate-reliability 0..1
+* position.extension[ror-coordinate-reliability] ^short = "systemeGeodesique (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
