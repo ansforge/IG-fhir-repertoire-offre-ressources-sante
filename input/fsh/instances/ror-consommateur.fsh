@@ -32,6 +32,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
+* rest.resource[=].searchParam[+].name = "_content"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
+* rest.resource[=].searchParam[=].type = #special
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
 * rest.resource[=].searchParam[+].name = "type"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-type"
 * rest.resource[=].searchParam[=].type = #token
