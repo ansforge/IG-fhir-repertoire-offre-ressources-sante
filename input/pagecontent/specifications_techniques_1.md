@@ -173,7 +173,7 @@ Plus de précision sur la spécification FHIR :
 <p>address-city</p>
 </td>
 <td width="230">
-<p></p>
+<p>capacity-update-date*</p>
 </td>
 <td width="230">
 <p>residential-type</p>
@@ -214,8 +214,7 @@ Plus de précision sur la spécification FHIR :
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+*<i>Critères de recherche qui seront applicables ultérieurement</i>
 
 -   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
     **StructureDefinition-ror-healthcareservice** applicables à ce cas
@@ -257,7 +256,7 @@ grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour ce
 <p>identifier*</p>
 </td>
 <td width="226">
-<p>authoredOn*</p>
+<p>authored-on*</p>
 </td>
 <td width="226">
 <p>&nbsp;</p>
@@ -268,7 +267,7 @@ grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour ce
 *<i>Critères de recherche qui seront applicables ultérieurement</i>
 
 Ces critères de recherche sont applicables à la ressource Location,
-grâce au chainage inversé[^4]. Pour cela utiliser la syntaxe suivante :
+grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:Location:focus:[[NOM CRITERE]`
 
 ### Paramètres et modificateurs de requêtes FHIR
@@ -282,7 +281,7 @@ applicables à ce cas d'usage sont :
 
 -   Tous les prefixes de comparaison
 
-### Exemple de requêtes
+### Exemples de requêtes
 
 #### Scénario 1 : Données capacitaires sur le périmètre national
 
@@ -313,7 +312,7 @@ HTTP 200 OK
 ```
 #### Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1.
 
 **Requête :**
 
@@ -340,7 +339,7 @@ HTTP 200 OK
 ```
 #### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur plusieurs lieux de prise en charge = Location1 ou Location2
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur plusieurs lieux de prise en charge = Location1 ou Location2.
 
 **Requête :**
 
@@ -368,7 +367,7 @@ HTTP 200 OK
 ```
 ####  Scénario 4 : Données capacitaires à partir d'une date de mise à jour
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité à partir d\'une date de mise à jour \>= 06/11/2022-15h00
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité à partir d\'une date de mise à jour \>= 06/11/2022-15h00.
 
 **Requête :**
 
@@ -396,7 +395,7 @@ HTTP 200 OK
 sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les identifiants des offres correspondant aux critères.
 
 **Description du scénario :** un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche
-sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3
+sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3.
 
 **Requête :**
 

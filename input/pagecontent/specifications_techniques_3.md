@@ -282,7 +282,7 @@ suivante : `location.[NOM CRITERE]`
 <p>Identifier*</p>
 </td>
 <td width="226">
-<p>authoredOn*</p>
+<p>authored-on*</p>
 </td>
 <td width="226">
 <p>&nbsp;</p>
@@ -310,7 +310,7 @@ applicables à ce cas d'usage sont :
 
 #### Scénario 1 : Recherche sur un critère en saisissant une valeur
 
-**Description du scénario :** Un consommateur cherche les offres ayant\ une activité opérationnelle = XXX
+**Description du scénario :** un consommateur cherche les offres ayant\ une activité opérationnelle = XXX.
 
 **Requête :**
 
@@ -329,7 +329,7 @@ get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 ```
 #### Scénario 2 : Recherche sur un critère en saisissant une liste de valeur
 
-**Description du scénario :** Un consommateur cherche les offres ayant à une activité opérationnelle = XXX ou YYY (TRE_R211-ActiviteOperationnelle)
+**Description du scénario :** un consommateur cherche les offres ayant à une activité opérationnelle = XXX ou YYY (TRE_R211-ActiviteOperationnelle).
 
 **Requête :**
 
@@ -349,7 +349,7 @@ get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 ```
 #### Scénario 3 : Recherche multicritères #1 - ET
 
-**Description du scénario :** Un consommateur cherche les offres ayant un type d'offre = XXX (TRE_R244-CategorieOrganisation) **ET** une modalité d'accueil = YYY (TRE_R338-ModaliteAccueil)
+**Description du scénario :** un consommateur cherche les offres ayant un type d'offre = XXX (TRE_R244-CategorieOrganisation) **ET** une modalité d'accueil = YYY (TRE_R338-ModaliteAccueil).
 
 **Requête :**
 
@@ -368,7 +368,7 @@ get[BASE]/HealthcareService?service-category= https://mos.esante.gouv.fr/NOS/TRE
 ```
 #### Scénario 4 : Recherche multicritères #2 - OU
 
-**Description du scénario :** Un consommateur cherche les offres ayant à un type d'offre = XXX (TRE_R244-CategorieOrganisation) **OU** une activité opérationnelle = YYY
+**Description du scénario :** un consommateur cherche les offres ayant à un type d'offre = XXX (TRE_R244-CategorieOrganisation) **OU** une activité opérationnelle = YYY.
 (TRE_R211-ActiviteOperationnelle)
 
 **Requête :**
@@ -388,7 +388,7 @@ get[BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gou
 ```
 #### Scénario 5 : Recherche multicritère #3 -- ET/OU
 
-**Description du scénario :** Un consommateur recherche les offres ayant **(** une catégorie d'établissement = XXX de TRE-R66-CategorieEtablissement **OU** type d'offre = YYY de TRE_R244-CategorieOrganisation **)** **ET** un acte spécifique = ZZZ (TRE-R210-ActeSpecifique)
+**Description du scénario :** un consommateur recherche les offres ayant **(** une catégorie d'établissement = XXX de TRE-R66-CategorieEtablissement **OU** type d'offre = YYY de TRE_R244-CategorieOrganisation **)** **ET** un acte spécifique = ZZZ (TRE-R210-ActeSpecifique).
 
 **Requête :**
 
@@ -408,8 +408,8 @@ get[BASE]/HealthcareService?_filter=((providedBy:type eq https://mos.esante.gouv
 ```
 #### Scénario 6 : Recherche à proximité géographique
 
-**Description du scénario :** Un consommateur cherche les
-offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnelle) dans un périmètre géographique proche du lieu de résidence d'un patient= à YY km de (latitude,longitude)
+**Description du scénario :** un consommateur cherche les
+offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnelle) dans un périmètre géographique proche du lieu de résidence d'un patient= à YY km de (latitude,longitude).
 
 **Requête :**
 
@@ -429,18 +429,18 @@ get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 ```
 #### Scénario 7 : Recherche sur une zone d'intervention
 
-**Description du scénario :** Un consommateur cherche les offres proposées dans une commune =XXX faisant partie d'une zone d'intervention
+**Description du scénario :** un consommateur cherche les offres proposées dans une commune =XXX faisant partie d'une zone d'intervention.
 
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?location:intervention-zone=XXX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+get[BASE]/HealthcareService?intervention-zone=XXX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?location:intervention-zone=XXX #critère de recherche sur la commune faisant partie d’une zone d’intervention
+get[BASE]/HealthcareService?intervention-zone=XXX #critère de recherche sur la commune faisant partie d’une zone d’intervention
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -448,7 +448,7 @@ get[BASE]/HealthcareService?location:intervention-zone=XXX #critère de recherch
 ```
 #### Scénario 8 : Recherche sur un département
 
-**Description du scénario :** Un consommateur recherche les offres sur un département = XX
+**Description du scénario :** un consommateur recherche les offres sur un département = XX.
 
 **Requête :**
 
@@ -468,7 +468,7 @@ get[BASE]/HealthcareService?location:address-postalcode=XX # critère de recherc
 
 #### Scénario 9 : Recherche sur une ville #1 -- Code Postal
 
-**Description du scénario :** Un consommateur recherche les offres sur un ensemble de villes (code postal) = XXXX ou YYYY
+**Description du scénario :** un consommateur recherche les offres sur un ensemble de villes (code postal) = XXXX ou YYYY.
 
 **Requête :**
 
@@ -487,7 +487,7 @@ get[BASE]/HealthcareService?location:address-postalcode=XXXX,YYYY#critère de re
 ```
 #### Scénario 10 : Recherche sur une ville #2 -- Code commune
 
-**Description du scénario :** Un consommateur recherche les offres sur une ville (code communes) = XX
+**Description du scénario :** un consommateur recherche les offres sur une ville (code communes) = XX.
 
 **Requête :**
 
@@ -506,7 +506,7 @@ get[BASE]/HealthcareService?location:commune-cog=https://mos.esante.gouv.fr/NOS/
 ```
 #### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR
 
-**Description du scénario :** Un consommateur recherche les offres proposant une modalité d\'accueil = XX (TRE-R338-ModaliteAccueil) et un niveau d\'expertise (critères modèle 3.0) = YY (TRE_R253-TypeMaternite)
+**Description du scénario :** un consommateur recherche les offres proposant une modalité d\'accueil = XX (TRE-R338-ModaliteAccueil) et un niveau d\'expertise (critères modèle 3.0) = YY (TRE_R253-TypeMaternite).
 
 **Requête :**
 
@@ -531,7 +531,7 @@ get[BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R3
 Cette partie de la spécification est en cours de construction.
 </p>
 
-**Description du scénario :** Un responsable qualité recherche les offres en anomalie (c’est-à-dire des anomalies dont le businessStatus = 2 ou 10) de sa région = XX et ses données associées (organisation, professionnels, etc).
+**Description du scénario :** un responsable qualité recherche les offres en anomalie (c’est-à-dire des anomalies dont le businessStatus = 2 ou 10) de sa région = XX et ses données associées (organisation, professionnels, etc).
 
 **Requête :**
 

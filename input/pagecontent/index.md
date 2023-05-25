@@ -76,7 +76,7 @@ permet de centraliser la recherche auprès du ROR national en
 remplacement des différentes instances régionales.
 
 Ce service peut ainsi permettre à une instance régionale de s'appuyer
-sur le ROR national pour réaliser une « recherche interROR », et permet
+sur le ROR national pour réaliser l’équivalent d’une « recherche interROR », et permet
 également aux autres systèmes consommateurs des données du ROR de
 disposer d'un service pour lancer une recherche et obtenir en résultat
 la description des offres de santé recherchées.
@@ -92,13 +92,13 @@ droits d'accès adaptés.
 
 Les attributs de description de l'offre, fournis en résultat d'une
 recherche, sont décrits dans le document ROR-modèle d'exposition
-\[Ref_01\]. Ces attributs sont décrits en utilisant la norme UML et en
+(bientôt disponible). Ces attributs sont décrits en utilisant la norme UML et en
 cohérence avec le Modèle des Objets de Santé (MOS) et les nomenclatures
 associées (NOS) gérés par l'ANS.
 
 Ces attributs sont associés à des règles de gestion communes qui sont
 également présentées dans le document ROR-modèle d'exposition
-\[Ref_01\].
+(bientôt disponible).
 
 ##### Nomenclatures
 
@@ -116,7 +116,7 @@ de référence et jeux de valeurs) qui permettent de renseigner les
 concepts du modèle d'exposition et qui font le lien avec les concepts
 des modèles des ROR régionaux. Ces nomenclatures d'échange sont
 précisées dans le document de référence ROR-modèle d'exposition
-\[Ref_01\] .
+(bientôt disponible).
 
 Chaque nomenclature des outils interopérables doit trouver son
 équivalence dans la nomenclature du concept associé dans le modèle

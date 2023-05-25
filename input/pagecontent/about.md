@@ -19,5 +19,5 @@ L'onglet de [téléchargement](downloads.html) vous permettra de télécharger :
 Ce guide a été généré à partir de ce [repository GitHub](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante), qui contient également l'historique des commits.
 
 Liens utiles :
-- [Wiki ANS sur les IGs](https://github.com/ansforge/IG-modele/wiki) (en cours de construction)
+- [Documentation ANS sur les IGs](https://interop.esante.gouv.fr/ig/documentation/) (en cours de construction)
 - [Documentation IG Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)

@@ -242,7 +242,7 @@ suivante : `location.[NOM CRITERE]`
 <p>Identifier*</p>
 </td>
 <td width="226">
-<p>authoredOn*</p>
+<p>authored-on*</p>
 </td>
 <td width="226">
 <p>&nbsp;</p>
@@ -263,11 +263,11 @@ sont applicables à ce cas d'usage.
 
 #### Scénario 1 : Recherche sur un critère capacitaire #1
 
-**Description du scénario :** Un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit disponible = 02 (TRE-R330-StatutCapacite) et disposant d’un nombre de lits supérieur à 0.
+**Description du scénario :** un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit disponible = 02 (TRE-R330-StatutCapacite) et disposant d’un nombre de lits supérieur à 0.
 
 **Requête :**
 
-`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02&location.nb-capacity=gt0&__revinclude=Location:healthcareservice`
+`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02&location.nb-capacity=gt0&_revinclude=Location:healthcareservice`
 
 **Requête expliquée :**
 
@@ -280,7 +280,7 @@ get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 
 #### Scénario 2 : Recherche un critère capacitaire #2
 
-**Description du scénario :** Un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit réouvrable = 01 (TRE-R333-TypeFermetureCapacite)  et disposant d’un lit fermé = 05 (TRE-R330-TypeStatutCapacite) et disposant d’un nombre de lits supérieur à 0.
+**Description du scénario :** un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit réouvrable = 01 (TRE-R333-TypeFermetureCapacite)  et disposant d’un lit fermé = 05 (TRE-R330-TypeStatutCapacite) et disposant d’un nombre de lits supérieur à 0.
 
 
 **Requête :**
@@ -291,13 +291,15 @@ get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 
 ```sh
 get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
-&location:capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 #critère de recherche sur le lit fermé réouvrable
-&_revinclude=Location:healthcareservice #inclus les Location qui référencent les HealthcareService
+&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 #critère de recherche sur le lit réouvrable
+&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 #critère de recherche sur le lit fermé
+&location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
+&_ include=Healthcareservice:location  #inclus les Location qui qui sont référencés par les HealthcareService
 ```
 #### Scénario 3 : Recherche sur un critère de l'équipement
 
-**Description du scénario :** Un consommateur cherche une offre dont l'activité opérationnelle = chirurgie traumatologique (025 de
-TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à l\'obésité du patient (83 de TRE-R212-Equipement)
+**Description du scénario :** un consommateur cherche une offre dont l'activité opérationnelle = chirurgie traumatologique (025 de
+TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à l\'obésité du patient (83 de TRE-R212-Equipement).
 
 **Requête :**
 

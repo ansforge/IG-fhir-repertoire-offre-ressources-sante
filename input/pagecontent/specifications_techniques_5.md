@@ -106,7 +106,7 @@ Cette partie de la spécification est en cours de construction.
 
 Lien vers la spécification FHIR : <https://www.hl7.org/fhir/http.html >
 
-Si la création est un succès, le serveur répond :
+Si la création est un succès, le serveur répond en renvoyant a minima:
 -	Un header avec un code 201 Created HTTP.
 -	Un header Location contenant le nouvel identifiant technique et l’identifiant de version de la ressource créée.
 -	L’identifiant fonctionnel de la ressouce créée.
@@ -141,7 +141,6 @@ Plus de précision sur la spécification FHIR :
 POST[BASE]/Task
 {	
 	"resourceType": "Task",
-	"identifier": "identifiant1",
 	"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
 	"code": [ { "system": "JDV XXX", "value": "12345" } ],
 	"description": "description de notre ano",
@@ -164,7 +163,6 @@ POST[BASE]/Bundle
 		{	
 			"resource": {
 				"resourceType": "Task",
-"identifier": "identifiant1",
 				"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
 				"code": [ { "system": "JDV XXX", "value": "12345" } ],
 				"description": "description de notre ano",
@@ -174,7 +172,6 @@ POST[BASE]/Bundle
 			{
 			"resource": {
 				"resourceType": "Task",
-				"identifier": "identifiant2",
 				"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
 				"code": [ { "system": "JDV XXX", "value": "12345" } ],
 				"description": "description de notre ano",

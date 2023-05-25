@@ -241,13 +241,13 @@ Ces critères de recherche sont applicables à la ressource Task, grâce au chai
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Dans ce cas d’usages, nous n’utilisons aucun paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html).
+Dans ce cas d’usage, nous n’utilisons aucun paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html).
 
 ### Exemple de requêtes
 
 #### Scénario 1 : Consultation du statut d’une anomalie
 
-**Description du scénario :** Un responsable qualité où le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
+**Description du scénario :** un responsable qualité où le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
 
 
 **Requête :**
@@ -262,7 +262,7 @@ get[BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’
 
 #### Scénario 2 : Consultation de la liste des anomalies
 
-**Description du scénario :** Un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
+**Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
 
 **Requête :**
 
@@ -276,14 +276,14 @@ get[BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche sur
 
 #### Scénario 3 : Consultation de la liste des anomalies sur un périmètre
 
-**Description du scénario :** Un responsable qualité souhaite consulter la liste des anomalies sur son périmètre : région = XXX.
+**Description du scénario :** un responsable qualité souhaite consulter la liste des anomalies sur son périmètre : région = XXX.
 
 **Requête :**
 
 `get[BASE]/Task?focus:[Ressource]:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX`
 
 **Requête expliquée :**
-Exemple avec HealtcareService : 
+Exemple avec HealtcareService :
 
 ```sh
 get[BASE]/Task?focus:HealthcareService:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
@@ -293,7 +293,7 @@ get[BASE]/Task?focus:Organization:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-R
 ```
 #### Scénario 4 : Consommation de toutes les anomalies
 
-**Description du scénario :** Le BI consomme toutes les anomalies pour faire des tableaux de suivi.
+**Description du scénario :** le BI consomme toutes les anomalies pour faire des tableaux de suivi.
 
 **Requête :**
 

@@ -253,7 +253,7 @@ grâce au [chainage](https://www.hl7.org/fhir/search.html#has). Pour cela utilis
 <p>Identifier*</p>
 </td>
 <td width="226">
-<p>authoredOn*</p>
+<p>authored-on*</p>
 </td>
 <td width="226">
 <p>&nbsp;</p>
@@ -282,11 +282,11 @@ applicables à ce cas d'usage sont :
 
 -   Tous les préfixes de comparaison
 
-### Exemple de requêtes
+### Exemples de requêtes
 
 #### Scénario 1 : Extraction complète
 
-**Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre nationale
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
 
 **Requête :**
 
@@ -305,19 +305,19 @@ _include:iterate=HealthcareService:organization #inclus les Organization référ
 ```
 #### Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
 
-**Description du scénario :** Un consommateur souhaite rechercher l\'offre de santé proposée\ par un établissement dont l'identifiant est = XX
+**Description du scénario :** un consommateur souhaite rechercher l\'offre de santé proposée\ par un établissement dont l'identifiant est = XX .
 
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?organization:above.identifier=XX_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+get[BASE]/HealthcareService?organization:above.identifier=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
 get[BASE]/HealthcareService?organization:above.identifier=XX #critère de recherche de l’établissement
-_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
@@ -326,9 +326,9 @@ _include:iterate=HealthcareService:organization #inclus les Organization référ
 
 #### Scénario 3 : Extraction d'une offre de santé identifiée
 
-**Description du scénario :** Un consommateur souhaite
+**Description du scénario :** un consommateur souhaite
 rechercher une offre de santé\
-à partir de son identifiant = XXX
+à partir de son identifiant = XXX.
 
 **Requête :**
 
@@ -370,7 +370,7 @@ get[BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00 #critère de recherc
 
 #### Scénario 5 : Extraction complète à partir d’une date de mise à jour de l’entité géographique
 
-**Description du scénario :** Un consommateur souhaite mettre à jour toute l\'offre dont l'l’entité géographique est mise à jour depuis une certaine date \>= (06/11/2022)
+**Description du scénario :** un consommateur souhaite mettre à jour toute l\'offre dont l'l’entité géographique est mise à jour depuis une certaine date \>= (06/11/2022).
 
 **Requête :**
 
@@ -381,21 +381,21 @@ get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15:00&o
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour (ge= greater than)
+get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00 #critère de recherche sur la date de mise à jour (ge= greater or equal than)
 &organization.type= https ://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX #critère de recherche sur la categorieEG (nomenclature à compléter)
 &_include :iterate=HealthcareService :organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
-&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
-&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
-&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+&_include=HealthcareService :location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole :service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole :practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 #### Scénario 6 : Extraction complète à partir d'une date de mise à jour d'un des éléments de l'offre 
 
-**Description du scénario :** Un consommateur souhaite mettre à jour toute l\'offre mise à jour depuis une certaine date \>=(06/11/2022) ou dont l'organisation est mise à jour depuis une certaine date \>= (06/11/2022)
+**Description du scénario :** Un consommateur souhaite par exemple  mettre  à jour toute l\'offre mise à jour depuis une certaine date \>=(06/11/2022) ou dont l'organisation est mise à jour depuis une certaine date \>= (06/11/2022)
 
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+Get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
@@ -409,7 +409,7 @@ get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organiz
 ```
 #### Scénario 7 : Extraction partielle de l’offre sur un périmètre limité  
 
-**Description du scénario :** Un consommateur souhaite mettre à jour toute l\'offre de santé d\'une région source = XX. Comme il n\'utilise qu'un sous-ensemble des informations de l\'offre, il souhaite ne recevoir que ces informations.
+**Description du scénario :** un consommateur souhaite mettre à jour toute l\'offre de santé d\'une région source = XX. Comme il n\'utilise qu'un sous-ensemble des informations de l\'offre, il souhaite ne recevoir que ces informations.
 
 **Requête :**
 
@@ -430,7 +430,7 @@ get[BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionO
 Cette partie de la spécification est en cours de construction.
 </p>
 
-**Description du scénario :**Un consommateur souhaite rechercher une offre de santé  à partir de son identifiant = XXX et consulter les anomalies associées si elles existent.
+**Description du scénario :**un consommateur souhaite rechercher une offre de santé  à partir de son identifiant = XXX et consulter les anomalies associées si elles existent.
 
 **Requête :**
 
