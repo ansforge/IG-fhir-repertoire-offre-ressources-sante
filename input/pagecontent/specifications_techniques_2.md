@@ -430,7 +430,7 @@ get[BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionO
 Cette partie de la spécification est en cours de construction.
 </p>
 
-**Description du scénario :**un consommateur souhaite rechercher une offre de santé  à partir de son identifiant = XXX et consulter les anomalies associées si elles existent.
+**Description du scénario :**un consommateur souhaite rechercher une offre de santé à partir de son identifiant = XXX et consulter les anomalies associées si elles existent.
 
 **Requête :**
 
