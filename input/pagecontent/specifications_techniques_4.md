@@ -267,7 +267,7 @@ sont applicables à ce cas d'usage.
 
 **Requête :**
 
-`get[BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02&location.nb-capacity=gt0&_revinclude=Location:healthcareservice`
+`GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02&location.nb-capacity=gt0&_revinclude=Location:healthcareservice`
 
 **Requête expliquée :**
 
