@@ -88,7 +88,7 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p><code>GET[base]/Location{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+<p><code>GET [base]/Location{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
@@ -289,12 +289,12 @@ applicables à ce cas d'usage sont :
 
 **Requête :**
 
-`get[BASE]/Location?_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Location?_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+GET [BASE]/Location?_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 
 ```
 **Réponse "simplifiée" :**
@@ -316,12 +316,12 @@ HTTP 200 OK
 
 **Requête :**
 
-`get[BASE]/Location?identifier=Location1&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?identifier=Location1&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Location?identifier=Location1 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+GET [BASE]/Location?identifier=Location1 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 
 
@@ -343,12 +343,12 @@ HTTP 200 OK
 
 **Requête :**
 
-`get[BASE]/Location?identifier=Location1,Location2&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?identifier=Location1,Location2&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Location?identifier=Location1,Location2 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+GET [BASE]/Location?identifier=Location1,Location2 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 
 
@@ -371,11 +371,11 @@ HTTP 200 OK
 
 **Requête :**
 
-`get[BASE]/Location?_lastUpdated=ge2022-11-06T15:00&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 ```sh
-get[BASE]/Location?_lastUpdated=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour/ge=greater or equal
+GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour/ge=greater or equal
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 **Réponse "simplifiée" :**
@@ -398,12 +398,12 @@ sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les iden
 
 **Requête :**
 
-`get[BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3 #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
+GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3 #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 **Réponse "simplifiée" :**

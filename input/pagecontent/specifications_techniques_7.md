@@ -252,12 +252,12 @@ Dans ce cas d’usage, nous n’utilisons aucun paramètres et modificateurs de 
 
 **Requête :**
 
-`get[BASE]/Task?identifier=XXX`
+`GET [BASE]/Task?identifier=XXX`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’anomalie
+GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’anomalie
 ```
 
 #### Scénario 2 : Consultation de la liste des anomalies
@@ -266,12 +266,12 @@ get[BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’
 
 **Requête :**
 
-`get[BASE]/Task?focus:HealthcareService:identifier=XXX`
+`GET [BASE]/Task?focus:HealthcareService:identifier=XXX`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche sur l’identifiant de l’élément référencé par l’anomalie
+GET [BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche sur l’identifiant de l’élément référencé par l’anomalie
 ```
 
 #### Scénario 3 : Consultation de la liste des anomalies sur un périmètre
@@ -288,7 +288,7 @@ Exemple avec HealthcareService :
 ```sh
 GET [BASE]/Task?focus:HealthcareService:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
 Exemple avec Organization : 
-get[BASE]/Task?focus:Organization:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
+GET [BASE]/Task?focus:Organization:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
 
 ```
 #### Scénario 4 : Consommation de toutes les anomalies
@@ -297,11 +297,11 @@ get[BASE]/Task?focus:Organization:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-R
 
 **Requête :**
 
-`get[BASE]/Task `
+`GET [BASE]/Task `
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Task #recherche sans critère pour récupérer toutes les anomalies
+GET [BASE]/Task #recherche sans critère pour récupérer toutes les anomalies
 ```
 

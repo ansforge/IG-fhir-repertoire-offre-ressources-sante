@@ -89,7 +89,7 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="531">
-<p><code>GET[base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+<p><code>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
@@ -291,13 +291,13 @@ applicables à ce cas d'usage sont :
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?
+GET [BASE]/HealthcareService?
 _include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -333,13 +333,13 @@ rechercher une offre de santé\
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?identifier=XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner 
+GET [BASE]/HealthcareService?identifier=XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner 
 ```
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?identifier=XXX #critère de recherche de l’identifiant de l’offre
+GET [BASE]/HealthcareService?identifier=XXX #critère de recherche de l’identifiant de l’offre
 _include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -354,13 +354,13 @@ mise à jour depuis une certaine date \>= (06/11/2022)
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00 #critère de recherche de sur la date de mise à jour (ge= greater than)
+GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00 #critère de recherche de sur la date de mise à jour (ge= greater than)
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -375,13 +375,13 @@ get[BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00 #critère de recherc
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15:00&organization.type= https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15:00&organization.type= https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00 #critère de recherche sur la date de mise à jour (ge= greater or equal than)
+GET [BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00 #critère de recherche sur la date de mise à jour (ge= greater or equal than)
 &organization.type= https ://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX #critère de recherche sur la categorieEG (nomenclature à compléter)
 &_include :iterate=HealthcareService :organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
@@ -395,13 +395,13 @@ get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00 
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) #critère de recherche sur la date de mise à jour 
+GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) #critère de recherche sur la date de mise à jour 
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -414,13 +414,13 @@ get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organiz
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_elements=identifier &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_elements=identifier &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX #critère de recherche sur la région source
+GET [BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX #critère de recherche sur la région source
 &_elements=identifier #ensemble des informations que le consommateur souhaite recevoir
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 ```
@@ -435,13 +435,13 @@ Cette partie de la spécification est en cours de construction.
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?identifier=XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner&_revinclude=Task:focus
+GET [BASE]/HealthcareService?identifier=XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner&_revinclude=Task:focus
 ```
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?identifier=XXX #critère de recherche de l’identifiant de l’offre
+GET [BASE]/HealthcareService?identifier=XXX #critère de recherche de l’identifiant de l’offre
 _include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService

@@ -92,7 +92,7 @@ Cette partie de la spécification est en cours de construction.
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="453">
-<p><code>POST[base]/Task{?_format=[mime-type]}</code></p>
+<p><code>POST [base]/Task{?_format=[mime-type]}</code></p>
 </td>
 </tr>
 </tbody>
@@ -138,7 +138,7 @@ Plus de précision sur la spécification FHIR :
 **Requête :**
 
 ```
-POST[BASE]/Task
+POST [BASE]/Task
 {	
 	"resourceType": "Task",
 	"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
@@ -155,7 +155,7 @@ POST[BASE]/Task
 **Requête :**
 
 ```
-POST[BASE]/Bundle
+POST [BASE]/Bundle
 {
   "resourceType": "Bundle",
 	"type":"collection",
