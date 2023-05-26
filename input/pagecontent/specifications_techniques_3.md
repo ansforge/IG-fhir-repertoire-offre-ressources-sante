@@ -154,7 +154,7 @@ Plus de précision sur la spécification FHIR :
 <p>name</p>
 </td>
 <td width="230">
-<p>specific-competence</p>
+<p>speciality</p>
 </td>
 </tr>
 <tr>
@@ -165,7 +165,7 @@ Plus de précision sur la spécification FHIR :
 <p>psychiatric-sector</p>
 </td>
 <td width="230">
-<p>speciality</p>
+<p>patient-type</p>
 </td>
 </tr>
 <tr>
@@ -176,7 +176,7 @@ Plus de précision sur la spécification FHIR :
 <p>service-category</p>
 </td>
 <td width="230">
-<p>patient-type</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
