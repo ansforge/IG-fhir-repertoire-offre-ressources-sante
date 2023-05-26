@@ -286,7 +286,7 @@ get[BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche sur
 Exemple avec HealtcareService :
 
 ```sh
-get[BASE]/Task?focus:HealthcareService:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
+GET [BASE]/Task?focus:HealthcareService:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
 Exemple avec Organization : 
 get[BASE]/Task?focus:Organization:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
 
