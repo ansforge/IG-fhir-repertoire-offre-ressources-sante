@@ -390,7 +390,7 @@ get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00 
 ```
 #### Scénario 6 : Extraction complète à partir d'une date de mise à jour d'un des éléments de l'offre 
 
-**Description du scénario :** Un consommateur souhaite par exemple  mettre  à jour toute l\'offre mise à jour depuis une certaine date \>=(06/11/2022) ou dont l'organisation est mise à jour depuis une certaine date \>= (06/11/2022)
+**Description du scénario :** Un consommateur souhaite par exemple mettre à jour toute l\'offre mise à jour depuis une certaine date \>=(06/11/2022) ou dont l'organisation est mise à jour depuis une certaine date \>= (06/11/2022)
 
 **Requête :**
 
