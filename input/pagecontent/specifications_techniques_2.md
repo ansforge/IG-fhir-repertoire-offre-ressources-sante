@@ -316,7 +316,7 @@ GET [BASE]/HealthcareService?organization:above.identifier=XX&_include:iterate=H
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?organization:above.identifier=XX #critère de recherche de l’établissement
+GET [BASE]/HealthcareService?organization:above.identifier=XX #critère de recherche de l’établissement
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
