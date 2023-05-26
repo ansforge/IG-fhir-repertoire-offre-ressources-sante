@@ -310,7 +310,7 @@ _include:iterate=HealthcareService:organization #inclus les Organization référ
 **Requête :**
 
 ```
-get[BASE]/HealthcareService?organization:above.identifier=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?organization:above.identifier=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
