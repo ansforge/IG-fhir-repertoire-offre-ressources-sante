@@ -394,8 +394,7 @@ HTTP 200 OK
 **Prérequis :** un consommateur recherche au préalable une offre de santé correspondant à ses critères via le service de recherche
 sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les identifiants des offres correspondant aux critères.
 
-**Description du scénario :** un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche
-sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3.
+**Description du scénario :** un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3.
 
 **Requête :**
 

@@ -384,9 +384,9 @@ get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15:00&o
 get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00 #critère de recherche sur la date de mise à jour (ge= greater or equal than)
 &organization.type= https ://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX #critère de recherche sur la categorieEG (nomenclature à compléter)
 &_include :iterate=HealthcareService :organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
-&_include=HealthcareService :location #inclus les Location référencées par HealthcareService
-&_revinclude=PractitionerRole :service #inclus les PractitionerRole qui référencent le HealthcareService
-&_include=PractitionerRole :practitioner #inclus les Practitioner référencés par PractitionerRole
+&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 #### Scénario 6 : Extraction complète à partir d'une date de mise à jour d'un des éléments de l'offre 
 
@@ -395,7 +395,7 @@ get[BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00 
 **Requête :**
 
 ```
-Get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+get[BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
