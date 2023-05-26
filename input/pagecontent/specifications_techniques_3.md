@@ -440,7 +440,7 @@ GET [BASE]/HealthcareService?intervention-zone=XXX &_include:iterate=HealthcareS
 **Requête expliquée :**
 
 ```sh
-get[BASE]/HealthcareService?intervention-zone=XXX #critère de recherche sur la commune faisant partie d’une zone d’intervention
+GET [BASE]/HealthcareService?intervention-zone=XXX #critère de recherche sur la commune faisant partie d’une zone d’intervention
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
