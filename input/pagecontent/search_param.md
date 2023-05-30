@@ -3071,7 +3071,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>date
   </span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3156,7 +3156,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>Token</span></span><span style='font-size:8.0pt;
+  mso-color-alt:windowtext'>token</span></span><span style='font-size:8.0pt;
   line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3240,7 +3240,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>Token</span></span><span style='font-size:8.0pt;
+  mso-color-alt:windowtext'>token</span></span><span style='font-size:8.0pt;
   line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3281,7 +3281,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  style='font-size:8.0pt;line-height:115%'>Token</span></span><span
+  style='font-size:8.0pt;line-height:115%'>token</span></span><span
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3330,7 +3330,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>Token</span></span><span style='font-size:8.0pt;
+  mso-color-alt:windowtext'>token</span></span><span style='font-size:8.0pt;
   line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3371,7 +3371,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  style='font-size:8.0pt;line-height:115%'>Token</span></span><span
+  style='font-size:8.0pt;line-height:115%'>token</span></span><span
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3418,7 +3418,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date</span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>date</span><span
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3555,7 +3555,7 @@ Critères de recherches applicables à la ressource Practioner.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>date
   </span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3729,7 +3729,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>date
   </span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
@@ -3897,7 +3897,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Date <o:p></o:p></span></p>
+  8.0pt;line-height:115%'>date<o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.24%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -4058,7 +4058,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Date<o:p></o:p></span></p>
+  8.0pt;line-height:115%'>date<o:p></o:p></span></p>
   </td>
   <td width="46%" valign=top style='width:46.24%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
