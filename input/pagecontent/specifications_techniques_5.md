@@ -98,13 +98,13 @@ Cette partie de la spécification est en cours de construction.
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/http.html#create et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#create et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/http.html >
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/R4/http.html >
 
 Si la création est un succès, le serveur répond en renvoyant a minima:
 -	Un header avec un code 201 Created HTTP.
@@ -115,7 +115,7 @@ Si la création est un succès, le serveur répond en renvoyant a minima:
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-[https://www.hl7.org/fhir/operationoutcome.html](https://www.hl7.org/fhir/operationoutcome.html)
+[https://www.hl7.org/fhir/R4/operationoutcome.html](https://www.hl7.org/fhir/R4/operationoutcome.html)
 
 Si la création échoue, le serveur doit répondre :
 
@@ -127,7 +127,7 @@ détails sur la raison de l'échec
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
 requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-[https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
+[https://www.hl7.org/fhir/R4/http.html](https://www.hl7.org/fhir/R4/http.html)
 
 ### Exemple de requêtes
 

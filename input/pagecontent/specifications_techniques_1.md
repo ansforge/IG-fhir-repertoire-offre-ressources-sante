@@ -94,19 +94,19 @@
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#search">https://www.hl7.org/fhir/R4/http.html#search</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/bundle.html>
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/R4/bundle.html>
 
 Si la recherche est un succès, le serveur répond :
 
 -   Un header avec un code 200 OK HTTP
 
--   Un body contenant une ressource [Bundle](https://www.hl7.org/fhir/bundle.html) dont le type =
+-   Un body contenant une ressource [Bundle](https://www.hl7.org/fhir/R4/bundle.html) dont le type =
     searchset.
     Le bundle encapsule 0 à n ressources Location corespondant aux
     critères de recherche plus les ressources incluses correspondant aux
@@ -119,12 +119,12 @@ Remarque : la recherche est un succès à partir du moment où la requête
 peut être exécutée. Il peut il y avoir 0 à n correspondances.
 
 Plus de précision sur la spécification FHIR :
-https://www.hl7.org/fhir/http.html
+https://www.hl7.org/fhir/R4/http.html
 
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-<https://www.hl7.org/fhir/operationoutcome.html>
+<https://www.hl7.org/fhir/R4/operationoutcome.html>
 
 Si la recherche échoue, le serveur doit répondre :
 
@@ -136,7 +136,7 @@ Si la recherche échoue, le serveur doit répondre :
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
 requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-<https://www.hl7.org/fhir/http.html>
+<https://www.hl7.org/fhir/R4/http.html>
 
 ### Critères de recherche
 
@@ -234,7 +234,7 @@ Plus de précision sur la spécification FHIR :
 </table>
 
 Ces critères de recherche sont applicables à la ressource Location,
-grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
+grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:HealthcareService:location:[NOM CRITERE]`
 
 - 	Les critères de recherche, définis au paragraphe 4.6, de StructureDefinition-ror-task applicables à ce cas d’usage sont :
@@ -267,7 +267,7 @@ grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour ce
 *<i>Critères de recherche qui seront applicables ultérieurement</i>
 
 Ces critères de recherche sont applicables à la ressource Location,
-grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
+grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:Location:focus:[[NOM CRITERE]`
 
 ### Paramètres et modificateurs de requêtes FHIR

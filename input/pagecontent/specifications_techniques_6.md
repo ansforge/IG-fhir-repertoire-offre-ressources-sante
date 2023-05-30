@@ -98,13 +98,13 @@ Cette partie de la spécification est en cours de construction.
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/http.html#patch et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#patch et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/http.html>
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/R4/http.html>
 
 Si la mise à jour est un succès, le serveur répond en renvoyant a minima:
 -	Un header avec un code 200 OK HTTP.
@@ -115,7 +115,7 @@ Si la mise à jour est un succès, le serveur répond en renvoyant a minima:
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-[https://www.hl7.org/fhir/operationoutcome.html](https://www.hl7.org/fhir/operationoutcome.html)
+[https://www.hl7.org/fhir/R4/operationoutcome.html](https://www.hl7.org/fhir/R4/operationoutcome.html)
 
 Si la mise à jour échoue, le serveur doit répondre:
 -	Un header avec un un code erreur HTTP 4XX ou 5XX.

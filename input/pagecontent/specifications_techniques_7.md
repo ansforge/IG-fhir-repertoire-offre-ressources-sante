@@ -98,19 +98,19 @@ Cette partie de la spécification est en cours de construction.
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#search">https://www.hl7.org/fhir/R4/http.html#search</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/http.html>
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/R4/http.html>
 
 Si la recherche est un succès, le serveur répond :
 
 Un header avec un code 200 OK HTTP
 
-Un body contenant une ressource [Bundle]( https://www.hl7.org/fhir/bundle.html) dont le type = searchset. Le bundle encapsule 0 à n ressources HealthcareService corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche. Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise `total`. Dans le cas où il n'y a pas de résultat le service renvoie `total`: 0.
+Un body contenant une ressource [Bundle]( https://www.hl7.org/fhir/R4/bundle.html) dont le type = searchset. Le bundle encapsule 0 à n ressources HealthcareService corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche. Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise `total`. Dans le cas où il n'y a pas de résultat le service renvoie `total`: 0.
 
 Remarque : la recherche est un succès à partir du moment où la requête
 peut être exécutée. Il peut il y avoir 0 à n correspondances.
@@ -118,7 +118,7 @@ peut être exécutée. Il peut il y avoir 0 à n correspondances.
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-[https://www.hl7.org/fhir/operationoutcome.html](https://www.hl7.org/fhir/operationoutcome.html)
+[https://www.hl7.org/fhir/R4/operationoutcome.html](https://www.hl7.org/fhir/R4/operationoutcome.html)
 
 Si la recherche échoue, le serveur doit répondre :
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
@@ -128,7 +128,7 @@ détails sur la raison de l'échec
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
 requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-[https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
+[https://www.hl7.org/fhir/R4/http.html](https://www.hl7.org/fhir/R4/http.html)
 
 ### Critères de recherche
 
