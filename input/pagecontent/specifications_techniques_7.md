@@ -92,7 +92,7 @@ Cette partie de la spécification est en cours de construction.
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="538">
-<p><code>GET[base]/Task{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+<p><code>GET [base]/Task{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>

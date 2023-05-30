@@ -87,7 +87,7 @@
 <p>Construction requ&ecirc;te de base</p>
 </td>
 <td width="538">
-<p><code>GET[base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+<p><code>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
