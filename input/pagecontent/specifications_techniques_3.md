@@ -102,7 +102,7 @@
 #### Réponse de base -- Succès
 
 Lien vers la spécification FHIR :
-[[https://www.hl7.org/fhir/R4/bundle.html]{.underline}](https://www.hl7.org/fhir/R4/bundle.html)
+[https://www.hl7.org/fhir/R4/bundle.html](https://www.hl7.org/fhir/R4/bundle.html)
 
 Si la recherche est un succès, le serveur répond :
 
@@ -125,7 +125,7 @@ https://www.hl7.org/fhir/R4/http.html
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-[[https://www.hl7.org/fhir/R4/operationoutcome.html]{.underline}](https://www.hl7.org/fhir/R4/operationoutcome.html)
+[https://www.hl7.org/fhir/R4/operationoutcome.html](https://www.hl7.org/fhir/R4/operationoutcome.html)
 
 Si la recherche échoue, le serveur doit répondre :
 
@@ -137,7 +137,7 @@ détails sur la raison de l'échec
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
 requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-[[https://www.hl7.org/fhir/R4/http.html]{.underline}](https://www.hl7.org/fhir/R4/http.html)
+[https://www.hl7.org/fhir/R4/http.html]](https://www.hl7.org/fhir/R4/http.html)
 
 ### Critères de recherche
 
