@@ -1,3 +1,9 @@
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; max-width: 790px">
+<b>Brief description of this Implementation Guide</b><br>
+The French directory of healthcare and medico-social support services and resources (<a href="https://esante.gouv.fr/produits-services/repertoire-ror">ROR</a>) is the repository (in the sense of a repository of data) for describing the healthcare services offered by Health facility, medico-social establishments and services, and local structures in France.
+The aim of this implementation guide is to define the specifications of the ROR FHIR API, enabling any authorized application to search for a healthcare offer and its capabilities (availability, equipment, etc.). 
+.
+</p>
 ### Description fonctionnelle de l'API
 
 #### Le ROR, référentiel de données de description de l'offre de santé
@@ -76,7 +82,7 @@ permet de centraliser la recherche auprès du ROR national en
 remplacement des différentes instances régionales.
 
 Ce service peut ainsi permettre à une instance régionale de s'appuyer
-sur le ROR national pour réaliser une « recherche interROR », et permet
+sur le ROR national pour réaliser l’équivalent d’une « recherche interROR », et permet
 également aux autres systèmes consommateurs des données du ROR de
 disposer d'un service pour lancer une recherche et obtenir en résultat
 la description des offres de santé recherchées.
@@ -92,13 +98,13 @@ droits d'accès adaptés.
 
 Les attributs de description de l'offre, fournis en résultat d'une
 recherche, sont décrits dans le document ROR-modèle d'exposition
-\[Ref_01\]. Ces attributs sont décrits en utilisant la norme UML et en
+(bientôt disponible). Ces attributs sont décrits en utilisant la norme UML et en
 cohérence avec le Modèle des Objets de Santé (MOS) et les nomenclatures
 associées (NOS) gérés par l'ANS.
 
 Ces attributs sont associés à des règles de gestion communes qui sont
 également présentées dans le document ROR-modèle d'exposition
-\[Ref_01\].
+(bientôt disponible).
 
 ##### Nomenclatures
 
@@ -116,7 +122,7 @@ de référence et jeux de valeurs) qui permettent de renseigner les
 concepts du modèle d'exposition et qui font le lien avec les concepts
 des modèles des ROR régionaux. Ces nomenclatures d'échange sont
 précisées dans le document de référence ROR-modèle d'exposition
-\[Ref_01\] .
+(bientôt disponible).
 
 Chaque nomenclature des outils interopérables doit trouver son
 équivalence dans la nomenclature du concept associé dans le modèle

@@ -92,21 +92,21 @@ Cette partie de la spécification est en cours de construction.
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="453">
-<p><code>POST[base]/Task{?_format=[mime-type]}</code></p>
+<p><code>POST [base]/Task{?_format=[mime-type]}</code></p>
 </td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/http.html#create et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#create et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/http.html >
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/R4/http.html >
 
-Si la création est un succès, le serveur répond :
+Si la création est un succès, le serveur répond en renvoyant a minima:
 -	Un header avec un code 201 Created HTTP.
 -	Un header Location contenant le nouvel identifiant technique et l’identifiant de version de la ressource créée.
 -	L’identifiant fonctionnel de la ressouce créée.
@@ -115,7 +115,7 @@ Si la création est un succès, le serveur répond :
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-[https://www.hl7.org/fhir/operationoutcome.html](https://www.hl7.org/fhir/operationoutcome.html)
+[https://www.hl7.org/fhir/R4/operationoutcome.html](https://www.hl7.org/fhir/R4/operationoutcome.html)
 
 Si la création échoue, le serveur doit répondre :
 
@@ -127,7 +127,7 @@ détails sur la raison de l'échec
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
 requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-[https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
+[https://www.hl7.org/fhir/R4/http.html](https://www.hl7.org/fhir/R4/http.html)
 
 ### Exemple de requêtes
 
@@ -138,10 +138,9 @@ Plus de précision sur la spécification FHIR :
 **Requête :**
 
 ```
-POST[BASE]/Task
+POST [BASE]/Task
 {	
 	"resourceType": "Task",
-	"identifier": "identifiant1",
 	"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
 	"code": [ { "system": "JDV XXX", "value": "12345" } ],
 	"description": "description de notre ano",
@@ -156,7 +155,7 @@ POST[BASE]/Task
 **Requête :**
 
 ```
-POST[BASE]/Bundle
+POST [BASE]/Bundle
 {
   "resourceType": "Bundle",
 	"type":"collection",
@@ -164,7 +163,6 @@ POST[BASE]/Bundle
 		{	
 			"resource": {
 				"resourceType": "Task",
-"identifier": "identifiant1",
 				"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
 				"code": [ { "system": "JDV XXX", "value": "12345" } ],
 				"description": "description de notre ano",
@@ -174,7 +172,6 @@ POST[BASE]/Bundle
 			{
 			"resource": {
 				"resourceType": "Task",
-				"identifier": "identifiant2",
 				"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
 				"code": [ { "system": "JDV XXX", "value": "12345" } ],
 				"description": "description de notre ano",

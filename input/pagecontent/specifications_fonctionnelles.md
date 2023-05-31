@@ -60,25 +60,25 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 
 -   Scénario 1 : Données capacitaires sur le périmètre national
 
-    -   un consommateur souhaite récupérer l\'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système (Exemple de ROR urgence qui souhaite afficher l\'ensemble des capacités sur une carte).
+    -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système (Exemple de ROR urgence qui souhaite afficher l\'ensemble des capacités sur une carte).
 
 -   Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
 
-    -   un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge -\> il connait un des identifiants identifiant de point de saisie ou identifiant externe de synchronisation et demande à lire une donnée capacitaire en particulier.
+    -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge -\> il connait un des identifiants (identifiant de point de saisie ou identifiant externe de synchronisation) et demande à lire une donnée capacitaire en particulier.
 
 -   Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
 
-    -   un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
+    -   Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
 
 -   Scénario 4 : Données capacitaires à partir d'une date de mise à jour
 
-    -   un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.
+    -   Un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.
 
 -   Scénario 5 : Données capacitaires d'une offre opérationnelle
 
-    -   un consommateur ayant recherché au préalable une offre de santé correspondant à ses critères (exemple : Urgences spécialisées cardiologiques via le service de recherche sur le modèle d'exposition 2.4 du ROR) souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en  paramètre de la recherche.
+    -   Un consommateur ayant recherché au préalable une offre de santé correspondant à ses critères (exemple : Urgences spécialisées cardiologiques via le service de recherche sur le modèle d'exposition 2.4 du ROR) souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en  paramètre de la recherche.
 
-### Consultation de l'offre (synchronisation)
+### Consultation de l'offre (Extraction)
 
 #### Description du cas d'usage
 
@@ -128,15 +128,15 @@ Il y a deux cas possibles :
 
 -   Scénario 1 : Extraction complète
 
-    -   Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre nationale
+    -   Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
 
 -   Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
 
-    -   Un consommateur souhaite rechercher l\'offre de santé proposée par un établissement
+    -   Un consommateur souhaite rechercher l\'offre de santé proposée par un établissement.
 
 -   Scénario 3 : Extraction d'une offre de santé identifiée
 
-    -   Un consommateur souhaite rechercher une offre de santé à partir de son identifiant
+    -   Un consommateur souhaite rechercher une offre de santé à partir de son identifiant.
 
 -   Scénario 4 : Extraction à partir d'une date de mise à jour de l'offre opérationnelle
 
@@ -144,11 +144,11 @@ Il y a deux cas possibles :
 
 -   Scénario 5 : Extraction à partir d’une date de mise à jour de l’entité géographique
 
-    -   Un consommateur souhaite mettre à jour toute l\'offre dont l'entité géographique est mise à jour depuis une certaine date
+    -   Un consommateur souhaite mettre à jour toute l\'offre dont l'entité géographique est mise à jour depuis une certaine date.
 
 -   Scénario 6 : Extraction à partir d'une date de mise à jour d'un des éléments de l'offre
 
-    -   Un consommateur souhaite mettre à jour dans son système toute l'offre mise à jour depuis une certaine date ou dont l’organisation est mise à jour depuis une certaine date
+    -   Un consommateur souhaite par exemple mettre à jour dans son système toute l'offre mise à jour depuis une certaine date ou dont l’organisation est mise à jour depuis une certaine date.
 
 -   Scénario 7 : Extraction de l'offre sur un périmètre limité
 
@@ -156,8 +156,7 @@ Il y a deux cas possibles :
 
 -	Scénario 8 : Extraction d’une offre de santé identifiée avec anomalie
 
-    -   Un consommateur souhaite rechercher une offre de santé à partir de son identifiant et consulter les anomalies associées si elle sont existantes 
-
+    -   Un consommateur souhaite rechercher une offre de santé à partir de son identifiant et consulter les anomalies associées si elle sont existantes.
 
 ### Recherche d'offre sur critères principaux
 
@@ -189,47 +188,47 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
 -   Scenario 1 : Recherche sur un critère en saisissant une valeur
 
-    -   Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'unique valeur recherchée par le consommateur
+    -   Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'unique valeur recherchée par le consommateur.
 
 -   Scenario 2 : Recherche sur un critère en saisissant une liste de valeurs
 
-    -   Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'une des valeurs recherchées par le consommateur
+    -   Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'une des valeurs recherchées par le consommateur.
 
 -   Scenario 3 : Recherche multicritères #1 -- ET
 
-    -   Un consommateur cherche les offres ayant un type d'offre **ET** une modalité d'accueil qu’il indique
+    -   Un consommateur cherche les offres ayant un type d'offre **ET** une modalité d'accueil qu’il indique.
 
 -   Scenario 4 : Recherche multicritères #2 -- OU
 
-    -   Un consommateur cherche les offres ayant à un type d'offre  **OU** une activité opérationnelle qu’il indique
+    -   Un consommateur cherche les offres ayant à un type d'offre  **OU** une activité opérationnelle qu’il indique.
 
 -   Scenario 5 : Recherche multicritères #3 -- ET/OU
 
-    -   Un consommateur recherche les offres ayant (une catégorie d'établissement **OU** un type d'offre) **ET** un acte spécifique qu’il indique
+    -   Un consommateur recherche les offres ayant (une catégorie d'établissement **OU** un type d'offre) **ET** un acte spécifique qu’il indique.
 
 -   Scenario 6 : Recherche à proximité géographique
 
-    -   Un consommateur cherche les offres ayant une activité opérationnelle, dans un périmètre géographique proche du lieu de résidence d\'un patient
+    -   Un consommateur cherche les offres ayant une activité opérationnelle, dans un périmètre géographique proche du lieu de résidence d\'un patient.
 
 -   Scenario 7 : Recherche sur une zone d'intervention
 
-    -   Un consommateur cherche les offres proposées dans une commune faisant partie d\'une zone d\'intervention
+    -   Un consommateur cherche les offres proposées dans une commune faisant partie d\'une zone d\'intervention.
 
 -   Scenario 8 : Recherche sur un département
 
-    -   Un consommateur recherche les offres sur un département, ou un ensemble de département (code postal)
+    -   Un consommateur recherche les offres sur un département, ou un ensemble de département (code postal).
 
 -   Scenario 9 : Recherche sur une ville #1 -- Code Postal
 
-    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code postal)
+    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code postal).
 
 -   Scenario 10 : Recherche sur une ville #2 -- Code commune
 
-    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code commune)
+    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code commune).
 
 -   Scenario 11 : Recherche sur un critère du modèle d'exposition 3.0
 
-    -   Un consommateur recherche les offres proposant une modalité d\'accueil et un niveau d\'expertise (critères modèle 3.0)
+    -   Un consommateur recherche les offres proposant une modalité d\'accueil et un niveau d\'expertise (critères modèle 3.0).
   
 -    Scenario 12 : Recherche d’offre en anomalie
 
@@ -265,15 +264,15 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
 -   Scenario 1 : Recherche sur un critère capacitaire #1
 
-    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit disponible
+    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit disponible.
 
 -   Scenario 2 : Recherche sur un critère capacitaire #2
 
-    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit fermé réouvrable
+    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit fermé réouvrable.
 
 -   Scenario 3 : Recherche sur un critère de l'équipement
 
-    -   Un consommateur cherche une offre de chirurgie traumatologique proposant un appareil de radiologie adapté à l\'obésité du patient
+    -   Un consommateur cherche une offre de chirurgie traumatologique proposant un appareil de radiologie adapté à l\'obésité du patient.
 
 ### Signalement d’anomalie
 
@@ -316,7 +315,7 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
 Un service numérique souhaite mettre à jour une ou plusieurs anomalies qualité.
 
 Le service numérique renseigne l’identifiant technique de l’anomalie à mettre à jour et les informations à modifier (voir description de la [ressource](StructureDefinition-ror-task.html)).
-Le ROR National retourne au service numérique l’identifiant technique, les métadonnées et l’identifiant fonctionnel de l’anomalie créée.
+Le ROR National retourne au service numérique l’identifiant technique, les métadonnées et l’identifiant fonctionnel a minima de l’anomalie créée.
 
 <table align="center">
     <tr>
@@ -350,7 +349,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 Un consommateur souhaite consulter une ou plusieurs anomalies qualité.
 
 Le consommateur renseigne si besoin son (ses) critère(s) de recherche parmi les critères disponibles.
-Le ROR National répond au consommateur la ou les anomalies correspondantes aux critères de recherche
+Le ROR National répond au consommateur la ou les anomalies correspondantes aux critères de recherche.
 
 <table align="center">
     <tr>
@@ -372,7 +371,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 -	Scenario 1 : Consultation du statut d’une anomalie
 
     -	Un responsable qualité ou le moteur de règle souhaite consulter le statut d'une anomalie.
--	Scenario 2 : Consultation de la liste des anomalies 
+-	Scenario 2 : Consultation de la liste des anomalies
 
     -	Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d'un élément.
 

@@ -88,25 +88,25 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p><code>GET[base]/Location{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+<p><code>GET [base]/Location{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#search">https://www.hl7.org/fhir/R4/http.html#search</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/bundle.html>
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/R4/bundle.html>
 
 Si la recherche est un succès, le serveur répond :
 
 -   Un header avec un code 200 OK HTTP
 
--   Un body contenant une ressource [Bundle](https://www.hl7.org/fhir/bundle.html) dont le type =
+-   Un body contenant une ressource [Bundle](https://www.hl7.org/fhir/R4/bundle.html) dont le type =
     searchset.
     Le bundle encapsule 0 à n ressources Location corespondant aux
     critères de recherche plus les ressources incluses correspondant aux
@@ -119,12 +119,12 @@ Remarque : la recherche est un succès à partir du moment où la requête
 peut être exécutée. Il peut il y avoir 0 à n correspondances.
 
 Plus de précision sur la spécification FHIR :
-https://www.hl7.org/fhir/http.html
+https://www.hl7.org/fhir/R4/http.html
 
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-<https://www.hl7.org/fhir/operationoutcome.html>
+<https://www.hl7.org/fhir/R4/operationoutcome.html>
 
 Si la recherche échoue, le serveur doit répondre :
 
@@ -136,7 +136,7 @@ Si la recherche échoue, le serveur doit répondre :
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
 requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-<https://www.hl7.org/fhir/http.html>
+<https://www.hl7.org/fhir/R4/http.html>
 
 ### Critères de recherche
 
@@ -173,7 +173,7 @@ Plus de précision sur la spécification FHIR :
 <p>address-city</p>
 </td>
 <td width="230">
-<p></p>
+<p>capacity-update-date*</p>
 </td>
 <td width="230">
 <p>residential-type</p>
@@ -214,8 +214,7 @@ Plus de précision sur la spécification FHIR :
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+*<i>Critères de recherche qui seront applicables ultérieurement</i>
 
 -   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
     **StructureDefinition-ror-healthcareservice** applicables à ce cas
@@ -235,7 +234,7 @@ Plus de précision sur la spécification FHIR :
 </table>
 
 Ces critères de recherche sont applicables à la ressource Location,
-grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour cela utiliser la syntaxe suivante :
+grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:HealthcareService:location:[NOM CRITERE]`
 
 - 	Les critères de recherche, définis au paragraphe 4.6, de StructureDefinition-ror-task applicables à ce cas d’usage sont :
@@ -257,7 +256,7 @@ grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour ce
 <p>identifier*</p>
 </td>
 <td width="226">
-<p>authoredOn*</p>
+<p>authored-on*</p>
 </td>
 <td width="226">
 <p>&nbsp;</p>
@@ -268,7 +267,7 @@ grâce au [chainage inversé](https://www.hl7.org/fhir/search.html#has). Pour ce
 *<i>Critères de recherche qui seront applicables ultérieurement</i>
 
 Ces critères de recherche sont applicables à la ressource Location,
-grâce au chainage inversé[^4]. Pour cela utiliser la syntaxe suivante :
+grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:Location:focus:[[NOM CRITERE]`
 
 ### Paramètres et modificateurs de requêtes FHIR
@@ -282,7 +281,7 @@ applicables à ce cas d'usage sont :
 
 -   Tous les prefixes de comparaison
 
-### Exemple de requêtes
+### Exemples de requêtes
 
 #### Scénario 1 : Données capacitaires sur le périmètre national
 
@@ -290,12 +289,12 @@ applicables à ce cas d'usage sont :
 
 **Requête :**
 
-`get[BASE]/Location?_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Location?_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+GET [BASE]/Location?_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 
 ```
 **Réponse "simplifiée" :**
@@ -313,16 +312,16 @@ HTTP 200 OK
 ```
 #### Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1.
 
 **Requête :**
 
-`get[BASE]/Location?identifier=Location1&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?identifier=Location1&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Location?identifier=Location1 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+GET [BASE]/Location?identifier=Location1 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 
 
@@ -340,16 +339,16 @@ HTTP 200 OK
 ```
 #### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur plusieurs lieux de prise en charge = Location1 ou Location2
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur plusieurs lieux de prise en charge = Location1 ou Location2.
 
 **Requête :**
 
-`get[BASE]/Location?identifier=Location1,Location2&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?identifier=Location1,Location2&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Location?identifier=Location1,Location2 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+GET [BASE]/Location?identifier=Location1,Location2 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 
 
@@ -368,15 +367,15 @@ HTTP 200 OK
 ```
 ####  Scénario 4 : Données capacitaires à partir d'une date de mise à jour
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité à partir d\'une date de mise à jour \>= 06/11/2022-15h00
+**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité à partir d\'une date de mise à jour \>= 06/11/2022-15h00.
 
 **Requête :**
 
-`get[BASE]/Location?_lastUpdated=ge2022-11-06T15:00&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 ```sh
-get[BASE]/Location?_lastUpdated=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour/ge=greater or equal
+GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour/ge=greater or equal
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 **Réponse "simplifiée" :**
@@ -395,17 +394,16 @@ HTTP 200 OK
 **Prérequis :** un consommateur recherche au préalable une offre de santé correspondant à ses critères via le service de recherche
 sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les identifiants des offres correspondant aux critères.
 
-**Description du scénario :** un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche
-sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3
+**Description du scénario :** un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3.
 
 **Requête :**
 
-`get[BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3 #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
+GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3 #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 **Réponse "simplifiée" :**

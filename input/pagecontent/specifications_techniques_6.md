@@ -92,21 +92,21 @@ Cette partie de la spécification est en cours de construction.
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="538">
-<p><code>PATCH[base]/Task/[id]{&amp;_format=[mime-type]}</code></p>
+<p><code>PATCH [base]/Task/[id]{&amp;_format=[mime-type]}</code></p>
 </td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/http.html#patch et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#patch et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/http.html>
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/R4/http.html>
 
-Si la mise à jour est un succès, le serveur répond :
+Si la mise à jour est un succès, le serveur répond en renvoyant a minima:
 -	Un header avec un code 200 OK HTTP.
 -	Un header Last-Modified contenant la dernière date de mise à jour de la ressource mise à jour.
 -	Un header ETag contenant le nouvel identifiant de version de la ressource mise à jour.
@@ -115,9 +115,9 @@ Si la mise à jour est un succès, le serveur répond :
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-[https://www.hl7.org/fhir/operationoutcome.html](https://www.hl7.org/fhir/operationoutcome.html)
+[https://www.hl7.org/fhir/R4/operationoutcome.html](https://www.hl7.org/fhir/R4/operationoutcome.html)
 
-Si la mise à jour échoue, le serveur doit répondre : 
+Si la mise à jour échoue, le serveur doit répondre:
 -	Un header avec un un code erreur HTTP 4XX ou 5XX.
 -	Un body contenant une ressource OperationOutcome  qui donne les détails sur la raison de l’échec
 
@@ -125,7 +125,7 @@ Si la mise à jour échoue, le serveur doit répondre :
 
 #### Scénario 1 : Mise à jour du statut de plusieurs anomalies
 
-**Description du scénario :** Le responsable de la donnée en anomalie corrige des anomalies, le responsable qualité ou le moteur de règle met à jour les statuts métier des anomalies en précisant les identifiants techniques.
+**Description du scénario :** le responsable de la donnée en anomalie corrige des anomalies, le responsable qualité ou le moteur de règle met à jour les statuts métier des anomalies en précisant les identifiants techniques.
 Anomalie XX au statut statutXX
 
 
@@ -133,7 +133,7 @@ Anomalie XX au statut statutXX
 
 ```
 Content-Type: application/fhir+json
-PATCH[BASE]
+POST [BASE]
 
 {
     "resourceType": "Bundle",
@@ -150,7 +150,7 @@ PATCH[BASE]
 				            "part": [ 
                                 {
                                     "name": "type",
-                                    "valueCode": "replace"
+                                    "valueString": "replace"
                                 }, 
                                 {
                                     "name": "path",
@@ -186,20 +186,20 @@ PATCH[BASE]
 
 #### Scénario 2 : Inactivation d’une anomalie
 
-**Description du scénario :** Un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
+**Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
 
 **Requête :**
 
 ```
 Content-Type: application/fhir+json
-PATCH[BASE]/RORTask/XXX
+PATCH [BASE]/Task/XXX
 {
 "resourceType": "Parameters",
 	"parameter": [ {
 	"name": "operation",
 	"part": [ {
 		"name": "type",
-		"valueCode": "replace"
+		"valueString": "replace"
 	}, {
 		"name": "path",
 		"valueString": "Task.businessStatus"

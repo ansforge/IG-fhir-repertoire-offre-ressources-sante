@@ -92,25 +92,25 @@ Cette partie de la spécification est en cours de construction.
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="538">
-<p><code>GET[base]/Task{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+<p><code>GET [base]/Task{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/http.html#search">https://www.hl7.org/fhir/http.html#search</a> et <a href="https://www.hl7.org/fhir/http.html#general">https://www.hl7.org/fhir/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#search">https://www.hl7.org/fhir/R4/http.html#search</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
 
-Lien vers la spécification FHIR : <https://www.hl7.org/fhir/http.html>
+Lien vers la spécification FHIR : <https://www.hl7.org/fhir/R4/http.html>
 
 Si la recherche est un succès, le serveur répond :
 
 Un header avec un code 200 OK HTTP
 
-Un body contenant une ressource [Bundle]( https://www.hl7.org/fhir/bundle.html) dont le type = searchset. Le bundle encapsule 0 à n ressources HealthcareService corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche. Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise `total`. Dans le cas où il n'y a pas de résultat le service renvoie `total`: 0.
+Un body contenant une ressource [Bundle]( https://www.hl7.org/fhir/R4/bundle.html) dont le type = searchset. Le bundle encapsule 0 à n ressources HealthcareService corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche. Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise `total`. Dans le cas où il n'y a pas de résultat le service renvoie `total`: 0.
 
 Remarque : la recherche est un succès à partir du moment où la requête
 peut être exécutée. Il peut il y avoir 0 à n correspondances.
@@ -118,7 +118,7 @@ peut être exécutée. Il peut il y avoir 0 à n correspondances.
 #### Réponse de base -- Echec
 
 Lien vers la spécification FHIR :
-[https://www.hl7.org/fhir/operationoutcome.html](https://www.hl7.org/fhir/operationoutcome.html)
+[https://www.hl7.org/fhir/R4/operationoutcome.html](https://www.hl7.org/fhir/R4/operationoutcome.html)
 
 Si la recherche échoue, le serveur doit répondre :
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
@@ -128,7 +128,7 @@ détails sur la raison de l'échec
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
 requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-[https://www.hl7.org/fhir/http.html](https://www.hl7.org/fhir/http.html)
+[https://www.hl7.org/fhir/R4/http.html](https://www.hl7.org/fhir/R4/http.html)
 
 ### Critères de recherche
 
@@ -241,67 +241,67 @@ Ces critères de recherche sont applicables à la ressource Task, grâce au chai
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Dans ce cas d’usages, nous n’utilisons aucun paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html).
+Dans ce cas d’usage, nous n’utilisons aucun paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html).
 
 ### Exemple de requêtes
 
 #### Scénario 1 : Consultation du statut d’une anomalie
 
-**Description du scénario :** Un responsable qualité où le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
+**Description du scénario :** un responsable qualité où le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
 
 
 **Requête :**
 
-`get[BASE]/Task?identifier=XXX`
+`GET [BASE]/Task?identifier=XXX`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’anomalie
+GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’anomalie
 ```
 
 #### Scénario 2 : Consultation de la liste des anomalies
 
-**Description du scénario :** Un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
+**Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
 
 **Requête :**
 
-`get[BASE]/Task?focus:HealthcareService:identifier=XXX`
+`GET [BASE]/Task?focus:HealthcareService:identifier=XXX`
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche sur l’identifiant de l’élément référencé par l’anomalie
+GET [BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche sur l’identifiant de l’élément référencé par l’anomalie
 ```
 
 #### Scénario 3 : Consultation de la liste des anomalies sur un périmètre
 
-**Description du scénario :** Un responsable qualité souhaite consulter la liste des anomalies sur son périmètre : région = XXX.
+**Description du scénario :** un responsable qualité souhaite consulter la liste des anomalies sur son périmètre : région = XXX.
 
 **Requête :**
 
-`get[BASE]/Task?focus:[Ressource]:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX`
+`GET [BASE]/Task?focus:[Ressource]:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX`
 
 **Requête expliquée :**
-Exemple avec HealtcareService : 
+Exemple avec HealthcareService :
 
 ```sh
-get[BASE]/Task?focus:HealthcareService:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
+GET [BASE]/Task?focus:HealthcareService:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
 Exemple avec Organization : 
-get[BASE]/Task?focus:Organization:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
+GET [BASE]/Task?focus:Organization:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
 
 ```
 #### Scénario 4 : Consommation de toutes les anomalies
 
-**Description du scénario :** Le BI consomme toutes les anomalies pour faire des tableaux de suivi.
+**Description du scénario :** le BI consomme toutes les anomalies pour faire des tableaux de suivi.
 
 **Requête :**
 
-`get[BASE]/Task `
+`GET [BASE]/Task `
 
 **Requête expliquée :**
 
 ```sh
-get[BASE]/Task #recherche sans critère pour récupérer toutes les anomalies
+GET [BASE]/Task #recherche sans critère pour récupérer toutes les anomalies
 ```
 

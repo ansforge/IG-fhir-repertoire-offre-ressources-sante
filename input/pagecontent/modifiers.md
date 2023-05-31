@@ -49,8 +49,8 @@
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
   mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><a
-  href="https://www.hl7.org/fhir/search.html#revinclude"><span
-  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#revinclude</span></a><span
+  href="https://www.hl7.org/fhir/R4/search.html#revinclude"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/R4/search.html#revinclude</span></a><span
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="47%" style='width:47.22%;border-top:none;border-left:none;
@@ -77,8 +77,8 @@
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
   mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><a
-  href="https://www.hl7.org/fhir/search.html#include"><span style='font-size:
-  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#include</span></a><span
+  href="https://www.hl7.org/fhir/R4/search.html#include"><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/R4/search.html#include</span></a><span
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> <o:p></o:p></span></p>
   </td>
   <td width="47%" style='width:47.22%;border-top:none;border-left:none;
@@ -189,8 +189,8 @@
   <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
   mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><a href="https://www.hl7.org/fhir/search.html#count"><span
-  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#count</span></a><span
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/R4/search.html#count"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/R4/search.html#count</span></a><span
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="47%" style='width:47.22%;border-top:none;border-left:none;
@@ -248,8 +248,8 @@
   <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
   mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><a href="https://www.hl7.org/fhir/search.html#elements"><span
-  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#elements</span></a><span
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/R4/search.html#elements"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/R4/search.html#elements</span></a><span
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> <o:p></o:p></span></p>
   </td>
   <td width="47%" style='width:47.22%;border-top:none;border-left:none;
@@ -299,8 +299,8 @@
   <td width="33%" style='width:33.56%;border:none;border-bottom:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
   mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><a href="https://www.hl7.org/fhir/search.html#date"><span
-  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/search.html#date</span></a><span
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/R4/search.html#date"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/R4/search.html#date</span></a><span
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> </span></p>
   </td>
   <td width="47%" style='width:47.22%;border-top:none;border-left:none;
