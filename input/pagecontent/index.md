@@ -1,7 +1,7 @@
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; max-width: 790px">
-<b>Short definition in english for this Implementation Guide</b><br>
-The French directory of healthcare and medico-social support services and resources (<a href="https://esante.gouv.fr/produits-services/repertoire-ror">ROR</a>) is the repository (in the sense of a repository of data) for describing the healthcare services offered by health establishments, medico-social establishments and services, and local structures in France.
-The aim of this implementation guide is to define the specifications of the ROR's FHIR API, enabling any authorized application to search for a healthcare offer and its capabilities (availability, equipment, etc.). 
+<b>Brief description of this Implementation Guide</b><br>
+The French directory of healthcare and medico-social support services and resources (<a href="https://esante.gouv.fr/produits-services/repertoire-ror">ROR</a>) is the repository (in the sense of a repository of data) for describing the healthcare services offered by Health facility, medico-social establishments and services, and local structures in France.
+The aim of this implementation guide is to define the specifications of the ROR FHIR API, enabling any authorized application to search for a healthcare offer and its capabilities (availability, equipment, etc.). 
 .
 </p>
 ### Description fonctionnelle de l'API
