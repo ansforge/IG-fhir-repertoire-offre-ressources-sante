@@ -1,7 +1,7 @@
 Profile: RORMeasureReport
 Parent: MeasureReport
 Id: ror-measurereport
-Description: "Définition de l'indicateur de pilotage du ROR National"
+Description: "Valeur pour un indicateur de pilotage du ROR National"
 * ^status = #draft
 
 /* Données fonctionnelles */
