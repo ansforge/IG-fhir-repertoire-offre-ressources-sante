@@ -21,39 +21,39 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[+].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-lastUpdated"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de la dernière mise a jour"
 * rest.resource[=].searchParam[+].name = "_tag"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-tag"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
 * rest.resource[=].searchParam[+].name = "type"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Location-type"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Destination d'usage du lieu"
 * rest.resource[=].searchParam[+].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Location-identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique du lieu de réalisation de l'offre"
 * rest.resource[=].searchParam[+].name = "near"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Location-near"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-near"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Lieux proches du lieu de réalisation de l'offre"
 * rest.resource[=].searchParam[+].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Location-status"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Statut de la ressource"
 * rest.resource[=].searchParam[+].name = "address-postalcode"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Location-address-postalcode"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-address-postalcode"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Code Postal ou code postal spécifique CEDEX"
 * rest.resource[=].searchParam[+].name = "address-city"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Location-address-city"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-address-city"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Localité ou Libellé du bureau distributeur CEDEX"
 * rest.resource[=].searchParam[+].name = "capacity-status"
@@ -129,43 +129,43 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[+].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-lastUpdated"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de la dernière mise a jour"
 * rest.resource[=].searchParam[+].name = "_tag"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-tag"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
 * rest.resource[=].searchParam[+].name = "location"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/HealthcareService-location"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Référence à la ressource Location"
 * rest.resource[=].searchParam[+].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/HealthcareService-identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant métier de l’offre"
 * rest.resource[=].searchParam[+].name = "name"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/HealthcareService-name"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-name"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Dénomination sous laquelle l'offre est identifiée"
 * rest.resource[=].searchParam[+].name = "service-category"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/HealthcareService-service-category"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-service-category"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Type d'offre"
 * rest.resource[=].searchParam[+].name = "service-type"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/HealthcareService-service-type"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Domaine dans lequel s'inscrit l'offre"
 * rest.resource[=].searchParam[+].name = "characteristic"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/HealthcareService-characteristic"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Caractéristiques de l'offre"
 * rest.resource[=].searchParam[+].name = "specialty"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/HealthcareService-specialty"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-specialty"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
 * rest.resource[=].searchParam[+].name = "age-range-high"
@@ -193,27 +193,27 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[+].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-lastUpdated"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de la dernière mise a jour"
 * rest.resource[=].searchParam[+].name = "_tag"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-tag"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
 * rest.resource[=].searchParam[+].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Organization-identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identification nationale de l'Entité Géographique définie dans le CI-SIS"
 * rest.resource[=].searchParam[+].name = "name"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Organization-name"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-name"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Nom de l'organisation interne"
 * rest.resource[=].searchParam[+].name = "type"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Organization-type"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
 * rest.resource[=].searchParam[+].name = "closing-type"
@@ -233,15 +233,15 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[+].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-lastUpdated"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de la dernière mise a jour"
 * rest.resource[=].searchParam[+].name = "_tag"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-tag"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
 * rest.resource[+].type = #PractitionerRole
@@ -249,15 +249,15 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[+].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-lastUpdated"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de la dernière mise a jour"
 * rest.resource[=].searchParam[+].name = "_tag"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-tag"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
 * rest.resource[+].type = #Task
@@ -265,7 +265,7 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[+].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[=].interaction[+].code = #create
@@ -275,7 +275,7 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[+].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 * rest.resource[+].type = #MeasureReport
@@ -283,6 +283,6 @@ Usage: #definition
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[+].name = "_id"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/R4/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
