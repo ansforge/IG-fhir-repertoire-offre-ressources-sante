@@ -240,6 +240,42 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-period-end)
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de fermeture de l'entité géographique"
+* rest.resource[=].searchParam[+].name = "price-amount-currency"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-amount-currency)
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Devise du tarif des prestations et services"
+* rest.resource[=].searchParam[+].name = "price-amount-value"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-amount-value)
+* rest.resource[=].searchParam[=].type = #number
+* rest.resource[=].searchParam[=].documentation = "Valeur du tarif des prestations et services"
+* rest.resource[=].searchParam[+].name = "price-dependency-level"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-dependency-level)
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Niveau de dépendance de la personne âgée accueillie"
+* rest.resource[=].searchParam[+].name = "price-residential-type"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-residential-type)
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Caractéristiques de l'hébergement"
+* rest.resource[=].searchParam[+].name = "price-type"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-type)
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Type de tarif"
+* rest.resource[=].searchParam[+].name = "price-unit"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-unit)
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Unité de référence pour évaluer le prix des prestations et services"
+* rest.resource[=].searchParam[+].name = "price-validity-start-date"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-validity-start-date)
+* rest.resource[=].searchParam[=].type = #date
+* rest.resource[=].searchParam[=].documentation = "Dernière date de début de validité du tarif indiqué"
+* rest.resource[=].searchParam[+].name = "price-welcome-type"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-welcome-type)
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = " Tarif applicable à un hébergement permanent ou à un hébergement temporaire"
+* rest.resource[=].searchParam[+].name = "price-special-price"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-special-price)
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Condition tarifaire"
 * rest.resource[+].type = #Practitioner
 * rest.resource[=].profile = Canonical(ror-practitioner)
 * rest.resource[=].interaction[0].code = #search-type
