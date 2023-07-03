@@ -1,5 +1,5 @@
 Extension: RORHealthcareServiceContactTelecom
-Id: ror-healthcareservice-contatc-telecom
+Id: ror-healthcareservice-contact-telecom
 Description: "Extension créée dans le cadre du ROR pour les télécommunications du contact."
 * ^context.type = #element
 * ^context.expression = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"
