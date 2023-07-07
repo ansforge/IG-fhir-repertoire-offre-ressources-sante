@@ -8,7 +8,8 @@ Description: "Extension créée dans le cadre du ROR pour décrire une ressource
 * extension ^slicing.rules = #open
 * extension contains
     equipmentType 1..1 and
-    nbInService 0..1
+    nbInService 0..1 and
+    RORLocationEquipmentLimit named ror-location-equipment-limit 0..*
 * extension[equipmentType].value[x] only CodeableConcept
 * extension[equipmentType].valueCodeableConcept from $JDV-J18-EquipementSpecifique-ROR (required)
 * extension[nbInService].value[x] only integer
