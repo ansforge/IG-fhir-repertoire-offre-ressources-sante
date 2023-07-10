@@ -109,11 +109,12 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
 
 * notAvailable ^slicing.discriminator.type = #value 
-* notAvailable ^slicing.discriminator.path = "url" 
+* notAvailable ^slicing.discriminator.path = "id" 
 * notAvailable ^slicing.rules = #open
 * notAvailable contains
     closingRepoeningDate 0..1 
 
+* notAvailable[closingRepoeningDate].id = "closingRepoeningDate"
 * notAvailable[closingRepoeningDate].description = "Période de fermeture (during.start) et de réouverture prévisionnelle (during.end)."
 * notAvailable[closingRepoeningDate].during.start ^short = "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée"
 * notAvailable[closingRepoeningDate].during.end ^short = "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
