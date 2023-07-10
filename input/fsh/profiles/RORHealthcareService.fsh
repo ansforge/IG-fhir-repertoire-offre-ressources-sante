@@ -112,10 +112,11 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * notAvailable ^slicing.discriminator.path = "url" 
 * notAvailable ^slicing.rules = #open
 * notAvailable contains
-    closingDate 0..1 and
-    previsionalReopeningDate 0..1
-* notAvailable[closingDate] ^short = "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée"
-* notAvailable[previsionalReopeningDate] ^short = "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
+    closingRepoeningDate 0..1 
+
+* notAvailable[closingRepoeningDate].description = "Période de fermeture (during.start) et de réouverture prévisionnelle (during.end)."
+* notAvailable[closingRepoeningDate].during.start ^short = "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée"
+* notAvailable[closingRepoeningDate].during.end ^short = "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
