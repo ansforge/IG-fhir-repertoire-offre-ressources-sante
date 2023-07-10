@@ -7,5 +7,7 @@ Description: "Extension créée dans le cadre du ROR pour définir le niveau de 
 * ^context[=].expression = "BackboneElement"
 * ^context[+].type = #element
 * ^context[=].expression = "Location.telecom"
+* ^context[+].type = #element
+* ^context[=].expression = "HealthcareService.extension"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J222-NiveauConfidentialite-ROR (required)
