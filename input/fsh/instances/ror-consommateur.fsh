@@ -294,3 +294,19 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
 * rest.resource[=].interaction[+].code = #create
 * rest.resource[=].interaction[+].code = #patch
+* rest.resource[+].type = #Measure
+* rest.resource[=].profile = Canonical(ror-measure)
+* rest.resource[=].interaction[0].code = #search-type
+* rest.resource[=].interaction[+].code = #read
+* rest.resource[=].searchParam[+].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
+* rest.resource[+].type = #MeasureReport
+* rest.resource[=].profile = Canonical(ror-measurereport)
+* rest.resource[=].interaction[0].code = #search-type
+* rest.resource[=].interaction[+].code = #read
+* rest.resource[=].searchParam[+].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
