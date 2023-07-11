@@ -459,7 +459,7 @@ GET [BASE]/HealthcareService?location.address-postalcode=XX&_include:iterate=Hea
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?location:address-postalcode=XX # critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)
+GET [BASE]/HealthcareService?location.address-postalcode=XX # critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
