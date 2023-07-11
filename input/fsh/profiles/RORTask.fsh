@@ -43,7 +43,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * input[ruleErrorId].value[x] only string
 * input[errorValue] ^short = "donnée erronée"
 * input[errorValue].type = InputTaskRORCodeSystem#errorValue
-* input[errorValue].value[x] only string
+* input[errorValue].value[x]
 * input[proposedValue] ^short = "nouvelle valeur proposée"
 * input[proposedValue].type = InputTaskRORCodeSystem#proposedValue
 * input[proposedValue].value[x]
@@ -68,7 +68,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
     identifierAnalyst 0..1 MS
 * output[newValue] ^short = "Valeur corrigée"
 * output[newValue].type = OutputTaskRORCodeSystem#newValue
-* output[newValue].value[x] only string
+* output[newValue].value[x]
 * output[identifierAnalyst] ^short = "identifiant du destinataire du traitement de la demande" // Ne pas mettre dans output. Une autre solution doit être trouvée
 * output[identifierAnalyst].type = OutputTaskRORCodeSystem#identifierAnalyst
 * output[identifierAnalyst].value[x] only Identifier
