@@ -453,7 +453,7 @@ GET [BASE]/HealthcareService?intervention-zone=XXX #critère de recherche sur la
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location:address-postalcode=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.address-postalcode=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
