@@ -142,7 +142,9 @@ Les paramètres et modificateurs de requêtes décrits [page dédiée](modifiers
 **Description du scénario :** Un consommateur recherche les offres opérationnelles contenant une chaine de caractères libre («cardio » par exemple).
 
 **Requête :**
-`GET [BASE]/HealthcareService?_content=cardio&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
+```
+GET [BASE]/HealthcareService?_content=cardio&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 
 **Requête expliquée :**
 ```sh
@@ -158,8 +160,9 @@ GET [BASE]/HealthcareService?_content=cardio #filtre sur le contenu textuel des 
 **Description du scénario :** Un consommateur recherche les offres opérationnelles ou les lieux de réalisation de l'offre liés contenant une chaine de caractères libre (« cardio » par exemple).
 
 **Requête :**
-`GET [BASE]/HealthcareService?_filter=(_content=cardio or location._content=cardio)&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner`
-
+```
+GET [BASE]/HealthcareService?_filter=(_content=cardio or location._content=cardio)&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
 **Requête expliquée :**
 ```sh
 GET [BASE]/HealthcareService?_filter=(_content=cardio or location._content=cardio) #filtre sur le contenu textuel des ressources HealthcareService ou Location liées

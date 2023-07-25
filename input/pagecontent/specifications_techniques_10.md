@@ -244,7 +244,7 @@ PATCH [BASE]/HealthcareService/XXX
 
 **Requête :**
 ```json
-PATCH[BASE]/Location/XXX
+PATCH [BASE]/Location/XXX
 {
     "resourceType": "Parameters",
     "parameter": [ 
@@ -373,7 +373,7 @@ PATCH[BASE]/Location/XXX
 
 **Requête :**
 ```json
-PATCH[BASE]/Location/XXX
+PATCH [BASE]/Location/XXX
 {
     "resourceType": "Parameters",
     "parameter": [
