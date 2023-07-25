@@ -397,15 +397,14 @@ Remarque : Après la création du lieu de réalisation de l'offre, il est néce
         <td align ="center">
             <div class="figure">
                 <img src="image14.png" alt="Un établissement souhaite mettre à jour un lieu de
-réalisation de l'offre (dont les données capacitaires)"title="Un établissement souhaite mettre à jour un lieu de
+réalisation de l'offre (dont les données capacitaires)" title="Un établissement souhaite mettre à jour un lieu de
 réalisation de l'offre (dont les données capacitaires)">
             </div>
         </td>    
     </tr>
     <tr>
         <td align ="center">
-            <b>Mise à jour du lieu de réalisation de l'offre (modèle expo
-V3.0)</b>
+            <b>Mise à jour du lieu de réalisation de l'offre (modèle expo V3.0)</b>
         </td>
     </tr>
 </table>
