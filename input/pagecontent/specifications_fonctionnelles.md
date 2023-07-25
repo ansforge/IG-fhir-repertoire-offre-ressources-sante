@@ -3,9 +3,13 @@ A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants 
 -   Consultation de l'offre (extraction)
 -   Recherche d'offre sur critères principaux
 -   Recherche d'offre avec données capacitaires
--   Signalement d’anomalie
--   Mise à jour d’anomalie
--   Consultation d’anomalie
+-   Recherche d'offre sur la base d'informations tarifaires
+-   Recherche d'offre via une technique « Full text »
+-   Création et Mise à jour du lieu de réalisation de l’offre
+-   Signalement d'anomalie
+-   Mise à jour d'anomalie
+-   Consultation d'anomalie
+-   Consultation d'indicateurs de pilotage
   
 <blockquote class="stu-note">
 <p>
@@ -51,7 +55,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 2 - Recherche capacité (modèle expo V3.0)</b>
+            <b>Recherche capacité (modèle expo V3.0)</b>
         </td>
     </tr>
 </table>
@@ -77,6 +81,8 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 -   Scénario 5 : Données capacitaires d'une offre opérationnelle
 
     -   Un consommateur ayant recherché au préalable une offre de santé correspondant à ses critères (exemple : Urgences spécialisées cardiologiques via le service de recherche sur le modèle d'exposition 2.4 du ROR) souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en  paramètre de la recherche.
+  
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_1.html)**
 
 ### Consultation de l'offre (Extraction)
 
@@ -115,10 +121,10 @@ Il y a deux cas possibles :
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 3 -- Extraction complète de l'offre</b>
+            <b> Extraction complète de l'offre</b>
         </td>
         <td align ="center">
-            <b>Figure 4 - Extraction partielle de l'offre</b>
+            <b>Extraction partielle de l'offre</b>
         </td>
     </tr>
 </table>
@@ -157,6 +163,8 @@ Il y a deux cas possibles :
 -	Scénario 8 : Extraction d’une offre de santé identifiée avec anomalie
 
     -   Un consommateur souhaite rechercher une offre de santé à partir de son identifiant et consulter les anomalies associées si elle sont existantes.
+  
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_2.html)**
 
 ### Recherche d'offre sur critères principaux
 
@@ -178,7 +186,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 5 - Recherche offre</b>
+            <b>Recherche offre</b>
         </td>
     </tr>
 </table>
@@ -234,6 +242,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
      -   Un responsable qualité recherche les offres en anomalie de sa région.
 
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_3.html)**
 
 ### Recherche d'offre avec données capacitaires
 
@@ -255,7 +264,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 6 - Recherche offre avec données capacitaires</b>
+            <b>Recherche offre avec données capacitaires</b>
         </td>
     </tr>
 </table>
@@ -273,6 +282,179 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 -   Scenario 3 : Recherche sur un critère de l'équipement
 
     -   Un consommateur cherche une offre de chirurgie traumatologique proposant un appareil de radiologie adapté à l\'obésité du patient.
+  
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_4.html)**
+
+### Recherche d'offre sur la base d'informations tarifaires
+
+#### Description du cas d'usage
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="image15.png" alt="Un consommateur recherche l'offre des établissements sur la base d'informations tarifaires" title="Un consommateur recherche l'offre des établissements sur la base d'informations tarifaires">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Recherche d'offre sur la base d'informations tarifaires (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+Le consommateur renseigne si besoin son (ses) critère(s) de recherche parmi les critères disponibles.
+
+Le ROR National répond au consommateur les offres opérationnelles correspondant aux critères de recherche et les lieux de réalisation de l'offre liés.
+
+#### Scénarios
+
+-   Scénario 1 : Recherche sur critères tarifaires #1
+
+    -   Un consommateur recherche les offres d'établissements dont
+ le type de tarifs = 02 \| forfait socle hébergement, le montant est inférieur à X euros, pour la date de début de validité la plus récente.
+
+-   Scénario 2 : Recherche sur critères tarifaires #2
+
+    -   Un consommateur recherche les offres d'établissements dont le type de tarif = 02 \| forfait socle hébergement, le montant est inférieur ou égal à X euros, le type habitation = 03 \| F1, les conditions tarifaires = 03 \| tarif agréé ASH.
+
+-   Scénario 3 : Recherche sur critères tarifaires #3
+
+        -   Un consommateur recherche les offres d'établissements dont le type de tarifs = 03 \| dépendance, le montant est inférieur à X euros, le niveau de dépendance = 02 \| GIR 3-4, la temporalité d\'accueil (au niveau du tarif, pas de l\'offre opérationnelle) = 02 \| permanent.
+  
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_8.html)**
+
+### Recherche d'offre via une technique « Full text »
+
+#### Description du cas d'usage
+
+Un consommateur recherche une chaine de caractères libre dans le contenu textuel des offres opérationnelles ou des classes liées.
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="image20.png" alt="Recherche « Full text »" title="Recherche « Full text »">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Recherche « Full text » (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+Le consommateur renseigne la chaine de caractères qu'il recherche.
+
+Le ROR National répond au consommateur les offres opérationnelles correspondant à la recherche et toutes les classes liées à l'offre opérationnelle.
+
+#### Scénarios
+
+-   Scénario 1 : Recherche des offres opérationnelles référençant le texte \"cardio\"
+
+    -   Un consommateur recherche les offres opérationnelles contenant une chaine de caractères libre (« cardio » par exemple).
+
+-   Scénario 2 : Recherche des offres opérationnelles ou des lieux de réalisation de l'offre référençant le texte \"cardio\"
+
+    -   Un consommateur recherche les offres opérationnelles ou les lieux de réalisation de l'offre liés contenant une chaine de caractères libre (« cardio » par exemple).
+
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_9.html)**
+
+### Création et Mise à jour du lieu de réalisation de l'offre
+
+#### Description du cas d'usage : création du lieu de réalisation de l'offre
+
+Un établissement souhaite créer un lieu de réalisation de l'offre (dont les données capacitaires).
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="image13.png" alt="Création du lieu de réalisation de l'offre" title="Création du lieu de réalisation de l'offre">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Création du lieu de réalisation de l'offre (modèle expo
+V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+L'établissement renseigne les informations nécessaires à l'initialisation du lieu de réalisation de l'offre.
+
+Le ROR National répond à l'établissement toutes les informations saisie, l'identifiant technique et les métadonnées.
+
+Remarque : Après la création du lieu de réalisation de l'offre, il est nécessaire de mettre à jour l'offre pour la rattacher à ce nouveau lieu.
+
+#### Description du cas d'usage : mise à jour du lieu de réalisation de l'offre
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="image14.png" alt="Un établissement souhaite mettre à jour un lieu de
+réalisation de l'offre (dont les données capacitaires)"title="Un établissement souhaite mettre à jour un lieu de
+réalisation de l'offre (dont les données capacitaires)">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Mise à jour du lieu de réalisation de l'offre (modèle expo
+V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+L'établissement renseigne l'identifiant technique du lieu de réalisation de l'offre à mettre à jour et les informations à modifier ([voir description du lieu de réalisation de l'offre](https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location.html)).
+
+Le ROR National répond à l'établissement, au moins, l'identifiant technique, les métadonnées et l'identifiant fonctionnel du lieu de réalisation de l'offre mis à jour.
+
+#### Scénarios
+
+-   Scénario 1 : Ajout d'un lieu de réalisation de l'offre
+
+    -   Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l\'offre de fonction \"001 \| hébergement\", associé à une offre opérationnelle existante, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.
+
+-   Scénario 2 : Ajout d'une capacité de prise en charge
+
+    -   Un établissement (via bed management, \...) ajoute dans un lieu de réalisation de l\'offre existant, des données capacitaires pour : une affectation temporaire \"Covid +\", 2 lits disponibles (sexe indifférencié), à t0.
+
+-   Scénario 3 : Suppression d'une capacité d'accueil opérationnelle
+
+    -   Un établissement (via bed management, ...) supprime dans un lieu de réalisation de l\'offre existant tous les enregistrements liés à l\'affectation temporaire \"Covid-\".
+
+-   Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre
+
+    -   Un établissement modifie le numéro de voie de l'adresse du lieu de réalisation de l'offre.
+
+-   Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre
+
+    -   Un établissement ajout un équipement spécifique dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
+
+-   Scénario 6 : Modification de la quantité d'équipements spécifiques
+    dans un lieu de réalisation de l'offre
+
+    -   Un établissement modifie la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre :
+
+    089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
+
+-   Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre
+
+    -   Un établissement indique qu'il ne dispose plus de l'échographe 3D, il modifie la quantité d'équipement en service :
+    030 \| Echographe 3D, nb en service : 0, aucune limite équipement associée.
+
+-   Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
+
+    -   Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre :
+
+    089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
+
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
 ### Signalement d’anomalie
 
@@ -293,7 +475,7 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 7 - Signalement d'anomalie</b>
+            <b>Signalement d'anomalie</b>
         </td>
     </tr>
 </table>
@@ -307,6 +489,8 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
 -	Scenario 2 : Signalement de plusieurs anomalies
 
     -	Un consommateur d'un système tiers souhaite signaler plusieurs anomalies.
+
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_5.html)**
 
 ### Mise à jour d’anomalie
 
@@ -327,7 +511,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 8 - Mise à jour d'anomalie</b>
+            <b>Mise à jour d'anomalie</b>
         </td>
     </tr>
 </table>
@@ -341,6 +525,8 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 -	Scenario 2 : Inactivation d’une anomalie
     
     -	Un responsable qualité décide d'inactiver une anomalie (elle a été saisie par erreur par exemple).
+
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_6.html)**
 
 ### Consultation d’anomalie
 
@@ -361,7 +547,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
     </tr>
     <tr>
         <td align ="center">
-            <b>Figure 9 - Consultation d'anomalie</b>
+            <b>Consultation d'anomalie</b>
         </td>
     </tr>
 </table>
@@ -382,3 +568,42 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 -	Scénario 4 : Consommation de toutes les anomalies
 
     -  Le BI consomme toutes les anomalies pour faire des tableaux de suivi.
+
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_7.html)**
+
+### Consultation d'indicateurs de pilotage
+
+#### Description du cas d'usage
+
+Un consommateur souhaite consulter des indicateurs de pilotage.
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="image18.png" alt="Consultation d'indicateurs de pilotage (modèle expo V3.0)" title="Consultation d'indicateurs de pilotage (modèle expo V3.0)">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Consultation d'indicateurs de pilotage (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+Le consommateur renseigne si besoin son (ses) critère(s) de recherche parmi les critères disponibles.
+
+Le ROR National répond au consommateur les indicateurs correspondants aux critères de recherche.
+
+#### Scénarios
+
+-   Scénario 1 : Intégration d'un indicateur dans un système externe
+
+    -   Un consommateur souhaite intégrer un indicateur de pilotage du ROR national dans un système externe.
+
+-   Scénario 2 : Intégration d'indicateurs dans un système externe
+
+    -   Un consommateur souhaite intégrer des indicateurs de pilotage du ROR national dans un système externe à partir d'une date de mesure.
+
+**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_11.html)**

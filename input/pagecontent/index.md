@@ -33,7 +33,7 @@ cette offre.
     </tr>
     <tr>
         <td align="center">
-            <b>Figure 1 - Référentiel ROR</b>
+            <b>Référentiel ROR</b>
         </td>
     </tr>
 </table>
