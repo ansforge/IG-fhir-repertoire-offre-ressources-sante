@@ -82,7 +82,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 
     -   Un consommateur ayant recherché au préalable une offre de santé correspondant à ses critères (exemple : Urgences spécialisées cardiologiques via le service de recherche sur le modèle d'exposition 2.4 du ROR) souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en  paramètre de la recherche.
   
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_1.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_1.html)**
 
 ### Consultation de l'offre (Extraction)
 
@@ -164,7 +164,7 @@ Il y a deux cas possibles :
 
     -   Un consommateur souhaite rechercher une offre de santé à partir de son identifiant et consulter les anomalies associées si elle sont existantes.
   
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_2.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_2.html)**
 
 ### Recherche d'offre sur critères principaux
 
@@ -242,7 +242,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
      -   Un responsable qualité recherche les offres en anomalie de sa région.
 
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_3.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_3.html)**
 
 ### Recherche d'offre avec données capacitaires
 
@@ -283,7 +283,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
     -   Un consommateur cherche une offre de chirurgie traumatologique proposant un appareil de radiologie adapté à l\'obésité du patient.
   
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_4.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_4.html)**
 
 ### Recherche d'offre sur la base d'informations tarifaires
 
@@ -321,9 +321,9 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
 -   Scénario 3 : Recherche sur critères tarifaires #3
 
-        -   Un consommateur recherche les offres d'établissements dont le type de tarifs = 03 \| dépendance, le montant est inférieur à X euros, le niveau de dépendance = 02 \| GIR 3-4, la temporalité d\'accueil (au niveau du tarif, pas de l\'offre opérationnelle) = 02 \| permanent.
+    -   Un consommateur recherche les offres d'établissements dont le type de tarifs = 03 \| dépendance, le montant est inférieur à X euros, le niveau de dépendance = 02 \| GIR 3-4, la temporalité d\'accueil (au niveau du tarif, pas de l\'offre opérationnelle) = 02 \| permanent.
   
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_8.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_8.html)**
 
 ### Recherche d'offre via une technique « Full text »
 
@@ -360,7 +360,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
     -   Un consommateur recherche les offres opérationnelles ou les lieux de réalisation de l'offre liés contenant une chaine de caractères libre (« cardio » par exemple).
 
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_9.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_9.html)**
 
 ### Création et Mise à jour du lieu de réalisation de l'offre
 
@@ -454,7 +454,7 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
     089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
 ### Signalement d’anomalie
 
@@ -490,7 +490,7 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
 
     -	Un consommateur d'un système tiers souhaite signaler plusieurs anomalies.
 
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_5.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_5.html)**
 
 ### Mise à jour d’anomalie
 
@@ -526,7 +526,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
     
     -	Un responsable qualité décide d'inactiver une anomalie (elle a été saisie par erreur par exemple).
 
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_6.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_6.html)**
 
 ### Consultation d’anomalie
 
@@ -569,7 +569,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 
     -  Le BI consomme toutes les anomalies pour faire des tableaux de suivi.
 
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_7.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_7.html)**
 
 ### Consultation d'indicateurs de pilotage
 
@@ -606,4 +606,4 @@ Le ROR National répond au consommateur les indicateurs correspondants aux crit�
 
     -   Un consommateur souhaite intégrer des indicateurs de pilotage du ROR national dans un système externe à partir d'une date de mesure.
 
-**  Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_11.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_11.html)**
