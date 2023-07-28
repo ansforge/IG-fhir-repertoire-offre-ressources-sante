@@ -137,7 +137,7 @@ Plus de précision sur la spécification FHIR :
 
 **Requête :**
 
-```
+```json
 POST [BASE]/Task
 {	
 	"resourceType": "Task",
@@ -154,7 +154,7 @@ POST [BASE]/Task
 
 **Requête :**
 
-```
+```json
 POST [BASE]/Bundle
 {
   "resourceType": "Bundle",
