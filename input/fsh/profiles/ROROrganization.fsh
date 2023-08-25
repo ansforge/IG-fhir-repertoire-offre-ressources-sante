@@ -85,7 +85,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     categorieEtablissement 0..1 and
     sphParticipation 0..1 and
     OIType 0..1 and
-    fonctionLieu 0..1
 * type[statutJuridiqueINSEE] ^short = "statutJuridique (EJ) : Situation juridique de l’établissement"
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
 * type[sousEnsembleAgregatStatutJuridique] ^short = "sousEnsembleAgregatStatutJuridique (EJ) : Deuxième niveau dans l’arborescence des statuts juridiques"
