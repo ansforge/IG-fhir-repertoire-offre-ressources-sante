@@ -3289,7 +3289,7 @@ Critères de recherches applicables à la ressource Organization.
   <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
   padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">nomOI</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">nomOI (OI) ou raisonSociale (EJ) ou denominationEG (EG) </span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
   <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
