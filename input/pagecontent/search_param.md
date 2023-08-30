@@ -2831,7 +2831,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
   _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
-  8.0pt;line-height:115%'>speciality</span></span></span></span><span
+  8.0pt;line-height:115%'>specialty</span></span></span></span><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
   115%'><o:p></o:p></span></span></p>
   </td>
