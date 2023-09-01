@@ -35,7 +35,8 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
     ruleErrorId 0..1 MS and // identifiant de la règle à l'origine de l'anomalie
     errorValue 0..* MS and // donnée erronée. cardinalité incohérente ?
     proposedValue 0..* MS and //cardinalité incohérente ?
-    pathElementError 0..1 MS and // élément en erreur dans la ressource
+    pathElementError 0..1 MS and // path de l'élément en erreur dans la ressource
+    idElementError 0..1 MS and // id de l'élément en erreur dans la ressource
     systemRequester 1..1 MS and // système déclarant l'anomalie exemple Santé.fr
     identifierRequester 0..1 MS // identifiant du déclarant de l'anomalie
 * input[ruleErrorId] ^short = "Identifiant de la règle à l'origine de l'anomalie"
@@ -49,7 +50,10 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * input[proposedValue].value[x]
 * input[pathElementError] ^short = "élément en erreur dans la ressource"
 * input[pathElementError].type = InputTaskRORCodeSystem#pathElementError
-* input[pathElementError].value[x] only Expression 
+* input[pathElementError].value[x] only Expression
+* input[idElementError] ^short = "élément en erreur dans la ressource"
+* input[idElementError].type = InputTaskRORCodeSystem#pathElementError
+* input[idElementError].value[x] only id
 * input[systemRequester] ^short = "système déclarant l'anomalie"
 * input[systemRequester].type = InputTaskRORCodeSystem#systemRequester
 * input[systemRequester].value[x] only string
