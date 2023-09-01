@@ -48,11 +48,11 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * input[proposedValue] ^short = "nouvelle valeur proposée"
 * input[proposedValue].type = InputTaskRORCodeSystem#proposedValue
 * input[proposedValue].value[x]
-* input[pathElementError] ^short = "élément en erreur dans la ressource"
+* input[pathElementError] ^short = "path de l'élément en erreur dans la ressource"
 * input[pathElementError].type = InputTaskRORCodeSystem#pathElementError
 * input[pathElementError].value[x] only Expression
-* input[idElementError] ^short = "élément en erreur dans la ressource"
-* input[idElementError].type = InputTaskRORCodeSystem#pathElementError
+* input[idElementError] ^short = "id de l'élément en erreur dans la ressource"
+* input[idElementError].type = InputTaskRORCodeSystem#idElementError
 * input[idElementError].value[x] only id
 * input[systemRequester] ^short = "système déclarant l'anomalie"
 * input[systemRequester].type = InputTaskRORCodeSystem#systemRequester
