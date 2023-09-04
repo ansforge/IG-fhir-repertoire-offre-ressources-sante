@@ -12,7 +12,9 @@ Usage: #definition
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * format[+] = #application/fhir+ndjson
-* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
+* implementationGuide[0] = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
+* implementationGuide[+] = "http://hl7.org/fhir/uv/bulkdata/OperationDefinition/export"
+* implementationGuide[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.mode = #client
 * rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre"
 * rest.security.cors = false
