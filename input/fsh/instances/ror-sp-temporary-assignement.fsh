@@ -7,4 +7,4 @@ Usage: #definition
 * code = #temporary-assignement
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension(url='temporaryAssignement').valueCodeableConcept"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='temporaryAssignement').valueCodeableConcept"

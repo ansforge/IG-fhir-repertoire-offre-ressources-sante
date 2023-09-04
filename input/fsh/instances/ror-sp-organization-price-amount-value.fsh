@@ -7,4 +7,4 @@ Usage: #definition
 * code = #amount-value
 * base = #Organization
 * type = #number
-* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-price').extension(url='amount').valueMoney.value"
+* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-price').extension.where(url='amount').valueMoney.value"

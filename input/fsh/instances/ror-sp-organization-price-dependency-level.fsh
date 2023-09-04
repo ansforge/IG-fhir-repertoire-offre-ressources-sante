@@ -7,4 +7,4 @@ Usage: #definition
 * code = #price-dependency-level
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-price').extension(url='dependencyLevel').valueCodeableConcept"
+* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-price').extension.where(url='dependencyLevel').valueCodeableConcept"

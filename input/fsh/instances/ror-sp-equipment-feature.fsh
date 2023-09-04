@@ -7,4 +7,4 @@ Usage: #definition
 * code = #equipment-feature
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit').extension(url='equipmentFeature').valueCodeableConcept"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit').extension.where(url='equipmentFeature').valueCodeableConcept"
