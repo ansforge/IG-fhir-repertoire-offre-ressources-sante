@@ -11,6 +11,7 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
+* format[+] = #application/fhir+ndjson
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
 * rest.mode = #server
 * rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre"
