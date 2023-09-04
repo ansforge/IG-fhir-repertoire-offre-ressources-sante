@@ -7,7 +7,7 @@ Usage: #definition
 * code = #age-range-high
 * base = #HealthcareService
 * type = #quantity
-* expression = "HealthcareService.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type').extension.where(url = 'ageRange').valueRange.high"
+* expression = "HealthcareService.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type').extension.where(url = 'ageRange').value.as(Range).high"
 * comparator[0] = #eq
 * comparator[+] = #ne
 * comparator[+] = #gt

@@ -7,4 +7,4 @@ Usage: #definition
 * code = #price-unit
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-price').extension.where(url='priceUnit').valueCodeableConcept"
+* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-price').extension.where(url='priceUnit').value.as(CodeableConcept)"

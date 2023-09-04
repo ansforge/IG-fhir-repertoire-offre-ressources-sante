@@ -7,4 +7,4 @@ Usage: #definition
 * code = #price-validity-start-date
 * base = #Organization
 * type = #date
-* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization').extension.where(url='startDate').valueDate"
+* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization').extension.where(url='startDate').value.as(date)"

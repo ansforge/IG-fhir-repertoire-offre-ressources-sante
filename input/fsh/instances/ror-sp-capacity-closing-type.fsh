@@ -7,4 +7,4 @@ Usage: #definition
 * code = #capacity-closing-type
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='capacityClosingType').valueCode"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='capacityClosingType').value.as(code)"
