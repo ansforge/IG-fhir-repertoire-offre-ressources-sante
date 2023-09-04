@@ -8,14 +8,14 @@ Usage: #definition
 * date = "2023-01-12T14:27:51+01:00"
 * description = "Système ROR National Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."
 * kind = #requirements
+* instantiates = "http://hl7.org/fhir/uv/bulkdata/CapabilityStatement/bulk-data"
+* instantiates.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* instantiates.extension.valueCode = #SHOULD
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * format[+] = #application/fhir+ndjson
-* implementationGuide[0] = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
-* implementationGuide[+] = "http://hl7.org/fhir/uv/bulkdata/OperationDefinition/export"
-* implementationGuide[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* implementationGuide[=].extension.valueCode = #SHOULD
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
 * rest.mode = #server
 * rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre"
 * rest.security.cors = false
