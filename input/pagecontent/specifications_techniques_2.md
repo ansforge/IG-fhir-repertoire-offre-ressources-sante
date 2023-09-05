@@ -284,24 +284,26 @@ applicables à ce cas d'usage sont :
 
 ### Exemples de requêtes
 
-#### Scénario 1 : Extraction complète
+#### Scénario 1 : Extraction complète asynchrone
 
-**Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre.
+Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
 
 **Requête :**
-
+**N.B.: Dans le Header il est nécessaire de préciser: **
+`--header 'Prefer: respond-async'`
 ```
-GET [BASE]/HealthcareService?_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&includeAssociatedData=RelevantProvenanceResources
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?
-_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
-&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
-&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
-&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici : http://hl7.org/fhir/uv/bulkdata/STU2/export.html#endpoint---system-level-export
+_outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : http://ndjson.org/
+&_type=HealthcareService #précise le type de ressource cible. Plus d'information sur le format ici : http://hl7.org/fhir/uv/bulkdata/STU2/OperationDefinition-export.html
+&includeAssociatedData=RelevantProvenanceResources #Export will include all Provenance resources associated with each of the non-provenance resources being returned. Plus d'information ici : http://hl7.org/fhir/uv/bulkdata/STU2/OperationDefinition-export.html#bulkdataexport
+
 ```
 #### Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
 

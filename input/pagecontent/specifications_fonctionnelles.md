@@ -85,7 +85,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 
 Un consommateur souhaite :
 
--   Faire une extraction complète sans critère
+-   Faire une extraction complète asynchrone sans critère
 
 -   Faire une extraction complète sur une région
 
@@ -127,8 +127,8 @@ Il y a deux cas possibles :
 
 #### Scénarios
 
--   Scénario 1 : Extraction complète
-    -   Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
+-   Scénario 1 : Extraction complète asynchrone
+    -   Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie).
 
 -   Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
     -   Un consommateur souhaite rechercher l\'offre de santé proposée par un établissement.
