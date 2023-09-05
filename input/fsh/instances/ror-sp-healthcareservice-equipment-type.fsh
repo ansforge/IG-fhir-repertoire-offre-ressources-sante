@@ -7,4 +7,4 @@ Usage: #definition
 * code = #equipment-type
 * base = #HealthcareService
 * type = #token
-* expression = "HealthcareService.extension.where(url = 'http://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-healthcareservice-equipement').extension(url = 'equipmentType').valueCodeableConcept"
+* expression = "HealthcareService.extension.where(url = 'http://interop.esante.gouv.fr/ig/fhir/ror30/StructureDefinition/ror-healthcareservice-equipement').extension.where(url = 'equipmentType').value.as(CodeableConcept)"

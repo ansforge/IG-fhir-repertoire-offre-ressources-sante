@@ -7,4 +7,4 @@ Usage: #definition
 * code = #capacity-update-date
 * base = #Location
 * type = #date
-* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension(url='capacityUpdateDate').valueDateTime"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='capacityUpdateDate').value.as(dateTime)"

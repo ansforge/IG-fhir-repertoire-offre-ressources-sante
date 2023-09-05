@@ -7,4 +7,4 @@ Usage: #definition
 * code = #period-end
 * base = #Organization
 * type = #date
-* expression = "Organization.extension.where(url='http://hl7.org/fhir/StructureDefinition/organization-period').valuePeriod.end"
+* expression = "Organization.extension.where(url='http://hl7.org/fhir/StructureDefinition/organization-period').value.as(Period).end"
