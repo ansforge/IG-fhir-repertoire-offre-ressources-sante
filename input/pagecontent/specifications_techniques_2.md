@@ -292,6 +292,8 @@ Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/S
 **Requête :**
 **N.B.: Dans le Header il est nécessaire de préciser: **
 `--header 'Prefer: respond-async'`
+Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
+
 ```
 GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&includeAssociatedData=RelevantProvenanceResources
 ```
@@ -299,12 +301,20 @@ GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici : http://hl7.org/fhir/uv/bulkdata/STU2/export.html#endpoint---system-level-export
-_outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : http://ndjson.org/
-&_type=HealthcareService #précise le type de ressource cible. Plus d'information sur le format ici : http://hl7.org/fhir/uv/bulkdata/STU2/OperationDefinition-export.html
-&includeAssociatedData=RelevantProvenanceResources #Export will include all Provenance resources associated with each of the non-provenance resources being returned. Plus d'information ici : http://hl7.org/fhir/uv/bulkdata/STU2/OperationDefinition-export.html#bulkdataexport
+GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#endpoint---system-level-export>
+_outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : <http://ndjson.org/>
+&_type=HealthcareService #précise le type de ressource cible. Plus d'information sur le format ici : <http://hl7.org/fhir/uv/bulkdata/STU2/OperationDefinition-export.html>
+&includeAssociatedData=RelevantProvenanceResources #"Export will include all Provenance resources associated with each of the non-provenance resources being returned." Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/OperationDefinition-export.html#bulkdataexport>
 
 ```
+
+En réponse, dans le header, le lien sera disponible dans Content-Location
+Exemple :
+`[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc`
+Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
+
+
+
 #### Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
 
 **Description du scénario :** un consommateur souhaite rechercher l\'offre de santé proposée\ par un établissement dont l'identifiant est = XX .
