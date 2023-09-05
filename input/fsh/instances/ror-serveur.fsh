@@ -351,8 +351,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 // bulk data export from hl7.fhir.uv.bulkdata: 2.0.0
-* rest.operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation.extension.valueCode = #SHOULD
-* rest.operation.name = "export"
-* rest.operation.definition = "http://hl7.org/fhir/uv/bulkdata/OperationDefinition/export"
-* rest.operation.documentation = "FHIR Operation to export data from a FHIR server, whether or not it is associated with a patient. This supports use cases like backing up a server, or exporting terminology data by restricting the resources returned using the `_type` parameter."
+* rest.operation[0].name = "export"
+* rest.operation[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.operation[=].extension.valueCode = #SHOULD
+* rest.operation[=].definition = "http://hl7.org/fhir/uv/bulkdata/OperationDefinition/export"
+* rest.operation[=].documentation = "FHIR Operation to export data from a FHIR server, whether or not it is associated with a patient. This supports use cases like backing up a server, or exporting terminology data by restricting the resources returned using the `_type` parameter."
