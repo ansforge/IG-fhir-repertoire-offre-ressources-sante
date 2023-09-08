@@ -339,7 +339,7 @@ Un établissement souhaite créer un lieu de réalisation de l'offre (dont les d
     <tr>
         <td align ="center">
             <div class="figure">
-                <img src="image13.png" alt="Création du lieu de réalisation de l'offre" title="Création du lieu de réalisation de l'offre">
+                <img src="image21.png" alt="Création du lieu de réalisation de l'offre" title="Création du lieu de réalisation de l'offre">
             </div>
         </td>    
     </tr>
