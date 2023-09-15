@@ -122,8 +122,6 @@ ou nom de l'OI : Nom de l'organisation interne"
 * address.extension[ror-calculated-distance] ^short = "Eloignement calculé"
 * address.line.extension ^slicing.discriminator[0].type = #value
 * address.line.extension ^slicing.discriminator[=].path = "id"
-* address.line.extension ^slicing.discriminator[+].type = #value
-* address.line.extension ^slicing.discriminator[=].path = "url"
 * address.line.extension ^slicing.rules = #open
 * address.line.extension ^slicing.ordered = false
 * address.line.extension contains
