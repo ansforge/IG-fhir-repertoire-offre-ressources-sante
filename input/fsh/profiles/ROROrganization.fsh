@@ -135,14 +135,22 @@ ou nom de l'OI : Nom de l'organisation interne"
     iso21090-ADXP-streetNameBase named streetNameHamlet 0..1 and
     iso21090-ADXP-postBox named postalBox 0..1
 * address.line.extension[careOf] ^short = "pointRemise (Adresse)"
+* address.line.extension[careOf].id = "careOf"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse)"
+* address.line.extension[additionalLocator].id = "additionalLocator"
 * address.line.extension[houseNumber] ^short = "numeroVoie(Adresse)"
+* address.line.extension[houseNumber].id = "houseNumber"
 * address.line.extension[buildingNumberSuffix] ^short = "(Adresse)"
+* address.line.extension[buildingNumberSuffix].id = "buildingNumberSuffix"
 * address.line.extension[streetNameType] ^short = "typeVoie (Adresse)"
+* address.line.extension[streetNameType].id = "streetNameType"
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 * address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse)"
+* address.line.extension[streetNameBase].id = "streetNameBase"
 * address.line.extension[streetNameHamlet] ^short = "lieuDit (Adresse)"
+* address.line.extension[streetNameHamlet].id = "streetNameHamlet"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
+* address.line.extension[postalBox].id = "postalBox"
 
 * telecom.value 1..1
 * telecom ^short = "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
