@@ -124,7 +124,7 @@ ou nom de l'OI : Nom de l'organisation interne"
 * address.line.extension ^slicing.discriminator[=].path = "id"
 * address.line.extension ^slicing.discriminator[+].type = #value
 * address.line.extension ^slicing.discriminator[=].path = "url"
-* address.line.extension ^slicing.rules = #open
+* address.line.extension ^slicing.rules = #closed
 * address.line.extension contains
     iso21090-ADXP-careOf named careOf 0..1 and
     iso21090-ADXP-additionalLocator named additionalLocator 0..1 and
