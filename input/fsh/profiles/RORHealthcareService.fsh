@@ -70,7 +70,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     ressourceProfession 0..* and
     specificCompetence 0..* and
     expertiseLevel 0..* and
-    temporalityStopService 0..1
+    temporalityStopService 0..1 and 
+    act 0..2 
 * characteristic[receptionType] ^short = "temporaliteAccueil (OffreOperationnelle) : Précision sur le mode de prise en charge"
 * characteristic[receptionType] from $JDV-J30-TemporaliteAccueil-ROR (required)
 * characteristic[careMode] ^short = "modePriseEnCharge (OffreOperationnelle) : Caractérise l'hébergement ainsi que le niveau de technicité et d'intensité des soins"
@@ -79,10 +80,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic[receptionModality] from $JDV-J226-ModaliteAccueil-ROR (required)
 * characteristic[managementType] ^short = "modeGestion (OffreOperationnelle) : Mode d’intervention des aides à domicile en fonction de la nature de la relation contractuelle"
 * characteristic[managementType] from $JDV-J26-ModeGestion-ROR (required)
-* characteristic[specificAct] ^short = "acteSpecifique (OffreOperationnelle) : Action menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité"
-* characteristic[specificAct] from $JDV-J16-ActeSpecifique-ROR (required)
-* characteristic[outsideOfficeAct] ^short = "acteRealiseHorsCabinet (OffreOperationnelle) : Permet de décrire l’offre de santé des médecins libéraux réalisée en dehors du cabinet, au sein d’un établissement"
-* characteristic[outsideOfficeAct] from $JDV-J16-ActeSpecifique-ROR (required)
 * characteristic[takingCareSpeciality] ^short = "specialisationPriseEnCharge (OffreOperationnelle) : Regroupement de troubles, de pathologies ou de déficiences qui nécessitent la mobilisation d'expertises, de compétences et/ou d'équipements spécifiques"
 * characteristic[takingCareSpeciality] from $JDV-J35-SpecialisationDePriseEnCharge-ROR (required)
 * characteristic[annualOpening] ^short = "ouvertureAnnuelle (OffreOperationnelle) : Nombre de jours maximum dans l’année au cours desquels la prestation peut être proposée par l'établissement"
@@ -95,6 +92,16 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic[expertiseLevel] from $JDV-J227-NiveauExpertise-ROR (required)
 * characteristic[temporalityStopService] ^short = "typeFermeture (OffreOperationnelle) : Temporalité d'arrêt de réalisation de la prestation"
 * characteristic[temporalityStopService] from $JDV-J185-TypeFermeture-ROR (required)
+
+* characteristic[act] ^slicing.discriminator[+].type = #value
+* characteristic[act] ^slicing.discriminator[=].path = "id"
+* characteristic[act] ^slicing.rules = #open
+* characteristic[act] contains specificAct 0..1 and outsideOfficeAct 0..1
+* characteristic[act][specificAct] ^short = "acteSpecifique (OffreOperationnelle) : Action menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité"
+* characteristic[act][specificAct] from $JDV-J16-ActeSpecifique-ROR (required)
+* characteristic[act][outsideOfficeAct] ^short = "acteRealiseHorsCabinet (OffreOperationnelle) : Permet de décrire l’offre de santé des médecins libéraux réalisée en dehors du cabinet, au sein d’un établissement"
+* characteristic[act][outsideOfficeAct] from $JDV-J16-ActeSpecifique-ROR (required)
+
 
 * specialty 1..*
 * specialty ^slicing.discriminator.type = #value 
