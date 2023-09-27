@@ -147,9 +147,9 @@ ou nom de l'OI : Nom de l'organisation interne"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
 * address.line.extension[postalBox].id = "postalBox"
 
-* address.line.extension[streetName] ^slicing.discriminator[+].type = #value
-* address.line.extension[streetName] ^slicing.discriminator[=].path = "id"
-* address.line.extension[streetName] ^slicing.rules = #open
+* address.line.extension ^slicing.discriminator[+].type = #value
+* address.line.extension ^slicing.discriminator[=].path = "id"
+* address.line.extension ^slicing.rules = #open
 * address.line.extension[streetName] contains base 0..1 and hamlet 0..1
 
 * address.line.extension[streetName][base] ^short = "libelleVoie (Adresse)"
