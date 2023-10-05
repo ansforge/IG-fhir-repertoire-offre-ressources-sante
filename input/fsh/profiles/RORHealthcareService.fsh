@@ -55,8 +55,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * characteristic 1..*
-* characteristic ^slicing.discriminator.type = #value
-* characteristic ^slicing.discriminator.path = "url"
+* characteristic ^slicing.discriminator[0].type = #value
+* characteristic ^slicing.discriminator[=].path = "coding.system"
+* characteristic ^slicing.discriminator[+].type = #value
+* characteristic ^slicing.discriminator[=].path = "id"
 * characteristic ^slicing.rules = #open
 * characteristic contains
     receptionType 0..1 and
@@ -70,57 +72,73 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     ressourceProfession 0..* and
     specificCompetence 0..* and
     expertiseLevel 0..* and
-    temporalityStopService 0..1 and 
-    act 0..2 
+    temporalityStopService 0..1
 * characteristic[receptionType] ^short = "temporaliteAccueil (OffreOperationnelle) : Précision sur le mode de prise en charge"
-* characteristic[receptionType] from $JDV-J30-TemporaliteAccueil-ROR (required)
-* characteristic[careMode] ^short = "modePriseEnCharge (OffreOperationnelle) : Caractérise l'hébergement ainsi que le niveau de technicité et d'intensité des soins"
-* characteristic[careMode] from $JDV-J19-ModePriseEnCharge-ROR (required)
-* characteristic[receptionModality] ^short = "modaliteAccueil (OffreOperationnelle) : Permet de préciser le mode de prise en charge géographiquement"
-* characteristic[receptionModality] from $JDV-J226-ModaliteAccueil-ROR (required)
-* characteristic[managementType] ^short = "modeGestion (OffreOperationnelle) : Mode d’intervention des aides à domicile en fonction de la nature de la relation contractuelle"
-* characteristic[managementType] from $JDV-J26-ModeGestion-ROR (required)
-* characteristic[takingCareSpeciality] ^short = "specialisationPriseEnCharge (OffreOperationnelle) : Regroupement de troubles, de pathologies ou de déficiences qui nécessitent la mobilisation d'expertises, de compétences et/ou d'équipements spécifiques"
-* characteristic[takingCareSpeciality] from $JDV-J35-SpecialisationDePriseEnCharge-ROR (required)
-* characteristic[annualOpening] ^short = "ouvertureAnnuelle (OffreOperationnelle) : Nombre de jours maximum dans l’année au cours desquels la prestation peut être proposée par l'établissement"
-* characteristic[annualOpening] from $JDV-J28-OuvertureAnnuelle-ROR (required)
-* characteristic[ressourceProfession] ^short = "professionRessource (OffreOperationnelle) : Traduit la mobilisation de métiers qui constituent un facteur différenciant dans la réalisation de la prestation"
-* characteristic[ressourceProfession] from $JDV-J186-ProfessionRessource-ROR (required)
-* characteristic[specificCompetence] ^short = "competenceSpecifique (OffreOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne"
-* characteristic[specificCompetence] from $JDV-J33-CompetenceSpecifique-ROR (required)
-* characteristic[expertiseLevel] ^short = "niveauExpertise (OffreOperationnelle) : Niveau de ressources humaines et matérielles engagées dans la réalisation de l'offre"
-* characteristic[expertiseLevel] from $JDV-J227-NiveauExpertise-ROR (required)
-* characteristic[temporalityStopService] ^short = "typeFermeture (OffreOperationnelle) : Temporalité d'arrêt de réalisation de la prestation"
-* characteristic[temporalityStopService] from $JDV-J185-TypeFermeture-ROR (required)
+* characteristic[receptionType].coding.system from $JDV-J30-TemporaliteAccueil-ROR (required)
+* characteristic[receptionType].id = "receptionType"
 
-* characteristic[act] ^slicing.discriminator[+].type = #value
-* characteristic[act] ^slicing.discriminator[=].path = "id"
-* characteristic[act] ^slicing.rules = #open
-* characteristic[act] contains specificAct 0..1 and outsideOfficeAct 0..1
-* characteristic[act][specificAct] ^short = "acteSpecifique (OffreOperationnelle) : Action menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité"
-* characteristic[act][specificAct] from $JDV-J16-ActeSpecifique-ROR (required)
-* characteristic[act][outsideOfficeAct] ^short = "acteRealiseHorsCabinet (OffreOperationnelle) : Permet de décrire l’offre de santé des médecins libéraux réalisée en dehors du cabinet, au sein d’un établissement"
-* characteristic[act][outsideOfficeAct] from $JDV-J16-ActeSpecifique-ROR (required)
+* characteristic[careMode] ^short = "modePriseEnCharge (OffreOperationnelle) : Caractérise l'hébergement ainsi que le niveau de technicité et d'intensité des soins"
+* characteristic[careMode].coding.system from $JDV-J19-ModePriseEnCharge-ROR (required)
+* characteristic[careMode].id = "careMode"
+
+* characteristic[receptionModality] ^short = "modaliteAccueil (OffreOperationnelle) : Permet de préciser le mode de prise en charge géographiquement"
+* characteristic[receptionModality].coding.system from $JDV-J226-ModaliteAccueil-ROR (required)
+* characteristic[receptionModality].id = "receptionModality"
+
+* characteristic[managementType] ^short = "modeGestion (OffreOperationnelle) : Mode d’intervention des aides à domicile en fonction de la nature de la relation contractuelle"
+* characteristic[managementType].coding.system from $JDV-J26-ModeGestion-ROR (required)
+* characteristic[managementType].id = "managementType"
+
+* characteristic[takingCareSpeciality] ^short = "specialisationPriseEnCharge (OffreOperationnelle) : Regroupement de troubles, de pathologies ou de déficiences qui nécessitent la mobilisation d'expertises, de compétences et/ou d'équipements spécifiques"
+* characteristic[takingCareSpeciality].coding.system from $JDV-J35-SpecialisationDePriseEnCharge-ROR (required)
+* characteristic[takingCareSpeciality].id = "takingCareSpeciality"
+
+* characteristic[annualOpening] ^short = "ouvertureAnnuelle (OffreOperationnelle) : Nombre de jours maximum dans l’année au cours desquels la prestation peut être proposée par l'établissement"
+* characteristic[annualOpening].coding.system from $JDV-J28-OuvertureAnnuelle-ROR (required)
+* characteristic[annualOpening].id = "annualOpening"
+
+* characteristic[ressourceProfession] ^short = "professionRessource (OffreOperationnelle) : Traduit la mobilisation de métiers qui constituent un facteur différenciant dans la réalisation de la prestation"
+* characteristic[ressourceProfession].coding.system from $JDV-J186-ProfessionRessource-ROR (required)
+* characteristic[ressourceProfession].id = "ressourceProfession"
+
+* characteristic[specificCompetence] ^short = "competenceSpecifique (OffreOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne"
+* characteristic[specificCompetence].coding.system from $JDV-J33-CompetenceSpecifique-ROR (required)
+* characteristic[specificCompetence].id = "specificCompetence"
+
+* characteristic[expertiseLevel] ^short = "niveauExpertise (OffreOperationnelle) : Niveau de ressources humaines et matérielles engagées dans la réalisation de l'offre"
+* characteristic[expertiseLevel].coding.system from $JDV-J227-NiveauExpertise-ROR (required)
+* characteristic[expertiseLevel].id = "expertiseLevel"
+
+* characteristic[temporalityStopService] ^short = "typeFermeture (OffreOperationnelle) : Temporalité d'arrêt de réalisation de la prestation"
+* characteristic[temporalityStopService].coding.system from $JDV-J185-TypeFermeture-ROR (required)
+* characteristic[temporalityStopService].id = "temporalityStopService"
+
+* characteristic[specificAct] ^short = "acteSpecifique (OffreOperationnelle) : Action menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité"
+* characteristic[specificAct] from $JDV-J16-ActeSpecifique-ROR (required)
+* characteristic[specificAct].id = "specificAct"
+
+* characteristic[outsideOfficeAct] ^short = "acteRealiseHorsCabinet (OffreOperationnelle) : Permet de décrire l’offre de santé des médecins libéraux réalisée en dehors du cabinet, au sein d’un établissement"
+* characteristic[outsideOfficeAct].coding.system from $JDV-J16-ActeSpecifique-ROR (required)
+* characteristic[outsideOfficeAct].id = "outsideOfficeAct"
 
 
 * specialty 1..*
 * specialty ^slicing.discriminator.type = #value 
-* specialty ^slicing.discriminator.path = "url" 
+* specialty ^slicing.discriminator.path = "coding.system" 
 * specialty ^slicing.rules = #open
 * specialty contains
     operationalActivity 1..1 and
     operationalActivityFamily 0..1
 * specialty[operationalActivity] ^short = "activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
-* specialty[operationalActivity] from $JDV-J17-ActiviteOperationnelle-ROR
+* specialty[operationalActivity].coding.system from $JDV-J17-ActiviteOperationnelle-ROR
 * specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne"
-* specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
+* specialty[operationalActivityFamily].coding.system from $JDV-J51-FamilleActiviteOperationnelle-ROR
 
 * notAvailable ^slicing.discriminator.type = #value 
 * notAvailable ^slicing.discriminator.path = "id" 
 * notAvailable ^slicing.rules = #open
 * notAvailable contains
     closingRepoeningDate 0..1 
-
 * notAvailable[closingRepoeningDate].id = "closingRepoeningDate"
 * notAvailable[closingRepoeningDate] ^short = "Période de fermeture (during.start) et de réouverture prévisionnelle (during.end)."
 * notAvailable[closingRepoeningDate].during.start ^short = "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée"
