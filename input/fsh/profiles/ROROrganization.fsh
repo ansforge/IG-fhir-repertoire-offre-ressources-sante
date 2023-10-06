@@ -117,9 +117,6 @@ ou nom de l'OI : Nom de l'organisation interne"
 * address.extension ^slicing.rules = #open
 * address.extension[inseeCode] ^sliceName = "inseeCode"
 * address.extension[inseeCode].valueCoding from $JDV-J230-CommuneOM-ROR (required)
-* address.extension contains
-    RORCalculatedDistance named ror-calculated-distance 0..1
-* address.extension[ror-calculated-distance] ^short = "Eloignement calculé"
 * address.line.extension contains
     iso21090-ADXP-careOf named careOf 0..1 and
     iso21090-ADXP-additionalLocator named additionalLocator 0..1 and
