@@ -284,7 +284,7 @@ applicables à ce cas d'usage sont :
 
 ### Exemples de requêtes
 
-#### Scénario 1 : Extraction complète asynchrone
+#### Scénario 1 : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre nationale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
@@ -295,7 +295,7 @@ Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/S
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
 
 ```
-GET [BASE]/$export?_outputFormat=application/fhir+ndjson
+GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&includeAssociatedData
 
 ```
 
@@ -304,6 +304,8 @@ GET [BASE]/$export?_outputFormat=application/fhir+ndjson
 ```sh
 GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#endpoint---system-level-export>
 _outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : <http://ndjson.org/>
+&_type=HealthcareService #précise le type de ressources 
+&includeAssociatedData #un serveur prenant en charge ce paramètre DOIT renvoyer ou omettre un ensemble prédéfini de ressources FHIR associées à la demande Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#query-parameters>
 
 ```
 
@@ -312,7 +314,7 @@ Exemple :
 `[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc`
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 
-#### Scénario 1 bis : Extraction complète asynchrone par région
+#### Scénario 1 bis : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre régionale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
@@ -323,7 +325,7 @@ Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/S
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
 
 ```
-GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService,Location,Organisation,Practioner,PractitionerRole&_typeFilter=HealthcareService%3FcodeRegion%311,Location%3FcodeRegion%311,Organization%3FcodeRegion%311,Practioner%3FcodeRegion%311,PractitionerRole%3FcodeRegion%311
+GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&_typeFilter=HealthcareService%3FcodeRegion%311&includeAssociatedData
 ```
 
 **Requête expliquée :**
@@ -331,8 +333,9 @@ GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService
 ```sh
 GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#endpoint---system-level-export>
 _outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : <http://ndjson.org/>
-&_type=HealthcareService,Location,Organisation,Practioner,PractitionerRole #précise le type de ressources 
-&_typeFilter=codeRegion%311Location%3FcodeRegion%311,Organization%3FcodeRegion%311,Practioner%3FcodeRegion%311,PractitionerRole%3FcodeRegion%311 #utilisation de filtre pour cibler le code Région. Ici 11 correspond au code de l'Ile de France pour plus d'explication sur la construction de la requête : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#example-request>
+&_type=HealthcareService #précise le type de ressources 
+&_typeFilter=cHealthcareService%3FcodeRegion%311 #utilisation de filtre pour cibler le code Région. Ici 11 correspond au code de l'Ile de France pour plus d'explication sur la construction de la requête : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#example-request>
+&includeAssociatedData #un serveur prenant en charge ce paramètre DOIT renvoyer ou omettre un ensemble prédéfini de ressources FHIR associées à la demande Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#query-parameters>
 
 ```
 
