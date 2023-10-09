@@ -427,6 +427,63 @@ GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
+<blockquote class="stu-note">
+<p>
+  <b>Particularité sur "Calculated Distance"</b>
+  <br>
+L'extension <a href="https://www.hl7.org/fhir/R4/extension-location-distance.html" target="_blank">https://www.hl7.org/fhir/R4/extension-location-distance.html</a> de <code>Bundle.entry.search</code> est utilisée dans l'implémentation du ROR, afin de remonter cette information.
+<br>
+Exemple :
+</p>
+</blockquote>
+
+```json
+{
+  "resourceType": "Bundle",
+  "id": "ce99d34c-667f-4c6e-a116-49e69bb5f7b0",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "fullUrl": "https://api.rordev.esante.gouv.fr/ws-diffusion-fhir/HealthcareService/508875",
+      "resource": {
+        "resourceType": "HealthcareService",
+        "id": "508875",
+        "location": [
+          {
+            "reference": "Location/252467"
+          },
+          ...
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://api.rordev.esante.gouv.fr/ws-diffusion-fhir/Location/252467",
+      "resource": {
+        "resourceType": "Location",
+        "id": "252467",
+        ...
+      },
+      "search": {
+        "mode": "include",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/location-distance",
+            "valueDistance": {
+              "value": 10.5,
+              "unit": "km"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
 #### Scénario 7 : Recherche sur une zone d'intervention
 
 **Description du scénario :** un consommateur cherche les offres proposées dans une commune =XXX faisant partie d'une zone d'intervention.
