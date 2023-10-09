@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-##Description de la demande
+## Description de la demande
 
-##Fichiers concernés dans l'Implementation Guide
+## Fichiers concernés dans l'Implementation Guide
 
-##Proposition de solution
+## Proposition de solution
