@@ -1,7 +1,7 @@
 ---
 name: Issue Bedmanagement
 about: Template pour les issues provenant des éditeurs de solution de bedmanagement
-title: Demande concnernant les spécifications ROR concernant la gestion du capacitaire
+title: Demande sur les spécifications ROR concernant la gestion du capacitaire
 labels: bedmanagement
 assignees: ''
 
