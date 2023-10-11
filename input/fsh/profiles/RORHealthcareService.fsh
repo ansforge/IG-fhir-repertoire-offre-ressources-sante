@@ -74,43 +74,43 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     expertiseLevel 0..* and
     temporalityStopService 0..1
 * characteristic[receptionType] ^short = "temporaliteAccueil (OffreOperationnelle) : Précision sur le mode de prise en charge"
-* characteristic[receptionType].coding.system from $JDV-J30-TemporaliteAccueil-ROR (required)
+* characteristic[receptionType] from $JDV-J30-TemporaliteAccueil-ROR (required)
 * characteristic[receptionType].id = "receptionType"
 
 * characteristic[careMode] ^short = "modePriseEnCharge (OffreOperationnelle) : Caractérise l'hébergement ainsi que le niveau de technicité et d'intensité des soins"
-* characteristic[careMode].coding.system from $JDV-J19-ModePriseEnCharge-ROR (required)
+* characteristic[careMode] from $JDV-J19-ModePriseEnCharge-ROR (required)
 * characteristic[careMode].id = "careMode"
 
 * characteristic[receptionModality] ^short = "modaliteAccueil (OffreOperationnelle) : Permet de préciser le mode de prise en charge géographiquement"
-* characteristic[receptionModality].coding.system from $JDV-J226-ModaliteAccueil-ROR (required)
+* characteristic[receptionModality] from $JDV-J226-ModaliteAccueil-ROR (required)
 * characteristic[receptionModality].id = "receptionModality"
 
 * characteristic[managementType] ^short = "modeGestion (OffreOperationnelle) : Mode d’intervention des aides à domicile en fonction de la nature de la relation contractuelle"
-* characteristic[managementType].coding.system from $JDV-J26-ModeGestion-ROR (required)
+* characteristic[managementType] from $JDV-J26-ModeGestion-ROR (required)
 * characteristic[managementType].id = "managementType"
 
 * characteristic[takingCareSpeciality] ^short = "specialisationPriseEnCharge (OffreOperationnelle) : Regroupement de troubles, de pathologies ou de déficiences qui nécessitent la mobilisation d'expertises, de compétences et/ou d'équipements spécifiques"
-* characteristic[takingCareSpeciality].coding.system from $JDV-J35-SpecialisationDePriseEnCharge-ROR (required)
+* characteristic[takingCareSpeciality] from $JDV-J35-SpecialisationDePriseEnCharge-ROR (required)
 * characteristic[takingCareSpeciality].id = "takingCareSpeciality"
 
 * characteristic[annualOpening] ^short = "ouvertureAnnuelle (OffreOperationnelle) : Nombre de jours maximum dans l’année au cours desquels la prestation peut être proposée par l'établissement"
-* characteristic[annualOpening].coding.system from $JDV-J28-OuvertureAnnuelle-ROR (required)
+* characteristic[annualOpening] from $JDV-J28-OuvertureAnnuelle-ROR (required)
 * characteristic[annualOpening].id = "annualOpening"
 
 * characteristic[ressourceProfession] ^short = "professionRessource (OffreOperationnelle) : Traduit la mobilisation de métiers qui constituent un facteur différenciant dans la réalisation de la prestation"
-* characteristic[ressourceProfession].coding.system from $JDV-J186-ProfessionRessource-ROR (required)
+* characteristic[ressourceProfession] from $JDV-J186-ProfessionRessource-ROR (required)
 * characteristic[ressourceProfession].id = "ressourceProfession"
 
 * characteristic[specificCompetence] ^short = "competenceSpecifique (OffreOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne"
-* characteristic[specificCompetence].coding.system from $JDV-J33-CompetenceSpecifique-ROR (required)
+* characteristic[specificCompetence] from $JDV-J33-CompetenceSpecifique-ROR (required)
 * characteristic[specificCompetence].id = "specificCompetence"
 
 * characteristic[expertiseLevel] ^short = "niveauExpertise (OffreOperationnelle) : Niveau de ressources humaines et matérielles engagées dans la réalisation de l'offre"
-* characteristic[expertiseLevel].coding.system from $JDV-J227-NiveauExpertise-ROR (required)
+* characteristic[expertiseLevel] from $JDV-J227-NiveauExpertise-ROR (required)
 * characteristic[expertiseLevel].id = "expertiseLevel"
 
 * characteristic[temporalityStopService] ^short = "typeFermeture (OffreOperationnelle) : Temporalité d'arrêt de réalisation de la prestation"
-* characteristic[temporalityStopService].coding.system from $JDV-J185-TypeFermeture-ROR (required)
+* characteristic[temporalityStopService] from $JDV-J185-TypeFermeture-ROR (required)
 * characteristic[temporalityStopService].id = "temporalityStopService"
 
 * characteristic[specificAct] ^short = "acteSpecifique (OffreOperationnelle) : Action menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité"
@@ -118,7 +118,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic[specificAct].id = "specificAct"
 
 * characteristic[outsideOfficeAct] ^short = "acteRealiseHorsCabinet (OffreOperationnelle) : Permet de décrire l’offre de santé des médecins libéraux réalisée en dehors du cabinet, au sein d’un établissement"
-* characteristic[outsideOfficeAct].coding.system from $JDV-J16-ActeSpecifique-ROR (required)
+* characteristic[outsideOfficeAct] from $JDV-J16-ActeSpecifique-ROR (required)
 * characteristic[outsideOfficeAct].id = "outsideOfficeAct"
 
 
@@ -130,9 +130,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     operationalActivity 1..1 and
     operationalActivityFamily 0..1
 * specialty[operationalActivity] ^short = "activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
-* specialty[operationalActivity].coding.system from $JDV-J17-ActiviteOperationnelle-ROR
+* specialty[operationalActivity] from $JDV-J17-ActiviteOperationnelle-ROR
 * specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne"
-* specialty[operationalActivityFamily].coding.system from $JDV-J51-FamilleActiviteOperationnelle-ROR
+* specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
 
 * notAvailable ^slicing.discriminator.type = #value 
 * notAvailable ^slicing.discriminator.path = "id" 
