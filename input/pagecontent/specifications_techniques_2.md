@@ -284,7 +284,27 @@ applicables à ce cas d'usage sont :
 
 ### Exemples de requêtes
 
-#### Scénario 1 : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 1 : Extraction complète synchrone
+
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
+
+**Requête :**
+
+```
+GET [BASE]/HealthcareService?_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?
+_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
+
+#### Scénario 1 bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre nationale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
@@ -295,7 +315,7 @@ Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/S
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
 
 ```
-GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&includeAssociatedData
+GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&includeAssociatedData=_myCompleteExtract
 
 ```
 
@@ -305,7 +325,7 @@ GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService
 GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#endpoint---system-level-export>
 _outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : <http://ndjson.org/>
 &_type=HealthcareService #précise le type de ressources 
-&includeAssociatedData #un serveur prenant en charge ce paramètre DOIT renvoyer ou omettre un ensemble prédéfini de ressources FHIR associées à la demande Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#query-parameters>
+&includeAssociatedData=_myCompleteExtract #un serveur prenant en charge ce paramètre DOIT renvoyer ou omettre un ensemble prédéfini de ressources FHIR associées à la demande. La valeur _myCompleteExtract correspond à une valeur personnalisée précédée d'un underscore et pris en charge par le serveur. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#query-parameters>
 
 ```
 
@@ -314,7 +334,7 @@ Exemple :
 `[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc`
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 
-#### Scénario 1 bis : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 1 ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre régionale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
@@ -325,7 +345,7 @@ Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/S
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
 
 ```
-GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&_typeFilter=HealthcareService%3FcodeRegion%311&includeAssociatedData
+GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&_typeFilter=HealthcareService%3FcodeRegion%311&includeAssociatedData=_myCompleteExtract
 ```
 
 **Requête expliquée :**
@@ -335,8 +355,7 @@ GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici :
 _outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : <http://ndjson.org/>
 &_type=HealthcareService #précise le type de ressources 
 &_typeFilter=cHealthcareService%3FcodeRegion%311 #utilisation de filtre pour cibler le code Région. Ici 11 correspond au code de l'Ile de France pour plus d'explication sur la construction de la requête : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#example-request>
-&includeAssociatedData #un serveur prenant en charge ce paramètre DOIT renvoyer ou omettre un ensemble prédéfini de ressources FHIR associées à la demande Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#query-parameters>
-
+&includeAssociatedData=_myCompleteExtract #un serveur prenant en charge ce paramètre DOIT renvoyer ou omettre un ensemble prédéfini de ressources FHIR associées à la demande. La valeur _myCompleteExtract correspond à une valeur personnalisée précédée d'un underscore et pris en charge par le serveur. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#query-parameters>
 ```
 
 En réponse, dans le header, le lien sera disponible dans Content-Location
