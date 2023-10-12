@@ -284,7 +284,7 @@ applicables à ce cas d'usage sont :
 
 ### Exemples de requêtes
 
-#### Scénario 1 : Extraction complète synchrone
+#### Scénario 1 : Extraction complète synchrone <code><span style="color: #ff0000;">deprecated</span></code>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
 
