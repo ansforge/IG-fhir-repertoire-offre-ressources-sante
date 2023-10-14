@@ -211,6 +211,17 @@ Plus de précision sur la spécification FHIR :
 <p>temporality-capacity</p>
 </td>
 <td width="230">
+<p>nb-capacity</p>
+</td>
+</tr>
+<tr>
+<td width="230">
+<p>capacity-status</p>
+</td>
+<td width="230">
+<p>&nbsp;</p>
+</td>
+<td width="230">
 <p>&nbsp;</p>
 </td>
 </tr>
