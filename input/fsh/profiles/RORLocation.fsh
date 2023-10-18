@@ -70,7 +70,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..1 and
     iso21090-ADXP-streetNameType named streetNameType 0..1 and
     iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
-    iso21090-ADXP-streetNameBase named streetNameHamlet 0..1 and
+    iso21090-ADXP-precinct named precinct 0..1 and
     iso21090-ADXP-postBox named postalBox 0..1
 * address.line.extension[careOf] ^short = "pointRemise (Adresse) : Lieu où le destinataire prend possession de son courrier"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse) : Un complément de l'adresse au point géographique"
@@ -79,7 +79,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * address.line.extension[streetNameType] ^short = "typeVoie (Adresse) : Type de voie"
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 * address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse) : Appellation qui est donnée à la voie par les municipalités"
-* address.line.extension[streetNameHamlet] ^short = "lieuDit (Adresse) : Lieu qui porte un nom rappelant une particularité topographique ou historique"
+* address.line.extension[precinct] ^short = "lieuDit (Adresse) : Lieu qui porte un nom rappelant une particularité topographique ou historique"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse) : Mentions particulières de distribution"
 
 * position ^short = "coordonneeGeographique (LieuRealisationOffre) : Coordonnées géographiques du lieu (système géodésique : WGS84)"
