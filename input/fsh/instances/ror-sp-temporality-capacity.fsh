@@ -7,4 +7,4 @@ Usage: #definition
 * code = #temporality-capacity
 * base = #Location
 * type = #token
-* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension(url='temporalityCapacity').valueCode"
+* expression = "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='temporalityCapacity').value.as(code)"

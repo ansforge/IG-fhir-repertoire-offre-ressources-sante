@@ -109,13 +109,16 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
 
 * notAvailable ^slicing.discriminator.type = #value 
-* notAvailable ^slicing.discriminator.path = "url" 
+* notAvailable ^slicing.discriminator.path = "id" 
 * notAvailable ^slicing.rules = #open
 * notAvailable contains
-    closingDate 0..1 and
-    previsionalReopeningDate 0..1
-* notAvailable[closingDate] ^short = "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée"
-* notAvailable[previsionalReopeningDate] ^short = "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
+    closingRepoeningDate 0..1 
+
+* notAvailable[closingRepoeningDate].id = "closingRepoeningDate"
+* notAvailable[closingRepoeningDate] ^short = "Période de fermeture (during.start) et de réouverture prévisionnelle (during.end)."
+* notAvailable[closingRepoeningDate].during.start ^short = "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée"
+* notAvailable[closingRepoeningDate].during.end ^short = "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
+* notAvailable[closingRepoeningDate].description = "Période de fermeture et de réouverture prévisionnelle"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -125,7 +128,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORHealthcareServiceSensitiveUnit named ror-healthcareservice-sensitive-unit 1..1 and
     RORHealthcareServiceNoConsentHabilitation named ror-healthcareservice-no-consent-habilitation 0..1 and
     RORHealthcareServicePsychiatricSector named ror-healthcareservice-psychiatric-sector 0..* and
-    RORCalculatedDistance named RORCalculatedDistance 0..1 and
     RORHealthcareServicePatientType named ror-healthcareservice-patient-type 1..1 and
     RORHealthcareServiceContact named ror-healthcareservice-contact 0..* and
     RORMetaCreationDate named ror-meta-creation-date 1..1

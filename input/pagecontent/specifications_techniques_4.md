@@ -211,6 +211,17 @@ Plus de précision sur la spécification FHIR :
 <p>temporality-capacity</p>
 </td>
 <td width="230">
+<p>nb-capacity</p>
+</td>
+</tr>
+<tr>
+<td width="230">
+<p>capacity-status</p>
+</td>
+<td width="230">
+<p>&nbsp;</p>
+</td>
+<td width="230">
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -267,15 +278,15 @@ sont applicables à ce cas d'usage.
 
 **Requête :**
 
-`GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02&location.nb-capacity=gt0&_revinclude=Location:healthcareservice`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02&location.nb-capacity=gt0&_include=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
 &location.capacity-status= https://mos.esante.gouv.fr/NOS/TRE_R330-StatutCapacite/FHIR/TRE-R330-StatutCapacite|02 #critère de recherche sur la disponibilité d’un lit
 &location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
-&_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
+&_include=HealthcareService:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
 
 #### Scénario 2 : Recherche un critère capacitaire #2
@@ -285,16 +296,16 @@ GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-
 
 **Requête :**
 
-`GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&location.nb-capacity=gt0&_ include=Healthcareservice:location`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&location.nb-capacity=gt0&_include=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
 &location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 #critère de recherche sur le lit réouvrable
 &location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 #critère de recherche sur le lit fermé
 &location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
-&_ include=Healthcareservice:location  #inclus les Location qui qui sont référencés par les HealthcareService
+&_include=HealthcareService:location  #inclus les Location qui qui sont référencés par les HealthcareService
 ```
 #### Scénario 3 : Recherche sur un critère de l'équipement
 
@@ -303,14 +314,14 @@ TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à 
 
 **Requête :**
 
-`GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type= https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83&_revinclude=Location:healthcareservice`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type= https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83&_include=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
 &location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 #critère de recherche sur le lit réouvrable
 &location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 #critère de recherche sur le lit fermé
 &location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
-&_ include=Healthcareservice:location  #inclus les Location qui qui sont référencés par les HealthcareService
+&_include=HealthcareService:location  #inclus les Location qui qui sont référencés par les HealthcareService
 ```

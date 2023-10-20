@@ -18,7 +18,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
-* name ^short = "raisonSociale (EJ) : Raison sociale complète de l'entité juridique"
+* name ^short = "raisonSociale (EJ) : Raison sociale complète de l'entité juridique
+ou nom de l'EG :  Nom sous lequel l'entité géographique exerce son activité
+ou nom de l'OI : Nom de l'organisation interne"
 * name.extension ^slicing.discriminator.type = #value
 * name.extension ^slicing.discriminator.path = "url"
 * name.extension ^slicing.rules = #open
@@ -26,22 +28,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationAdditionalName named ror-organization-additional-name 0..1
 * name.extension[ror-organization-additional-name] ^short = "complementRaisonSociale (EJ) : Suite de la raison sociale, si elle existe"
 
-* alias ^slicing.discriminator.type = #value
-* alias ^slicing.discriminator.path = "id"
-* alias ^slicing.rules = #open
-* alias contains   
-    OIName 0..1 and
-    denomination 0..1 and
-    additionalDenomination 0..1 and
-    operationalName 0..1
-* alias[OIName] ^short = "nomOI (OI) : Nom de l'organisation interne"
-* alias[OIName].id = "OIName"
-* alias[denomination] ^short = "denominationEG (EG) : Nom sous lequel l'entité géographique exerce son activité"
-* alias[denomination].id = "denomination"
-* alias[additionalDenomination] ^short = "complementDenominationEG (EG) : Suite de la dénomination de l'entité géographique, si elle existe"
-* alias[additionalDenomination].id = "additionalDenomination"
-* alias[operationalName].id = "operationalName"
-* alias[operationalName] ^short = "nomOperationnel (EG) : Appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
+* alias ^short = "nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
 * identifier 0..*
 * identifier ^slicing.discriminator.type = #value
@@ -84,8 +71,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     sousEnsembleAgregatStatutJuridique 0..1 and
     categorieEtablissement 0..1 and
     sphParticipation 0..1 and
-    OIType 0..1 and
-    fonctionLieu 0..1
+    OIType 0..1
 * type[statutJuridiqueINSEE] ^short = "statutJuridique (EJ) : Situation juridique de l’établissement"
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
 * type[sousEnsembleAgregatStatutJuridique] ^short = "sousEnsembleAgregatStatutJuridique (EJ) : Deuxième niveau dans l’arborescence des statuts juridiques"
@@ -131,9 +117,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.extension ^slicing.rules = #open
 * address.extension[inseeCode] ^sliceName = "inseeCode"
 * address.extension[inseeCode].valueCoding from $JDV-J230-CommuneOM-ROR (required)
-* address.extension contains
-    RORCalculatedDistance named ror-calculated-distance 0..1
-* address.extension[ror-calculated-distance] ^short = "Eloignement calculé"
 * address.line.extension contains
     iso21090-ADXP-careOf named careOf 0..1 and
     iso21090-ADXP-additionalLocator named additionalLocator 0..1 and

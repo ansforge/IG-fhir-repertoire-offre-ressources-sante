@@ -7,4 +7,4 @@ Usage: #definition
 * code = #drop-zone
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-drop-zone').valueBoolean"
+* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-drop-zone').value.as(boolean)"

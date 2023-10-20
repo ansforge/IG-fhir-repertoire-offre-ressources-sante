@@ -131,7 +131,7 @@ Anomalie XX au statut statutXX
 
 **Requête :**
 
-```
+```json
 Content-Type: application/fhir+json
 POST [BASE]
 
@@ -190,7 +190,7 @@ POST [BASE]
 
 **Requête :**
 
-```
+```json
 Content-Type: application/fhir+json
 PATCH [BASE]/Task/XXX
 {

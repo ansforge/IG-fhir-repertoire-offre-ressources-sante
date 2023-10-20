@@ -154,7 +154,7 @@ Plus de précision sur la spécification FHIR :
 <p>name</p>
 </td>
 <td width="230">
-<p>speciality</p>
+<p>specialty</p>
 </td>
 </tr>
 <tr>
@@ -315,13 +315,13 @@ applicables à ce cas d'usage sont :
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -334,13 +334,13 @@ GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX,YYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX,YYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX,YYY #critère de recherche sur l’activité opérationnelle
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX,YYY #critère de recherche sur l’activité opérationnelle
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -374,13 +374,13 @@ GET [BASE]/HealthcareService?service-category= https://mos.esante.gouv.fr/NOS/TR
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX) or (speciality eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|YYY))&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|YYY))&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX) or (speciality eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|YYY)) #critère de recherche sur l’activité opérationnelle OU (or) sur la catégorie d’organisation
+GET [BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|YYY)) #critère de recherche sur l’activité opérationnelle OU (or) sur la catégorie d’organisation
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -414,19 +414,76 @@ offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnell
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location:near=latitude|longitude |YY|unite &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.near=latitude|longitude |YY|unite &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?speciality=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
-&location:near=latitude|longitude|YY|unite #critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
+&location.near=latitude|longitude|YY|unite #critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
+<blockquote class="stu-note">
+<p>
+  <b>Particularité sur "Calculated Distance"</b>
+  <br>
+L'extension <a href="https://www.hl7.org/fhir/R4/extension-location-distance.html" target="_blank">https://www.hl7.org/fhir/R4/extension-location-distance.html</a> de <code>Bundle.entry.search</code> est utilisée dans l'implémentation du ROR, afin de remonter cette information.
+<br>
+Exemple :
+</p>
+</blockquote>
+
+```json
+{
+  "resourceType": "Bundle",
+  "id": "ce99d34c-667f-4c6e-a116-49e69bb5f7b0",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "fullUrl": "https://api.rordev.esante.gouv.fr/ws-diffusion-fhir/HealthcareService/508875",
+      "resource": {
+        "resourceType": "HealthcareService",
+        "id": "508875",
+        "location": [
+          {
+            "reference": "Location/252467"
+          },
+          ...
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://api.rordev.esante.gouv.fr/ws-diffusion-fhir/Location/252467",
+      "resource": {
+        "resourceType": "Location",
+        "id": "252467",
+        ...
+      },
+      "search": {
+        "mode": "include",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/location-distance",
+            "valueDistance": {
+              "value": 10.5,
+              "unit": "km"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
 #### Scénario 7 : Recherche sur une zone d'intervention
 
 **Description du scénario :** un consommateur cherche les offres proposées dans une commune =XXX faisant partie d'une zone d'intervention.
@@ -453,13 +510,13 @@ GET [BASE]/HealthcareService?intervention-zone=XXX #critère de recherche sur la
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location:address-postalcode=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.address-postalcode=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?location:address-postalcode=XX # critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)
+GET [BASE]/HealthcareService?location.address-postalcode=XX # critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -473,13 +530,13 @@ GET [BASE]/HealthcareService?location:address-postalcode=XX # critère de recher
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location:address=postalcode=XXXX,YYYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?location:address-postalcode=XXXX,YYYY#critère de recherche sur une ville ou un ensemble de ville en rentrant le code postal 
+GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY#critère de recherche sur une ville ou un ensemble de ville en rentrant le code postal 
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
@@ -492,13 +549,13 @@ GET [BASE]/HealthcareService?location:address-postalcode=XXXX,YYYY#critère de r
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location:commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|XX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|XX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?location:commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|XX #critere de recherche sur une ville ou un ensemble de ville via le code commune
+GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|XX #critere de recherche sur une ville ou un ensemble de ville via le code commune
 &_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService

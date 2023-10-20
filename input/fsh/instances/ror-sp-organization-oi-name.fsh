@@ -7,4 +7,4 @@ Usage: #definition
 * code = #oi-name
 * base = #Organization
 * type = #string
-* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-oi-name').valueString"
+* expression = "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-oi-name').value.as(string)"

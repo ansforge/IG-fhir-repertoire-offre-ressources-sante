@@ -122,6 +122,66 @@
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
  </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
+  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+  line-height:115%;mso-yfti-cnfc:64'><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
+  mso-fareast-language:FR'>-</span><b><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>_content</span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span class=SpellE><span class=GramE><span style='font-size:8.0pt;
+  line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
+  mso-fareast-language:FR'>special</span></span></span><span style='font-size:
+  8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Rechercher sur tout le contenu de la ressource</span><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+ </tr>
  <tr style='mso-yfti-irow:1'>
   <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
   solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -1923,6 +1983,66 @@ Critères de recherches applicables à la ressource HealthcareService.
   </span></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
+  <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
+  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+  line-height:115%;mso-yfti-cnfc:64'><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
+  mso-fareast-language:FR'>-</span><b><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>_content</span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span class=SpellE><span class=GramE><span style='font-size:8.0pt;
+  line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
+  mso-fareast-language:FR'>special</span></span></span><span style='font-size:
+  8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Rechercher sur tout le contenu de la ressource</span><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+ </tr>
  <tr style='mso-yfti-irow:0'>
   <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
@@ -2711,7 +2831,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
   _Hlk126766943'><span class=SpellE><span class=GramE><span style='font-size:
-  8.0pt;line-height:115%'>speciality</span></span></span></span><span
+  8.0pt;line-height:115%'>specialty</span></span></span></span><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
   115%'><o:p></o:p></span></span></p>
   </td>
@@ -2943,495 +3063,788 @@ Critères de recherches applicables à la ressource HealthcareService.
 
 Critères de recherches applicables à la ressource Organization.
 
-<table class=MsoTable15Grid4Accent5 border=1 cellspacing=0 cellpadding=0
- width="100%" style='width:100.0%;border-collapse:collapse;border:none;
- mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #4472C4 1.0pt;
+<table class="MsoTable15Grid4Accent5" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+ <tbody><tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #4472C4 1.0pt;
   border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
   solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><a
-  name="_Hlk126842234"><b><span style='font-size:8.0pt;line-height:115%;
-  color:white'>Attribut ME 3.0<o:p></o:p></span></b></a></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><a name="_Hlk126842234"><b><span style="font-size:8.0pt;line-height:115%;
+  color:white">Attribut ME 3.0<o:p></o:p></span></b></a></p>
   </td>
-  <span style='mso-bookmark:_Hlk126842234'></span>
-  <td width="17%" valign=top style='width:17.92%;border-top:solid #4472C4 1.0pt;
+  
+  <td width="16%" valign="top" style="width:16.1%;border-top:solid #4472C4 1.0pt;
   border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
   mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
-  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
-  style='mso-bookmark:_Hlk126842234'><span class=SpellE><b><span
-  style='font-size:8.0pt;line-height:115%;color:white'>Search</span></b></span></span><span
-  style='mso-bookmark:_Hlk126842234'><b><span style='font-size:8.0pt;
-  line-height:115%;color:white'> <span class=SpellE>parameters</span> <o:p></o:p></span></b></span></p>
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><span style="mso-bookmark:_Hlk126842234"><span class="SpellE"><b><span style="font-size:8.0pt;line-height:115%;color:white">Search</span></b></span></span><span style="mso-bookmark:_Hlk126842234"><b><span style="font-size:8.0pt;
+  line-height:115%;color:white"> <span class="SpellE">parameters</span> <o:p></o:p></span></b></span></p>
   </td>
-  <span style='mso-bookmark:_Hlk126842234'></span>
-  <td width="8%" valign=top style='width:8.8%;border-top:solid #4472C4 1.0pt;
+  
+  <td width="7%" valign="top" style="width:7.68%;border-top:solid #4472C4 1.0pt;
   border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
   mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
-  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
-  style='mso-bookmark:_Hlk126842234'><b><span style='font-size:8.0pt;
-  line-height:115%;color:white'>Natif FHIR<o:p></o:p></span></b></span></p>
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><span style="mso-bookmark:_Hlk126842234"><b><span style="font-size:8.0pt;
+  line-height:115%;color:white">Natif FHIR<o:p></o:p></span></b></span></p>
   </td>
-  <span style='mso-bookmark:_Hlk126842234'></span>
-  <td width="9%" valign=top style='width:9.36%;border-top:solid #4472C4 1.0pt;
+  
+  <td width="7%" valign="top" style="width:7.54%;border-top:solid #4472C4 1.0pt;
   border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
   mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
-  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
-  style='mso-bookmark:_Hlk126842234'><b><span style='font-size:8.0pt;
-  line-height:115%;color:white'>Type FHIR<o:p></o:p></span></b></span></p>
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><span style="mso-bookmark:_Hlk126842234"><b><span style="font-size:8.0pt;
+  line-height:115%;color:white">Type FHIR<o:p></o:p></span></b></span></p>
   </td>
-  <span style='mso-bookmark:_Hlk126842234'></span>
-  <td width="46%" valign=top style='width:46.04%;border:solid #4472C4 1.0pt;
+  
+  <td width="44%" valign="top" style="width:44.22%;border:solid #4472C4 1.0pt;
   border-left:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:
   solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
-  style='mso-bookmark:_Hlk126842234'><b><span style='font-size:8.0pt;
-  line-height:115%;color:white'>Description<o:p></o:p></span></b></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><span style="mso-bookmark:_Hlk126842234"><b><span style="font-size:8.0pt;
+  line-height:115%;color:white">Description<o:p></o:p></span></b></span></p>
   </td>
-  <span style='mso-bookmark:_Hlk126842234'></span>
+  
  </tr>
- <tr style='mso-yfti-irow:0'>
-  <td width="28%" valign=top style='width:28.98%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:0">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:64'><b><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-</span></b><b><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></b></p>
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="14%" valign=top style='width:14.68%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
-  color:black;mso-color-alt:windowtext'>_id</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">_id</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="6%" valign=top style='width:6.38%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Oui</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="6%" valign=top style='width:6.64%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
-  color:black;mso-color-alt:windowtext'>token</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="43%" valign=top style='width:43.32%;border-top:none;border-left:
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identification technique de la ressource<span style='mso-spacerun:yes'> 
-  </span></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identification
+  technique de la ressource</span><span style="font-size:8.0pt;line-height:
+  115%"><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:0'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:1">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>Metadonnee</span></span><span style='font-size:
-  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>/<span
-  class=SpellE>dateMiseJour</span></span><b><span style='font-size:8.0pt;
-  line-height:115%'><o:p></o:p></span></b></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">-<o:p></o:p></span></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>_<span
-  class=SpellE>lastUpdated</span></span><span style='font-size:8.0pt;
-  line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">_content<o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>date
-  </span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Oui<o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
-  de dernière mise à jour.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">special</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Rechercher sur tout le contenu de la ressource<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:2">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  style='font-size:8.0pt;line-height:115%'>Metadonnee</span></span><span
-  style='font-size:8.0pt;line-height:115%'>/<span class=SpellE>regionSource</span><b><o:p></o:p></b></span></p>
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">Metadonnee</span></span><span style="font-size:
+  8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">/<span class="SpellE">dateMiseJour</span></span><b><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></b></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>_tag<o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">_<span class="SpellE">lastUpdated</span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%'>token</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Oui</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Code région de la source de la donnée.<o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">date</span></span><span style="font-size:8.0pt;
+  line-height:115%;color:black;mso-color-alt:windowtext"> </span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Date
+  de dernière mise à jour.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:3">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
-  color:black;mso-color-alt:windowtext'>idNat</span></span><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>_Struct</span></span><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'><span
-  style='mso-spacerun:yes'>  </span></span><span style='font-size:8.0pt;
-  line-height:115%'><o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%">Metadonnee</span></span><span style="font-size:8.0pt;line-height:115%">/<span class="SpellE">regionSource</span><b><o:p></o:p></b></span></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>identifier</span></span><span style='font-size:
-  8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">_tag<o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>token</span></span><span style='font-size:8.0pt;
-  line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Oui<o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identification
-  nationale de l'Entité Géographique définie dans le CI-SIS.</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Code région de la source de la donnée.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:3'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:4">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%'>nomOI</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">idNat</span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">_Struct</span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext"><span style="mso-spacerun:yes">&nbsp; </span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%'>name</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">identifier</span></span><span style="font-size:
+  8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
-  style='font-size:8.0pt;line-height:115%'>string</span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Oui</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Nom de l'organisation interne.<o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identification
+  nationale de l'Entité Géographique définie dans le CI-SIS.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:4'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:5">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
-  color:black;mso-color-alt:windowtext'>numFINESS</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">nomOI (OI) ou raisonSociale (EJ) ou denominationEG (EG) </span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>identifier</span></span><span style='font-size:
-  8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">name</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Oui</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>token</span></span><span style='font-size:8.0pt;
-  line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Oui<o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Numéro
-  FINESS de l'entité géographique.</span><span style='font-size:8.0pt;
-  line-height:115%;background:lime;mso-highlight:lime'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">string</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Nom de l'organisation interne.<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:5'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:6">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%'>categorieEG</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">numFINESS</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
-  style='font-size:8.0pt;line-height:115%'>type</span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">identifier</span></span><span style="font-size:
+  8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Oui<o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  style='font-size:8.0pt;line-height:115%'>token</span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Oui</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>La catégorie d'établissement est le cadre
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Numéro
+  FINESS de l'entité géographique.</span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:7">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">categorieEG</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">type</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Oui<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">La catégorie d'établissement est le cadre
   réglementaire dans lequel s'exerce l'activité de l'entité géographique.<o:p></o:p></span></p>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>JDV_J55-CategorieEG-ROR issu de
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">JDV_J55-CategorieEG-ROR issu de
   TRE_R66-CategorieEtablissement, TRE_R316-AutreCategorieEtablissement et
   TRE_R02-SecteurActivite<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:6'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:8">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
-  color:black;mso-color-alt:windowtext'>zonePoser</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">zonePoser</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>drop</span></span><span style='font-size:8.0pt;
-  line-height:115%;color:black;mso-color-alt:windowtext'>-zone</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">drop</span></span><span style="font-size:8.0pt;
+  line-height:115%;color:black;mso-color-alt:windowtext">-zone</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span style='font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext'>token</span></span><span style='font-size:8.0pt;
-  line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Non</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Cet
-  indicateur précise l’existence d’une zone de poser pour hélicoptère</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Cet
+  indicateur précise l’existence d’une zone de poser pour hélicoptère</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:7'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:9">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%'>typeFermeture</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">typeFermeture</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  class=GramE><span style='font-size:8.0pt;line-height:115%'>closing</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'>-type<o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">closing</span></span></span><span style="font-size:8.0pt;line-height:115%">-type<o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Non<o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
-  style='font-size:8.0pt;line-height:115%'>token</span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Non<o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Type de fermeture de l'entité géographique, au sens
-  des règles de gestion du SI FINESS (par <span class=GramE>exemple:</span>
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Type de fermeture de l'entité géographique, au sens
+  des règles de gestion du SI FINESS (par <span class="GramE">exemple:</span>
   fermeture définitive, fermeture provisoire).<o:p></o:p></span></p>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>JDV-J201-TypeFermeture-ROR issu de la TRE_R286-TypeFermeture<o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">JDV-J201-TypeFermeture-ROR issu de la TRE_R286-TypeFermeture<o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes'>
-  <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
+ <tr style="mso-yfti-irow:10">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
-  color:black;mso-color-alt:windowtext'>dateFermeture</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">dateFermeture</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="17%" valign=top style='width:17.92%;border-top:none;border-left:
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
-  color:black;mso-color-alt:windowtext'>period</span></span></span><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>-end</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">period</span></span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-end</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="8%" valign=top style='width:8.8%;border-top:none;border-left:none;
-  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Non</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
-  </td>
-  <td width="9%" valign=top style='width:9.36%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>date</span><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Non</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
-  <td width="46%" valign=top style='width:46.04%;border-top:none;border-left:
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">date</span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Date
   de fermeture de l'entité géographique. La date doit être supérieure à la date
-  d’ouverture.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  d’ouverture.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
-</table>
+ <tr style="mso-yfti-irow:11">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Tarif/<span class="SpellE">typeTarif</span><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">price</span></span></span><span style="font-size:8.0pt;line-height:115%">-type<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Non<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Un type de tarif s’applique à une catégorie de
+  services pour lesquels l’entité géographique a fixé un prix.<o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">JDV_J36-TypeTarif-ROR issu de la TRE_R246-TypeTarif<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:12">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Tarif/<span class="SpellE">montantTarif</span> (Montant/valeur)</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">price</span></span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-<span class="SpellE">amount</span>-value</span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Non</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">Number</span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Montant
+  du tarif des prestations et services&nbsp;: valeur.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:13">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Tarif/<span class="SpellE">montantTarif</span> (Montant/devise)<o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">price</span></span><span style="font-size:8.0pt;line-height:115%">-amount-currency</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Non<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Montant du tarif des prestations et services&nbsp;:
+  devise.<o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><a href="https://hl7.org/fhir/R4/valueset-currencies.html"><span style="font-size:8.0pt;line-height:115%">https://hl7.org/fhir/R4/valueset-currencies.html</span></a><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:14">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Tarif/<span class="SpellE">dateDebutValiditeTarif</span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">price</span></span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-<span class="SpellE">validity</span>-start-date</span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Non</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">date</span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Dernière
+  date de début de validité du tarif indiqué.</span><span style="font-size:
+  8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:15">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%">ForfaitSocleHebergement</span></span><span style="font-size:8.0pt;line-height:115%"> + <span class="SpellE">SupplementTarifHebergement</span>/<span class="SpellE">typeHabitation</span><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">price</span></span></span><span style="font-size:8.0pt;line-height:115%">-<span class="SpellE">residential</span>-type<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Non<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Précise les caractéristiques de l'hébergement.<o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">JDV_J32-TypeHabitation-ROR issu de TRE_R242-TypeHabitation
+  <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:16">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">TarifAccueilDeJour</span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">
+  + <span class="SpellE">TarifAidesHumaines</span> + <span class="SpellE">ForfaitSocleHebergement</span>
+  + <span class="SpellE">TarifPortageRepas</span>/<span class="SpellE">conditionTarifaire</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">special</span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-price</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Non</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">La
+  condition tarifaire précise les conditions d’accès à un tarif modulé en
+  fonction des critères relatifs à la personne.</span><span style="font-size:
+  8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">JDV_J39-ConditionTarifaire-<span class="GramE">ROR<span style="mso-spacerun:yes">&nbsp; </span>issu</span>
+  TRE_R250-ConditionTarifaire</span><span style="font-size:8.0pt;line-height:
+  115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:17">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%">TarifDependance</span></span><span style="font-size:8.0pt;line-height:115%">/<o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">groupeTarifaireDependance</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">price</span></span><span style="font-size:8.0pt;line-height:115%">-dependency-level</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Non<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Niveau de dépendance de la personne âgée accueillie
+  qui sera associé à un tarif. Il y a 3 niveaux de tarifs selon le GIR.<o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">JDV_J27-GroupeTarifaireDependance-ROR issu de la
+  TRE_R237-NiveauDependance <o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:18">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">ForfaitSocleHebergement</span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">
+  + <span class="SpellE">TarifDependance</span>/<span class="SpellE">temporaliteAccueil</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">price</span></span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-<span class="SpellE">welcome</span>-type</span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Non</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Le
+  tarif peut s’appliquer à un hébergement permanent ou à un hébergement
+  temporaire.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">JDV_J30-TemporaliteAccueil-ROR
+  issu de la TRE_R240-TemporaliteAccueil</span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:19;mso-yfti-lastrow:yes">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Tarif/<span class="SpellE">unitePrix</span><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">price</span></span></span><span style="font-size:8.0pt;line-height:115%">-unit<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Non<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Unité de référence pour évaluer le prix des
+  prestations et services.<o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">JDV_J205-UnitePrix-ROR issu TRE_R228-UnitePrix<o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
 
 ### StructureDefinition-ror-practioner
 
@@ -3520,6 +3933,66 @@ Critères de recherches applicables à la ressource Practioner.
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identification technique de la ressource<span style='mso-spacerun:yes'> 
   </span></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+  <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
+  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+  line-height:115%;mso-yfti-cnfc:64'><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
+  mso-fareast-language:FR'>-</span><b><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>_content</span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span class=SpellE><span class=GramE><span style='font-size:8.0pt;
+  line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
+  mso-fareast-language:FR'>special</span></span></span><span style='font-size:
+  8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Rechercher sur tout le contenu de la ressource</span><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -3694,6 +4167,66 @@ Critères de recherches applicables à la ressource PractionerRole.
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identification technique de la ressource<span style='mso-spacerun:yes'> 
   </span></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  </td>
+ </tr>
+  <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
+  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
+  line-height:115%;mso-yfti-cnfc:64'><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
+  mso-fareast-language:FR'>-</span><b><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>_content</span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Oui</span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span class=SpellE><span class=GramE><span style='font-size:8.0pt;
+  line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
+  mso-fareast-language:FR'>special</span></span></span><span style='font-size:
+  8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
+  Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
+  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Rechercher sur tout le contenu de la ressource</span><span style='font-size:8.0pt;line-height:
+  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
+  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4074,3 +4607,258 @@ Critères de recherches applicables à la ressource Task.
 <p class=MsoNormal align=left style='text-align:left'>*<span style='font-size:
 9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Critères de recherche qui
 seront applicables ultérieurement<o:p></o:p></span></p>
+
+### StructureDefinition-ror-measure
+
+Critères de recherches applicables à la ressource Measure.
+
+<table class="MsoTable15Grid4Accent5" border="1" cellspacing="0" cellpadding="0" width="98%" style="width:98.42%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+ <tbody><tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes">
+  <td width="17%" valign="top" style="width:17.9%;border:solid #4472C4 1.0pt;
+  border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
+  solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Attributs Indicateur<o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign="top" style="width:17.94%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><span class="SpellE"><b><span style="font-size:8.0pt;line-height:115%;color:white">Search</span></b></span><b><span style="font-size:8.0pt;line-height:115%;color:white"> <span class="SpellE">parameters</span>
+  <o:p></o:p></span></b></p>
+  </td>
+  <td width="8%" valign="top" style="width:8.66%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Natif FHIR<o:p></o:p></span></b></p>
+  </td>
+  <td width="9%" valign="top" style="width:9.24%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Type FHIR<o:p></o:p></span></b></p>
+  </td>
+  <td width="46%" valign="top" style="width:46.24%;border:solid #4472C4 1.0pt;
+  border-left:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:
+  solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:0">
+  <td width="17%" valign="top" style="width:17.9%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><b><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-
+  </span></b><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">_id</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign="top" style="width:8.66%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Oui</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign="top" style="width:9.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign="top" style="width:46.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant
+  technique de la ressource.</span><span style="font-size:8.0pt;line-height:
+  115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="17%" valign="top" style="width:17.9%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%">Metadonnee</span></span><span style="font-size:8.0pt;line-height:115%">/<span class="SpellE">dateMiseJour</span><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">_<span class="SpellE">lastUpdated</span>*<o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign="top" style="width:8.66%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Oui<o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign="top" style="width:9.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">date</span></span><span style="font-size:8.0pt;line-height:115%"> <o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign="top" style="width:46.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Date de dernière mise à jour.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td width="17%" valign="top" style="width:17.9%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant</span><b><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">identifier</span></span><span style="font-size:
+  8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign="top" style="width:8.66%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Oui</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign="top" style="width:9.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign="top" style="width:46.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant
+  de l’indicateur.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+  <td width="17%" valign="top" style="width:17.9%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Sujet<o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">topic</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign="top" style="width:8.66%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Oui<o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign="top" style="width:9.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign="top" style="width:46.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Sujet de l’indicateur.<o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+### StructureDefinition-ror-measurereport
+
+Critères de recherches applicables à la ressource MeasureReport.
+
+<table class="MsoTable15Grid4Accent5" border="1" cellspacing="0" cellpadding="0" width="98%" style="width:98.42%;border-collapse:collapse;border:none;
+ mso-border-alt:solid #8EAADB .5pt;mso-yfti-tbllook:1056;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+ <tbody><tr style="mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes">
+  <td width="17%" valign="top" style="width:17.9%;border:solid #4472C4 1.0pt;
+  border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
+  solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Attributs Indicateur<o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign="top" style="width:17.94%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><span class="SpellE"><b><span style="font-size:8.0pt;line-height:115%;color:white">Search</span></b></span><b><span style="font-size:8.0pt;line-height:115%;color:white"> <span class="SpellE">parameters</span>
+  <o:p></o:p></span></b></p>
+  </td>
+  <td width="8%" valign="top" style="width:8.66%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Natif FHIR<o:p></o:p></span></b></p>
+  </td>
+  <td width="9%" valign="top" style="width:9.24%;border-top:solid #4472C4 1.0pt;
+  border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
+  mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;
+  background:#4472C4;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Type FHIR<o:p></o:p></span></b></p>
+  </td>
+  <td width="46%" valign="top" style="width:46.24%;border:solid #4472C4 1.0pt;
+  border-left:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-bottom-alt:
+  solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:0;mso-yfti-lastrow:yes">
+  <td width="17%" valign="top" style="width:17.9%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Date</span><b><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></b></p>
+  </td>
+  <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">date</span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign="top" style="width:8.66%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Oui</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign="top" style="width:9.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign="top" style="width:46.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Date
+  de mesure.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>

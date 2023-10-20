@@ -11,17 +11,17 @@ Description: "Extension créée dans le cadre du ROR pour permettre de définir 
     priceUnit 1..1 and
     amount 1..1 and
     startDate 0..1 and
-    under60 1..1 and
+    under60 0..1 and
     deliveryIncluded 0..* and
     othersDeliveryIncluded 0..* and
-    residentialType 1..1 and
+    residentialType 0..1 and
     specialPrice 0..1 and
-    welcomeType 1..1 and
+    welcomeType 0..1 and
     mealDeliveryName 0..1 and
-    dependencyLevel 1..1 and
+    dependencyLevel 0..1 and
     humanHelpPriceName 0..1 and
-    managementType 1..1 and
-    otherAdditionalServiceName 1..1 and
+    managementType 0..1 and
+    otherAdditionalServiceName 0..1 and
     additionalServiceName 0..1
 * extension[priceType].value[x] only CodeableConcept
 * extension[priceType].valueCodeableConcept from $JDV-J36-TypeTarif-ROR (required)
