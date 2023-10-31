@@ -123,18 +123,19 @@ ou nom de l'OI : Nom de l'organisation interne"
     iso21090-ADXP-houseNumber named houseNumber 0..1 and
     iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..1 and
     iso21090-ADXP-streetNameType named streetNameType 0..1 and
-    iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
-    iso21090-ADXP-streetNameBase named streetNameHamlet 0..1 and
-    iso21090-ADXP-postBox named postalBox 0..1
+    iso21090-ADXP-postBox named postalBox 0..1 and
+    iso21090-ADXP-streetNameBase named streetNameBase 0..* and
+    iso21090-ADXP-precinct named precinct 0..*
 * address.line.extension[careOf] ^short = "pointRemise (Adresse)"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse)"
 * address.line.extension[houseNumber] ^short = "numeroVoie(Adresse)"
 * address.line.extension[buildingNumberSuffix] ^short = "(Adresse)"
 * address.line.extension[streetNameType] ^short = "typeVoie (Adresse)"
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
-* address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse)"
-* address.line.extension[streetNameHamlet] ^short = "lieuDit (Adresse)"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
+* address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse)"
+* address.line.extension[precinct] ^short = "lieuDit (Adresse)"
+
 
 * telecom.value 1..1
 * telecom ^short = "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
