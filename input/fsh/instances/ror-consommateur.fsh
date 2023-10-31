@@ -8,10 +8,16 @@ Usage: #definition
 * date = "2023-01-12T14:27:51+01:00"
 * description = "Système qui est autorisé à consommer les données du ROR."
 * kind = #requirements
+* instantiates = "http://hl7.org/fhir/uv/bulkdata/CapabilityStatement/bulk-data"
+* instantiates.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* instantiates.extension.valueCode = #SHOULD
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
+* format[+] = #application/fhir+ndjson
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
+* implementationGuide[0] = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
+* implementationGuide[+] = "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"
 * rest.mode = #client
 * rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre"
 * rest.security.cors = false
@@ -346,3 +352,9 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
+// bulk data export from hl7.fhir.uv.bulkdata: 2.0.0
+* rest.operation[0].name = "export"
+* rest.operation[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.operation[=].extension.valueCode = #SHOULD
+* rest.operation[=].definition = "http://hl7.org/fhir/uv/bulkdata/OperationDefinition/export"
+* rest.operation[=].documentation = "Utilisation de https://hl7.org/fhir/uv/bulkdata/export.html avec ajout de la valeur _myCompleteExtract pour utiliser le query parameter includeAssociatedData."

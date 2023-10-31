@@ -284,25 +284,86 @@ applicables à ce cas d'usage sont :
 
 ### Exemples de requêtes
 
-#### Scénario 1 : Extraction complète
+#### Scénario 1 : Extraction complète synchrone <code><span style="color: #ff0000;">deprecated</span></code>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
 GET [BASE]/HealthcareService?
-_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
+
+#### Scénario 1 bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
+
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre nationale.
+Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
+
+**Requête :**
+**N.B.: Dans le Header il est nécessaire de préciser: **
+`--header 'Prefer: respond-async'`
+Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
+
+```
+GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&includeAssociatedData=_myCompleteExtract
+
+```
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#endpoint---system-level-export>
+_outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : <http://ndjson.org/>
+&_type=HealthcareService #précise le type de ressources 
+&includeAssociatedData=_myCompleteExtract #un serveur prenant en charge ce paramètre DOIT renvoyer ou omettre un ensemble prédéfini de ressources FHIR associées à la demande. La valeur _myCompleteExtract correspond à une valeur personnalisée précédée d'un underscore et pris en charge par le serveur. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#query-parameters>
+
+```
+
+En réponse, dans le header, le lien sera disponible dans Content-Location
+Exemple :
+`[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc`
+Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
+
+#### Scénario 1 ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
+
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre régionale.
+Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
+
+**Requête :**
+**N.B.: Dans le Header il est nécessaire de préciser: **
+`--header 'Prefer: respond-async'`
+Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
+
+```
+GET [BASE]/$export?_outputFormat=application/fhir+ndjson&_type=HealthcareService&_typeFilter=HealthcareService%3F_tag%3Dhttps%3A%2F%2Fmos.esante.gouv.fr%2FNOS%2FTRE_R30-RegionOM%2FFHIR%2FTRE-R30-RegionOM%7C11&includeAssociatedData=_myCompleteExtract
+```
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/$export? #utilisation de l'operation export. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#endpoint---system-level-export>
+_outputFormat=application/fhir+ndjson #précise le format de sortie attendu. Plus d'information sur le format ici : <http://ndjson.org/>
+&_type=HealthcareService #précise le type de ressources 
+&_typeFilter=HealthcareService%3F_tag%3Dhttps%3A%2F%2Fmos.esante.gouv.fr%2FNOS%2FTRE_R30-RegionOM%2FFHIR%2FTRE-R30-RegionOM%7C11 #utilisation de filtre pour cibler le code Région. Ici 11 correspond au code de l'Ile de France pour plus d'explication sur la construction de la requête : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#example-request>
+&includeAssociatedData=_myCompleteExtract #un serveur prenant en charge ce paramètre DOIT renvoyer ou omettre un ensemble prédéfini de ressources FHIR associées à la demande. La valeur _myCompleteExtract correspond à une valeur personnalisée précédée d'un underscore et pris en charge par le serveur. Plus d'information ici : <http://hl7.org/fhir/uv/bulkdata/STU2/export.html#query-parameters>
+```
+
+En réponse, dans le header, le lien sera disponible dans Content-Location
+Exemple :
+`[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc`
+Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
+
 #### Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
 
 **Description du scénario :** un consommateur souhaite rechercher l\'offre de santé proposée\ par un établissement dont l'identifiant est = XX .
@@ -310,14 +371,15 @@ _include:iterate=HealthcareService:organization #inclus les Organization référ
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?organization:above.identifier=XX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?organization.identifier:above=XX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?organization:above.identifier=XX #critère de recherche de l’établissement
-&_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+GET [BASE]/HealthcareService?organization.identifier:above=XX #critère de recherche de l’établissement
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
@@ -333,14 +395,15 @@ rechercher une offre de santé\
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?identifier=XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner 
+GET [BASE]/HealthcareService?identifier=XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner 
 ```
 
 **Requête expliquée :**
 
 ```sh
 GET [BASE]/HealthcareService?identifier=XXX #critère de recherche de l’identifiant de l’offre
-_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
@@ -354,14 +417,15 @@ mise à jour depuis une certaine date \>= (06/11/2022)
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
 GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00 #critère de recherche de sur la date de mise à jour (ge= greater than)
-&_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
@@ -375,15 +439,16 @@ GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00 #critère de recher
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15:00&organization.type= https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?organization._lastUpdated:above=ge2022-11-06T15:00&organization.type= https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX &_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00 #critère de recherche sur la date de mise à jour (ge= greater or equal than)
+GET [BASE]/HealthcareService?organization._lastUpdated:above=ge2022-11-06T15 :00 #critère de recherche sur la date de mise à jour (ge= greater or equal than)
 &organization.type= https ://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX #critère de recherche sur la categorieEG (nomenclature à compléter)
-&_include :iterate=HealthcareService :organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
@@ -395,14 +460,15 @@ GET [BASE]/HealthcareService?organization:above._lastUpdated=ge2022-11-06T15 :00
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization._lastUpdated:above ge 2022-11-06T15:00) &_revinclude=Organization:healthcareservice&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization:above._lastUpdated ge 2022-11-06T15:00) #critère de recherche sur la date de mise à jour 
-&_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization._lastUpdated:above ge 2022-11-06T15:00) #critère de recherche sur la date de mise à jour 
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
@@ -414,7 +480,7 @@ GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organi
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_elements=identifier &_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_elements=identifier &_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
@@ -422,7 +488,8 @@ GET [BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-Region
 ```sh
 GET [BASE]/HealthcareService?_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX #critère de recherche sur la région source
 &_elements=identifier #ensemble des informations que le consommateur souhaite recevoir
-&_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 ```
 #### Scénario 8 : Extraction d’une offre de santé identifiée et ses éventuelles anomalies associées
 
@@ -435,14 +502,15 @@ Cette partie de la spécification est en cours de construction.
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?identifier=XXX&_include:iterate=HealthcareService:organization&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner&_revinclude=Task:focus
+GET [BASE]/HealthcareService?identifier=XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner&_revinclude=Task:focus
 ```
 
 **Requête expliquée :**
 
 ```sh
 GET [BASE]/HealthcareService?identifier=XXX #critère de recherche de l’identifiant de l’offre
-_include:iterate=HealthcareService:organization #inclus les Organization référencées par Healthcare Service ET les Organization référencées par les Organization
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole

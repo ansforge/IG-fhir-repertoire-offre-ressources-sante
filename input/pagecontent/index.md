@@ -133,6 +133,10 @@ pouvoir intégrer les évolutions régulières des nomenclatures (ajout de
 code, modification de libellé, mise en obsolescence d'un code,
 réactivation de code).
 
+#### Dépendances
+
+{% include dependency-table.xhtml %}
+
 #### Documents de référence
 
 <table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" align="left" width="100%" style="border-collapse:collapse;mso-table-layout-alt:fixed;

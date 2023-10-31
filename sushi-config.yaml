@@ -11,11 +11,13 @@ publisher:
 dependencies:
   ans.annuaire.fhir.r4: 0.2.0
   hl7.fhir.fr.core: 1.1.0
+  hl7.fhir.uv.bulkdata: 2.0.0
 status: active
 version: 0.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: STU
+releaseLabel: ci-build
+jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 parameters:
     shownav: 'true'
@@ -62,8 +64,6 @@ pages:
                 title: Sécurité
     autres_ressources.md:
             title: Autres Ressources
-    about.md:
-        title: A propos de ce guide
 
 menu:
     Accueil: index.html
@@ -85,10 +85,9 @@ menu:
         Annexes: annexes.html
     Mapping FHIR du modèle de données: mapping.html
     Ressources de conformité: artifacts.html
-    Téléchargements et usage: 
-        Téléchargements: downloads.html
-        Sécurité: securite.html
     Autres ressources:
+        Sécurité: securite.html
+        Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
-    A propos de ce guide: about.html
+    Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/

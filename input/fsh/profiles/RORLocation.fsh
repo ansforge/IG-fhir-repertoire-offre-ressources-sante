@@ -20,6 +20,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * type 0..1
 * type ^short = "fonctionLieu (LieuRealisationOffre) : La fonction correspond à la destination d'usage du lieu"
 * type from $JDV-J198-FonctionLieu-ROR (required)
+* managingOrganization MS
 
 * identifier 0..*
 * identifier ^slicing.discriminator.type = #value

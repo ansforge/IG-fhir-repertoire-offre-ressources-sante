@@ -128,7 +128,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORHealthcareServiceSensitiveUnit named ror-healthcareservice-sensitive-unit 1..1 and
     RORHealthcareServiceNoConsentHabilitation named ror-healthcareservice-no-consent-habilitation 0..1 and
     RORHealthcareServicePsychiatricSector named ror-healthcareservice-psychiatric-sector 0..* and
-    RORCalculatedDistance named RORCalculatedDistance 0..1 and
     RORHealthcareServicePatientType named ror-healthcareservice-patient-type 1..1 and
     RORHealthcareServiceContact named ror-healthcareservice-contact 0..* and
     RORMetaCreationDate named ror-meta-creation-date 1..1
