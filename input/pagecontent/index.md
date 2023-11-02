@@ -4,8 +4,8 @@ The French directory of healthcare and medico-social support services and resour
 The aim of this implementation guide is to define the specifications of the ROR FHIR API, enabling any authorized application to search for a healthcare offer and its capabilities (availability, equipment, etc.).
 </p>
 
-<div class="figure" style="width:65%;">
-    <img src="ror-logo.png" alt="CI-SIS" title="Logo du ROR">
+<div class="figure">
+    <img src="ror-logo.png" alt="ROR" title="Logo du ROR" style="width:100%;">
 </div>
 
 ### Description fonctionnelle de l'API
