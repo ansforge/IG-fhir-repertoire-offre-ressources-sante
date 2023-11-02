@@ -13,7 +13,7 @@ Description: "Extension créée dans le cadre du ROR pour décrire la personne o
     description 0..1 and
     RORConfidentialityLevel named ror-confidentiality-level 1..1 and
     RORHealthcareServiceContactTelecom named ror-healthcareservice-contact-telecom 0..*
-* extension[name].value[x] only string
+* extension[name].value[x] only HumanName
 * extension[description].value[x] only string
 * extension[purposeContact].value[x] only CodeableConcept
 * extension[purposeContact].valueCodeableConcept from $JDV-J221-NatureContact-ROR (required)
