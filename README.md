@@ -31,7 +31,8 @@ Les pipelines de ce repository permettent :
 * Faire les tests avec le validator_cli
 * Publier les pages :  https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/ig/main/ (ou https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/ig/[nom_de_la_branche] pour prévisualiser l'IG d'une branche)
 
-![image](https://user-images.githubusercontent.com/101335975/215342980-61686171-e3f8-40c5-865c-efdfc3dd52b4.png)
+![215342980-61686171-e3f8-40c5-865c-efdfc3dd52b4](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/assets/117643165/968d9e59-be53-4874-9a78-5b92000db2f6)
+
 
 # Pull Request
 Faire la PR sur la branche main.
