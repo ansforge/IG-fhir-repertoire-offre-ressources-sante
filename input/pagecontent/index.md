@@ -3,10 +3,33 @@
 The French directory of healthcare and medico-social support services and resources (<a href="https://esante.gouv.fr/produits-services/repertoire-ror">ROR</a>) is the repository (in the sense of a repository of data) for describing the healthcare services offered by Health facility, medico-social establishments and services, and local structures in France.
 The aim of this implementation guide is to define the specifications of the ROR FHIR API, enabling any authorized application to search for a healthcare offer and its capabilities (availability, equipment, etc.).
 </p>
-
+<blockquote class="stu-note">
+</blockquote>
 <div class="figure">
     <img src="ror-logo.png" alt="ROR" title="Logo du ROR" style="width:100%;">
 </div>
+
+### Information sur ce guide
+
+<b>Ce Guide d`Implémentation FHIR du ROR compatible avec le modèle d`exposition 3.0 du ROR et l`implementation 2.3 du ROR National.</b>
+Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la correspondance entre la spécification et la version cible de la solution ROR National de la manière suivante :
+- <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
+- <code><span style="color: #5DADE2;">ROR 2.2</span></code>
+- <code><span style="color: #58D68D;">ROR 2.3</span></code>
+- <code><span style="color: #9B59B6;">ROR 3.0</span></code>
+- ...
+
+
+La maturité de certains éléments ou certaines sections peut-être également indiquée de la sorte :
+- <code><span style="color: #ff0000;">deprecated</span></code>
+- <code><span style="color: #ff0000;">draft</span></code>
+- ...
+
+
+Pour plus d'information sur les versions de l'Implementation Guide n'hésitez pas à consulter <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">l'Historique</a>
+Si vous avez des questions ou des suggestions sur ce guide vous pouvez nous les adresser <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">ici</a>.
+
+
 
 ### Description fonctionnelle de l'API
 

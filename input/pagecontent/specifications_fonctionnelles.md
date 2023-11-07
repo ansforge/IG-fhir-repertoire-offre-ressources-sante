@@ -1,15 +1,15 @@
 A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants :
--   Consultation des données capacitaires en lits et places
--   Consultation de l'offre (extraction)
--   Recherche d'offre sur critères principaux
--   Recherche d'offre avec données capacitaires
--   Recherche d'offre sur la base d'informations tarifaires
--   Recherche d'offre via une technique « Full text »
--   Création et Mise à jour du lieu de réalisation de l’offre
--   Signalement d'anomalie
--   Mise à jour d'anomalie
--   Consultation d'anomalie
--   Consultation d'indicateurs de pilotage
+-   Consultation des données capacitaires en lits et places <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
+-   Consultation de l'offre (extraction) <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
+-   Recherche d'offre sur critères principaux <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
+-   Recherche d'offre avec données capacitaires <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
+-   Recherche d'offre sur la base d'informations tarifaires <code><span style="color: #58D68D;">ROR 2.3</span></code>
+-   Recherche d'offre via une technique « Full text » <code><span style="color: #58D68D;">ROR 2.3</span></code>
+-   Création et Mise à jour du lieu de réalisation de l’offre <code><span style="color: #58D68D;">ROR 2.3</span></code>
+-   Signalement d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
+-   Mise à jour d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
+-   Consultation d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
+-   Consultation d'indicateurs de pilotage - <code><span style="color: #ff0000;">draft</span></code>
   
 <blockquote class="stu-note">
 <p>
@@ -28,7 +28,7 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
 </p>
 </blockquote>
 
-Pour les cas d'usage couverts par ce webservice :
+Pour les cas d'usage couverts par ce guide d'impléementation :
 -   Les préconditions sont :
     -   Le système consommateur dispose des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé) pour accéder aux             données du ROR National.   
     -   Le système consommateur peut uniquement effectuer les recherches autorisées par son profil d'accès aux données. Plus d'information [ici](https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf) .
