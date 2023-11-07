@@ -270,6 +270,56 @@
   background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
   51;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='mso-yfti-cnfc:68'><b><span style='font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;line-height:115%;color:black;mso-color-alt:windowtext'></span></b><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:11.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext'>Modificateurs</span><o:p></o:p></b></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td width="19%" colspan=2 style='width:19.22%;border-top:none;border-left:
+  solid #8EAADB 1.0pt;border-bottom:solid #8EAADB 1.0pt;border-right:none;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-bottom-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><span
+  class=GramE><b><span style='font-size:9.0pt;mso-bidi-font-size:10.0pt;
+  line-height:115%'></span></b></span><b><span style='font-size:9.0pt;
+  mso-bidi-font-size:10.0pt;line-height:115%'><span class=SpellE></span><span
+  class=SpellE></span><span class=SpellE>of-type</span><o:p></o:p></span></b></p>
+  </td>
+  <td width="33%" style='width:33.56%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><a href="http://hl7.org/fhir/search.html#modifieroftype"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>http://hl7.org/fhir/search.html#modifieroftype</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> </span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Permet de filter sur le type d'identifiant<o:p></o:p></span></p>
+  </td>
+ </tr>
+  <tr style='mso-yfti-irow:10'>
+  <td width="52%" colspan=3 style='width:52.78%;border-top:none;border-left:
+  solid #8EAADB 1.0pt;border-bottom:solid #8EAADB 1.0pt;border-right:none;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-bottom-alt:solid #8EAADB .5pt;
+  background:#DEEAF6;mso-background-themecolor:accent1;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='mso-yfti-cnfc:68'><b><span style='font-size:9.0pt;
   mso-bidi-font-size:10.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>P</span></b><b><span
   style='font-size:9.0pt;mso-bidi-font-size:11.0pt;line-height:115%;color:black;
   mso-color-alt:windowtext'>réfixe de comparaison</span><o:p></o:p></b></p>
