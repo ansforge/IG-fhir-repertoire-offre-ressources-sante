@@ -1,5 +1,5 @@
 <!-- ## 3.9	Création et Mise à jour du lieu de réalisation de l’offre -->
-<h2><code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code></h2>
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>
 
 ### Caractéristiques de l'API 
 <table width="100%">

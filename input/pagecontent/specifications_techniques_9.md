@@ -1,5 +1,5 @@
 <!-- ## 3.11 Recherche d’offre via une technique « Full text » -->
-<h2><code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code></h2>
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>
 
 
 ### Caractéristiques de l'API 
