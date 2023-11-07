@@ -1,3 +1,4 @@
+<!-- Page specs fonctionnelles -->
 A ce jour, le guide d'implémentation de l'API FHIR du ROR a pour vocation à répondre aux cas d'usage suivants :
 -   Consultation des données capacitaires en lits et places <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 -   Consultation de l'offre (extraction) <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
