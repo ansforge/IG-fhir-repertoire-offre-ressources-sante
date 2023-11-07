@@ -1,5 +1,5 @@
 <!-- ## 3.10	Recherche d'offre sur la base d'informations tarifaires -->
-<code><span style="color: #58D68D;">ROR 2.3</span></code>
+<code><span style="background-color: #58D68D;">ROR 2.3</span></code>
 ### Caractéristiques de l'API 
 <table width="100%">
 <tbody>

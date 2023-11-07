@@ -1,5 +1,5 @@
 <!-- ## Recherche d'offre avec données capacitaires -->
-<code><span style="color: #A6ACAF;">ROR 2.1</span></code>
+<code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
 ### Caractéristiques de l'API
 <table width="100%">
 <tbody>

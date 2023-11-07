@@ -1,11 +1,11 @@
 A ce jour, le le guide d'impémentation des API FHIR du ROR a pour vocation à répondre aux cas d'usage suivants :
--   Consultation des données capacitaires en lits et places <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
--   Consultation de l'offre (extraction) <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
--   Recherche d'offre sur critères principaux <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
--   Recherche d'offre avec données capacitaires <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
--   Recherche d'offre sur la base d'informations tarifaires <code><span style="color: #58D68D;">ROR 2.3</span></code>
--   Recherche d'offre via une technique « Full text » <code><span style="color: #58D68D;">ROR 2.3</span></code>
--   Création et Mise à jour du lieu de réalisation de l’offre <code><span style="color: #58D68D;">ROR 2.3</span></code>
+-   Consultation des données capacitaires en lits et places <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+-   Consultation de l'offre (extraction) <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+-   Recherche d'offre sur critères principaux <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+-   Recherche d'offre avec données capacitaires <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+-   Recherche d'offre sur la base d'informations tarifaires <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
+-   Recherche d'offre via une technique « Full text » <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
+-   Création et Mise à jour du lieu de réalisation de l’offre <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
 -   Signalement d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
 -   Mise à jour d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
 -   Consultation d'anomalie - <code><span style="color: #ff0000;">draft</span></code>

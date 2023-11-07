@@ -16,10 +16,10 @@ Version ballot à destination des Implémenteurs du ROR NAtional et des recetteu
 
 <b>Ce Guide d'Implémentation FHIR du ROR compatible avec le modèle d`exposition 3.0 du ROR et l'implementation 2.3 du ROR National.</b>
 Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la correspondance entre la spécification et la version cible de la solution ROR National de la manière suivante :
-- <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
-- <code><span style="color: #5DADE2;">ROR 2.2</span></code>
-- <code><span style="color: #58D68D;">ROR 2.3</span></code>
-- <code><span style="color: #9B59B6;">ROR 3.0</span></code>
+- <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+- <code><span style="background-color: #5DADE2;">ROR 2.2</span></code>
+- <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
+- <code><span style="background-color: #C39BD3;">ROR 3.0</span></code>
 - ...
 
 
