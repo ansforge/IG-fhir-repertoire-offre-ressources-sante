@@ -1,10 +1,10 @@
 A ce jour, le guide d'implémentation de l'API FHIR du ROR a pour vocation à répondre aux cas d'usage suivants :
--   Consultation des données capacitaires en lits et places <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
--   Consultation de l'offre (extraction) <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
--   Recherche d'offre sur critères principaux <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
--   Recherche d'offre avec données capacitaires <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
--   Recherche d'offre sur la base d'informations tarifaires <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
--   Recherche d'offre via une technique « Full text » <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
+-   Consultation des données capacitaires en lits et places <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
+-   Consultation de l'offre (extraction) <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
+-   Recherche d'offre sur critères principaux <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
+-   Recherche d'offre avec données capacitaires <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
+-   Recherche d'offre sur la base d'informations tarifaires <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+-   Recherche d'offre via une technique « Full text » <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
 -   Création et Mise à jour du lieu de réalisation de l’offre <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
 -   Signalement d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
 -   Mise à jour d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
@@ -35,7 +35,7 @@ Pour les cas d'usage couverts par ce guide d'impléementation :
 -   Les postconditions sont :
     -   L'exécution des transactions ne provoquera aucune modification sur les données sources extraites.
 
-### Consultation des données capacitaires <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+### Consultation des données capacitaires <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 
 #### Description du cas d'usage
 
@@ -79,7 +79,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_1.html)**
 
-### Consultation de l'offre (Extraction) <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+### Consultation de l'offre (Extraction) <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 
 #### Description du cas d'usage
 
@@ -157,7 +157,7 @@ Il y a deux cas possibles :
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_2.html)**
 
-### Recherche d'offre sur critères principaux <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+### Recherche d'offre sur critères principaux <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 
 #### Description du cas d'usage
 
@@ -223,7 +223,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_3.html)**
 
-### Recherche d'offre avec données capacitaires <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+### Recherche d'offre avec données capacitaires <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 
 #### Description du cas d'usage
 
@@ -261,7 +261,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_4.html)**
 
-### Recherche d'offre sur la base d'informations tarifaires <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
+### Recherche d'offre sur la base d'informations tarifaires <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
 
 #### Description du cas d'usage
 
@@ -298,7 +298,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_8.html)**
 
-### Recherche d'offre via une technique « Full text » <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
+### Recherche d'offre via une technique « Full text » <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
 
 #### Description du cas d'usage
 
@@ -333,7 +333,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_9.html)**
 
-### Création et Mise à jour du lieu de réalisation de l'offre <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
+### Création et Mise à jour du lieu de réalisation de l'offre <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
 
 #### Description du cas d'usage : création du lieu de réalisation de l'offre
 

@@ -1,5 +1,5 @@
 <!-- ## Consultation de l'offre (Extraction) -->
-<code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
+<h2><code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code></h2>
 ### Caractéristiques de l'API 
 
 <table width="25%">
