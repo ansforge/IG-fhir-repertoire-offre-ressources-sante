@@ -4,6 +4,9 @@ The French directory of healthcare and medico-social support services and resour
 The aim of this implementation guide is to define the specifications of the ROR FHIR API, enabling any authorized application to search for a healthcare offer and its capabilities (availability, equipment, etc.).
 </p>
 <blockquote class="stu-note">
+<p>
+Version ballot à destination des Implémenteurs du ROR NAtional et des recetteurs. Pour les futurs consommateurs cette version peut être utilisée à titre d'information, afin d'obtenir de la visibilité sur les spécifications de l'API FHIR en cours d'implémentation.
+</p>
 </blockquote>
 <div class="figure">
     <img src="ror-logo.png" alt="ROR" title="Logo du ROR" style="width:100%;">
@@ -11,7 +14,7 @@ The aim of this implementation guide is to define the specifications of the ROR 
 
 ### Information sur ce guide
 
-<b>Ce Guide d`Implémentation FHIR du ROR compatible avec le modèle d`exposition 3.0 du ROR et l`implementation 2.3 du ROR National.</b>
+<b>Ce Guide d'Implémentation FHIR du ROR compatible avec le modèle d`exposition 3.0 du ROR et l'implementation 2.3 du ROR National.</b>
 Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la correspondance entre la spécification et la version cible de la solution ROR National de la manière suivante :
 - <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
 - <code><span style="color: #5DADE2;">ROR 2.2</span></code>

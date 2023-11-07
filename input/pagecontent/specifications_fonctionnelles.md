@@ -1,4 +1,4 @@
-A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants :
+A ce jour, le le guide d'impémentation des API FHIR du ROR a pour vocation à répondre aux cas d'usage suivants :
 -   Consultation des données capacitaires en lits et places <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
 -   Consultation de l'offre (extraction) <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
 -   Recherche d'offre sur critères principaux <code><span style="color: #A6ACAF;">ROR 2.1</span></code>
