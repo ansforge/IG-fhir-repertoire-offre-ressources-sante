@@ -5,16 +5,17 @@ The aim of this implementation guide is to define the specifications of the ROR 
 </p>
 <blockquote class="stu-note">
 <p>
-Version ballot à destination des Implémenteurs du ROR NAtional et des recetteurs. Pour les futurs consommateurs cette version peut être utilisée à titre d'information, afin d'obtenir de la visibilité sur les spécifications de l'API FHIR en cours d'implémentation.
+Version ballot à destination des Implémenteurs du ROR National et des recetteurs. Pour les futurs consommateurs cette version peut être utilisée à titre d'information, afin d'obtenir de la visibilité sur les spécifications de l'API FHIR en cours d'implémentation.
 </p>
 </blockquote>
 <div class="figure">
     <img src="ror-logo.png" alt="ROR" title="Logo du ROR" style="width:100%;">
 </div>
 
-### Information sur ce guide
+### Informations sur ce guide d'implémentation
 
-<b>Ce Guide d'Implémentation FHIR du ROR compatible avec le modèle d`exposition 3.0 du ROR et l'implementation 2.3 du ROR National.</b>
+<b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.0 du ROR.<br>
+Cette version du guide d'implementation cible l'implémentation de l'API FHIR dans la solution du ROR National version 2.3.</b>
 Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la correspondance entre la spécification et la version cible de la solution ROR National de la manière suivante :
 - <code><span style="background-color: #A6ACAF;">ROR 2.1</span></code>
 - <code><span style="background-color: #5DADE2;">ROR 2.2</span></code>
@@ -30,7 +31,7 @@ La maturité de certains éléments ou certaines sections peut-être également 
 
 
 Pour plus d'information sur les versions de l'Implementation Guide n'hésitez pas à consulter <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">l'Historique</a>
-Si vous avez des questions ou des suggestions sur ce guide vous pouvez nous les adresser <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">ici</a>.
+Si vous avez des questions ou des suggestions concernant ce guide vous pouvez nous les adresser <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">ici</a>.
 
 
 
