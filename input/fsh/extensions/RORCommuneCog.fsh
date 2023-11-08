@@ -4,4 +4,4 @@ Description: "Extension créée dans le cadre du ROR pour représenter le code o
 * ^context.type = #element
 * ^context.expression = "Location"
 * value[x] only CodeableConcept
-* valueCodeableConcept from $JDV-J230-CommuneOM-ROR (required)
+* valueCodeableConcept from fr-insee-code (required)

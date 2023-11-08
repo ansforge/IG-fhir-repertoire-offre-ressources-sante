@@ -71,7 +71,6 @@ Alias: $JDV-J226-ModaliteAccueil-ROR = https://mos.esante.gouv.fr/NOS/JDV_J226-M
 Alias: $JDV-J227-NiveauExpertise-ROR = https://mos.esante.gouv.fr/NOS/JDV_J227-NiveauExpertise-ROR/FHIR/JDV-J227-NiveauExpertise-ROR
 Alias: $JDV-J228-TypeCaracteristiqueEquipement-ROR = https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR
 Alias: $JDV-J229-ProfessionSante-ROR = https://mos.esante.gouv.fr/NOS/JDV_J229-ProfessionSante-ROR/FHIR/JDV-J229-ProfessionSante-ROR
-Alias: $JDV-J230-CommuneOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_J230-CommuneOM-ROR/FHIR/JDV-J230-CommuneOM-ROR
 Alias: $JDV-J232-Competence-ROR = https://mos.esante.gouv.fr/NOS/JDV_J232-Competence-ROR/FHIR/JDV-J232-Competence-ROR
 Alias: $JDV-J236-TypeIdentifiant-ROR = https://mos.esante.gouv.fr/NOS/JDV_J236-TypeIdentifiant-ROR/FHIR/JDV-J236-TypeIdentifiant-ROR
 Alias: $JDV-J237-RegionOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR
