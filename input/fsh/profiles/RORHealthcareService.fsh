@@ -55,10 +55,16 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * characteristic 1..*
+* characteristic.extension ^slicing.discriminator.type = #value
+* characteristic.extension ^slicing.discriminator.path = "url"
+* characteristic.extension ^slicing.rules = #open
+* characteristic.extension contains
+    RORActType named ror-act-type 0..1
+* characteristic.extension[ror-act-type] ^short = "Type d'acte"
 * characteristic ^slicing.discriminator[0].type = #value
 * characteristic ^slicing.discriminator[=].path = "coding.system"
 * characteristic ^slicing.discriminator[+].type = #value
-* characteristic ^slicing.discriminator[=].path = "id"
+* characteristic ^slicing.discriminator[=].path = "extension(https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type)"
 * characteristic ^slicing.rules = #open
 * characteristic contains
     receptionType 0..1 and
@@ -75,51 +81,43 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     temporalityStopService 0..1
 * characteristic[receptionType] ^short = "temporaliteAccueil (OffreOperationnelle) : Précision sur le mode de prise en charge"
 * characteristic[receptionType] from $JDV-J30-TemporaliteAccueil-ROR (required)
-* characteristic[receptionType].id = "receptionType"
 
 * characteristic[careMode] ^short = "modePriseEnCharge (OffreOperationnelle) : Caractérise l'hébergement ainsi que le niveau de technicité et d'intensité des soins"
 * characteristic[careMode] from $JDV-J19-ModePriseEnCharge-ROR (required)
-* characteristic[careMode].id = "careMode"
 
 * characteristic[receptionModality] ^short = "modaliteAccueil (OffreOperationnelle) : Permet de préciser le mode de prise en charge géographiquement"
 * characteristic[receptionModality] from $JDV-J226-ModaliteAccueil-ROR (required)
-* characteristic[receptionModality].id = "receptionModality"
 
 * characteristic[managementType] ^short = "modeGestion (OffreOperationnelle) : Mode d’intervention des aides à domicile en fonction de la nature de la relation contractuelle"
 * characteristic[managementType] from $JDV-J26-ModeGestion-ROR (required)
-* characteristic[managementType].id = "managementType"
 
 * characteristic[takingCareSpeciality] ^short = "specialisationPriseEnCharge (OffreOperationnelle) : Regroupement de troubles, de pathologies ou de déficiences qui nécessitent la mobilisation d'expertises, de compétences et/ou d'équipements spécifiques"
 * characteristic[takingCareSpeciality] from $JDV-J35-SpecialisationDePriseEnCharge-ROR (required)
-* characteristic[takingCareSpeciality].id = "takingCareSpeciality"
 
 * characteristic[annualOpening] ^short = "ouvertureAnnuelle (OffreOperationnelle) : Nombre de jours maximum dans l’année au cours desquels la prestation peut être proposée par l'établissement"
 * characteristic[annualOpening] from $JDV-J28-OuvertureAnnuelle-ROR (required)
-* characteristic[annualOpening].id = "annualOpening"
 
 * characteristic[ressourceProfession] ^short = "professionRessource (OffreOperationnelle) : Traduit la mobilisation de métiers qui constituent un facteur différenciant dans la réalisation de la prestation"
 * characteristic[ressourceProfession] from $JDV-J186-ProfessionRessource-ROR (required)
-* characteristic[ressourceProfession].id = "ressourceProfession"
 
 * characteristic[specificCompetence] ^short = "competenceSpecifique (OffreOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne"
 * characteristic[specificCompetence] from $JDV-J33-CompetenceSpecifique-ROR (required)
-* characteristic[specificCompetence].id = "specificCompetence"
 
 * characteristic[expertiseLevel] ^short = "niveauExpertise (OffreOperationnelle) : Niveau de ressources humaines et matérielles engagées dans la réalisation de l'offre"
 * characteristic[expertiseLevel] from $JDV-J227-NiveauExpertise-ROR (required)
-* characteristic[expertiseLevel].id = "expertiseLevel"
 
 * characteristic[temporalityStopService] ^short = "typeFermeture (OffreOperationnelle) : Temporalité d'arrêt de réalisation de la prestation"
 * characteristic[temporalityStopService] from $JDV-J185-TypeFermeture-ROR (required)
-* characteristic[temporalityStopService].id = "temporalityStopService"
 
 * characteristic[specificAct] ^short = "acteSpecifique (OffreOperationnelle) : Action menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité"
 * characteristic[specificAct] from $JDV-J16-ActeSpecifique-ROR (required)
-* characteristic[specificAct].id = "specificAct"
+* characteristic[outsideOfficeAct].extension[ror-act-type] 1..1
+* characteristic[specificAct].extension[ror-act-type].valueCode = #specificAct
 
 * characteristic[outsideOfficeAct] ^short = "acteRealiseHorsCabinet (OffreOperationnelle) : Permet de décrire l’offre de santé des médecins libéraux réalisée en dehors du cabinet, au sein d’un établissement"
 * characteristic[outsideOfficeAct] from $JDV-J16-ActeSpecifique-ROR (required)
-* characteristic[outsideOfficeAct].id = "outsideOfficeAct"
+* characteristic[outsideOfficeAct].extension[ror-act-type] 1..1
+* characteristic[outsideOfficeAct].extension[ror-act-type].valueCode = #outsideOfficeAct
 
 
 * specialty 1..*
