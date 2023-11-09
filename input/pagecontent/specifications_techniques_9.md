@@ -1,5 +1,8 @@
 <!-- ## 3.11 Recherche d’offre via une technique « Full text » -->
-<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>
+
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+Cette partie de la spécification est en cours de construction et n'est pas implémentée. Elle est disponible, à titre d'information sur les travaux en cours au niveau du ROR National.
+</p>
 
 
 ### Caractéristiques de l'API 

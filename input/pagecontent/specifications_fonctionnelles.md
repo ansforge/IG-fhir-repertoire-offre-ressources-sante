@@ -5,12 +5,12 @@ A ce jour, le guide d'implémentation de l'API FHIR du ROR a pour vocation à r�
 -   Recherche d'offre sur critères principaux <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 -   Recherche d'offre avec données capacitaires <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 -   Recherche d'offre sur la base d'informations tarifaires <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
--   Recherche d'offre via une technique « Full text » <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
--   Création et Mise à jour du lieu de réalisation de l’offre <code><span style="background-color: #58D68D;">ROR 2.3</span></code>
--   Signalement d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
--   Mise à jour d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
--   Consultation d'anomalie - <code><span style="color: #ff0000;">draft</span></code>
--   Consultation d'indicateurs de pilotage - <code><span style="color: #ff0000;">draft</span></code>
+-   Recherche d'offre via une technique « Full text » <code><span style="color: #ff0000;">draft</span></code>
+-   Création et Mise à jour du lieu de réalisation de l’offre <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+-   Signalement d'anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+-   Mise à jour d'anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+-   Consultation d'anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+-   Consultation d'indicateurs de pilotage <code><span style="color: #ff0000;">draft</span></code>
   
 <blockquote class="stu-note">
 <p>
@@ -299,7 +299,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_8.html)**
 
-### Recherche d'offre via une technique « Full text » <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+### Recherche d'offre via une technique « Full text » <code><span style="color: #ff0000;">draft</span></code>
 
 #### Description du cas d'usage
 
@@ -413,7 +413,7 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
-### Signalement d’anomalie <code><span style="color: #ff0000;">draft</span></code>
+### Signalement d’anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
 
 #### Description du cas d’usage
 
@@ -447,7 +447,7 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_5.html)**
 
-### Mise à jour d’anomalie <code><span style="color: #ff0000;">draft</span></code>
+### Mise à jour d’anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
 
 #### Description du cas d’usage
 
@@ -481,7 +481,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_6.html)**
 
-### Consultation d’anomalie <code><span style="color: #ff0000;">draft</span></code>
+### Consultation d’anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
 
 #### Description du cas d’usage
 
