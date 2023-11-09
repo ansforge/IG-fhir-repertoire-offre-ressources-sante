@@ -21,7 +21,7 @@ Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la corres
 - <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 - <code><span style="background-color: #5DADE2;color:white;font-weight:bold">ROR 2.2</span></code>
 - <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
-- <code><span style="background-color: #C39BD3;color:white;font-weight:bold">ROR 3.0</span></code>
+- <code><span style="background-color: #C39BD3;color:white;font-weight:bold">ROR 3.1</span></code>
 - ...
 
 
