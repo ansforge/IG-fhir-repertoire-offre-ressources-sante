@@ -1,9 +1,6 @@
 [![Workflow Init](https://github.com/ansforge/FIG_ans.fhir.fr.ror30/actions/workflows/fhir-worklows.yml/badge.svg)](https://github.com/ansforge/FIG_ans.fhir.fr.ror30/actions/workflows/fhir-worklows.yml)
-<div align="center">
-<figure>
+
 ![ror-logo](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/assets/117643165/732ffe22-fbb8-470f-92a1-c6f7252be914)
-</figure>
-</div>
 
 # Contexte
 
