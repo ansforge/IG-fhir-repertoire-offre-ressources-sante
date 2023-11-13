@@ -12,4 +12,4 @@ Description: "Extension créée dans le cadre du ROR pour définir l'identité d
     exerciseFirstName 0..1
 * extension[exerciseLastName].value[x] only string
 * extension[exerciseFirstName].value[x] only string
-* extension[exerciseTitle].valueCodeableConcept from $JDV-J208-CiviliteExcercice-ROR (required)
+* extension[exerciseTitle].valueCodeableConcept from $JDV-J208-CiviliteExercice-ROR (required)
