@@ -1,15 +1,15 @@
 <!-- Page specs fonctionnelles -->
 A ce jour, le guide d'implémentation de l'API FHIR du ROR a pour vocation à répondre aux cas d'usage suivants :
--   Consultation des données capacitaires en lits et places <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
--   Consultation de l'offre (extraction) <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
--   Recherche d'offre sur critères principaux <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
--   Recherche d'offre avec données capacitaires <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
--   Recherche d'offre sur la base d'informations tarifaires <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
--   Recherche d'offre via une technique « Full text » <code><span style="color: #ff0000;">draft</span></code>
--   Création et Mise à jour du lieu de réalisation de l’offre <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
--   Signalement d'anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
--   Mise à jour d'anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
--   Consultation d'anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+-   Consultation des données capacitaires en lits et places
+-   Consultation de l'offre (extraction)
+-   Recherche d'offre sur critères principaux
+-   Recherche d'offre avec données capacitaires
+-   Recherche d'offre sur la base d'informations tarifaires
+-   Recherche d'offre via une technique « Full text »  <code><span style="color: #ff0000;">draft</span></code>
+-   Création et Mise à jour du lieu de réalisation de l’offre
+-   Signalement d'anomalie
+-   Mise à jour d'anomalie
+-   Consultation d'anomalie
 -   Consultation d'indicateurs de pilotage <code><span style="color: #ff0000;">draft</span></code>
   
 <blockquote class="stu-note">
@@ -36,7 +36,7 @@ Pour les cas d'usage couverts par ce guide d'impléementation :
 -   Les postconditions sont :
     -   L'exécution des transactions ne provoquera aucune modification sur les données sources extraites.
 
-### Consultation des données capacitaires <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
+### Consultation des données capacitaires
 
 #### Description du cas d'usage
 
@@ -80,7 +80,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_1.html)**
 
-### Consultation de l'offre (Extraction) <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
+### Consultation de l'offre (Extraction)
 
 #### Description du cas d'usage
 
@@ -158,7 +158,7 @@ Il y a deux cas possibles :
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_2.html)**
 
-### Recherche d'offre sur critères principaux <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
+### Recherche d'offre sur critères principaux
 
 #### Description du cas d'usage
 
@@ -224,7 +224,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_3.html)**
 
-### Recherche d'offre avec données capacitaires <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
+### Recherche d'offre avec données capacitaires
 
 #### Description du cas d'usage
 
@@ -262,7 +262,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_4.html)**
 
-### Recherche d'offre sur la base d'informations tarifaires <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+### Recherche d'offre sur la base d'informations tarifaires
 
 #### Description du cas d'usage
 
@@ -334,7 +334,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_9.html)**
 
-### Création et Mise à jour du lieu de réalisation de l'offre <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+### Création et Mise à jour du lieu de réalisation de l'offre
 
 #### Description du cas d'usage : création du lieu de réalisation de l'offre
 
@@ -413,7 +413,7 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
-### Signalement d’anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+### Signalement d’anomalie
 
 #### Description du cas d’usage
 
@@ -447,7 +447,7 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_5.html)**
 
-### Mise à jour d’anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+### Mise à jour d’anomalie
 
 #### Description du cas d’usage
 
@@ -481,7 +481,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_6.html)**
 
-### Consultation d’anomalie <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
+### Consultation d’anomalie
 
 #### Description du cas d’usage
 

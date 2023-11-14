@@ -1,5 +1,5 @@
-<!-- ## Mise à jour d’anomalie -->
-<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>
+<!-- ## Mise à jour d’anomalie
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>-->
 
 ### Caractéristiques de l'API
 

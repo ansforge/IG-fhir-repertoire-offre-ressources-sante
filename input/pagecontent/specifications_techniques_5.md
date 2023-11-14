@@ -1,6 +1,5 @@
-<!-- ## Signalement d’anomalie -->
-
-<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>
+<!-- ## Signalement d’anomalie
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code> -->
 
 ### Caractéristiques de l'API
 

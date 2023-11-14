@@ -17,19 +17,20 @@ The aim of this implementation guide is to define the specifications of the ROR 
 
 <b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.0 du ROR.<br>
 Cette version du guide d'implementation cible l'implémentation de l'API FHIR dans la solution du ROR National version 2.3.</b>
-Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la correspondance entre la spécification et la version cible de la solution ROR National de la manière suivante :
-
+<!--Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la correspondance entre la spécification et la version cible de la solution ROR National de la manière suivante :
 - <code><span style="background-color: #A6ACAF;color:white;font-weight:bold">ROR 2.1</span></code>
 - <code><span style="background-color: #5DADE2;color:white;font-weight:bold">ROR 2.2</span></code>
 - <code><span style="background-color: #58D68D;color:white;font-weight:bold">ROR 2.3</span></code>
 - <code><span style="background-color: #C39BD3;color:white;font-weight:bold">ROR 3.1</span></code>
 - ...
+-->
 
-La maturité de certains éléments ou certaines sections peut-être également indiquée de la sorte :
+Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la mière suivante :
 
-- <code><span style="color: #ff0000;">deprecated</span></code> => ce qui correspond à ce qui n'est plus disponible dans la solution ROR N
-- <code><span style="color: #ff0000;">draft</span></code> => ce qui correspond à ce qui est en cours d'implémentation dans la solution ROR National  et donc pas encore validé et disponible
-- ...
+- <code><span style="color: #ff0000;">deprecated</span></code> => correspond à ce qui ne sera bientôt plus disponible dans la solution ROR N
+- <code><span style="color: #ff0000;">draft</span></code> => correspond à ce qui est en cours d'implémentation dans la solution ROR National et donc pas encore validé et disponible. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est en cours d'implémentation dans la solution ROR National.
+- <code><span style="color: #C39BD3;">work in progress</span></code> => correspond à ce qui est en cours de réflexion dans la solution ROR National. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est à l'étude pour les prochaines versions du ROR NAtional.
+
 
 Pour plus d'information sur les versions de l'Implementation Guide n'hésitez pas à consulter <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">l'Historique</a>
 Si vous avez des questions ou des suggestions concernant ce guide vous pouvez nous les adresser <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">ici</a>.
