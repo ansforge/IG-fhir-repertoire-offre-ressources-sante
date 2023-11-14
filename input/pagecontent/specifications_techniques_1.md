@@ -305,12 +305,12 @@ GET [BASE]/Location?_revinclude=HealthcareService:location #inclus les Healthcar
 
 **Requête :**
 
-`GET [BASE]/Location?address-postalcode:text=35,22,29,56&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?address-postalcode=35,22,29,56&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Location?address-postalcode:text=35,22,29,56 #critère de recherche sur les codes postaux commencant par les valeurs choisies
+GET [BASE]/Location?address-postalcode=35,22,29,56 #critère de recherche sur les codes postaux commencant par les valeurs choisies
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 
 ```
