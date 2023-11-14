@@ -9,7 +9,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * identifier ^short = "Identifiant de l'anomalie"
 * status MS //Status required doit correspondre au valueset exigé par FHIR dans TaskStatus https://www.hl7.org/FHIR/valueset-task-status.html
 * businessStatus 1..1
-* businessStatus ^short = "Type de statut métier de l'anomalie"
+* businessStatus ^short = "Statut métier de traitement de l'anomalie"
 * businessStatus from $JDV-J244-StatutMetierAnomalie-ROR (required)
 * code 1..1
 * code ^short = "Thématique de l'anomalie exemples :Exactitude, Complétude, Exhaustivité"
