@@ -18,7 +18,7 @@ The aim of this implementation guide is to define the specifications of the ROR 
 <b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.0 du ROR.<br>
 Cette version du guide d'implementation cible l'implémentation de l'API FHIR dans la solution du ROR National version 2.3.</b>
 
-Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la mière suivante :
+Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la manière suivante :
 
 - <code><span style="color: #ff0000;">deprecated</span></code> => correspond à ce qui ne sera bientôt plus disponible dans la solution ROR N
 - <code><span style="color: #ff0000;">draft</span></code> => correspond à ce qui est en cours d'implémentation dans la solution ROR National et donc pas encore validé et disponible. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est en cours d'implémentation dans la solution ROR National.
