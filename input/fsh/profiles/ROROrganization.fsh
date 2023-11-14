@@ -35,32 +35,32 @@ ou nom de l'OI : Nom de l'organisation interne"
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
-    idNatStruct 0..1 and
-    numFINESS 0..1 and
-    numSIREN 0..1 and
-    numero_cabinet_RPPS 0..1 and
+    idNatSt 0..1 and
+    finess 0..1 and
+    sirene 0..1 and
+    rppsRang 0..1 and
     numSIRET 0..1 and 
     identifierOI 0..1 and
-    numero_cabinet_ADELI 0..1
-* identifier[idNatStruct] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
-* identifier[idNatStruct].type 1..1
-* identifier[idNatStruct].type.coding.code = $TRE-G07-TypeIdentifiantStructure#40 
-* identifier[idNatStruct].system = "urn:oid:1.2.250.1.71.4.2.2"
+    adeliRang 0..1
+* identifier[idNatSt] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
+* identifier[idNatSt].type 1..1
+* identifier[idNatSt].type.coding.code = $TRE-G07-TypeIdentifiantStructure#40 
+* identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
 
-* identifier[numFINESS] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
-* identifier[numFINESS].type 1..1
-* identifier[numFINESS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#1 
-* identifier[numFINESS].system = "http://finess.esante.gouv.fr"
+* identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
+* identifier[finess].type 1..1
+* identifier[finess].type.coding.code = $TRE-G07-TypeIdentifiantStructure#1 
+* identifier[finess].system = "http://finess.esante.gouv.fr"
 
-* identifier[numSIREN] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
-* identifier[numSIREN].type 1..1
-* identifier[numSIREN].type.coding.code = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[numSIREN].system = "http://sirene.fr"
+* identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
+* identifier[sirene].type 1..1
+* identifier[sirene].type.coding.code = $TRE-G07-TypeIdentifiantStructure#2 
+* identifier[sirene].system = "http://sirene.fr"
 
-* identifier[numero_cabinet_RPPS] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
-* identifier[numero_cabinet_RPPS].type 1..1
-* identifier[numero_cabinet_RPPS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#4
-* identifier[numero_cabinet_RPPS].system = "http://rppsrang.esante.gouv.fr"
+* identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
+* identifier[rppsRang].type 1..1
+* identifier[rppsRang].type.coding.code = $TRE-G07-TypeIdentifiantStructure#4
+* identifier[rppsRang].system = "http://rppsrang.esante.gouv.fr"
 
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1
@@ -73,10 +73,10 @@ ou nom de l'OI : Nom de l'organisation interne"
 * identifier[identifierOI].type.coding.code = $TRE-R345-TypeIdentifiantAutre#42
 * identifier[identifierOI].system = "https://oi.esante.gouv.fr"
 
-* identifier[numero_cabinet_ADELI] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
-* identifier[numero_cabinet_ADELI].type 1..1
-* identifier[numero_cabinet_ADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
-* identifier[numero_cabinet_ADELI].system = "http://adelirang.esante.gouv.fr"
+* identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
+* identifier[adeliRang].type 1..1
+* identifier[adeliRang].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
+* identifier[adeliRang].system = "http://adelirang.esante.gouv.fr"
 
 // Slice déjà défini dans FrOrganization
 * type 0..* 
