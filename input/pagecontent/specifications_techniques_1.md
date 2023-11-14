@@ -268,7 +268,7 @@ grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour
 
 Ces critères de recherche sont applicables à la ressource Location,
 grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
-`_has:Location:focus:[[NOM CRITERE]`
+`_has:Location:focus:[NOM CRITERE]`
 
 ### Paramètres et modificateurs de requêtes FHIR
 
