@@ -20,9 +20,9 @@ Cette version du guide d'implementation cible l'implémentation de l'API FHIR da
 
 Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la manière suivante :
 
-- <code><span style="color: #ff0000;">deprecated</span></code> => correspond à ce qui ne sera bientôt plus disponible dans la solution ROR N
+- <code><span style="color: #E67E22;">deprecated</span></code> => correspond à ce qui ne sera bientôt plus disponible dans la solution ROR N
 - <code><span style="color: #ff0000;">draft</span></code> => correspond à ce qui est en cours d'implémentation dans la solution ROR National et donc pas encore validé et disponible. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est en cours d'implémentation dans la solution ROR National.
-- <code><span style="color: #C39BD3;">work in progress</span></code> => correspond à ce qui est en cours de réflexion dans la solution ROR National. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est à l'étude pour les prochaines versions du ROR NAtional.
+- <code><span style="color: #8E44AD;">under consideration</span></code> => correspond à ce qui est en cours de réflexion dans la solution ROR National. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est à l'étude pour les prochaines versions du ROR National.
 
 
 Pour plus d'information sur les versions de l'Implementation Guide n'hésitez pas à consulter <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">l'Historique</a>
