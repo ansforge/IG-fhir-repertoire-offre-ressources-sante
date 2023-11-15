@@ -1,4 +1,5 @@
 <!-- ## 3.8	Consultation d’indicateurs de pilotage -->
+<code><span style="color: #ff0000;font-weight:bold;font-size: x-large;">draft</span></code>
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 Cette partie de la spécification est en cours de construction et n'est pas implémentée. Elle est disponible, à titre d'information sur les travaux en cours au niveau du ROR National.
 </p>
