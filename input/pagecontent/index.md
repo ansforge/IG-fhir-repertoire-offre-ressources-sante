@@ -1,9 +1,9 @@
 <!-- Page d'accueil -->
-<blockquote class="stu-note">
+<!--<blockquote class="stu-note">
 <p>
 Version ballot à destination des Implémenteurs du ROR National et des recetteurs. Pour les futurs consommateurs cette version peut être utilisée à titre d'information, afin d'obtenir de la visibilité sur les spécifications de l'API FHIR en cours d'implémentation.
 </p>
-</blockquote>
+</blockquote> -->
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br>
 The French directory of healthcare and medico-social support services and resources (<a href="https://esante.gouv.fr/produits-services/repertoire-ror">ROR</a>) is the repository (in the sense of a repository of data) for describing the healthcare services offered by Health facility, medico-social establishments and services, and local structures in France.
@@ -20,10 +20,11 @@ Cette version du guide d'implementation cible l'implémentation de l'API FHIR da
 
 Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la manière suivante :
 
-- <code><span style="color: #E67E22;">deprecated</span></code> => correspond à ce qui ne sera bientôt plus disponible dans la solution ROR N
+- <code><span style="color: #E67E22;">deprecated</span></code> => correspond à ce qui ne sera bientôt plus disponible dans la solution ROR National
 - <code><span style="color: #ff0000;">draft</span></code> => correspond à ce qui est en cours d'implémentation dans la solution ROR National et donc pas encore validé et disponible. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est en cours d'implémentation dans la solution ROR National.
 - <code><span style="color: #8E44AD;">under consideration</span></code> => correspond à ce qui est en cours de réflexion dans la solution ROR National. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est à l'étude pour les prochaines versions du ROR National.
 
+Les autres éléments ou section qui n'ont pas ces mentions doivent être implémentés dan la version courante de la solution ROR National.
 
 Pour plus d'information sur les versions de l'Implementation Guide n'hésitez pas à consulter <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">l'Historique</a>
 Si vous avez des questions ou des suggestions concernant ce guide vous pouvez nous les adresser <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">ici</a>.
