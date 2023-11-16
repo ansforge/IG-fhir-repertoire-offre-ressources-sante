@@ -314,7 +314,7 @@ TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à 
 
 **Requête :**
 
-`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type= https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83&_include=HealthcareService:location`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83&_include=HealthcareService:location`
 
 **Requête expliquée :**
 

@@ -361,8 +361,8 @@ GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE
 
 **Requête expliquée :**
 ```sh
-GET [BASE]/HealthcareService?service-category= https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX#critère de recherche sur le type d’offre
-& characteristic= https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|YYY #critère de recherche sur la modalité d’accueil
+GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX#critère de recherche sur le type d’offre
+& characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|YYY #critère de recherche sur la modalité d’accueil
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
@@ -414,7 +414,7 @@ GET [BASE]/HealthcareService?_filter=((providedBy:type eq https://mos.esante.gou
 #### Scénario 6 : Recherche à proximité géographique
 
 **Description du scénario :** un consommateur cherche les
-offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnelle) dans un périmètre géographique proche du lieu de résidence d'un patient= à YY km de (latitude,longitude).
+offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnelle) dans un périmètre géographique proche du lieu de résidence d'un patient = à YY km de (latitude,longitude).
 
 **Requête :**
 
@@ -492,7 +492,7 @@ Exemple :
 
 #### Scénario 7 : Recherche sur une zone d'intervention
 
-**Description du scénario :** un consommateur cherche les offres proposées dans une commune =XXX faisant partie d'une zone d'intervention.
+**Description du scénario :** un consommateur cherche les offres proposées dans une commune = XXX faisant partie d'une zone d'intervention.
 
 **Requête :**
 
