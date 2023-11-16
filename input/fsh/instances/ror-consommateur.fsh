@@ -12,8 +12,7 @@ Usage: #definition
 * instantiates.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * instantiates.extension.valueCode = #SHOULD
 * fhirVersion = #4.0.1
-* format[0] = #application/fhir+xml
-* format[+] = #application/fhir+json
+* format[0] = #application/fhir+json
 * format[+] = #application/fhir+ndjson
 * implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
 * implementationGuide[0] = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
