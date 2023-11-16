@@ -75,7 +75,7 @@ ou nom de l'OI : Nom de l'organisation interne"
 
 * identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[adeliRang].type 1..1
-* identifier[adeliRang].type= $TRE-G07-TypeIdentifiantStructure#0
+* identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
 * identifier[adeliRang].system = "http://adelirang.esante.gouv.fr"
 
 // Slice déjà défini dans FrOrganization
