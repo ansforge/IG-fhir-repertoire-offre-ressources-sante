@@ -15,7 +15,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * subjectType 1..*
 * subjectType ^short = "Types de Ressources qui seront alimentées lors de la saisie de cette fiche : HealthcareService, Organization, Practioner, PractionerRole, Location"
 * date ^short = "Date du dernier changement"
-* nom ^short = "Nom de l'éditeur: Etablissement ou personne"
+* publisher ^short = "Nom de l'éditeur: Etablissement ou personne"
 * description ^short = "Description de l'objet de la feuille de saisie"
 * approvalDate 1..1
 * approvalDate ^short = "Date de validation de la fiche de saisie"
