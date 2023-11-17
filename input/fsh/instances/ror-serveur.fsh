@@ -56,7 +56,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
 
 * rest.resource[=].searchParam[+].name = "_has"
-* rest.resource[=].searchParam[=].definition = "https://hl7.org/fhir/searchparameter-registry.html#Resource-has"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/searchparameter-registry.html#Resource-has"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
 
@@ -205,12 +205,12 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
 
 * rest.resource[=].searchParam[+].name = "_has"
-* rest.resource[=].searchParam[=].definition = "https://hl7.org/fhir/searchparameter-registry.html#Resource-has"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/searchparameter-registry.html#Resource-has"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
 
 * rest.resource[=].searchParam[+].name = "_filter"
-* rest.resource[=].searchParam[=].definition = "https://hl7.org/fhir/searchparameter-registry.html#Resource-filter"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/searchparameter-registry.html#Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Fournit une syntaxe pour exprimer un ensemble d'expressions de requête sur les ressources sous-jacentes"
 
@@ -458,7 +458,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
 
 * rest.resource[=].searchParam[+].name = "_has"
-* rest.resource[=].searchParam[=].definition = "https://hl7.org/fhir/searchparameter-registry.html#Resource-has"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/searchparameter-registry.html#Resource-has"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
 
