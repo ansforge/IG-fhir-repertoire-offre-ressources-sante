@@ -25,3 +25,5 @@ Description: "Fiche de saisie de l'offre de soins"
 * code 0..0 //hors contexte ? http://hl7.org/fhir/R4/valueset-questionnaire-questions.html
 * item ^short = "Structure du champs de la fiche"
 * item.required ^short = "Champs requis"
+* item.answerValueSet ^short = "Ensemble de valeurs autorisées en réponse"
+* item.definition ^short = "Element concerné par la saisie"
