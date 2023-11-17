@@ -22,7 +22,7 @@ Usage: #definition
 * implementationGuide[+] = "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"
 
 * rest.mode = #client
-* rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre"
+* rest.documentation = "Recherche d'offres de soins de santé et de leurs capacités"
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 

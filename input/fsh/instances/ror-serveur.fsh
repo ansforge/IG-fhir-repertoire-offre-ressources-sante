@@ -7,7 +7,7 @@ Usage: #definition
 * title = "ROR-RORServeur"
 * experimental = false
 * date = "2023-01-12T14:27:51+01:00"
-* description = "Système ROR National Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."
+* description = "Système ROR National : Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."
 * kind = #requirements
 * fhirVersion = #4.0.1
 
@@ -22,7 +22,7 @@ Usage: #definition
 * implementationGuide[+] = "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"
 
 * rest.mode = #server
-* rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre"
+* rest.documentation = "Recherche d'offres de soins de santé et de leurs capacités"
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 
