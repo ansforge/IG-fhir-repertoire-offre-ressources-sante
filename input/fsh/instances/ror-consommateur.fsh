@@ -181,7 +181,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #patch
-* rest.resource[=].searchInclude = "HealthcareService:organization, HealthcareService:location"
+* rest.resource[=].searchInclude = "HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner"
 * rest.resource[=].searchRevInclude = "PractitionerRole:service, Task:focus"
 
 * rest.resource[=].searchParam[+].name = "_id"
