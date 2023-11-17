@@ -131,7 +131,7 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 <tbody>
 <tr>
 <td width="227">
-<p>id</p>
+<p>_id</p>
 </td>
 <td width="227">
 <p>topic</p>
