@@ -212,7 +212,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "_filter"
 // * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
-* rest.resource[=].searchParam[=].documentation = "Fournit une syntaxe pour exprimer un ensemble d'expressions de requête sur les ressources sous-jacentes"
+* rest.resource[=].searchParam[=].documentation = "Fournit une syntaxe pour filtrer de manière plus complexe"
 
 * rest.resource[=].searchParam[+].name = "location"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
@@ -371,7 +371,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = " Tarif applicable à un hébergement permanent ou à un hébergement temporaire"
 
 * rest.resource[=].searchParam[+].name = "price-special-price"
-* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-special-price)
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-special-price)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Condition tarifaire"
 
@@ -462,6 +462,21 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
 
+* rest.resource[=].searchParam[+].name = "_content"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
+* rest.resource[=].searchParam[=].type = #string
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
+
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Measure-identifier"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Identifiant logique de l'indicateur"
+
+* rest.resource[=].searchParam[+].name = "topic"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Measure-topic"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Sujet de la mesure"
+
 // MeasureReport
 * rest.resource[+].type = #MeasureReport
 * rest.resource[=].profile = Canonical(ror-measurereport)
@@ -472,6 +487,16 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant logique de la ressource"
+
+* rest.resource[=].searchParam[+].name = "_content"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
+* rest.resource[=].searchParam[=].type = #string
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
+
+* rest.resource[=].searchParam[+].name = "date"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MeasureReport-date"
+* rest.resource[=].searchParam[=].type = #date
+* rest.resource[=].searchParam[=].documentation = "Date de mesure"
 
 // bulk data export from hl7.fhir.uv.bulkdata: 2.0.0
 * rest.operation[+].name = "export"

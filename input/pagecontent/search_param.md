@@ -122,66 +122,6 @@
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:0'>
-  <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
-  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
-  line-height:115%;mso-yfti-cnfc:64'><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
-  mso-fareast-language:FR'>-</span><b><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></b></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>_content</span><span
-  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Oui</span><span
-  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span class=SpellE><span class=GramE><span style='font-size:8.0pt;
-  line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
-  mso-fareast-language:FR'>special</span></span></span><span style='font-size:
-  8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
-  Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Rechercher sur tout le contenu de la ressource</span><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
- </tr>
  <tr style='mso-yfti-irow:1'>
   <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
   solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -1983,66 +1923,6 @@ Critères de recherches applicables à la ressource HealthcareService.
   </span></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
-  <tr style='mso-yfti-irow:0'>
-  <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
-  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
-  line-height:115%;mso-yfti-cnfc:64'><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
-  mso-fareast-language:FR'>-</span><b><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></b></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>_content</span><span
-  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Oui</span><span
-  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span class=SpellE><span class=GramE><span style='font-size:8.0pt;
-  line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
-  mso-fareast-language:FR'>special</span></span></span><span style='font-size:
-  8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
-  Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Rechercher sur tout le contenu de la ressource</span><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
- </tr>
  <tr style='mso-yfti-irow:0'>
   <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
@@ -3141,41 +3021,6 @@ Critères de recherches applicables à la ressource Organization.
   115%"><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:1">
-  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
-  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">-<o:p></o:p></span></p>
-  </td>
-  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">_content<o:p></o:p></span></p>
-  </td>
-  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Oui<o:p></o:p></span></p>
-  </td>
-  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">special</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
-  </td>
-  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Rechercher sur tout le contenu de la ressource<o:p></o:p></span></p>
-  </td>
- </tr>
  <tr style="mso-yfti-irow:2">
   <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
@@ -3935,66 +3780,6 @@ Critères de recherches applicables à la ressource Practioner.
   </span></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
-  <tr style='mso-yfti-irow:0'>
-  <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
-  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
-  line-height:115%;mso-yfti-cnfc:64'><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
-  mso-fareast-language:FR'>-</span><b><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></b></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>_content</span><span
-  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Oui</span><span
-  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span class=SpellE><span class=GramE><span style='font-size:8.0pt;
-  line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
-  mso-fareast-language:FR'>special</span></span></span><span style='font-size:
-  8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
-  Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Rechercher sur tout le contenu de la ressource</span><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
- </tr>
  <tr style='mso-yfti-irow:0'>
   <td width="17%" valign=top style='width:17.88%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
@@ -4167,66 +3952,6 @@ Critères de recherches applicables à la ressource PractionerRole.
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identification technique de la ressource<span style='mso-spacerun:yes'> 
   </span></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
-  </td>
- </tr>
-  <tr style='mso-yfti-irow:0'>
-  <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
-  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center;
-  line-height:115%;mso-yfti-cnfc:64'><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
-  mso-fareast-language:FR'>-</span><b><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></b></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>_content</span><span
-  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Oui</span><span
-  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span class=SpellE><span class=GramE><span style='font-size:8.0pt;
-  line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";color:black;mso-color-alt:windowtext;
-  mso-fareast-language:FR'>special</span></span></span><span style='font-size:
-  8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
-  Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
-  </td>
-  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
-  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
-  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
-  64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
-  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Rechercher sur tout le contenu de la ressource</span><span style='font-size:8.0pt;line-height:
-  115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
-  mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4824,6 +4549,41 @@ Critères de recherches applicables à la ressource MeasureReport.
   solid #4472C4 .5pt;mso-border-right-alt:solid #4472C4 .5pt;background:#4472C4;
   padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+<tr style="mso-yfti-irow:0">
+  <td width="17%" valign="top" style="width:17.9%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><b><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-
+  </span></b><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">_id</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="8%" valign="top" style="width:8.66%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Oui</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="9%" valign="top" style="width:9.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="46%" valign="top" style="width:46.24%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant
+  technique de la ressource.</span><span style="font-size:8.0pt;line-height:
+  115%"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:0;mso-yfti-lastrow:yes">
