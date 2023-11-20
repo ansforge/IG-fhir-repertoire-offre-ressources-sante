@@ -843,7 +843,7 @@
   <p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
   115%'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>JDV_fr-insee-code issu de la TRE_R13-Commune<o:p></o:p></span></p>
+  mso-fareast-language:FR'>JDV-J124-Commune issu de la TRE_R13-Commune<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:12'>
@@ -2808,7 +2808,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
-  115%;color:black;mso-color-alt:windowtext'>JDV-fr-insee-code, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR </span></span><span
+  115%;color:black;mso-color-alt:windowtext'>JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR </span></span><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
   115%;background:yellow;mso-highlight:yellow'><o:p></o:p></span></span></p>
   </td>

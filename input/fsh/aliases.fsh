@@ -8,6 +8,8 @@ Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G0
 Alias: $TRE-R345-TypeIdentifiantAutre = https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre
 Alias: $TRE-R354-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gouv.fr/NOS/TRE_R354-TypeIdentifiantRessourceOperationnelle/FHIR/TRE_R354-TypeIdentifiantRessourceOperationnelle
 
+Alias: $JDV-J124-Commune = https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune // Solution temporaire en attendant de pouvoir utlisier le JDV IS fr-insee-code (package fr-core)
+
 Alias: $JDV-J16-ActeSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR
 Alias: $JDV-J17-ActiviteOperationnelle-ROR = https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR
 Alias: $JDV-J18-EquipementSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR
