@@ -298,6 +298,17 @@ GET [BASE]/Location?_revinclude=HealthcareService:location #inclus les Healthcar
 
 ```
 
+**Réponse "simplifiée" :**
+```xml
+HTTP 200 OK
+  resourceType: Bundle
+  type: searchset
+  total: 4
+  Location1 (match) UE1(include)
+  Location2 (match) UE2(include)
+  Location3 (match) UE3(include)
+  Location4 (match) UE3(include)
+```
 
 #### Scénario 1bis : Données capacitaires sur une région
 
@@ -329,8 +340,15 @@ GET [BASE]/Location?address-postalcode=35,22,29,56 #critère de recherche sur le
 ```sh
 GET [BASE]/Location?identifier=Location1 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+```
 
-
+**Réponse "simplifiée" :**
+```xml
+HTTP 200 OK
+  resourceType: Bundle
+  type: searchset
+  total: 1
+  Location1 (match) UE1(include)
 ```
 
 #### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
@@ -346,8 +364,16 @@ GET [BASE]/Location?identifier=Location1 #critère de recherche sur l’identifi
 ```sh
 GET [BASE]/Location?identifier=Location1,Location2 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+```
 
-
+**Réponse "simplifiée" :**
+```xml
+HTTP 200 OK
+  resourceType: Bundle
+  type: searchset
+  total: 2
+  Location1 (match) UE1(include)
+  Location2 (match) UE2(include)
 ```
 
 ####  Scénario 4 : Données capacitaires à partir d'une date de mise à jour
@@ -362,6 +388,15 @@ GET [BASE]/Location?identifier=Location1,Location2 #critère de recherche sur l�
 ```sh
 GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour/ge=greater or equal
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+```
+
+**Réponse "simplifiée" :**
+```xml
+HTTP 200 OK
+  resourceType: Bundle
+  type: searchset
+  total: 1
+  Location1 (match) UE1(include)
 ```
 
 #### Scénario 5 : Données capacitaires d'une offre opérationnelle
@@ -380,4 +415,16 @@ sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les iden
 ```sh
 GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3 #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+```
+
+**Réponse "simplifiée" :**
+```xml
+HTTP 200 OK
+  resourceType: Bundle
+  type: searchset
+  total: 4
+  Location1 (match) UE1(include)
+  Location2 (match) UE2(include)
+  Location3 (match) UE3(include)
+  Location4 (match) UE3(include)
 ```
