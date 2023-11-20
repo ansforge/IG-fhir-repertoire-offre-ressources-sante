@@ -6,7 +6,7 @@ Usage: #definition
 * name = "RORConsommateur"
 * title = "ROR-Consommateur"
 * experimental = false
-* date = "2023-01-12T14:27:51+01:00"
+* date = "2023-11-20T11:35:00+01:00"
 * description = "Système qui est autorisé à consommer les données du ROR."
 * kind = #requirements
 * fhirVersion = #4.0.1
