@@ -983,7 +983,7 @@
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>JDV_J188-TypeStatutCapacite-ROR issu de la TRE_R330-StatutCapacite<o:p></o:p></span></p>
+  mso-fareast-language:FR'>JDV_J188-TypeStatutCapacite-ROR issu de la TRE-R330-TypeStatutCapacite<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:14'>

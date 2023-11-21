@@ -79,6 +79,7 @@ Alias: $JDV-J237-RegionOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM
 Alias: $JDV-J238-TypeOffre-ROR = https://mos.esante.gouv.fr/NOS // A METTRE
 Alias: $JDV-J241-ThematiqueAnomalie-ROR = https://mos.esante.gouv.fr/NOS/JDV_J241-ThematiqueAnomalie-ROR/FHIR/JDV-J241-ThematiqueAnomalie-ROR
 Alias: $JDV-J242-ActionAnomalie-ROR = https://mos.esante.gouv.fr/NOS/JDV_J242-ActionAnomalie-ROR/FHIR/JDV-J242-ActionAnomalie-ROR
+Alias: $JDV-J244-StatutMetierAnomalie-ROR = https://mos.esante.gouv.fr/NOS/JDV_J244-StatutMetierAnomalie-ROR/FHIR/JDV-J244-StatutMetierAnomalie-ROR
 Alias: $JDV-J247-Pays-ROR = https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR
 Alias: $JDV-J248-DepartementOM-ROR = https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR
 Alias: $JDV-J249-TerritoireSante-ROR = https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR

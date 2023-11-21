@@ -1,5 +1,5 @@
-ValueSet: CodeRegionTerritorialDivision
-Id: code-region-territorial-division
+ValueSet: CodeRegionTerritorialDivisionRORValueSet
+Id: code-region-territorial-division-ror-valueset
 Title: "Fusion des valuesets pour le code de la division territoriale"
 * include codes from valueset $JDV-J124-Commune
 * include codes from valueset $JDV-J248-DepartementOM-ROR
