@@ -22,7 +22,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * type from $JDV-J198-FonctionLieu-ROR (required)
 * managingOrganization MS
 
-* identifier 0..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
