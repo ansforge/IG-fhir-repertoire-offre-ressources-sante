@@ -446,7 +446,7 @@ GET [BASE]/HealthcareService?organization._lastUpdated:above=ge2022-11-06T15:00&
 
 ```sh
 GET [BASE]/HealthcareService?organization._lastUpdated:above=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour (ge = greater or equal than)
-&organization.type=https ://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX #critère de recherche sur la categorieEG (nomenclature à compléter)
+&organization.type=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE_R66-CategorieEtablissement|XXX #critère de recherche sur la categorieEG (nomenclature à compléter)
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
