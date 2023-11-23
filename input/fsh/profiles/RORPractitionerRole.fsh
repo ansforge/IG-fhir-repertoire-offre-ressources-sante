@@ -1,5 +1,5 @@
 Profile: RORPractitionerRole
-Parent: PractitionerRole
+Parent: fr-practitionerrole
 Id: ror-practitionerrole
 Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre"
 

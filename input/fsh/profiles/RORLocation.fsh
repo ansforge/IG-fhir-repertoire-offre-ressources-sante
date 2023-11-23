@@ -1,5 +1,5 @@
 Profile: RORLocation
-Parent: Location
+Parent: fr-location
 Id: ror-location
 Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre." 
 
