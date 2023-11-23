@@ -153,7 +153,7 @@ POST [BASE]/Location
 			"valueCodeableConcept": {
 				"coding": [
 					{
-						"system": "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM",
+						"system": "https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune",
 						"code": "78646",
 						"display": "Versailles"
 					}
