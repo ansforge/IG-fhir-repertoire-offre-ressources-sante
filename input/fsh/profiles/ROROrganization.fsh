@@ -127,7 +127,7 @@ ou nom de l'OI : Nom de l'organisation interne"
 * address.postalCode ^short = "codePostal (Adresse) : Code Postal ou code postal spécifique CEDEX"
 * address.city ^short = "localité (Adresse) : Localité ou Libellé du bureau distributeur CEDEX"
 * address.extension[inseeCode].valueCoding from $JDV-J124-Commune (required)
-*address.extension contains
+* address.extension contains
     $geolocation named ror-organization-geolocation 0..1
 * address.extension[ror-organization-geolocation] ^short = "extension pour définir les données de géolocalisation de l'EG"
 * address.line.extension contains
@@ -201,4 +201,3 @@ ou nom de l'OI : Nom de l'organisation interne"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
-* extension[ror-organization-geolocation] ^short = ""
