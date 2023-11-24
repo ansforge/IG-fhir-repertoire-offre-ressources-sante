@@ -123,10 +123,13 @@ ou nom de l'OI : Nom de l'organisation interne"
 * contact.telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * contact.telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
-* address ^short = "adresseEJ (EJ) : Adresse géopostale du siège de l'entité juridique"
+* address ^short = "adresseEJ : Adresse géopostale de l'entité juridique ou adresseEG : Adresse(s) géopostale(s) de l'entité géographique."
 * address.postalCode ^short = "codePostal (Adresse) : Code Postal ou code postal spécifique CEDEX"
 * address.city ^short = "localité (Adresse) : Localité ou Libellé du bureau distributeur CEDEX"
 * address.extension[inseeCode].valueCoding from $JDV-J124-Commune (required)
+*address.extension contains
+    $geolocation named ror-organization-geolocation 0..1
+* address.extension[ror-organization-geolocation] ^short = "extension pour définir les données de géolocalisation de l'EG"
 * address.line.extension contains
     iso21090-ADXP-careOf named careOf 0..1 and
     iso21090-ADXP-additionalLocator named additionalLocator 0..1 and
@@ -198,3 +201,4 @@ ou nom de l'OI : Nom de l'organisation interne"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
+* extension[ror-organization-geolocation] ^short = ""
