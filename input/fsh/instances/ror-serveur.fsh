@@ -50,10 +50,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
 
-* rest.resource[=].searchParam[+].name = "_content"
+/* * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
 
 * rest.resource[=].searchParam[+].name = "_has"
 // * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-has"
@@ -75,10 +75,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Lieux proches du lieu de réalisation de l'offre"
 
-* rest.resource[=].searchParam[+].name = "status"
+/* * rest.resource[=].searchParam[+].name = "status"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-status"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Statut de la ressource"
+* rest.resource[=].searchParam[=].documentation = "Statut de la ressource" */
 
 * rest.resource[=].searchParam[+].name = "address-postalcode"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-address-postalcode"
@@ -170,10 +170,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Affectations temporaires"
 
-* rest.resource[=].searchParam[+].name = "temporary-assignement"
+/* * rest.resource[=].searchParam[+].name = "temporary-assignement"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-temporary-assignement)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Affectations temporaires"
+* rest.resource[=].searchParam[=].documentation = "Affectations temporaires" */
 
 // HealthcareService
 * rest.resource[+].type = #HealthcareService
@@ -199,10 +199,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
 
-* rest.resource[=].searchParam[+].name = "_content"
+/* * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
 
 * rest.resource[=].searchParam[+].name = "_has"
 // * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-has"
@@ -214,10 +214,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Fournit une syntaxe pour filtrer de manière plus complexe"
 
-* rest.resource[=].searchParam[+].name = "location"
+/* * rest.resource[=].searchParam[+].name = "location"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
 * rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Référence à la ressource Location"
+* rest.resource[=].searchParam[=].documentation = "Référence à la ressource Location" */
 
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"
@@ -295,10 +295,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
 
-* rest.resource[=].searchParam[+].name = "_content"
+/* * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
 
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-identifier"
@@ -315,67 +315,67 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
 
-* rest.resource[=].searchParam[+].name = "closing-type"
+/* * rest.resource[=].searchParam[+].name = "closing-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-closing-type)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS"
+* rest.resource[=].searchParam[=].documentation = "Type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS" */
 
 * rest.resource[=].searchParam[+].name = "drop-zone"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-drop-zone)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Indique s'il y a une zone poser sur le site concerné"
 
-* rest.resource[=].searchParam[+].name = "period-end"
+/* * rest.resource[=].searchParam[+].name = "period-end"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-period-end)
 * rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Date de fermeture de l'entité géographique"
+* rest.resource[=].searchParam[=].documentation = "Date de fermeture de l'entité géographique" */
 
-* rest.resource[=].searchParam[+].name = "price-amount-currency"
+/* * rest.resource[=].searchParam[+].name = "price-amount-currency"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-amount-currency)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Devise du tarif des prestations et services"
+* rest.resource[=].searchParam[=].documentation = "Devise du tarif des prestations et services" */
 
-* rest.resource[=].searchParam[+].name = "price-amount-value"
+/* * rest.resource[=].searchParam[+].name = "price-amount-value"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-amount-value)
 * rest.resource[=].searchParam[=].type = #number
-* rest.resource[=].searchParam[=].documentation = "Valeur du tarif des prestations et services"
+* rest.resource[=].searchParam[=].documentation = "Valeur du tarif des prestations et services" */
 
-* rest.resource[=].searchParam[+].name = "price-dependency-level"
+/* * rest.resource[=].searchParam[+].name = "price-dependency-level"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-dependency-level)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Niveau de dépendance de la personne âgée accueillie"
+* rest.resource[=].searchParam[=].documentation = "Niveau de dépendance de la personne âgée accueillie" */
 
-* rest.resource[=].searchParam[+].name = "price-residential-type"
+/* * rest.resource[=].searchParam[+].name = "price-residential-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-residential-type)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Caractéristiques de l'hébergement"
+* rest.resource[=].searchParam[=].documentation = "Caractéristiques de l'hébergement" */
 
-* rest.resource[=].searchParam[+].name = "price-type"
+/* * rest.resource[=].searchParam[+].name = "price-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-type)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Type de tarif"
+* rest.resource[=].searchParam[=].documentation = "Type de tarif" */
 
-* rest.resource[=].searchParam[+].name = "price-unit"
+/* * rest.resource[=].searchParam[+].name = "price-unit"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-unit)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Unité de référence pour évaluer le prix des prestations et services"
+* rest.resource[=].searchParam[=].documentation = "Unité de référence pour évaluer le prix des prestations et services" */
 
-* rest.resource[=].searchParam[+].name = "price-validity-start-date"
+/* * rest.resource[=].searchParam[+].name = "price-validity-start-date"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-validity-start-date)
 * rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Dernière date de début de validité du tarif indiqué"
+* rest.resource[=].searchParam[=].documentation = "Dernière date de début de validité du tarif indiqué" */
 
-* rest.resource[=].searchParam[+].name = "price-welcome-type"
+/* * rest.resource[=].searchParam[+].name = "price-welcome-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-welcome-type)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Tarif applicable à un hébergement permanent ou à un hébergement temporaire"
+* rest.resource[=].searchParam[=].documentation = "Tarif applicable à un hébergement permanent ou à un hébergement temporaire" */
 
-* rest.resource[=].searchParam[+].name = "price-special-price"
+/* * rest.resource[=].searchParam[+].name = "price-special-price"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-special-price)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Condition tarifaire"
+* rest.resource[=].searchParam[=].documentation = "Condition tarifaire" */
 
-// Practitioner
+/* // Practitioner
 * rest.resource[+].type = #Practitioner
 * rest.resource[=].profile = Canonical(ror-practitioner)
 * rest.resource[=].interaction[+].code = #search-type
@@ -399,9 +399,9 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
 
-// PractitionerRole
+/* // PractitionerRole
 * rest.resource[+].type = #PractitionerRole
 * rest.resource[=].profile = Canonical(ror-practitionerrole)
 * rest.resource[=].interaction[+].code = #search-type
@@ -425,9 +425,9 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
 
-// Task
+/* // Task
 * rest.resource[+].type = #Task
 * rest.resource[=].profile = Canonical(ror-task)
 * rest.resource[=].interaction[+].code = #search-type
@@ -443,9 +443,9 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
 
-// Measure
+/* // Measure
 * rest.resource[+].type = #Measure
 * rest.resource[=].profile = Canonical(ror-measure)
 * rest.resource[=].interaction[+].code = #search-type
@@ -475,9 +475,9 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "topic"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Measure-topic"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Sujet de la mesure"
+* rest.resource[=].searchParam[=].documentation = "Sujet de la mesure" */
 
-// MeasureReport
+/* // MeasureReport
 * rest.resource[+].type = #MeasureReport
 * rest.resource[=].profile = Canonical(ror-measurereport)
 * rest.resource[=].interaction[+].code = #search-type
@@ -496,7 +496,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "date"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MeasureReport-date"
 * rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Date de mesure"
+* rest.resource[=].searchParam[=].documentation = "Date de mesure" */
 
 // bulk data export from hl7.fhir.uv.bulkdata: 2.0.0
 * rest.operation[+].name = "export"
