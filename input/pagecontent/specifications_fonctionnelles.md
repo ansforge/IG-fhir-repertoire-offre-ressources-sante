@@ -64,7 +64,10 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 
 -   Scénario 1 : Données capacitaires sur le périmètre national
     -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système (Exemple de ROR urgence qui souhaite afficher l\'ensemble des capacités sur une carte).
- 
+
+-   Scénario 1 bis : Données capacitaires sur une région
+    -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région afin de mettre à jour son système. 
+
 -   Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
     -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge -\> il connait un des identifiants (identifiant de point de saisie ou identifiant externe de synchronisation) et demande à lire une donnée capacitaire en particulier.
 
