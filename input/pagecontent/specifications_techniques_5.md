@@ -4,61 +4,6 @@
 Cette partie de la spécification est en cours de construction.
 </p>
 
-### Caractéristiques de l'API
-
-<table width="100%">
-<tbody>
-<tr>
-<td width="18%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Header</strong></p>
-</td>
-<td width="81%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ### Construction de la requête de base
 
 <table>
