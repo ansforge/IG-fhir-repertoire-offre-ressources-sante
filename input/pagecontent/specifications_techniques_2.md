@@ -1,5 +1,46 @@
 <!-- ## Consultation de l'offre (Extraction) -->
 
+### Construction de la requête de base
+
+<table>
+<tbody>
+<tr>
+<td width="149">
+<p><strong>Interaction FHIR</strong></p>
+</td>
+<td width="531">
+<p>Search<a href="#_ftn1" name="_ftnref1">[1]</a></p>
+</td>
+</tr>
+<tr>
+<td width="149">
+<p><strong>M&eacute;thode http associ&eacute;e</strong></p>
+</td>
+<td width="531">
+<p>GET</p>
+</td>
+</tr>
+<tr>
+<td width="149">
+<p><strong>Ressource recherch&eacute;e</strong></p>
+</td>
+<td width="531">
+<p>HealthcareService</p>
+</td>
+</tr>
+<tr>
+<td width="149">
+<p><strong>Construction requ&ecirc;te de base</strong></p>
+</td>
+<td width="531">
+<p><code>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#search">https://www.hl7.org/fhir/R4/http.html#search</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+
 ### Construction de la réponse de base
 
 #### Réponse de base -- Succès
