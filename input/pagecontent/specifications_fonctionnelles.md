@@ -443,9 +443,10 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
 
 -	Scenario 1 : Signalement d’une anomalie
     -	Un responsable qualité souhaite signaler une anomalie sur un élément.
-
+<!-- suppression scenario à la demande du ROR cf issue https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/207 
 -	Scenario 2 : Signalement de plusieurs anomalies
     -	Un consommateur d'un système tiers souhaite signaler plusieurs anomalies.
+-->
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_5.html)**
 
