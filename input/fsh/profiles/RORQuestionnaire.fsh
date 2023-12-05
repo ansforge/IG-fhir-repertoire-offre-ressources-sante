@@ -17,9 +17,9 @@ Description: "Fiche de saisie de l'offre de soins"
 * date ^short = "Date du dernier changement"
 * publisher ^short = "Nom de l'éditeur: Etablissement ou personne"
 * description ^short = "Description de l'objet de la feuille de saisie"
-* approvalDate 1..1
+* approvalDate 0..1
 * approvalDate ^short = "Date de validation de la fiche de saisie"
-* lastReviewDate 1..1
+* lastReviewDate 0..1
 * lastReviewDate ^short = "Date de dernière revue de la fiche"
 * effectivePeriod ^short = "Periode de validité de la fiche"
 * code 0..0 //hors contexte ? http://hl7.org/fhir/R4/valueset-questionnaire-questions.html
