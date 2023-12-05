@@ -368,8 +368,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = " Tarif applicable à un hébergement permanent ou à un hébergement temporaire" */
 
-/* * rest.resource[=].searchParam[+].name = "price-special-price"
-* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-special-price)
+/* * rest.resource[=].searchParam[+].name = "special-price"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-special-price)
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Condition tarifaire" */
 
