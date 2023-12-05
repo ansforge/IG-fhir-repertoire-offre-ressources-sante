@@ -10,8 +10,8 @@ Usage: #example
 * identifier.value = "FDS-092"
 * status = #draft
 * experimental = true
-* text = "CEci est un exemple de fiche de saisie pour l'offre de ville."
-* date = "2023-0912-05T07:17:21+00:00"
+
+* date = "2023-04-12T00:00:00.000Z"
 * publisher = "ANS"
 * description = "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale."
 * jurisdiction = urn:iso:std:iso:3166#FR "FRANCE"
@@ -20,7 +20,7 @@ Usage: #example
 * subjectType[+] = #Practitioner
 * subjectType[+] = #Location
 * subjectType[+] = #PractitionerRole
-* lastReviewDate = "2023-0912-05T07:17:21+00:00"
+* lastReviewDate = "2023-04-12T00:00:00.000Z"
 * purpose = "Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé."
 * item.linkId = "grp"
 * item.text = "Test: Required Radio Buttons"
