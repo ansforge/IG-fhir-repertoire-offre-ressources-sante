@@ -19,7 +19,7 @@ Usage: #example
 * subjectType[+] = #Practitioner
 * subjectType[+] = #Location
 * subjectType[+] = #PractitionerRole
-* lastReviewDate = "2023-04-12T00:00:00.000Z"
+* lastReviewDate = "2023-04-12"
 * purpose = "Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé."
 * item.linkId = "grp"
 * item.text = "Test: Required Radio Buttons"
