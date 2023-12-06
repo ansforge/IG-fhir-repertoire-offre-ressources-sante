@@ -42,7 +42,7 @@ Usage: #example
 * item[=].prefix = "3"
 * item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"
 * item[=].type = #group
-* item.item[+].linkId = "ModalAccueil"
+* item.item[0].linkId = "ModalAccueil"
 * item.item[=].text = "Modalité d’accueil"
 * item.item[=].definition = "HealthcareService.characteristic:receptionModality"
 * item.item[=].prefix = "3.1"
