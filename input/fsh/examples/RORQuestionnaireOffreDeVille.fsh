@@ -7,6 +7,7 @@ Usage: #example
 * version = "0.1"
 * name = "FDS-offre-de-ville"
 * title = "Cabinet de ville de médecine générale"
+* identifier.use = #official
 * identifier.value = "FDS-092"
 * status = #draft
 * experimental = true
@@ -19,30 +20,34 @@ Usage: #example
 * subjectType[+] = #Practitioner
 * subjectType[+] = #Location
 * subjectType[+] = #PractitionerRole
-* lastReviewDate = "2023-04-12"
+* lastReviewDate = "2023-12-05"
 * purpose = "Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé."
-* item.linkId = "grp"
-* item.text = "Test: Required Radio Buttons"
-* item.type = #group
-* item.item[0].linkId = "textq"
-* item.item[=].text = "Should I stay text?"
+* item[0].linkId = "TypeOffreInfoEJ"
+* item[=].prefix = "1"
+* item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"
+* item[=].type = #group
+* item.item[0].linkId = "IdNat_Struct_EJ"
+* item.item[=].prefix = "1.1"
+* item.item[=].text = "IdNat_Struct (Identification nationale des Entités Juridiques définie dans le CI-SIS)"
+* item.item[=].definition = "Organization.identifier:idNatSt"
 * item.item[=].type = #string
 * item.item[=].required = true
-* item.item[+].linkId = "radio"
-* item.item[=].text = "Should I stay?"
+* item.item[+].linkId = "date-creation-EJ"
+* item.item[=].prefix = "1.2"
+* item.item[=].text = "Veuillez indiquer la date de création de l’EJ"
+* item.item[=].definition = "Organization.extension:ror-organization-creation-date"
+* item.item[=].type = #date
+* item.item[=].required = false
+* item[+].linkId = "TypeOffreInfo"
+* item[=].prefix = "3"
+* item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"
+* item[=].type = #group
+* item.item[+].linkId = "ModalAccueil"
+* item.item[=].text = "Modalité d’accueil"
+* item.item[=].definition = "HealthcareService.characteristic:receptionModality"
+* item.item[=].prefix = "3.1"
 * item.item[=].type = #choice
 * item.item[=].required = true
-* item.item[=].answerValueSet = "http://sqlonfhir-r4.azurewebsites.net/fhir/ValueSet/a015b6a1ac024dc19baec940be2c1695"
-* item.item[+].linkId = "radio2"
-* item.item[=].text = "Should I go now?"
-* item.item[=].type = #choice
-* item.item[=].required = true
-* item.item[=].answerOption[0].valueCoding = $example#1 "One"
-* item.item[=].answerOption[+].valueCoding = $example#2 "Two"
-* item.item[+].linkId = "radio3"
-* item.item[=].text = "Will there be trouble?"
-* item.item[=].type = #choice
-* item.item[=].required = true
-* item.item[=].answerOption[0].valueCoding = $example#1 "One"
-* item.item[=].answerOption[+].valueCoding = $example#2 "Two"
-* item.item[=].answerOption[+].valueCoding = $example#3 "Three"
+* item.item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
+* item.item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#04 "Téléconsultation"
+* item.item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#05 "Visite à domicile"
