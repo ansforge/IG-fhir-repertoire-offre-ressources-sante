@@ -277,6 +277,8 @@ Usage: #definition
 // Organization
 * rest.resource[+].type = #Organization
 * rest.resource[=].profile = Canonical(ror-organization)
+* rest.resource[=].interaction[+].code = #search-type
+* rest.resource[=].interaction[+].code = #read
 
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
