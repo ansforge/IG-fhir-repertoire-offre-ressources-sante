@@ -61,3 +61,11 @@ Usage: #example
 * item[=].item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
 * item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#04 "Téléconsultation"
 * item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#05 "Visite à domicile"
+* item[=].item[+].linkId = "CompetenceSpecifique"
+* item[=].item[=].text = "Compétence(s) spécifique(s)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificCompetence.coding"
+* item[=].item[=].prefix = "3.2"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR/"
