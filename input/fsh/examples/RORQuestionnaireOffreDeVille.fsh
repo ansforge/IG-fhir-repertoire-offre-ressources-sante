@@ -26,28 +26,28 @@ Usage: #example
 * item[=].prefix = "1"
 * item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"
 * item[=].type = #group
-* item.item[0].linkId = "IdNat_Struct_EJ"
-* item.item[=].prefix = "1.1"
-* item.item[=].text = "IdNat_Struct (Identification nationale des Entités Juridiques définie dans le CI-SIS)"
-* item.item[=].definition = "Organization.identifier:idNatSt"
-* item.item[=].type = #string
-* item.item[=].required = true
-* item.item[+].linkId = "date-creation-EJ"
-* item.item[=].prefix = "1.2"
-* item.item[=].text = "Veuillez indiquer la date de création de l’EJ"
-* item.item[=].definition = "Organization.extension:ror-organization-creation-date"
-* item.item[=].type = #date
-* item.item[=].required = false
+* item[=].item[0].linkId = "IdNat_Struct_EJ"
+* item[=].item[=].prefix = "1.1"
+* item[=].item[=].text = "IdNat_Struct (Identification nationale des Entités Juridiques définie dans le CI-SIS)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:idNatSt.value"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+* item[=].item[+].linkId = "date-creation-EJ"
+* item[=].item[=].prefix = "1.2"
+* item[=].item[=].text = "Veuillez indiquer la date de création de l’EJ"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-creation-date"
+* item[=].item[=].type = #date
+* item[=].item[=].required = false
 * item[+].linkId = "TypeOffreInfo"
 * item[=].prefix = "3"
 * item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"
 * item[=].type = #group
-* item.item[+].linkId = "ModalAccueil"
-* item.item[=].text = "Modalité d’accueil"
-* item.item[=].definition = "HealthcareService.characteristic:receptionModality"
-* item.item[=].prefix = "3.1"
-* item.item[=].type = #choice
-* item.item[=].required = true
-* item.item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
-* item.item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#04 "Téléconsultation"
-* item.item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#05 "Visite à domicile"
+* item[=].item[+].linkId = "ModalAccueil"
+* item[=].item[=].text = "Modalité d’accueil"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:receptionModality.coding"
+* item[=].item[=].prefix = "3.1"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#04 "Téléconsultation"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#05 "Visite à domicile"
