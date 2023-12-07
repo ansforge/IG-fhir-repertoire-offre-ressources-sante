@@ -6,6 +6,8 @@ A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants 
 -   Recherche d'offre sur la base d'informations tarifaires
 -   Recherche d'offre via une technique « Full text »
 -   Création et Mise à jour du lieu de réalisation de l’offre
+-   Saisie de l'offre
+-   Mise à jour de l'offre
 -   Signalement d'anomalie
 -   Mise à jour d'anomalie
 -   Consultation d'anomalie
@@ -414,6 +416,94 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
     -   Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
+
+### Saisie de l'offre
+
+#### Description du cas d'usage : Saisie de l'offre
+
+Un établissement souhaite créer une offre.
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="image22.png" alt="Saisie de l'offre" title="Saisie de l'offre">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Saisie de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+L'établissement renseigne les informations nécessaires à l'initialisation de l'offre.
+
+Le ROR National répond à l'établissement toutes les informations saisie, l'identifiant technique et les métadonnées.
+
+#### Scénarios
+
+-   Scénario 1 : Création de l'entité juridique d'un établissement
+    -   Afin de décrire son offre, un établissement crée son entité juridique. 
+-   Scénario 2 : Création de l'entité géographique d'un établissement
+    -   Afin de décrire son offre, un établissement crée son entité géographique. 
+-   Scénario 3 : Création de l'organisation interne d'un établissement
+    -   Afin de décrire son offre, un établissement crée son organisation interne.
+-   Scénario 4 : Création d'un professionnel
+    -   Afin de décrire son offre, un établissement ajoute un professionnel.
+-   Scénario 5 : Création d'une situation opérationnelle
+    -   Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
+-   Scénario 6 : Création d'une offre dans une unité fonctionnelle préexistante
+    -   Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
+-   Scénario 7 : Création d'une offre directement rattachée à l'établissement
+    -   Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
+
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_12.html)**
+
+### Mise à jour de l'offre
+
+#### Description du cas d'usage : Mise à jour de l'offre
+
+Un établissement souhaite mettre à jour une offre.
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div class="figure">
+                <img src="image23.png" alt="Mise à jour de l'offre" title="Mise à jour de l'offre">
+            </div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Mise à jour de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+L'établissement renseigne l'identifiant technique de l'offre à mettre à jour et les informations à modifier.
+
+Le ROR National répond à l'établissement, au moins, l'identifiant technique, les métadonnées et l'identifiant fonctionnel de l'offre mise à jour.
+
+#### Scénarios
+
+-   Scénario 1 : Mise à jour de l'entité juridique
+    -   
+-   Scénario 2 : Mise à jour de l'entité géographique
+    -   
+-   Scénario 3 : Mise à jour d'une organisation interne 
+    -   
+-   Scénario 4 : Mise à jour Professionnel
+    -   
+-   Scénario 5 : Mise à jour Situation Opérationnelle
+    -   
+-   Scénario 6 : Ajout d'un acte spécifique au sein d'une offre déjà décrite
+    -   Un établissement ajoute un acte spécifique dans une offre déjà décrite.
+-   Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre déjà décrite
+    -   Un établissement retire une activité opérationnelle au sein d'une offre déjà décrite.
+
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_13.html)**
 
 ### Signalement d’anomalie
 
