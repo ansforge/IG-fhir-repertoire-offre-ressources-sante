@@ -52,10 +52,16 @@ Usage: #example
 * item[=].prefix = "3"
 * item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Informations sur l'offre"
 * item[=].type = #group
-* item[=].item[0].linkId = "ModalAccueil"
+* item[=].item[0].linkId = "IdentifiantOffre"
+* item[=].item[=].text = "Identifiant Offre (Fourni par le ROR)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.identifier.value"
+* item[=].item[=].prefix = "3.1"
+* item[=].item[=].type = #string
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "ModalAccueil"
 * item[=].item[=].text = "Modalité d’accueil"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:receptionModality.coding"
-* item[=].item[=].prefix = "3.1"
+* item[=].item[=].prefix = "3.2"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
