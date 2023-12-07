@@ -50,7 +50,7 @@ Usage: #example
 * item[=].item[=].required = true
 * item[+].linkId = "TypeOffreInfo"
 * item[=].prefix = "3"
-* item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"
+* item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Informations sur l'offre"
 * item[=].type = #group
 * item[=].item[0].linkId = "ModalAccueil"
 * item[=].item[=].text = "Modalité d’accueil"
