@@ -35,7 +35,7 @@ Usage: #example
 * item[=].item[+].linkId = "date-creation-EJ"
 * item[=].item[=].prefix = "1.2"
 * item[=].item[=].text = "Veuillez indiquer la date de création de l’EJ"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-creation-date"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-creation-date"
 * item[=].item[=].type = #date
 * item[=].item[=].required = false
 * item[+].linkId = "TypeOffreInfoEG"
