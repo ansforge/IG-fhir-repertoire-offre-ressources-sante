@@ -38,11 +38,21 @@ Usage: #example
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-creation-date"
 * item[=].item[=].type = #date
 * item[=].item[=].required = false
+* item[0].linkId = "TypeOffreInfoEG"
+* item[=].prefix = "2"
+* item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EG"
+* item[=].type = #group
+* item[=].item[0].linkId = "IdNat_Struct_EG"
+* item[=].item[=].prefix = "2.1"
+* item[=].item[=].text = "IdNat_Struct (Identification nationale des Entités Géographiques définie dans le CI-SIS)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:idNatSt.value"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
 * item[+].linkId = "TypeOffreInfo"
 * item[=].prefix = "3"
 * item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"
 * item[=].type = #group
-* item[=].item[+].linkId = "ModalAccueil"
+* item[=].item[0].linkId = "ModalAccueil"
 * item[=].item[=].text = "Modalité d’accueil"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:receptionModality.coding"
 * item[=].item[=].prefix = "3.1"
