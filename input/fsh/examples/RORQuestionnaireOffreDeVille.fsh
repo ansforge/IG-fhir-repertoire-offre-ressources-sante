@@ -38,7 +38,7 @@ Usage: #example
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-creation-date"
 * item[=].item[=].type = #date
 * item[=].item[=].required = false
-* item[0].linkId = "TypeOffreInfoEG"
+* item[+].linkId = "TypeOffreInfoEG"
 * item[=].prefix = "2"
 * item[=].text = "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EG"
 * item[=].type = #group
