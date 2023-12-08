@@ -447,17 +447,17 @@ Le ROR National répond à l'établissement toutes les informations saisie, l'id
 -   Scénario 1 : Création de l'entité juridique d'un établissement
     -   Afin de décrire son offre, un établissement crée son entité juridique. 
 -   Scénario 2 : Création de l'entité géographique d'un établissement
-    -   Afin de décrire son offre, un établissement crée son entité géographique. 
+    -   Afin de décrire son offre, un établissement crée son entité géographique (pôle). 
 -   Scénario 3 : Création de l'organisation interne d'un établissement
     -   Afin de décrire son offre, un établissement crée son organisation interne.
--   Scénario 4 : Création d'un professionnel
-    -   Afin de décrire son offre, un établissement ajoute un professionnel.
--   Scénario 5 : Création d'une situation opérationnelle
-    -   Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
--   Scénario 6 : Création d'une offre dans une unité fonctionnelle préexistante
+-   Scénario 4 : Création d'une offre dans une unité fonctionnelle préexistante
     -   Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
--   Scénario 7 : Création d'une offre directement rattachée à l'établissement
+-   Scénario 5 : Création d'une offre directement rattachée à l'établissement
     -   Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
+-   Scénario 6 : Création d'un professionnel
+    -   Afin de décrire son offre, un établissement ajoute un professionnel.
+-   Scénario 7 : Création d'une situation opérationnelle
+    -   Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_12.html)**
 
@@ -492,16 +492,16 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
     -   
 -   Scénario 2 : Mise à jour de l'entité géographique
     -   
--   Scénario 3 : Mise à jour d'une organisation interne 
+-   Scénario 3 : Mise à jour de l'organisation interne 
     -   
--   Scénario 4 : Mise à jour Professionnel
+-   Scénario 4 : Mise à jour du professionnel
     -   
--   Scénario 5 : Mise à jour Situation Opérationnelle
+-   Scénario 5 : Mise à jour de la situation opérationnelle
     -   
 -   Scénario 6 : Ajout d'un acte spécifique au sein d'une offre déjà décrite
     -   Un établissement ajoute un acte spécifique dans une offre déjà décrite.
--   Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre déjà décrite
-    -   Un établissement retire une activité opérationnelle au sein d'une offre déjà décrite.
+-   Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre déjà décrite au seins d'une structure.
+    -   Un établissement retire une activité opérationnelle au sein d'une offre déjà décrite au sein d'une structure.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_13.html)**
 
