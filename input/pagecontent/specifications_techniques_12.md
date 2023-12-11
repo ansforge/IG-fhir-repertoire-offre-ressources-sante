@@ -422,6 +422,117 @@ POST [BASE]/Organization
 
 ```json
 POST [BASE]/HealthcareService
+{	
+	"resourceType": "HealthcareService",
+    "identifier": {},
+    "name": "Consultation de Neurochirurgie",
+    "providedBy": {
+        "reference": "Organization/id"
+    },
+    "location": {
+        "reference": "Location/id"
+    },
+    "type": {
+        "coding": {
+            "code": "01", 
+            "system": "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR",
+            "display": "Médecine, Chirurgie, Obstétrique (MCO)"
+        }
+    },
+    "characteristic": {
+        "coding": {
+            "code": "32", 
+            "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
+            "display": "Consultation (CS)"
+        }
+    },
+    "specialty": {
+        "coding": {
+            "code": "83", 
+            "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+            "display": "Traitement neurochirurgical de la douleur"
+        }
+    },
+    "availableTime": {
+        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
+        "availableStartTime": "09:00:00",
+        "availableEndTime": "19:00:00",
+        "extension": {
+            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+            "valueCodeableConcept": {
+                "code": "02",
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR",
+                "display": "Horaire de fonctionnement"
+            }
+        }
+    },
+    "extension": [
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+			"valueDateTime": "2023-12"
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
+			"valueBoolean": false
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
+			"extension": {
+                "url": "ageRange",
+                "valueRange": {
+                    "low": "18",
+                    "high": "90"
+                }
+            }
+		},
+        { 
+            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
+            "extension": [
+                {
+                    "url": "purposeContact",
+                    "valueCodeableConcept": {
+                        "code": "06",
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR",
+                        "display": "Standard"
+                    }
+                },
+                {
+                    "url": "ror-confidentiality-level",
+                    "valueCodeableConcept": {
+                        "code": "1",
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                        "display": "Accès libre"
+                    }
+                },
+                {
+                    "url": "ror-healthcareservice-contact-telecom",
+                    "extension": [
+                        {
+                            "url": "ror-telecom-communication-channel",
+                            "valueCodeableConcept": {
+                                "code": "2",
+                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
+                                "display": "Téléphone fixe"
+                            }
+                        },
+                        {
+                            "url": "telecomAddress",
+                            "valueString": "01.01.01.01.02"
+                        },
+                        {
+                            "url": "ror-telecom-confidentiality-level",
+                            "valueCodeableConcept": {
+                                "code": "1",
+                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                                "display": "Accès libre"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### Scénario 5 : Création d'une offre directement rattachée à l'établissement
@@ -432,6 +543,215 @@ POST [BASE]/HealthcareService
 
 ```json
 POST [BASE]/HealthcareService
+{	
+	"resourceType": "HealthcareService",
+    "identifier": {},
+    "name": "Services à domicile quiétude Gennevilliers",
+    "providedBy": {
+        "reference": "Organization/id"
+    },
+    "location": {
+        "reference": "Location/id"
+    },
+    "category": {
+        "coding": {
+            "code": "30", 
+            "system": "",
+            "display": "Service d’aide et d’accompagnement à domicile (SAAD)"
+        }
+    },
+    "type": {
+        "coding": {
+            "code": "04", 
+            "system": "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR",
+            "display": "Médico-social (MS)"
+        }
+    },
+    "specialty": [
+        {
+            "coding": {
+                "code": "298", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                "display": "Accompagnements pour vivre dans un logement"
+            }
+        },
+        {
+            "coding": {
+                "code": "019", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR",
+                "display": "2.3.2.1 Accompagnements pour vivre dans un logement"
+            }
+        },
+        {
+            "coding": {
+                "code": "299", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                "display": "Accompagnements pour accomplir les activités domestiques"
+            }
+        },
+        {
+            "coding": {
+                "code": "020", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR",
+                "display": "2.3.2.2 Accompagnements pour accomplir les activités domestiques"
+            }
+        }
+    ],
+    "characteristic": [
+        {
+            "coding": {
+                "code": "59", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
+                "display": "Equipe d'intervention mobile"
+            }
+        },
+        {
+            "coding": {
+                "code": "02", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR",
+                "display": "Mandataire"
+            }
+        },
+        {
+            "coding": {
+                "code": "0784", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "display": "Entretien du logement (ménage, petit bricolage)"
+            }
+        },
+        {
+            "coding": {
+                "code": "0785", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "display": "Entretien du linge"
+            }
+        },
+        {
+            "coding": {
+                "code": "0786", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "display": "Accompagnement pour faire des achats (courses)"
+            }
+        },
+        {
+            "coding": {
+                "code": "0787", 
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "display": "Accompagnement ou apprentissage à la préparation du repas"
+            }
+        }
+    ],
+    "availableTime": {
+        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
+        "availableStartTime": "09:00:00",
+        "availableEndTime": "17:00:00",
+        "extension": {
+            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+            "valueCodeableConcept": {
+                "code": "02",
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR",
+                "display": "Horaire de fonctionnement"
+            }
+        }
+    },
+    "extension": [
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+			"valueDateTime": "2023-12"
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
+			"valueBoolean": false
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
+			"extension": [
+                {
+                    "url": "ageRange",
+                    "valueRange": {
+                        "low": "60",
+                        "high": "120"
+                    }
+                },
+                {
+                    "url": "supportedPatientInfo",
+                    "valueCodeableConcept": {
+                        "code": "01", 
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR",
+                        "display": "Personnes âgées en perte d'autonomie (PA) et aidants"
+                    }
+                }
+            ]
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-territorial-division",
+			"extension": [
+                {
+                    "url": "codeTerritorialDivision",
+                    "valueCodeableConcept": {
+                        "code": "92036", 
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune",
+                        "display": "Gennevilliers (92036)"
+                    }
+                },
+                {
+                    "url": "typeTerritorialDivision",
+                    "valueCodeableConcept": {
+                        "code": "3", 
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR",
+                        "display": "Commune"
+                    }
+                }
+            ]
+		},
+        { 
+            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
+            "extension": [
+                {
+                    "url": "purposeContact",
+                    "valueCodeableConcept": {
+                        "code": "06",
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR",
+                        "display": "Standard"
+                    }
+                },
+                {
+                    "url": "ror-confidentiality-level",
+                    "valueCodeableConcept": {
+                        "code": "1",
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                        "display": "Accès libre"
+                    }
+                },
+                {
+                    "url": "ror-healthcareservice-contact-telecom",
+                    "extension": [
+                        {
+                            "url": "ror-telecom-communication-channel",
+                            "valueCodeableConcept": {
+                                "code": "2",
+                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
+                                "display": "Téléphone fixe"
+                            }
+                        },
+                        {
+                            "url": "telecomAddress",
+                            "valueString": "01.01.01.01.01"
+                        },
+                        {
+                            "url": "ror-telecom-confidentiality-level",
+                            "valueCodeableConcept": {
+                                "code": "1",
+                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                                "display": "Accès libre"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### Scénario 6 : Création d'un professionnel
