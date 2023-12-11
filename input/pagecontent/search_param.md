@@ -3272,6 +3272,7 @@ Critères de recherches applicables à la ressource Organization.
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
+ </tr>
  <tr style='mso-yfti-irow:1'>
   <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
   solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
