@@ -126,7 +126,7 @@ Si la mise à jour échoue, le serveur doit répondre:
 **Requête :**
 
 ```json
-PATCH [BASE]/Organization
+PATCH [BASE]/Organization/XXX
 ```
 
 #### Scénario 2 : Mise à jour de l'entité géographique
@@ -136,7 +136,7 @@ PATCH [BASE]/Organization
 **Requête :**
 
 ```json
-PATCH [BASE]/Organization
+PATCH [BASE]/Organization/XXX
 ```
 
 #### Scénario 3 : Mise à jour de l'organisation interne
@@ -146,7 +146,7 @@ PATCH [BASE]/Organization
 **Requête :**
 
 ```json
-PATCH [BASE]/Organization
+PATCH [BASE]/Organization/XXX
 ```
 
 #### Scénario 4 : Mise à jour du professionnel
@@ -156,7 +156,7 @@ PATCH [BASE]/Organization
 **Requête :**
 
 ```json
-PATCH [BASE]/Practitioner
+PATCH [BASE]/Practitioner/XXX
 ```
 
 #### Scénario 5 : Mise à jour de la situation opérationnelle
@@ -166,7 +166,7 @@ PATCH [BASE]/Practitioner
 **Requête :**
 
 ```json
-PATCH [BASE]/PractitionerRole
+PATCH [BASE]/PractitionerRole/XXX
 ```
 
 #### Scénario 6 : Ajout d'un acte spécifique au sein d'une offre déjà décrite
@@ -176,7 +176,44 @@ PATCH [BASE]/PractitionerRole
 **Requête :**
 
 ```json
-PATCH [BASE]/HealthcareService
+PATCH [BASE]/HealthcareService/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "HealthcareService"
+                },
+                {
+                    "name": "name",
+                    "valueString": "characteristic"
+                },
+                {
+                    "name": "value",
+                    "part": [
+                        {
+                            "name": "reference",
+                            "valueCodeableConcept": {
+                                "coding": {
+                                    "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                                    "code": "316",
+                                    "display": "Neurochirurgie éveillée avec mapping cortical"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre déjà décrite
@@ -186,5 +223,5 @@ PATCH [BASE]/HealthcareService
 **Requête :**
 
 ```json
-PATCH [BASE]/HealthcareService
+PATCH [BASE]/HealthcareService/XXX
 ```
