@@ -403,7 +403,7 @@ POST [BASE]/Organization
             "value": "XXX",
             "type": {
                 "coding": {
-                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345_TypeIdentifiantAutre",
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
                     "code": "42",
                     "display": "Identifiant fonctionnel de l'OI connu par l'instance ROR"
                 },
@@ -449,8 +449,7 @@ POST [BASE]/HealthcareService
         }
     ],
     "identifier": {
-        "value": "XXX",
-        "system": ""
+        "value": "XXX"
     },
     "type": {
         "coding": {
@@ -580,7 +579,6 @@ POST [BASE]/HealthcareService
     ],
     "identifier": {
         "value": "XXX",
-        "system": ""
     },
     "category": {
         "coding": {
