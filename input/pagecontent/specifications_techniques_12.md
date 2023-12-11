@@ -142,8 +142,9 @@ POST [BASE]/Organization
             "value": "2921317258",
             "type": {
                 "coding": {
-                    "code": "40", 
                     "system": "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure",
+                    "code": "40", 
+                    "display": "Identifiant national de structure"
                 },
             "system": "urn:oid:1.2.250.1.71.4.2.2"
             }
@@ -153,8 +154,9 @@ POST [BASE]/Organization
             "type": {
                 "coding": [
                     {
-                        "code": "2",
                         "system": "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure",
+                        "code": "2",
+                        "display": "SIREN"
                     }
                 ]
             },
@@ -177,43 +179,45 @@ POST [BASE]/Organization
             }
         }
     ],
-	"address": {
-        "city": "BOIS-COLOMBES",
-        "postalCode": "92270",
-        "line": [
-			"103 rue des Bourguignons",
-			"92270 BOIS-COLOMBES"
-        ],
-        "_line": [
-			{
-            	"extension": [
-					{
-						"id": "Location.address.line.extension:houseNumber",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-						"valueString": "103"
-					}
-				]
-			}, 
-			{
-				"extension": [
-					{
-						"id": "Location.address.line.extension:streetNameType",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
-						"valueString": "rue"
-					}
-				]
-			},
+	"address": [
+        {
+            "city": "BOIS-COLOMBES",
+            "postalCode": "92270",
+            "line": [
+                "103 rue des Bourguignons",
+                "92270 BOIS-COLOMBES"
+            ],
+            "_line": [
+                {
+                    "extension": [
                         {
-				"extension": [
-					{
-						"id": "Location.address.line.extension:streetNameBase",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
-						"valueString": "des Bourguignons"
-					}
-				]
-			}
-		]
-	},
+                            "id": "Location.address.line.extension:houseNumber",
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                            "valueString": "103"
+                        }
+                    ]
+                }, 
+                {
+                    "extension": [
+                        {
+                            "id": "Location.address.line.extension:streetNameType",
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
+                            "valueString": "rue"
+                        }
+                    ]
+                },
+                            {
+                    "extension": [
+                        {
+                            "id": "Location.address.line.extension:streetNameBase",
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
+                            "valueString": "des Bourguignons"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
 	"extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
@@ -233,6 +237,7 @@ POST [BASE]/Organization
 POST [BASE]/Organization
 {	
 	"resourceType": "Organization",
+    "name": "Quiétude BOIS COLOMBES",
     "partOf": {
         "reference": "Organization/idEJ"
     },
@@ -241,8 +246,9 @@ POST [BASE]/Organization
             "value": "392131725800020",
             "type": {
                 "coding": {
-                    "code": "40", 
                     "system": "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure",
+                    "code": "40", 
+                    "display": "Identifiant national de structure"
                 },
             "system": "urn:oid:1.2.250.1.71.4.2.2"
             }
@@ -252,110 +258,113 @@ POST [BASE]/Organization
             "type": {
                 "coding": [
                     {
-                    "code": "3", 
-                    "system": "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure",
+                        "system": "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure",
+                        "code": "3",
+                        "display": "SIRET"
                     }
                 ]
             }, 
             "system": "http://sirene.fr"
         },
     ],
-    "type": {
-        "coding": {
-            "system": "https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR",
-            "code": "460",
-            "display": "Service autonomie aide (SAA)"
-        }
-    },
-	"address": {
-        "city": "BOIS-COLOMBES",
-        "postalCode": "92270",
-        "line": [
-			"45 rue du général Leclerc",
-			"92270 BOIS-COLOMBES"
-        ],
-        "_line": [
-			{
-            	"extension": [
-					{
-						"id": "Location.address.line.extension:houseNumber",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-						"valueString": "45"
-					}
-				]
-			}, 
-			{
-				"extension": [
-					{
-						"id": "Location.address.line.extension:streetNameType",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
-						"valueString": "rue"
-					}
-				]
-			},
-                        {
-				"extension": [
-					{
-						"id": "Location.address.line.extension:streetNameBase",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
-						"valueString": "du général Leclerc"
-					}
-				]
-			}
-		]
-	},
-    "contact": {
-        "purpose": {
+    "type": [
+        {
             "coding": {
-                "system": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR",
-                "code": "06",
-                "display": "standard"
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR",
+                "code": "460",
+                "display": "Service autonomie aide (SAA)"
             }
         }
-        "extension": {
-            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
-            "valueCodeableConcept": {
-                "coding": {
-                    "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
-                    "code": "1",
-                    "display": "Accès libre"
-                }
-            }
-        },
-        "telecom": {
-            "value": " 01.01.01.01.01", 
-            "extension": [
+    ],
+	"address": [
+        {
+            "city": "BOIS-COLOMBES",
+            "postalCode": "92270",
+            "line": [
+                "45 rue du général Leclerc",
+                "92270 BOIS-COLOMBES"
+            ],
+            "_line": [
                 {
-                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"
-                    "valueCodeableConcept": {
-                        "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
-                            "code": "2",
-                            "display": "Téléphone fixe"
+                    "extension": [
+                        {
+                            "id": "Location.address.line.extension:houseNumber",
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                            "valueString": "45"
                         }
-                    }
+                    ]
+                }, 
+                {
+                    "extension": [
+                        {
+                            "id": "Location.address.line.extension:streetNameType",
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
+                            "valueString": "rue"
+                        }
+                    ]
                 },
-                {
-                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
-                    "valueCodeableConcept": {
-                        "coding": {
-                            "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
-                            "code": "1",
-                            "display": "Accès libre"
+                            {
+                    "extension": [
+                        {
+                            "id": "Location.address.line.extension:streetNameBase",
+                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
+                            "valueString": "du général Leclerc"
                         }
-                    }    
+                    ]
                 }
             ]
         }
-    }
+    ],
+    "contact": [
+        {
+            "purpose": {
+                "coding": {
+                    "system": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR",
+                    "code": "06",
+                    "display": "standard"
+                }
+            },
+            "extension": {
+                "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
+                "valueCodeableConcept": {
+                    "coding": {
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                        "code": "1",
+                        "display": "Accès libre"
+                    }
+                }
+            },
+            "telecom": {
+                "value": " 01.01.01.01.01", 
+                "extension": [
+                    {
+                        "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"
+                        "valueCodeableConcept": {
+                            "coding": {
+                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
+                                "code": "2",
+                                "display": "Téléphone fixe"
+                            }
+                        }
+                    },
+                    {
+                        "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
+                        "valueCodeableConcept": {
+                            "coding": {
+                                "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                                "code": "1",
+                                "display": "Accès libre"
+                            }
+                        }    
+                    }
+                ]
+            }
+        }
+    ],
 	"extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
 			"valueDateTime": "2023-12"
-		},
-        {
-			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-additional-name",
-			"valueString": "Quiétude BOIS COLOMBES"
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-financial-help-type",
@@ -388,23 +397,29 @@ POST [BASE]/Organization
     "name": "Pôle Chirurgical B",
     "partOf": {
         "reference": "Organization/id"
-    }
-    "type": {
-        "coding": {
-            "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
-            "code": "POLE"
-        }
     },
-    "identifier": {
-        "value": "XXX",
-        "type": {
+    "identifier": [
+        {
+            "value": "XXX",
+            "type": {
+                "coding": {
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345_TypeIdentifiantAutre",
+                    "code": "42",
+                    "display": "Identifiant fonctionnel de l'OI connu par l'instance ROR"
+                },
+            "system": "https://oi.esante.gouv.fr"
+            }
+        }
+    ],
+    "type": [
+        {
             "coding": {
-                "code": "42", 
-                "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre"
-            },
-        "system": "https://oi.esante.gouv.fr"
+                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
+                "code": "POLE", 
+                "display": "Pole"
+            }
         }
-    },
+    ], 
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
@@ -424,35 +439,44 @@ POST [BASE]/Organization
 POST [BASE]/HealthcareService
 {	
 	"resourceType": "HealthcareService",
-    "identifier": {},
     "name": "Consultation de Neurochirurgie",
     "providedBy": {
         "reference": "Organization/id"
     },
-    "location": {
-        "reference": "Location/id"
+    "location": [
+        {
+            "reference": "Location/id"
+        }
+    ],
+    "identifier": {
+        "value": "XXX",
+        "system": ""
     },
     "type": {
         "coding": {
-            "code": "01", 
             "system": "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR",
+            "code": "01", 
             "display": "Médecine, Chirurgie, Obstétrique (MCO)"
         }
     },
-    "characteristic": {
-        "coding": {
-            "code": "32", 
-            "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
-            "display": "Consultation (CS)"
+    "specialty": [
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                "code": "83", 
+                "display": "Traitement neurochirurgical de la douleur"
+            }
         }
-    },
-    "specialty": {
-        "coding": {
-            "code": "83", 
-            "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
-            "display": "Traitement neurochirurgical de la douleur"
+    ],
+    "characteristic": [
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
+                "code": "32", 
+                "display": "Consultation (CS)"
+            }
         }
-    },
+    ],
     "availableTime": {
         "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
         "availableStartTime": "09:00:00",
@@ -473,7 +497,7 @@ POST [BASE]/HealthcareService
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
-			"valueBoolean": false
+			"valueBoolean": true
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
@@ -497,7 +521,7 @@ POST [BASE]/HealthcareService
                     }
                 },
                 {
-                    "url": "ror-confidentiality-level",
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level",
                     "valueCodeableConcept": {
                         "code": "1",
                         "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
@@ -505,13 +529,13 @@ POST [BASE]/HealthcareService
                     }
                 },
                 {
-                    "url": "ror-healthcareservice-contact-telecom",
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
                     "extension": [
                         {
                             "url": "ror-telecom-communication-channel",
                             "valueCodeableConcept": {
                                 "code": "2",
-                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
+                                "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
                                 "display": "Téléphone fixe"
                             }
                         },
@@ -520,7 +544,7 @@ POST [BASE]/HealthcareService
                             "valueString": "01.01.01.01.02"
                         },
                         {
-                            "url": "ror-telecom-confidentiality-level",
+                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
                             "valueCodeableConcept": {
                                 "code": "1",
                                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
@@ -545,54 +569,59 @@ POST [BASE]/HealthcareService
 POST [BASE]/HealthcareService
 {	
 	"resourceType": "HealthcareService",
-    "identifier": {},
     "name": "Services à domicile quiétude Gennevilliers",
     "providedBy": {
         "reference": "Organization/id"
     },
-    "location": {
-        "reference": "Location/id"
+    "location": [
+        {
+            "reference": "Location/id"
+        }
+    ],
+    "identifier": {
+        "value": "XXX",
+        "system": ""
     },
     "category": {
         "coding": {
+            "system": "https://mos.esante.gouv.fr/NOS",
             "code": "30", 
-            "system": "",
             "display": "Service d’aide et d’accompagnement à domicile (SAAD)"
         }
     },
     "type": {
         "coding": {
-            "code": "04", 
             "system": "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR",
+            "code": "04", 
             "display": "Médico-social (MS)"
         }
     },
     "specialty": [
         {
             "coding": {
-                "code": "298", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                "code": "298", 
                 "display": "Accompagnements pour vivre dans un logement"
             }
         },
         {
             "coding": {
-                "code": "019", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR",
+                "code": "019", 
                 "display": "2.3.2.1 Accompagnements pour vivre dans un logement"
             }
         },
         {
             "coding": {
-                "code": "299", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                "code": "299", 
                 "display": "Accompagnements pour accomplir les activités domestiques"
             }
         },
         {
             "coding": {
-                "code": "020", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR",
+                "code": "020", 
                 "display": "2.3.2.2 Accompagnements pour accomplir les activités domestiques"
             }
         }
@@ -600,43 +629,43 @@ POST [BASE]/HealthcareService
     "characteristic": [
         {
             "coding": {
-                "code": "59", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
+                "code": "59", 
                 "display": "Equipe d'intervention mobile"
             }
         },
         {
             "coding": {
-                "code": "02", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR",
+                "code": "02", 
                 "display": "Mandataire"
             }
         },
         {
             "coding": {
-                "code": "0784", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "code": "0784", 
                 "display": "Entretien du logement (ménage, petit bricolage)"
             }
         },
         {
             "coding": {
-                "code": "0785", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "code": "0785", 
                 "display": "Entretien du linge"
             }
         },
         {
             "coding": {
-                "code": "0786", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "code": "0786", 
                 "display": "Accompagnement pour faire des achats (courses)"
             }
         },
         {
             "coding": {
-                "code": "0787", 
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "code": "0787", 
                 "display": "Accompagnement ou apprentissage à la préparation du repas"
             }
         }
@@ -648,8 +677,8 @@ POST [BASE]/HealthcareService
         "extension": {
             "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
             "valueCodeableConcept": {
-                "code": "02",
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR",
+                "code": "02",
                 "display": "Horaire de fonctionnement"
             }
         }
@@ -661,7 +690,7 @@ POST [BASE]/HealthcareService
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
-			"valueBoolean": false
+			"valueBoolean": true
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
@@ -676,8 +705,8 @@ POST [BASE]/HealthcareService
                 {
                     "url": "supportedPatientInfo",
                     "valueCodeableConcept": {
-                        "code": "01", 
                         "system": "https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR",
+                        "code": "01", 
                         "display": "Personnes âgées en perte d'autonomie (PA) et aidants"
                     }
                 }
@@ -689,16 +718,16 @@ POST [BASE]/HealthcareService
                 {
                     "url": "codeTerritorialDivision",
                     "valueCodeableConcept": {
-                        "code": "92036", 
                         "system": "https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune",
+                        "code": "92036", 
                         "display": "Gennevilliers (92036)"
                     }
                 },
                 {
                     "url": "typeTerritorialDivision",
                     "valueCodeableConcept": {
-                        "code": "3", 
                         "system": "https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR",
+                        "code": "3", 
                         "display": "Commune"
                     }
                 }
@@ -710,16 +739,16 @@ POST [BASE]/HealthcareService
                 {
                     "url": "purposeContact",
                     "valueCodeableConcept": {
-                        "code": "06",
                         "system": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR",
+                        "code": "06",
                         "display": "Standard"
                     }
                 },
                 {
                     "url": "ror-confidentiality-level",
                     "valueCodeableConcept": {
-                        "code": "1",
                         "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                        "code": "1",
                         "display": "Accès libre"
                     }
                 },
@@ -729,8 +758,8 @@ POST [BASE]/HealthcareService
                         {
                             "url": "ror-telecom-communication-channel",
                             "valueCodeableConcept": {
-                                "code": "2",
                                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
+                                "code": "2",
                                 "display": "Téléphone fixe"
                             }
                         },
@@ -741,8 +770,8 @@ POST [BASE]/HealthcareService
                         {
                             "url": "ror-telecom-confidentiality-level",
                             "valueCodeableConcept": {
-                                "code": "1",
                                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                                "code": "1",
                                 "display": "Accès libre"
                             }
                         }
@@ -764,7 +793,10 @@ POST [BASE]/HealthcareService
 POST [BASE]/Practitioner
 {	
 	"resourceType": "Practitioner",
-    "identifier": {},
+    "identifier": {
+        "value": "XXX",
+        "system": "urn:oid:1.2.250.1.71.4.2.1"
+    },
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
@@ -784,7 +816,6 @@ POST [BASE]/Practitioner
 POST [BASE]/PractitionerRole
 {	
 	"resourceType": "PractitionerRole",
-    "identifier": {},
     "practitioner": {
         "reference": "Practitioner/id"
     },
@@ -798,13 +829,15 @@ POST [BASE]/PractitionerRole
             "display": ""
         }
     },
-    "specialty": {
-        "coding": {
-            "system": "https://mos.esante.gouv.fr/NOS/JDV_J209-TypeSavoirFaire-ROR/FHIR/JDV-J209-TypeSavoirFaire-ROR",
-            "code": "",
-            "display": ""
+    "specialty": [
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J209-TypeSavoirFaire-ROR/FHIR/JDV-J209-TypeSavoirFaire-ROR",
+                "code": "",
+                "display": ""
+            }
         }
-    },
+    ],
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
