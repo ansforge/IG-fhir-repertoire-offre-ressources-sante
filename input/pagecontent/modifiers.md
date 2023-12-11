@@ -201,6 +201,33 @@
   </td>
  </tr>
 
+  <tr style='mso-yfti-irow:3'>
+  <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
+  border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:4'><span
+  class=GramE><b><span style='font-size:9.0pt;mso-bidi-font-size:10.0pt;
+  line-height:115%'>:<span class=SpellE>above</span></span></b></span><b><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p></o:p></span></b></p>
+  </td>
+  <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/R4/search.html"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/R4/search.html</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> <o:p></o:p></span></p>
+  </td>
+  <td width="47%" style='width:47.22%;border-top:none;border-left:none;
+  border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Permet de faire des recherches hiérarchiques<o:p></o:p></span></p>
+  </td>
+ </tr>
+
  <tr style='mso-yfti-irow:3'>
   <td width="13%" style='width:13.86%;border-top:none;border-left:solid #8EAADB 1.0pt;
   border-bottom:solid #8EAADB 1.0pt;border-right:none;mso-border-top-alt:solid #8EAADB .5pt;
@@ -214,8 +241,9 @@
   <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
   mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/R4/search.html"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/R4/search.html</span></a><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> <o:p></o:p></span></p>
   </td>
   <td width="47%" style='width:47.22%;border-top:none;border-left:none;
   border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -240,8 +268,8 @@
   <td width="38%" colspan=2 style='width:38.92%;border:none;border-bottom:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-top-alt:solid #8EAADB .5pt;
   mso-border-bottom-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal><a href="http://hl7.org/fhir/search.html#modifieroftype"><span
-  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>http://hl7.org/fhir/search.html#modifieroftype</span></a><span
+  <p class=MsoNormal><a href="https://www.hl7.org/fhir/R4/search.html"><span
+  style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>https://www.hl7.org/fhir/R4/search.html</span></a><span
   style='font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'> <o:p></o:p></span></p>
   </td>
   <td width="47%" style='width:47.22%;border-top:none;border-left:none;
