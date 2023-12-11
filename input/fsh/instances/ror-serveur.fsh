@@ -5,7 +5,7 @@ Usage: #definition
 * status = #active 
 * name = "RORServeur"
 * title = "ROR-Serveur"
-* experimental = false
+* experimental = true
 * date = "2023-11-20T11:35:00+01:00"
 * description = "Système ROR National : Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."
 * kind = #requirements

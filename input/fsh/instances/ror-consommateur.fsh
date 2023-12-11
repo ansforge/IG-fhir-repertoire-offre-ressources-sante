@@ -5,7 +5,7 @@ Usage: #definition
 * status = #active 
 * name = "RORConsommateur"
 * title = "ROR-Consommateur"
-* experimental = false
+* experimental = true
 * date = "2023-11-20T11:35:00+01:00"
 * description = "Système qui est autorisé à consommer les données du ROR."
 * kind = #requirements
