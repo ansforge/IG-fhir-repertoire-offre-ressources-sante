@@ -127,6 +127,32 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ```json
 PATCH [BASE]/Organization/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": ""
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "Organization"
+                },
+                {
+                    "name": "name",
+                    "valueString": ""
+                },
+                {
+                    "name": "value",
+                    "value": ""
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### Scénario 2 : Mise à jour de l'entité géographique
@@ -137,6 +163,32 @@ PATCH [BASE]/Organization/XXX
 
 ```json
 PATCH [BASE]/Organization/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": ""
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "Organization"
+                },
+                {
+                    "name": "name",
+                    "valueString": ""
+                },
+                {
+                    "name": "value",
+                    "value": ""
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### Scénario 3 : Mise à jour de l'organisation interne
@@ -147,6 +199,32 @@ PATCH [BASE]/Organization/XXX
 
 ```json
 PATCH [BASE]/Organization/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": ""
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "Organization"
+                },
+                {
+                    "name": "name",
+                    "valueString": ""
+                },
+                {
+                    "name": "value",
+                    "value": ""
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### Scénario 4 : Mise à jour du professionnel
@@ -157,6 +235,32 @@ PATCH [BASE]/Organization/XXX
 
 ```json
 PATCH [BASE]/Practitioner/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": ""
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "Practitioner"
+                },
+                {
+                    "name": "name",
+                    "valueString": ""
+                },
+                {
+                    "name": "value",
+                    "value": ""
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### Scénario 5 : Mise à jour de la situation opérationnelle
@@ -167,6 +271,32 @@ PATCH [BASE]/Practitioner/XXX
 
 ```json
 PATCH [BASE]/PractitionerRole/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": ""
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "PractitionerRole"
+                },
+                {
+                    "name": "name",
+                    "valueString": ""
+                },
+                {
+                    "name": "value",
+                    "value": ""
+                }
+            ]
+        }
+    ]
+}
 ```
 
 #### Scénario 6 : Ajout d'un acte spécifique au sein d'une offre déjà décrite
@@ -197,18 +327,13 @@ PATCH [BASE]/HealthcareService/XXX
                 },
                 {
                     "name": "value",
-                    "part": [
-                        {
-                            "name": "reference",
-                            "valueCodeableConcept": {
-                                "coding": {
-                                    "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
-                                    "code": "316",
-                                    "display": "Neurochirurgie éveillée avec mapping cortical"
-                                }
-                            }
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "code": "316",
+                            "display": "Neurochirurgie éveillée avec mapping cortical"
                         }
-                    ]
+                    }
                 }
             ]
         }
@@ -224,4 +349,30 @@ PATCH [BASE]/HealthcareService/XXX
 
 ```json
 PATCH [BASE]/HealthcareService/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": ""
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "HealthcareService"
+                },
+                {
+                    "name": "name",
+                    "valueString": ""
+                },
+                {
+                    "name": "value",
+                    "value": ""
+                }
+            ]
+        }
+    ]
+}
 ```
