@@ -58,10 +58,15 @@ Usage: #example
 * item[=].item[=].prefix = "3.1"
 * item[=].item[=].type = #string
 * item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "NomOffre"
+* item[=].item[=].text = "Nom Offre"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.name"
+* item[=].item[=].prefix = "3.2"
+* item[=].item[=].type = #string
 * item[=].item[+].linkId = "ModalAccueil"
 * item[=].item[=].text = "Modalité d’accueil"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:receptionModality.coding"
-* item[=].item[=].prefix = "3.2"
+* item[=].item[=].prefix = "3.3"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
@@ -70,7 +75,7 @@ Usage: #example
 * item[=].item[+].linkId = "CompetenceSpecifique"
 * item[=].item[=].text = "Compétence(s) spécifique(s)"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificCompetence.coding"
-* item[=].item[=].prefix = "3.2"
+* item[=].item[=].prefix = "3.4"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
