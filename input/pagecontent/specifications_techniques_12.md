@@ -384,181 +384,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### Scénario 3 : Création de l'organisation interne d'un établissement
-
-**Description du scénario :** Afin de décrire son offre, un établissement crée son organisation interne (pôle).
-
-**Requête :**
-
-```json
-POST [BASE]/Organization
-{	
-	"resourceType": "Organization",
-    "name": "Pôle Chirurgical B",
-    "partOf": {
-        "reference": "Organization/id"
-    },
-    "identifier": [
-        {
-            "value": "XXX",
-            "type": {
-                "coding": {
-                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
-                    "code": "42",
-                    "display": "Identifiant fonctionnel de l'OI connu par l'instance ROR"
-                },
-            "system": "https://oi.esante.gouv.fr"
-            }
-        }
-    ],
-    "type": [
-        {
-            "coding": {
-                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
-                "code": "POLE", 
-                "display": "Pole"
-            }
-        }
-    ], 
-    "extension": [
-        {
-			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
-		}
-    ]
-}
-```
-
-#### Scénario 4 : Création d'une offre dans une unité fonctionnelle préexistante
-
-**Description du scénario :** Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
-
-**Requête :**
-
-```json
-POST [BASE]/HealthcareService
-{	
-	"resourceType": "HealthcareService",
-    "name": "Consultation de Neurochirurgie",
-    "providedBy": {
-        "reference": "Organization/id"
-    },
-    "location": [
-        {
-            "reference": "Location/id"
-        }
-    ],
-    "identifier": {
-        "value": "XXX"
-    },
-    "type": {
-        "coding": {
-            "system": "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR",
-            "code": "01", 
-            "display": "Médecine, Chirurgie, Obstétrique (MCO)"
-        }
-    },
-    "specialty": [
-        {
-            "coding": {
-                "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
-                "code": "83", 
-                "display": "Traitement neurochirurgical de la douleur"
-            }
-        }
-    ],
-    "characteristic": [
-        {
-            "coding": {
-                "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
-                "code": "32", 
-                "display": "Consultation (CS)"
-            }
-        }
-    ],
-    "availableTime": {
-        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
-        "availableStartTime": "09:00:00",
-        "availableEndTime": "19:00:00",
-        "extension": {
-            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
-            "valueCodeableConcept": {
-                "code": "02",
-                "system": "https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR",
-                "display": "Horaire de fonctionnement"
-            }
-        }
-    },
-    "extension": [
-        {
-			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
-		},
-        {
-			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
-			"valueBoolean": true
-		},
-        {
-			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
-			"extension": {
-                "url": "ageRange",
-                "valueRange": {
-                    "low": "18",
-                    "high": "90"
-                }
-            }
-		},
-        { 
-            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
-            "extension": [
-                {
-                    "url": "purposeContact",
-                    "valueCodeableConcept": {
-                        "code": "06",
-                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR",
-                        "display": "Standard"
-                    }
-                },
-                {
-                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level",
-                    "valueCodeableConcept": {
-                        "code": "1",
-                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
-                        "display": "Accès libre"
-                    }
-                },
-                {
-                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
-                    "extension": [
-                        {
-                            "url": "ror-telecom-communication-channel",
-                            "valueCodeableConcept": {
-                                "code": "2",
-                                "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
-                                "display": "Téléphone fixe"
-                            }
-                        },
-                        {
-                            "url": "telecomAddress",
-                            "valueString": "01.01.01.01.02"
-                        },
-                        {
-                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
-                            "valueCodeableConcept": {
-                                "code": "1",
-                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
-                                "display": "Accès libre"
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
-
-#### Scénario 5 : Création d'une offre directement rattachée à l'établissement
+#### Scénario 3 : Création d'une offre directement rattachée à l'établissement
 
 **Description du scénario :** Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
 
@@ -770,6 +596,180 @@ POST [BASE]/HealthcareService
                             "valueCodeableConcept": {
                                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
                                 "code": "1",
+                                "display": "Accès libre"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
+
+#### Scénario 4 : Création de l'organisation interne d'un établissement
+
+**Description du scénario :** Afin de décrire son offre, un établissement crée son organisation interne (unité fonctionnelle).
+
+**Requête :**
+
+```json
+POST [BASE]/Organization
+{	
+	"resourceType": "Organization",
+    "name": "Viscéral/Vasculaire",
+    "partOf": {
+        "reference": "Organization/id"
+    },
+    "identifier": [
+        {
+            "value": "XXX",
+            "type": {
+                "coding": {
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
+                    "code": "42",
+                    "display": "Identifiant fonctionnel de l'OI connu par l'instance ROR"
+                },
+            "system": "https://oi.esante.gouv.fr"
+            }
+        }
+    ],
+    "type": [
+        {
+            "coding": {
+                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
+                "code": "UF", 
+                "display": "Unité fonctionnelle"
+            }
+        }
+    ], 
+    "extension": [
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+			"valueDateTime": "2023-12"
+		}
+    ]
+}
+```
+
+#### Scénario 5 : Création d'une offre dans une unité fonctionnelle préexistante
+
+**Description du scénario :** Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
+
+**Requête :**
+
+```json
+POST [BASE]/HealthcareService
+{	
+	"resourceType": "HealthcareService",
+    "name": "Consultation de Neurochirurgie",
+    "providedBy": {
+        "reference": "Organization/id"
+    },
+    "location": [
+        {
+            "reference": "Location/id"
+        }
+    ],
+    "identifier": {
+        "value": "XXX"
+    },
+    "type": {
+        "coding": {
+            "system": "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR",
+            "code": "01", 
+            "display": "Médecine, Chirurgie, Obstétrique (MCO)"
+        }
+    },
+    "specialty": [
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                "code": "83", 
+                "display": "Traitement neurochirurgical de la douleur"
+            }
+        }
+    ],
+    "characteristic": [
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
+                "code": "32", 
+                "display": "Consultation (CS)"
+            }
+        }
+    ],
+    "availableTime": {
+        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
+        "availableStartTime": "09:00:00",
+        "availableEndTime": "19:00:00",
+        "extension": {
+            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+            "valueCodeableConcept": {
+                "code": "02",
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR",
+                "display": "Horaire de fonctionnement"
+            }
+        }
+    },
+    "extension": [
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+			"valueDateTime": "2023-12"
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
+			"valueBoolean": true
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
+			"extension": {
+                "url": "ageRange",
+                "valueRange": {
+                    "low": "18",
+                    "high": "90"
+                }
+            }
+		},
+        { 
+            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
+            "extension": [
+                {
+                    "url": "purposeContact",
+                    "valueCodeableConcept": {
+                        "code": "06",
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR",
+                        "display": "Standard"
+                    }
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level",
+                    "valueCodeableConcept": {
+                        "code": "1",
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                        "display": "Accès libre"
+                    }
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
+                    "extension": [
+                        {
+                            "url": "ror-telecom-communication-channel",
+                            "valueCodeableConcept": {
+                                "code": "2",
+                                "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
+                                "display": "Téléphone fixe"
+                            }
+                        },
+                        {
+                            "url": "telecomAddress",
+                            "valueString": "01.01.01.01.02"
+                        },
+                        {
+                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                            "valueCodeableConcept": {
+                                "code": "1",
+                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
                                 "display": "Accès libre"
                             }
                         }

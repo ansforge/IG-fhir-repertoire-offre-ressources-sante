@@ -447,13 +447,13 @@ Le ROR National répond à l'établissement toutes les informations saisie, l'id
 -   Scénario 1 : Création de l'entité juridique d'un établissement
     -   Afin de décrire son offre, un établissement crée son entité juridique. 
 -   Scénario 2 : Création de l'entité géographique d'un établissement
-    -   Afin de décrire son offre, un établissement crée son entité géographique (pôle). 
--   Scénario 3 : Création de l'organisation interne d'un établissement
-    -   Afin de décrire son offre, un établissement crée son organisation interne.
--   Scénario 4 : Création d'une offre dans une unité fonctionnelle préexistante
-    -   Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
--   Scénario 5 : Création d'une offre directement rattachée à l'établissement
+    -   Afin de décrire son offre, un établissement crée son entité géographique. 
+-   Scénario 3 : Création d'une offre directement rattachée à l'établissement
     -   Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
+-   Scénario 4 : Création de l'organisation interne d'un établissement
+    -   Afin de décrire son offre, un établissement crée son organisation interne (unité fonctionnelle).
+-   Scénario 5 : Création d'une offre dans une unité fonctionnelle préexistante
+    -   Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
 -   Scénario 6 : Création d'un professionnel
     -   Afin de décrire son offre, un établissement ajoute un professionnel.
 -   Scénario 7 : Création d'une situation opérationnelle
