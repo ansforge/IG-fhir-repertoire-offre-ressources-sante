@@ -72,6 +72,7 @@ Usage: #example
 * item[=].item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
 * item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#04 "Téléconsultation"
 * item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#05 "Visite à domicile"
+* item[=].item[=].repeats = true
 * item[=].item[+].linkId = "CompetenceSpecifique"
 * item[=].item[=].text = "Compétence(s) spécifique(s)"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificCompetence.coding"
@@ -80,3 +81,13 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR/"
+* item[=].item[+].linkId = "modePriseEnCharge"
+* item[=].item[=].text = "Mode de prise en charge"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:careMode.coding"
+* item[=].item[=].prefix = "3.5"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerOption[0].valueCoding = $JDV-J19-ModePriseEnCharge-ROR#32 "Consultation (CS)"
+* item[=].item[=].answerOption[0].initialSelected = true
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR/"
