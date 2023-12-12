@@ -262,7 +262,7 @@ GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l�
 
 #### Scénario 2 : Consultation de la liste des anomalies
 
-**Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
+**Description du scénario :** Un responsable qualité où le moteur de règle souhaite consulter la liste des anomalies d'un élément dont l’identifiant est XXX.
 
 **Requête :**
 
