@@ -607,9 +607,9 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### Scénario 4 : Création de l'organisation interne d'un établissement
+#### Scénario 4 : Création d'un pôle
 
-**Description du scénario :** Afin de décrire son offre, un établissement crée son organisation interne (unité fonctionnelle).
+**Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
 **Requête :**
 
@@ -652,7 +652,97 @@ POST [BASE]/Organization
 }
 ```
 
-#### Scénario 5 : Création d'une offre dans une unité fonctionnelle préexistante
+#### Scénario 5 : Création d'un pôle
+
+**Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
+
+**Requête :**
+
+```json
+POST [BASE]/Organization
+{	
+	"resourceType": "Organization",
+    "name": "Pôle Chirurgical B",
+    "partOf": {
+        "reference": "Organization/id"
+    },
+    "identifier": [
+        {
+            "value": "XXX",
+            "type": {
+                "coding": {
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
+                    "code": "42",
+                    "display": "Identifiant fonctionnel de l'OI connu par l'instance ROR"
+                },
+            "system": "https://oi.esante.gouv.fr"
+            }
+        }
+    ],
+    "type": [
+        {
+            "coding": {
+                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
+                "code": "POLE", 
+                "display": "Pole"
+            }
+        }
+    ], 
+    "extension": [
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+			"valueDateTime": "2023-12"
+		}
+    ]
+}
+```
+
+#### Scénario 6 : Création d'un service
+
+**Description du scénario :** Afin de décrire son offre, un établissement crée un service.
+
+**Requête :**
+
+```json
+POST [BASE]/Organization
+{	
+	"resourceType": "Organization",
+    "name": "Tête et Cou",
+    "partOf": {
+        "reference": "Organization/id"
+    },
+    "identifier": [
+        {
+            "value": "XXX",
+            "type": {
+                "coding": {
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
+                    "code": "42",
+                    "display": "Identifiant fonctionnel de l'OI connu par l'instance ROR"
+                },
+            "system": "https://oi.esante.gouv.fr"
+            }
+        }
+    ],
+    "type": [
+        {
+            "coding": {
+                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
+                "code": "SERVICE", 
+                "display": "Service"
+            }
+        }
+    ], 
+    "extension": [
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+			"valueDateTime": "2023-12"
+		}
+    ]
+}
+```
+
+#### Scénario 7 : Création d'une offre dans une unité fonctionnelle préexistante
 
 **Description du scénario :** Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
 
@@ -781,7 +871,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### Scénario 6 : Création d'un professionnel
+#### Scénario 8 : Création d'un professionnel
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute un professionnel.
 
@@ -804,7 +894,7 @@ POST [BASE]/Practitioner
 }
 ```
 
-#### Scénario 7 : Création d'une situation opérationnelle
+#### Scénario 9 : Création d'une situation opérationnelle
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 
