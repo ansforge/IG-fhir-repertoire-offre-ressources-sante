@@ -130,7 +130,7 @@ Plus de précision sur la spécification FHIR :
 
 #### Scénario 1 : Un responsable qualité souhaite signaler une anomalie sur un élément.
 
-**Description du scénario :** Un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit disponible = 02 (TRE-R330-StatutCapacite) et disposant d’un nombre de lits supérieur à 0.
+**Description du scénario :** Un responsable qualité souhaite signaler une anomalie sur un élément.
 
 **Requête :**
 
@@ -145,6 +145,7 @@ POST [BASE]/Task
 }
 ```
 
+<!-- suppression scenario à la demande du ROR cf issue https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/207 
 #### Scénario 2 : Signalement de plusieurs anomalies
 
 **Description du scénario :** Le moteur de règle crée automatiquement une ou plusieurs anomalies sur un ou plusieurs éléments.
@@ -181,3 +182,4 @@ POST [BASE]/Bundle
 	]
 }
 ```
+-->

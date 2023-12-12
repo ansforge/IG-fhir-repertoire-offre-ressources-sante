@@ -35,34 +35,48 @@ ou nom de l'OI : Nom de l'organisation interne"
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
-    idNatStruct 0..1 and
-    numFINESS 0..1 and
-    numSIREN 0..1 and
-    numero_cabinet_RPPS 0..1 and
+    idNatSt 0..1 and
+    finess 0..1 and
+    sirene 0..1 and
+    rppsRang 0..1 and
     numSIRET 0..1 and 
     identifierOI 0..1 and
-    numero_cabinet_ADELI 0..1
-* identifier[idNatStruct] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
-* identifier[idNatStruct].type 1..1
-* identifier[idNatStruct].type.coding.code = $TRE-G07-TypeIdentifiantStructure#40 
-* identifier[numFINESS] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
-* identifier[numFINESS].type 1..1
-* identifier[numFINESS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#1 
-* identifier[numSIREN] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
-* identifier[numSIREN].type 1..1
-* identifier[numSIREN].type.coding.code = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[numero_cabinet_RPPS] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
-* identifier[numero_cabinet_RPPS].type 1..1
-* identifier[numero_cabinet_RPPS].type.coding.code = $TRE-G07-TypeIdentifiantStructure#4
+    adeliRang 0..1
+* identifier[idNatSt] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
+* identifier[idNatSt].type 1..1
+* identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 
+* identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
+
+* identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
+* identifier[finess].type 1..1
+* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
+* identifier[finess].system = "http://finess.esante.gouv.fr"
+
+* identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
+* identifier[sirene].type 1..1
+* identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
+* identifier[sirene].system = "http://sirene.fr"
+
+* identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
+* identifier[rppsRang].type 1..1
+* identifier[rppsRang].type = $TRE-G07-TypeIdentifiantStructure#4
+* identifier[rppsRang].system = "http://rppsrang.esante.gouv.fr"
+
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1
-* identifier[numSIRET].type.coding.code = $TRE-G07-TypeIdentifiantStructure#3
+* identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
+* identifier[numSIRET].system = "http://sirene.fr"
+* identifier[numSIRET].system ^short = "https://mos.esante.gouv.fr/6.html#_4d544200-4d26-4cc5-8294-c862458f60d8"
+
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
 * identifier[identifierOI].type 1..1
-* identifier[identifierOI].type.coding.code = $TRE-R345-TypeIdentifiantAutre#42
-* identifier[numero_cabinet_ADELI] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
-* identifier[numero_cabinet_ADELI].type 1..1
-* identifier[numero_cabinet_ADELI].type.coding.code = $TRE-G07-TypeIdentifiantStructure#0
+* identifier[identifierOI].type = $TRE-R345-TypeIdentifiantAutre#42
+* identifier[identifierOI].system = "https://oi.esante.gouv.fr"
+
+* identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
+* identifier[adeliRang].type 1..1
+* identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
+* identifier[adeliRang].system = "http://adelirang.esante.gouv.fr"
 
 // Slice déjà défini dans FrOrganization
 * type 0..* 
@@ -109,14 +123,13 @@ ou nom de l'OI : Nom de l'organisation interne"
 * contact.telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * contact.telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
-* address ^short = "adresseEJ (EJ) : Adresse géopostale du siège de l'entité juridique"
+* address ^short = "adresseEJ : Adresse géopostale de l'entité juridique ou adresseEG : Adresse(s) géopostale(s) de l'entité géographique."
 * address.postalCode ^short = "codePostal (Adresse) : Code Postal ou code postal spécifique CEDEX"
 * address.city ^short = "localité (Adresse) : Localité ou Libellé du bureau distributeur CEDEX"
-* address.extension ^slicing.discriminator.type = #value
-* address.extension ^slicing.discriminator.path = "url"
-* address.extension ^slicing.rules = #open
-* address.extension[inseeCode] ^sliceName = "inseeCode"
-* address.extension[inseeCode].valueCoding from $JDV-J230-CommuneOM-ROR (required)
+* address.extension[inseeCode].valueCoding from $JDV-J124-Commune (required)
+* address.extension contains
+    $geolocation named ror-organization-geolocation 0..1
+* address.extension[ror-organization-geolocation] ^short = "extension pour définir les données de géolocalisation de l'EG"
 * address.line.extension contains
     iso21090-ADXP-careOf named careOf 0..1 and
     iso21090-ADXP-additionalLocator named additionalLocator 0..1 and

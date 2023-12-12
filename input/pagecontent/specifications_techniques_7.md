@@ -277,15 +277,15 @@ GET [BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche su
 
 **Requête :**
 
-`GET [BASE]/Task?focus:[Ressource]:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX`
+`GET [BASE]/Task?focus:[Ressource]:_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX`
 
 **Requête expliquée :**
 Exemple avec HealthcareService :
 
 ```sh
-GET [BASE]/Task?focus:HealthcareService:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
+GET [BASE]/Task?focus:HealthcareService:_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
 Exemple avec Organization : 
-GET [BASE]/Task?focus:Organization:_tag= https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
+GET [BASE]/Task?focus:Organization:_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XXX #critère de recherche sur la région source
 
 ```
 #### Scénario 4 : Consommation de toutes les anomalies
