@@ -258,9 +258,6 @@ grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#has). Pour cela uti
 <td width="226">
 <p>&nbsp;</p>
 </td>
-<td width="53">
-<p>&nbsp;</p>
-</td>
 </tr>
 </tbody>
 </table>

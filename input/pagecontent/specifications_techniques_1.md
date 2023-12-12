@@ -237,7 +237,7 @@ Ces critères de recherche sont applicables à la ressource Location,
 grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:HealthcareService:location:[NOM CRITERE]`
 
-- 	Les critères de recherche, définis au paragraphe 4.6, de StructureDefinition-ror-task applicables à ce cas d’usage sont :
+- 	Les critères de recherche, définis au paragraphe 4.6, de **StructureDefinition-ror-task applicables** à ce cas d’usage sont :
 <table>
 <tbody>
 <tr>
