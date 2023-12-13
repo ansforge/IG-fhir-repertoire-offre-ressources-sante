@@ -130,6 +130,9 @@ ou nom de l'OI : Nom de l'organisation interne"
 * address.extension contains
     $geolocation named ror-organization-geolocation 0..1
 * address.extension[ror-organization-geolocation] ^short = "extension pour définir les données de géolocalisation de l'EG"
+* address.extension[ror-organization-geolocation] contains
+    RORConfidenceGeolocation named ror-confidence-geolocation 0..1
+
 * address.line.extension contains
     iso21090-ADXP-careOf named careOf 0..1 and
     iso21090-ADXP-additionalLocator named additionalLocator 0..1 and
