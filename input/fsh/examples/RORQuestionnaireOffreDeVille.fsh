@@ -63,6 +63,7 @@ Usage: #example
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.name"
 * item[=].item[=].prefix = "3.2"
 * item[=].item[=].type = #string
+* item[=].item[=].required = true
 * item[=].item[+].linkId = "ModalAccueil"
 * item[=].item[=].text = "Modalité d’accueil"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:receptionModality.coding"
