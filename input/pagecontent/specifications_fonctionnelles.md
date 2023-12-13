@@ -5,12 +5,12 @@ A ce jour, le guide d'implémentation de l'API FHIR du ROR a pour vocation à r�
 -   Recherche d'offre sur critères principaux
 -   Recherche d'offre avec données capacitaires
 -   Recherche d'offre sur la base d'informations tarifaires
--   Recherche d'offre via une technique « Full text »  <code><span style="color: #ff0000;">draft</span></code>
+-   Recherche d'offre via une technique « Full text »
 -   Création et Mise à jour du lieu de réalisation de l’offre
 -   Signalement d'anomalie
 -   Mise à jour d'anomalie
 -   Consultation d'anomalie
--   Consultation d'indicateurs de pilotage <code><span style="color: #ff0000;">draft</span></code>
+-   Consultation d'indicateurs de pilotage
   
 <blockquote class="stu-note">
 <p>
@@ -131,11 +131,11 @@ Il y a deux cas possibles :
 
 #### Scénarios
 
--   Scénario 1 : Extraction complète synchrone <code><span style="color: #ff0000;">deprecated</span></code>
+-   Scénario 1 : Extraction complète synchrone
     -   Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
--   Scénario 1 bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
+-   Scénario 1 bis : Extraction complète asynchrone
     -   Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie).
--   Scénario 1 ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
+-   Scénario 1 ter : Extraction complète asynchrone par région
     -   Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre régionale.
   
 -   Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
@@ -302,7 +302,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_8.html)**
 
-### Recherche d'offre via une technique « Full text » <code><span style="color: #ff0000;">draft</span></code>
+### Recherche d'offre via une technique « Full text »
 
 #### Description du cas d'usage
 
@@ -527,7 +527,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_7.html)**
 
-### Consultation d'indicateurs de pilotage <code><span style="color: #ff0000;">draft</span></code>
+### Consultation d'indicateurs de pilotage
 
 #### Description du cas d'usage
 

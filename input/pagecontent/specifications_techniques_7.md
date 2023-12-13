@@ -242,7 +242,7 @@ Dans ce cas d’usage, nous n’utilisons aucun paramètres et modificateurs de 
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Consultation du statut d’une anomalie
+#### Scénario 1 : Consultation du statut d’une anomalie <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un responsable qualité où le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
 
@@ -257,7 +257,7 @@ Dans ce cas d’usage, nous n’utilisons aucun paramètres et modificateurs de 
 GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’anomalie
 ```
 
-#### Scénario 2 : Consultation de la liste des anomalies
+#### Scénario 2 : Consultation de la liste des anomalies <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
 
@@ -271,7 +271,7 @@ GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l�
 GET [BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche sur l’identifiant de l’élément référencé par l’anomalie
 ```
 
-#### Scénario 3 : Consultation de la liste des anomalies sur un périmètre
+#### Scénario 3 : Consultation de la liste des anomalies sur un périmètre <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un responsable qualité souhaite consulter la liste des anomalies sur son périmètre : région = XXX.
 

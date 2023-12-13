@@ -177,7 +177,7 @@ Les paramètres et modificateurs de requêtes décrits dans le [paragraphe dédi
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Intégration d'un indicateur dans un système externe
+#### Scénario 1 : Intégration d'un indicateur dans un système externe <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite intégrer un indicateur de pilotage du ROR national, dont l'identifiant est XXX, dans un système externe.
 
@@ -192,7 +192,7 @@ GET [BASE]/Measure?identifier=XXX #critère de recherche sur l’identifiant de 
 &_revinclude=MeasureReport:measure #inclus les MeasureReport qui référencent les Measure
 ```
 
-#### Scénario 2 : Intégration d'indicateurs dans un système externe
+#### Scénario 2 : Intégration d'indicateurs dans un système externe <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite intégrer des indicateurs de pilotage du ROR national dans un système externe, à partir d'une date de mesure (06/10 2023).
 

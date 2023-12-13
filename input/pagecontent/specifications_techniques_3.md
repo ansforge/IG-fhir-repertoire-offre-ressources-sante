@@ -490,7 +490,7 @@ Exemple :
 }
 ```
 
-#### Scénario 7 : Recherche sur une zone d'intervention
+#### Scénario 7 : Recherche sur une zone d'intervention <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur cherche les offres proposées dans une commune = XXX faisant partie d'une zone d'intervention.
 
@@ -593,7 +593,7 @@ GET [BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
-#### Scénario 12 : Recherche d’offre en anomalie sur une région avec un statut à traiter ou à vérifier
+#### Scénario 12 : Recherche d’offre en anomalie sur une région avec un statut à traiter ou à vérifier <code><span style="color: #ff0000;">draft</span></code>
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 Cette partie de la spécification est en cours de construction.

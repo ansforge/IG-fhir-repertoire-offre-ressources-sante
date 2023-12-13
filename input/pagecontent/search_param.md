@@ -169,7 +169,7 @@
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -398,7 +398,7 @@
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Statut de la ressource<o:p></o:p></span></p>
+  mso-fareast-language:FR'>Statut de la ressource <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:4'>
@@ -516,7 +516,7 @@
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Code de la région de la source de la donnée. <span
+  mso-fareast-language:FR'>Code de la région de la source de la donnée <code><span style="color: #ff0000;">draft</span></code><span
   style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></span></p>
   </td>
  </tr>
@@ -577,7 +577,7 @@
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>L'identifiant
-  externe de synchronisation est lidentifiant défini par le porteur d'offre
+  externe de synchronisation est l'identifiant défini par le porteur d'offre
   pour la zone d'hébergement des lits.</span><span style='font-size:8.0pt;
   line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
@@ -711,7 +711,7 @@
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>La fonction
-  correspond à la destination d'usage du lieu.</span><span style='font-size:
+  correspond à la destination d'usage du lieu <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:
   8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
   Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
@@ -890,7 +890,7 @@
   115%'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'>Code officiel géographique (COG) de la commune dans
-  laquelle le lieu est situé.<o:p></o:p></span></p>
+  laquelle le lieu est situé. <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
   115%'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
@@ -964,7 +964,7 @@
   temporaire permet de réserver tout ou partie des lits d'une zone
   d'hébergement pour des patients selon qu'ils soient -ou non- concernés par
   une pathologie (Covid+, Covid-, ...) ou un évènement (catastrophe naturelle,
-  attentat, ...).</span><span style='font-size:8.0pt;line-height:115%;font-family:
+  attentat, ...). <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:115%;font-family:
   "Arial",sans-serif;mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;text-align:justify;line-height:
@@ -1030,7 +1030,7 @@
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Permet de préciser le statut des lits décrits.<o:p></o:p></span></p>
+  mso-fareast-language:FR'>Permet de préciser le statut des lits décrits. <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
@@ -1100,7 +1100,7 @@
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Quantité de
-  lits ou places de la capacité exprimée.</span><span style='font-size:8.0pt;
+  lits ou places de la capacité exprimée. <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;
   line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -1157,7 +1157,7 @@
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'>Indique si la capacité est exprimée en lits ou en
-  places.<o:p></o:p></span></p>
+  places. <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
@@ -1231,7 +1231,7 @@
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Indique le
   moment où cette capacité sera effective. Il est ainsi possible de décrire la situation
   immédiate, ou de fournir des informations prospectives de capacités, prenant
-  notamment en compte les entrées et sorties déjà identifiés de patients.</span><span
+  notamment en compte les entrées et sorties déjà identifiés de patients.<code><span style="color: #ff0000;">draft</span></code></span><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'><o:p></o:p></span></p>
@@ -1299,7 +1299,7 @@
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'>Genre des patients qui peuvent étre installés dans
-  des lits disponibles. <o:p></o:p></span></p>
+  des lits disponibles.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
@@ -1373,7 +1373,7 @@
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Indique le
   statut de lits fermés, permettant d'identifier le nombre de lits fermés qui
   peuvent être réactivés en cas de besoin et le nombre de ceux qui ne peuvent
-  pas l'être.</span><span style='font-size:8.0pt;line-height:115%;font-family:
+  pas l'être.<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:115%;font-family:
   "Arial",sans-serif;mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
@@ -1438,7 +1438,7 @@
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'>Indique le statut de lits supplémentaires, pour
   identifier le nombre de lits supplémentaires déjà mobilisés et, par typologie
-  de mobilisation possible, le nombre de lits qui ne le sont pas encore.<o:p></o:p></span></p>
+  de mobilisation possible, le nombre de lits qui ne le sont pas encore.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
@@ -1509,7 +1509,7 @@
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Indique le type
-  de crise qui permet de mobiliser le nombre de lits supplémentaires décrits.</span><span
+  de crise qui permet de mobiliser le nombre de lits supplémentaires décrits.<code><span style="color: #ff0000;">draft</span></code></span><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'><o:p></o:p></span></p>
@@ -1573,7 +1573,7 @@
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'>Date à laquelle la capacité d'accueil a été mise à
-  jour dans la source.<o:p></o:p></span></p>
+  jour dans la source.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:22'>
@@ -1643,7 +1643,7 @@
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR;mso-bidi-font-weight:
   bold'>Les équipements spécifiques décrits sont des ressources propres de la
   structure ou mises à disposition dans le cadre d'une convention à la
-  condition qu'elles soient utilisées sur site. </span><span style='font-size:
+  condition qu'elles soient utilisées sur site.<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:
   8.0pt;line-height:115%;font-family:"Arial",sans-serif;mso-fareast-font-family:
   Calibri;mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR;
   mso-bidi-font-weight:bold'><o:p></o:p></span></p>
@@ -1717,7 +1717,7 @@
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'>Indique la caractéristique de l'équipement pour
-  laquelle une valeur limite est précisée.<o:p></o:p></span></p>
+  laquelle une valeur limite est précisée.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
@@ -1787,7 +1787,7 @@
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Correspond à la
-  valeur extrême associée à une caractéristique de l'équipement</span><span
+  valeur extrême associée à une caractéristique de l'équipement.<code><span style="color: #ff0000;">draft</span></code></span><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'><o:p></o:p></span></p>
@@ -1853,7 +1853,7 @@
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'>Le type d'habitation renseigne sur la taille et le
-  nombre de pièces d'un logement.<o:p></o:p></span></p>
+  nombre de pièces d'un logement.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
@@ -1925,7 +1925,7 @@
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Nombre
-  d'habitations du même type.</span><span style='font-size:8.0pt;line-height:
+  d'habitations du même type.<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -2094,7 +2094,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource</span><span style='font-size:8.0pt;line-height:
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -2147,7 +2147,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Identification technique de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Identification technique de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -2200,7 +2200,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
-  115%;color:black;mso-color-alt:windowtext'>Référence à la ressource Location</span></span><span
+  115%;color:black;mso-color-alt:windowtext'>Référence à la ressource Location <code><span style="color: #ff0000;">draft</span></code></span></span><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
   115%'><o:p></o:p></span></span></p>
   </td>
@@ -2249,7 +2249,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
   _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Date de
-  dernière mise à jour.<o:p></o:p></span></span></p>
+  dernière mise à jour.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
  </tr>
@@ -2306,7 +2306,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
   115%;color:black;mso-color-alt:windowtext'>Code région de la source de la
-  donnée.</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  donnée.<code><span style="color: #ff0000;">draft</span></code></span></span><span style='mso-bookmark:_Hlk126766943'><span
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
@@ -2357,7 +2357,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
   _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Identifiant de
-  l’offre<o:p></o:p></span></span></p>
+  l’offre <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
  </tr>
@@ -2416,7 +2416,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   115%;color:black;mso-color-alt:windowtext'>Dénomination sous laquelle l'offre
   est identifiée par le porteur d'offre et résultant de l'application de règles
   de bonne pratique pour être affichable auprès des professionnels comme du
-  grand public.</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  grand public.<code><span style="color: #ff0000;">draft</span></code></span></span><span style='mso-bookmark:_Hlk126766943'><span
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
@@ -2587,7 +2587,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Le secteur de
   psychiatrie (ou sectorisation) correspond à une aire géographique à laquelle
   sont rattachées des structures de relais et de soins qui prennent en charge
-  des patients résidants sur ce secteur. <span style='background:lime;
+  des patients résidants sur ce secteur. <code><span style="color: #ff0000;">draft</span></code><span style='background:lime;
   mso-highlight:lime'><o:p></o:p></span></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
@@ -3091,7 +3091,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
   _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>Age minimum
   (inclus) des personnes leur permettant de bénéficier de la prestation
-  décrite.<o:p></o:p></span></span></p>
+  décrite.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></span></p>
   <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
   _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV_J37-UcumUniteTemps
   issu de la TRE_R247-UcumUniteMesure<o:p></o:p></span></span></p>
@@ -3153,7 +3153,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
   115%;color:black;mso-color-alt:windowtext'>Age maximum (inclus) des personnes
-  leur permettant de bénéficier de la prestation décrite.</span></span><span
+  leur permettant de bénéficier de la prestation décrite. <code><span style="color: #ff0000;">draft</span></code></span></span><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
   115%'><o:p></o:p></span></span></p>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
@@ -3268,7 +3268,7 @@ Critères de recherches applicables à la ressource Organization.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource</span><span style='font-size:8.0pt;line-height:
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -3359,7 +3359,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Date
-  de dernière mise à jour.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  de dernière mise à jour.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:3">
@@ -3393,7 +3393,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Code région de la source de la donnée.<o:p></o:p></span></p>
+  8.0pt;line-height:115%">Code région de la source de la donnée. <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:4">
@@ -3463,7 +3463,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Nom de l'organisation interne.<o:p></o:p></span></p>
+  8.0pt;line-height:115%">Nom de l'organisation interne.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:6">
@@ -3574,7 +3574,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Cet
-  indicateur précise l’existence d’une zone de poser pour hélicoptère</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  indicateur précise l’existence d’une zone de poser pour hélicoptère.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:9">
@@ -3609,7 +3609,7 @@ Critères de recherches applicables à la ressource Organization.
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">Type de fermeture de l'entité géographique, au sens
   des règles de gestion du SI FINESS (par <span class="GramE">exemple:</span>
-  fermeture définitive, fermeture provisoire).<o:p></o:p></span></p>
+  fermeture définitive, fermeture provisoire).<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">JDV-J201-TypeFermeture-ROR issu de la TRE_R286-TypeFermeture<o:p></o:p></span></p>
   </td>
@@ -3648,7 +3648,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Date
   de fermeture de l'entité géographique. La date doit être supérieure à la date
-  d’ouverture.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  d’ouverture.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:11">
@@ -3683,7 +3683,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">Un type de tarif s’applique à une catégorie de
-  services pour lesquels l’entité géographique a fixé un prix.<o:p></o:p></span></p>
+  services pour lesquels l’entité géographique a fixé un prix.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">JDV_J36-TypeTarif-ROR issu de la TRE_R246-TypeTarif<o:p></o:p></span></p>
   </td>
@@ -3721,7 +3721,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Montant
-  du tarif des prestations et services&nbsp;: valeur.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  du tarif des prestations et services&nbsp;: valeur.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:13">
@@ -3756,7 +3756,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">Montant du tarif des prestations et services&nbsp;:
-  devise.<o:p></o:p></span></p>
+  devise. <code><span style="color: #8E44AD;">under consideration</span></code><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left"><a href="https://hl7.org/fhir/R4/valueset-currencies.html"><span style="font-size:8.0pt;line-height:115%">https://hl7.org/fhir/R4/valueset-currencies.html</span></a><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
@@ -3794,7 +3794,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Dernière
-  date de début de validité du tarif indiqué.</span><span style="font-size:
+  date de début de validité du tarif indiqué.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:
   8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
@@ -3828,7 +3828,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Précise les caractéristiques de l'hébergement.<o:p></o:p></span></p>
+  8.0pt;line-height:115%">Précise les caractéristiques de l'hébergement.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">JDV_J32-TypeHabitation-ROR issu de TRE_R242-TypeHabitation
   <o:p></o:p></span></p>
@@ -3869,7 +3869,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">La
   condition tarifaire précise les conditions d’accès à un tarif modulé en
-  fonction des critères relatifs à la personne.</span><span style="font-size:
+  fonction des critères relatifs à la personne. <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:
   8.0pt;line-height:115%"><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">JDV_J39-ConditionTarifaire-<span class="GramE">ROR<span style="mso-spacerun:yes">&nbsp; </span>issu</span>
   TRE_R250-ConditionTarifaire</span><span style="font-size:8.0pt;line-height:
@@ -3908,7 +3908,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">Niveau de dépendance de la personne âgée accueillie
-  qui sera associé à un tarif. Il y a 3 niveaux de tarifs selon le GIR.<o:p></o:p></span></p>
+  qui sera associé à un tarif. Il y a 3 niveaux de tarifs selon le GIR.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">JDV_J27-GroupeTarifaireDependance-ROR issu de la
   TRE_R237-NiveauDependance <o:p></o:p></span></p>
@@ -3949,7 +3949,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Le
   tarif peut s’appliquer à un hébergement permanent ou à un hébergement
-  temporaire.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  temporaire.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">JDV_J30-TemporaliteAccueil-ROR
   issu de la TRE_R240-TemporaliteAccueil</span><span style="font-size:8.0pt;
   line-height:115%"><o:p></o:p></span></p>
@@ -3987,7 +3987,7 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">Unité de référence pour évaluer le prix des
-  prestations et services.<o:p></o:p></span></p>
+  prestations et services.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">JDV_J205-UnitePrix-ROR issu TRE_R228-UnitePrix<o:p></o:p></span></p>
   </td>
@@ -4095,7 +4095,7 @@ Critères de recherches applicables à la ressource Practioner.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource</span><span style='font-size:8.0pt;line-height:
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -4148,7 +4148,7 @@ Critères de recherches applicables à la ressource Practioner.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Identification technique de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Identification technique de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4193,7 +4193,7 @@ Critères de recherches applicables à la ressource Practioner.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
-  de dernière mise à jour.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  de dernière mise à jour. <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
@@ -4231,7 +4231,7 @@ Critères de recherches applicables à la ressource Practioner.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Code région de la source de la donnée.<o:p></o:p></span></p>
+  8.0pt;line-height:115%'>Code région de la source de la donnée.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -4337,7 +4337,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource</span><span style='font-size:8.0pt;line-height:
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -4390,7 +4390,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Identification technique de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Identification technique de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4435,7 +4435,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
-  de dernière mise à jour.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  de dernière mise à jour.<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
@@ -4473,7 +4473,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Code région de la source de la donnée.<o:p></o:p></span></p>
+  8.0pt;line-height:115%'>Code région de la source de la donnée.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -4572,7 +4572,7 @@ Critères de recherches applicables à la ressource Task.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4614,7 +4614,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identifiant
-  technique de la ressource.</span><span style='font-size:8.0pt;line-height:
+  technique de la ressource.<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%'><o:p></o:p></span></p>
   </td>
  </tr>
@@ -4631,7 +4631,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>_<span class=SpellE>lastUpdated</span>*<o:p></o:p></span></p>
+  8.0pt;line-height:115%'>_<span class=SpellE>lastUpdated</span><o:p></o:p></span></p>
   </td>
   <td width="8%" valign=top style='width:8.66%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -4652,7 +4652,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Date de dernière mise à jour.<o:p></o:p></span></p>
+  8.0pt;line-height:115%'>Date de dernière mise à jour.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -4668,7 +4668,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identifier*</span><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identifier</span><span
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="8%" valign=top style='width:8.66%;border-top:none;border-left:
@@ -4694,7 +4694,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Identifiant
-  de l’anomalie.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  de l’anomalie.<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:3'>
@@ -4710,7 +4710,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span class=GramE><span
   style='font-size:8.0pt;line-height:115%'>focus</span></span><span
-  style='font-size:8.0pt;line-height:115%'>*<o:p></o:p></span></p>
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="8%" valign=top style='width:8.66%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -4731,7 +4731,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Référence vers la ressource en anomalie.<o:p></o:p></span></p>
+  8.0pt;line-height:115%'>Référence vers la ressource en anomalie.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:4'>
@@ -4749,7 +4749,7 @@ Critères de recherches applicables à la ressource Task.
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   class=GramE><span style='font-size:8.0pt;line-height:115%;color:black;
   mso-color-alt:windowtext'>business</span></span><span style='font-size:8.0pt;
-  line-height:115%;color:black;mso-color-alt:windowtext'>-<span class=SpellE>status</span>*</span><span
+  line-height:115%;color:black;mso-color-alt:windowtext'>-<span class=SpellE>status</span></span><span
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="8%" valign=top style='width:8.66%;border-top:none;border-left:
@@ -4775,7 +4775,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Différent
-  type de statut métier de l'anomalie.</span><span style='font-size:8.0pt;
+  type de statut métier de l'anomalie.<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;
   line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
@@ -4813,15 +4813,10 @@ Critères de recherches applicables à la ressource Task.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Date création de l'anomalie<o:p></o:p></span></p>
+  8.0pt;line-height:115%'>Date création de l'anomalie <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
-
-
-<p class=MsoNormal align=left style='text-align:left'>*<span style='font-size:
-9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Critères de recherche qui
-seront applicables ultérieurement<o:p></o:p></span></p>
 
 ### StructureDefinition-ror-measure
 
@@ -4910,7 +4905,7 @@ Critères de recherches applicables à la ressource Measure.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource  <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4968,7 +4963,7 @@ Critères de recherches applicables à la ressource Measure.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Permet d’utiliser les paramètres de recherche des ressources faisant référence à une autre ressource (chainage inversé)</span><span style='font-size:8.0pt;line-height:
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Permet d’utiliser les paramètres de recherche des ressources faisant référence à une autre ressource (chainage inversé) <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -5021,7 +5016,7 @@ Critères de recherches applicables à la ressource Measure.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:0">
@@ -5055,7 +5050,7 @@ Critères de recherches applicables à la ressource Measure.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant
-  technique de la ressource.</span><span style="font-size:8.0pt;line-height:
+  technique de la ressource.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:
   115%"><o:p></o:p></span></p>
   </td>
  </tr>
@@ -5070,7 +5065,7 @@ Critères de recherches applicables à la ressource Measure.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">_<span class="SpellE">lastUpdated</span>*<o:p></o:p></span></p>
+  8.0pt;line-height:115%">_<span class="SpellE">lastUpdated</span><o:p></o:p></span></p>
   </td>
   <td width="8%" valign="top" style="width:8.66%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -5090,7 +5085,7 @@ Critères de recherches applicables à la ressource Measure.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Date de dernière mise à jour.<o:p></o:p></span></p>
+  8.0pt;line-height:115%">Date de dernière mise à jour.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:2">
@@ -5125,7 +5120,7 @@ Critères de recherches applicables à la ressource Measure.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant
-  de l’indicateur.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  de l’indicateur.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
@@ -5159,14 +5154,10 @@ Critères de recherches applicables à la ressource Measure.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Sujet de l’indicateur.<o:p></o:p></span></p>
+  8.0pt;line-height:115%">Sujet de l’indicateur.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
 </tbody></table>
-
-<p class=MsoNormal align=left style='text-align:left'>*<span style='font-size:
-9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Critères de recherche qui
-seront applicables ultérieurement<o:p></o:p></span></p>
 
 ### StructureDefinition-ror-measurereport
 
@@ -5262,7 +5253,7 @@ Critères de recherches applicables à la ressource MeasureReport.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource</span><span style='font-size:8.0pt;line-height:
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -5315,7 +5306,7 @@ Critères de recherches applicables à la ressource MeasureReport.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Identification technique de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Identification technique de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:0;mso-yfti-lastrow:yes">
@@ -5350,7 +5341,7 @@ Critères de recherches applicables à la ressource MeasureReport.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Date
-  de mesure.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  de mesure.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
 </tbody></table>

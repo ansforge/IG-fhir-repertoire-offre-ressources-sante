@@ -139,9 +139,11 @@ POST [BASE]/Task
 {	
 	"resourceType": "Task",
 	"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
+	... // ajouter les autres éléments required dans le body
 	"code": [ { "system": "JDV XXX", "value": "12345" } ],
 	"description": "description de notre ano",
 	"focus": "URL HealthcareService"
+	... //ajouter les autres éléments non requis que vous souhaitez transmettre dans le body
 }
 ```
 

@@ -361,7 +361,7 @@ Exemple :
 `[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc`
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 
-#### Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
+#### Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur souhaite rechercher l\'offre de santé proposée\ par un établissement dont l'identifiant est = XX .
 
@@ -383,7 +383,7 @@ GET [BASE]/HealthcareService?organization.identifier:above=XX #critère de reche
 
 ```
 
-#### Scénario 3 : Extraction d'une offre de santé identifiée
+#### Scénario 3 : Extraction d'une offre de santé identifiée <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur souhaite
 rechercher une offre de santé\
@@ -405,7 +405,7 @@ GET [BASE]/HealthcareService?identifier=XXX #critère de recherche de l’identi
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 4 : Extraction complète à partir d'une date de mise à jour de l'offre opérationnelle
+#### Scénario 4 : Extraction complète à partir d'une date de mise à jour de l'offre opérationnelle <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite mettre
 à jour toute l\'offre\
@@ -429,7 +429,7 @@ GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00 #critère de recher
 
 ```
 
-#### Scénario 5 : Extraction complète à partir d’une date de mise à jour de l’entité géographique
+#### Scénario 5 : Extraction complète à partir d’une date de mise à jour de l’entité géographique <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur souhaite mettre à jour toute l\'offre dont l'l’entité géographique est mise à jour depuis une certaine date \>= (06/11/2022).
 
@@ -450,7 +450,7 @@ GET [BASE]/HealthcareService?organization._lastUpdated:above=ge2022-11-06T15:00 
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 6 : Extraction complète à partir d'une date de mise à jour d'un des éléments de l'offre 
+#### Scénario 6 : Extraction complète à partir d'une date de mise à jour d'un des éléments de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite par exemple mettre à jour toute l\'offre mise à jour depuis une certaine date \>=(06/11/2022) ou dont l'organisation est mise à jour depuis une certaine date \>= (06/11/2022)
 
@@ -470,7 +470,7 @@ GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organi
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 7 : Extraction partielle de l’offre sur un périmètre limité  
+#### Scénario 7 : Extraction partielle de l’offre sur un périmètre limité <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur souhaite mettre à jour toute l\'offre de santé d\'une région source = XX. Comme il n\'utilise qu'un sous-ensemble des informations de l\'offre, il souhaite ne recevoir que ces informations.
 
@@ -488,7 +488,7 @@ GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionO
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 ```
-#### Scénario 8 : Extraction d’une offre de santé identifiée et ses éventuelles anomalies associées
+#### Scénario 8 : Extraction d’une offre de santé identifiée et ses éventuelles anomalies associées <code><span style="color: #8E44AD;">under consideration</span></code>
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 Cette partie de la spécification est en cours de construction.

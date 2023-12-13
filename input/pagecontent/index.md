@@ -24,7 +24,7 @@ Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturi
 - <code><span style="color: #ff0000;">draft</span></code> => correspond à ce qui est en cours d'implémentation dans la solution ROR National et donc pas encore validé et disponible. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est en cours d'implémentation dans la solution ROR National.
 - <code><span style="color: #8E44AD;">under consideration</span></code> => correspond à ce qui est en cours de réflexion dans la solution ROR National. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est à l'étude pour les prochaines versions du ROR National.
 
-Les autres éléments ou section qui n'ont pas ces mentions doivent être implémentés dan la version courante de la solution ROR National.
+Les autres éléments ou section qui n'ont pas ces mentions doivent être implémentés et disponibles dans la version courante de la solution du ROR National.
 
 Pour plus d'information sur les versions de l'Implementation Guide n'hésitez pas à consulter <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">l'Historique</a>
 Si vous avez des questions ou des suggestions concernant ce guide vous pouvez nous les adresser <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">ici</a>.

@@ -120,7 +120,7 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Mise à jour du statut de plusieurs anomalies
+#### Scénario 1 : Mise à jour du statut de plusieurs anomalies <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** le responsable de la donnée en anomalie corrige des anomalies, le responsable qualité ou le moteur de règle met à jour les statuts métier des anomalies en précisant les identifiants techniques.
 Anomalie XX au statut statutXX

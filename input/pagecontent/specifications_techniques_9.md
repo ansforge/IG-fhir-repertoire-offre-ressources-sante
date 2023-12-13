@@ -142,7 +142,7 @@ Les paramètres et modificateurs de requêtes décrits [page dédiée](modifiers
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Recherche des offres opérationnelles référençant le texte \"cardio\"
+#### Scénario 1 : Recherche des offres opérationnelles référençant le texte \"cardio\" <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres opérationnelles contenant une chaine de caractères libre («cardio » par exemple).
 
@@ -161,7 +161,7 @@ GET [BASE]/HealthcareService?_content=cardio #filtre sur le contenu textuel des 
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
-#### Scénario 2 : Recherche des offres opérationnelles ou des lieux de réalisation de l'offre référençant le texte \"cardio\"
+#### Scénario 2 : Recherche des offres opérationnelles ou des lieux de réalisation de l'offre référençant le texte \"cardio\" <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres opérationnelles ou les lieux de réalisation de l'offre liés contenant une chaine de caractères libre (« cardio » par exemple).
 

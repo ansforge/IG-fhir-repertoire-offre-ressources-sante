@@ -1,5 +1,9 @@
 <!-- ## 3.10	Recherche d'offre sur la base d'informations tarifaires
 <code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code> -->
+<code><span style="color: #ff0000;font-weight:bold;font-size: x-large;">draft</span></code>
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+Cette partie de la spécification est en cours de construction et n'est pas implémentée. Elle est disponible, à titre d'information sur les travaux en cours au niveau du ROR National.
+</p>
 
 ### Caractéristiques de l'API 
 <table width="100%">
@@ -195,7 +199,7 @@ Les paramètres et modificateurs de requêtes décrits dans le [paragraphe dédi
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Recherche sur critères tarifaires #1
+#### Scénario 1 : Recherche sur critères tarifaires #1 <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres d'établissements dont le type de tarifs = 02 \| forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur à X euros, pour la date de début de validité la plus récente.
 
@@ -215,7 +219,7 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 &_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
 
-#### Scénario 2 : Recherche sur critères tarifaires #2
+#### Scénario 2 : Recherche sur critères tarifaires #2 <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres d'établissements dont le type de tarifs = 02 \| forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur ou égal à X euros, le type habitation = 03 \| F1 (TRE_R242-TypeHabitation), les conditions tarifaires = 03 \| tarif agréé ASH
 (TRE_R250-ConditionTarifaire).
@@ -237,7 +241,7 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 &_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
 
-#### Scénario 3 : Recherche sur critères tarifaires #3
+#### Scénario 3 : Recherche sur critères tarifaires #3 <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres d'établissements dont type de tarifs = 03 \| dépendance (TRE_R246-TypeTarif), le montant est inférieur à X euros, le niveau de dépendance = 02 \| GIR 3-4 (TRE_R237-GroupeTarifaireDependance), la temporalité d\'accueil (au niveau du tarif, pas de l\'offre opérationnelle) = 02 \| permanent (TRE-R240-TemporaliteAccueil).
 
