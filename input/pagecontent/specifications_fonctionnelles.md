@@ -11,6 +11,8 @@ A ce jour, le guide d'implémentation de l'API FHIR du ROR a pour vocation à r�
 -   Mise à jour d'anomalie
 -   Consultation d'anomalie
 -   Consultation d'indicateurs de pilotage
+
+**La maturité d'implémentation (cf [guide de lecture du guide](index.html#informations-sur-ce-guide-dimplémentation)) pour répondre à ces cas d'usage est indiqué dans les spécifications techniques.**
   
 <blockquote class="stu-note">
 <p>
@@ -29,9 +31,9 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
 </p>
 </blockquote>
 
-Pour les cas d'usage couverts par ce guide d'impléementation :
+Pour les cas d'usage couverts par ce guide d'implémentation :
 -   Les préconditions sont :
-    -   Le système consommateur dispose des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé) pour accéder aux             données du ROR National.   
+    -   Le système consommateur dispose des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé) pour accéder aux             données du ROR National.
     -   Le système consommateur peut uniquement effectuer les recherches autorisées par son profil d'accès aux données. Plus d'information [ici](https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf) .
 -   Les postconditions sont :
     -   L'exécution des transactions ne provoquera aucune modification sur les données sources extraites.
