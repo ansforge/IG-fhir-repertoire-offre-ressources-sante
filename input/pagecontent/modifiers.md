@@ -333,3 +333,4 @@
 
 </table>
 
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**

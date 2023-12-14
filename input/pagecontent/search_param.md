@@ -5349,3 +5349,5 @@ Critères de recherches applicables à la ressource MeasureReport.
   </td>
  </tr>
 </tbody></table>
+
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
