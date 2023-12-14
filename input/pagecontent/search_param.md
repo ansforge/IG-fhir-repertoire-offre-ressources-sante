@@ -4792,7 +4792,7 @@ Critères de recherches applicables à la ressource Task.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
   class=GramE><span style='font-size:8.0pt;line-height:115%'>authored-on</span></span></span><span
-  style='font-size:8.0pt;line-height:115%'>*<o:p></o:p></span></p>
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
   <td width="8%" valign=top style='width:8.66%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -5158,10 +5158,6 @@ Critères de recherches applicables à la ressource Measure.
   </td>
  </tr>
 </tbody></table>
-
-<p class=MsoNormal align=left style='text-align:left'>*<span style='font-size:
-9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Critères de recherche qui
-seront applicables ultérieurement<o:p></o:p></span></p>
 
 ### StructureDefinition-ror-measurereport
 
