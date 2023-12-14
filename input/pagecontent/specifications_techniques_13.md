@@ -119,45 +119,9 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Mise à jour de l'entité juridique
+#### Scénario 1 : Modification d'une entité juridique
 
-**Description du scénario :** 
-
-**Requête :**
-
-```json
-PATCH [BASE]/Organization/XXX
-{
-    "resourceType": "Parameters",
-    "parameter": [ 
-        {
-            "name": "operation",
-            "part": [ 
-                {
-                    "name": "type",
-                    "valueString": ""
-                }, 
-                {
-                    "name": "path",
-                    "valueString": "Organization"
-                },
-                {
-                    "name": "name",
-                    "valueString": ""
-                },
-                {
-                    "name": "value",
-                    "value": ""
-                }
-            ]
-        }
-    ]
-}
-```
-
-#### Scénario 2 : Mise à jour de l'entité géographique
-
-**Description du scénario :** 
+**Description du scénario :** Une entité juridique déjà décrite dans le ROR enregistre un changement d'adresse.
 
 **Requête :**
 
@@ -171,19 +135,40 @@ PATCH [BASE]/Organization/XXX
             "part": [ 
                 {
                     "name": "type",
-                    "valueString": ""
+                    "valueString": "replace"
                 }, 
                 {
                     "name": "path",
-                    "valueString": "Organization"
-                },
-                {
-                    "name": "name",
-                    "valueString": ""
+                    "valueString": "Organization.address.where()"
                 },
                 {
                     "name": "value",
-                    "value": ""
+                    "value": {
+                        "city": "BOIS-COLOMBES",
+                        "postalCode": "92270",
+                        "line": ["42 Rue d'Estienne d'Orves, 92270 BOIS-COLOMBES"],
+                        "_line": [
+                            {
+                                "extension": [
+                                    {
+                                        "id": "Location.address.line.extension:houseNumber",
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                        "valueString": "42"
+                                    },
+                                    {
+                                        "id": "Location.address.line.extension:streetNameType",
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
+                                        "valueString": "rue"
+                                    },
+                                    {
+                                        "id": "Location.address.line.extension:streetNameBase",
+                                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
+                                        "valueString": "d'Estienne d'Orves"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
         }
@@ -191,9 +176,9 @@ PATCH [BASE]/Organization/XXX
 }
 ```
 
-#### Scénario 3 : Mise à jour de l'organisation interne
+#### Scénario 2 : Modification d'une entité géographique
 
-**Description du scénario :** 
+**Description du scénario :** Une entité géographique déjà décrite dans le ROR enregistre un changement de n° de téléphone.
 
 **Requête :**
 
@@ -207,7 +192,24 @@ PATCH [BASE]/Organization/XXX
             "part": [ 
                 {
                     "name": "type",
-                    "valueString": ""
+                    "valueString": "replace"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "Organization.telecom.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel' and valueCodeableConcept.coding[0].code='2').value"
+                },
+                {
+                    "name": "value",
+                    "valueString": "01.01.01.02.02"
+                }
+            ]
+        },
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
                 }, 
                 {
                     "name": "path",
@@ -215,11 +217,58 @@ PATCH [BASE]/Organization/XXX
                 },
                 {
                     "name": "name",
-                    "valueString": ""
+                    "valueString": "contact"
                 },
                 {
                     "name": "value",
-                    "value": ""
+                    "value": {
+                        "name": {
+                            "family": "GREDIN",
+                            "given": "Thierry"
+                        },
+                        "purpose": {
+                            "coding": {
+                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J220-FonctionContact-ROR/FHIR/JDV-J220-FonctionContact-ROR",
+                                "code": "01",
+                                "display": "Directeur"
+                            }
+                        },
+                        "extension": {
+                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
+                            "valueCodeableConcept": {
+                                "coding": {
+                                    "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                                    "code": "2",
+                                    "display": "Accès restreint"
+                                }
+                            }
+                        },
+                        "telecom": {
+                            "value": "01.01.01.02.03", 
+                            "extension": [
+                                {
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"
+                                    "valueCodeableConcept": {
+                                        "coding": {
+                                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
+                                            "code": "2",
+                                            "display": "Téléphone fixe"
+                                        }
+                                    }
+                                },
+                                {
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
+                                    "valueCodeableConcept": {
+                                        "coding": {
+                                            "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                                            "code": "2",
+                                            "display": "Accès restreint"
+                                        }
+                                    }    
+                                }
+                            ]
+                        }
+                    }
                 }
             ]
         }
@@ -227,9 +276,45 @@ PATCH [BASE]/Organization/XXX
 }
 ```
 
-#### Scénario 4 : Mise à jour du professionnel
+#### Scénario 3 : Modification d'une organisation interne
 
-**Description du scénario :** 
+**Description du scénario :** Un établissement sanitaire modifie le nom d'un service.
+
+**Requête :**
+
+```json
+PATCH [BASE]/Organization/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "replace"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "Organization"
+                },
+                {
+                    "name": "name",
+                    "valueString": "name"
+                },
+                {
+                    "name": "value",
+                    "valueString": "TECOTRO (Tête, cou et tronc)"
+                }
+            ]
+        }
+    ]
+}
+```
+
+#### Scénario 4 : Modification d'informations sur un professionnel
+
+**Description du scénario :** L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
 
 **Requête :**
 
@@ -243,19 +328,15 @@ PATCH [BASE]/Practitioner/XXX
             "part": [ 
                 {
                     "name": "type",
-                    "valueString": ""
+                    "valueString": "replace"
                 }, 
                 {
                     "name": "path",
-                    "valueString": "Practitioner"
-                },
-                {
-                    "name": "name",
-                    "valueString": ""
+                    "valueString": "Practitioner.telecom.where(value='cyndi.chanmet@lifen.mssante.fr')"
                 },
                 {
                     "name": "value",
-                    "value": ""
+                    "valueString": "cyndi.chanmet@SomedNantes.mssante.fr"
                 }
             ]
         }
@@ -263,9 +344,9 @@ PATCH [BASE]/Practitioner/XXX
 }
 ```
 
-#### Scénario 5 : Mise à jour de la situation opérationnelle
+#### Scénario 5 : Modification d'informations sur une situation d'exercice
 
-**Description du scénario :** 
+**Description du scénario :** L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
 
 **Requête :**
 
@@ -279,7 +360,7 @@ PATCH [BASE]/PractitionerRole/XXX
             "part": [ 
                 {
                     "name": "type",
-                    "valueString": ""
+                    "valueString": "add"
                 }, 
                 {
                     "name": "path",
@@ -287,11 +368,44 @@ PATCH [BASE]/PractitionerRole/XXX
                 },
                 {
                     "name": "name",
-                    "valueString": ""
+                    "valueString": "specialty"
                 },
                 {
                     "name": "value",
-                    "value": ""
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J209-TypeSavoirFaire-ROR/FHIR/JDV-J209-TypeSavoirFaire-ROR",
+                            "code": "S",
+                            "display": "Spécialité ordinale"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "PractitionerRole"
+                },
+                {
+                    "name": "name",
+                    "valueString": "specialty"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J210-SpecialiteOrdinale-ROR/FHIR/JDV-J210-SpecialiteOrdinale-ROR",
+                            "code": "SI02",
+                            "display": "Exercice infirmier en pratique avancée oncologie et hémato-oncologie (SI)"
+                        }
+                    }
                 }
             ]
         }
@@ -351,7 +465,7 @@ PATCH [BASE]/HealthcareService/XXX
 PATCH [BASE]/HealthcareService/XXX
 {
     "resourceType": "Parameters",
-    "parameter": [ 
+    "parameter": [
         {
             "name": "operation",
             "part": [ 
@@ -365,11 +479,210 @@ PATCH [BASE]/HealthcareService/XXX
                 },
                 {
                     "name": "name",
-                    "valueString": ""
+                    "valueString": "specialty"
                 },
                 {
                     "name": "value",
-                    "value": ""
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                            "code": "040",
+                            "display": "Diététique et Nutrition"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+
+#### Scénario 8 : Précision sur l'offre d'un cabinet de ville
+
+**Description du scénario :** Un professionnel de santé précise son offre et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
+
+**Requête :**
+
+```json
+PATCH [BASE]/HealthcareService/XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [ 
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "HealthcareService"
+                },
+                {
+                    "name": "name",
+                    "valueString": "specialty"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                            "code": "040",
+                            "display": "Diététique et Nutrition"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "HealthcareService"
+                },
+                {
+                    "name": "name",
+                    "valueString": "specialty"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                            "code": "483",
+                            "display": "Médecine générale à orientation Diabétologie"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "HealthcareService"
+                },
+                {
+                    "name": "name",
+                    "valueString": "characteristic"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "code": "0628",
+                            "display": "Education thérapeutique du patient non labellisée ou psychoéducation"
+                        },
+                        "extension": {
+                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type",
+                            "valueCode": "specificAct"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "HealthcareService"
+                },
+                {
+                    "name": "name",
+                    "valueString": "characteristic"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "code": "1181",
+                            "display": "Diagnostic par dermatoscope"
+                        },
+                        "extension": {
+                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type",
+                            "valueCode": "specificAct"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "HealthcareService"
+                },
+                {
+                    "name": "name",
+                    "valueString": "characteristic"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "code": "1270",
+                            "display": "Tamponnement nasal antérieur"
+                        },
+                        "extension": {
+                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type",
+                            "valueCode": "specificAct"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "operation",
+            "part": [ 
+                {
+                    "name": "type",
+                    "valueString": "add"
+                }, 
+                {
+                    "name": "path",
+                    "valueString": "HealthcareService"
+                },
+                {
+                    "name": "name",
+                    "valueString": "characteristic"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": {
+                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "code": "1282",
+                            "display": "Programme d'ETP labellisée - Diabète"
+                        },
+                    "extension": {
+                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type",
+                            "valueCode": "outsideOfficeAct"
+                        }
+                    }
                 }
             ]
         }

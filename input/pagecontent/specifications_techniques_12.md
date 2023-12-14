@@ -183,10 +183,7 @@ POST [BASE]/Organization
         {
             "city": "BOIS-COLOMBES",
             "postalCode": "92270",
-            "line": [
-                "103 rue des Bourguignons",
-                "92270 BOIS-COLOMBES"
-            ],
+            "line": ["103 rue des Bourguignons, 92270 BOIS-COLOMBES"],
             "_line": [
                 {
                     "extension": [
@@ -194,20 +191,12 @@ POST [BASE]/Organization
                             "id": "Location.address.line.extension:houseNumber",
                             "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
                             "valueString": "103"
-                        }
-                    ]
-                }, 
-                {
-                    "extension": [
+                        },
                         {
                             "id": "Location.address.line.extension:streetNameType",
                             "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
                             "valueString": "rue"
-                        }
-                    ]
-                },
-                            {
-                    "extension": [
+                        },
                         {
                             "id": "Location.address.line.extension:streetNameBase",
                             "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
@@ -280,10 +269,7 @@ POST [BASE]/Organization
         {
             "city": "BOIS-COLOMBES",
             "postalCode": "92270",
-            "line": [
-                "45 rue du général Leclerc",
-                "92270 BOIS-COLOMBES"
-            ],
+            "line": ["45 rue du général Leclerc, 92270 BOIS-COLOMBES"],
             "_line": [
                 {
                     "extension": [
@@ -291,20 +277,12 @@ POST [BASE]/Organization
                             "id": "Location.address.line.extension:houseNumber",
                             "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
                             "valueString": "45"
-                        }
-                    ]
-                }, 
-                {
-                    "extension": [
+                        },
                         {
                             "id": "Location.address.line.extension:streetNameType",
                             "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
                             "valueString": "rue"
-                        }
-                    ]
-                },
-                            {
-                    "extension": [
+                        },
                         {
                             "id": "Location.address.line.extension:streetNameBase",
                             "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
@@ -394,7 +372,7 @@ POST [BASE]/Organization
 POST [BASE]/HealthcareService
 {	
 	"resourceType": "HealthcareService",
-    "name": "Services à domicile quiétude Gennevilliers",
+    "name": "Services à domicile quiétude Bois Colombes",
     "providedBy": {
         "reference": "Organization/id"
     },
@@ -544,7 +522,7 @@ POST [BASE]/HealthcareService
                     "valueCodeableConcept": {
                         "system": "https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune",
                         "code": "92036", 
-                        "display": "Gennevilliers (92036)"
+                        "display": "Bois-Colombes (92009)"
                     }
                 },
                 {
@@ -617,51 +595,6 @@ POST [BASE]/HealthcareService
 POST [BASE]/Organization
 {	
 	"resourceType": "Organization",
-    "name": "Viscéral/Vasculaire",
-    "partOf": {
-        "reference": "Organization/id"
-    },
-    "identifier": [
-        {
-            "value": "XXX",
-            "type": {
-                "coding": {
-                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
-                    "code": "42",
-                    "display": "Identifiant fonctionnel de l'OI connu par l'instance ROR"
-                },
-            "system": "https://oi.esante.gouv.fr"
-            }
-        }
-    ],
-    "type": [
-        {
-            "coding": {
-                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
-                "code": "UF", 
-                "display": "Unité fonctionnelle"
-            }
-        }
-    ], 
-    "extension": [
-        {
-			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
-		}
-    ]
-}
-```
-
-#### Scénario 5 : Création d'un pôle
-
-**Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
-
-**Requête :**
-
-```json
-POST [BASE]/Organization
-{	
-	"resourceType": "Organization",
     "name": "Pôle Chirurgical B",
     "partOf": {
         "reference": "Organization/id"
@@ -697,7 +630,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### Scénario 6 : Création d'un service
+#### Scénario 5 : Création d'un service
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un service.
 
@@ -742,6 +675,51 @@ POST [BASE]/Organization
 }
 ```
 
+#### Scénario 6 : Création d'une unité fonctionnelle
+
+**Description du scénario :** Afin de décrire son offre, un établissement crée une unité fonctionnelle.
+
+**Requête :**
+
+```json
+POST [BASE]/Organization
+{	
+	"resourceType": "Organization",
+    "name": "Neurochirurgie",
+    "partOf": {
+        "reference": "Organization/id"
+    },
+    "identifier": [
+        {
+            "value": "XXX",
+            "type": {
+                "coding": {
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
+                    "code": "42",
+                    "display": "Identifiant fonctionnel de l'OI connu par l'instance ROR"
+                },
+            "system": "https://oi.esante.gouv.fr"
+            }
+        }
+    ],
+    "type": [
+        {
+            "coding": {
+                "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
+                "code": "UF", 
+                "display": "Unité fonctionnelle"
+            }
+        }
+    ], 
+    "extension": [
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+			"valueDateTime": "2023-12"
+		}
+    ]
+}
+```
+
 #### Scénario 7 : Création d'une offre dans une unité fonctionnelle préexistante
 
 **Description du scénario :** Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
@@ -752,7 +730,7 @@ POST [BASE]/Organization
 POST [BASE]/HealthcareService
 {	
 	"resourceType": "HealthcareService",
-    "name": "Consultation de Neurochirurgie",
+    "name": "Hospitalisation complète de Neurochirurgie",
     "providedBy": {
         "reference": "Organization/id"
     },
@@ -775,8 +753,15 @@ POST [BASE]/HealthcareService
         {
             "coding": {
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
-                "code": "83", 
+                "code": "183", 
                 "display": "Traitement neurochirurgical de la douleur"
+            }
+        },
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                "code": "440", 
+                "display": "Chirurgie intracrânienne"
             }
         }
     ],
@@ -784,15 +769,21 @@ POST [BASE]/HealthcareService
         {
             "coding": {
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
-                "code": "32", 
-                "display": "Consultation (CS)"
+                "code": "28", 
+                "display": "Hospitalisation complète (HC)"
+            }
+        },
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                "code": "0320", 
+                "display": "Neuromodulation sacrée"
             }
         }
     ],
     "availableTime": {
-        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
-        "availableStartTime": "09:00:00",
-        "availableEndTime": "19:00:00",
+        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+        "allDay": true,
         "extension": {
             "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
             "valueCodeableConcept": {
@@ -881,9 +872,39 @@ POST [BASE]/HealthcareService
 POST [BASE]/Practitioner
 {	
 	"resourceType": "Practitioner",
+    "name": {
+        "family": "CHANMET",
+        "given": "Cyndi"
+    },
     "identifier": {
-        "value": "XXX",
+        "value": "11111573474",
         "system": "urn:oid:1.2.250.1.71.4.2.1"
+    },
+    "gender": "female",
+    "telecom": {
+        "value": "cyndi.chanmet@lifen.mssante.fr",
+        "extension": [
+            {
+                "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"
+                "valueCodeableConcept": {
+                    "coding": {
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
+                        "code": "3",
+                        "display": "Courrier électronique"
+                    }
+                }
+            },
+            {
+                "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
+                "valueCodeableConcept": {
+                    "coding": {
+                        "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                        "code": "XXX",
+                        "display": "Display XXX"
+                    }
+                }    
+            }
+        ]
     },
     "extension": [
         {
@@ -904,28 +925,27 @@ POST [BASE]/Practitioner
 POST [BASE]/PractitionerRole
 {	
 	"resourceType": "PractitionerRole",
+    "name": {
+        "family": "Tenor",
+        "given": "Mylène"
+    },
     "practitioner": {
         "reference": "Practitioner/id"
     },
     "healthcareService": {
         "reference": "HealthcareService/id"
     },
+    "identifier": {
+        "value": "11102379616",
+    },
+    "gender": "female",
     "code": {
         "coding": {
             "system": "https://mos.esante.gouv.fr/NOS/JDV_J229-ProfessionSante-ROR/FHIR/JDV-J229-ProfessionSante-ROR",
-            "code": "",
-            "display": ""
+            "code": "60",
+            "display": "Infirmier"
         }
     },
-    "specialty": [
-        {
-            "coding": {
-                "system": "https://mos.esante.gouv.fr/NOS/JDV_J209-TypeSavoirFaire-ROR/FHIR/JDV-J209-TypeSavoirFaire-ROR",
-                "code": "",
-                "display": ""
-            }
-        }
-    ],
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
@@ -936,8 +956,8 @@ POST [BASE]/PractitionerRole
 			"valueCodeableConcept": {
                 "coding": {
                     "system": "https://mos.esante.gouv.fr/NOS/JDV_J217-ModeExercice-ROR/FHIR/JDV-J217-ModeExercice-ROR",
-                    "code": "",
-                    "display": ""
+                    "code": "XXX",
+                    "display": "display XXX"
                 }
             }
 		}

@@ -452,7 +452,7 @@ Le ROR National répond à l'établissement toutes les informations saisie, l'id
     -   Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
 -   Scénario 4 : Création d'un pôle
     -   Afin de décrire son offre, un établissement crée un pôle.
--   Scénario 5 : Création d'une service
+-   Scénario 5 : Création d'un service
     -   Afin de décrire son offre, un établissement crée un service.
 -   Scénario 6 : Création d'une unité fonctionnelle
     -   Afin de décrire son offre, un établissement crée une unité fonctionnelle.
@@ -492,20 +492,22 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 #### Scénarios
 
--   Scénario 1 : Mise à jour de l'entité juridique
-    -   
--   Scénario 2 : Mise à jour de l'entité géographique
-    -   
--   Scénario 3 : Mise à jour de l'organisation interne 
-    -   
--   Scénario 4 : Mise à jour du professionnel
-    -   
--   Scénario 5 : Mise à jour de la situation opérationnelle
-    -   
+-   Scénario 1 : Modification d'une entité juridique
+    -   Une entité juridique déjà décrite dans le ROR enregistre un changement d'adresse.
+-   Scénario 2 : Modification d'une entité géographique
+    -   Une entité géographique déjà décrite dans le ROR enregistre un changement de n° de téléphone.
+-   Scénario 3 : Modification d'une organisation interne 
+    -   Un établissement sanitaire modifie le nom d'un service.
+-   Scénario 4 : Modification d'informations sur un professionnel
+    -   L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
+-   Scénario 5 : Modification d'informations sur une situation d'exercice
+    -   L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
 -   Scénario 6 : Ajout d'un acte spécifique au sein d'une offre déjà décrite
     -   Un établissement ajoute un acte spécifique dans une offre déjà décrite.
 -   Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre déjà décrite au seins d'une structure.
     -   Un établissement retire une activité opérationnelle au sein d'une offre déjà décrite au sein d'une structure.
+-   Scénario 8 : Précision sur l'offre d'un cabinet de ville
+    -   Un professionnel de santé précise son offre et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_13.html)**
 
