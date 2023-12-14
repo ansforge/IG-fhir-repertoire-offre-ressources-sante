@@ -139,7 +139,11 @@ PATCH [BASE]/Organization/XXX
                 }, 
                 {
                     "name": "path",
-                    "valueString": "Organization.address.where()"
+                    "valueString": "Organization"
+                },
+                {
+                    "name": "name",
+                    "valueString": "address"
                 },
                 {
                     "name": "value",
@@ -178,7 +182,7 @@ PATCH [BASE]/Organization/XXX
 
 #### Scénario 2 : Modification d'une entité géographique
 
-**Description du scénario :** Une entité géographique déjà décrite dans le ROR enregistre un changement de n° de téléphone.
+**Description du scénario :** Une entité géographique déjà décrite dans le ROR enregistre un changement de numéro de téléphone et ajoute un contact.
 
 **Requête :**
 
@@ -196,7 +200,7 @@ PATCH [BASE]/Organization/XXX
                 }, 
                 {
                     "name": "path",
-                    "valueString": "Organization.telecom.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel' and valueCodeableConcept.coding[0].code='2').value"
+                    "valueString": "Organization.telecom.extension.where(value='XXX')"
                 },
                 {
                     "name": "value",
@@ -415,7 +419,7 @@ PATCH [BASE]/PractitionerRole/XXX
 
 #### Scénario 6 : Ajout d'un acte spécifique au sein d'une offre déjà décrite
 
-**Description du scénario :** Un établissement ajoute un acte spécifique (0316 - Neurochirurgie éveillée avec mapping cortical) dans une offre déjà décrite (Hospitalisation complète de Neurochirurgie) au sein d'une structure (clinique chirurgicale Val D'or - FINESS : 920300936).
+**Description du scénario :** Un établissement ajoute un acte spécifique dans une offre déjà décrite au sein d'une structure.
 
 **Requête :**
 

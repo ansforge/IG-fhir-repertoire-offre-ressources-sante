@@ -179,34 +179,32 @@ POST [BASE]/Organization
             }
         }
     ],
-	"address": [
-        {
-            "city": "BOIS-COLOMBES",
-            "postalCode": "92270",
-            "line": ["103 rue des Bourguignons, 92270 BOIS-COLOMBES"],
-            "_line": [
-                {
-                    "extension": [
-                        {
-                            "id": "Location.address.line.extension:houseNumber",
-                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                            "valueString": "103"
-                        },
-                        {
-                            "id": "Location.address.line.extension:streetNameType",
-                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
-                            "valueString": "rue"
-                        },
-                        {
-                            "id": "Location.address.line.extension:streetNameBase",
-                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
-                            "valueString": "des Bourguignons"
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
+	"address": {
+        "city": "BOIS-COLOMBES",
+        "postalCode": "92270",
+        "line": ["103 rue des Bourguignons, 92270 BOIS-COLOMBES"],
+        "_line": [
+            {
+                "extension": [
+                    {
+                        "id": "Location.address.line.extension:houseNumber",
+                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                        "valueString": "103"
+                    },
+                    {
+                        "id": "Location.address.line.extension:streetNameType",
+                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
+                        "valueString": "rue"
+                   },
+                    {
+                        "id": "Location.address.line.extension:streetNameBase",
+                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
+                        "valueString": "des Bourguignons"
+                    }
+                ]
+            }            
+        ]
+    },
 	"extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
@@ -219,6 +217,8 @@ POST [BASE]/Organization
 #### Scénario 2 : Création de l'entité géographique d'un établissement
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité géographique.
+
+**Prérequis :** : Connaître l'identifiant technique de l'entité juridique dont fait partie l'entité géographique.
 
 **Requête :**
 
@@ -265,34 +265,32 @@ POST [BASE]/Organization
             }
         }
     ],
-	"address": [
-        {
-            "city": "BOIS-COLOMBES",
-            "postalCode": "92270",
-            "line": ["45 rue du général Leclerc, 92270 BOIS-COLOMBES"],
-            "_line": [
-                {
-                    "extension": [
-                        {
-                            "id": "Location.address.line.extension:houseNumber",
-                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                            "valueString": "45"
-                        },
-                        {
-                            "id": "Location.address.line.extension:streetNameType",
-                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
-                            "valueString": "rue"
-                        },
-                        {
-                            "id": "Location.address.line.extension:streetNameBase",
-                            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
-                            "valueString": "du général Leclerc"
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
+	"address": {
+        "city": "BOIS-COLOMBES",
+        "postalCode": "92270",
+        "line": ["45 rue du général Leclerc, 92270 BOIS-COLOMBES"],
+        "_line": [
+            {
+                "extension": [
+                    {
+                        "id": "Location.address.line.extension:houseNumber",
+                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                        "valueString": "45"
+                    },
+                    {
+                        "id": "Location.address.line.extension:streetNameType",
+                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
+                        "valueString": "rue"
+                    },
+                    {
+                        "id": "Location.address.line.extension:streetNameBase",
+                        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
+                        "valueString": "du général Leclerc"
+                    }
+                ]
+            }
+        ]
+    },
     "contact": [
         {
             "purpose": {
@@ -365,6 +363,8 @@ POST [BASE]/Organization
 #### Scénario 3 : Création d'une offre directement rattachée à l'établissement
 
 **Description du scénario :** Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
+
+**Prérequis :** : Connaître les identifiants techniques de l'établissement dont fait partie l'offre et de son lieu de réalisation.
 
 **Requête :**
 
@@ -589,6 +589,8 @@ POST [BASE]/HealthcareService
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
+**Prérequis :** : Connaître l'identifiant technique de l'établissement dont fait partie le pôle.
+
 **Requête :**
 
 ```json
@@ -633,6 +635,8 @@ POST [BASE]/Organization
 #### Scénario 5 : Création d'un service
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un service.
+
+**Prérequis :** : Connaître l'identifiant technique de l'établissement dont fait partie le service.
 
 **Requête :**
 
@@ -679,6 +683,8 @@ POST [BASE]/Organization
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée une unité fonctionnelle.
 
+**Prérequis :** : Connaître l'identifiant technique de l'établissement dont fait partie l'unité fonctionelle.
+
 **Requête :**
 
 ```json
@@ -723,6 +729,8 @@ POST [BASE]/Organization
 #### Scénario 7 : Création d'une offre dans une unité fonctionnelle préexistante
 
 **Description du scénario :** Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
+
+**Prérequis :** : Connaître les identifiants techniques de l'unité fonctionnelle dont fait partie l'offre et de son lieu de réalisation.
 
 **Requête :**
 
@@ -899,8 +907,8 @@ POST [BASE]/Practitioner
                 "valueCodeableConcept": {
                     "coding": {
                         "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
-                        "code": "XXX",
-                        "display": "Display XXX"
+                        "code": "2",
+                        "display": "Accès restreint"
                     }
                 }    
             }
@@ -918,6 +926,8 @@ POST [BASE]/Practitioner
 #### Scénario 9 : Création d'une situation opérationnelle
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
+
+**Prérequis :** : Connaître les identifiants techniques du professionnel et de l'offre lié à la situation opérationnelle.
 
 **Requête :**
 
@@ -956,8 +966,8 @@ POST [BASE]/PractitionerRole
 			"valueCodeableConcept": {
                 "coding": {
                     "system": "https://mos.esante.gouv.fr/NOS/JDV_J217-ModeExercice-ROR/FHIR/JDV-J217-ModeExercice-ROR",
-                    "code": "XXX",
-                    "display": "display XXX"
+                    "code": "L",
+                    "display": "Libéral, indépendant, artisan, commerçant"
                 }
             }
 		}

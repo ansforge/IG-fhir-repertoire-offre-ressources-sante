@@ -495,7 +495,7 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 -   Scénario 1 : Modification d'une entité juridique
     -   Une entité juridique déjà décrite dans le ROR enregistre un changement d'adresse.
 -   Scénario 2 : Modification d'une entité géographique
-    -   Une entité géographique déjà décrite dans le ROR enregistre un changement de n° de téléphone.
+    -   Une entité géographique déjà décrite dans le ROR enregistre un changement de numéro de téléphone et ajoute un contact.
 -   Scénario 3 : Modification d'une organisation interne 
     -   Un établissement sanitaire modifie le nom d'un service.
 -   Scénario 4 : Modification d'informations sur un professionnel
