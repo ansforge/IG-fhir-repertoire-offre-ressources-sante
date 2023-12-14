@@ -5159,6 +5159,10 @@ Critères de recherches applicables à la ressource Measure.
  </tr>
 </tbody></table>
 
+<p class=MsoNormal align=left style='text-align:left'>*<span style='font-size:
+9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Critères de recherche qui
+seront applicables ultérieurement<o:p></o:p></span></p>
+
 ### StructureDefinition-ror-measurereport
 
 Critères de recherches applicables à la ressource MeasureReport.

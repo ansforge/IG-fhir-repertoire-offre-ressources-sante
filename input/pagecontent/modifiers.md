@@ -278,10 +278,9 @@
   mso-border-bottom-alt:solid #8EAADB .5pt;mso-border-right-alt:solid #8EAADB .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Permet de filter sur le type d'identifiant. <b><code><span style="color: #ff0000;">draft</span></code></b><o:p></o:p></span></p>
+  9.0pt;mso-bidi-font-size:10.0pt;line-height:115%'>Permet de rendre le processus d'inclusion itératif<o:p></o:p></span></p>
   </td>
  </tr>
- 
   <tr style='mso-yfti-irow:10'>
   <td width="52%" colspan=3 style='width:52.78%;border-top:none;border-left:
   solid #8EAADB 1.0pt;border-bottom:solid #8EAADB 1.0pt;border-right:none;
