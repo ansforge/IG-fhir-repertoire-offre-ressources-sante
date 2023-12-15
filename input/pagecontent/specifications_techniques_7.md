@@ -247,7 +247,7 @@ Dans ce cas d’usage, nous n’utilisons aucun paramètres et modificateurs de 
 
 #### Scénario 1 : Consultation du statut d’une anomalie
 
-**Description du scénario :** un responsable qualité où le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
+**Description du scénario :** un responsable qualité ou le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
 
 
 **Requête :**
@@ -262,7 +262,7 @@ GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l�
 
 #### Scénario 2 : Consultation de la liste des anomalies
 
-**Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
+**Description du scénario :** Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d'un élément dont l’identifiant est XXX.
 
 **Requête :**
 
