@@ -129,51 +129,16 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-measure), de  **StructureDefinition-ror-measure** applicables à ce cas d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>_id</p>
-</td>
-<td width="227">
-<p>topic</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [Structuredefinition-ror-measure](search_param.html#structuredefinition-ror-measure)
+-    [Structuredefinition-ror-measurereport](search_param.html#structuredefinition-ror-measurereport) (critères de recherche applicables à la ressource Measure, grâce au [chainage inversé](https://hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
+`_has:MeasureReport:measure:[NOM CRITERE]`)
 
--    Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-measurereport), de **StructureDefinition-ror-measurereport** applicables à ce cas d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>date</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-Ces critères de recherche sont applicables à la ressource Measure, grâce au [chainage inversé](https://hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
-`_has:MeasureReport:measure:[NOM CRITERE]`
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits dans le [paragraphe dédié](modifiers.html) applicables à ce cas d'usage sont :
-
--   \_revinclude
-
--   \_has, \_count, \_sort
-
--   Tous les prefixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 

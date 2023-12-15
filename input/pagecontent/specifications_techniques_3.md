@@ -141,170 +141,19 @@ Plus de précision sur la spécification FHIR :
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
-    **StructureDefinition-ror-healthcareservice** applicables à ce cas
-    d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>age-range-high</p>
-</td>
-<td width="230">
-<p>name</p>
-</td>
-<td width="230">
-<p>specialty</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>age-range-low</p>
-</td>
-<td width="230">
-<p>psychiatric-sector</p>
-</td>
-<td width="230">
-<p>patient-type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>characteristic</p>
-</td>
-<td width="230">
-<p>service-category</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>intervention-zone</p>
-</td>
-<td width="230">
-<p>service-type</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [StructureDefinition-ror-healthcareservice](search_param.html#structuredefinition-ror-healthcareservice)
+-    [Structuredefinition-ror-organization](search_param.html#structuredefinition-ror-organization) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `organization.[NOM CRITERE]`)
+-    [StructureDefinition-ror-location](search_param.html#structuredefinition-ror-location) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `location.[NOM CRITERE]`)
+-    [StructureDefinition-ror-practioner](search_param.html#structuredefinition-ror-practioner) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]`)
+-    [StructureDefinition-ror-practionerrole](search_param.html#structuredefinition-ror-practionerrole) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:PractitionerRole:service:[NOM CRITERE]`)
+-    [StructureDefinition-ror-task](search_param.html#structuredefinition-ror-task) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`)
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-organization), de
-    **StructureDefinition-ror-organization** applicables à ce cas
-    d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>closing-type</p>
-</td>
-<td width="230">
-<p>identifier</p>
-</td>
-<td width="230">
-<p>type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>drop-zone</p>
-</td>
-<td width="230">
-<p>period-end</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-Ces critères de recherche sont applicables à la ressource
-HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxe
-suivante : `organization.[NOM CRITERE]`
-
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-location), de
-    **StructureDefinition-ror-location** applicables à ce cas d'usage
-    sont :
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>_tag</p>
-</td>
-<td width="230">
-<p>commune-cog</p>
-</td>
-<td width="230">
-<p>near</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>address-postalcode</p>
-</td>
-<td width="230">
-<p>equipment-type</p>
-</td>
-<td width="230">
-<p>near-insee-code</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-Ces critères de recherche sont applicables à la ressource
-HealthcareService, grâce au chainage. Pour cela utiliser la syntaxe
-suivante : `location.[NOM CRITERE]`
-
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-task), de
-    **StructureDefinition-ror-task** applicables à ce cas d'usage
-    sont :
-<table>
-<tbody>
-<tr>
-<td width="228">
-<p>business-status*</p>
-</td>
-<td width="226">
-<p>_id</p>
-</td>
-<td width="226">
-<p>_lastUpdated*</p>
-</td>
-</tr>
-<tr>
-<td width="228">
-<p>Identifier*</p>
-</td>
-<td width="226">
-<p>authored-on*</p>
-</td>
-<td width="226">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-*<i>Critères de recherche qui seront applicables ultérieurement</i>
-
-Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`
-
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html)
-applicables à ce cas d'usage sont :
-
--   \_revinclude, \_include, :iterate
-
--   \_has, \_count, \_sort
-
--   Tous les préfixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 

@@ -131,14 +131,11 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 
 ### Critères de recherche
 
--   Tous les critères de recherche, définis dans la [page dédiée](search_param.html), sont applicables.
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits [page dédiée](modifiers.html) applicables à ce cas d'usage sont :
--   \_revinclude, \_include, :iterate
--   \_has, \_count, \_sort
--   Tous les préfixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 
