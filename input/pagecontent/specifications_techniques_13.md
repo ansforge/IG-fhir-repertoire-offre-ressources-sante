@@ -1,60 +1,5 @@
 <!-- ## Mise à jour de l'offre -->
 
-### Caractéristiques de l'API 
-
-<table width="100%">
-<tbody>
-<tr>
-<td width="19%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Header</strong></p>
-</td>
-<td width="80%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ###  Construction de la requête de base
 
 <table>
@@ -475,7 +420,7 @@ PATCH [BASE]/HealthcareService/XXX
             "part": [ 
                 {
                     "name": "type",
-                    "valueString": ""
+                    "valueString": "delete"
                 }, 
                 {
                     "name": "path",
