@@ -492,22 +492,22 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 #### Scénarios
 
 -   Scénario 1 : Modification d'une entité juridique
-    -   Une entité juridique déjà décrite dans le ROR enregistre un changement d'adresse.
+    -   Une entité juridique enregistre un changement d'adresse.
 -   Scénario 2 : Modification d'une entité géographique
-    -   Une entité géographique déjà décrite dans le ROR enregistre un changement de numéro de téléphone et ajoute un contact.
+    -   Une entité géographique enregistre un changement de numéro de téléphone et ajoute un contact.
 -   Scénario 3 : Modification d'une organisation interne 
     -   Un établissement sanitaire modifie le nom d'un service.
 -   Scénario 4 : Modification d'informations sur un professionnel
     -   L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
 -   Scénario 5 : Modification d'informations sur une situation opérationnelle
     -   L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
--   Scénario 6 : Ajout d'un acte spécifique au sein d'une offre opérationnelle déjà décrite
+-   Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique)
     -   Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite.
--   Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au seins d'une structure.
+-   Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle)
     -   Un établissement retire une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au sein d'une structure.
--   Scénario 8 : Précision sur l'offre opérationnelle d'un cabinet de ville
+-   Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville)
     -   Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
--   Scénario 9 : Rattachement d'un professionnel de santé
+-   Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
     -   Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_13.html)**

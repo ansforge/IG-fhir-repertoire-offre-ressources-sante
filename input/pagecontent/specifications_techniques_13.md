@@ -66,14 +66,14 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 #### Scénario 1 : Modification d'une entité juridique
 
-**Description du scénario :** Une entité juridique déjà décrite dans le ROR enregistre un changement d'adresse.
+**Description du scénario :** Une entité juridique enregistre un changement d'adresse.
 
-**Prérequis :** L'identifiant technique de l'entité juridique à modifier est connu (XXX).
+**Prérequis :** L'identifiant technique de l'entité juridique est connu (1234).
 
 **Requête :**
 
 ```json
-PATCH [BASE]/Organization/XXX
+PATCH [BASE]/Organization/1234
 {
     "resourceType": "Parameters",
     "parameter": [ 
@@ -129,14 +129,14 @@ PATCH [BASE]/Organization/XXX
 
 #### Scénario 2 : Modification d'une entité géographique
 
-**Description du scénario :** Une entité géographique déjà décrite dans le ROR enregistre un changement de numéro de téléphone et ajoute un contact.
+**Description du scénario :** Une entité géographique enregistre un changement de numéro de téléphone (passage de 01.01.01.02.01 à 01.01.01.02.02) et ajoute un contact (GREDIN Thierry).
 
-**Prérequis :** L'identifiant technique de l'entité géographique à modifier est connu (XXX).
+**Prérequis :** L'identifiant technique de l'entité géographique est connu (4569).
 
 **Requête :**
 
 ```json
-PATCH [BASE]/Organization/XXX
+PATCH [BASE]/Organization/4569
 {
     "resourceType": "Parameters",
     "parameter": [ 
@@ -149,7 +149,7 @@ PATCH [BASE]/Organization/XXX
                 }, 
                 {
                     "name": "path",
-                    "valueString": "Organization.telecom.extension.where(value='YYY')"
+                    "valueString": "Organization.telecom.extension.where(value='01.01.01.02.01')"
                 },
                 {
                     "name": "value",
@@ -233,12 +233,12 @@ PATCH [BASE]/Organization/XXX
 
 **Description du scénario :** Un établissement sanitaire modifie le nom d'un service.
 
-**Prérequis :** L'identifiant technique du service à modifier est connu (XXX).
+**Prérequis :** L'identifiant technique du service est connu (789).
 
 **Requête :**
 
 ```json
-PATCH [BASE]/Organization/XXX
+PATCH [BASE]/Organization/789
 {
     "resourceType": "Parameters",
     "parameter": [ 
@@ -271,12 +271,12 @@ PATCH [BASE]/Organization/XXX
 
 **Description du scénario :** L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
 
-**Prérequis :** L'identifiant technique du professionnel à modifier est connu (XXX).
+**Prérequis :** L'identifiant technique du professionnel est connu (159).
 
 **Requête :**
 
 ```json
-PATCH [BASE]/Practitioner/XXX
+PATCH [BASE]/Practitioner/159
 {
     "resourceType": "Parameters",
     "parameter": [ 
@@ -305,12 +305,12 @@ PATCH [BASE]/Practitioner/XXX
 
 **Description du scénario :** L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
 
-**Prérequis :** L'identifiant technique de la situation opérationnelle à modifier est connu (XXX).
+**Prérequis :** L'identifiant technique de la situation opérationnelle est connu (753).
 
 **Requête :**
 
 ```json
-PATCH [BASE]/PractitionerRole/XXX
+PATCH [BASE]/PractitionerRole/753
 {
     "resourceType": "Parameters",
     "parameter": [ 
@@ -372,16 +372,16 @@ PATCH [BASE]/PractitionerRole/XXX
 }
 ```
 
-#### Scénario 6 : Ajout d'un acte spécifique au sein d'une offre opérationnelle déjà décrite
+#### Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique)
 
 **Description du scénario :** Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite au sein d'une structure.
 
-**Prérequis :** L'identifiant technique de l'offre opérationnelle à modifier est connu (XXX).
+**Prérequis :** L'identifiant technique de l'offre opérationnelle est connu (741).
 
 **Requête :**
 
 ```json
-PATCH [BASE]/HealthcareService/XXX
+PATCH [BASE]/HealthcareService/741
 {
     "resourceType": "Parameters",
     "parameter": [ 
@@ -416,16 +416,16 @@ PATCH [BASE]/HealthcareService/XXX
 }
 ```
 
-#### Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre opérationnelle déjà décrite
+#### Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle)
 
 **Description du scénario :** Un établissement retire une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au sein d'une structure.
 
-**Prérequis :** L'identifiant technique de l'offre opérationnelle à modifier est connu (XXX).
+**Prérequis :** L'identifiant technique de l'offre opérationnelle est connu (852).
 
 **Requête :**
 
 ```json
-PATCH [BASE]/HealthcareService/XXX
+PATCH [BASE]/HealthcareService/852
 {
     "resourceType": "Parameters",
     "parameter": [
@@ -460,16 +460,16 @@ PATCH [BASE]/HealthcareService/XXX
 }
 ```
 
-#### Scénario 8 : Précision sur l'offre opérationnelle d'un cabinet de ville
+#### Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville)
 
 **Description du scénario :** Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
 
-**Prérequis :** L'identifiant technique de l'offre opérationnelle à modifier est connu (XXX).
+**Prérequis :** L'identifiant technique de l'offre opérationnelle est connu (963).
 
 **Requête :**
 
 ```json
-PATCH [BASE]/HealthcareService/XXX
+PATCH [BASE]/HealthcareService/963
 {
     "resourceType": "Parameters",
     "parameter": [ 
@@ -655,7 +655,7 @@ PATCH [BASE]/HealthcareService/XXX
 }
 ```
 
-#### Scénario 9 : Rattachement d'un professionnel de santé
+#### Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
 
 **Description du scénario :** Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
 

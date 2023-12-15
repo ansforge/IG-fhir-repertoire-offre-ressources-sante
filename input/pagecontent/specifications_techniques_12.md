@@ -71,7 +71,7 @@ Plus de précision sur la spécification FHIR :
 
 ### Exemple de requêtes
 
-#### [spécifique serveur] Scénario 1 : Création de l'entité juridique d'un établissement
+#### [spécifique serveur] Scénario 1 : Création de l'entité juridique 
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité juridique. 
 
@@ -159,11 +159,11 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 2 : Création de l'entité géographique d'un établissement
+#### [spécifique serveur] Scénario 2 : Création de l'entité géographique
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité géographique.
 
-**Prérequis :** L'entité juridique dont fait partie l'entité géographique à créer existe et son identifiant est connu (XXX).
+**Prérequis :** L'entité juridique dont fait partie l'entité géographique à créer existe et son identifiant est connu (1111).
 
 **Requête :**
 
@@ -173,7 +173,7 @@ POST [BASE]/Organization
 	"resourceType": "Organization",
     "name": "Quiétude BOIS COLOMBES",
     "partOf": {
-        "reference": "Organization/XXX"
+        "reference": "Organization/1111"
     },
     "identifier": [ 
         {
@@ -309,7 +309,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Un établissement ajoute une offre opérationnelle couvrant une autre zone d'intervention que les offres opérationnelles précédemment enregistrées.
 
-**Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (XXX et YYY).
+**Prérequis :** L'établissement dont fait partie l'offre opérationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (2424 et 654).
 
 **Requête :**
 
@@ -319,11 +319,11 @@ POST [BASE]/HealthcareService
 	"resourceType": "HealthcareService",
     "name": "Services à domicile quiétude Bois Colombes",
     "providedBy": {
-        "reference": "Organization/XXX"
+        "reference": "Organization/2424"
     },
     "location": [
         {
-            "reference": "Location/YYY"
+            "reference": "Location/654"
         }
     ],
     "identifier": {
@@ -534,7 +534,7 @@ POST [BASE]/HealthcareService
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
-**Prérequis :** L'établissement dont fait partie le pôle à créer existe et son identifiant est connu (XXX).
+**Prérequis :** L'établissement dont fait partie le pôle à créer existe et son identifiant est connu (3536).
 
 **Requête :**
 
@@ -544,7 +544,7 @@ POST [BASE]/Organization
 	"resourceType": "Organization",
     "name": "Pôle Chirurgical B",
     "partOf": {
-        "reference": "Organization/XXX"
+        "reference": "Organization/3536"
     },
     "identifier": [
         {
@@ -581,7 +581,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un service.
 
-**Prérequis :** L'établissement dont fait partie le service à créer existe et son identifiant est connu (XXX).
+**Prérequis :** L'établissement dont fait partie le service à créer existe et son identifiant est connu (3537).
 
 **Requête :**
 
@@ -591,7 +591,7 @@ POST [BASE]/Organization
 	"resourceType": "Organization",
     "name": "Tête et Cou",
     "partOf": {
-        "reference": "Organization/XXX"
+        "reference": "Organization/3537"
     },
     "identifier": [
         {
@@ -628,7 +628,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée une unité fonctionnelle.
 
-**Prérequis :** L'établissement dont fait partie l'unité fonctionnelle à créer existe et son identifiant est connu (XXX).
+**Prérequis :** L'établissement dont fait partie l'unité fonctionnelle à créer existe et son identifiant est connu (6963).
 
 **Requête :**
 
@@ -638,7 +638,7 @@ POST [BASE]/Organization
 	"resourceType": "Organization",
     "name": "Neurochirurgie",
     "partOf": {
-        "reference": "Organization/XXX"
+        "reference": "Organization/6963"
     },
     "identifier": [
         {
@@ -675,7 +675,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
 
-**Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (XXX et YYY).
+**Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (5958 et 5253).
 
 **Requête :**
 
@@ -685,11 +685,11 @@ POST [BASE]/HealthcareService
 	"resourceType": "HealthcareService",
     "name": "Hospitalisation complète de Neurochirurgie",
     "providedBy": {
-        "reference": "Organization/XXX"
+        "reference": "Organization/5958"
     },
     "location": [
         {
-            "reference": "Location/YYY"
+            "reference": "Location/5253"
         }
     ],
     "identifier": {
@@ -819,7 +819,7 @@ POST [BASE]/HealthcareService
 
 **Description du scénario :** A la suite d'un adossement à l'annuaire, le ROR national crée l'offre opérationnelle d'un cabinet de ville.
 
-**Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (XXX et YYY).
+**Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (4947 et 1215).
 
 **Requête :**
 
@@ -829,11 +829,11 @@ POST [BASE]/HealthcareService
 	"resourceType": "HealthcareService",
     "name": "Cabinet du Dr Julie JOURDIN",
     "providedBy": {
-        "reference": "Organization/XXX"
+        "reference": "Organization/4947"
     },
     "location": [
         {
-            "reference": "Location/YYY"
+            "reference": "Location/1215"
         }
     ],
     "identifier": {
@@ -1003,7 +1003,7 @@ POST [BASE]/Practitioner
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 
-**Prérequis :** Le professionnel et l'offre opérationnelle liés à la siutation opérationnelle à créer existent et leurs identifiants respectifs sont connus (XXX et YYY).
+**Prérequis :** Le professionnel et l'offre opérationnelle liés à la siutation opérationnelle à créer existent et leurs identifiants respectifs sont connus (2524 et 9597).
 
 **Requête :**
 
@@ -1016,10 +1016,10 @@ POST [BASE]/PractitionerRole
         "given": "Mylène"
     },
     "practitioner": {
-        "reference": "Practitioner/XXX"
+        "reference": "Practitioner/2524"
     },
     "healthcareService": {
-        "reference": "HealthcareService/YYY"
+        "reference": "HealthcareService/9597"
     },
     "identifier": {
         "value": "11102379616",
