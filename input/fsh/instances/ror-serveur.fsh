@@ -330,11 +330,6 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de fermeture de l'entité géographique" */
 
-/* * rest.resource[=].searchParam[+].name = "price-amount-currency"
-* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-amount-currency)
-* rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Devise du tarif des prestations et services" */
-
 /* * rest.resource[=].searchParam[+].name = "price-amount-value"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-organization-price-amount-value)
 * rest.resource[=].searchParam[=].type = #number

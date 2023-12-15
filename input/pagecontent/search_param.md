@@ -3724,80 +3724,6 @@ Critères de recherches applicables à la ressource Organization.
   du tarif des prestations et services&nbsp;: valeur.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:13">
-  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
-  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Tarif/<span class="SpellE">montantTarif</span> (Montant/devise)<o:p></o:p></span></p>
-  </td>
-  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">price</span></span><span style="font-size:8.0pt;line-height:115%">-amount-currency</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
-  </td>
-  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Non<o:p></o:p></span></p>
-  </td>
-  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
-  </td>
-  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Montant du tarif des prestations et services&nbsp;:
-  devise. <code><span style="color: #8E44AD;">under consideration</span></code><o:p></o:p></span></p>
-  <p class="MsoNormal" align="left" style="text-align:left"><a href="https://hl7.org/fhir/R4/valueset-currencies.html"><span style="font-size:8.0pt;line-height:115%">https://hl7.org/fhir/R4/valueset-currencies.html</span></a><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:14">
-  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
-  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Tarif/<span class="SpellE">dateDebutValiditeTarif</span></span><span style="font-size:8.0pt;
-  line-height:115%"><o:p></o:p></span></p>
-  </td>
-  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
-  color:black;mso-color-alt:windowtext">price</span></span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-<span class="SpellE">validity</span>-start-date</span><span style="font-size:8.0pt;
-  line-height:115%"><o:p></o:p></span></p>
-  </td>
-  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Non</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
-  </td>
-  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
-  mso-color-alt:windowtext">date</span></span><span style="font-size:8.0pt;
-  line-height:115%"><o:p></o:p></span></p>
-  </td>
-  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Dernière
-  date de début de validité du tarif indiqué.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:
-  8.0pt;line-height:115%"><o:p></o:p></span></p>
-  </td>
- </tr>
  <tr style="mso-yfti-irow:15">
   <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
@@ -3990,6 +3916,44 @@ Critères de recherches applicables à la ressource Organization.
   prestations et services.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">JDV_J205-UnitePrix-ROR issu TRE_R228-UnitePrix<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:14">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Tarif/<span class="SpellE">dateDebutValiditeTarif</span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;
+  color:black;mso-color-alt:windowtext">price</span></span></span><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">-<span class="SpellE">validity</span>-start-date</span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Non</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span class="GramE"><span style="font-size:8.0pt;line-height:115%;color:black;
+  mso-color-alt:windowtext">date</span></span><span style="font-size:8.0pt;
+  line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Dernière
+  date de début de validité du tarif indiqué.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:
+  8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
 </tbody></table>
