@@ -1,61 +1,6 @@
 <!-- ## Signalement d’anomalie
 <code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code> -->
 
-### Caractéristiques de l'API
-
-<table width="100%">
-<tbody>
-<tr>
-<td width="18%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Header</strong></p>
-</td>
-<td width="81%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ### Construction de la requête de base
 
 <table>

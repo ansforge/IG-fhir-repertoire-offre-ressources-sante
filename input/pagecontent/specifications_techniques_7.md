@@ -1,61 +1,6 @@
 <!-- ## 3.7	Consultation d’anomalie
 <code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>-->
 
-### Caractéristiques de l'API
-
-<table width="100%">
-<tbody>
-<tr>
-<td width="18%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Header</strong></p>
-</td>
-<td width="81%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ### Construction de la requête de base
 
 <table>
@@ -147,7 +92,7 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 #### Scénario 1 : Consultation du statut d’une anomalie <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** un responsable qualité où le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
+**Description du scénario :** un responsable qualité ou le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
 
 
 **Requête :**
@@ -162,7 +107,7 @@ GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l�
 
 #### Scénario 2 : Consultation de la liste des anomalies <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
+**Description du scénario :** Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d'un élément dont l’identifiant est XXX.
 
 **Requête :**
 

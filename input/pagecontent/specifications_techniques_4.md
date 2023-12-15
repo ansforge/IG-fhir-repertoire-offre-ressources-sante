@@ -1,60 +1,6 @@
 <!-- ## Recherche d'offre avec données capacitaires
 <code><span style="background-color: #A6ACAF;color:white;font-weight:bold;font-size: x-large;">ROR 2.1</span></code> -->
 
-### Caractéristiques de l'API
-<table width="100%">
-<tbody>
-<tr>
-<td width="18%">
-<p>Endpoint</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Header</p>
-</td>
-<td width="81%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Encodage</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Version FHIR</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Version package</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Publication</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ### Construction de la requête de base
 
 <table>

@@ -3,61 +3,6 @@
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 Cette partie de la spécification est en cours de construction et n'est pas implémentée. Elle est disponible, à titre d'information sur les travaux en cours au niveau du ROR National.
 </p>
-### Caractéristiques de l'API 
-
-<table width="100%">
-<tbody>
-<tr>
-<td width="19%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Header</strong></p>
-</td>
-<td width="80%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
 ###  Construction de la requête de base
 
 <table>
