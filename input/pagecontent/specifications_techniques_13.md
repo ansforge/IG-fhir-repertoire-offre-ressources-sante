@@ -68,6 +68,8 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 **Description du scénario :** Une entité juridique déjà décrite dans le ROR enregistre un changement d'adresse.
 
+**Prérequis :** L'identifiant technique de l'entité juridique à modifier est connu (XXX).
+
 **Requête :**
 
 ```json
@@ -129,6 +131,8 @@ PATCH [BASE]/Organization/XXX
 
 **Description du scénario :** Une entité géographique déjà décrite dans le ROR enregistre un changement de numéro de téléphone et ajoute un contact.
 
+**Prérequis :** L'identifiant technique de l'entité géographique à modifier est connu (XXX).
+
 **Requête :**
 
 ```json
@@ -145,7 +149,7 @@ PATCH [BASE]/Organization/XXX
                 }, 
                 {
                     "name": "path",
-                    "valueString": "Organization.telecom.extension.where(value='XXX')"
+                    "valueString": "Organization.telecom.extension.where(value='YYY')"
                 },
                 {
                     "name": "value",
@@ -229,6 +233,8 @@ PATCH [BASE]/Organization/XXX
 
 **Description du scénario :** Un établissement sanitaire modifie le nom d'un service.
 
+**Prérequis :** L'identifiant technique du service à modifier est connu (XXX).
+
 **Requête :**
 
 ```json
@@ -265,6 +271,8 @@ PATCH [BASE]/Organization/XXX
 
 **Description du scénario :** L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
 
+**Prérequis :** L'identifiant technique du professionnel à modifier est connu (XXX).
+
 **Requête :**
 
 ```json
@@ -293,9 +301,11 @@ PATCH [BASE]/Practitioner/XXX
 }
 ```
 
-#### Scénario 5 : Modification d'informations sur une situation d'exercice
+#### Scénario 5 : Modification d'informations sur une situation opérationnelle
 
 **Description du scénario :** L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
+
+**Prérequis :** L'identifiant technique de la situation opérationnelle à modifier est connu (XXX).
 
 **Requête :**
 
@@ -362,9 +372,11 @@ PATCH [BASE]/PractitionerRole/XXX
 }
 ```
 
-#### Scénario 6 : Ajout d'un acte spécifique au sein d'une offre déjà décrite
+#### Scénario 6 : Ajout d'un acte spécifique au sein d'une offre opérationnelle déjà décrite
 
-**Description du scénario :** Un établissement ajoute un acte spécifique dans une offre déjà décrite au sein d'une structure.
+**Description du scénario :** Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite au sein d'une structure.
+
+**Prérequis :** L'identifiant technique de l'offre opérationnelle à modifier est connu (XXX).
 
 **Requête :**
 
@@ -404,9 +416,11 @@ PATCH [BASE]/HealthcareService/XXX
 }
 ```
 
-#### Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre déjà décrite
+#### Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre opérationnelle déjà décrite
 
-**Description du scénario :** Un établissement retire une activité opérationnelle (440 - Chirurgie intracrânienne) au sein d'une offre déjà décrite (Hospitalisation complète de Neurochirurgie) au sein d'une structure (Clinique chirurgicale Val D'or - FINESS : 920300936).
+**Description du scénario :** Un établissement retire une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au sein d'une structure.
+
+**Prérequis :** L'identifiant technique de l'offre opérationnelle à modifier est connu (XXX).
 
 **Requête :**
 
@@ -446,9 +460,11 @@ PATCH [BASE]/HealthcareService/XXX
 }
 ```
 
-#### Scénario 8 : Précision sur l'offre d'un cabinet de ville
+#### Scénario 8 : Précision sur l'offre opérationnelle d'un cabinet de ville
 
-**Description du scénario :** Un professionnel de santé précise son offre et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
+**Description du scénario :** Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
+
+**Prérequis :** L'identifiant technique de l'offre opérationnelle à modifier est connu (XXX).
 
 **Requête :**
 
@@ -559,7 +575,7 @@ PATCH [BASE]/HealthcareService/XXX
                 },
                 {
                     "name": "value",
-                    "valueCodeableConcept": {
+                    "value": {
                         "coding": {
                             "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
                             "code": "1181",
@@ -590,7 +606,7 @@ PATCH [BASE]/HealthcareService/XXX
                 },
                 {
                     "name": "value",
-                    "valueCodeableConcept": {
+                    "value": {
                         "coding": {
                             "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
                             "code": "1270",
@@ -638,3 +654,9 @@ PATCH [BASE]/HealthcareService/XXX
     ]
 }
 ```
+
+#### Scénario 9 : Rattachement d'un professionnel de santé
+
+**Description du scénario :** Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
+
+**Requête :** Voir [scénario 10 du cas d'usage saisie de l'offre](specifications_techniques_12.html#spécifique-serveur-scénario-10-création-dune-situation-opérationnelle) (Création d'une situation opérationnelle)

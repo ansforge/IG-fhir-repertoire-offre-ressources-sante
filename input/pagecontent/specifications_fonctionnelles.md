@@ -421,14 +421,12 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 #### Description du cas d'usage : Saisie de l'offre
 
-Un établissement souhaite créer une offre.
+Un serveur souhaite créer une offre.
 
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image22.png" alt="Saisie de l'offre" title="Saisie de l'offre">
-            </div>
+            <div style="text-inlin:center;">{%include saisie_offre.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -438,29 +436,32 @@ Un établissement souhaite créer une offre.
     </tr>
 </table>
 
-L'établissement renseigne les informations nécessaires à l'initialisation de l'offre.
+
+Le serveur renseigne les informations nécessaires à l'initialisation de l'offre.
 
 Le ROR National répond à l'établissement toutes les informations saisie, l'identifiant technique et les métadonnées.
 
 #### Scénarios
 
--   Scénario 1 : Création de l'entité juridique d'un établissement
+-   [spécifique serveur] Scénario 1 : Création de l'entité juridique d'un établissement
     -   Afin de décrire son offre, un établissement crée son entité juridique. 
--   Scénario 2 : Création de l'entité géographique d'un établissement
+-   [spécifique serveur] Scénario 2 : Création de l'entité géographique d'un établissement
     -   Afin de décrire son offre, un établissement crée son entité géographique. 
--   Scénario 3 : Création d'une offre directement rattachée à l'établissement
-    -   Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
--   Scénario 4 : Création d'un pôle
+-   [spécifique serveur] Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement
+    -   Un établissement ajoute une offre opérationnelle couvrant une autre zone d'intervention que les offres opérationnelles précédemment enregistrées.
+-   [spécifique serveur] Scénario 4 : Création d'un pôle
     -   Afin de décrire son offre, un établissement crée un pôle.
--   Scénario 5 : Création d'un service
+-   [spécifique serveur] Scénario 5 : Création d'un service
     -   Afin de décrire son offre, un établissement crée un service.
--   Scénario 6 : Création d'une unité fonctionnelle
+-   [spécifique serveur] Scénario 6 : Création d'une unité fonctionnelle
     -   Afin de décrire son offre, un établissement crée une unité fonctionnelle.
--   Scénario 7 : Création d'une offre dans une unité fonctionnelle préexistante
-    -   Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
--   Scénario 8 : Création d'un professionnel
+-   [spécifique serveur] Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante
+    -   Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
+-   [spécifique serveur] Scénario 8 : Création d'une offre opérationnelle de ville
+    -   A la suite d'un adossement à l'annuaire, le ROR national crée l'offre opérationnelle d'un cabinet de ville.
+-   [spécifique serveur] Scénario 9 : Création d'un professionnel
     -   Afin de décrire son offre, un établissement ajoute un professionnel.
--   Scénario 9 : Création d'une situation opérationnelle
+-   [spécifique serveur] Scénario 10 : Création d'une situation opérationnelle
     -   Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_12.html)**
@@ -469,14 +470,12 @@ Le ROR National répond à l'établissement toutes les informations saisie, l'id
 
 #### Description du cas d'usage : Mise à jour de l'offre
 
-Un établissement souhaite mettre à jour une offre.
+Un serveur ou un consommateur souhaite mettre à jour une offre.
 
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image23.png" alt="Mise à jour de l'offre" title="Mise à jour de l'offre">
-            </div>
+            <div style="text-inlin:center;">{%include maj_offre.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -486,7 +485,7 @@ Un établissement souhaite mettre à jour une offre.
     </tr>
 </table>
 
-L'établissement renseigne l'identifiant technique de l'offre à mettre à jour et les informations à modifier.
+Le serveur ou le consommateur renseigne l'identifiant technique de l'offre à mettre à jour et les informations à modifier.
 
 Le ROR National répond à l'établissement, au moins, l'identifiant technique, les métadonnées et l'identifiant fonctionnel de l'offre mise à jour.
 
@@ -500,14 +499,16 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
     -   Un établissement sanitaire modifie le nom d'un service.
 -   Scénario 4 : Modification d'informations sur un professionnel
     -   L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
--   Scénario 5 : Modification d'informations sur une situation d'exercice
+-   Scénario 5 : Modification d'informations sur une situation opérationnelle
     -   L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
--   Scénario 6 : Ajout d'un acte spécifique au sein d'une offre déjà décrite
-    -   Un établissement ajoute un acte spécifique dans une offre déjà décrite.
--   Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre déjà décrite au seins d'une structure.
-    -   Un établissement retire une activité opérationnelle au sein d'une offre déjà décrite au sein d'une structure.
--   Scénario 8 : Précision sur l'offre d'un cabinet de ville
-    -   Un professionnel de santé précise son offre et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
+-   Scénario 6 : Ajout d'un acte spécifique au sein d'une offre opérationnelle déjà décrite
+    -   Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite.
+-   Scénario 7 : Retrait d'une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au seins d'une structure.
+    -   Un établissement retire une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au sein d'une structure.
+-   Scénario 8 : Précision sur l'offre opérationnelle d'un cabinet de ville
+    -   Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
+-   Scénario 9 : Rattachement d'un professionnel de santé
+    -   Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_13.html)**
 

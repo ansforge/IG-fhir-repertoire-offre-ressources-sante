@@ -71,7 +71,7 @@ Plus de précision sur la spécification FHIR :
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Création de l'entité juridique d'un établissement
+#### [spécifique serveur] Scénario 1 : Création de l'entité juridique d'un établissement
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité juridique. 
 
@@ -159,11 +159,11 @@ POST [BASE]/Organization
 }
 ```
 
-#### Scénario 2 : Création de l'entité géographique d'un établissement
+#### [spécifique serveur] Scénario 2 : Création de l'entité géographique d'un établissement
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité géographique.
 
-**Prérequis :** Connaître l'identifiant technique de l'entité juridique dont fait partie l'entité géographique.
+**Prérequis :** L'entité juridique dont fait partie l'entité géographique à créer existe et son identifiant est connu (XXX).
 
 **Requête :**
 
@@ -173,7 +173,7 @@ POST [BASE]/Organization
 	"resourceType": "Organization",
     "name": "Quiétude BOIS COLOMBES",
     "partOf": {
-        "reference": "Organization/idEJ"
+        "reference": "Organization/XXX"
     },
     "identifier": [ 
         {
@@ -305,11 +305,11 @@ POST [BASE]/Organization
 }
 ```
 
-#### Scénario 3 : Création d'une offre directement rattachée à l'établissement
+#### [spécifique serveur] Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement
 
-**Description du scénario :** Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
+**Description du scénario :** Un établissement ajoute une offre opérationnelle couvrant une autre zone d'intervention que les offres opérationnelles précédemment enregistrées.
 
-**Prérequis :** Connaître les identifiants techniques de l'établissement dont fait partie l'offre et de son lieu de réalisation.
+**Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (XXX et YYY).
 
 **Requête :**
 
@@ -319,15 +319,15 @@ POST [BASE]/HealthcareService
 	"resourceType": "HealthcareService",
     "name": "Services à domicile quiétude Bois Colombes",
     "providedBy": {
-        "reference": "Organization/id"
+        "reference": "Organization/XXX"
     },
     "location": [
         {
-            "reference": "Location/id"
+            "reference": "Location/YYY"
         }
     ],
     "identifier": {
-        "value": "XXX",
+        "value": "ZZZ",
     },
     "category": {
         "coding": {
@@ -530,11 +530,11 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### Scénario 4 : Création d'un pôle
+#### [spécifique serveur] Scénario 4 : Création d'un pôle
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
-**Prérequis :** Connaître l'identifiant technique de l'établissement dont fait partie le pôle.
+**Prérequis :** L'établissement dont fait partie le pôle à créer existe et son identifiant est connu (XXX).
 
 **Requête :**
 
@@ -544,11 +544,11 @@ POST [BASE]/Organization
 	"resourceType": "Organization",
     "name": "Pôle Chirurgical B",
     "partOf": {
-        "reference": "Organization/id"
+        "reference": "Organization/XXX"
     },
     "identifier": [
         {
-            "value": "XXX",
+            "value": "ZZZ",
             "type": {
                 "coding": {
                     "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
@@ -577,11 +577,11 @@ POST [BASE]/Organization
 }
 ```
 
-#### Scénario 5 : Création d'un service
+#### [spécifique serveur] Scénario 5 : Création d'un service
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un service.
 
-**Prérequis :** Connaître l'identifiant technique de l'établissement dont fait partie le service.
+**Prérequis :** L'établissement dont fait partie le service à créer existe et son identifiant est connu (XXX).
 
 **Requête :**
 
@@ -591,11 +591,11 @@ POST [BASE]/Organization
 	"resourceType": "Organization",
     "name": "Tête et Cou",
     "partOf": {
-        "reference": "Organization/id"
+        "reference": "Organization/XXX"
     },
     "identifier": [
         {
-            "value": "XXX",
+            "value": "ZZZ",
             "type": {
                 "coding": {
                     "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
@@ -624,11 +624,11 @@ POST [BASE]/Organization
 }
 ```
 
-#### Scénario 6 : Création d'une unité fonctionnelle
+#### [spécifique serveur] Scénario 6 : Création d'une unité fonctionnelle
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée une unité fonctionnelle.
 
-**Prérequis :** Connaître l'identifiant technique de l'établissement dont fait partie l'unité fonctionelle.
+**Prérequis :** L'établissement dont fait partie l'unité fonctionnelle à créer existe et son identifiant est connu (XXX).
 
 **Requête :**
 
@@ -638,11 +638,11 @@ POST [BASE]/Organization
 	"resourceType": "Organization",
     "name": "Neurochirurgie",
     "partOf": {
-        "reference": "Organization/id"
+        "reference": "Organization/XXX"
     },
     "identifier": [
         {
-            "value": "XXX",
+            "value": "ZZZ",
             "type": {
                 "coding": {
                     "system": "https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre",
@@ -671,11 +671,11 @@ POST [BASE]/Organization
 }
 ```
 
-#### Scénario 7 : Création d'une offre dans une unité fonctionnelle préexistante
+#### [spécifique serveur] Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante
 
-**Description du scénario :** Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
+**Description du scénario :** Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
 
-**Prérequis :** Connaître les identifiants techniques de l'unité fonctionnelle dont fait partie l'offre et de son lieu de réalisation.
+**Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (XXX et YYY).
 
 **Requête :**
 
@@ -685,15 +685,15 @@ POST [BASE]/HealthcareService
 	"resourceType": "HealthcareService",
     "name": "Hospitalisation complète de Neurochirurgie",
     "providedBy": {
-        "reference": "Organization/id"
+        "reference": "Organization/XXX"
     },
     "location": [
         {
-            "reference": "Location/id"
+            "reference": "Location/YYY"
         }
     ],
     "identifier": {
-        "value": "XXX"
+        "value": "ZZZ"
     },
     "type": {
         "coding": {
@@ -740,8 +740,8 @@ POST [BASE]/HealthcareService
         "extension": {
             "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
             "valueCodeableConcept": {
-                "code": "02",
                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR",
+                "code": "02",
                 "display": "Horaire de fonctionnement"
             }
         }
@@ -790,8 +790,8 @@ POST [BASE]/HealthcareService
                         {
                             "url": "ror-telecom-communication-channel",
                             "valueCodeableConcept": {
-                                "code": "2",
                                 "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
+                                "code": "2",
                                 "display": "Téléphone fixe"
                             }
                         },
@@ -802,8 +802,8 @@ POST [BASE]/HealthcareService
                         {
                             "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
                             "valueCodeableConcept": {
-                                "code": "1",
                                 "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                                "code": "1",
                                 "display": "Accès libre"
                             }
                         }
@@ -815,7 +815,138 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### Scénario 8 : Création d'un professionnel
+#### [spécifique serveur] Scénario 8 : Création d'une offre opérationnelle de ville
+
+**Description du scénario :** A la suite d'un adossement à l'annuaire, le ROR national crée l'offre opérationnelle d'un cabinet de ville.
+
+**Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (XXX et YYY).
+
+**Requête :**
+
+```json
+POST [BASE]/HealthcareService
+{	
+	"resourceType": "HealthcareService",
+    "name": "Cabinet du Dr Julie JOURDIN",
+    "providedBy": {
+        "reference": "Organization/XXX"
+    },
+    "location": [
+        {
+            "reference": "Location/YYY"
+        }
+    ],
+    "identifier": {
+        "value": "ZZZ"
+    },
+    "type": {
+        "coding": {
+            "system": "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR",
+            "code": "05", 
+            "display": "Ville"
+        }
+    },
+    "specialty": [
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                "code": "437", 
+                "display": "Médecine générale"
+            }
+        }
+    ],
+    "characteristic": [
+        {
+            "coding": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR",
+                "code": "32", 
+                "display": "Consultation (CS)"
+            }
+        }
+    ],
+    "availableTime": {
+        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
+        "availableStartTime": "09:00:00",
+        "availableEndTime": "19:00:00",
+        "extension": {
+            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+            "valueCodeableConcept": {
+                "system": "https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR",
+                "code": "07",
+                "display": "Horaire de consultation sur RDV"
+            }
+        }
+    },
+    "extension": [
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+			"valueDateTime": "2023-12"
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
+			"valueBoolean": true
+		},
+        {
+			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
+			"extension": {
+                "url": "ageRange",
+                "valueRange": {
+                    "low": "0",
+                    "high": "120"
+                }
+            }
+		},
+        { 
+            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
+            "extension": [
+                {
+                    "url": "purposeContact",
+                    "valueCodeableConcept": {
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR",
+                        "code": "02",
+                        "display": "Prise de rendez-vous"
+                    }
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level",
+                    "valueCodeableConcept": {
+                        "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                        "code": "1",
+                        "display": "Accès libre"
+                    }
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact",
+                    "extension": [
+                        {
+                            "url": "ror-telecom-communication-channel",
+                            "valueCodeableConcept": {
+                                "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
+                                "code": "2",
+                                "display": "Téléphone fixe"
+                            }
+                        },
+                        {
+                            "url": "telecomAddress",
+                            "valueString": "01.01.01.01.01"
+                        },
+                        {
+                            "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                            "valueCodeableConcept": {
+                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                                "code": "1",
+                                "display": "Accès libre"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
+
+#### [spécifique serveur] Scénario 9 : Création d'un professionnel
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute un professionnel.
 
@@ -868,11 +999,11 @@ POST [BASE]/Practitioner
 }
 ```
 
-#### Scénario 9 : Création d'une situation opérationnelle
+#### [spécifique serveur] Scénario 10 : Création d'une situation opérationnelle
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 
-**Prérequis :** Connaître les identifiants techniques du professionnel et de l'offre lié à la situation opérationnelle.
+**Prérequis :** Le professionnel et l'offre opérationnelle liés à la siutation opérationnelle à créer existent et leurs identifiants respectifs sont connus (XXX et YYY).
 
 **Requête :**
 
@@ -885,10 +1016,10 @@ POST [BASE]/PractitionerRole
         "given": "Mylène"
     },
     "practitioner": {
-        "reference": "Practitioner/id"
+        "reference": "Practitioner/XXX"
     },
     "healthcareService": {
-        "reference": "HealthcareService/id"
+        "reference": "HealthcareService/YYY"
     },
     "identifier": {
         "value": "11102379616",
