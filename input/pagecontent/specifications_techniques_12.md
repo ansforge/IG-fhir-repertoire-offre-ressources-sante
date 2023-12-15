@@ -163,7 +163,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité géographique.
 
-**Prérequis :** : Connaître l'identifiant technique de l'entité juridique dont fait partie l'entité géographique.
+**Prérequis :** Connaître l'identifiant technique de l'entité juridique dont fait partie l'entité géographique.
 
 **Requête :**
 
@@ -309,7 +309,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Un établissement ajoute une offre couvrant une autre zone d'intervention que les offres précédemment enregistrées.
 
-**Prérequis :** : Connaître les identifiants techniques de l'établissement dont fait partie l'offre et de son lieu de réalisation.
+**Prérequis :** Connaître les identifiants techniques de l'établissement dont fait partie l'offre et de son lieu de réalisation.
 
 **Requête :**
 
@@ -534,7 +534,7 @@ POST [BASE]/HealthcareService
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
-**Prérequis :** : Connaître l'identifiant technique de l'établissement dont fait partie le pôle.
+**Prérequis :** Connaître l'identifiant technique de l'établissement dont fait partie le pôle.
 
 **Requête :**
 
@@ -581,7 +581,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un service.
 
-**Prérequis :** : Connaître l'identifiant technique de l'établissement dont fait partie le service.
+**Prérequis :** Connaître l'identifiant technique de l'établissement dont fait partie le service.
 
 **Requête :**
 
@@ -628,7 +628,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée une unité fonctionnelle.
 
-**Prérequis :** : Connaître l'identifiant technique de l'établissement dont fait partie l'unité fonctionelle.
+**Prérequis :** Connaître l'identifiant technique de l'établissement dont fait partie l'unité fonctionelle.
 
 **Requête :**
 
@@ -675,7 +675,7 @@ POST [BASE]/Organization
 
 **Description du scénario :** Un établissement ajoute une offre de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
 
-**Prérequis :** : Connaître les identifiants techniques de l'unité fonctionnelle dont fait partie l'offre et de son lieu de réalisation.
+**Prérequis :** Connaître les identifiants techniques de l'unité fonctionnelle dont fait partie l'offre et de son lieu de réalisation.
 
 **Requête :**
 
@@ -872,7 +872,7 @@ POST [BASE]/Practitioner
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 
-**Prérequis :** : Connaître les identifiants techniques du professionnel et de l'offre lié à la situation opérationnelle.
+**Prérequis :** Connaître les identifiants techniques du professionnel et de l'offre lié à la situation opérationnelle.
 
 **Requête :**
 
