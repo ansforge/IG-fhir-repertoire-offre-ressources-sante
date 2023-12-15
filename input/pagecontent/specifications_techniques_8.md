@@ -149,7 +149,7 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&organization.price-amount-value=ltX&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&_sort=-organization.price-validity-start-date&_include=Healthcareservice:location
+GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&organization.price-amount-value=ltX&_sort=-organization.price-validity-start-date&_include=Healthcareservice:location
 ```
 
 **Requête expliquée :**
@@ -157,7 +157,6 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 ```sh
 GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02 #critère de recherche sur le type de tarif
 &organization.price-amount-value=ltX #critère de recherche sur la valeur du montant 
-&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR #critère de recherche sur la devise du montant 
 &_sort=-organization.price-validity-start-date #modificateur de requête pour trier par date de début de validité décroissante (du plus récent au moins récent)
 &_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
@@ -170,7 +169,7 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&organization.price-amount-value=leX&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&organization.price-residential-type=https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03&organization.special-price=https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03&_include=Healthcareservice:location
+GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&organization.price-amount-value=leX&organization.price-residential-type=https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03&organization.special-price=https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03&_include=Healthcareservice:location
 ```
 
 **Requête expliquée :**
@@ -178,7 +177,6 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 ```sh
 GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02 #critère de recherche sur le type de tarif
 &organization.price-amount-value=ltX #critère de recherche sur la valeur du montant 
-&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR #critère de recherche sur la devise du montant 
 &organization.price-residential-type=https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03 #critère de recherche le type habitation
 &organization.special-price=https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03 #critère de recherche sur les conditions tarifaires
 &_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
@@ -191,7 +189,7 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03&organization.price-amount-value=ltX&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&organization.price-dependency-level=https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02&organization.price-welcome-type=https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02&_include=Healthcareservice:location
+GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03&organization.price-amount-value=ltXR&organization.price-dependency-level=https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02&organization.price-welcome-type=https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02&_include=Healthcareservice:location
 ```
 
 **Requête expliquée :**
@@ -199,7 +197,6 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 ```sh
 GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03 #critère de recherche sur le type de tarif
 &organization.price-amount-value=ltX #critère de recherche sur la valeur du montant 
-&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR #critère de recherche sur la devise du montant 
 &organization.price-dependency-level=https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02 #critère de recherche le niveau de dépendance
 &organization.price-welcome-type=https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02 #critère de recherche la temporalité d’accueil
 &_include=Healthcareservice:location #inclus les Location qui sont référencés par les HealthcareService
