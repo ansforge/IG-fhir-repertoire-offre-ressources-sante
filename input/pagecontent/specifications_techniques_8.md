@@ -130,72 +130,15 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de **StructureDefinition-ror-healthcareservice** applicables à ce cas d'usage sont :
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [StructureDefinition-ror-healthcareservice](search_param.html#structuredefinition-ror-healthcareservice)
+-    [Structuredefinition-ror-organization](search_param.html#structuredefinition-ror-organization) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `organization.[NOM CRITERE]`)
 
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>identifier</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-organization), de **StructureDefinition-ror-organization** applicables à ce cas d'usage sont :
-
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>price-type</p>
-</td>
-<td width="230">
-<p>price-amount-value</p>
-</td>
-<td width="230">
-<p>price-amount-currency</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>price-residential-type</p>
-</td>
-<td width="230">
-<p>special-price</p>
-</td>
-<td width="230">
-<p>price-dependency-level</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>price-welcome-type</p>
-</td>
-<td width="230">
-<p>price-validity-start-date</p>
-</td>
-<td width="230">
-<p>price-unit</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au [chainage](http://hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxe suivante : `organization.[NOM CRITERE]`
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits dans le [paragraphe dédié](modifiers.html) applicables à ce cas d'usage sont :
--   \_include
--   \_sort
--   Tous les prefixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 
