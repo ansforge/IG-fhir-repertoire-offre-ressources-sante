@@ -91,8 +91,8 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p>POST [base]/[type] {?_format=[mime-type]}</p>
-<p>PATCH [base]/Location/[id]{&amp;_format=[mime-type]}</p>
+<p><code>POST [base]/[type] {?_format=[mime-type]}</code></p>
+<p><code>PATCH [base]/Location/[id]{&amp;_format=[mime-type]}</code></p>
 </td>
 </tr>
 </tbody>

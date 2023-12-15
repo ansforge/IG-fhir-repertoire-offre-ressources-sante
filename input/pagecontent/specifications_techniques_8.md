@@ -92,7 +92,7 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="589">
-<p>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</p>
+<p><code>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>

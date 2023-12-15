@@ -181,7 +181,7 @@ HTTP 200 OK
   Location4 (match) UE3(include)
 ```
 
-#### Scénario 1bis : Données capacitaires sur une région
+#### Scénario 1bis : Données capacitaires sur une région <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région afin de mettre à jour son système. Par exemple en Bretagne qui est composé des départements 22,29,35,56. 
 
