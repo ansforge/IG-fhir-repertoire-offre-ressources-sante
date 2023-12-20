@@ -181,7 +181,7 @@ PATCH [BASE]/Organization/4569
                         },
                         "purpose": {
                             "coding": {
-                                "system": "https://mos.esante.gouv.fr/NOS/JDV_J220-FonctionContact-ROR/FHIR/JDV-J220-FonctionContact-ROR",
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R251-FonctionContact/FHIR/TRE-R251-FonctionContact",
                                 "code": "01",
                                 "display": "Directeur"
                             }
@@ -190,7 +190,7 @@ PATCH [BASE]/Organization/4569
                             "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
                             "valueCodeableConcept": {
                                 "coding": {
-                                    "system": "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
+                                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
                                     "code": "2",
                                     "display": "Accès restreint"
                                 }
@@ -203,7 +203,7 @@ PATCH [BASE]/Organization/4569
                                     "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"
                                     "valueCodeableConcept": {
                                         "coding": {
-                                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR",
+                                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication",
                                             "code": "2",
                                             "display": "Téléphone fixe"
                                         }
@@ -213,7 +213,7 @@ PATCH [BASE]/Organization/4569
                                     "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
                                     "valueCodeableConcept": {
                                         "coding": {
-                                            "system": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
                                             "code": "2",
                                             "display": "Accès restreint"
                                         }
@@ -333,7 +333,7 @@ PATCH [BASE]/PractitionerRole/753
                     "name": "value",
                     "valueCodeableConcept": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J209-TypeSavoirFaire-ROR/FHIR/JDV-J209-TypeSavoirFaire-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire",
                             "code": "S",
                             "display": "Spécialité ordinale"
                         }
@@ -360,7 +360,7 @@ PATCH [BASE]/PractitionerRole/753
                     "name": "value",
                     "valueCodeableConcept": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J210-SpecialiteOrdinale-ROR/FHIR/JDV-J210-SpecialiteOrdinale-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
                             "code": "SI02",
                             "display": "Exercice infirmier en pratique avancée oncologie et hémato-oncologie (SI)"
                         }
@@ -404,7 +404,7 @@ PATCH [BASE]/HealthcareService/741
                     "name": "value",
                     "valueCodeableConcept": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique",
                             "code": "316",
                             "display": "Neurochirurgie éveillée avec mapping cortical"
                         }
@@ -448,7 +448,7 @@ PATCH [BASE]/HealthcareService/852
                     "name": "value",
                     "valueCodeableConcept": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle",
                             "code": "040",
                             "display": "Diététique et Nutrition"
                         }
@@ -492,7 +492,7 @@ PATCH [BASE]/HealthcareService/963
                     "name": "value",
                     "valueCodeableConcept": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle",
                             "code": "040",
                             "display": "Diététique et Nutrition"
                         }
@@ -519,7 +519,7 @@ PATCH [BASE]/HealthcareService/963
                     "name": "value",
                     "valueCodeableConcept": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle",
                             "code": "483",
                             "display": "Médecine générale à orientation Diabétologie"
                         }
@@ -546,7 +546,7 @@ PATCH [BASE]/HealthcareService/963
                     "name": "value",
                     "valueCodeableConcept": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique",
                             "code": "0628",
                             "display": "Education thérapeutique du patient non labellisée ou psychoéducation"
                         },
@@ -577,7 +577,7 @@ PATCH [BASE]/HealthcareService/963
                     "name": "value",
                     "value": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique",
                             "code": "1181",
                             "display": "Diagnostic par dermatoscope"
                         },
@@ -608,7 +608,7 @@ PATCH [BASE]/HealthcareService/963
                     "name": "value",
                     "value": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique",
                             "code": "1270",
                             "display": "Tamponnement nasal antérieur"
                         },
@@ -639,7 +639,7 @@ PATCH [BASE]/HealthcareService/963
                     "name": "value",
                     "valueCodeableConcept": {
                         "coding": {
-                            "system": "https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR",
+                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique",
                             "code": "1282",
                             "display": "Programme d'ETP labellisée - Diabète"
                         },
