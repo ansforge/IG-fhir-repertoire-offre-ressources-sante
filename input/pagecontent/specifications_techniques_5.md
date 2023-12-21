@@ -1,8 +1,5 @@
-<!-- ## Signalement d’anomalie -->
-
-<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-Cette partie de la spécification est en cours de construction.
-</p>
+<!-- ## Signalement d’anomalie
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code> -->
 
 ### Construction de la requête de base
 
@@ -43,7 +40,7 @@ Cette partie de la spécification est en cours de construction.
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#create et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#create">https://www.hl7.org/fhir/R4/http.html#create</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
@@ -87,9 +84,11 @@ POST [BASE]/Task
 {	
 	"resourceType": "Task",
 	"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
+	... // ajouter les autres éléments required dans le body
 	"code": [ { "system": "JDV XXX", "value": "12345" } ],
 	"description": "description de notre ano",
 	"focus": "URL HealthcareService"
+	... //ajouter les autres éléments non requis que vous souhaitez transmettre dans le body
 }
 ```
 

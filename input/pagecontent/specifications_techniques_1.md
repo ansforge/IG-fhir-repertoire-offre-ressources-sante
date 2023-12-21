@@ -85,146 +85,16 @@ Plus de précision sur la spécification FHIR :
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-location), de
-    **StructureDefinition-ror-location** applicables à ce cas d'usage
-    sont :
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [StructureDefinition-ror-location](search_param.html#structuredefinition-ror-location)
+-    [StructureDefinition-ror-healthcareservice](search_param.html#structuredefinition-ror-healthcareservice) (critères de recherche applicables à la ressource Location, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :`_has:HealthcareService:location:[NOM CRITERE]`)
+-    [StructureDefinition-ror-task](search_param.html#structuredefinition-ror-task) (critères de recherche applicables à la ressource Location, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :`_has:HealthcareService:location:[NOM CRITERE]`)
 
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>_lastUpdated</p>
-</td>
-<td width="230">
-<p>capacity-closing-type</p>
-</td>
-<td width="230">
-<p>identifier</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>address-postalcode</p>
-</td>
-<td width="230">
-<p>crisis-type</p>
-</td>
-<td width="230">
-<p>limit-value</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>address-city</p>
-</td>
-<td width="230">
-<p>capacity-update-date*</p>
-</td>
-<td width="230">
-<p>residential-type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>additional-bed-type</p>
-</td>
-<td width="230">
-<p>equipment-type</p>
-</td>
-<td width="230">
-<p>residential-number</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>capacity-status</p>
-</td>
-<td width="230">
-<p>equipment-feature</p>
-</td>
-<td width="230">
-<p>temporary-assignement</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>capacity-type</p>
-</td>
-<td width="230">
-<p>gender-capacity-available</p>
-</td>
-<td width="230">
-<p>temporality-capacity</p>
-</td>
-</tr>
-</tbody>
-</table>
-*<i>Critères de recherche qui seront applicables ultérieurement</i>
-
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
-    **StructureDefinition-ror-healthcareservice** applicables à ce cas
-    d'usage sont :
-
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>Identifier</p>
-</td>
-<td width="230">
-<p>location</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-Ces critères de recherche sont applicables à la ressource Location,
-grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
-`_has:HealthcareService:location:[NOM CRITERE]`
-
-- 	Les critères de recherche, définis au paragraphe 4.6, de **StructureDefinition-ror-task applicables** à ce cas d’usage sont :
-<table>
-<tbody>
-<tr>
-<td width="228">
-<p>business-status*</p>
-</td>
-<td width="226">
-<p>_id</p>
-</td>
-<td width="226">
-<p>_lastUpdated*</p>
-</td>
-</tr>
-<tr>
-<td width="228">
-<p>identifier*</p>
-</td>
-<td width="226">
-<p>authored-on*</p>
-</td>
-<td width="226">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-*<i>Critères de recherche qui seront applicables ultérieurement</i>
-
-Ces critères de recherche sont applicables à la ressource Location,
-grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
-`_has:Location:focus:[NOM CRITERE]`
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits au [paragraphe dédié](specifications_techniques.html#param%C3%A8tres-et-modificateurs-de-requ%C3%AAtes-fhir-1)
-applicables à ce cas d'usage sont :
-
--   \_revinclude, \_include, :iterate
-
--   \_has, \_count, \_sort
-
--   Tous les prefixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemples de requêtes
 
@@ -255,7 +125,7 @@ HTTP 200 OK
   Location4 (match) UE3(include)
 ```
 
-#### Scénario 1bis : Données capacitaires sur une région
+#### Scénario 1bis : Données capacitaires sur une région <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région afin de mettre à jour son système. Par exemple en Bretagne qui est composé des départements 22,29,35,56. 
 

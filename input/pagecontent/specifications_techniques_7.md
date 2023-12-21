@@ -1,8 +1,5 @@
-<!-- ## 3.7	Consultation d’anomalie -->
-
-<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-Cette partie de la spécification est en cours de construction.
-</p>
+<!-- ## 3.7	Consultation d’anomalie
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>-->
 
 ### Construction de la requête de base
 
@@ -77,120 +74,23 @@ Plus de précision sur la spécification FHIR :
 
 ### Critères de recherche
 
--	Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-location), de **StructureDefinition-ror-location** applicables à ce cas d’usage sont :
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>_tag</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>	
-Ces critères de recherche sont applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Location:[NOM CRITERE]`
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [StructureDefinition-ror-task](search_param.html#structuredefinition-ror-task)
+-    [StructureDefinition-ror-healthcareservice](search_param.html#structuredefinition-ror-healthcareservice) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:HealthcareService:[NOM CRITERE]`)
+-    [Structuredefinition-ror-organization](search_param.html#structuredefinition-ror-organization) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Organization:[NOM CRITERE]`)
+-    [StructureDefinition-ror-location](search_param.html#structuredefinition-ror-location) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Location:[NOM CRITERE]`)
+-    [StructureDefinition-ror-practioner](search_param.html#structuredefinition-ror-practioner) (critères de recherche applicables à la ressource ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Practitioner:[NOM CRITERE]`)
+-    [StructureDefinition-ror-practionerrole](search_param.html#structuredefinition-ror-practionerrole) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:PractitionerRole:[NOM CRITERE]`)
 
--	Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de **StructureDefinition-ror-healtchareservice** applicables à ce cas d’usage sont : 
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>_tag</p>
-</td>
-<td width="227">
-<p>identifier</p>
-</td>
-<td width="227">
-<p>type</p>
-</td>
-</tr>
-</tbody>
-</table>
-Ces critères de recherche sont applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:HealthcareService:[NOM CRITERE]`
-
--	Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-organization), de **StructureDefinition-ror-organization** applicables à ce cas d’usage sont : 
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>_tag</p>
-</td>
-<td width="227">
-<p>identifier</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-Ces critères de recherche sont applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Organization:[NOM CRITERE]`
--	Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-practitioner), de **StructureDefinition-ror-practitioner** applicables à ce cas d’usage sont : 
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>_tag</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>		
-Ces critères de recherche sont applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Practitioner:[NOM CRITERE]`
-
-► Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-practitionerrole), de **StructureDefinition-ror-practitionerrole** applicables à ce cas d’usage sont : 
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>_tag</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>	
-Ces critères de recherche sont applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:PractitionerRole:[NOM CRITERE]`
-
-►	Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-task), de **StructureDefinition-ror-task** applicables à ce cas d’usage sont : 
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>_lastUpdated*</p>
-</td>
-<td width="230">
-<p>identifier*</p>
-</td>
-<td width="230">
-<p>focus*</p>
-</td>
-</tr>
-</tbody>
-</table>
-*<i>Critères de recherche qui seront applicables ultérieurement</i>
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Dans ce cas d’usage, nous n’utilisons aucun paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html).
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Consultation du statut d’une anomalie
+#### Scénario 1 : Consultation du statut d’une anomalie <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un responsable qualité ou le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
 
@@ -205,7 +105,7 @@ Dans ce cas d’usage, nous n’utilisons aucun paramètres et modificateurs de 
 GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’anomalie
 ```
 
-#### Scénario 2 : Consultation de la liste des anomalies
+#### Scénario 2 : Consultation de la liste des anomalies <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d'un élément dont l’identifiant est XXX.
 
@@ -219,7 +119,7 @@ GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l�
 GET [BASE]/Task?focus:HealthcareService.identifier=XXX #critère de recherche sur l’identifiant de l’élément référencé par l’anomalie
 ```
 
-#### Scénario 3 : Consultation de la liste des anomalies sur un périmètre
+#### Scénario 3 : Consultation de la liste des anomalies sur un périmètre <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un responsable qualité souhaite consulter la liste des anomalies sur son périmètre : région = XXX.
 

@@ -1,4 +1,5 @@
-A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants :
+<!-- Page specs fonctionnelles -->
+A ce jour, le guide d'implémentation de l'API FHIR du ROR a pour vocation à répondre aux cas d'usage suivants :
 -   Consultation des données capacitaires en lits et places
 -   Consultation de l'offre (extraction)
 -   Recherche d'offre sur critères principaux
@@ -10,6 +11,8 @@ A ce jour, le webservice a pour vocation de répondre aux cas d'usage suivants 
 -   Mise à jour d'anomalie
 -   Consultation d'anomalie
 -   Consultation d'indicateurs de pilotage
+
+**La maturité d'implémentation (cf [guide de lecture du guide](index.html#informations-sur-ce-guide-dimplémentation)) pour répondre à ces cas d'usage est indiqué dans les spécifications techniques.**
   
 <blockquote class="stu-note">
 <p>
@@ -28,9 +31,9 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
 </p>
 </blockquote>
 
-Pour les cas d'usage couverts par ce webservice :
+Pour les cas d'usage couverts par ce guide d'implémentation :
 -   Les préconditions sont :
-    -   Le système consommateur dispose des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé) pour accéder aux             données du ROR National.   
+    -   Le système consommateur dispose des points d'accès et des moyens d'authentification (authentification mTLS avec des certificats IGC-Santé) pour accéder aux             données du ROR National.
     -   Le système consommateur peut uniquement effectuer les recherches autorisées par son profil d'accès aux données. Plus d'information [ici](https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf) .
 -   Les postconditions sont :
     -   L'exécution des transactions ne provoquera aucune modification sur les données sources extraites.
@@ -130,11 +133,11 @@ Il y a deux cas possibles :
 
 #### Scénarios
 
--   Scénario 1 : Extraction complète synchrone <code><span style="color: #ff0000;">deprecated</span></code>
+-   Scénario 1 : Extraction complète synchrone
     -   Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
--   Scénario 1 bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
+-   Scénario 1 bis : Extraction complète asynchrone
     -   Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie).
--   Scénario 1 ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
+-   Scénario 1 ter : Extraction complète asynchrone par région
     -   Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre régionale.
   
 -   Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
