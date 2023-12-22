@@ -48,6 +48,8 @@ Source:   RORPractitioner
 Id:       specmetier-to-RORPractitioner
 Title:    "Spécification métier vers le profil ROR Practitioner"
 * -> "Professionnel"
-* identifier -> "idNat_PS : [1..1] Identifiant"
-* telecom -> "boiteLettreMSS : [0..*] BoiteLettreMSS"
-* name.prefix -> "civilite : [0..1] Code"
+* identifier -> "idNat_PS"
+* identifier.value -> "idNat_PS/valeur"
+* identifier.system -> "idNat_PS/systeme"
+* telecom -> "boiteLettreMSS"
+* name.prefix -> "civilite"

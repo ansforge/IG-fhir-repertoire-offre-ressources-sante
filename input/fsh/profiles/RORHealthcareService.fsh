@@ -172,3 +172,11 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * extension[ror-healthcareservice-patient-type] ^short = "publicPrisEnCharge (Patientele) : Ensemble de personnes qui présentent des caractéristiques psychologiques, intellectuelles, physiques, psycho-motrices, comportementales leur permettant de bénéficier de la prestation décrite"
 * extension[ror-healthcareservice-contact] ^short = "contact (OffreOperationnelle) : Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+
+Mapping:  ConceptMetier_RORHealthcareService
+Source:   RORHealthcareService
+Id:       specmetier-to-RORHealthcareService
+Title:    "Spécification métier vers le profil ROR HealthcareService"
+* -> "OffreOperationnelle"
+* specialty[operationalActivity] -> "activiteOperationnelle"
+* extension[ror-territorial-division] -> "zoneIntervention"
