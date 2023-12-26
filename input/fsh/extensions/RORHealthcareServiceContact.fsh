@@ -18,3 +18,15 @@ Description: "Extension créée dans le cadre du ROR pour décrire la personne o
 * extension[purposeContact].value[x] only CodeableConcept
 * extension[purposeContact].valueCodeableConcept from $JDV-J221-NatureContact-ROR (required)
 
+Mapping:  ConceptMetier_RORHealthcareServiceContact
+Source:   RORHealthcareServiceContact
+Id:       specmetier-to-RORHealthcareServiceContact
+Title:    "Spécification métier vers l'extension ROR HealthcareServiceContact"
+* -> "Contact"
+* extension[name] -> "nom"
+* extension[RORContactFunctionContact] -> "fonctionContact"
+* extension[purposeContact] -> "natureContact"
+* extension[description] -> "description"
+* extension[RORConfidentialityLevel] -> "niveauConfidentialite"
+* extension[RORHealthcareServiceContactTelecom] -> "telecom"
+

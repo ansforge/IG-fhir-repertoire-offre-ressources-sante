@@ -14,3 +14,13 @@ Description: "Extension créée dans le cadre du ROR pour décrire un ensemble d
 * extension[ageRange].value[x] only Range
 * extension[ageRange].value[x].low 1..1
 * extension[ageRange].value[x].high 1..1
+
+
+Mapping:  ConceptMetier_RORHealthcareServicePatientType
+Source:   RORHealthcareServicePatientType
+Id:       specmetier-to-RORHealthcareServicePatientType
+Title:    "Spécification métier vers l'extension ROR HealthcareServicePatientType"
+* -> "Patientele"
+* extension[supportedPatientInfo] -> "publicPrisEnCharge"
+* extension[ageRange].value[x].low -> "ageMin"
+* extension[ageRange].value[x].high -> "ageMax"

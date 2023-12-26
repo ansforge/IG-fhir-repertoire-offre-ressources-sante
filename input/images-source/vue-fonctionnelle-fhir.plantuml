@@ -17,16 +17,20 @@ rectangle "Vue fonctionnelle ROR" {
 
     rectangle "Situation opérationnelle" as SO #LightSeaGreen;line:Black;text:Black
 
+    rectangle "Exercice professionnel" as Ex  #LightSeaGreen;line:Black;text:Black
+
 }
 
 'Liens entre éléments
-EJ -- EG 
-EG - OI
-EG -- Offre
-OI -- Offre
-Offre -- Lieu
-Offre -  SO 
-SO - Professionnel
+EJ "1"--"1..*" EG : "      " 
+EG "1..*"-"*" OI : "          "
+EG "0..1"--"*" Offre : "      "
+OI "0..1"--"1..*" Offre
+OI "0..1"-"*" OI
+Offre "1..*"-"1..*" Lieu : "          "
+SO "*"-"1" Offre
+Ex "1"--"1..*" SO
+Professionnel "1"--"1..*" Ex
 
 'Légende
 

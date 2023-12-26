@@ -12,3 +12,14 @@ Description: "Extension créée dans le cadre du ROR pour les télécommunicatio
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 and
     telecomAddress 1..1
 * extension[telecomAddress].value[x] only string
+
+
+Mapping:  ConceptMetier_RORHealthcareServiceContactTelecom
+Source:   RORHealthcareServiceContactTelecom
+Id:       specmetier-to-RORHealthcareServiceContactTelecom
+Title:    "Spécification métier vers l'extension RORHealthcareServiceContactTelecom"
+* -> "Telecommunication"
+* extension[RORTelecomCommunicationChannel] -> "canal"
+* extension[RORTelecomUsage] -> "utilisation"
+* extension[RORTelecomConfidentialityLevel] -> "niveauConfidentialite"
+* extension[telecomAddress] -> "adresseTelecom"
