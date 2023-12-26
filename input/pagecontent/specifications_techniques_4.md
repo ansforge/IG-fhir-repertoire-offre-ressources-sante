@@ -136,19 +136,24 @@ GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 ```
 #### Scénario 3 : Recherche sur un critère de l'équipement
 
-**Description du scénario :** un consommateur cherche une offre dont l'activité opérationnelle = chirurgie traumatologique (025 de
+**Description du scénario :** Un consommateur cherche une offre pour une activité opérationnelle donnée, et disposant d’équipement respectant certaines caractéristiques.
+
+un consommateur cherche une offre dont l'activité opérationnelle = chirurgie traumatologique (025 de
 TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à l\'obésité du patient (83 de TRE-R212-Equipement).
+
+**Exemple :** Recherche des offres de chirurgie traumatologique (activité opérationnelle « 025 - Chirurgie orthopédique et traumatologique »)
+proposant une table d’opération adaptée à l'obésité du patient adaptée à un patient de 200 kg (« 088 -Table de bloc opératoire obésité (poids entre 150 et 250 kg) – bariatrique » ; type caractéristique = « poids maximal » ; valeur limite > ou égal à 200 kg).
 
 **Requête :**
 
-`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83&_include=HealthcareService:location`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|88&location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001&location.limit-value=ge200&_include=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
-&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 #critère de recherche sur le lit réouvrable
-&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 #critère de recherche sur le lit fermé
-&location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025 #critère de recherche sur l’activité opérationnelle
+&location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|88 #critère de recherche sur le type d'équipement "table opératoire"
+&location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001 #critère de recherche sur le type de caractéristique limite "poids"
+&location.limit-value=ge200 #critère de recherche sur la valeur limite "200 kg"
 &_include=HealthcareService:location  #inclus les Location qui qui sont référencés par les HealthcareService
 ```
