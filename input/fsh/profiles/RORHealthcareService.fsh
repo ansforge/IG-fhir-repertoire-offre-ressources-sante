@@ -178,7 +178,7 @@ Source:   RORHealthcareService
 Id:       specmetier-to-RORHealthcareService
 Title:    "Spécification métier vers le profil ROR HealthcareService"
 * -> "OffreOperationnelle"
-* id -> "metadonnee.Identifiant"
+* id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "metadonnee.dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
