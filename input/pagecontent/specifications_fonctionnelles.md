@@ -207,7 +207,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     -   Un consommateur recherche les offres ayant (une catégorie d'établissement **OU** un type d'offre) **ET** un acte spécifique qu’il indique.
 
 -   Scenario 6 : Recherche à proximité géographique
-    -   Un consommateur cherche les offres ayant une activité opérationnelle, dans un périmètre géographique proche du lieu de résidence d\'un patient.
+    - Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d'un patient.
 
 -   Scenario 7 : Recherche sur une zone d'intervention
     -   Un consommateur cherche les offres proposées dans une commune faisant partie d\'une zone d\'intervention.

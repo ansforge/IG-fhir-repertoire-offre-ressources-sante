@@ -214,20 +214,21 @@ GET [BASE]/HealthcareService?_filter=((organization.type eq https://mos.esante.g
 ```
 #### Scénario 6 : Recherche à proximité géographique
 
-**Description du scénario :** un consommateur cherche les
-offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnelle) dans un périmètre géographique proche du lieu de résidence d'un patient = à YY km de (latitude,longitude).
+**Description du scénario :** Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d'un patient.
+
+**Exemple :** Recherche des offres caractérisées par l’activité opérationnelle « 013 – Cardiologie générale », située dans un rayon de 15 kilomètres autour de Saint-Herblain (code commune 44162)
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.near=latitude|longitude|YY|km&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013&location.near-insee-code=44162|15|km&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
-&location.near=latitude|longitude|YY|km #critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013 #critère de recherche sur l’activité opérationnelle
+&location.near-insee-code=44162|15|km #critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
@@ -298,7 +299,7 @@ Exemple :
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?intervention-zone=XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?intervention-zone=XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
@@ -318,7 +319,7 @@ GET [BASE]/HealthcareService?intervention-zone=XXX #critère de recherche sur la
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location.address-postalcode=XX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.address-postalcode=XX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
@@ -339,7 +340,7 @@ GET [BASE]/HealthcareService?location.address-postalcode=XX # critère de recher
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
@@ -359,7 +360,7 @@ GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY #critère de 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune|XX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune|XX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
@@ -379,7 +380,7 @@ GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|XX&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite|YY&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|XX&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite|YY&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
@@ -405,7 +406,7 @@ Cette partie de la spécification est en cours de construction.
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_has:Task:focus:business-status=https://mos.esante.gouv.fr/NOS/TRE_RXXX-StatutAnomalie/FHIR/TRE-RXXX-StatutAnomalie|2,10&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner&_revinclude=Task:focus
+GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&_has:Task:focus:business-status=https://mos.esante.gouv.fr/NOS/TRE_RXXX-StatutAnomalie/FHIR/TRE-RXXX-StatutAnomalie|2,10&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner&_revinclude=Task:focus
 ```
 
 **Requête expliquée :**
