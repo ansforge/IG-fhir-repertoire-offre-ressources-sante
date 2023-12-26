@@ -260,7 +260,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit disponible.
 
 -   Scenario 2 : Recherche sur un critère capacitaire #2
-    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit fermé réouvrable.
+    -   Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.
 
 -   Scenario 3 : Recherche sur un critère de l'équipement
     -   Un consommateur cherche une offre de chirurgie traumatologique proposant un appareil de radiologie adapté à l\'obésité du patient.

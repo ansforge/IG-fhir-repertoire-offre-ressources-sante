@@ -109,21 +109,24 @@ GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 
 #### Scénario 2 : Recherche un critère capacitaire #2
 
-**Description du scénario :** un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit réouvrable = 01 (TRE-R333-TypeFermetureCapacite)  et disposant d’un lit fermé = 05 (TRE-R330-TypeStatutCapacite) et disposant d’un nombre de lits supérieur à 0.
+**Description du scénario :** Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.
 
+**Exemple :** Recherche des offres de surveillance continue pédiatrique (activité opérationnelle « 391 – Surveillance continue spécialisée pédiatrique ») 
+et disposant d’un lit fermé ré-ouvrable (nature = lit ; statut = fermé ; type fermeture = ré-activable).
 
-**Requête :**
+**Requête :** 
 
-`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&location.nb-capacity=gt0&_include=HealthcareService:location`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|391&location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&location.nb-capacity=gt0&_include=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|391 #critère de recherche sur l’activité opérationnelle
+&location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01 # critère de recherche sur la capacité en "lit"
 &location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 #critère de recherche sur le lit réouvrable
 &location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 #critère de recherche sur le lit fermé
 &location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
-&_include=HealthcareService:location  #inclus les Location qui qui sont référencés par les HealthcareService
+&_include=HealthcareService:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
 #### Scénario 3 : Recherche sur un critère de l'équipement
 
