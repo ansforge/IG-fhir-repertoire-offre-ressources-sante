@@ -198,7 +198,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     - Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’une des valeurs recherchées par le consommateur.
 
 -   Scenario 3 : Recherche multicritères #1 -- ET
-    -   Un consommateur cherche les offres ayant un type d'offre **ET** une modalité d'accueil qu’il indique.
+    - Un consommateur cherche les offres ayant un type d’offre **ET** une modalité d’accueil qu’il indique.
 
 -   Scenario 4 : Recherche multicritères #2 -- OU
     -   Un consommateur cherche les offres ayant à un type d'offre  **OU** une activité opérationnelle qu’il indique.
