@@ -92,18 +92,24 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 #### Scénario 1 : Recherche sur un critère capacitaire #1
 
-**Description du scénario :** un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit disponible = 02 (TRE-R330-StatutCapacite) et disposant d’un nombre de lits supérieur à 0.
+**Description du scénario :** Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.
+
+**Exemples :** Recherche des offres de soins intensifs neuro-vasculaires (activité opérationnelle « 356 - Soins intensifs spécialisés neurologie vasculaire (USINV) »)
+et disposant d'un lit femme disponible (nature= lit ; statut = disponible ; temporalité = courant ; Genre = femme ; quantité >0).
 
 **Requête :**
 
-`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|02&location.nb-capacity=gt0&_include=HealthcareService:location`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01&location.gender-capacity-available=https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite|01&location.temporality-capacity=https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite|01&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|02&location.nb-capacity=gt0&_include=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
-&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|02 #critère de recherche sur la disponibilité d’un lit
-&location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|356 #critère de recherche sur l’activité opérationnelle
+&location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01 #critère de recherche sur la nature "lit"
+&location.gender-capacity-available=https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite|01 #critère de recherche sur le genre des lits "femme"
+&location.temporality-capacity=https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite|01 #critère de recherche sur la temporalité de la capacité "courant"
+&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|02 #critère de recherche sur un lit disponible
+&location.nb-capacity=gt0 #critère de recherche sur quantité de lits
 &_include=HealthcareService:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
 
@@ -125,7 +131,7 @@ GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 &location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01 # critère de recherche sur la capacité en "lit"
 &location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 #critère de recherche sur le lit réouvrable
 &location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 #critère de recherche sur le lit fermé
-&location.nb-capacity=gt0 #critère de recherche sur quantité de lits disponibles
+&location.nb-capacity=gt0 #critère de recherche sur quantité de lits
 &_include=HealthcareService:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
 #### Scénario 3 : Recherche sur un critère de l'équipement
