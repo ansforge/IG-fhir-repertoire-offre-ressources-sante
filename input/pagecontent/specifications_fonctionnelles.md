@@ -201,7 +201,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     - Un consommateur cherche les offres ayant un type d’offre **ET** une modalité d’accueil qu’il indique.
 
 -   Scenario 4 : Recherche multicritères #2 -- OU
-    -   Un consommateur cherche les offres ayant à un type d'offre  **OU** une activité opérationnelle qu’il indique.
+    - Un consommateur cherche les offres ayant un type d’offre **OU** une activité opérationnelle qu’il indique pour un patient d'âge donné.
 
 -   Scenario 5 : Recherche multicritères #3 -- ET/OU
     -   Un consommateur recherche les offres ayant (une catégorie d'établissement **OU** un type d'offre) **ET** un acte spécifique qu’il indique.
