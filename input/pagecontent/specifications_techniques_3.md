@@ -103,20 +103,22 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 #### Scénario 1 : Recherche sur un critère en saisissant une valeur
 
-**Description du scénario :** un consommateur cherche les offres ayant\ une activité opérationnelle = XXX.
+**Description du scénario :** Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’unique valeur recherchée par le consommateur.
+
+**Exemple :** Recherche des offres caractérisées par l’activité opérationnelle « 227 - Pédopsychiatrie infanto-juvénile »
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|227&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX #critère de recherche sur l’activité opérationnelle
-&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
-&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|227 #critère de recherche sur l’activité opérationnelle
+&_include=HealthcareService:organization #inclus les Organization référencées par HealthcareService 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
