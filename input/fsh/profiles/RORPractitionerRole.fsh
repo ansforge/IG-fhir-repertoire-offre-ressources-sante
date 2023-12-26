@@ -115,7 +115,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 Mapping:  ConceptMetier_RORPractitionerRole_ExercicePro
 Source:   RORPractitionerRole
 Id:       specmetier-to-RORPractitionerRole-exercicePro
-Title:    "Spécification métier vers le profil ROROrganization"
+Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
 * -> "ExerciceProfessionnel"
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
@@ -139,7 +139,7 @@ Title:    "Spécification métier vers le profil ROROrganization"
 Mapping:  ConceptMetier_RORPractitionerRole_SituationOp
 Source:   RORPractitionerRole
 Id:       specmetier-to-RORPractitionerRole-situationOp
-Title:    "Spécification métier vers le profil ROROrganization"
+Title:    "SituationOperationnelle du Modèle exposition ROR V3"
 * -> "SituationOperationnelle"
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"

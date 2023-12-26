@@ -115,7 +115,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 Mapping:  ConceptMetier_RORLocation
 Source:   RORLocation
 Id:       specmetier-to-RORLocation
-Title:    "Spécification métier vers le profil RORLocation"
+Title:    "Location du Modèle exposition ROR V3"
 * -> "LieuRealisationOffre"
 * id -> "metadonnee.Identifiant"
 * meta -> "metadonnee"

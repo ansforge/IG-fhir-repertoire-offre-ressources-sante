@@ -176,7 +176,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 Mapping:  ConceptMetier_RORHealthcareService
 Source:   RORHealthcareService
 Id:       specmetier-to-RORHealthcareService
-Title:    "Spécification métier vers le profil ROR HealthcareService"
+Title:    "HealthcareService du Modèle exposition ROR V3"
 * -> "OffreOperationnelle"
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"

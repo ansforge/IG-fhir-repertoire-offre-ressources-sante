@@ -46,7 +46,7 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 Mapping:  ConceptMetier_RORPractitioner
 Source:   RORPractitioner
 Id:       specmetier-to-RORPractitioner
-Title:    "Spécification métier vers le profil ROR Practitioner"
+Title:    "Practitioner du Modèle exposition ROR V3"
 * -> "Professionnel"
 * identifier -> "idNat_PS"
 * identifier.value -> "idNat_PS.valeur"
