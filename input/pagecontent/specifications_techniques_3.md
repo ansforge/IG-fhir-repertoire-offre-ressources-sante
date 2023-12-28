@@ -294,18 +294,23 @@ Exemple :
 
 #### Scénario 7 : Recherche sur une zone d'intervention <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** un consommateur cherche les offres proposées dans une commune = XXX faisant partie d'une zone d'intervention.
+**Description du scénario :** Un consommateur cherche les offres ayant un type d'offre et une activité opérationnelle particulières, dans une commune faisant partie d'une zone d'intervention.
+
+**Exemple :** Recherche des offres caractérisées par le type d'offre « 30 – Service d’aide et d’accompagnement à domicile (SAAD) », proposant une activité opérationnelle de type « 293 - Accompagnements pour accomplir les activités domestiques » et ayant la commune 29151 dans la zone d’intervention. 
+
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?intervention-zone=XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?intervention-zone=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|29151&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|293&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|30&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?intervention-zone=XXX #critère de recherche sur la commune faisant partie d’une zone d’intervention
+GET [BASE]/HealthcareService?intervention-zone=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|29151 #critère de recherche sur la commune faisant partie d’une zone d’intervention
+&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|30 #critère sur le type d'offre
+&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|293 #critère de recherche sur l’activité opérationnelle
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
