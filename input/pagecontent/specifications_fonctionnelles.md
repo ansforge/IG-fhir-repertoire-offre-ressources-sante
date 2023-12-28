@@ -210,10 +210,10 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     - Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d'un patient.
 
 -   Scenario 7 : Recherche sur une zone d'intervention
-    - Un consommateur cherche les offres ayant une catégorie d’organisation et une activité opérationnelle particulières, dans une commune faisant partie d'une zone d'intervention.
+    - Un consommateur cherche les offres ayant un type d'offre et une activité opérationnelle particulières, dans une commune faisant partie d'une zone d'intervention.
 
 -   Scenario 8 : Recherche sur un département
-    -   Un consommateur recherche les offres sur un département, ou un ensemble de département (code postal).
+    - Un consommateur recherche les offres ayant une catégorie d’organisation, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).
 
 -   Scenario 9 : Recherche sur une ville #1 -- Code Postal
     -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code postal).

@@ -319,18 +319,25 @@ GET [BASE]/HealthcareService?intervention-zone=https://mos.esante.gouv.fr/NOS/TR
 ```
 #### Scénario 8 : Recherche sur un département
 
-**Description du scénario :** un consommateur recherche les offres sur un département = XX.
+**Description du scénario :** Un consommateur recherche les offres ayant un type d'offre, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).
+
+**Exemple :** Recherche des offres caractérisées par le type d'offre "21 - Accueil ou hébergement pour personnes âgées dépendantes, sans spécificité » proposant un mode de prise en charge « 46 – Accueil de jour » et une spécialisation de prise en charge « 24 - Handicap à prédominance cognitive avec trouble du comportement (dont traumatisé crânien, syndrome de Korsakoff,...)» et située dans le département 71.
+
+
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location.address-postalcode=XX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.address-postalcode=71&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|21&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|46&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R245-SpecialisationDePriseEnCharge/FHIR/TRE-R245-SpecialisationDePriseEnCharge|24&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?location.address-postalcode=XX # critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)
+GET [BASE]/HealthcareService?location.address-postalcode=71 # critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)
+&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|21 #critère sur le type d'offre
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|46 #critère de recherche sur le mode de prise en charge
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R245-SpecialisationDePriseEnCharge/FHIR/TRE-R245-SpecialisationDePriseEnCharge|24 #critère de recherche sur la spécialisation de prise en charge
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
