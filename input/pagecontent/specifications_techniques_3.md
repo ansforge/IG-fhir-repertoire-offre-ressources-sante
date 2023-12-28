@@ -347,18 +347,22 @@ GET [BASE]/HealthcareService?location.address-postalcode=71 # critère de recher
 
 #### Scénario 9 : Recherche sur une ville #1 -- Code Postal
 
-**Description du scénario :** un consommateur recherche les offres sur un ensemble de villes (code postal) = XXXX ou YYYY.
+**Description du scénario :** Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).
+
+**Exemple :** Recherche des offres caractérisées par l’activité opérationnelle «017 – Chirurgie de l'obésité (bariatrique) » et proposant l’acte spécifique «0529 - Pose d'anneau gastrique » sur les communes dont le code postal est 60000 (Frocourt) ou 76620 (Le Havre). 
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.address-postalcode=60000,76620&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|017&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0529&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY #critère de recherche sur une ville ou un ensemble de ville en rentrant le code postal 
+GET [BASE]/HealthcareService?location.address-postalcode=60000,76620 #critère de recherche sur une ville ou un ensemble de ville en rentrant le code postal 
+&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|017 #critère de recherche sur l'activité opérationnelle
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0529 #critère de recherche sur l'acte spécifique
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service

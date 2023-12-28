@@ -216,7 +216,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     - Un consommateur recherche les offres ayant une catégorie d’organisation, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).
 
 -   Scenario 9 : Recherche sur une ville #1 -- Code Postal
-    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code postal).
+    - Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).
 
 -   Scenario 10 : Recherche sur une ville #2 -- Code commune
     -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code commune).
