@@ -219,7 +219,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     - Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).
 
 -   Scenario 10 : Recherche sur une ville #2 -- Code commune
-    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code commune).
+    - Un consommateur recherche les offres proposant une activité opérationnelle et un mode de prise en charge particuliers, sur une ville, ou un ensemble de villes (code commune).
 
 -   Scenario 11 : Recherche sur un critère du modèle d'exposition 3.0
     -   Un consommateur recherche les offres proposant une modalité d\'accueil et un niveau d\'expertise (critères modèle 3.0).
