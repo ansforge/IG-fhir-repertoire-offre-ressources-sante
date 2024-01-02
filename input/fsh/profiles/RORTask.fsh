@@ -5,26 +5,27 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * ^status = #draft
 
 /* Données fonctionnelles */
-* identifier 0..1
+* identifier 0..1 MS
 * identifier ^short = "Identifiant de l'anomalie"
 * status MS //Status required doit correspondre au valueset exigé par FHIR dans TaskStatus https://www.hl7.org/FHIR/valueset-task-status.html
-* businessStatus 1..1
+* businessStatus 1..1 MS
 * businessStatus ^short = "Statut métier de traitement de l'anomalie"
 * businessStatus from $JDV-J244-StatutMetierAnomalie-ROR (required)
-* code 1..1
+* code 1..1 MS
 * code ^short = "Thématique de l'anomalie exemples :Exactitude, Complétude, Exhaustivité"
 * code from $JDV-J241-ThematiqueAnomalie-ROR
 * description MS
 * description ^short = "Description de l'anomalie"
-* focus 1..1
+* focus 1..1 MS
 * focus ^short = "référence vers la ressources en anomalie"
-* authoredOn 1..1
+* authoredOn 1..1 MS
 * authoredOn ^short = "Date création de l'anomalie"
-* lastModified 1..1
+* lastModified 1..1 MS
 * lastModified ^short = "Date de dernière modification"
-* reasonCode 1..1
+* reasonCode 1..1 MS
 * reasonCode ^short = "Type d'action proposée en réponse"
 * reasonCode from $JDV-J242-ActionAnomalie-ROR
+* input MS
 * input ^short = "Eléments en entrée pour définir l'anomalie"
 //slices input
 * input ^slicing.discriminator.type = #pattern
