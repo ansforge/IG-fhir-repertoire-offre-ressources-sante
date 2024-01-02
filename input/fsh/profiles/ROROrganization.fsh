@@ -133,7 +133,7 @@ ou nom de l'OI : Nom de l'organisation interne"
 * address.postalCode ^short = "codePostal (Adresse) : Code Postal ou code postal spécifique CEDEX"
 * address.city MS
 * address.city ^short = "localité (Adresse) : Localité ou Libellé du bureau distributeur CEDEX"
-* address.extension[inseeCode].valueCoding from $JDV-J124-Commune (required) MS
+* address.extension[inseeCode].valueCoding from $JDV-J124-Commune (required)
 * address.extension contains
     $geolocation named ror-organization-geolocation 0..1 MS
 * address.extension[ror-organization-geolocation] ^short = "extension pour définir les données de géolocalisation de l'EG"
