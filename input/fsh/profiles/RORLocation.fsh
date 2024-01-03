@@ -31,9 +31,11 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     idLocation 0..1
 * identifier[idExterneSynchro] ^short = "idExterneSynchro (LieuRealisationOffre) : Identifiant défini par le porteur d’offre pour la zone d’hébergement des lits" 
 * identifier[idExterneSynchro].type 1..1
+* identifier[idExterneSynchro].assigner only Reference(fr-organization or ROROrganization)
 * identifier[idExterneSynchro].type.coding.code = $TRE-R354-TypeIdentifiantRessourceOperationnelle#26
 * identifier[idLocation] ^short = "identifiant (LieuRealisationOffre) : Identifiant fonctionnel du lieu"
 * identifier[idLocation].type 1..1
+* identifier[idLocation].assigner only Reference(fr-organization or ROROrganization)
 * identifier[idLocation].type.coding.code = $TRE-R354-TypeIdentifiantRessourceOperationnelle#25
 
 * alias ^slicing.discriminator.type = #value
@@ -91,6 +93,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * position.extension ^slicing.rules = #open
 * position.extension contains RORCoordinateReliability named ror-coordinate-reliability 0..1
 * position.extension[ror-coordinate-reliability] ^short = "systemeGeodesique (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
+
+* managingOrganization only Reference(fr-organization or ROROrganization)
+* partOf only Reference(Location or RORLocation)
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

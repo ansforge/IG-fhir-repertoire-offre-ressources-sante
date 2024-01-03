@@ -20,6 +20,7 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * identifier 1..1
 * identifier ^short = "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
 * identifier.system = "urn:oid:1.2.250.1.71.4.2.1" //voir issue https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/100
+* identifier.assigner only Reference(fr-organization or ROROrganization)
 
 * telecom 0..*
 * telecom ^short = "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel"
@@ -35,6 +36,8 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
 * telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication"
+
+* qualification.issuer only Reference(fr-organization or ROROrganization)
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
