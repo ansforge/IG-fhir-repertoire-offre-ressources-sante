@@ -193,25 +193,18 @@ HTTP 200 OK
 
 ####  Scénario 4 : Données capacitaires à partir d'une date de mise à jour
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité à partir d\'une date de mise à jour \>= 06/11/2022-15h00.
+**Description du scénario :** Un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.
+
+**Exemple :** Recherche de toutes les informations capacitaires liées à une offre dont la date de mise à jour est supérieure ou égale au 02/08/2023.
 
 **Requête :**
 
-`GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_lastUpdated=ge2023-08-02&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 ```sh
-GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour/ge=greater or equal
+GET [BASE]/Location?_lastUpdated=ge2023-08-02 #critère de recherche sur la date de mise à jour/ge=greater or equal
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
-```
-
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 1
-  Location1 (match) UE1(include)
 ```
 
 #### Scénario 5 : Données capacitaires d'une offre opérationnelle
