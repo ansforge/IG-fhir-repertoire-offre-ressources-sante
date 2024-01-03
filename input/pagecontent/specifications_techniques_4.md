@@ -94,7 +94,7 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 **Description du scénario :** Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.
 
-**Exemples :** Recherche des offres de soins intensifs neuro-vasculaires (activité opérationnelle « 356 - Soins intensifs spécialisés neurologie vasculaire (USINV) »)
+**Exemple :** Recherche des offres de soins intensifs neuro-vasculaires (activité opérationnelle « 356 - Soins intensifs spécialisés neurologie vasculaire (USINV) »)
 et disposant d'un lit femme disponible (nature= lit ; statut = disponible ; temporalité = courant ; Genre = femme ; quantité >0).
 
 **Requête :**
@@ -137,9 +137,6 @@ GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 #### Scénario 3 : Recherche sur un critère de l'équipement
 
 **Description du scénario :** Un consommateur cherche une offre pour une activité opérationnelle donnée, et disposant d’équipement respectant certaines caractéristiques.
-
-un consommateur cherche une offre dont l'activité opérationnelle = chirurgie traumatologique (025 de
-TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à l\'obésité du patient (83 de TRE-R212-Equipement).
 
 **Exemple :** Recherche des offres de chirurgie traumatologique (activité opérationnelle « 025 - Chirurgie orthopédique et traumatologique »)
 proposant une table d’opération adaptée à l'obésité du patient adaptée à un patient de 200 kg (« 088 -Table de bloc opératoire obésité (poids entre 150 et 250 kg) – bariatrique » ; type caractéristique = « poids maximal » ; valeur limite > ou égal à 200 kg).
