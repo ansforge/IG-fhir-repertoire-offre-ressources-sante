@@ -77,18 +77,79 @@ Plus de précision sur la spécification FHIR :
 
 **Description du scénario :** Un responsable qualité souhaite signaler une anomalie sur un élément.
 
+**Exemple :** Signalement d’une anomalie sur la catégorie d’établissement pour un établissement spécifique.
+
 **Requête :**
 
 ```json
 POST [BASE]/Task
-{	
-	"resourceType": "Task",
-	"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
-	... // ajouter les autres éléments required dans le body
-	"code": [ { "system": "JDV XXX", "value": "12345" } ],
-	"description": "description de notre ano",
-	"focus": "URL HealthcareService"
-	... //ajouter les autres éléments non requis que vous souhaitez transmettre dans le body
+{
+    "resourceType": "Task",
+    "focus": {
+        "reference": "Organization",
+        "identifier": {
+            "value": "1910800002"
+        }
+    },
+    "status": "in-progress",
+    "businessStatus": {
+        "coding": [
+            {
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie",
+                "code": "02",
+                "display": "À traiter"
+            }
+        ]
+    },
+    "intent": "order",
+    "reasonCode": {
+        "coding": [
+            {
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie",
+                "code": "COR",
+                "display": "Correction"
+            }
+        ]
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie",
+                "code": "06",
+                "display": "Exactitude"
+            }
+        ]
+    },
+    "input": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem",
+                        "code": "pathElementError"
+                    }
+                ]
+            },
+            "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')"
+            }
+        },
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem",
+                        "code": "systemRequester"
+                    }
+                ]
+            },
+            "valueString": "IHM"
+        }
+    ], 
+    "authoredOn": "2024-01-03",
+    "lastModified": "2024-01-04",
+    "description": "La catégorie d'établissement n'est pas la bonne"
 }
 ```
 
