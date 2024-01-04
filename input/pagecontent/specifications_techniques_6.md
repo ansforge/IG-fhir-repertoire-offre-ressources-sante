@@ -128,39 +128,43 @@ POST [BASE]
 
 #### Scénario 2 : Inactivation d’une anomalie
 
-**Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
+**Description du scénario :** Un responsable qualité ou un système numérique décide d’inactiver une anomalie (elle a été saisie par erreur par exemple).
+
+**Exemple :** Le déclarant de l’anomalie souhaite annuler l’anomalie en question dont l'identifiant technique est 1310.
 
 **Requête :**
 
 ```json
 Content-Type: application/fhir+json
-PATCH [BASE]/Task/XXX
+PATCH [BASE]/Task/1310
 {
-"resourceType": "Parameters",
-	"parameter": [ {
-	"name": "operation",
-	"part": [ {
-		"name": "type",
-		"valueString": "replace"
-	}, {
-		"name": "path",
-		"valueString": "Task.businessStatus"
-	}, {
-		"name": "value",
-		"valueCodeableConcept": 
-		{
-			"coding": [
-			{
-				"system": "http://zzz",
-				"code": "260385009",
-				"display": "ND"
-				}	],
-				"text": "tetet"
-		}
-		}
-			]
-				}
-				]
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name": "type",
+                    "valueString": "replace"
+                },
+                {
+                    "name": "path",
+                    "valueString": "Task.businessStatus"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie",
+                                "code": "08",
+                                "display": "Corrigé"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
 }
-
 ```
