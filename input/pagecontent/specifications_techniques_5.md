@@ -86,7 +86,7 @@ POST [BASE]/Task
 {
     "resourceType": "Task",
     "focus": {
-        "reference": "Organization",
+        "type": "Organization",
         "identifier": {
             "value": "1910800002"
         }
