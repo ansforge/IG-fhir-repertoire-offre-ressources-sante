@@ -48,6 +48,11 @@ Source:   RORPractitioner
 Id:       specmetier-to-RORPractitioner
 Title:    "Practitioner du Modèle exposition ROR V3"
 * -> "Professionnel"
+* id -> "metadonnee.identifiant"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
 * identifier -> "idNat_PS"
 * identifier.value -> "idNat_PS.valeur"
 * identifier.system -> "idNat_PS.systeme"
