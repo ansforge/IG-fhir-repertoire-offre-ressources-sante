@@ -2,7 +2,7 @@ Alias: $testscript-operation-codes = http://terminology.hl7.org/CodeSystem/tests
 
 Instance: ror-testscript-spec3-scenario1
 InstanceOf: TestScript
-* url = "ror-testscript-spec3-scenario1"
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-testscript-spec3-scenario1"
 * version = "1.0"
 * name = "Recherche d'offre sur critères principaux : Scenario 1"
 * title = "Recherche sur un critère en saisissant une valeur"
