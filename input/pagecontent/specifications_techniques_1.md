@@ -100,7 +100,7 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 #### Scénario 1 : Données capacitaires sur le périmètre national
 
-**Description du scénario :** un consommateur souhaite récupérer l\'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système.
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les données capacitaires sur le périmètre national.
 
 **Requête :**
 
@@ -110,24 +110,13 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 ```sh
 GET [BASE]/Location?_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
-
-```
-
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 4
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
-  Location3 (match) UE3(include)
-  Location4 (match) UE3(include)
 ```
 
 #### Scénario 1bis : Données capacitaires sur une région <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région afin de mettre à jour son système. Par exemple en Bretagne qui est composé des départements 22,29,35,56. 
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.
+
+**Exemple :** Recherche des données capacitaires sur la région Bretagne (départements 22, 29, 35, 56). 
 
 **Requête :**
 
@@ -138,7 +127,6 @@ HTTP 200 OK
 ```sh
 GET [BASE]/Location?address-postalcode=35,22,29,56 #critère de recherche sur les codes postaux commencant par les valeurs choisies
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
-
 ```
 
 
