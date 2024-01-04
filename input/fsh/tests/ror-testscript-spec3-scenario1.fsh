@@ -4,6 +4,7 @@ Instance: ror-testscript-spec3-scenario1
 InstanceOf: TestScript
 * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-testscript-spec3-scenario1"
 * version = "1.0"
+* usage = #test
 * name = "Recherche d'offre sur critères principaux : Scenario 1"
 * title = "Recherche sur un critère en saisissant une valeur"
 * status = #draft
