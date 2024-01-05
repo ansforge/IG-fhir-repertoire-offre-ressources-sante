@@ -156,27 +156,19 @@ HTTP 200 OK
 
 #### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur plusieurs lieux de prise en charge = Location1 ou Location2.
+**Description du scénario :** Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
+
+**Exemple :** Recherche des données capacitaires des lieux de prise en charge ayant pour identifiants techniques 140 et 141.
 
 **Requête :**
 
-`GET [BASE]/Location?identifier=Location1,Location2&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_filter=(_id eq 140 or 141)&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Location?identifier=Location1,Location2 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+GET [BASE]/Location?_filter=(_id eq 140 or 141) #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
-```
-
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 2
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
 ```
 
 ####  Scénario 4 : Données capacitaires à partir d'une date de mise à jour
