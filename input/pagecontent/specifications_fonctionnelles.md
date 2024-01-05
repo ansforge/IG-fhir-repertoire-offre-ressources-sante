@@ -482,7 +482,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 #### Scénarios
 
 -	Scenario 1 : Mise à jour du statut de plusieurs anomalies    
-    -	Le responsable de la donnée en anomalie corrige l'anomalie, le responsable qualité ou le moteur de règle met à jour le statut de l'anomalie (possible en masse).
+    -	Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou un système numérique met à jour le statut de l’anomalie.
 
 -	Scenario 2 : Inactivation d’une anomalie    
     -	Un responsable qualité ou un système numérique décide d’inactiver une anomalie (elle a été saisie par erreur par exemple).
