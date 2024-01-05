@@ -189,30 +189,17 @@ GET [BASE]/Location?_lastUpdated=ge2023-08-02 #critère de recherche sur la date
 
 #### Scénario 5 : Données capacitaires d'une offre opérationnelle
 
-**Prérequis :** un consommateur recherche au préalable une offre de santé correspondant à ses critères via le service de recherche
-sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les identifiants des offres correspondant aux critères.
+**Description du scénario :** Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.
 
-**Description du scénario :** un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3.
+**Exemple :** Recherche des informations capacitaires pour les lieux de réalisation de l'offre ayant un identifiant fonctionnel connu par l’instance ROR égale à 11/339772 ou 11/347254.
 
 **Requête :**
 
-`GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_filter=(_has:HealthcareService:location:identifier eq 11/339772 or 11/347254)&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3 #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
+GET [BASE]/Location?_filter=(_has:HealthcareService:location:identifier eq 11/339772 or 11/347254) #critère de recherche sur l’identifiant fonctionnel de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
-```
-
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 4
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
-  Location3 (match) UE3(include)
-  Location4 (match) UE3(include)
 ```
