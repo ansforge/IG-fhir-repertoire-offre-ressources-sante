@@ -183,7 +183,7 @@ GET [BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.go
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 5 : Recherche multicritère #3 -- ET/OU
+#### Scénario 5 : Recherche multicritère #3 -- ET/OU <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur recherche les offres ayant **(** une catégorie d'établissement = XXX de TRE-R66-CategorieEtablissement **OU** type d'offre = YYY de TRE_R244-CategorieOrganisation **)** **ET** un acte spécifique = ZZZ (TRE-R210-ActeSpecifique).
 
@@ -364,7 +364,7 @@ GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR
+#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur recherche les offres proposant une modalité d\'accueil = XX (TRE-R338-ModaliteAccueil) et un niveau d\'expertise (critères modèle 3.0) = YY (TRE_R253-TypeMaternite).
 
