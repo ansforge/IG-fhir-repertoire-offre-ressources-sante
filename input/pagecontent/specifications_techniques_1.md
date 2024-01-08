@@ -145,15 +145,6 @@ GET [BASE]/Location?identifier=Location1 #critère de recherche sur l’identifi
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 1
-  Location1 (match) UE1(include)
-```
-
 #### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
 
 **Description du scénario :** Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
