@@ -634,7 +634,7 @@ POST [BASE]/HealthcareService
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
-**Prérequis :** L'établissement dont fait partie le pôle à créer existe et son identifiant est connu (3536).
+**Prérequis :** L'entité géograpghique dont fait partie le pôle à créer existe et son identifiant est connu (3536).
 
 **Requête :**
 
