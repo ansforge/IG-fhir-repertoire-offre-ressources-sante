@@ -123,13 +123,13 @@ droits d'accès adaptés.
 
 Les attributs de description de l'offre, fournis en résultat d'une
 recherche, sont décrits dans le document ROR-modèle d'exposition
-(bientôt disponible). Ces attributs sont décrits en utilisant la norme UML et en
+. Ces attributs sont décrits en utilisant la norme UML et en
 cohérence avec le Modèle des Objets de Santé (MOS) et les nomenclatures
 associées (NOS) gérés par l'ANS.
 
 Ces attributs sont associés à des règles de gestion communes qui sont
 également présentées dans le document ROR-modèle d'exposition
-(bientôt disponible).
+[[Ref_01]](https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf).
 
 ##### Nomenclatures
 
@@ -147,7 +147,7 @@ de référence et jeux de valeurs) qui permettent de renseigner les
 concepts du modèle d'exposition et qui font le lien avec les concepts
 des modèles des ROR régionaux. Ces nomenclatures d'échange sont
 précisées dans le document de référence ROR-modèle d'exposition
-(bientôt disponible).
+[[Ref_01]](https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf).
 
 Chaque nomenclature des outils interopérables doit trouver son
 équivalence dans la nomenclature du concept associé dans le modèle
