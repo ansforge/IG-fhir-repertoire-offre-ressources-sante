@@ -202,6 +202,7 @@ ou nom de l'OI : Nom de l'organisation interne"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
 
+/*
 Mapping:  ConceptMetier_ROROrganization_EJ
 Source:   ROROrganization
 Id:       specmetier-to-ROROrganization-ej
@@ -280,3 +281,4 @@ Title:    "OrganisationInterne du Modèle exposition ROR V3"
 * identifier[identifierOI] -> "identifiantOI"
 * type[organizationType] -> " "
 * type[OIType] -> "typeOI"
+*/
