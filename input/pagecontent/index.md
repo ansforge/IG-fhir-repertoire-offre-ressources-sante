@@ -249,8 +249,8 @@ réactivation de code).
   mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
   margin;mso-element-top:3.65pt;mso-height-rule:exactly"><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
   mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
-  minor-latin">Description des données communes aux échanges entre les ROR et
-  les SI externes. (lien bientôt disponible)<o:p></o:p></span></p>
+  minor-latin"><a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif">Description des données communes aux échanges entre les ROR et
+  les SI externes.</span></a><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:3;height:44.2pt;mso-height-rule:exactly">
@@ -364,7 +364,7 @@ réactivation de code).
   mso-height-rule:exactly"><span style="font-size:10.0pt;mso-ascii-font-family:
   Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Arial;
   mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
-  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">2.5<o:p></o:p></span></p>
+  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">3.0<o:p></o:p></span></p>
   </td>
   <td width="55%" style="width:55.56%;border-top:none;border-left:none;
   border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
@@ -374,7 +374,7 @@ réactivation de code).
   <p class="MsoNormal" align="left" style="text-align:left;mso-element:frame;
   mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
   paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
-  mso-height-rule:exactly"><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif">Annexe
+  mso-height-rule:exactly"><a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR%20Politique%20d%27acc%C3%A8s%20aux%20donn%C3%A9es_ME3.0_VFD.pdf"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif">Annexe
   "Politique d'accès" de la doctrine d'urbanisation</span></a><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
   mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
   minor-latin"><o:p></o:p></span></p>
