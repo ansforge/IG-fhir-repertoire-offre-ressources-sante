@@ -131,14 +131,13 @@ HTTP 200 OK
 
 **Requête :**
 
-`GET [BASE]/Location?address-postalcode=35,22,29,56&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_filter=(address-postalcode eq "22" or "29" or "35" or "36")&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Location?address-postalcode=35,22,29,56 #critère de recherche sur les codes postaux commencant par les valeurs choisies
+GET [BASE]/Location?_filter=(address-postalcode eq "22" or "29" or "35" or "36") #critère de recherche sur les codes postaux commencant par les valeurs choisies
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
-
 ```
 
 
@@ -223,12 +222,12 @@ sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les iden
 
 **Requête :**
 
-`GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_filter=(_has:HealthcareService:location:identifier eq UE1 or UE2 or UE3)&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3 #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
+GET [BASE]/Location?_filter=(_has:HealthcareService:location:identifier eq UE1 or UE2 or UE3) #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
