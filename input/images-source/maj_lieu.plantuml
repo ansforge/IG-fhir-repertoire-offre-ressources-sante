@@ -1,0 +1,7 @@
+@startuml maj_lieu
+actor "Etablissement" as E
+actor "ROR national" as ROR
+E -> ROR : MiseAJour_LieuRealisationOffre \n (via id + informations à modifier)
+ROR --> E : Réponse \n (id, identifiant fonctionnel et métadonnées du lieu)
+@enduml
+

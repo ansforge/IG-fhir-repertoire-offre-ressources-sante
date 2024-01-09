@@ -50,9 +50,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image6.png" alt="Recherche capacité (modèle expo V3.0)" title="Recherche capacité (modèle expo V3.0)">
-            </div>
+            <div style="text-inlin:center;">{%include consultation_donnees_capacitaires.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -61,6 +59,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
         </td>
     </tr>
 </table>
+
 
 #### Scénarios
 
@@ -109,14 +108,10 @@ Il y a deux cas possibles :
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image7.png" alt="Extraction complète offre" title="Extraction complète offre)">
-        </div>
+            <div style="text-inlin:center;">{%include extraction_offre_complete.svg%}</div>
         </td>
-         <td align ="center">
-            <div class="figure">
-                <img src="image8.png" alt="Extraction partielle offre"  title="Extraction partielle offre)">
-            </div>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include extraction_offre_partielle.svg%}</div>
         </td>        
     </tr>
     <tr>
@@ -175,9 +170,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 <table align="center">
     <tr>
         <td align ="center">
-        <div class="figure">
-            <img src="image9.png" alt="Recherche offre" title="Recherche offre">
-        </div>
+            <div style="text-inlin:center;">{%include recherche_offre_criteres_principaux.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -241,9 +234,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image10.png" alt="Recherche offre avec données capacitaires" title="Recherche offre avec données capacitaires">
-            </div>
+            <div style="text-inlin:center;">{%include recherche_offre_donnees_capacitaires.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -273,9 +264,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image15.png" alt="Un consommateur recherche l'offre des établissements sur la base d'informations tarifaires" title="Un consommateur recherche l'offre des établissements sur la base d'informations tarifaires">
-            </div>
+            <div style="text-inlin:center;">{%include recherche_offre_informations_tarifaires.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -312,9 +301,7 @@ Un consommateur recherche une chaine de caractères libre dans le contenu textue
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image20.png" alt="Recherche « Full text »" title="Recherche « Full text »">
-            </div>
+            <div style="text-inlin:center;">{%include recherche_offre_fulltext.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -347,9 +334,7 @@ Un établissement souhaite créer un lieu de réalisation de l'offre (dont les d
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image21.png" alt="Création du lieu de réalisation de l'offre" title="Création du lieu de réalisation de l'offre">
-            </div>
+            <div style="text-inlin:center;">{%include creation_maj_lieu.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -371,11 +356,7 @@ Remarque : Après la création du lieu de réalisation de l'offre, il est néce
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image14.png" alt="Un établissement souhaite mettre à jour un lieu de
-réalisation de l'offre (dont les données capacitaires)" title="Un établissement souhaite mettre à jour un lieu de
-réalisation de l'offre (dont les données capacitaires)">
-            </div>
+            <div style="text-inlin:center;">{%include maj_lieu.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -524,9 +505,7 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image11.png" alt="Signalement d'anomalie" title="Signalement d'anomalie">
-            </div>
+            <div style="text-inlin:center;">{%include signalement_anomalie.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -558,9 +537,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image12.png" alt="Mise à jour d'anomalie" title="Mise à jour d'anomalie">
-            </div>
+            <div style="text-inlin:center;">{%include maj_anomalie.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -592,9 +569,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image13.png" alt="Consultation d'anomalie" title="Consultation d'anomalie">
-            </div>
+            <div style="text-inlin:center;">{%include consultation_anomalie.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -629,9 +604,7 @@ Un consommateur souhaite consulter des indicateurs de pilotage.
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image18.png" alt="Consultation d'indicateurs de pilotage (modèle expo V3.0)" title="Consultation d'indicateurs de pilotage (modèle expo V3.0)">
-            </div>
+            <div style="text-inlin:center;">{%include consultation_indicateurs.svg%}</div>
         </td>    
     </tr>
     <tr>

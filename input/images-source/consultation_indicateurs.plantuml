@@ -1,0 +1,7 @@
+@startuml consultation_indicateurs
+actor "Consommateur" as C
+actor "ROR national" as ROR
+C -> ROR : Consultation_IndicateursPilotage \n (via critères de recherche)
+ROR --> C : Réponse \n (le ou les indicateurs)
+@enduml
+

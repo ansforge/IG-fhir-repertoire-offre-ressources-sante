@@ -1,0 +1,7 @@
+@startuml maj_anomalie
+actor "Service numérique" as SN
+actor "ROR national" as ROR
+SN -> ROR : MiseAjour_Anomalie \n (via identifiant + informations à modifier)
+ROR --> SN : Réponse \n (identifiant logique, identifiant fonctionnel et métadonnées de l'anomalie)
+@enduml
+

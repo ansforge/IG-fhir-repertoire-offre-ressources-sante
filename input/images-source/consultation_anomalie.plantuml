@@ -1,0 +1,7 @@
+@startuml consultation_anomalie
+actor "Consommateur" as C
+actor "ROR national" as ROR
+C -> ROR : Consultation_Anomalie \n (via critères de recherche)
+ROR --> C : Réponse \n (la ou les anomalies)
+@enduml
+

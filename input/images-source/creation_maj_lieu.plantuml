@@ -1,0 +1,7 @@
+@startuml creation_maj_lieu
+actor "Etablissement" as E
+actor "ROR national" as ROR
+E -> ROR : Creation_LieuRealisationOffre \n (données de création)
+ROR --> E : Réponse \n (contenu + id + métadonnées)
+@enduml
+
