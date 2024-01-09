@@ -162,7 +162,7 @@ POST [BASE]/Organization
 	"extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		}
     ]
 }
@@ -317,7 +317,7 @@ POST [BASE]/Organization
 	"extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-financial-help-type",
@@ -501,7 +501,7 @@ POST [BASE]/HealthcareService
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
@@ -679,7 +679,7 @@ POST [BASE]/Organization
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		}
     ]
 }
@@ -734,7 +734,7 @@ POST [BASE]/Organization
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		}
     ]
 }
@@ -789,7 +789,7 @@ POST [BASE]/Organization
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		}
     ]
 }
@@ -893,7 +893,7 @@ POST [BASE]/HealthcareService
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
@@ -1062,7 +1062,7 @@ POST [BASE]/HealthcareService
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
@@ -1212,7 +1212,7 @@ POST [BASE]/Practitioner
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		}
     ]
 }
@@ -1261,7 +1261,7 @@ POST [BASE]/PractitionerRole
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
-			"valueDateTime": "2023-12"
+			"valueDateTime": "2023-12-09T14:30:00+01:00"
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/RORPractitionerRoleName",
