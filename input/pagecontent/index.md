@@ -122,8 +122,7 @@ droits d'accès adaptés.
 ##### Données utilisées pour la modélisation UML
 
 Les attributs de description de l'offre, fournis en résultat d'une
-recherche, sont décrits dans le document ROR-modèle d'exposition
-. Ces attributs sont décrits en utilisant la norme UML et en
+recherche, sont décrits dans le document ROR-modèle d'exposition. Ces attributs sont décrits en utilisant la norme UML et en
 cohérence avec le Modèle des Objets de Santé (MOS) et les nomenclatures
 associées (NOS) gérés par l'ANS.
 
