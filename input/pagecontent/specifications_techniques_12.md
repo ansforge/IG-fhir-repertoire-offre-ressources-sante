@@ -333,7 +333,7 @@ POST [BASE]/Organization
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-accomodation-family",
-			"valueBoolean": true
+			"valueBoolean": false
 		}
     ]
 }
@@ -505,7 +505,7 @@ POST [BASE]/HealthcareService
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
-			"valueBoolean": true
+			"valueBoolean": false
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
@@ -897,7 +897,7 @@ POST [BASE]/HealthcareService
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
-			"valueBoolean": true
+			"valueBoolean": false
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
@@ -1066,7 +1066,7 @@ POST [BASE]/HealthcareService
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit",
-			"valueBoolean": true
+			"valueBoolean": false
 		},
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type",
