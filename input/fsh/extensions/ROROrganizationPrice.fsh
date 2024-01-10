@@ -48,3 +48,26 @@ Description: "Extension créée dans le cadre du ROR pour permettre de définir 
 * extension[otherAdditionalServiceName].value[x] only string 
 * extension[additionalServiceName].value[x] only CodeableConcept
 * extension[additionalServiceName].valueCodeableConcept from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)
+
+
+Mapping:  ConceptMetier_ROROrganizationPrice
+Source:   ROROrganizationPrice
+Id:       specmetier-to-ROROrganizationPrice
+Title:    "Spécification métier vers l'extension ROR OrganizationPrice"
+* -> "Tarif"
+* extension[priceType] -> "typeTarif"
+* extension[priceUnit] -> "unitePrix"
+* extension[amount] -> "montantTarif"
+* extension[startDate] -> "dateDebutValiditeTarif"
+* extension[under60] -> "ForfaitSocleHebergement.tarifMoins60Ans"
+* extension[deliveryIncluded] -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+* extension[othersDeliveryIncluded] -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+* extension[residentialType] -> "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"
+* extension[specialPrice] -> "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"
+* extension[welcomeType] -> "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"
+* extension[mealDeliveryName] -> "TarifPortageRepas.nomTarifPortageRepas"
+* extension[dependencyLevel] -> "TarifDependance.groupeTarifaireDependance"
+* extension[humanHelpPriceName] -> "TarifAidesHumaines.nomTarifAidesHumaines"
+* extension[managementType] -> "TarifAidesHumaines.modeGestion"
+* extension[otherAdditionalServiceName] -> "TarifPrestationSupplementaire.nomAutrePrestationSupp"
+* extension[additionalServiceName] -> "TarifPrestationSupplementaire.nomPrestationSupp"

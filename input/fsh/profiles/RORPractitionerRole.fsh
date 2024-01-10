@@ -117,47 +117,62 @@ Source:   RORPractitionerRole
 Id:       specmetier-to-RORPractitionerRole-exercicePro
 Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
 * -> "ExerciceProfessionnel"
+
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
-* extension[ror-practitionerrole-name] -> "civiliteExercie + nomExercice + prenomExercice"
-* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
 * extension[ror-meta-comment] -> "metadonnee.commentaire" 
+* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
+
 * code -> "profession"
-* specialty[expertiseType] -> "typeSavoirFaire "
-* specialty[specialty] -> "specialite"
-* specialty[competence] -> "competence"
-* specialty[exclusiveCompetence] -> "competenceExclusive"
-* specialty[specificOrientation] -> "orientationParticuliere"
-* specialty[expertiseCapacity] -> "capacite"
-* specialty[qualificationPAC] -> "qualificationPAC"
-* specialty[nonQualifyingDESC] -> "DESCNonQualifiant"
-* specialty[supplementaryExerciseRight] -> "droitExerciceComplémentaire"
+
 * specialty[specificCompetence] -> "competenceSpecifique"
+* specialty[expertiseType] -> "SavoirFaire.typeSavoirFaire "
+* specialty[specialty] -> "SavoirFaire.specialite"
+* specialty[competence] -> "SavoirFaire.competence"
+* specialty[exclusiveCompetence] -> "SavoirFaire.competenceExclusive"
+* specialty[specificOrientation] -> "SavoirFaire.orientationParticuliere"
+* specialty[expertiseCapacity] -> "SavoirFaire.capacite"
+* specialty[qualificationPAC] -> "SavoirFaire.qualificationPAC"
+* specialty[nonQualifyingDESC] -> "SavoirFaire.DESCNonQualifiant"
+* specialty[supplementaryExerciseRight] -> "SavoirFaire.droitExerciceComplémentaire"
+
+* extension[ror-practitionerrole-name].extension[exerciseLastName] -> "nomExercice"
+* extension[ror-practitionerrole-name].extension[exerciseFirstName] -> "prenomExercice"
+* extension[ror-practitionerrole-name].extension[exerciseTitle] -> "civiliteExercice"
+
 
 Mapping:  ConceptMetier_RORPractitionerRole_SituationOp
 Source:   RORPractitionerRole
 Id:       specmetier-to-RORPractitionerRole-situationOp
 Title:    "SituationOperationnelle du Modèle exposition ROR V3"
 * -> "SituationOperationnelle"
+
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
-* extension[ror-practitionerrole-unit-exercise-mode] -> "modeExerciceOffre"
-* extension[contracted] -> "secteurConventionnement"
-* extension[optionCAS] -> "optionContratAccèsAuxSoins"
-* extension[vitalAccepted] -> "carteVitaleAcceptee"
+* extension[ror-meta-comment] -> "metadonnee.commentaire" 
 * extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
-* extension[ror-meta-comment] -> "metadonnee.commentaire"
+
 * identifier -> "identifiantSituationOperationnelle"
+
+* availableTime -> "horaire"
+* availableTime.availableStartTime -> "heureDebut"
+* availableTime.availableEndTime -> "heureFin"
+* availableTime.extension[ror-available-time-type-of-time] -> "typePlageHoraire"
+* availableTime.extension[ror-available-time-number-days-of-week] -> "jourSemaine"
+* availableTime.extension[ror-available-time-effective-opening-closing-date].value[x].start -> "debutDateEffective"
+* availableTime.extension[ror-available-time-effective-opening-closing-date].value[x].end -> "finDateEffective"
+
 * telecom -> "telecommunication"
+* telecom.value -> "adresseTelecom"
 * telecom.extension[ror-telecom-communication-channel] -> "canal"
 * telecom.extension[ror-telecom-usage] -> "utilisation"
 * telecom.extension[ror-telecom-confidentiality-level] -> "niveauConfidentialite"
-* telecom.value -> "adresseTelecom"
-* availableTime -> "precisionHoraire"
-* availableTime.extension[ror-available-time-type-of-time] -> "typePlageHoraire"
-* availableTime.extension[ror-available-time-effective-opening-closing-date] -> "debutDateEffective + finDateEffective"
-* availableTime.extension[ror-available-time-number-days-of-week] -> "jourSemaine"
+
+* extension[contracted] -> "secteurConventionnement"
+* extension[optionCAS] -> "optionContratAccèsAuxSoins"
+* extension[vitalAccepted] -> "carteVitaleAcceptee"
+* extension[ror-practitionerrole-unit-exercise-mode] -> "modeExerciceOffre"

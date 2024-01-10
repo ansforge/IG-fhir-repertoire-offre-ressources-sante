@@ -48,11 +48,18 @@ Source:   RORPractitioner
 Id:       specmetier-to-RORPractitioner
 Title:    "Practitioner du Modèle exposition ROR V3"
 * -> "Professionnel"
+
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
 * extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
+
 * identifier -> "idNat_PS"
+* name.prefix -> "PersonnePhysique.civilite"
+
 * telecom -> "boiteLettreMSS"
-* name.prefix -> "civilite"
+* telecom.value -> "adresseMSS.adresseTelecom"
+* telecom.extension[ror-telecom-communication-channel] -> "adresseMSS.canal"
+* telecom.extension[ror-telecom-usage] -> "adresseMSS.utilisation"
+* telecom.extension[ror-telecom-confidentiality-level] -> "adresseMSS.niveauConfidentialite"

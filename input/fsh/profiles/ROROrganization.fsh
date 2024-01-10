@@ -208,38 +208,94 @@ Source:   ROROrganization
 Id:       specmetier-to-ROROrganization-ej
 Title:    "EntiteJuridique du Modèle exposition ROR V3"
 * -> "EntiteJuridique"
+
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
-* meta.lastUpdated -> "metadonnee.dateMiseJour"
+* meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
-* extension[ror-organization-creation-date] -> "dateCreation"
-* extension[ror-organization-closing-type] -> "typeFermeture"
-* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
 * extension[ror-meta-comment] -> "metadonnee.commentaire"
+* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
+
 * identifier[idNatSt] -> "idNatstruct"
 * identifier[finess] -> "numFINESS"
 * identifier[sirene] -> "numSIREN"
 * identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang"
 * identifier[adeliRang] -> "numEJ_RPPS_ADELI_Rang"
-* type[organizationType] -> " "
-* type[statutJuridiqueINSEE] -> "statutJuridique"
-* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique"
+
 * name -> "raisonSociale"
 * name.extension[ror-organization-additional-name] -> "complementRaisonSociale"
-* address -> "adresseEJ"
 
+* type[statutJuridiqueINSEE] -> "statutJuridique"
+* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique"
+
+* contact -> contact
+* contact.name -> nom
+* contact.purpose -> natureContact
+* contact.extension[ror-contact-function-contact] -> fonctionContact
+* contact.extension[ror-contact-description] -> description
+* contact.extension[ror-contact-confidentiality-level] -> niveauConfidentialite
+* contact.telecom -> telecommunication
+* contact.telecom.value -> "adresseTelecom"
+* contact.telecom.extension[ror-telecom-communication-channel] -> "canal"
+* contact.telecom.extension[ror-telecom-usage] -> "utilisation"
+* contact.telecom.extension[ror-telecom-confidentiality-level] -> "niveauConfidentialite"
+
+* address -> "adresseEJ"
+* address.city -> "localite"
+* address.postalCode -> "codePostal"
+* address.line.extension[careOf] -> "pointRemise"
+* address.line.extension[additionalLocator] -> "complementPointGeographique"
+* address.line.extension[houseNumber] -> "numeroVoie"
+* address.line.extension[buildingNumberSuffix] -> "extension"
+* address.line.extension[streetNameType] -> "typeVoie"
+* address.line.extension[streetNameBase] -> "libelleVoie"
+* address.line.extension[precinct] -> "lieuDit"
+* address.line.extension[postalBox] -> "mentionDistribution"
+
+* extension[ror-organization-closing-type] -> "typeFermeture"
+* extension[ror-organization-creation-date] -> "dateCreation"
+
+* extension[organization-period].value[x].end -> "dateFermeture"
 
 Mapping:  ConceptMetier_ROROrganization_EG
 Source:   ROROrganization
 Id:       specmetier-to-ROROrganization-eg
 Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * -> "EntiteGeographique"
+
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
-* meta.lastUpdated -> "metadonnee.dateMiseJour"
+* meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
-* extension[ror-organization-price] -> "Tarif"
-* extension[ror-territorial-division] -> "territoireSante"
+* extension[ror-meta-comment] -> "metadonnee.commentaire"
+* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
+
+* identifier[idNatSt] -> "idNatstruct"
+* identifier[finess] -> "numFINESS"
+* identifier[sirene] -> "numSIREN"
+* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang"
+* identifier[numSIRET] -> "numSIRET"
+* identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang"
+
+* alias -> "nomOpérationnel"
+* name -> "denominationEG"
+* name.extension[complementDenominationEG] -> "complementRaisonSociale"
+
+* type[categorieEtablissement] -> "categorieEG"
+* type[sphParticipation] -> "modaliteParticipationSPH"
+
+* contact -> contact
+* contact.name -> nom
+* contact.purpose -> natureContact
+* contact.extension[ror-contact-function-contact] -> fonctionContact
+* contact.extension[ror-contact-description] -> description
+* contact.extension[ror-contact-confidentiality-level] -> niveauConfidentialite
+* contact.telecom -> telecommunication
+* contact.telecom.value -> "adresseTelecom"
+* contact.telecom.extension[ror-telecom-communication-channel] -> "canal"
+* contact.telecom.extension[ror-telecom-usage] -> "utilisation"
+* contact.telecom.extension[ror-telecom-confidentiality-level] -> "niveauConfidentialite"
+
 * extension[ror-organization-financial-help-type] -> "aideFinanciere"
 * extension[ror-organization-accomodation-family] -> "hebergementFamille"
 * extension[ror-organization-nb-permanent-social-help-place] -> "nbPlaceAideSocialTemporaire"
@@ -248,37 +304,61 @@ Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * extension[ror-organization-level-recourse-orsan] -> "niveauRecoursORSAN"
 * extension[ror-organization-drop-zone] -> "zonePoser"
 * extension[ror-organization-closing-type] -> "typeFermeture"
-* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
-* extension[ror-meta-comment] -> "metadonnee.commentaire"
 * extension[ror-organization-comment] -> "commentaire"
-* identifier[idNatSt] -> "idNatstruct"
-* identifier[finess] -> "numFINESS"
-* identifier[sirene] -> "numSIREN"
-* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang"
-* identifier[numSIRET] -> "numSIRET"
-* identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang"
-* type[organizationType] -> " "
-* type[secteurActiviteRASS] -> " "
-* type[categorieEtablissementRASS] -> " "
-* type[categorieEtablissement] -> "categorieEG"
-* type[sphParticipation] -> "modaliteParticipationSPH"
-* alias -> "nomOpérationnel"
 
+* extension[organization-period].value[x].end -> "dateOuverture"
+* extension[organization-period].value[x].end -> "dateFermeture"
+
+* extension[ror-territorial-division] -> "territoireSante"
+* extension[ror-territorial-division].extension[typeTerritorialDivision] -> "type"
+* extension[ror-territorial-division].extension[codeTerritorialDivision] -> "code"
+
+* extension[ror-organization-price] -> "Tarif"
+* extension[ror-organization-price].extension[priceType] -> "typeTarif"
+* extension[ror-organization-price].extension[priceUnit] -> "unitePrix"
+* extension[ror-organization-price].extension[amount] -> "montantTarif"
+* extension[ror-organization-price].extension[startDate] -> "dateDebutValiditeTarif"
+* extension[ror-organization-price].extension[under60] -> "ForfaitSocleHebergement.tarifMoins60Ans"
+* extension[ror-organization-price].extension[deliveryIncluded] -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+* extension[ror-organization-price].extension[othersDeliveryIncluded] -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+* extension[ror-organization-price].extension[residentialType] -> "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"
+* extension[ror-organization-price].extension[specialPrice] -> "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"
+* extension[ror-organization-price].extension[welcomeType] -> "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"
+* extension[ror-organization-price].extension[mealDeliveryName] -> "TarifPortageRepas.nomTarifPortageRepas"
+* extension[ror-organization-price].extension[dependencyLevel] -> "TarifDependance.groupeTarifaireDependance"
+* extension[ror-organization-price].extension[humanHelpPriceName] -> "TarifAidesHumaines.nomTarifAidesHumaines"
+* extension[ror-organization-price].extension[managementType] -> "TarifAidesHumaines.modeGestion"
+* extension[ror-organization-price].extension[otherAdditionalServiceName] -> "TarifPrestationSupplementaire.nomAutrePrestationSupp"
+* extension[ror-organization-price].extension[additionalServiceName] -> "TarifPrestationSupplementaire.nomPrestationSupp"
 
 Mapping:  ConceptMetier_ROROrganization_OI
 Source:   ROROrganization
 Id:       specmetier-to-ROROrganization-oi
 Title:    "OrganisationInterne du Modèle exposition ROR V3"
 * -> "OrganisationInterne"
+
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
-* meta.lastUpdated -> "metadonnee.dateMiseJour"
+* meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
-* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
 * extension[ror-meta-comment] -> "metadonnee.commentaire"
+* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
+
+* identifier[identifierOI] -> "identifiantOI"
+
+* name -> "nomOI"
+
+* type[OIType] -> "typeOI"
+
+* telecom -> "boiteLettreMSS"
+* telecom.value -> "adresseTelecom"
+* telecom.extension[ror-telecom-communication-channel] -> "canal"
+* telecom.extension[ror-telecom-usage] -> "utilisation"
+* telecom.extension[ror-telecom-confidentiality-level] -> "niveauConfidentialite"
+
 * extension[ror-organization-reopening-date] -> "datePrevisionnelleReouverture"
 * extension[ror-organization-closing-type] -> "typeFermeture"
-* identifier[identifierOI] -> "identifiantOI"
-* type[organizationType] -> " "
-* type[OIType] -> "typeOI"
+
+* extension[organization-period].value[x].end -> "dateOuverture"
+* extension[organization-period].value[x].end -> "dateFermeture"
 */

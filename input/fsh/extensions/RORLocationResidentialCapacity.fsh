@@ -12,3 +12,12 @@ Description: "Extension créée dans le cadre du ROR qui décrit un type d'habit
 * extension[residentialType].value[x] only CodeableConcept
 * extension[residentialType].valueCodeableConcept from $JDV-J32-TypeHabitation-ROR (required)
 * extension[residentialNumber].value[x] only integer
+
+
+Mapping:  ConceptMetier_RORResidentialLocationCapacity
+Source:   RORLocationResidentialCapacity
+Id:       specmetier-to-RORResidentialLocationCapacity
+Title:    "Spécification métier vers l'extension ROR LocationResidentialCapacity"
+* -> "CapaciteHabitation"
+* extension[residentialType] -> "typeHabitation"
+* extension[residentialNumber] -> "nbHabitation"

@@ -38,3 +38,21 @@ Description: "Extension créée dans le cadre du ROR qui indique une série d’
 * extension[crisisType].valueCodeableConcept from $JDV-J194-TypeCrise-ROR (required)
 * extension[temporaryAssignement].value[x] only CodeableConcept
 * extension[temporaryAssignement].valueCodeableConcept from $JDV-J195-AffectationTemporaire-ROR (required)
+
+
+Mapping:  ConceptMetier_RORLocationSupportedCapacity
+Source:   RORLocationSupportedCapacity
+Id:       specmetier-to-RORLocationSupportedCapacity
+Title:    "Spécification métier vers l'extension ROR LocationSupportedCapacity"
+* -> "CapacitePriseCharge + CapaciteAccueilOperationnelle"
+* extension[capacityType] -> "CapaciteAccueilOperationnelle.natureCapacite"
+* extension[capacityStatus] -> "CapaciteAccueilOperationnelle.statutCapacite"
+* extension[temporalityCapacity] -> "CapaciteAccueilOperationnelle.temporaliteCapacite"
+* extension[nbCapacity] -> "CapaciteAccueilOperationnelle.nombreCapacite"
+* extension[capacitySourceType] -> "CapaciteAccueilOperationnelle.typeSourceCapacite"
+* extension[genderCapacityAvailable] -> "CapaciteAccueilOperationnelle.genreCapaciteDispo"
+* extension[capacityUpdateDate] -> "CapaciteAccueilOperationnelle.dateMAJCapacite"
+* extension[capacityClosingType] -> "CapaciteAccueilOperationnelle.typeFermetureCapacite"
+* extension[additionalBedType] -> "CapaciteAccueilOperationnelle.typeLitsSupplementaire"
+* extension[crisisType] -> "CapaciteAccueilOperationnelle.typeCrise"
+* extension[temporaryAssignement] -> "CapacitePriseCharge.affectationTemporaire"
