@@ -53,6 +53,11 @@ jobs:
         run: |
           fhir install hl7.fhir.fr.core 1.1.0
           fhir bake --package hl7.fhir.fr.core
+
+      - name: Run bake ans.annuaire.fhir.r4
+        run: |
+          fhir install ans.annuaire.fhir.r4 0.2.0
+          fhir bake --package ans.annuaire.fhir.r4
           
       # Persist the FHIR Package Cache between runners.
       # Doc: https://confluence.hl7.org/display/FHIR/FHIR+Package+Cache
