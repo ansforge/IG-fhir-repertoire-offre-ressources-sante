@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Mapping FHIR du modèle de données du ROR - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"17"}
+    h3,h4,h5,h6{--heading-prefix:"17"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+  <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+</div>
+<div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+  <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications techniques
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="specifications_techniques_1.html">Consultation des données capacitaires</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_2.html">Consultation de l&apos;offre (extraction)</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_3.html">Recherche d&apos;offre sur critères principaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_4.html">Recherche d&apos;offre avec données capacitaires</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_8.html">Recherche d&apos;offre sur la base d&apos;informations tarifaires</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_9.html">Recherche d&apos;offre via une technique « Full text »</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_10.html">Création et Mise à jour du lieu de réalisation de l&apos;offre</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_5.html">Signalement d&apos;anomalie</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_6.html">Mise à jour d&apos;anomalie</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_7.html">Consultation d&apos;anomalie</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_11.html">Consultation d&apos;indicateurs de pilotage</a>
+      </li>
+      <li>
+        <a href="search_param.html">Critères de recherche</a>
+      </li>
+      <li>
+        <a href="modifiers.html">Paramètres et modificateurs de requêtes FHIR</a>
+      </li>
+      <li>
+        <a href="annexes.html">Annexes</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="mapping.html">Mapping FHIR du modèle de données</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="securite.html">Sécurité</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usage</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Mapping FHIR du modèle de données du ROR</b></li>
+
+          <span style="float:right;">
+
+            <a href="annexes.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="downloads.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Mapping FHIR du modèle de données du ROR</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>Le fichier définissant le mapping FHIR pour le modèle d’exposition 3.0 du ROR est consultable et téléchargeable <a href="mappingFHIR_ROR_ME3-0.xlsx">ici</a></p>
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+A noter que Task, Measure et MeasureReport ne font pas partie du mapping, car cela ne fait pas partie du modèle d'exposition du ROR
+</p>
+
+<div class="figure" style="width:100%;">
+    <p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="535px" preserveAspectRatio="none" style="width:930px;height:535px;background:#FFFFFF;" version="1.1" viewBox="0 0 930 535" width="930px" zoomAndPan="magnify"><defs /><g><!--cluster Vue fonctionnelle ROR--><g id="cluster_Vue fonctionnelle ROR"><rect fill="none" height="319" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="659" x="7" y="8.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="176" x="248.5" y="23.4951">Vue fonctionnelle ROR</text></g><!--cluster L?gende (Ressources FHIR)--><g id="cluster_L&#233;gende (Ressources FHIR)"><rect fill="#D3D3D3" height="522.5" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="234" x="690" y="7" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="218" x="698" y="21.9951">L&#233;gende (Ressources FHIR)</text></g><!--entity Offre--><g id="elem_Offre"><rect fill="#87CEFA" height="36.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="156" x="242" y="275.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="252" y="298.4951">Offre op&#233;rationnelle</text></g><!--entity EJ--><g id="elem_EJ"><rect fill="#FFD700" height="36.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="123" x="253.5" y="43.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103" x="263.5" y="66.4951">Entit&#233; juridique</text></g><!--entity EG--><g id="elem_EG"><rect fill="#FFD700" height="36.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="161" x="234.5" y="159.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="244.5" y="182.4951">Entit&#233; g&#233;ographique</text></g><!--entity OI--><g id="elem_OI"><rect fill="#FFD700" height="36.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="160" x="472" y="159.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="482" y="182.4951">Organisation interne</text></g><!--entity Lieu--><g id="elem_Lieu"><rect fill="#EE82EE" height="36.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="157" x="474.5" y="275.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="484.5" y="298.4951">Lieu r&#233;alisation offre</text></g><!--entity Professionnel--><g id="elem_Professionnel"><rect fill="#90EE90" height="36.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="114" x="54" y="43.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="64" y="66.4951">Professionnel</text></g><!--entity SO--><g id="elem_SO"><rect fill="#20B2AA" height="36.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="183" x="23.5" y="275.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="33.5" y="298.4951">Situation op&#233;rationnelle</text></g><!--entity Ex--><g id="elem_Ex"><rect fill="#20B2AA" height="36.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="176" x="23" y="159.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="33" y="182.4951">Exercice professionnel</text></g><!--entity healthcareservice--><g id="elem_healthcareservice"><a href="StructureDefinition-ror-healthcareservice.html" target="_top" title="StructureDefinition-ror-healthcareservice.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-ror-healthcareservice.html" xlink:show="new" xlink:title="StructureDefinition-ror-healthcareservice.html" xlink:type="simple"><rect fill="#87CEFA" height="39.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="189" x="712.5" y="42" /><polygon fill="#87CEFA" points="884.5,47,884.5,61,896.5,61,896.5,53,890.5,47,884.5,47" style="stroke:#000000;stroke-width:0.5;" /><line style="stroke:#000000;stroke-width:0.5;" x1="890.5" x2="890.5" y1="47" y2="53" /><line style="stroke:#000000;stroke-width:0.5;" x1="896.5" x2="890.5" y1="53" y2="53" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="722.5" y="67.9951">ROR HealthcareService</text></a></g><!--entity location--><g id="elem_location"><a href="StructureDefinition-ror-location.html" target="_top" title="StructureDefinition-ror-location.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-ror-location.html" xlink:show="new" xlink:title="StructureDefinition-ror-location.html" xlink:type="simple"><rect fill="#EE82EE" height="39.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="123" x="745.5" y="274" /><polygon fill="#EE82EE" points="851.5,279,851.5,293,863.5,293,863.5,285,857.5,279,851.5,279" style="stroke:#000000;stroke-width:0.5;" /><line style="stroke:#000000;stroke-width:0.5;" x1="857.5" x2="857.5" y1="279" y2="285" /><line style="stroke:#000000;stroke-width:0.5;" x1="863.5" x2="857.5" y1="285" y2="285" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="755.5" y="299.9951">ROR Location</text></a></g><!--entity organization--><g id="elem_organization"><a href="StructureDefinition-ror-organization.html" target="_top" title="StructureDefinition-ror-organization.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-ror-organization.html" xlink:show="new" xlink:title="StructureDefinition-ror-organization.html" xlink:type="simple"><rect fill="#FFD700" height="39.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="152" x="731" y="158" /><polygon fill="#FFD700" points="866,163,866,177,878,177,878,169,872,163,866,163" style="stroke:#000000;stroke-width:0.5;" /><line style="stroke:#000000;stroke-width:0.5;" x1="872" x2="872" y1="163" y2="169" /><line style="stroke:#000000;stroke-width:0.5;" x1="878" x2="872" y1="169" y2="169" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="741" y="183.9951">ROR Organization</text></a></g><!--entity practitioner--><g id="elem_practitioner"><a href="StructureDefinition-ror-practitioner.html" target="_top" title="StructureDefinition-ror-practitioner.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-ror-practitioner.html" xlink:show="new" xlink:title="StructureDefinition-ror-practitioner.html" xlink:type="simple"><rect fill="#90EE90" height="39.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="143" x="735.5" y="374.5" /><polygon fill="#90EE90" points="861.5,379.5,861.5,393.5,873.5,393.5,873.5,385.5,867.5,379.5,861.5,379.5" style="stroke:#000000;stroke-width:0.5;" /><line style="stroke:#000000;stroke-width:0.5;" x1="867.5" x2="867.5" y1="379.5" y2="385.5" /><line style="stroke:#000000;stroke-width:0.5;" x1="873.5" x2="867.5" y1="385.5" y2="385.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="745.5" y="400.4951">ROR Practitioner</text></a></g><!--entity practitionerrole--><g id="elem_practitionerrole"><a href="StructureDefinition-ror-practitionerrole.html" target="_top" title="StructureDefinition-ror-practitionerrole.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-ror-practitionerrole.html" xlink:show="new" xlink:title="StructureDefinition-ror-practitionerrole.html" xlink:type="simple"><rect fill="#20B2AA" height="39.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="174" x="720" y="474.5" /><polygon fill="#20B2AA" points="877,479.5,877,493.5,889,493.5,889,485.5,883,479.5,877,479.5" style="stroke:#000000;stroke-width:0.5;" /><line style="stroke:#000000;stroke-width:0.5;" x1="883" x2="883" y1="479.5" y2="485.5" /><line style="stroke:#000000;stroke-width:0.5;" x1="889" x2="883" y1="485.5" y2="485.5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="730" y="500.4951">ROR PractitionerRole</text></a></g><!--link EJ to EG--><g id="link_EJ_EG"><path d="M315,79.81 C315,101.37 315,137.94 315,159.4 " fill="none" id="EJ-EG" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="316" y="124.0669">&#160;&#160;&#160;&#160;&#160;&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="305.775" y="99.7561">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="288.3344" y="148.2807">1..*</text></g><!--link EG to OI--><g id="link_EG_OI"><path d="M395.57,177.5 C420.13,177.5 447.11,177.5 471.65,177.5 " fill="none" id="EG-OI" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="40" x="413.75" y="170.5669">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="403.4823" y="190.2044">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="456.9201" y="173.8679">*</text></g><!--link EG to Offre--><g id="link_EG_Offre"><path d="M315.76,195.81 C316.7,217.37 318.31,253.94 319.25,275.4 " fill="none" id="EG-Offre" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="318" y="240.0669">&#160;&#160;&#160;&#160;&#160;&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="288.3178" y="215.7561">0..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="310.8953" y="264.2807">*</text></g><!--link OI to Offre--><g id="link_OI_Offre"><path d="M517.27,195.57 C473.53,217.06 398.82,253.77 354.97,275.32 " fill="none" id="OI-Offre" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="478.3748" y="215.7612">0..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="339.1577" y="264.4973">1..*</text></g><!--link OI to OI--><g id="link_OI_OI"><path d="M632.08,166.77 C652.06,167.52 667,171.1 667,177.5 C667,183.9 652.06,187.48 632.08,188.23 " fill="none" id="OI-OI" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="639.9931" y="162.2632">0..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="640.0462" y="185.5969">*</text></g><!--link Offre to Lieu--><g id="link_Offre_Lieu"><path d="M398.23,293.5 C422.69,293.5 449.68,293.5 474.18,293.5 " fill="none" id="Offre-Lieu" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="40" x="416.25" y="286.5669">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="405.9412" y="306.2044">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="443.4181" y="306.2044">1..*</text></g><!--link SO to Offre--><g id="link_SO_Offre"><path d="M206.69,293.5 C218.35,293.5 230,293.5 241.66,293.5 " fill="none" id="SO-Offre" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="214.5729" y="289.939">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="226.0693" y="289.8679">1</text></g><!--link Ex to SO--><g id="link_Ex_SO"><path d="M111.61,195.81 C112.36,217.37 113.65,253.94 114.4,275.4 " fill="none" id="Ex-SO" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="102.5718" y="215.7561">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="87.5431" y="264.2807">1..*</text></g><!--link Professionnel to Ex--><g id="link_Professionnel_Ex"><path d="M111,79.81 C111,101.37 111,137.94 111,159.4 " fill="none" id="Professionnel-Ex" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="101.775" y="99.7561">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="84.3344" y="148.2807">1..*</text></g><!--link healthcareservice to organization--><!--link organization to location--><!--link location to practitioner--><!--link practitioner to practitionerrole--></g></svg></p>
+</div>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="annexes.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="downloads.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 12, 2024 09:47+0000">2024-01-12</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+                      Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Historique des versions </a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">New Issue</a>
+                
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+  
+    
+  
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+
+
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+
