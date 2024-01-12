@@ -132,16 +132,18 @@ GET [BASE]/Location?address-postalcode=35,22,29,56 #critère de recherche sur le
 
 #### Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1.
+**Description du scénario :** Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié. 
+
+**Exemple :** Recherche des données capacitaires associées au lieu de prise en charge dont l’identifiant fonctionnel est 52/192675.
 
 **Requête :**
 
-`GET [BASE]/Location?identifier=Location1&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?identifier=52/192675&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Location?identifier=Location1 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+GET [BASE]/Location?identifier=52/192675 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 

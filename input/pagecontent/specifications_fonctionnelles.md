@@ -72,7 +72,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
     -   Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.
 
 -   Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
-    -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge -\> il connait un des identifiants (identifiant de point de saisie ou identifiant externe de synchronisation) et demande à lire une donnée capacitaire en particulier.
+    -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié. 
 
 -   Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
     -   Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
