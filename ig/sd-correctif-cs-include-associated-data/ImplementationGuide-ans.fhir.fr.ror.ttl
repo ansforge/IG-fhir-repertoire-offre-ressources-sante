@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-01-15T09:47:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-01-15T10:05:53+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -588,8 +588,8 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-include-associated-data-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/ror-include-associated-data-code-system" ]
        ] ;
-       fhir:name [ fhir:v "Définition des type de phase de l'essai cliniques incluant https://hl7.org/fhir/R4/valueset-research-study-phase.html" ] ;
-       fhir:description [ fhir:v "type de phase de l'essai clinique" ] ;
+       fhir:name [ fhir:v "Code System afin d'étendre le Code System pour query parameter includeAssociatedData " ] ;
+       fhir:description [ fhir:v "Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l'opération export pour le ROR" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1715,7 +1715,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-include-associated-data-vs> ;
          fhir:reference [ fhir:v "ValueSet/ror-include-associated-data-vs" ]
        ] ;
-       fhir:name [ fhir:v "Value Set pou étendre le Value Set pour query parameter includeAssociatedData" ] ;
+       fhir:name [ fhir:v "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData" ] ;
        fhir:description [ fhir:v "Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [

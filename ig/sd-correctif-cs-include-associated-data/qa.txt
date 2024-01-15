@@ -1,17 +1,17 @@
 ﻿ROR : Validation Results
 =========================================
 
-err = 1, warn = 251, info = 43
+err = 1, warn = 253, info = 43
 IG Publisher Version: 1.5.11
-Generated Mon Jan 15 09:51:18 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Mon Jan 15 10:10:07 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 4 / 4 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CapabilityStatement-ror-consommateur : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CapabilityStatement-ror-serveur : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-act-type-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-input-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 1 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 2 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-capacity-status : 0 / 0 / 1
@@ -125,8 +125,10 @@ WARNING: CodeSystem/input-task-ror-codesystem: CodeSystem: Published code system
 WARNING: CodeSystem/output-task-ror-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.title is mandatory, but it is not present
 WARNING: CodeSystem/output-task-ror-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 == fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system.json ==
+WARNING: CodeSystem/ror-include-associated-data-code-system: CodeSystem.title: value should not start or finish with whitespace 'Code System afin d'étendre le Code System pour query parameter includeAssociatedData '
 WARNING: CodeSystem/ror-include-associated-data-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror.json ==
+WARNING: ImplementationGuide/ans.fhir.fr.ror: ImplementationGuide.definition.resource[1].name: value should not start or finish with whitespace 'Code System afin d'étendre le Code System pour query parameter includeAssociatedData '
 == fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-capacity-status.json ==
