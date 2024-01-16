@@ -18,6 +18,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
+* name 1..1
 * name ^short = "raisonSociale (EJ) : Raison sociale complète de l'entité juridique
 ou nom de l'EG :  Nom sous lequel l'entité géographique exerce son activité
 ou nom de l'OI : Nom de l'organisation interne"
@@ -28,6 +29,7 @@ ou nom de l'OI : Nom de l'organisation interne"
     ROROrganizationAdditionalName named ror-organization-additional-name 0..1
 * name.extension[ror-organization-additional-name] ^short = "complementRaisonSociale (EJ) : Suite de la raison sociale, si elle existe"
 
+* alias 0..1
 * alias ^short = "nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
 * identifier 0..*
