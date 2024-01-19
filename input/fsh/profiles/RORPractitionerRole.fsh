@@ -128,7 +128,7 @@ Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
 * code -> "profession"
 
 * specialty[specificCompetence] -> "competenceSpecifique"
-* specialty[expertiseType] -> "SavoirFaire.typeSavoirFaire "
+* specialty[expertiseType] -> "SavoirFaire.typeSavoirFaire"
 * specialty[specialty] -> "SavoirFaire.specialite"
 * specialty[competence] -> "SavoirFaire.competence"
 * specialty[exclusiveCompetence] -> "SavoirFaire.competenceExclusive"

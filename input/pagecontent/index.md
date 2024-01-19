@@ -137,11 +137,11 @@ pouvoir intégrer les évolutions régulières des nomenclatures (ajout de
 code, modification de libellé, mise en obsolescence d'un code,
 réactivation de code).
 
-#### Contexte technique du projet
+#### Contexte technique du projet <code><span style="color: #ff0000;">draft</span></code>
 
 L'objectif de ce projet est ...
 
-#### Standards utilisés
+#### Standards utilisés <code><span style="color: #ff0000;">draft</span></code>
 
 Ces spécifications techniques se basent sur le standard HL7 FHIR Release 4. Elles font référence à un certain nombre de ressources du standard ainsi qu’aux spécifications de l’API REST FHIR, basées sur le protocole HTTP. La syntaxe retenue est JSON.
 

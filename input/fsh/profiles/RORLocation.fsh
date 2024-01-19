@@ -90,7 +90,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * position.extension ^slicing.discriminator.path = "url"
 * position.extension ^slicing.rules = #open
 * position.extension contains RORCoordinateReliability named ror-coordinate-reliability 0..1
-* position.extension[ror-coordinate-reliability] ^short = "systemeGeodesique (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
+* position.extension[ror-coordinate-reliability] ^short = "coordonneesFiables (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

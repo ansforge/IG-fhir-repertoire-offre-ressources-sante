@@ -1,0 +1,132 @@
+@startuml mapping-HealthcareService
+
+left to right direction
+
+legend top left
+  <&layers> : slice
+  <&plus> : extension
+endlegend
+
+
+map "metadonnes : meta" as meta #back:AliceBlue;header:LightSkyBlue {
+    lastUpdated => dateMiseJour 
+    <&layers> tag[codeRegion] => regionSource
+}
+
+map "Patientele  : <&plus> RORHealthcareservicePatientType" as RORHealthcareservicePatientType #back:AliceBlue;header:LightSkyBlue {
+    publicPrisEnCharge => supportedPatientInfo
+    ageMin => ageRange.value[x].low
+    ageMax => ageRange.value[x].high
+}
+
+map "zoneIntervention : <&plus> RORTerritorialDivision" as RORTerritorialDivision #back:AliceBlue;header:LightSkyBlue {
+    type => typeTerritorialDivision
+    code => codeTerritorialDivision
+}
+
+map "<&layers> notAvailable[closingRepoeningDate]" as notAvailable #back:AliceBlue;header:LightSkyBlue {
+    during.start => dateFermeture
+    during.end => datePrevisionnelleReouverture
+}
+
+map "horaire : <&plus> RORAvailableTimeEffectiveOpeningClosingDate" as RORAvailableTimeEffectiveOpeningClosingDate #back:AliceBlue;header:LightSkyBlue {
+    debutDateEffective => value[x].start
+    finDateEffective => value[x].end
+}
+
+map "horaire : availableTime" as availableTime #back:AliceBlue;header:LightSkyBlue {
+    heureDebut => availableStartTime
+    heureFin => availableStartTime
+    typePlageHoraire => <&plus> RORAvailableTimeTypeOfTime
+    jourSemaine => <&plus> RORAvailableTimeNumberDaysofWeek
+    <&plus> RORAvailableTimeEffectiveOpeningClosingDate *-> RORAvailableTimeEffectiveOpeningClosingDate
+}
+
+map "boiteLettreMSS.adresseMSS : telecom" as telecom #back:AliceBlue;header:LightSkyBlue {
+    adresseTelecom => value
+    canal => <&plus> RORTelecomCommunicationChannel
+    utilisation => <&plus> RORTelecomUsage
+    niveauConfidentialite => <&plus> RORTelecomConfidentialityLevel
+}
+
+map "contact : <&plus> RORHealthcareserviceContact" as RORHealthcareserviceContact #back:AliceBlue;header:LightSkyBlue {
+    nom => name
+    natureContact => purposeContact
+    description => description
+    niveauConfidentialite => RORConfidentialityLevel
+    fonctionContact => RORContactFunctionContact
+    telecommunication => RORHealthcareServiceContactTelecom
+}
+
+map "contact.telecommunication : <&plus> RORHealthcareServiceContactTelecom" as RORHealthcareServiceContactTelecom #back:AliceBlue;header:LightSkyBlue {
+    adresseTelecom => telecomAddress
+    canal => RORTelecomCommunicationChannel
+    utilisation => RORTelecomUsage
+    niveauConfidentialite => RORTelecomConfidentialityLevel
+}
+
+
+map "**OffreOperationnelle : HealthcareService**" as HS #back:AliceBlue;header:LightSkyBlue {
+    metadonnee => meta 
+    metadonnee.identifiant => id
+    metadonnee.commentaire => <&plus> RORMetaComment
+    metadonnee.dateCreation => <&plus> RORMetaCreationDate
+    => active
+    identifiantOffre => identifier
+    nomOffre => name
+    typeOffre => category
+    champActivite => type
+    temporaliteAccueil => <&layers> characteristic[receptionType]
+    modePriseEnCharge => <&layers> characteristic[careMode]
+    modaliteAccueil => <&layers> characteristic[receptionModality]
+    modeGestion => <&layers> characteristic[managementType]
+    acteSpecifique => <&layers> characteristic[specificAct]
+    acteRealiseHorsCabinet => <&layers> characteristic[outsideOfficeAct]
+    specialisationPriseEnCharge => <&layers> characteristic[takingCareSpeciality]
+    ouvertureAnnuelle => <&layers> characteristic[annualOpening]
+    professionRessource => <&layers> characteristic[ressourceProfession]
+    competenceSpecifique => <&layers> characteristic[specificCompetence]
+    niveauExpertise  => <&layers> characteristic[expertiseLevel]
+    typeFermeture => <&layers> characteristic[temporalityStopService]
+    uniteSensible => <&plus> RORHealthcareserviceSensitiveUnit
+    habilitationAuxSoinsSansConsentement => <&plus> RORHealthcareserviceNoConsentHabilitation
+    secteurPsychiatrique => <&plus> RORHealthcareservicePsychiatricSector
+    ActiviteOperationnelle.activiteOperationnelle => <&layers> specialty[operationalActivity]
+    ActiviteOperationnelle.familleActiviteOperationnelleoperational => <&layers> specialty[ActivityFamily]
+    Patientele => <&plus> RORHealthcareservicePatientType
+    zoneIntervention => <&plus> RORTerritorialDivision
+    contact => <&plus> RORHealthcareserviceContact
+    boiteLettreMSS => telecom
+    horaire => availableTime
+    notAvailable *-> notAvailable
+}
+
+meta <-- HS::metadonnee
+HS::horaire -> availableTime 
+RORHealthcareservicePatientType <-- HS::Patientele
+RORTerritorialDivision <-- HS::zoneIntervention
+HS::boiteLettreMSS --> telecom
+HS::contact --> RORHealthcareserviceContact
+RORHealthcareserviceContact -> RORHealthcareServiceContactTelecom
+
+
+object "**PractitionerRole**" as PR #LightSeaGreen {
+    ExerciceProfessionnel
+    SituationOperationnelle
+}
+
+object "**Location**" as L #Violet {
+    LieuRealisationOffre
+}
+
+object "**Organization**" as O #Gold {
+    EntiteJuridique
+    EntiteGeographique
+    OrganisationInterne
+}
+
+PR -> HS
+L <-- HS
+HS --> O
+
+@enduml
