@@ -21,6 +21,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * type ^short = "fonctionLieu (LieuRealisationOffre) : La fonction correspond à la destination d'usage du lieu"
 * type from $JDV-J198-FonctionLieu-ROR (required)
 * managingOrganization MS
+* operationalStatus ^short = "statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
+* operationalStatus from $JDV-J224-StatutLieu-ROR (required)
 
 * identifier 0..*
 * identifier ^slicing.discriminator.type = #value
@@ -96,13 +98,11 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    RORLocationStatus named ror-location-status 0..1 and
     RORCommuneCog named ror-commune-cog 1..1 and
     RORLocationEquipment named ror-location-equipment 0..* and
     RORLocationResidentialCapacity named ror-location-residential-capacity 0..* and
     RORLocationSupportedCapacity named ror-location-supported-capacity 0..* and
     RORMetaCreationDate named ror-meta-creation-date 1..1
-* extension[ror-location-status] ^short = "statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
 * extension[ror-commune-cog] ^short = "communeCog (LieuRealisationOffre) : Code officiel géographique (COG) de la commune dans laquelle le lieu est situé"
 * extension[ror-location-equipment] ^short = "EquipementSpecifique : Ressource matérielle discriminante pour la réalisation d'une prestation"
 * extension[ror-location-residential-capacity] ^short = "CapaciteHabitation : type d'habitation adapté à la réalisation d'une offre"
