@@ -5,31 +5,50 @@ A noter que Task, Measure et MeasureReport ne font pas partie du mapping, car ce
 
 ### Mapping global <code><span style="color: #ff0000;">draft</span></code>
 
-<div class="figure" style="width:100%;">
-    <p>{% include vue-fonctionnelle-fhir.svg %}</p>
-</div>
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include vue-fonctionnelle-fhir.svg%}</div>
+        </td>    
+    </tr>
+</table>
 
 ### Mapping HealthcareService <code><span style="color: #ff0000;">draft</span></code>
 
-<div class="figure" style="width:100%;">
-    <p>{% include mapping-HealthcareService.svg %}</p>
-</div>
-
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include mapping-HealthcareService.svg%}</div>
+        </td>    
+    </tr>
+</table>
 
 ### Mapping Practitioner & PractitionerRole <code><span style="color: #ff0000;">draft</span></code>
 
-<div class="figure" style="width:100%;">
-    <p>{% include mapping-Practitioner-PractitionerRole.svg %}</p>
-</div>
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include mapping-Practitioner-PractitionerRole.svg%}</div>
+        </td>    
+    </tr>
+</table>
 
 ### Mapping Organization <code><span style="color: #ff0000;">draft</span></code>
 
-<div class="figure" style="width:100%;">
-    <p>{% include mapping-Organization.svg %}</p>
-</div>
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include mapping-Organization.svg%}</div>
+        </td>    
+    </tr>
+</table>
 
 ### Mapping Location <code><span style="color: #ff0000;">draft</span></code>
 
-<div class="figure" style="width:100%;">
-    <p>{% include mapping-Location.svg %}</p>
-</div>
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include mapping-Location.svg%}</div>
+        </td>    
+    </tr>
+</table>
