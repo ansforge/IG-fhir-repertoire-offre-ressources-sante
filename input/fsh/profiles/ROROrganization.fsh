@@ -5,6 +5,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 /* Références*/
 * partOf only Reference(fr-organization or ROROrganization)
+* partOf MS
 
 /* Données techniques */
 * meta.lastUpdated 1..1 MS
@@ -80,7 +81,7 @@ ou nom de l'OI : Nom de l'organisation interne"
 * identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
 * identifier[adeliRang].system = "http://adelirang.esante.gouv.fr"
 
-// Slice déjà défini dans FrOrganization
+// Slice déjà définie dans FrOrganization
 * type MS
 * type contains
     statutJuridiqueINSEE 0..1 MS and

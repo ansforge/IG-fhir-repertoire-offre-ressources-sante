@@ -24,6 +24,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * code 1..1 MS
 * code ^short = "profession (ExerciceProfessionnel) : Profession exercée ou future profession de l'étudiant"
 * code from $JDV-J229-ProfessionSante-ROR (required)
+* practitioner MS
+* healthcareService MS
 
 * availableTime 0..1 MS
 * availableTime ^short = "precisionHoraire (SituationOperationnelle) : planning d'activité du professionnel"
