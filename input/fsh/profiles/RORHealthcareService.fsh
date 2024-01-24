@@ -148,12 +148,12 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * notAvailable ^slicing.discriminator.path = "id" 
 * notAvailable ^slicing.rules = #open
 * notAvailable contains
-    closingRepoeningDate 0..1 MS
-* notAvailable[closingRepoeningDate].id = "closingRepoeningDate"
-* notAvailable[closingRepoeningDate] ^short = "Période de fermeture (during.start) et de réouverture prévisionnelle (during.end)."
-* notAvailable[closingRepoeningDate].during.start ^short = "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée"
-* notAvailable[closingRepoeningDate].during.end ^short = "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
-* notAvailable[closingRepoeningDate].description = "Période de fermeture et de réouverture prévisionnelle"
+    closingReopeningDate 0..1 MS
+* notAvailable[closingReopeningDate].id = "closingReopeningDate"
+* notAvailable[closingReopeningDate] ^short = "Période de fermeture (during.start) et de réouverture prévisionnelle (during.end)."
+* notAvailable[closingReopeningDate].during.start ^short = "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée"
+* notAvailable[closingReopeningDate].during.end ^short = "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
+* notAvailable[closingReopeningDate].description = "Période de fermeture et de réouverture prévisionnelle"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
