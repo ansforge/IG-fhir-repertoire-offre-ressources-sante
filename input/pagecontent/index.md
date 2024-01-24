@@ -137,16 +137,6 @@ pouvoir intégrer les évolutions régulières des nomenclatures (ajout de
 code, modification de libellé, mise en obsolescence d'un code,
 réactivation de code).
 
-#### Contexte technique du projet <code><span style="color: #ff0000;">draft</span></code>
-
-L'objectif de ce projet est ...
-
-#### Standards utilisés <code><span style="color: #ff0000;">draft</span></code>
-
-Ces spécifications techniques se basent sur le standard HL7 FHIR Release 4. Elles font référence à un certain nombre de ressources du standard ainsi qu’aux spécifications de l’API REST FHIR, basées sur le protocole HTTP. La syntaxe retenue est JSON.
-
-Une mise en équivalence ...
-
 ##### Ressources profilées
 
 La liste ci-dessous expose la liste des profils génériques profilés.
@@ -154,7 +144,7 @@ La liste ci-dessous expose la liste des profils génériques profilés.
 {% sql SELECT '[' || Name ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description, json_extract(Json, '$.baseDefinition') as "Parent" FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%"%}
 
 <div class="figure" style="width:100%;">
-    <p>{% include document-overview.svg %}</p>
+    <p>{% include vue-fonctionnelle-fhir.svg %}</p>
 </div>
 
 #### Dépendances

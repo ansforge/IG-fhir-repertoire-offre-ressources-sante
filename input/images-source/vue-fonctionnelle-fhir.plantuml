@@ -3,21 +3,21 @@
 'Declaration des éléments
 rectangle "Vue fonctionnelle ROR" {
 
-    rectangle "Offre opérationnelle" as Offre #LightSkyBlue;line:Black;text:Black
+    rectangle "Offre opérationnelle \n [[StructureDefinition-ror-healthcareservice.html ROR HealthcareService]] " as Offre#LightSkyBlue;line:Black;text:Black
 
-    rectangle "Entité juridique" as EJ #Gold;line:Black;text:Black
+    rectangle "Entité juridique \n [[StructureDefinition-ror-organization.html ROR Organization]]" as EJ #Gold;line:Black;text:Black
 
-    rectangle "Entité géographique" as EG #Gold;line:Black;text:Black
+    rectangle "Entité géographique \n [[StructureDefinition-ror-organization.html ROR Organization]]" as EG #Gold;line:Black;text:Black
 
-    rectangle "Organisation interne" as OI #Gold;line:Black;text:Black
+    rectangle "Organisation interne \n [[StructureDefinition-ror-organization.html ROR Organization]]" as OI #Gold;line:Black;text:Black
     
-    rectangle "Lieu réalisation offre" as Lieu #Violet;line:Black;text:Black
+    rectangle "Lieu réalisation offre \n [[StructureDefinition-ror-location.html ROR Location]]" as Lieu #Violet;line:Black;text:Black
 
-    rectangle "Professionnel" as Professionnel #LimeGreen;line:Black;text:Black
+    rectangle "Professionnel \n [[StructureDefinition-ror-practitioner.html ROR Practitioner]]" as Professionnel #LimeGreen;line:Black;text:Black
 
-    rectangle "Situation opérationnelle" as SO #LightSeaGreen;line:Black;text:Black
+    rectangle "Situation opérationnelle  \n [[StructureDefinition-ror-practitionerrole.html ROR PractitionerRole]]" as SO #LightSeaGreen;line:Black;text:Black
 
-    rectangle "Exercice professionnel" as Ex  #LightSeaGreen;line:Black;text:Black
+    rectangle "Exercice professionnel \n [[StructureDefinition-ror-practitionerrole.html ROR PractitionerRole]]" as Ex  #LightSeaGreen;line:Black;text:Black
 
 }
 
@@ -31,27 +31,6 @@ Offre "1..*"-"1..*" Lieu : "          "
 SO "*"-"1" Offre
 Ex "1"--"1..*" SO
 Professionnel "1"--"1..*" Ex
-
-'Légende
-
-rectangle "Légende (Ressources FHIR)" #LightGrey {
-    artifact "ROR HealthcareService" as healthcareservice #LightSkyBlue;line:Black;text:Black
-    artifact "ROR Location" as location #Violet;line:Black;text:Black
-    artifact "ROR Organization" as organization #Gold;line:Black;text:Black
-    artifact "ROR Practitioner" as practitioner #LimeGreen;line:Black;text:Black
-    artifact "ROR PractitionerRole" as practitionerrole #LightSeaGreen;line:black;text:Black
-}
-
-healthcareservice -[hidden]- organization
-organization -[hidden]- location
-location -[hidden]- practitioner
-practitioner -[hidden]- practitionerrole
-
-url of healthcareservice [[StructureDefinition-ror-healthcareservice.html]]
-url of location [[StructureDefinition-ror-location.html]]
-url of organization [[StructureDefinition-ror-organization.html]]
-url of practitioner [[StructureDefinition-ror-practitioner.html]]
-url of practitionerrole [[StructureDefinition-ror-practitionerrole.html]] 
 
 @enduml
 
