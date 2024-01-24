@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "08fcec09-6653-4ead-a4cd-c172ac966062-74",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/08fcec09-6653-4ead-a4cd-c172ac966062-74",
+  "id" : "c284d85e-8a77-4014-a079-9a2ecac97df6-74",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c284d85e-8a77-4014-a079-9a2ecac97df6-74",
   "name" : "UnionRORHealthcareServiceAndRORHealthcareService",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-01-24T16:28:31+00:00",
+  "date" : "2024-01-24T16:44:53+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -752,7 +752,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -955,7 +955,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
