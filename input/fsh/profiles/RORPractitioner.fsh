@@ -1,5 +1,5 @@
 Profile: RORPractitioner
-Parent: Practitioner
+Parent: fr-practitioner
 Id: ror-practitioner
 Description: "Profil créée dans le cadre du ROR pour décrire les données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel"
 
