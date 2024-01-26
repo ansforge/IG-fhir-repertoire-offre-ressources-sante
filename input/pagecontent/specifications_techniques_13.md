@@ -778,7 +778,7 @@ PATCH [BASE]/HealthcareService/963
 
 **Description du scénario :** Un utilisateur ajoute une activité opérationnelle, un acte spécifique, un contact avec son numéro et modifie ses horaires.
 
-**Prérequis :** L'identifiant technique de l'offre opérationnelle est connu (963).
+**Prérequis :** L'identifiant technique de l'offre opérationnelle est connu (964).
 
 **Requête :**
 
