@@ -253,7 +253,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>Interaction FHIR</strong></p>
 </td>
 <td width="465">
-<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a> (limitée aux attributs de 'premier niveau'), Update<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
 </td>
 </tr>
 <tr>
@@ -261,7 +261,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>M&eacute;thode http associ&eacute;e</strong></p>
 </td>
 <td width="465">
-<p>PATCH</p>
+<p>PATCH, PUT</p>
 </td>
 </tr>
 <tr>
@@ -284,6 +284,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </table>
 <p>&nbsp;</p>
 <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#patch">https://www.hl7.org/fhir/R4/http.html#patch</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+<p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#update">https://hl7.org/fhir/R4/http.html#create</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 
 <h3 id="construction-de-la-réponse-de-base">Construction de la réponse de base</h3>
 
@@ -312,7 +313,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="scénario-1-modification-dune-entité-juridique">Scénario 1 : Modification d’une entité juridique</h4>
+<h4 id="spécifique-serveur-scénario-1-modification-dune-entité-juridique">[spécifique serveur] Scénario 1 : Modification d’une entité juridique</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Une entité juridique enregistre un changement d’adresse.</p>
 
@@ -374,7 +377,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-2-modification-dune-entité-géographique">Scénario 2 : Modification d’une entité géographique</h4>
+<h4 id="spécifique-serveur-scénario-2-modification-dune-entité-géographique">[spécifique serveur] Scénario 2 : Modification d’une entité géographique</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Une entité géographique enregistre un changement de numéro de téléphone (passage de 01.01.01.02.01 à 01.01.01.02.02) et ajoute un contact (GREDIN Thierry).</p>
 
@@ -395,11 +400,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 </span><span class="p">},</span><span class="w"> 
                 </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization.telecom.extension.where(value='01.01.01.02.01')"</span><span class="w">
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization.telecom"</span><span class="w">
                 </span><span class="p">},</span><span class="w">
                 </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01.01.01.02.02"</span><span class="w">
+                    </span><span class="nl">"valueContactPoint"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01.01.01.02.02"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="p">{</span><span class="w">
+                                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"</span><span class="p">,</span><span class="w">
+                                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                            </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Téléphone fixe"</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">]</span><span class="w">    
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                                </span><span class="p">{</span><span class="w">
+                                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"</span><span class="p">,</span><span class="w">
+                                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                            </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accès libre"</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">]</span><span class="w">    
+                                    </span><span class="p">}</span><span class="w">    
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">]</span><span class="w">
         </span><span class="p">},</span><span class="w">
@@ -475,7 +511,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-3-modification-dune-organisation-interne">Scénario 3 : Modification d’une organisation interne</h4>
+<h4 id="spécifique-serveur-scénario-3-modification-dune-organisation-interne">[spécifique serveur] Scénario 3 : Modification d’une organisation interne</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement sanitaire modifie le nom d’un service.</p>
 
@@ -512,7 +550,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-4-modification-dinformations-sur-un-professionnel">Scénario 4 : Modification d’informations sur un professionnel</h4>
+<h4 id="spécifique-serveur-scénario-4-modification-dinformations-sur-un-professionnel">[spécifique serveur] Scénario 4 : Modification d’informations sur un professionnel</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> L’annuaire modifie les informations concernant un professionnel, l’adossement ROR national modifie les informations du professionnel.</p>
 
@@ -533,11 +573,72 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 </span><span class="p">},</span><span class="w"> 
                 </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner.telecom.where(value='cyndi.chanmet@lifen.mssante.fr')"</span><span class="w">
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner.telecom"</span><span class="w">
                 </span><span class="p">},</span><span class="w">
                 </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cyndi.chanmet@SomedNantes.mssante.fr"</span><span class="w">
+                    </span><span class="nl">"valueContactPoint"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cyndi.chanmet@SomedNantes.mssante.fr"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="p">{</span><span class="w">
+                                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"</span><span class="p">,</span><span class="w">
+                                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                            </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Courrier électronique"</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">]</span><span class="w">    
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                                </span><span class="p">{</span><span class="w">
+                                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"</span><span class="p">,</span><span class="w">
+                                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                            </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accès restreint"</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">]</span><span class="w">    
+                                    </span><span class="p">}</span><span class="w">    
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">},</span><span class="w"> 
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01.01.01.01.01"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="p">{</span><span class="w">
+                                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"</span><span class="p">,</span><span class="w">
+                                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                            </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Téléphone fixe"</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">]</span><span class="w">    
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                                </span><span class="p">{</span><span class="w">
+                                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"</span><span class="p">,</span><span class="w">
+                                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                            </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accès libre"</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">]</span><span class="w">    
+                                    </span><span class="p">}</span><span class="w">    
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
@@ -545,7 +646,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-5-modification-dinformations-sur-une-situation-opérationnelle">Scénario 5 : Modification d’informations sur une situation opérationnelle</h4>
+<h4 id="spécifique-serveur-scénario-5-modification-dinformations-sur-une-situation-opérationnelle">[spécifique serveur] Scénario 5 : Modification d’informations sur une situation opérationnelle</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> L’annuaire enrichit le savoir faire d’un professionnel de santé, l’adossement du ROR national modifie les informations de la situation opérationnelle.</p>
 
@@ -615,7 +718,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-6--modification-dune-offre-opérationnelle-ajout-dun-acte-spécifique">Scénario 6 : Modification d’une offre opérationnelle (Ajout d’un acte spécifique)</h4>
+<h4 id="spécifique-serveur-scénario-6--modification-dune-offre-opérationnelle-ajout-dun-acte-spécifique">[spécifique serveur] Scénario 6 : Modification d’une offre opérationnelle (Ajout d’un acte spécifique)</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite au sein d’une structure.</p>
 
@@ -658,7 +763,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-7--modification-dune-offre-opérationnelle-retrait-dune-activité-opérationnelle">Scénario 7 : Modification d’une offre opérationnelle (Retrait d’une activité opérationnelle)</h4>
+<h4 id="spécifique-serveur-scénario-7--modification-dune-offre-opérationnelle-retrait-dune-activité-opérationnelle">[spécifique serveur] Scénario 7 : Modification d’une offre opérationnelle (Retrait d’une activité opérationnelle)</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement retire une activité opérationnelle au sein d’une offre opérationnelle déjà décrite au sein d’une structure.</p>
 
@@ -701,7 +808,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-8-modification-dune-offre-opérationnelle-précision-sur-loffre-opérationnelle-dun-cabinet-de-ville">Scénario 8 : Modification d’une offre opérationnelle (Précision sur l’offre opérationnelle d’un cabinet de ville)</h4>
+<h4 id="spécifique-serveur-scénario-8-modification-dune-offre-opérationnelle-précision-sur-loffre-opérationnelle-dun-cabinet-de-ville">[spécifique serveur] Scénario 8 : Modification d’une offre opérationnelle (Précision sur l’offre opérationnelle d’un cabinet de ville)</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d’activité opérationnelle et d’acte spécifique.</p>
 
@@ -895,11 +1004,395 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-9-modification-dune-offre-opérationnelle-rattachement-dun-professionnel-de-santé">Scénario 9 : Modification d’une offre opérationnelle (Rattachement d’un professionnel de santé)</h4>
+<h4 id="spécifique-serveur-scénario-9-modification-dune-offre-opérationnelle-rattachement-dun-professionnel-de-santé">[spécifique serveur] Scénario 9 : Modification d’une offre opérationnelle (Rattachement d’un professionnel de santé)</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Pour enregistrer le rattachement d’un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.</p>
 
 <p><strong>Requête :</strong> Voir <a href="specifications_techniques_12.html#spécifique-serveur-scénario-10-création-dune-situation-opérationnelle">scénario 10 du cas d’usage saisie de l’offre</a> (Création d’une situation opérationnelle)</p>
+
+<h4 id="spécifique-serveur-scénario-10-modification-de-multiples-informations-sur-une-offre">[spécifique serveur] Scénario 10 : Modification de multiples informations sur une offre</h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
+
+<p><strong>Description du scénario :</strong> Un utilisateur ajoute une activité opérationnelle, un acte spécifique, un contact avec son numéro et modifie ses horaires.</p>
+
+<p><strong>Prérequis :</strong> L’identifiant technique de l’offre opérationnelle est connu (963).</p>
+
+<p><strong>Requête :</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PUT</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/HealthcareService/</span><span class="mi">964</span><span class="w">
+</span><span class="p">{</span><span class="w">	
+	</span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HealthcareService"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"profile"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"</span><span class="p">],</span><span class="w"> 
+        </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-20T10:00:00+01:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Services à domicile quiétude Bois Colombes"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"providedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization/2424"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location/654"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ZZZ"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30"</span><span class="p">,</span><span class="w"> 
+                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service d’aide et d’accompagnement à domicile (SAAD)"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">    
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04"</span><span class="p">,</span><span class="w"> 
+                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Médico-social (MS)"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"specialty"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"298"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accompagnements pour vivre dans un logement"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R265-PrestationPilotageSerafin/FHIR/TRE-R265-PrestationPilotageSerafin"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"019"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.3.2.1 Accompagnements pour vivre dans un logement"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"299"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accompagnements pour accomplir les activités domestiques"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">    
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R265-PrestationPilotageSerafin/FHIR/TRE-R265-PrestationPilotageSerafin"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"020"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.3.2.2 Accompagnements pour accomplir les activités domestiques"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"302"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accompagnements pour préparer sa vie professionnelle"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">    
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R265-PrestationPilotageSerafin/FHIR/TRE-R265-PrestationPilotageSerafin"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"023"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.3.3.2 Accompagnements pour préparer sa vie professionnelle"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"characteristic"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Equipe d'intervention mobile"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R236-ModeGestion/FHIR/TRE-R236-ModeGestion"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mandataire"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">    
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0784"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Entretien du logement (ménage, petit bricolage)"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0785"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Entretien du linge"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">    
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0786"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accompagnement pour faire des achats (courses)"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0787"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accompagnement ou apprentissage à la préparation du repas"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">    
+        </span><span class="p">},</span><span class="w"> 
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0788"</span><span class="p">,</span><span class="w"> 
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Conduite du véhicule de la personne"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">    
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"availableTime"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"daysOfWeek"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"mon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tue"</span><span class="p">,</span><span class="w"> </span><span class="s2">"thu"</span><span class="p">,</span><span class="w"> </span><span class="s2">"fri"</span><span class="p">],</span><span class="w">
+        </span><span class="nl">"availableStartTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"availableEndTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"</span><span class="p">,</span><span class="w"> 
+                </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Horaire de fonctionnement"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">        
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">    
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"valueDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-09T14:30:00+01:00"</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"valueBoolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ageRange"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueRange"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"low"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="nl">"high"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"supportedPatientInfo"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R239-PublicPrisEnCharge/FHIR/TRE-R239-PublicPrisEnCharge"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w"> 
+                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Personnes âgées en perte d'autonomie (PA) et aidants"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w">    
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">    
+            </span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-territorial-division"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"codeTerritorialDivision"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92036"</span><span class="p">,</span><span class="w"> 
+                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bois-Colombes (92009)"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w"> 
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">  
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"typeTerritorialDivision"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w"> 
+                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Commune"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w">
+                    </span><span class="p">}</span><span class="w">        
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w"> 
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"purposeContact"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w"> 
+                    </span><span class="p">}</span><span class="w">       
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accès libre"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w">
+                    </span><span class="p">}</span><span class="w">        
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                    </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication"</span><span class="p">,</span><span class="w">
+                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Téléphone fixe"</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">]</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"telecomAddress"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01.01.01.01.01"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                    </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"</span><span class="p">,</span><span class="w">
+                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accès libre"</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">]</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w"> 
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"purposeContact"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accueil"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w"> 
+                    </span><span class="p">}</span><span class="w">       
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accès libre"</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">]</span><span class="w">
+                    </span><span class="p">}</span><span class="w">        
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                    </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication"</span><span class="p">,</span><span class="w">
+                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Téléphone fixe"</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">]</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"telecomAddress"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01.01.01.01.03"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                    </span><span class="p">{</span><span class="w">
+                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"</span><span class="p">,</span><span class="w">
+                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accès libre"</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">]</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
 
 
 
@@ -947,7 +1440,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 15, 2024 07:37+0000">2024-01-15</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 26, 2024 15:06+0000">2024-01-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

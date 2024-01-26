@@ -299,6 +299,7 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
       <li>L’exécution des transactions ne provoquera aucune modification sur les données sources extraites.</li>
     </ul>
   </li>
+  <li>La mention “serveur” désigne le serveur ROR national.</li>
 </ul>
 
 <h3 id="consultation-des-données-capacitaires">Consultation des données capacitaires</h3>
@@ -739,42 +740,42 @@ V3.0)</b>
 <h4 id="scénarios-6">Scénarios</h4>
 
 <ul>
-  <li>Scénario 1 : Ajout d’un lieu de réalisation de l’offre
+  <li>[spécifique serveur] Scénario 1 : Ajout d’un lieu de réalisation de l’offre
     <ul>
       <li>Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l'offre de fonction "001 | hébergement", associé à une offre opérationnelle existante, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.</li>
     </ul>
   </li>
-  <li>Scénario 2 : Ajout d’une capacité de prise en charge
+  <li>[spécifique serveur] Scénario 2 : Ajout d’une capacité de prise en charge
     <ul>
       <li>Un établissement (via bed management, ...) ajoute dans un lieu de réalisation de l'offre existant, des données capacitaires pour : une affectation temporaire "Covid +", 2 lits disponibles (sexe indifférencié), à t0.</li>
     </ul>
   </li>
-  <li>Scénario 3 : Suppression d’une capacité d’accueil opérationnelle
+  <li>[spécifique serveur] Scénario 3 : Suppression d’une capacité d’accueil opérationnelle
     <ul>
       <li>Un établissement (via bed management, …) supprime dans un lieu de réalisation de l'offre existant tous les enregistrements liés à l'affectation temporaire "Covid-".</li>
     </ul>
   </li>
-  <li>Scénario 4 : Mise à jour de l’adresse du lieu de réalisation de l’offre
+  <li>[spécifique serveur] Scénario 4 : Mise à jour de l’adresse du lieu de réalisation de l’offre
     <ul>
       <li>Un établissement modifie le numéro de voie de l’adresse du lieu de réalisation de l’offre.</li>
     </ul>
   </li>
-  <li>Scénario 5 : Ajout d’un équipement spécifique dans un lieu de réalisation de l’offre
+  <li>[spécifique serveur] Scénario 5 : Ajout d’un équipement spécifique dans un lieu de réalisation de l’offre
     <ul>
       <li>Un établissement ajout un équipement spécifique dans un lieu de réalisation de l’offre : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</li>
     </ul>
   </li>
-  <li>Scénario 6 : Modification de la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre
+  <li>[spécifique serveur] Scénario 6 : Modification de la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre
     <ul>
       <li>Un établissement modifie la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</li>
     </ul>
   </li>
-  <li>Scénario 7 : Suppression d’un équipement spécifique dans un lieu de réalisation de l’offre
+  <li>[spécifique serveur] Scénario 7 : Suppression d’un équipement spécifique dans un lieu de réalisation de l’offre
     <ul>
       <li>Un établissement indique qu’il ne dispose plus de l’échographe 3D, il modifie la quantité d’équipement en service : 030 | Echographe 3D, nb en service : 0, aucune limite équipement associée.</li>
     </ul>
   </li>
-  <li>Scénario 8 : Modification de la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre
+  <li>[spécifique serveur] Scénario 8 : Modification de la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre
     <ul>
       <li>Un établissement modifie la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 280 kg.</li>
     </ul>
@@ -889,49 +890,54 @@ V3.0)</b>
 <h4 id="scénarios-8">Scénarios</h4>
 
 <ul>
-  <li>Scénario 1 : Modification d’une entité juridique
+  <li>[spécifique serveur] Scénario 1 : Modification d’une entité juridique
     <ul>
       <li>Une entité juridique enregistre un changement d’adresse.</li>
     </ul>
   </li>
-  <li>Scénario 2 : Modification d’une entité géographique
+  <li>[spécifique serveur] Scénario 2 : Modification d’une entité géographique
     <ul>
       <li>Une entité géographique enregistre un changement de numéro de téléphone et ajoute un contact.</li>
     </ul>
   </li>
-  <li>Scénario 3 : Modification d’une organisation interne
+  <li>[spécifique serveur] Scénario 3 : Modification d’une organisation interne
     <ul>
       <li>Un établissement sanitaire modifie le nom d’un service.</li>
     </ul>
   </li>
-  <li>Scénario 4 : Modification d’informations sur un professionnel
+  <li>[spécifique serveur] Scénario 4 : Modification d’informations sur un professionnel
     <ul>
       <li>L’annuaire modifie les informations concernant un professionnel, l’adossement ROR national modifie les informations du professionnel.</li>
     </ul>
   </li>
-  <li>Scénario 5 : Modification d’informations sur une situation opérationnelle
+  <li>[spécifique serveur] Scénario 5 : Modification d’informations sur une situation opérationnelle
     <ul>
       <li>L’annuaire enrichit le savoir faire d’un professionnel de santé, l’adossement du ROR national modifie les informations de la situation opérationnelle.</li>
     </ul>
   </li>
-  <li>Scénario 6 : Modification d’une offre opérationnelle (Ajout d’un acte spécifique)
+  <li>[spécifique serveur] Scénario 6 : Modification d’une offre opérationnelle (Ajout d’un acte spécifique)
     <ul>
       <li>Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite.</li>
     </ul>
   </li>
-  <li>Scénario 7 : Modification d’une offre opérationnelle (Retrait d’une activité opérationnelle)
+  <li>[spécifique serveur] Scénario 7 : Modification d’une offre opérationnelle (Retrait d’une activité opérationnelle)
     <ul>
       <li>Un établissement retire une activité opérationnelle au sein d’une offre opérationnelle déjà décrite au sein d’une structure.</li>
     </ul>
   </li>
-  <li>Scénario 8 : Modification d’une offre opérationnelle (Précision sur l’offre opérationnelle d’un cabinet de ville)
+  <li>[spécifique serveur] Scénario 8 : Modification d’une offre opérationnelle (Précision sur l’offre opérationnelle d’un cabinet de ville)
     <ul>
       <li>Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d’activité opérationnelle et d’acte spécifique.</li>
     </ul>
   </li>
-  <li>Scénario 9 : Modification d’une offre opérationnelle (Rattachement d’un professionnel de santé)
+  <li>[spécifique serveur] Scénario 9 : Modification d’une offre opérationnelle (Rattachement d’un professionnel de santé)
     <ul>
       <li>Pour enregistrer le rattachement d’un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 10 : Modification de multiples informations sur une offre
+    <ul>
+      <li>Un utilisateur ajoute une activité opérationnelle, un acte spécifique, un contact avec son numéro et modifie ses horaires.</li>
     </ul>
   </li>
 </ul>
@@ -1151,7 +1157,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 15, 2024 07:37+0000">2024-01-15</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 26, 2024 15:06+0000">2024-01-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
