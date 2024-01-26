@@ -68,7 +68,7 @@ Cette partie de la spécification est en cours de construction.
 <p><strong>Interaction FHIR</strong></p>
 </td>
 <td width="538">
-<p>Patch<a href="#_ftn1" name="_ftnref1"><sup>[1]</sup></a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1"><sup>[1]</sup></a> (limitée aux attributs de 'premier niveau')</p>
 </td>
 </tr>
 <tr>
