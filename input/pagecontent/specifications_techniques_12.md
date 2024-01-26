@@ -73,6 +73,8 @@ Plus de précision sur la spécification FHIR :
 
 #### [spécifique serveur] Scénario 1 : Création de l'entité juridique 
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité juridique. 
 
 **Requête :**
@@ -169,6 +171,8 @@ POST [BASE]/Organization
 ```
 
 #### [spécifique serveur] Scénario 2 : Création de l'entité géographique
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité géographique.
 
@@ -340,6 +344,8 @@ POST [BASE]/Organization
 ```
 
 #### [spécifique serveur] Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement ajoute une offre opérationnelle couvrant une autre zone d'intervention que les offres opérationnelles précédemment enregistrées.
 
@@ -632,6 +638,8 @@ POST [BASE]/HealthcareService
 
 #### [spécifique serveur] Scénario 4 : Création d'un pôle
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
 **Prérequis :** L'entité géograpghique dont fait partie le pôle à créer existe et son identifiant est connu (3536).
@@ -686,6 +694,8 @@ POST [BASE]/Organization
 ```
 
 #### [spécifique serveur] Scénario 5 : Création d'un service
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un service.
 
@@ -742,6 +752,8 @@ POST [BASE]/Organization
 
 #### [spécifique serveur] Scénario 6 : Création d'une unité fonctionnelle
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** Afin de décrire son offre, un établissement crée une unité fonctionnelle.
 
 **Prérequis :** L'établissement dont fait partie l'unité fonctionnelle à créer existe et son identifiant est connu (6963).
@@ -796,6 +808,8 @@ POST [BASE]/Organization
 ```
 
 #### [spécifique serveur] Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
 
@@ -983,6 +997,8 @@ POST [BASE]/HealthcareService
 
 #### [spécifique serveur] Scénario 8 : Création d'une offre opérationnelle de ville
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** A la suite d'un adossement à l'annuaire, le ROR national crée l'offre opérationnelle d'un cabinet de ville.
 
 **Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (4947 et 1215).
@@ -1152,6 +1168,8 @@ POST [BASE]/HealthcareService
 
 #### [spécifique serveur] Scénario 9 : Création d'un professionnel
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute un professionnel.
 
 **Requête :**
@@ -1219,6 +1237,8 @@ POST [BASE]/Practitioner
 ```
 
 #### [spécifique serveur] Scénario 10 : Création d'une situation opérationnelle
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 

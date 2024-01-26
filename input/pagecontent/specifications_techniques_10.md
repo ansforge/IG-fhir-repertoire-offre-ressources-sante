@@ -126,6 +126,8 @@ Si la mise à jour échoue, le serveur doit répondre :
 
 #### [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l\'offre de fonction \"001 \| hébergement\", associé à une offre opérationnelle existante dont l'identifiant est XXX, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.
 
 **Requête :**
@@ -239,6 +241,8 @@ PATCH [BASE]/HealthcareService/XXX
 }
 ```
 #### [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement (via bed management, \...) ajoute dans un lieu de réalisation de l\'offre existant dont l'identifiant est XXX, des données capacitaires pour une affectation temporaire : une affectation temporaire \"Covid +\", 2 lits disponibles (sexe indifférencié), à t0.
 
@@ -369,6 +373,8 @@ PATCH [BASE]/Location/XXX
 
 #### [spécifique serveur] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** Un établissement (via bed management, ...) supprime dans un lieu de réalisation de l\'offre existant dont l'identifiant est XXX tous les enregistrements liés à l\'affectation temporaire \"Covid-\".
 
 **Requête :**
@@ -399,6 +405,8 @@ PATCH [BASE]/Location/XXX
 ```
 
 #### [spécifique serveur] Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement modifie le numéro de voie de l'adresse (nouvelle valeur : YYY) du lieu de réalisation de l'offre dont l'identifiant est XXX.
 
@@ -440,6 +448,8 @@ PATCH [BASE]/Location/XXX
 
 
 #### [spécifique serveur] Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
@@ -550,6 +560,8 @@ PATCH [BASE]/Location/XXX
 
 #### [spécifique serveur] Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
 **Requête :**
@@ -581,6 +593,8 @@ PATCH [BASE]/Location/XXX
 
 #### [spécifique serveur] Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre
 
+*Cette requête ne pourra être exécutée que par le serveur.*
+
 **Description du scénario :** Un établissement indique qu'il ne dispose plus de l'échographe 3D, il modifie le nombre d'équipement en service : 030 \| Echographe 3D, nb en service : 0, aucune limite équipement associée.
 
 **Requête :**
@@ -610,6 +624,8 @@ PATCH [BASE]/Location/XXX
 }
 ```
 #### [spécifique serveur] Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 
