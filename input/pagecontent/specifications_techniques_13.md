@@ -64,7 +64,9 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Modification d'une entité juridique
+#### [spécifique serveur] Scénario 1 : Modification d'une entité juridique
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Une entité juridique enregistre un changement d'adresse.
 
@@ -127,7 +129,9 @@ PATCH [BASE]/Organization/1234
 }
 ```
 
-#### Scénario 2 : Modification d'une entité géographique
+#### [spécifique serveur] Scénario 2 : Modification d'une entité géographique
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Une entité géographique enregistre un changement de numéro de téléphone (passage de 01.01.01.02.01 à 01.01.01.02.02) et ajoute un contact (GREDIN Thierry).
 
@@ -229,7 +233,9 @@ PATCH [BASE]/Organization/4569
 }
 ```
 
-#### Scénario 3 : Modification d'une organisation interne
+#### [spécifique serveur] Scénario 3 : Modification d'une organisation interne
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement sanitaire modifie le nom d'un service.
 
@@ -267,7 +273,9 @@ PATCH [BASE]/Organization/789
 }
 ```
 
-#### Scénario 4 : Modification d'informations sur un professionnel
+#### [spécifique serveur] Scénario 4 : Modification d'informations sur un professionnel
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
 
@@ -301,7 +309,9 @@ PATCH [BASE]/Practitioner/159
 }
 ```
 
-#### Scénario 5 : Modification d'informations sur une situation opérationnelle
+#### [spécifique serveur] Scénario 5 : Modification d'informations sur une situation opérationnelle
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
 
@@ -372,7 +382,9 @@ PATCH [BASE]/PractitionerRole/753
 }
 ```
 
-#### Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique)
+#### [spécifique serveur] Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique)
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite au sein d'une structure.
 
@@ -416,7 +428,9 @@ PATCH [BASE]/HealthcareService/741
 }
 ```
 
-#### Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle)
+#### [spécifique serveur] Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle)
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement retire une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au sein d'une structure.
 
@@ -460,7 +474,9 @@ PATCH [BASE]/HealthcareService/852
 }
 ```
 
-#### Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville)
+#### [spécifique serveur] Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville)
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
 
@@ -655,7 +671,9 @@ PATCH [BASE]/HealthcareService/963
 }
 ```
 
-#### Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
+#### [spécifique serveur] Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
 

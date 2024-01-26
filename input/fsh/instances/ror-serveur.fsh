@@ -24,6 +24,8 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-location)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
@@ -136,6 +138,9 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-healthcareservice)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[+].code = #update
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
@@ -204,6 +209,8 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-organization)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
@@ -284,6 +291,8 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-practitioner)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[0].code = #create
+* rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
@@ -304,6 +313,8 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-practitionerrole)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[0].code = #create
+* rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token

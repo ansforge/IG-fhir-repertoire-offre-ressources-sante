@@ -372,28 +372,28 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 #### Scénarios
 
--   Scénario 1 : Ajout d'un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre
     -   Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l\'offre de fonction \"001 \| hébergement\", associé à une offre opérationnelle existante, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.
 
--   Scénario 2 : Ajout d'une capacité de prise en charge
+-   [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge
     -   Un établissement (via bed management, \...) ajoute dans un lieu de réalisation de l\'offre existant, des données capacitaires pour : une affectation temporaire \"Covid +\", 2 lits disponibles (sexe indifférencié), à t0.
 
--   Scénario 3 : Suppression d'une capacité d'accueil opérationnelle
+-   [spécifique serveur] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle
     -   Un établissement (via bed management, ...) supprime dans un lieu de réalisation de l\'offre existant tous les enregistrements liés à l\'affectation temporaire \"Covid-\".
 
--   Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre
     -   Un établissement modifie le numéro de voie de l'adresse du lieu de réalisation de l'offre.
 
--   Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre
     -   Un établissement ajout un équipement spécifique dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
--   Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre
     -   Un établissement modifie la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
--   Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre
     -   Un établissement indique qu'il ne dispose plus de l'échographe 3D, il modifie la quantité d'équipement en service : 030 \| Echographe 3D, nb en service : 0, aucune limite équipement associée.
 
--   Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
     -   Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
@@ -472,23 +472,23 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 #### Scénarios
 
--   Scénario 1 : Modification d'une entité juridique
+-   [spécifique serveur] Scénario 1 : Modification d'une entité juridique
     -   Une entité juridique enregistre un changement d'adresse.
--   Scénario 2 : Modification d'une entité géographique
+-   [spécifique serveur] Scénario 2 : Modification d'une entité géographique
     -   Une entité géographique enregistre un changement de numéro de téléphone et ajoute un contact.
--   Scénario 3 : Modification d'une organisation interne 
+-   [spécifique serveur] Scénario 3 : Modification d'une organisation interne 
     -   Un établissement sanitaire modifie le nom d'un service.
--   Scénario 4 : Modification d'informations sur un professionnel
+-   [spécifique serveur] Scénario 4 : Modification d'informations sur un professionnel
     -   L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
--   Scénario 5 : Modification d'informations sur une situation opérationnelle
+-   [spécifique serveur] Scénario 5 : Modification d'informations sur une situation opérationnelle
     -   L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
--   Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique)
+-   [spécifique serveur] Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique)
     -   Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite.
--   Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle)
+-   [spécifique serveur] Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle)
     -   Un établissement retire une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au sein d'une structure.
--   Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville)
+-   [spécifique serveur] Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville)
     -   Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
--   Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
+-   [spécifique serveur] Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
     -   Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_13.html)**
