@@ -490,6 +490,8 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
     -   Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
 -   [spécifique serveur] Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
     -   Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
+-   [spécifique serveur] Scénario 10 : Modification de multiples informations sur une offre
+    -   Un utilisateur ajoute une activité opérationnelle, un acte spécifique, un contact avec son numéro et modifie ses horaires.
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_13.html)**
 
