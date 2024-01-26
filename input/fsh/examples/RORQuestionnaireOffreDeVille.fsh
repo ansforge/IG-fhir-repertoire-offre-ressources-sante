@@ -33,36 +33,42 @@ Usage: #example
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:idNatSt.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "numFINESS-EJ"
 * item[=].item[=].prefix = "1.2"
 * item[=].item[=].text = "Numéro FINESS de l'EJ"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.identifier:finess.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "numSIREN-EJ"
 * item[=].item[=].prefix = "1.3"
 * item[=].item[=].text = "Numéro SIRET de l'EJ"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.identifier:sirene.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "numEJ_RPPS_ADELI_Rang"
 * item[=].item[=].prefix = "1.4"
 * item[=].item[=].text = "Numéro EJ/RPPS/ADELIrang"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.identifier:rppsRang.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "raisonSociale-EJ"
 * item[=].item[=].prefix = "1.5"
 * item[=].item[=].text = "Raison sociale EJ"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.name"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "complementRaisonSociale-EJ"
 * item[=].item[=].prefix = "1.6"
 * item[=].item[=].text = "Complément Raison sociale (EJ)"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.name.extension:ror-organization-additional-name"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "statutJuridique-EJ"
 * item[=].item[=].prefix = "1.7"
 * item[=].item[=].text = "Statut juridique (EJ)"
@@ -70,6 +76,7 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J199-StatutJuridique-ROR/FHIR/JDV-J199-StatutJuridique-ROR"
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "sousEnsembleAgregatStatutJuridique"
 * item[=].item[=].prefix = "1.8"
 * item[=].item[=].text = "Ss Ens Agrégat Stat. Jur."
@@ -77,25 +84,28 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J200-SousEnsembleAgregatStatutJuridique-ROR/FHIR/JDV-J200-SousEnsembleAgregatStatutJuridique-ROR"
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "adresseEJ"
 * item[=].item[=].prefix = "1.9"
 * item[=].item[=].text = "Adresse de l’EJ"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.address.text"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "dateCreation-EJ"
 * item[=].item[=].prefix = "1.10"
 * item[=].item[=].text = "Veuillez indiquer la date de création de l’EJ"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-creation-date"
 * item[=].item[=].type = #date
 * item[=].item[=].required = false
-* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "dateFermeture-EJ"
 * item[=].item[=].prefix = "1.11"
 * item[=].item[=].text = "Veuillez indiquer la date de fermeture de l’EJ"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.extension:organization-period.end"
 * item[=].item[=].type = #date
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "typeFermeture-EJ"
 * item[=].item[=].prefix = "1.12"
 * item[=].item[=].text = "Veuillez indiquer le type de fermeture de l’EJ"
@@ -103,6 +113,7 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR"
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 /*Partie Entité Géographique*/
 * item[+].linkId = "TypeOffreInfoEG"
 * item[=].prefix = "2"
@@ -114,37 +125,43 @@ Usage: #example
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:idNatSt.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "numFINESS-EG"
 * item[=].item[=].prefix = "2.2"
 * item[=].item[=].text = "Numéro FINESS de l'EG"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.identifier:finess.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "numSIRET"
 * item[=].item[=].prefix = "2.3"
 * item[=].item[=].text = "Numéro SIRET de l'EG"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.identifier:numSIRET.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "numEG_RPPS_ADELI_Rang"
 * item[=].item[=].prefix = "2.4"
 * item[=].item[=].text = "N°EG/RPPS/ADELIrang"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.identifier:rppsRang.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "nom-EG"
 * item[=].item[=].prefix = "2.5"
 * item[=].item[=].text = "Dénomination EG"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.name"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
+* item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "complementRaisonSociale-EG"
 * item[=].item[=].prefix = "2.6"
 * item[=].item[=].text = "Complément Dénomination"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.name"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
-* item[=].item[+].linkId = "complementRaisonSociale-EG"
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "cNomOperationnel-EG"
 * item[=].item[=].prefix = "2.7"
 * item[=].item[=].text = "Le cas échéant, veuillez renseigner le nom opérationnel de l’entité géographique"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.alias"
@@ -157,6 +174,26 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR"
 * item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "adresseEG"
+* item[=].item[=].prefix = "2.9"
+* item[=].item[=].text = "Lieu EG"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.address.text"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "contactEG"
+* item[=].item[=].prefix = "2.10"
+* item[=].item[=].text = "Contact (Informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#diff_Organization.contact.telecom.value"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "accessibiliteLieu-EG"
+* item[=].item[=].prefix = "2.11"
+* item[=].item[=].text = "Accessibilité lieu"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#diff_Organization.extension:ror-organization-accessibility-location"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J50-AccessibiliteLieu-ROR/FHIR/JDV-J50-AccessibiliteLieu-ROR"
+* item[=].item[=].required = false
 
 /*Type d'offre*/
 * item[+].linkId = "TypeOffreInfo"
