@@ -62,7 +62,7 @@
 <p><strong>Interaction FHIR</strong></p>
 </td>
 <td width="465">
-<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a>, Create<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a> (limitée aux attributs de 'premier niveau'), Create<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
 </td>
 </tr>
 <tr>

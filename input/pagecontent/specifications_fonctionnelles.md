@@ -36,6 +36,8 @@ Pour les cas d'usage couverts par ce webservice :
     -   Le système consommateur peut uniquement effectuer les recherches autorisées par son profil d'accès aux données. Plus d'information [ici](https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf) .
 -   Les postconditions sont :
     -   L'exécution des transactions ne provoquera aucune modification sur les données sources extraites.
+-   La mention "serveur" désigne le serveur ROR national.
+
 
 ### Consultation des données capacitaires
 
