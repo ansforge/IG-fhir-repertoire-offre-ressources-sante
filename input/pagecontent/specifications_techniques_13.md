@@ -153,11 +153,42 @@ PATCH [BASE]/Organization/4569
                 }, 
                 {
                     "name": "path",
-                    "valueString": "Organization.telecom.extension.where(value='01.01.01.02.01')"
+                    "valueString": "Organization.telecom"
                 },
                 {
                     "name": "value",
-                    "valueString": "01.01.01.02.02"
+                    "valueContactPoint": [
+                        {
+                            "system": "phone",
+                            "value": "01.01.01.02.02",
+                            "extension": [
+                                {
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication",
+                                                "code": "2",
+                                                "display": "Téléphone fixe"
+                                            }
+                                        ]    
+                                    }
+                                },
+                                {
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
+                                                "code": "1",
+                                                "display": "Accès libre"
+                                            }
+                                        ]    
+                                    }    
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -297,11 +328,72 @@ PATCH [BASE]/Practitioner/159
                 }, 
                 {
                     "name": "path",
-                    "valueString": "Practitioner.telecom.where(value='cyndi.chanmet@lifen.mssante.fr')"
+                    "valueString": "Practitioner.telecom"
                 },
                 {
                     "name": "value",
-                    "valueString": "cyndi.chanmet@SomedNantes.mssante.fr"
+                    "valueContactPoint": [
+                        {
+                            "system": "email",
+                            "value": "cyndi.chanmet@SomedNantes.mssante.fr",
+                            "extension": [
+                                {
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication",
+                                                "code": "3",
+                                                "display": "Courrier électronique"
+                                            }
+                                        ]    
+                                    }
+                                },
+                                {
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
+                                                "code": "2",
+                                                "display": "Accès restreint"
+                                            }
+                                        ]    
+                                    }    
+                                }
+                            ]
+                        }, 
+                        {
+                            "system": "phone",
+                            "value": "01.01.01.01.01",
+                            "extension": [
+                                {
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication",
+                                                "code": "2",
+                                                "display": "Téléphone fixe"
+                                            }
+                                        ]    
+                                    }
+                                },
+                                {
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
+                                                "code": "1",
+                                                "display": "Accès libre"
+                                            }
+                                        ]    
+                                    }    
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
