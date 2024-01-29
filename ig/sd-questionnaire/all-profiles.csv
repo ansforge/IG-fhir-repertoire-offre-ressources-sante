@@ -5036,19 +5036,19 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Canonical identifier for this questionnaire, represented as a URI (globally unique)","An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this questionnaire is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the questionnaire is stored on different servers.","The name of the referenced questionnaire can be conveyed using the http://hl7.org/fhir/StructureDefinition/display extension.","…  This is the id that will be used to link a QuestionnaireResponse to the Questionnaire the response is for.","","","","","","","",,,,,"",,,,"Questionnaire.url",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.identifier","Questionnaire.identifier","","","",0,1,"","","Y","Identifier {[]} {[]}
+"ror-questionnaire","Questionnaire.identifier","Questionnaire.identifier","","","",0,1,"Y","","Y","Identifier {[]} {[]}
 ","Identifiant de la fiche de saisie. Exemple FDS-092","A formal identifier that is used to identify this questionnaire when it is represented in other formats, or referenced in a specification, model, design or an instance.","Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this questionnaire outside of FHIR, where it is not possible to use the logical URI.","Allows externally provided and/or usable business identifiers to be easily associated with the module.","","","","","","","",,,,,"",,,,"Questionnaire.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.version","Questionnaire.version","","","",0,1,"","","Y","string {[]} {[]}
+"ror-questionnaire","Questionnaire.version","Questionnaire.version","","","",0,1,"Y","","Y","string {[]} {[]}
 ","version de la fiche de saisie","The identifier that is used to identify this version of the questionnaire when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the questionnaire author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.","There may be different questionnaire instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the questionnaire with the format [url]|[version].","","","","","","","","",,,,,"",,,,"Questionnaire.version",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.name","Questionnaire.name","","","",1,1,"","","Y","string {[]} {[]}
+"ror-questionnaire","Questionnaire.name","Questionnaire.name","","","",1,1,"Y","","Y","string {[]} {[]}
 ","Nom utilisé par les systèmes pour référencer la fiche exemple FDS-092","A natural language name identifying the questionnaire. This name should be usable as an identifier for the module by machine processing applications such as code generation.","The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.","Support human navigation and code generation.","","","","","","","",,,,,"",,,,"Questionnaire.name",0,1,"ele-1
 inv-0","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.title","Questionnaire.title","","","",1,1,"","","Y","string {[]} {[]}
+"ror-questionnaire","Questionnaire.title","Questionnaire.title","","","",1,1,"Y","","Y","string {[]} {[]}
 ","Titre de la fiche. Exemple Unité d’accueil de jour, Equipe spécialisée Alzheimer (ESA), Unité d’Hébergement « traditionnelle » , en EHPAD Petite unité de vie (PUV)","A short, descriptive, user-friendly title for the questionnaire.","This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.","","","","","","","","",,,,,"",,,,"Questionnaire.title",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -5064,16 +5064,16 @@ inv-0","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 ","For testing purposes, not real usage","A Boolean value to indicate that this questionnaire is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.","Allows filtering of questionnaires that are appropriate for use versus not.","Enables experimental content to be developed following the same lifecycle that would be used for a production-level questionnaire.","","","","","","","",,,,,"",,,,"Questionnaire.experimental",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.subjectType","Questionnaire.subjectType","","","",1,*,"","","Y","code {[]} {[]}
+"ror-questionnaire","Questionnaire.subjectType","Questionnaire.subjectType","","","",1,*,"Y","","Y","code {[]} {[]}
 ","Types de Ressources qui seront alimentées lors de la saisie de cette fiche : HealthcareService, Organization, Practioner, PractionerRole, Location","The types of subjects that can be the subject of responses created for the questionnaire.","If none are specified, then the subject is unlimited.","","","","","","","","",,"required","One of the resource types defined as part of this version of FHIR.","http://hl7.org/fhir/ValueSet/resource-types|4.0.1","",,,,"Questionnaire.subjectType",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ror-questionnaire","Questionnaire.date","Questionnaire.date","","Revision Date
-","",0,1,"","","Y","dateTime {[]} {[]}
+","",0,1,"Y","","Y","dateTime {[]} {[]}
 ","Date du dernier changement","The date  (and optionally time) when the questionnaire was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the questionnaire changes.","Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the questionnaire. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.","","","","","","","","",,,,,"",,,,"Questionnaire.date",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.publisher","Questionnaire.publisher","","","",0,1,"","","Y","string {[]} {[]}
+"ror-questionnaire","Questionnaire.publisher","Questionnaire.publisher","","","",0,1,"Y","","Y","string {[]} {[]}
 ","Nom de l'éditeur: Etablissement ou personne","The name of the organization or individual that published the questionnaire.","Usually an organization but may be an individual. The publisher (or steward) of the questionnaire is the organization or individual primarily responsible for the maintenance and upkeep of the questionnaire. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the questionnaire. This item SHOULD be populated unless the information is available from context.","Helps establish the ""authority/credibility"" of the questionnaire.  May also allow for contact.","","","","","","","",,,,,"",,,,"Questionnaire.publisher",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -5081,7 +5081,7 @@ inv-0","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 ","Contact details for the publisher","Contact details to assist a user in finding and communicating with the publisher.","May be a web site, an email address, a telephone number, etc.","","","","","","","","",,,,,"",,,,"Questionnaire.contact",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.description","Questionnaire.description","","","",0,1,"","","","markdown {[]} {[]}
+"ror-questionnaire","Questionnaire.description","Questionnaire.description","","","",0,1,"Y","","","markdown {[]} {[]}
 ","Description de l'objet de la feuille de saisie","A free text natural language description of the questionnaire from a consumer's perspective.","This description can be used to capture details such as why the questionnaire was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the questionnaire as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the questionnaire is presumed to be the predominant language in the place the questionnaire was created).","","","","","","","","",,,,,"",,,,"Questionnaire.description",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -5102,15 +5102,15 @@ Restrictions","",0,1,"","","","markdown {[]} {[]}
 ","Use and/or publishing restrictions","A copyright statement relating to the questionnaire and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the questionnaire.","Systems are not required to have markdown support, so the text should be readable without markdown processing. The markdown syntax is GFM - see https://github.github.com/gfm/","Consumers must be able to determine any legal restrictions on the use of the questionnaire and/or its content.","","","","","","","",,,,,"",,,,"Questionnaire.copyright",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.approvalDate","Questionnaire.approvalDate","","","",0,1,"","","","date {[]} {[]}
+"ror-questionnaire","Questionnaire.approvalDate","Questionnaire.approvalDate","","","",0,1,"Y","","","date {[]} {[]}
 ","Date de validation de la fiche de saisie","The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.","The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.","","","","","","","","",,,,,"",,,,"Questionnaire.approvalDate",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.lastReviewDate","Questionnaire.lastReviewDate","","","",0,1,"","","","date {[]} {[]}
+"ror-questionnaire","Questionnaire.lastReviewDate","Questionnaire.lastReviewDate","","","",0,1,"Y","","","date {[]} {[]}
 ","Date de dernière revue de la fiche","The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.","If specified, this date follows the original approval date.","Gives a sense of how ""current"" the content is.  Resources that have not been reviewed in a long time may have a risk of being less appropriate/relevant.","","","","","","","",,,,,"",,,,"Questionnaire.lastReviewDate",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.effectivePeriod","Questionnaire.effectivePeriod","","","",0,1,"","","Y","Period {[]} {[]}
+"ror-questionnaire","Questionnaire.effectivePeriod","Questionnaire.effectivePeriod","","","",0,1,"Y","","Y","Period {[]} {[]}
 ","Periode de validité de la fiche","The period during which the questionnaire content was or is planned to be in active use.","The effective period for a questionnaire  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.","Allows establishing a transition before a resource comes into effect and also allows for a sunsetting  process when new versions of the questionnaire are or are expected to be used instead.","","","","","","","",,,,,"",,,,"Questionnaire.effectivePeriod",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 per-1:If present, start SHALL have a lower value than end {start.hasValue().not() or end.hasValue().not() or (start <= end)}"
@@ -5118,7 +5118,7 @@ per-1:If present, start SHALL have a lower value than end {start.hasValue().not(
 ","Concept that represents the overall questionnaire","An identifier for this question or group of questions in a particular terminology such as LOINC.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","Allows linking of the complete Questionnaire resources to formal terminologies.  It's common for ""panels"" of questions to be identified by a code.","","","","","","","",,"example","Codes for questionnaires, groups and individual questions.","http://hl7.org/fhir/ValueSet/questionnaire-questions","",,,,"Questionnaire.code",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.item","Questionnaire.item","","","",0,*,"","","","BackboneElement {[]} {[]}
+"ror-questionnaire","Questionnaire.item","Questionnaire.item","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Structure du champs de la fiche","A particular question, question grouping or display text that is part of the questionnaire.","The content of the questionnaire is constructed from an ordered, hierarchical collection of items.","","","","","","","","",,,,,"",,,,"Questionnaire.item",0,*,"ele-1
 que-3","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 que-9:Read-only can't be specified for ""display"" items {type!='display' or readOnly.empty()}que-8:Initial values can't be specified for groups or display items {(type!='group' and type!='display') or initial.empty()}que-6:Required and repeat aren't permitted for display items {type!='display' or (required.empty() and repeats.empty())}que-5:Only 'choice' and 'open-choice' items can have answerValueSet {(type ='choice' or type = 'open-choice' or type = 'decimal' or type = 'integer' or type = 'date' or type = 'dateTime' or type = 'time' or type = 'string' or type = 'quantity') or (answerValueSet.empty() and answerOption.empty())}que-4:A question cannot have both answerOption and answerValueSet {answerOption.empty() or answerValueSet.empty()}que-3:Display items cannot have a ""code"" asserted {type!='display' or code.empty()}que-10:Maximum length can only be declared for simple question types {(type in ('boolean' | 'decimal' | 'integer' | 'string' | 'text' | 'url' | 'open-choice')) or maxLength.empty()}que-1:Group items must have nested items, display items cannot have nested items {(type='group' implies item.empty().not()) and (type.trace('type')='display' implies item.trace('item').empty())}que-13:Can only have multiple initial values for repeating items {repeats=true or initial.count() <= 1}que-11:If one or more answerOption is present, initial[x] must be missing {answerOption.empty() or initial.empty()}que-12:If there are more than one enableWhen, enableBehavior must be specified {enableWhen.count() > 2 implies enableBehavior.exists()}"
@@ -5141,7 +5141,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Unique id for item in questionnaire","An identifier that is unique within the Questionnaire allowing linkage to the equivalent item in a QuestionnaireResponse resource.","This ''can'' be a meaningful identifier (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here.","[QuestionnaireResponse](questionnaireresponse.html#) does not require omitted items to be included and may have some items that repeat, so linkage based on position alone is not sufficient.","","","","","","","",,,,,"",,,,"Questionnaire.item.linkId",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.item.definition","Questionnaire.item.definition","","","",0,1,"","","","uri {[]} {[]}
+"ror-questionnaire","Questionnaire.item.definition","Questionnaire.item.definition","","","",0,1,"Y","","","uri {[]} {[]}
 ","Element concerné par la saisie","This element is a URI that refers to an [ElementDefinition](http://hl7.org/fhir/R4/elementdefinition.html) that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource. A detailed description of the construction of the URI is shown in Comments, below. If this element is present then the following element values MAY be derived from the Element Definition if the corresponding elements of this Questionnaire resource instance have no value:
 
 * code (ElementDefinition.code) 
@@ -5205,7 +5205,7 @@ que-7","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 ","all | any","Controls how multiple enableWhen values are interpreted -  whether all or any must be true.","This element must be specified if more than one enableWhen value is provided.","","","","","","","","",,"required","Controls how multiple enableWhen values are interpreted -  whether all or any must be true.","http://hl7.org/fhir/ValueSet/questionnaire-enable-behavior|4.0.1","",,,,"Questionnaire.item.enableBehavior",0,1,"ele-1
 que-12","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.item.required","Questionnaire.item.required","","","",0,1,"","","","boolean {[]} {[]}
+"ror-questionnaire","Questionnaire.item.required","Questionnaire.item.required","","","",0,1,"Y","","","boolean {[]} {[]}
 ","Champs requis","An indication, if true, that the item must be present in a ""completed"" QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire.","Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  If an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one child element). The value may come from the ElementDefinition referred to by .definition.","","","Items are generally assumed not to be required unless explicitly specified. Systems SHOULD always populate this value","","","","","",,,,,"",,,,"Questionnaire.item.required",0,1,"ele-1
 que-6","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -5225,7 +5225,7 @@ que-9","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 ","No more than this many characters","The maximum number of characters that are permitted in the answer to be considered a ""valid"" QuestionnaireResponse.","For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data. The value may come from the ElementDefinition referred to by .definition.","","","","","","","","",,,,,"",,,,"Questionnaire.item.maxLength",0,1,"ele-1
 que-10","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-questionnaire","Questionnaire.item.answerValueSet","Questionnaire.item.answerValueSet","","","",0,1,"","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ValueSet]]}
+"ror-questionnaire","Questionnaire.item.answerValueSet","Questionnaire.item.answerValueSet","","","",0,1,"Y","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ValueSet]]}
 ","Ensemble de valeurs autorisées en réponse","A reference to a value set containing a list of codes representing permitted answers for a ""choice"" or ""open-choice"" question.","LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](http://hl7.org/fhir/R4/loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.","","","","","","","","",,,,,"",,,,"Questionnaire.item.answerValueSet",0,1,"ele-1
 que-4que-5","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
