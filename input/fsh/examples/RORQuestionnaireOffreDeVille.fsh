@@ -363,11 +363,38 @@ Usage: #example
 * item[=].item[=].answerOption[0].valueCoding = $JDV-J16-ActeSpecifique-ROR#0528 "Education thérapeutique du patient (ETP) labellisée"
 * item[=].item[+].linkId = "CompetenceSpecifique"
 * item[=].item[=].text = "Compétence(s) spécifique(s)"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificCompetence.coding"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificCompetence"
 * item[=].item[=].prefix = "3.11"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR/"
+* item[=].item[+].linkId = "niveauExpertise"
+* item[=].item[=].text = "Niveau d’expertise"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:expertiseLevel"
+* item[=].item[=].prefix = "3.12"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = false
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J227-NiveauExpertise-ROR/FHIR/JDV-J227-NiveauExpertise-ROR"
+* item[=].item[+].linkId = "typeFermeture"
+* item[=].item[=].text = "Type de fermeture"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:temporalityStopService"
+* item[=].item[=].prefix = "3.13"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = false
+* item[=].item[=].answerValueSet = " https://mos.esante.gouv.fr/NOS/JDV_J185-TypeFermeture-ROR/FHIR/JDV-J185-TypeFermeture-ROR"
+* item[=].item[+].linkId = "dateFermeture"
+* item[=].item[=].text = "Date de fermeture"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.notAvailable:closingRepoeningDate.during.start"
+* item[=].item[=].prefix = "3.14"
+* item[=].item[=].type = #date
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "DatePrevisionnelleReouverture"
+* item[=].item[=].text = "Date prévisionnelle réouverture"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.notAvailable:closingRepoeningDate.during.end"
+* item[=].item[=].prefix = "3.15"
+* item[=].item[=].type = #date
+* item[=].item[=].required = false
+
 
 
