@@ -286,7 +286,7 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[+].linkId = "activiteOperationnelle"
 * item[=].item[=].text = "Activités opérationnelles"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-healthcareservice-definitions.html#HealthcareService.specialty:operationalActivity"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.specialty:operationalActivity"
 * item[=].item[=].prefix = "3.8"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -315,6 +315,52 @@ Usage: #example
 * item[=].item[=].answerOption[+].valueCoding = $JDV-J17-ActiviteOperationnelle-ROR#170 "Soins palliatifs"
 * item[=].item[=].answerOption[+].valueCoding = $JDV-J17-ActiviteOperationnelle-ROR#139 "Tabacologie"
 * item[=].item[=].repeats = true
+* item[=].item[+].linkId = "acteSpecifique"
+* item[=].item[=].text = "Actes Specifiques"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificAct"
+* item[=].item[=].prefix = "3.9"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = false
+* item[=].item[=].answerOption[0].valueCoding = $JDV-J16-ActeSpecifique-ROR#0739 "Audiogramme"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1167 "Contention souple d’articulation"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1171 "Dépistage de la déficience visuelle de l'enfant"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1172 "Dépistage des surdités de l'enfant"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1181 "Diagnostic par dermatoscope"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1182 "Diagnostic par echoscope doppler"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0172 "ECG (électrocardiographie)"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1186 "Echographie clinique ciblée"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0628 "Education thérapeutique du patient non labellisée ou psychoéducation"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1197 "Évacuation / Excision d'une thrombose hémorroïdaire externe"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0483 "Evaluation des troubles du sommeil (polysomnographie)"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1199 "Examen médical d’aptitude à la fonction publique par médecin agréé"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1200 "Examen médical du permis de conduire par médecin agréé"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1208 "Frottis du col utérin"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1215 "Incision / excision d'un panaris superficiel"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0268 "Interruption volontaire de grossesse (IVG) médicamenteuse"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0812 "Médiation Familiale"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1244 "Pose d’implants contraceptifs"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1245 "Pose de DIU"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1247 "Pose de plâtres ou résines, orthèse"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1248 "Prescription initiale d'audioprothèses"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1249 "Prise en charge des migraines et céphalées"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0825 "Prophylaxie pré-exposition par voie orale (PrEP)"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0768 "Psychothérapie"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0921 "Repérage des conduites addictives, soins et orientation"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0441 "Soins avec administration de MEOPA"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1269 "Sutures cutanées"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0448 "Synoviorthèse isotopique"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#1270 "Tamponnement nasal antérieur"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0626 "Bilan neuro-psychologique"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0610 "Thérapie individuelle cognitivo-comportementale (TCC)"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J16-ActeSpecifique-ROR#0608 "Thérapie individuelle par hypnose"
+* item[=].item[=].repeats = true
+* item[=].item[+].linkId = "acteRealiseHorsCabinet"
+* item[=].item[=].text = "Acte spécifique hors cabinet"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:outsideOfficeAct"
+* item[=].item[=].prefix = "3.10"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = false
+* item[=].item[=].answerOption[0].valueCoding = $JDV-J16-ActeSpecifique-ROR#0528 "Education thérapeutique du patient (ETP) labellisée"
 * item[=].item[+].linkId = "CompetenceSpecifique"
 * item[=].item[=].text = "Compétence(s) spécifique(s)"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificCompetence.coding"
@@ -323,4 +369,5 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR/"
+
 
