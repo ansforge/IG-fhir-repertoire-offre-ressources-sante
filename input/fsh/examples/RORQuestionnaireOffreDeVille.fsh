@@ -194,6 +194,35 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J50-AccessibiliteLieu-ROR/FHIR/JDV-J50-AccessibiliteLieu-ROR"
 * item[=].item[=].required = false
+* item[=].item[=].prefix = "2.12"
+* item[=].item[=].text = "modaliteParticipationSPH"
+* item[=].item[=].definition = "https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/ig/main/StructureDefinition-ror-organization-definitions.html#Organization.type:sphParticipation"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J202-ESPIC-ROR/FHIR/JDV-J202-ESPIC-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "dateOuverture-EG"
+* item[=].item[=].prefix = "2.13"
+* item[=].item[=].text = "Veuillez indiquer la date de création de l’EG"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.extension:organization-period.start"
+* item[=].item[=].type = #date
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "dateFermeture-EG"
+* item[=].item[=].prefix = "2.14"
+* item[=].item[=].text = "Veuillez indiquer la date de fermeture de l’EG"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.extension:organization-period.end"
+* item[=].item[=].type = #date
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "typeFermeture-EG"
+* item[=].item[=].prefix = "2.15"
+* item[=].item[=].text = "Veuillez indiquer le type de fermeture de l’EG"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization-definitions.html#Organization.extension:ror-organization-closing-type"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
 
 /*Type d'offre*/
 * item[+].linkId = "TypeOffreInfo"
@@ -212,31 +241,55 @@ Usage: #example
 * item[=].item[=].prefix = "3.2"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
-* item[=].item[+].linkId = "ModalAccueil"
-* item[=].item[=].text = "Modalité d’accueil"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:receptionModality.coding"
-* item[=].item[=].prefix = "3.3"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
-* item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#04 "Téléconsultation"
-* item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#05 "Visite à domicile"
-* item[=].item[=].repeats = true
-* item[=].item[+].linkId = "CompetenceSpecifique"
-* item[=].item[=].text = "Compétence(s) spécifique(s)"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificCompetence.coding"
-* item[=].item[=].prefix = "3.4"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = false
-* item[=].item[=].repeats = true
-* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR/"
 * item[=].item[+].linkId = "modePriseEnCharge"
 * item[=].item[=].text = "Mode de prise en charge"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:careMode.coding"
-* item[=].item[=].prefix = "3.5"
+* item[=].item[=].prefix = "3.3"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].readOnly = true
 * item[=].item[=].answerOption[0].valueCoding = $JDV-J19-ModePriseEnCharge-ROR#32 "Consultation (CS)"
 * item[=].item[=].answerOption[0].initialSelected = true
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR/"
+* item[=].item[+].linkId = "ModalAccueil"
+* item[=].item[=].text = "Modalité d’accueil"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:receptionModality.coding"
+* item[=].item[=].prefix = "3.4"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].answerOption[0].valueCoding = $JDV-J226-ModaliteAccueil-ROR#03 "Consultation en présentiel"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#04 "Téléconsultation"
+* item[=].item[=].answerOption[+].valueCoding = $JDV-J226-ModaliteAccueil-ROR#05 "Visite à domicile"
+* item[=].item[=].repeats = true
+* item[=].item[+].linkId = "ageMin"
+* item[=].item[=].text = "Veuillez indiquer l’âge minimum de la patientèle."
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-healthcareservice-patient-type-definitions.html#key_Extension.extension:ageRange.value[x].low"
+* item[=].item[=].prefix = "3.5"
+* item[=].item[=].type = #quantity
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "ageMax"
+* item[=].item[=].text = "Veuillez indiquer l’âge maximum de la patientèle"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-healthcareservice-patient-type-definitions.html#key_Extension.extension:ageRange.value[x].high"
+* item[=].item[=].prefix = "3.6"
+* item[=].item[=].type = #quantity
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "ZoneInter"
+* item[=].item[=].text = "Zone d’intervention (A renseigner si la modalité d’accueil « visite à domicile » est renseignée)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-territorial-division-definitions.html#diff_Extension.extension:codeTerritorialDivision"
+* item[=].item[=].prefix = "3.7"
+* item[=].item[=].type = #choice
+* item[=].item[=].enableWhen.question = "ModalAccueil"
+* item[=].item[=].enableWhen.operator = #exists
+* item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].enableBehavior = #all
+* item[=].item[=].answerValueSet = "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "CompetenceSpecifique"
+* item[=].item[=].text = "Compétence(s) spécifique(s)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:specificCompetence.coding"
+* item[=].item[=].prefix = "3.11"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR/"
+
