@@ -528,3 +528,100 @@ Usage: #example
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J232-Competence-ROR/FHIR/JDV-J232-Competence-ROR"
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "competenceExclusive"
+* item[=].item[=].text = "CCompétence Exclusive"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitionerrole-definitions.html#PractitionerRole.specialty:exclusiveCompetence"
+* item[=].item[=].prefix = "3.28"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J211-CompetenceExclusive-ROR/FHIR/JDV-J211-CompetenceExclusive-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "orientationParticuliere"
+* item[=].item[=].text = "Orientation particulière"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitionerrole-definitions.html#PractitionerRole.specialty:specificOrientation"
+* item[=].item[=].prefix = "3.29"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J212-OrientationParticuliere-ROR/FHIR/JDV-J212-OrientationParticuliere-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "capacite"
+* item[=].item[=].text = "Capacité"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitionerrole-definitions.html#PractitionerRole.specialty:expertiseCapacity"
+* item[=].item[=].prefix = "3.30"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J213-CapaciteSavoirFaire-ROR/FHIR/JDV-J213-CapaciteSavoirFaire-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "qualificationPAC"
+* item[=].item[=].text = "Qualification de Praticien Adjoint Contractuel"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitionerrole-definitions.html#PractitionerRole.specialty:qualificationPAC"
+* item[=].item[=].prefix = "3.31"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J214-QualificationPAC-ROR/FHIR/JDV-J214-QualificationPAC-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "DESCNonQualifiant"
+* item[=].item[=].text = "DESC Non Qualifiant"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitionerrole-definitions.html#PractitionerRole.specialty:nonQualifyingDESC"
+* item[=].item[=].prefix = "3.32"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J215-DESCnonQualifiant-ROR/FHIR/JDV-J215-DESCnonQualifiant-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "droitExerciceComplémentaire"
+* item[=].item[=].text = "Droit Exercice Complémentaire"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitionerrole-definitions.html#PractitionerRole.specialty:supplementaryExerciseRight"
+* item[=].item[=].prefix = "3.33"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J216-DroitExerciceCompl-ROR/FHIR/JDV-J216-DroitExerciceCompl-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "idNat_PS"
+* item[=].item[=].text = "Identification Nationale du PS"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitioner-definitions.html#Practitioner.identifier.value"
+* item[=].item[=].prefix = "3.34"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "boiteLettreMSS-PS"
+* item[=].item[=].text = "Boîte aux lettres du service de messagerie sécurisée de santé"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitioner-definitions.html#Practitioner.telecom.value"
+* item[=].item[=].prefix = "3.35"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "Civilite"
+* item[=].item[=].text = "Civilité du PS"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-practitioner-definitions.html#Practitioner.name.prefix"
+* item[=].item[=].prefix = "3.36"
+* item[=].item[=].type = #string
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J207-Civilite-ROR/FHIR/JDV-J207-Civilite-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "identifiantLieu"
+* item[=].item[=].text = "Identifiant lieu real offre"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-definitions.html#Location.identifier:idLocation.value"
+* item[=].item[=].prefix = "3.37"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "adresseLieu"
+* item[=].item[=].text = "Adresse"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-definitions.html#Location.address.text"
+* item[=].item[=].prefix = "3.38"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "communeCog"
+* item[=].item[=].text = "communeCog"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"
+* item[=].item[=].prefix = "3.39"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune"
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "descriptionLieu"
+* item[=].item[=].text = "Description (Le cas échéant, veuillez préciser comment atteindre le lieu)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"
+* item[=].item[=].prefix = "3.39"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+
