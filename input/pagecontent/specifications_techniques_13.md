@@ -9,7 +9,10 @@
 <p><strong>Interaction FHIR</strong></p>
 </td>
 <td width="465">
-<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a> (limitée aux attributs de 'premier niveau'), Update<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a> (limitée aux attributs de 'premier niveau')</p>
+</td>
+<td width="465">
+<p>Update<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
 </td>
 </tr>
 <tr>
@@ -17,7 +20,10 @@
 <p><strong>M&eacute;thode http associ&eacute;e</strong></p>
 </td>
 <td width="465">
-<p>PATCH, PUT</p>
+<p>PATCH</p>
+</td>
+<td width="465">
+<p>PUT</p>
 </td>
 </tr>
 <tr>
@@ -27,13 +33,19 @@
 <td width="465">
 <p>Organization, HealthcareService, Practitioner, PractitionerRole</p>
 </td>
+<td width="465">
+<p>HealthcareService</p>
+</td>
 </tr>
 <tr>
 <td width="215">
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p>PATCH [base]/[Ressource]{?{&amp;_format=[mime-type]}}</p>
+<p>PATCH [base]/[Ressource]/[id]{?&amp;_format=[mime-type]}</p>
+</td>
+<td width="465">
+<p>PUT [base]/[Ressource]/[id]{?&amp;_format=[mime-type]}</p>
 </td>
 </tr>
 </tbody>
