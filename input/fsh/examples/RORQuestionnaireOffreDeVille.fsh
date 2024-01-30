@@ -625,3 +625,33 @@ Usage: #example
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 
+/*Type d'équipement*/
+* item[+].linkId = "TypeEquipementInfo"
+* item[=].prefix = "4"
+* item[=].text = "Equipement(s) disponible(s)"
+* item[=].type = #group
+* item[=].repeats = true
+* item[=].item[0].linkId = "equipmentType"
+* item[=].item[=].text = "Type équipement"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-equipment-definitions.html#Extension.extension:equipmentType.value[x]"
+* item[=].item[=].prefix = "4.a"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR"
+* item[=].item[+].linkId = "nbInService"
+* item[=].item[=].text = "Nombre équipement en service"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-equipment-definitions.html#Extension.extension:nbInService.value[x]"
+* item[=].item[=].prefix = "4.b"
+* item[=].item[=].type = #integer
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR"
+* item[=].item[+].linkId = "equipmentFeature"
+* item[=].item[=].text = "Type caractéristique de l'équipement"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-equipment-limit-definitions.html#Extension.extension:equipmentFeature.value[x]"
+* item[=].item[=].prefix = "4.c"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR"
+* item[=].item[+].linkId = "limitValue"
+* item[=].item[=].text = "Valeur limite"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-equipment-limit-definitions.html#Extension.extension:limitValue.value[x]"
+* item[=].item[=].prefix = "4.d"
+* item[=].item[=].type = #quantity
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR"
