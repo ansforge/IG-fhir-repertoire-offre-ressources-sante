@@ -469,7 +469,7 @@ Usage: #example
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "carteVitaleAcceptee"
 * item[=].item[=].text = "Carte vitale acceptée"
-* item[=].item[=].definition = " https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted"
+* item[=].item[=].definition = "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted"
 * item[=].item[=].prefix = "3.20"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = false
