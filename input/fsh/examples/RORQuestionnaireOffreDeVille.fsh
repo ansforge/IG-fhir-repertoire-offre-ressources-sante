@@ -395,6 +395,112 @@ Usage: #example
 * item[=].item[=].prefix = "3.15"
 * item[=].item[=].type = #date
 * item[=].item[=].required = false
-
-
-
+* item[=].item[+].linkId = "Horaires"
+* item[=].item[=].prefix = "3.16"
+* item[=].item[=].text = "Horaires"
+* item[=].item[=].type = #group
+* item[=].item[=].repeats = true
+* item[=].item[=].item[0].linkId = "typePlageHoraire"
+* item[=].item[=].item[=].text = "Type de plage horaire"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-healthcareservice-definitions.html#HealthcareService.availableTime.extension:ror-available-time-type-of-time"
+* item[=].item[=].item[=].prefix = "3.16.1"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR"
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[+].linkId = "jourSemaine"
+* item[=].item[=].item[=].text = "Numéro du jour dans la semaine"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
+* item[=].item[=].item[=].prefix = "3.16.2"
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[+].linkId = "Heures"
+* item[=].item[=].item[=].text = "Heures"
+* item[=].item[=].item[=].prefix = "3.16.3"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[0].linkId = "availableStartTime"
+* item[=].item[=].item[=].item[=].text = "Début de la plage horaire"
+* item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-healthcareservice-definitions.html#HealthcareService.availableTime.availableStartTime"
+* item[=].item[=].item[=].item[=].prefix = "3.16.3.a"
+* item[=].item[=].item[=].item[=].type = #time
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[+].linkId = "availableEndTime"
+* item[=].item[=].item[=].item[=].text = "Fin de la plage horaire"
+* item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-healthcareservice-definitions.html#HealthcareService.availableTime.availableEndTime"
+* item[=].item[=].item[=].item[=].prefix = "3.16.2.b"
+* item[=].item[=].item[=].item[=].type = #time
+* item[=].item[=].item[=].item[=].required = false
+/* * item[=].item[+].linkId = "contact"
+* item[=].item[=].text = "Contact (OffreOperationnelle)"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"
+* item[=].item[=].prefix = "3.17"
+* item[=].item[=].type = #date
+* item[=].item[=].required = true*/
+* item[=].item[+].linkId = "boiteLettreMSS"
+* item[=].item[=].text = "Boîte aux lettres MSS"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-healthcareservice-definitions.html#HealthcareService.telecom.value"
+* item[=].item[=].prefix = "3.16"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[+].linkId = "modeExercice"
+* item[=].item[=].text = "Mode d’exercice dans l’UE"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode"
+* item[=].item[=].prefix = "3.17"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J217-ModeExercice-ROR/FHIR/JDV-J217-ModeExercice-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "secteurConventionnement"
+* item[=].item[=].text = "Secteur conventionnement"
+* item[=].item[=].definition = "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted"
+* item[=].item[=].prefix = "3.18"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J130-CNAMAmeliSecteurConventionnement-RASS/FHIR/JDV-J130-CNAMAmeliSecteurConventionnement-RASS/"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "optionContratAccèsAuxSoins"
+* item[=].item[=].text = "Option CAS (Contrat d’Accès aux Soins) / OPTAM (Option Pratique Tarifaire Maîtrisée)"
+* item[=].item[=].definition = "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS"
+* item[=].item[=].prefix = "3.19"
+* item[=].item[=].type = #boolean
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "carteVitaleAcceptee"
+* item[=].item[=].text = "Carte vitale acceptée"
+* item[=].item[=].definition = " https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted"
+* item[=].item[=].prefix = "3.20"
+* item[=].item[=].type = #boolean
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "civiliteExercice"
+* item[=].item[=].text = "Civilité d’exercice"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-RORPractitionerRoleName-definitions.html#Extension.extension:exerciseTitle.value[x]:valueCodeableConcept"
+* item[=].item[=].prefix = "3.21"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J208-CiviliteExercice-ROR/FHIR/JDV-J208-CiviliteExercice-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "nomExercice"
+* item[=].item[=].text = "Nom d’exercice"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-RORPractitionerRoleName-definitions.html#Extension.extension:exerciseLastName"
+* item[=].item[=].prefix = "3.22"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "prenomExercice"
+* item[=].item[=].text = "Prénom d’exercice"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-RORPractitionerRoleName-definitions.html#Extension.extension:exerciseFirstName"
+* item[=].item[=].prefix = "3.23"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
+* item[=].item[+].linkId = "profession"
+* item[=].item[=].text = "Profession"
+* item[=].item[=].definition = ""
+* item[=].item[=].prefix = "3.24"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J208-CiviliteExercice-ROR/FHIR/JDV-J208-CiviliteExercice-ROR"
+* item[=].item[=].required = false
+* item[=].item[=].readOnly = true
