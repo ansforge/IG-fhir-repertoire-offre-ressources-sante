@@ -294,7 +294,7 @@ Exemple :
 
 #### Scénario 7 : Recherche sur une zone d'intervention <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** Un consommateur cherche les offres ayant un type d'offre et une activité opérationnelle particulières, dans une commune faisant partie d'une zone d'intervention.
+**Description du scénario :** Un consommateur cherche les offres ayant un type d'offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d'une zone d'intervention.
 
 **Exemple :** Recherche des offres caractérisées par le type d'offre « 30 – Service d’aide et d’accompagnement à domicile (SAAD) », proposant une activité opérationnelle de type « 293 - Accompagnements pour accomplir les activités domestiques » et ayant la commune 29151 dans la zone d’intervention. 
 
@@ -371,7 +371,7 @@ GET [BASE]/HealthcareService?location.address-postalcode=60000,76620 #critère d
 ```
 #### Scénario 10 : Recherche sur une ville #2 -- Code commune
 
-**Description du scénario :** Un consommateur recherche les offres proposant une activité opérationnelle et un mode de prise en charge particuliers, sur une ville, ou un ensemble de villes (code commune).
+**Description du scénario :** Un consommateur recherche les offres proposant une activité opérationnelle particulière et un mode de prise en charge particulier, sur une ville, ou un ensemble de villes (code commune).
 
 **Exemple :** Recherche des offres caractérisées par l’activité opérationnelle « 437 – médecine générale » et un mode de prise en charge « 032 – Consultation », sur les communes 18000 (Bourges) ou 13013 (Belcodène)
 
