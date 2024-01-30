@@ -642,7 +642,6 @@ Usage: #example
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-equipment-definitions.html#Extension.extension:nbInService.value[x]"
 * item[=].item[=].prefix = "4.b"
 * item[=].item[=].type = #integer
-* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR"
 * item[=].item[+].linkId = "equipmentFeature"
 * item[=].item[=].text = "Type caractéristique de l'équipement"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-equipment-limit-definitions.html#Extension.extension:equipmentFeature.value[x]"
@@ -654,4 +653,3 @@ Usage: #example
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-equipment-limit-definitions.html#Extension.extension:limitValue.value[x]"
 * item[=].item[=].prefix = "4.d"
 * item[=].item[=].type = #quantity
-* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR"
