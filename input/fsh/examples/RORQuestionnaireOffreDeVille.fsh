@@ -37,42 +37,42 @@ Usage: #example
 * item[=].item[+].linkId = "numFINESS-EJ"
 * item[=].item[=].prefix = "1.2"
 * item[=].item[=].text = "Numéro FINESS de l'EJ"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization#Organization.identifier:finess.value"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:finess.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "numSIREN-EJ"
 * item[=].item[=].prefix = "1.3"
 * item[=].item[=].text = "Numéro SIRET de l'EJ"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization#Organization.identifier:sirene.value"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:sirene.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "numEJ_RPPS_ADELI_Rang"
 * item[=].item[=].prefix = "1.4"
 * item[=].item[=].text = "Numéro EJ/RPPS/ADELIrang"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization#Organization.identifier:rppsRang.value"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:rppsRang.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "raisonSociale-EJ"
 * item[=].item[=].prefix = "1.5"
 * item[=].item[=].text = "Raison sociale EJ"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization#Organization.name"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.name"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "complementRaisonSociale-EJ"
 * item[=].item[=].prefix = "1.6"
 * item[=].item[=].text = "Complément Raison sociale (EJ)"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization#Organization.name.extension:ror-organization-additional-name"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.name.extension:ror-organization-additional-name"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "statutJuridique-EJ"
 * item[=].item[=].prefix = "1.7"
 * item[=].item[=].text = "Statut juridique (EJ)"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization#Organization.type:statutJuridiqueINSEE"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:statutJuridiqueINSEE"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J199-StatutJuridique-ROR/FHIR/JDV-J199-StatutJuridique-ROR"
 * item[=].item[=].required = false
@@ -80,7 +80,7 @@ Usage: #example
 * item[=].item[+].linkId = "sousEnsembleAgregatStatutJuridique"
 * item[=].item[=].prefix = "1.8"
 * item[=].item[=].text = "Ss Ens Agrégat Stat. Jur."
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-organization#Organization.type:sousEnsembleAgregatStatutJuridique"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:sousEnsembleAgregatStatutJuridique"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J200-SousEnsembleAgregatStatutJuridique-ROR/FHIR/JDV-J200-SousEnsembleAgregatStatutJuridique-ROR"
 * item[=].item[=].required = false
