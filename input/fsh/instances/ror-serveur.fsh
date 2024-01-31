@@ -18,7 +18,7 @@ Usage: #definition
 * implementationGuide[0] = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
 * implementationGuide[+] = "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"
 * rest.mode = #server
-* rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre"
+* rest.documentation = "Recherche et consultation des lieux de réalisation de l'offre  \n  \n Note : Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 * rest.resource[0].type = #Location
