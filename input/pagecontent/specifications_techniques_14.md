@@ -1361,9 +1361,9 @@ POST [BASE]/Questionnaire
 ```
  Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.
 
-#### Scénario 2 : Un consommateur souhaite récupérer un ensemble de fiches de siasie sur un critère donnée
+#### Scénario 2 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
 
-**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de siasie sur un critère donnée
+**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
 Exemple ???
 
 **Requête :**
