@@ -13,7 +13,7 @@ Usage: #example
 * experimental = true
 * date = "2023-12-05"
 * publisher = "ANS"
-* description = "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale."
+* description = "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM."
 * jurisdiction = urn:iso:std:iso:3166#FR "FRANCE"
 * subjectType[0] = #HealthcareService
 * subjectType[+] = #Organization
