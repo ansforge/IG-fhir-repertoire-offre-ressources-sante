@@ -1165,3 +1165,9 @@ PUT [BASE]/HealthcareService/964
     ]
 }
 ```
+
+#### Scénario 11 : Ajout d’un lieu de réalisation de l’offre
+
+**Description du scénario :** Un utilisateur ajoute un lieu de réalisation de l'offre dans une offre opérationnelle existante.
+
+**Requête :** Voir [scénario 1 du cas d'usage création et mise à jour du lieu de réalisation de l'offre](specifications_techniques_10.html#scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft) (Ajout d’un lieu de réalisation de l’offre)
