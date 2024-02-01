@@ -184,13 +184,13 @@ Usage: #example
 * item[=].item[+].linkId = "contactEG"
 * item[=].item[=].prefix = "2.10"
 * item[=].item[=].text = "Contact (Informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique)"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#diff_Organization.contact.telecom.value"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.contact.telecom.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[+].linkId = "accessibiliteLieu-EG"
 * item[=].item[=].prefix = "2.11"
 * item[=].item[=].text = "Accessibilité lieu"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#diff_Organization.extension:ror-organization-accessibility-location"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-accessibility-location"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J50-AccessibiliteLieu-ROR/FHIR/JDV-J50-AccessibiliteLieu-ROR"
 * item[=].item[=].required = false
@@ -274,7 +274,7 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[+].linkId = "ZoneInter"
 * item[=].item[=].text = "Zone d’intervention (A renseigner si la modalité d’accueil « visite à domicile » est renseignée)"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-territorial-division#diff_Extension.extension:codeTerritorialDivision"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-territorial-division#Extension.extension:codeTerritorialDivision"
 * item[=].item[=].prefix = "3.7"
 * item[=].item[=].type = #choice
 * item[=].item[=].enableWhen.question = "ModalAccueil"
