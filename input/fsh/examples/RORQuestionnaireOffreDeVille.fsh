@@ -379,7 +379,7 @@ Usage: #example
 * item[=].item[=].prefix = "3.13"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = false
-* item[=].item[=].answerValueSet = $JDV-J185-TypeFermeture-ROR"
+* item[=].item[=].answerValueSet = $JDV-J185-TypeFermeture-ROR
 * item[=].item[+].linkId = "dateFermeture"
 * item[=].item[=].text = "Date de fermeture"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.notAvailable:closingRepoeningDate.during.start"
