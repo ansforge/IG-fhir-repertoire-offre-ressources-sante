@@ -9,9 +9,11 @@
 </td>
 <td width="465">
 <p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p>
+<p>Update<a href="#_ftn1" name="_ftnref1">[2]</a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1">[3]</a></p>
 </td>
 <td width="465">
-<p>Search<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
+<p>Search<a href="#_ftn2" name="_ftnref2"><sup>[4]</sup></a></p>
 </td>
 </tr>
 <tr>
@@ -20,6 +22,8 @@
 </td>
 <td width="465">
 <p>POST</p>
+<p>PUT</p>
+<p>PATCH</p>
 </td>
 <td width="465">
 <p>GET</p>
@@ -42,6 +46,8 @@
 </td>
 <td width="465">
 <p>POST [base]/Questionnaire {?_format=[mime-type]}</p>
+<p>PUT [base]/Questionnaire/[id]{?&_format=[mime-type]}</p>
+<p>PATCH [base]/Questionnaire/[id]{&amp;_format=[mime-type]}</p>
 </td>
 <td width="465">
 <p>GET [base]/Questionnaire{?[parameters]{&amp;_format=[mime-type]}}</p>
@@ -51,11 +57,13 @@
 </table>
 <p>&nbsp;</p>
 <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#create">https://www.hl7.org/fhir/R4/http.html#create</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
-<p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+<p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#update">https://hl7.org/fhir/R4/http.html#update</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+<p><a href="#_ftnref2" name="_ftn2">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#patch">https://hl7.org/fhir/R4/http.html#patch</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+<p><a href="#_ftnref2" name="_ftn2">[4]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 
 ### Construction de la réponse de base
 
-#### Create
+#### Create, Update, Patch
 
 ##### Réponse de base -- Succès
 
@@ -216,96 +224,7 @@ POST [BASE]/Questionnaire
           "required": false,
           "readOnly": true
         },
-        {
-          "linkId": "numEJ_RPPS_ADELI_Rang",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:rppsRang.value",
-          "prefix": "1.4",
-          "text": "Numéro EJ/RPPS/ADELIrang",
-          "type": "string",
-          "required": false,
-          "readOnly": true
-        },
-        {
-          "linkId": "raisonSociale-EJ",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.name",
-          "prefix": "1.5",
-          "text": "Raison sociale EJ",
-          "type": "string",
-          "required": false,
-          "readOnly": true
-        },
-        {
-          "linkId": "complementRaisonSociale-EJ",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.name.extension:ror-organization-additional-name",
-          "prefix": "1.6",
-          "text": "Complément Raison sociale (EJ)",
-          "type": "string",
-          "required": false,
-          "readOnly": true
-        },
-        {
-          "linkId": "statutJuridique-EJ",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:statutJuridiqueINSEE",
-          "prefix": "1.7",
-          "text": "Statut juridique (EJ)",
-          "type": "choice",
-          "required": false,
-          "readOnly": true,
-          "answerValueSet": "https://mos.esante.gouv.fr/NOS/JDV_J199-StatutJuridique-ROR/FHIR/JDV-J199-StatutJuridique-ROR"
-        },
-        {
-          "linkId": "sousEnsembleAgregatStatutJuridique",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:sousEnsembleAgregatStatutJuridique",
-          "prefix": "1.8",
-          "text": "Ss Ens Agrégat Stat. Jur.",
-          "type": "choice",
-          "required": false,
-          "readOnly": true,
-          "answerValueSet": "https://mos.esante.gouv.fr/NOS/JDV_J200-SousEnsembleAgregatStatutJuridique-ROR/FHIR/JDV-J200-SousEnsembleAgregatStatutJuridique-ROR"
-        },
-        {
-          "linkId": "adresseEJ",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.address.text",
-          "prefix": "1.9",
-          "text": "Adresse de l’EJ",
-          "type": "string",
-          "required": false,
-          "readOnly": true
-        },
-        {
-          "linkId": "dateCreation-EJ",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-creation-date",
-          "prefix": "1.10",
-          "text": "Veuillez indiquer la date de création de l’EJ",
-          "type": "date",
-          "required": false,
-          "readOnly": true
-        },
-        {
-          "linkId": "dateFermeture-EJ",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:organization-period.end",
-          "prefix": "1.11",
-          "text": "Veuillez indiquer la date de fermeture de l’EJ",
-          "type": "date",
-          "required": false,
-          "readOnly": true
-        },
-        {
-          "linkId": "typeFermeture-EJ",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-closing-type",
-          "prefix": "1.12",
-          "text": "Veuillez indiquer le type de fermeture de l’EJ",
-          "type": "choice",
-          "required": false,
-          "readOnly": true,
-          "answerValueSet": "https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR"
-        }
-      ],
-      "type": "group",
-      "linkId": "TypeOffreInfoEJ",
-      "prefix": "1",
-      "text": "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"
-    },
+      ]
     {
       "linkId": "TypeOffreInfoEG",
       "prefix": "2",
@@ -366,78 +285,7 @@ POST [BASE]/Questionnaire
           "required": false,
           "readOnly": true
         },
-        {
-          "linkId": "cNomOperationnel-EG",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.alias",
-          "prefix": "2.7",
-          "text": "Le cas échéant, veuillez renseigner le nom opérationnel de l’entité géographique",
-          "type": "string",
-          "required": false
-        },
-        {
-          "linkId": "categorieEG",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:categorieEtablissement",
-          "prefix": "2.8",
-          "text": "Catégorie EG",
-          "type": "choice",
-          "required": true,
-          "readOnly": true,
-          "answerValueSet": "https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR"
-        },
-        {
-          "linkId": "adresseEG",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.address.text",
-          "prefix": "2.9",
-          "text": "Lieu EG",
-          "type": "string",
-          "required": false
-        },
-        {
-          "linkId": "contactEG",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.contact.telecom.value",
-          "prefix": "2.10",
-          "text": "Contact (Informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique)",
-          "type": "string",
-          "required": false
-        },
-        {
-          "linkId": "accessibiliteLieu-EG",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:sphParticipation",
-          "prefix": "2.12",
-          "text": "modaliteParticipationSPH",
-          "type": "choice",
-          "required": false,
-          "readOnly": true,
-          "answerValueSet": "https://mos.esante.gouv.fr/NOS/JDV_J202-ESPIC-ROR/FHIR/JDV-J202-ESPIC-ROR"
-        },
-        {
-          "linkId": "dateOuverture-EG",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:organization-period.start",
-          "prefix": "2.13",
-          "text": "Veuillez indiquer la date de création de l’EG",
-          "type": "date",
-          "required": false,
-          "readOnly": true
-        },
-        {
-          "linkId": "dateFermeture-EG",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:organization-period.end",
-          "prefix": "2.14",
-          "text": "Veuillez indiquer la date de fermeture de l’EG",
-          "type": "date",
-          "required": false,
-          "readOnly": true
-        },
-        {
-          "linkId": "typeFermeture-EG",
-          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-closing-type",
-          "prefix": "2.15",
-          "text": "Veuillez indiquer le type de fermeture de l’EG",
-          "type": "choice",
-          "required": false,
-          "readOnly": true,
-          "answerValueSet": "https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR"
-        }
+       
       ]
     },
     {
@@ -484,18 +332,52 @@ POST [BASE]/Questionnaire
 ```
  Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.
 
-#### Scénario 2 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
 
-**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
-Exemple ???
+#### Scénario 2 : Un consommateur souhaite récupérer l'ensemble des fiches
+
+**Description du scénario :** Un consommateur souhaite récupérer l'ensemble des fiches.
+
 
 **Requête :**
 
-`GET [BASE]/Questionnaire?`
+`GET [BASE]/Questionnaire`
 
 **Requête expliquée :**
 
 ```sh
-[BASE]/Questionnaire? #critère de recherche sur sur la date de mesure.
+GET [BASE]/Questionnaire #recherche sans critère pour récupérer toutes les fiches
+
+```
+
+#### Scénario 3 : Un consommateur souhaite récupérer une fiche
+
+**Description du scénario :** Un consommateur souhaite récupérer une fiche
+
+
+**Requête :**
+
+`GET [BASE]/Questionnaire?identifier=XXX`
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifiant de la fiche
+
+```
+
+
+#### Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
+
+**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. PAr exemple, un cabinet individuel.
+
+
+**Requête :**
+
+`GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|SA07`
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|SA07 #critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)
 
 ```

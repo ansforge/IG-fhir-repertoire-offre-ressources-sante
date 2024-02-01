@@ -21,6 +21,8 @@ Description: "Fiche de saisie de l'offre de soins"
 * publisher MS
 * description ^short = "Description de l'objet de la feuille de saisie" 
 * description MS
+* derivedFrom ^short = "Fiche(s) de saisie source"
+* derivedFrom MS
 * approvalDate 0..1 MS
 * approvalDate ^short = "Date de validation de la fiche de saisie"
 * lastReviewDate 0..1 MS
