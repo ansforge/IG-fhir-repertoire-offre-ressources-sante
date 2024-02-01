@@ -5,8 +5,8 @@ InstanceOf: RORQuestionnaire
 Usage: #example
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
 * version = "0.1"
-* name = "FDS-offre-de-ville"
-* title = "Cabinet de ville de médecine générale"
+* name = "FDS-092"
+* title = "Consignes fiche de saisie Cabinet de ville de médecine générale"
 * identifier.use = #official
 * identifier.value = "FDS-092"
 * status = #draft
@@ -321,7 +321,7 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].required = false
 * item[=].item[=].answerOption[0].valueCoding = $TRE-R210-ActeSpecifique#0739 "Audiogramme"
-* item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1167 "Contention souple d’articulation"
+* item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1167 "Contention souple d'articulation"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1171 "Dépistage de la déficience visuelle de l'enfant"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1172 "Dépistage des surdités de l'enfant"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1181 "Diagnostic par dermatoscope"
@@ -331,13 +331,13 @@ Usage: #example
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#0628 "Education thérapeutique du patient non labellisée ou psychoéducation"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1197 "Évacuation / Excision d'une thrombose hémorroïdaire externe"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#0483 "Evaluation des troubles du sommeil (polysomnographie)"
-* item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1199 "Examen médical d’aptitude à la fonction publique par médecin agréé"
+* item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1199 "Examen médical d'aptitude à la fonction publique par médecin agréé"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1200 "Examen médical du permis de conduire par médecin agréé"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1208 "Frottis du col utérin"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1215 "Incision / excision d'un panaris superficiel"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#0268 "Interruption volontaire de grossesse (IVG) médicamenteuse"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#0812 "Médiation Familiale"
-* item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1244 "Pose d’implants contraceptifs"
+* item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1244 "Pose d'implants contraceptifs"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1245 "Pose de DIU"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1247 "Pose de plâtres ou résines, orthèse"
 * item[=].item[=].answerOption[+].valueCoding = $TRE-R210-ActeSpecifique#1248 "Prescription initiale d'audioprothèses"
@@ -367,7 +367,7 @@ Usage: #example
 * item[=].item[=].type = #choice
 * item[=].item[=].required = false
 * item[=].item[=].repeats = true
-* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR/"
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR"
 * item[=].item[+].linkId = "niveauExpertise"
 * item[=].item[=].text = "Niveau d’expertise"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.characteristic:expertiseLevel"
@@ -450,7 +450,7 @@ Usage: #example
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.extension:contracted.value[x]"
 * item[=].item[=].prefix = "3.18"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J130-CNAMAmeliSecteurConventionnement-RASS/FHIR/JDV-J130-CNAMAmeliSecteurConventionnement-RASS/"
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J130-CNAMAmeliSecteurConventionnement-RASS/FHIR/JDV-J130-CNAMAmeliSecteurConventionnement-RASS"
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "optionContratAccèsAuxSoins"
