@@ -27,7 +27,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * lastReviewDate ^short = "Date de dernière revue de la fiche"
 * effectivePeriod ^short = "Periode de validité de la fiche" 
 * effectivePeriod MS
-* code ^short = "Catégorie(s) d'EG pour lesquelles cette fiche de consigne de saisie est disponible"
+* code ^short = "Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
 * code from $JDV-J55-CategorieEG-ROR (required)
 * code MS
 * item ^short = "Structure du champs de la fiche" 
