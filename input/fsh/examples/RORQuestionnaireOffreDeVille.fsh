@@ -278,7 +278,7 @@ Usage: #example
 * item[=].item[=].prefix = "3.7"
 * item[=].item[=].type = #choice
 * item[=].item[=].enableWhen.question = "ModalAccueil"
-* item[=].item[=].enableWhen.operator = #exists
+* item[=].item[=].enableWhen.operator = #= "Visite à domicile"
 * item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].enableBehavior = #all
 * item[=].item[=].answerValueSet = "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"
