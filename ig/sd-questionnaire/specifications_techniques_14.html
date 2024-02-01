@@ -252,9 +252,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </td>
 <td width="465">
 <p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p>
+<p>Update<a href="#_ftn1" name="_ftnref1">[2]</a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1">[3]</a></p>
 </td>
 <td width="465">
-<p>Search<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
+<p>Search<a href="#_ftn2" name="_ftnref2"><sup>[4]</sup></a></p>
 </td>
 </tr>
 <tr>
@@ -263,6 +265,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </td>
 <td width="465">
 <p>POST</p>
+<p>PUT</p>
+<p>PATCH</p>
 </td>
 <td width="465">
 <p>GET</p>
@@ -285,6 +289,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </td>
 <td width="465">
 <p>POST [base]/Questionnaire {?_format=[mime-type]}</p>
+<p>PUT [base]/Questionnaire/[id]{?&amp;_format=[mime-type]}</p>
+<p>PATCH [base]/Questionnaire/[id]{&amp;_format=[mime-type]}</p>
 </td>
 <td width="465">
 <p>GET [base]/Questionnaire{?[parameters]{&amp;_format=[mime-type]}}</p>
@@ -294,11 +300,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </table>
 <p>&nbsp;</p>
 <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#create">https://www.hl7.org/fhir/R4/http.html#create</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
-<p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+<p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#update">https://hl7.org/fhir/R4/http.html#update</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+<p><a href="#_ftnref2" name="_ftn2">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#patch">https://hl7.org/fhir/R4/http.html#patch</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+<p><a href="#_ftnref2" name="_ftn2">[4]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 
 <h3 id="construction-de-la-réponse-de-base">Construction de la réponse de base</h3>
 
-<h4 id="create">Create</h4>
+<h4 id="create-update-patch">Create, Update, Patch</h4>
 
 <h5 id="réponse-de-base--succès">Réponse de base – Succès</h5>
 
@@ -471,96 +479,7 @@ Plus de précision sur la spécification FHIR :
           </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
           </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"numEJ_RPPS_ADELI_Rang"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:rppsRang.value"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.4"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Numéro EJ/RPPS/ADELIrang"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"raisonSociale-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.name"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.5"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raison sociale EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"complementRaisonSociale-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.name.extension:ror-organization-additional-name"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.6"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Complément Raison sociale (EJ)"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"statutJuridique-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:statutJuridiqueINSEE"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.7"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Statut juridique (EJ)"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answerValueSet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J199-StatutJuridique-ROR/FHIR/JDV-J199-StatutJuridique-ROR"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sousEnsembleAgregatStatutJuridique"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:sousEnsembleAgregatStatutJuridique"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.8"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ss Ens Agrégat Stat. Jur."</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answerValueSet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J200-SousEnsembleAgregatStatutJuridique-ROR/FHIR/JDV-J200-SousEnsembleAgregatStatutJuridique-ROR"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adresseEJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.address.text"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.9"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adresse de l’EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dateCreation-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-creation-date"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.10"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Veuillez indiquer la date de création de l’EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dateFermeture-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:organization-period.end"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.11"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Veuillez indiquer la date de fermeture de l’EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"typeFermeture-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-closing-type"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.12"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Veuillez indiquer le type de fermeture de l’EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answerValueSet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TypeOffreInfoEJ"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+      </span><span class="p">]</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TypeOffreInfoEG"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
@@ -621,78 +540,7 @@ Plus de précision sur la spécification FHIR :
           </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
           </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cNomOperationnel-EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.alias"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.7"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Le cas échéant, veuillez renseigner le nom opérationnel de l’entité géographique"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"categorieEG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:categorieEtablissement"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.8"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Catégorie EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answerValueSet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adresseEG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.address.text"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.9"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lieu EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contactEG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.contact.telecom.value"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.10"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact (Informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique)"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accessibiliteLieu-EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.type:sphParticipation"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.12"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"modaliteParticipationSPH"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answerValueSet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J202-ESPIC-ROR/FHIR/JDV-J202-ESPIC-ROR"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dateOuverture-EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:organization-period.start"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.13"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Veuillez indiquer la date de création de l’EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dateFermeture-EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:organization-period.end"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.14"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Veuillez indiquer la date de fermeture de l’EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"typeFermeture-EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.extension:ror-organization-closing-type"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.15"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Veuillez indiquer le type de fermeture de l’EG"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answerValueSet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J201-TypeFermeture-ROR/FHIR/JDV-J201-TypeFermeture-ROR"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+       
       </span><span class="p">]</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -734,23 +582,50 @@ Plus de précision sur la spécification FHIR :
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="err">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 <p>Vous pouvez télécharger le json <a href="Questionnaire-ror-questionnaire-offre-de-ville.json">ici</a> et l’importer dans <a href="https://lhcformbuilder.nlm.nih.gov/">https://lhcformbuilder.nlm.nih.gov/</a> pour le tester et le faire évoluer via cet IHM.</p>
 
-<h4 id="scénario-2-un-consommateur-souhaite-récupérer-un-ensemble-de-fiches-de-saisie-sur-un-critère-donné">Scénario 2 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné</h4>
+<h4 id="scénario-2-un-consommateur-souhaite-récupérer-lensemble-des-fiches">Scénario 2 : Un consommateur souhaite récupérer l’ensemble des fiches</h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
-Exemple ???</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer l’ensemble des fiches.</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire</code></p>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>BASE]/Questionnaire? <span class="c">#critère de recherche sur sur la date de mesure.</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire <span class="c">#recherche sans critère pour récupérer toutes les fiches</span>
+
+</code></pre></div></div>
+
+<h4 id="scénario-3-un-consommateur-souhaite-récupérer-une-fiche">Scénario 3 : Un consommateur souhaite récupérer une fiche</h4>
+
+<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer une fiche</p>
+
+<p><strong>Requête :</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?identifier=XXX</code></p>
+
+<p><strong>Requête expliquée :</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?identifier<span class="o">=</span>XXX <span class="c">#critère de recherche sur l’identifiant de la fiche</span>
+
+</code></pre></div></div>
+
+<h4 id="scénario-4-un-consommateur-souhaite-récupérer-un-ensemble-de-fiches-de-saisie-sur-un-critère-donné">Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné</h4>
+
+<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. PAr exemple, un cabinet individuel.</p>
+
+<p><strong>Requête :</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|SA07</code></p>
+
+<p><strong>Requête expliquée :</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?code<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|SA07 <span class="c">#critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)</span>
 
 </code></pre></div></div>
 
@@ -800,7 +675,7 @@ Exemple ???</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 1, 2024 17:43+0000">2024-02-01</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 1, 2024 18:39+0000">2024-02-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
