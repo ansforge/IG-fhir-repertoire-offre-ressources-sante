@@ -16,7 +16,6 @@
       <sch:assert test="count(f:name) &gt;= 1">name: minimum cardinality of 'name' is 1</sch:assert>
       <sch:assert test="count(f:title) &gt;= 1">title: minimum cardinality of 'title' is 1</sch:assert>
       <sch:assert test="count(f:subjectType) &gt;= 1">subjectType: minimum cardinality of 'subjectType' is 1</sch:assert>
-      <sch:assert test="count(f:code) &lt;= 0">code: maximum cardinality of 'code' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
