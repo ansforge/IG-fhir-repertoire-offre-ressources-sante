@@ -411,38 +411,102 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "jourSemaine"
 * item[=].item[=].item[=].text = "Numéro du jour dans la semaine"
 * item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* item[=].item[=].item[=].prefix = "3.16.2"
+* item[=].item[=].item[=].prefix = "a"
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[+].linkId = "Heures"
+* item[=].item[=].item[+].linkId = "heures"
 * item[=].item[=].item[=].text = "Heures"
-* item[=].item[=].item[=].prefix = "3.16.3"
+* item[=].item[=].item[=].prefix = "b"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].item[0].linkId = "availableStartTime"
 * item[=].item[=].item[=].item[=].text = "Début de la plage horaire"
 * item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.availableTime.availableStartTime"
-* item[=].item[=].item[=].item[=].prefix = "3.16.3.a"
+* item[=].item[=].item[=].item[=].prefix = "-"
 * item[=].item[=].item[=].item[=].type = #time
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[+].linkId = "availableEndTime"
 * item[=].item[=].item[=].item[=].text = "Fin de la plage horaire"
 * item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.availableTime.availableEndTime"
-* item[=].item[=].item[=].item[=].prefix = "3.16.2.b"
+* item[=].item[=].item[=].item[=].prefix = "-"
 * item[=].item[=].item[=].item[=].type = #time
 * item[=].item[=].item[=].item[=].required = false
+* item[=].item[+].linkId = "Contact"
+* item[=].item[=].prefix = "3.17"
+* item[=].item[=].text = "Contact"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+* item[=].item[=].item[0].linkId = "nature"
+* item[=].item[=].item[=].text = "Nature"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact#Extension.extension:purposeContact.value[x]"
+* item[=].item[=].item[=].prefix = "a"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption = $TRE-R287-NatureContact#01 "Accueil"
+* item[=].item[=].item[=].answerOption = $TRE-R287-NatureContact#02 "Prise de rendez-vous"
+* item[=].item[=].item[=].answerOption = $TRE-R287-NatureContact#09 "éléconsultation"
+* item[=].item[=].item[=].answerOption = $TRE-R287-NatureContact#15 "Téléexpertise"
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[+].linkId = "description"
+* item[=].item[=].item[=].text = "Description"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact#Extension.extension:description.value[x]"
+* item[=].item[=].item[=].prefix = "b"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[+].linkId = "niveau-confidentialite"
+* item[=].item[=].item[=].text = "Niveau de Confidentialité"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level#Extension.value[x]"
+* item[=].item[=].item[=].prefix = "c"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
+* item[=].item[=].item[=].answerOption = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
+* item[=].item[=].item[=].required = true
+* item[=].item[+].linkId = "telecommunication"
+* item[=].item[=].prefix = "3.18"
+* item[=].item[=].text = "Télécom du contact"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].item[0].linkId = "canal"
+* item[=].item[=].item[=].text = "Canal"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel#Extension.value[x]"
+* item[=].item[=].item[=].prefix = "a"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption = $TRE-R200-CanalCommunication#1 "Téléphone mobile"
+* item[=].item[=].item[=].answerOption = $TRE-R200-CanalCommunication#2 "Téléphone fixe"
+* item[=].item[=].item[=].answerOption = $TRE-R200-CanalCommunication#3 "Courrier électronique"
+* item[=].item[=].item[=].answerOption = $TRE-R200-CanalCommunication#4 "Adresse web"
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[+].linkId = "telecomAddress"
+* item[=].item[=].item[=].text = "Adresse"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom#Extension.extension:telecomAddress.value[x]"
+* item[=].item[=].item[=].prefix = "b"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[+].linkId = "telecomUsage"
+* item[=].item[=].item[=].text = "Usage"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage#Extension.value[x]"
+* item[=].item[=].item[=].prefix = "c"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[+].linkId = "telecom-niveau-confidentialite"
+* item[=].item[=].item[=].text = "Niveau de Confidentialité"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level#Extension.value[x]"
+* item[=].item[=].item[=].prefix = "d"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
+* item[=].item[=].item[=].answerOption = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
+* item[=].item[=].item[=].required = true
 * item[=].item[+].linkId = "boiteLettreMSS"
 * item[=].item[=].text = "Boîte aux lettres MSS"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.telecom.value"
-* item[=].item[=].prefix = "3.16"
+* item[=].item[=].prefix = "3.19"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[+].linkId = "modeExercice"
 * item[=].item[=].text = "Mode d’exercice dans l’UE"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode#Extension.value[x]"
-* item[=].item[=].prefix = "3.17"
+* item[=].item[=].prefix = "3.20"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J217-ModeExercice-ROR
 * item[=].item[=].required = false
@@ -450,7 +514,7 @@ Usage: #example
 * item[=].item[+].linkId = "secteurConventionnement"
 * item[=].item[=].text = "Secteur conventionnement"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.extension:contracted.value[x]"
-* item[=].item[=].prefix = "3.18"
+* item[=].item[=].prefix = "3.21"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J130-CNAMAmeliSecteurConventionnement-RASS
 * item[=].item[=].required = false
@@ -458,21 +522,21 @@ Usage: #example
 * item[=].item[+].linkId = "optionContratAccèsAuxSoins"
 * item[=].item[=].text = "Option CAS (Contrat d’Accès aux Soins) / OPTAM (Option Pratique Tarifaire Maîtrisée)"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.extension:optionCAS"
-* item[=].item[=].prefix = "3.19"
+* item[=].item[=].prefix = "3.22"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "carteVitaleAcceptee"
 * item[=].item[=].text = "Carte vitale acceptée"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole-vitaleAccepted"
-* item[=].item[=].prefix = "3.20"
+* item[=].item[=].prefix = "3.23"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "civiliteExercice"
 * item[=].item[=].text = "Civilité d’exercice"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/RORPractitionerRoleName#Extension.extension:exerciseTitle.value[x]:valueCodeableConcept"
-* item[=].item[=].prefix = "3.21"
+* item[=].item[=].prefix = "3.24"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J208-CiviliteExercice-ROR
 * item[=].item[=].required = false
@@ -480,21 +544,21 @@ Usage: #example
 * item[=].item[+].linkId = "nomExercice"
 * item[=].item[=].text = "Nom d’exercice"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/RORPractitionerRoleName#Extension.extension:exerciseLastName"
-* item[=].item[=].prefix = "3.22"
+* item[=].item[=].prefix = "3.25"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "prenomExercice"
 * item[=].item[=].text = "Prénom d’exercice"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/RORPractitionerRoleName#Extension.extension:exerciseFirstName"
-* item[=].item[=].prefix = "3.23"
+* item[=].item[=].prefix = "3.26"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "profession"
 * item[=].item[=].text = "Profession"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.code"
-* item[=].item[=].prefix = "3.24"
+* item[=].item[=].prefix = "3.27"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J229-ProfessionSante-ROR
 * item[=].item[=].required = true
@@ -502,7 +566,7 @@ Usage: #example
 * item[=].item[+].linkId = "typeSavoirFaire"
 * item[=].item[=].text = "Type savoir faire"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:expertiseType"
-* item[=].item[=].prefix = "3.25"
+* item[=].item[=].prefix = "3.28"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J209-TypeSavoirFaire-ROR
 * item[=].item[=].required = false
@@ -510,7 +574,7 @@ Usage: #example
 * item[=].item[+].linkId = "specialite"
 * item[=].item[=].text = "Spécialité"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:specialty"
-* item[=].item[=].prefix = "3.26"
+* item[=].item[=].prefix = "3.30"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J210-SpecialiteOrdinale-ROR
 * item[=].item[=].required = false
@@ -518,7 +582,7 @@ Usage: #example
 * item[=].item[+].linkId = "competence"
 * item[=].item[=].text = "Compétence"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:competence"
-* item[=].item[=].prefix = "3.27"
+* item[=].item[=].prefix = "3.31"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J232-Competence-ROR
 * item[=].item[=].required = false
@@ -526,7 +590,7 @@ Usage: #example
 * item[=].item[+].linkId = "competenceExclusive"
 * item[=].item[=].text = "CCompétence Exclusive"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:exclusiveCompetence"
-* item[=].item[=].prefix = "3.28"
+* item[=].item[=].prefix = "3.32"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J211-CompetenceExclusive-ROR
 * item[=].item[=].required = false
@@ -534,7 +598,7 @@ Usage: #example
 * item[=].item[+].linkId = "orientationParticuliere"
 * item[=].item[=].text = "Orientation particulière"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:specificOrientation"
-* item[=].item[=].prefix = "3.29"
+* item[=].item[=].prefix = "3.33"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J212-OrientationParticuliere-ROR
 * item[=].item[=].required = false
@@ -542,7 +606,7 @@ Usage: #example
 * item[=].item[+].linkId = "capacite"
 * item[=].item[=].text = "Capacité"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:expertiseCapacity"
-* item[=].item[=].prefix = "3.30"
+* item[=].item[=].prefix = "3.34"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J213-CapaciteSavoirFaire-ROR
 * item[=].item[=].required = false
@@ -550,7 +614,7 @@ Usage: #example
 * item[=].item[+].linkId = "qualificationPAC"
 * item[=].item[=].text = "Qualification de Praticien Adjoint Contractuel"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:qualificationPAC"
-* item[=].item[=].prefix = "3.31"
+* item[=].item[=].prefix = "3.35"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J214-QualificationPAC-ROR
 * item[=].item[=].required = false
@@ -558,7 +622,7 @@ Usage: #example
 * item[=].item[+].linkId = "DESCNonQualifiant"
 * item[=].item[=].text = "DESC Non Qualifiant"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:nonQualifyingDESC"
-* item[=].item[=].prefix = "3.32"
+* item[=].item[=].prefix = "3.36"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J215-DESCnonQualifiant-ROR
 * item[=].item[=].required = false
@@ -566,7 +630,7 @@ Usage: #example
 * item[=].item[+].linkId = "droitExerciceComplémentaire"
 * item[=].item[=].text = "Droit Exercice Complémentaire"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:supplementaryExerciseRight"
-* item[=].item[=].prefix = "3.33"
+* item[=].item[=].prefix = "3.37"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J216-DroitExerciceCompl-ROR
 * item[=].item[=].required = false
@@ -574,21 +638,21 @@ Usage: #example
 * item[=].item[+].linkId = "idNat_PS"
 * item[=].item[=].text = "Identification Nationale du PS"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner#Practitioner.identifier.value"
-* item[=].item[=].prefix = "3.34"
+* item[=].item[=].prefix = "3.38"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "boiteLettreMSS-PS"
 * item[=].item[=].text = "Boîte aux lettres du service de messagerie sécurisée de santé"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner#Practitioner.telecom.value"
-* item[=].item[=].prefix = "3.35"
+* item[=].item[=].prefix = "3.39"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "Civilite"
 * item[=].item[=].text = "Civilité du PS"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner#Practitioner.name.prefix"
-* item[=].item[=].prefix = "3.36"
+* item[=].item[=].prefix = "3.40"
 * item[=].item[=].type = #string
 * item[=].item[=].answerValueSet = $JDV-J207-Civilite-ROR
 * item[=].item[=].required = false
@@ -596,27 +660,27 @@ Usage: #example
 * item[=].item[+].linkId = "identifiantLieu"
 * item[=].item[=].text = "Identifiant lieu real offre"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location#Location.identifier:idLocation.value"
-* item[=].item[=].prefix = "3.37"
+* item[=].item[=].prefix = "3.41"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "adresseLieu"
 * item[=].item[=].text = "Adresse"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location#Location.address.text"
-* item[=].item[=].prefix = "3.38"
+* item[=].item[=].prefix = "3.42"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 * item[=].item[+].linkId = "communeCog"
 * item[=].item[=].text = "communeCog"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"
-* item[=].item[=].prefix = "3.39"
+* item[=].item[=].prefix = "3.43"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = $JDV-J124-Commune
 * item[=].item[=].required = false
 * item[=].item[+].linkId = "descriptionLieu"
 * item[=].item[=].text = "Description (Le cas échéant, veuillez préciser comment atteindre le lieu)"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"
-* item[=].item[=].prefix = "3.39"
+* item[=].item[=].prefix = "3.44"
 * item[=].item[=].type = #string
 * item[=].item[=].required = false
 
