@@ -29,9 +29,15 @@ Description: "Fiche de saisie de l'offre de soins"
 * lastReviewDate ^short = "Date de dernière revue de la fiche"
 * effectivePeriod ^short = "Periode de validité de la fiche" 
 * effectivePeriod MS
-* code ^short = "Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
-* code from $JDV-J55-CategorieEG-ROR (required) // utilisation de code pour catégoriser les fiches par type d'EG
-* code 1..* MS //cardinalité à validerpar le ROR rendant obligatoire la catégorie d'EG obligatoire pour la définition de la fiche de saisie
+//* code ^short = "Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
+//* code from $JDV-J55-CategorieEG-ROR (required) // utilisation de code pour catégoriser les fiches par type d'EG
+//* code 1..* MS //cardinalité à valider par le ROR rendant obligatoire la catégorie d'EG obligatoire pour la définition de la fiche de saisie
+* code 0..0
+* useContext ^short "Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
+* useContext.valueCodeableConcept from $JDV-J55-CategorieEG-ROR (required)
+* useContext 1..*
+* useContext.valueCodeableConcept MS
+
 * item ^short = "Structure du champs de la fiche" 
 * item MS
 * item.required ^short = "Champs requis" 
