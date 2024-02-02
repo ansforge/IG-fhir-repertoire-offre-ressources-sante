@@ -440,13 +440,13 @@ Usage: #example
 * item[=].item[=].required = true
 * item[=].item[=].item[0].linkId = "nature"
 * item[=].item[=].item[=].text = "Nature"
-* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact#Extension.extension:purposeContact.value[x]"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact#Extension.extension:purposeContact"
 * item[=].item[=].item[=].prefix = "a"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption = $TRE-R287-NatureContact#01 "Accueil"
-* item[=].item[=].item[=].answerOption = $TRE-R287-NatureContact#02 "Prise de rendez-vous"
-* item[=].item[=].item[=].answerOption = $TRE-R287-NatureContact#09 "éléconsultation"
-* item[=].item[=].item[=].answerOption = $TRE-R287-NatureContact#15 "Téléexpertise"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R287-NatureContact#01 "Accueil"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R287-NatureContact#02 "Prise de rendez-vous"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R287-NatureContact#09 "éléconsultation"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R287-NatureContact#15 "Téléexpertise"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[+].linkId = "description"
 * item[=].item[=].item[=].text = "Description"
@@ -456,11 +456,11 @@ Usage: #example
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[+].linkId = "niveau-confidentialite"
 * item[=].item[=].item[=].text = "Niveau de Confidentialité"
-* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level#Extension.value[x]"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level"
 * item[=].item[=].item[=].prefix = "c"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
-* item[=].item[=].item[=].answerOption = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
 * item[=].item[=].item[=].required = true
 * item[=].item[+].linkId = "telecommunication"
 * item[=].item[=].prefix = "3.18"
@@ -469,13 +469,13 @@ Usage: #example
 * item[=].item[=].required = false
 * item[=].item[=].item[0].linkId = "canal"
 * item[=].item[=].item[=].text = "Canal"
-* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel#Extension.value[x]"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"
 * item[=].item[=].item[=].prefix = "a"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption = $TRE-R200-CanalCommunication#1 "Téléphone mobile"
-* item[=].item[=].item[=].answerOption = $TRE-R200-CanalCommunication#2 "Téléphone fixe"
-* item[=].item[=].item[=].answerOption = $TRE-R200-CanalCommunication#3 "Courrier électronique"
-* item[=].item[=].item[=].answerOption = $TRE-R200-CanalCommunication#4 "Adresse web"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R200-CanalCommunication#1 "Téléphone mobile"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R200-CanalCommunication#2 "Téléphone fixe"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R200-CanalCommunication#3 "Courrier électronique"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R200-CanalCommunication#4 "Adresse web"
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[+].linkId = "telecomAddress"
 * item[=].item[=].item[=].text = "Adresse"
@@ -491,11 +491,11 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[+].linkId = "telecom-niveau-confidentialite"
 * item[=].item[=].item[=].text = "Niveau de Confidentialité"
-* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level#Extension.value[x]"
+* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"
 * item[=].item[=].item[=].prefix = "d"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
-* item[=].item[=].item[=].answerOption = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
+* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
 * item[=].item[=].item[=].required = true
 * item[=].item[+].linkId = "boiteLettreMSS"
 * item[=].item[=].text = "Boîte aux lettres MSS"
