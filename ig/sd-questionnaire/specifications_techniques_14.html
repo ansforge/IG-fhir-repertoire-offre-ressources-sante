@@ -253,7 +253,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <td width="465">
 <p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p>
 <p>Update<a href="#_ftn1" name="_ftnref1">[2]</a></p>
-<p>Patch<a href="#_ftn1" name="_ftnref1">[3]</a></p>
 </td>
 <td width="465">
 <p>Search<a href="#_ftn2" name="_ftnref2"><sup>[4]</sup></a></p>
@@ -266,7 +265,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <td width="465">
 <p>POST</p>
 <p>PUT</p>
-<p>PATCH</p>
 </td>
 <td width="465">
 <p>GET</p>
@@ -290,7 +288,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <td width="465">
 <p>POST [base]/Questionnaire {?_format=[mime-type]}</p>
 <p>PUT [base]/Questionnaire/[id]{?&amp;_format=[mime-type]}</p>
-<p>PATCH [base]/Questionnaire/[id]{&amp;_format=[mime-type]}</p>
 </td>
 <td width="465">
 <p>GET [base]/Questionnaire{?[parameters]{&amp;_format=[mime-type]}}</p>
@@ -299,14 +296,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#create">https://www.hl7.org/fhir/R4/http.html#create</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://hl7.org/fhir/R4/http.html#create">https://hl7.org/fhir/R4/http.html#create</a> et <a href="https://hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 <p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#update">https://hl7.org/fhir/R4/http.html#update</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
-<p><a href="#_ftnref2" name="_ftn2">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#patch">https://hl7.org/fhir/R4/http.html#patch</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
-<p><a href="#_ftnref2" name="_ftn2">[4]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+<p><a href="#_ftnref2" name="_ftn2">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 
 <h3 id="construction-de-la-réponse-de-base">Construction de la réponse de base</h3>
 
-<h4 id="create-update-patch">Create, Update, Patch</h4>
+<h4 id="create-update">Create, Update</h4>
 
 <h5 id="réponse-de-base--succès">Réponse de base – Succès</h5>
 
@@ -407,11 +403,11 @@ Plus de précision sur la spécification FHIR :
   </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FDS-092"</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FDS-109"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FDS-092"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FDS-109"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Consignes fiche de saisie Cabinet de ville de médecine générale"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"experimental"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -617,15 +613,15 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-4-un-consommateur-souhaite-récupérer-un-ensemble-de-fiches-de-saisie-sur-un-critère-donné">Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné</h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. PAr exemple, un cabinet individuel.</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. PAr exemple, un Cabinet Libéral Médical.</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|SA07</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|601</code></p>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?code<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|SA07 <span class="c">#critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?code<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|601 <span class="c">#critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)</span>
 
 </code></pre></div></div>
 
@@ -675,7 +671,7 @@ Plus de précision sur la spécification FHIR :
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 1, 2024 18:39+0000">2024-02-01</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 2, 2024 08:32+0000">2024-02-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

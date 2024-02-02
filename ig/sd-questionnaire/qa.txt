@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 1, warn = 76, info = 44
+err = 1, warn = 79, info = 47
 IG Publisher Version: 1.5.16
-Generated Thu Feb 01 18:43:10 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Fri Feb 02 08:36:25 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 65 / 4 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CapabilityStatement-ror-consommateur : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CapabilityStatement-ror-serveur : 0 / 0 / 1
@@ -12,7 +12,7 @@ Generated Thu Feb 01 18:43:10 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville : 0 / 1 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville : 0 / 4 / 4
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-capacity-status : 0 / 0 / 1
@@ -191,6 +191,12 @@ WARNING: CodeSystem/output-task-ror-codesystem: CodeSystem: Published code syste
 WARNING: CodeSystem/ror-include-associated-data-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror.json ==
 == fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json ==
+WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[0]: ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
+INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated
+WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[1]: ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
+INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[1]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated
+WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[2]: ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
+INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[2]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated
 WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire: Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)
 == fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type.json ==

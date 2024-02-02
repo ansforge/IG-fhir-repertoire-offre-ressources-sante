@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 65, errors = 1, warn = 76, info = 44-->
+<!-- broken links = 65, errors = 1, warn = 79, info = 47-->
 <head>
   <title>ROR : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for ROR</h1>
- <p>Generated Thu Feb 01 18:43:10 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Fri Feb 02 08:36:25 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.5.16</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.ror, Canonical = https://interop.esante.gouv.fr/ig/fhir/ror</td></tr>
@@ -180,7 +180,7 @@ hl7.fhir.uv.tools#0.1.0:     <a href="http://hl7.org/fhir/tools/0.1.0/StructureD
  <tr><td>Previous Version Comparison:</td><td> </td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 1, warn = 76, info = 44, broken links = 65</td></tr>
+ <tr><td>Summary:</td><td> errors = 1, warn = 79, info = 47, broken links = 65</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -211,7 +211,7 @@ hl7.fhir.uv.tools#0.1.0:     <a href="http://hl7.org/fhir/tools/0.1.0/StructureD
      <td><a href="#_home_runner_work_IG-fhir-repertoire-offre-ressources-sante_IG-fhir-repertoire-offre-ressources-sante_fsh-generated_resources_ImplementationGuide-ans.fhir.fr.ror"><b>/home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_IG-fhir-repertoire-offre-ressources-sante_IG-fhir-repertoire-offre-ressources-sante_fsh-generated_resources_Questionnaire-ror-questionnaire-offre-de-ville"><b>/home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_IG-fhir-repertoire-offre-ressources-sante_IG-fhir-repertoire-offre-ressources-sante_fsh-generated_resources_Questionnaire-ror-questionnaire-offre-de-ville"><b>/home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville</b></a></td><td><b>0</b></td><td><b>4</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_IG-fhir-repertoire-offre-ressources-sante_IG-fhir-repertoire-offre-ressources-sante_fsh-generated_resources_SearchParameter-ror-sp-additional-bed-type"><b>/home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -804,7 +804,25 @@ hl7.fhir.uv.tools#0.1.0:     <a href="http://hl7.org/fhir/tools/0.1.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Questionnaire (l1/c215732)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)</b></td>
+     <td><b>Questionnaire.code[0] (l1/c180758)</b></td><td><b>warning</b></td><td title="Terminology_TX_ValueSet_NotFound"><b>ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Questionnaire.code[0] (l1/c180758)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Questionnaire.code[1] (l1/c180868)</b></td><td><b>warning</b></td><td title="Terminology_TX_ValueSet_NotFound"><b>ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Questionnaire.code[1] (l1/c180868)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Questionnaire.code[2] (l1/c180978)</b></td><td><b>warning</b></td><td title="Terminology_TX_ValueSet_NotFound"><b>ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Questionnaire.code[2] (l1/c180978)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Questionnaire (l1/c216071)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)</b></td>
    </tr>
 </table>
 <hr/>
@@ -1920,7 +1938,7 @@ hl7.fhir.uv.tools#0.1.0:     <a href="http://hl7.org/fhir/tools/0.1.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[28]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c81534)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[28]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c81470)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
 </table>
 <hr/>
@@ -2220,6 +2238,34 @@ hl7.fhir.uv.tools#0.1.0:     <a href="http://hl7.org/fhir/tools/0.1.0/StructureD
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="StructureDefinition-ror-task.html">fsh-generated/resources/StructureDefinition-ror-task.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_TX_System_NotKnown"> </a>
+<h2>Terminology_TX_System_NotKnown</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="Questionnaire-ror-questionnaire-offre-de-ville.html">fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json</a></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Questionnaire-ror-questionnaire-offre-de-ville.html">fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json</a></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Questionnaire-ror-questionnaire-offre-de-ville.html">fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json</a></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' could not be found, so the code cannot be validated</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_TX_ValueSet_NotFound"> </a>
+<h2>Terminology_TX_ValueSet_NotFound</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Questionnaire-ror-questionnaire-offre-de-ville.html">fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json</a></td><td><b>ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Questionnaire-ror-questionnaire-offre-de-ville.html">fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json</a></td><td><b>ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Questionnaire-ror-questionnaire-offre-de-ville.html">fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json</a></td><td><b>ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found</b></td>
    </tr>
 </table>
 <hr/>

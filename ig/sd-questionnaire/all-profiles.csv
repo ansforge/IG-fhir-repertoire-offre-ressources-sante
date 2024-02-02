@@ -5053,7 +5053,7 @@ inv-0","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ror-questionnaire","Questionnaire.derivedFrom","Questionnaire.derivedFrom","","","",0,*,"Y","","","canonical {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Questionnaire]]}
-","Fiche(s) de saisie source","The URL of a Questionnaire that this Questionnaire is based on.","see [Canonical References](http://hl7.org/fhir/R4/references.html#canonical)","Allows a Questionnaire to be created based on another Questionnaire.","","","","","","","",,,,,"",,,,"Questionnaire.derivedFrom",0,*,"ele-1
+","Fiche(s) de saisie parente(s)","The URL of a Questionnaire that this Questionnaire is based on.","see [Canonical References](http://hl7.org/fhir/R4/references.html#canonical)","Allows a Questionnaire to be created based on another Questionnaire.","","","","","","","",,,,,"",,,,"Questionnaire.derivedFrom",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ror-questionnaire","Questionnaire.status","Questionnaire.status","","","",1,1,"","Y","Y","code {[]} {[]}
@@ -5114,7 +5114,7 @@ Restrictions","",0,1,"","","","markdown {[]} {[]}
 ","Periode de validité de la fiche","The period during which the questionnaire content was or is planned to be in active use.","The effective period for a questionnaire  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.","Allows establishing a transition before a resource comes into effect and also allows for a sunsetting  process when new versions of the questionnaire are or are expected to be used instead.","","","","","","","",,,,,"",,,,"Questionnaire.effectivePeriod",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 per-1:If present, start SHALL have a lower value than end {start.hasValue().not() or end.hasValue().not() or (start <= end)}"
-"ror-questionnaire","Questionnaire.code","Questionnaire.code","","","",0,*,"Y","","Y","Coding {[]} {[]}
+"ror-questionnaire","Questionnaire.code","Questionnaire.code","","","",1,*,"Y","","Y","Coding {[]} {[]}
 ","Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible","An identifier for this question or group of questions in a particular terminology such as LOINC.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","Allows linking of the complete Questionnaire resources to formal terminologies.  It's common for ""panels"" of questions to be identified by a code.","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR","",,,,"Questionnaire.code",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
