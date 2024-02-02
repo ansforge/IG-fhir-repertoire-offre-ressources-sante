@@ -118,7 +118,7 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 
 ### Critères de recherche pour Search
 
--   Les critères de recherche, définis dans la spécifications FHIR [search parameters](https://hl7.org/fhir/R4/questionnaire.html#search) doivent être implémentés afin de pouvoir rechercher les fiches de saisie selon le besoin.
+-   Les critères de recherche, définis dans la spécifications FHIR [search parameters](https://hl7.org/fhir/R4/questionnaire.html#search) doivent être implémentés afin de pouvoir rechercher les fiches de saisie selon le besoin à l'exception de `code` car `item.code` a une cardinalité dans le profile RORQuestionnaire.
 
 ### Paramètres et modificateurs de requêtes FHIR
 
@@ -138,143 +138,76 @@ Exemple de ressource : [Example Questionnaire: Cabinet de ville de médecine gé
 POST [BASE]/Questionnaire
 {
   {
-  "resourceType" : "Questionnaire",
-  "id" : "ror-questionnaire-offre-de-ville",
-  "meta" : {
-    "profile" : [
-      🔗 "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
+  "resourceType": "Questionnaire",
+  "id": "testror",
+  "meta": {
+    "profile": [
+      "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
     ]
   },
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-offre-de-ville",
-  "identifier" : [
+  "version": "0.1",
+  "name": "FDS-109",
+  "title": "Consignes fiche de saisie Cabinet de ville de médecine générale",
+  "identifier": [
     {
-      "use" : "official",
-      "value" : "FDS-109"
+      "use": "official",
+      "value": "FDS-109"
     }
   ],
-  "version" : "0.2.0",
-  "name" : "FDS-109",
-  "title" : "Consignes fiche de saisie Cabinet de ville de médecine générale",
-  "status" : "draft",
-  "experimental" : true,
-  "subjectType" : [
+  "status": "draft",
+  "experimental": true,
+  "date": "2023-12-05",
+  "publisher": "ANS",
+  "description": "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "FR",
+          "system": "urn:iso:std:iso:3166",
+          "display": "FRANCE"
+        }
+      ]
+    }
+  ],
+  "subjectType": [
     "HealthcareService",
     "Organization",
     "Practitioner",
     "Location",
     "PractitionerRole"
   ],
-  "date" : "2023-12-05",
-  "publisher" : "ANS",
-  "contact" : [
+  "lastReviewDate": "2023-12-05",
+  "purpose": "Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé.",
+  "code": [
     {
-      "name" : "ANS",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://esante.gouv.fr"
-        }
-      ]
-    }
-  ],
-  "description" : "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }
-      ]
-    }
-  ],
-  "purpose" : "Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé.",
-  "lastReviewDate" : "2023-12-05",
-  "code" : [
-    {
-      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
-      "code" : "SA05"
+      "code": "SA05",
+      "system": "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"
     },
     {
-      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
-      "code" : "SA07"
+      "code": "SA07",
+      "system": "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"
     },
     {
-      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
-      "code" : "SA08"
+      "code": "SA08",
+      "system": "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"
     }
   ],
-  "item" : [
+  "item": [
     {
-      "linkId" : "TypeOffreInfoEJ",
-      "prefix" : "1",
-      "text" : "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ",
-      "type" : "group",
-      "item" : [
+      "linkId": "TypeOffreInfoEJ",
+      "prefix": "1",
+      "text": "Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ",
+      "type": "group",
+      "item": [
         {
-          "linkId" : "idNatstruct-EJ",
-          "definition" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:idNatSt.value",
-          "prefix" : "1.1",
-          "text" : "IdNat_Struct (Identification nationale des Entités Juridiques définie dans le CI-SIS)",
-          "type" : "string",
-          "required" : true,
-          "readOnly" : true
-        },
-        {
-          "linkId" : "numFINESS-EJ",
-          "definition" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:finess.value",
-          "prefix" : "1.2",
-          "text" : "Numéro FINESS de l'EJ",
-          "type" : "string",
-          "required" : false,
-          "readOnly" : true
-        },
-        {
-          "linkId" : "numSIREN-EJ",
-          "definition" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:sirene.value",
-          "prefix" : "1.3",
-          "text" : "Numéro SIRET de l'EJ",
-          "type" : "string",
-          "required" : false,
-          "readOnly" : true
-        },
-            {
-      "linkId" : "TypeEquipementInfo",
-      "prefix" : "4",
-      "text" : "Equipement(s) disponible(s)",
-      "type" : "group",
-      "repeats" : true,
-      "item" : [
-        {
-          "linkId" : "equipmentType",
-          "definition" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment#Extension.extension:equipmentType.value[x]",
-          "prefix" : "4.a",
-          "text" : "Type équipement",
-          "type" : "choice",
-          "answerValueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR"
-        },
-        {
-          "linkId" : "nbInService",
-          "definition" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment#Extension.extension:nbInService.value[x]",
-          "prefix" : "4.b",
-          "text" : "Nombre équipement en service",
-          "type" : "integer"
-        },
-        {
-          "linkId" : "equipmentFeature",
-          "definition" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit#Extension.extension:equipmentFeature.value[x]",
-          "prefix" : "4.c",
-          "text" : "Type caractéristique de l'équipement",
-          "type" : "choice",
-          "answerValueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR"
-        },
-        {
-          "linkId" : "limitValue",
-          "definition" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit#Extension.extension:limitValue.value[x]",
-          "prefix" : "4.d",
-          "text" : "Valeur limite",
-          "type" : "quantity"
+          "linkId": "idNatstruct-EJ",
+          "prefix": "1.1",
+          "text": "IdNat_Struct (Identification nationale des Entités Juridiques définie dans le CI-SIS)",
+          "definition": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:idNatSt.value",
+          "type": "string",
+          "required": true,
+          "readOnly": true
         }
       ]
     }
