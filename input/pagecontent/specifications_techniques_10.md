@@ -601,6 +601,31 @@ PATCH [BASE]/Location/XXX
 
 **Description du scénario :** Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).
 
+**Exemple :**
+
+<table align="center">
+    <tr>
+		<td align ="center">
+            <b>Avant</b>
+        </td>
+        <td align ="center">
+            <div class="figure">
+				<img src="creation-maj-offre_scenario9_avant.png" title="Avant" width="1000">
+            </div>
+        </td>   
+    </tr>
+	    <tr>
+		<td align ="center">
+            <b>Après</b>
+        </td>
+        <td align ="center">
+            <div class="figure">
+				<img src="creation-maj-offre_scenario9_apres.png" title="Après" width="1000">
+            </div>
+        </td>    
+    </tr>
+</table>
+
 **Requête :**
 ```json
 PATCH [BASE]/Location/XXX
