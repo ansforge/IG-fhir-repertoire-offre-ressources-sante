@@ -409,30 +409,35 @@ Usage: #example
 * item[=].item[=].item[=].answerValueSet = $JDV-J41-TypeHoraire-ROR
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[+].linkId = "jourSemaine"
+* item[=].item[=].item[=].text = "Jour de la semaine"
+* item[=].item[=].item[=].prefix = "3.16.2"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=]item[0].linkId = "numJour"
 * item[=].item[=].item[=].text = "Numéro du jour dans la semaine"
 * item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* item[=].item[=].item[=].prefix = "a"
+* item[=].item[=].item[=].prefix = "3.16.2a"
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[+].linkId = "heures"
-* item[=].item[=].item[=].text = "Heures"
-* item[=].item[=].item[=].prefix = "b"
-* item[=].item[=].item[=].type = #group
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].item[0].linkId = "availableStartTime"
-* item[=].item[=].item[=].item[=].text = "Début de la plage horaire"
-* item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.availableTime.availableStartTime"
-* item[=].item[=].item[=].item[=].prefix = "-"
-* item[=].item[=].item[=].item[=].type = #time
+* item[=].item[=].item[=].item[+].linkId = "heures"
+* item[=].item[=].item[=].item[=].text = "Heures"
+* item[=].item[=].item[=].item[=].prefix = "3.16.2b"
+* item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].item[+].linkId = "availableEndTime"
-* item[=].item[=].item[=].item[=].text = "Fin de la plage horaire"
-* item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.availableTime.availableEndTime"
-* item[=].item[=].item[=].item[=].prefix = "-"
-* item[=].item[=].item[=].item[=].type = #time
-* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[=].item[0].linkId = "availableStartTime"
+* item[=].item[=].item[=].item[=].item[=].text = "Début de la plage horaire"
+* item[=].item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.availableTime.availableStartTime"
+* item[=].item[=].item[=].item[=].item[=].prefix = "-"
+* item[=].item[=].item[=]item[=]..item[=].type = #time
+* item[=].item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].item[+].linkId = "availableEndTime"
+* item[=].item[=].item[=].item[=].item[=].text = "Fin de la plage horaire"
+* item[=].item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.availableTime.availableEndTime"
+* item[=].item[=].item[=].item[=].item[=].prefix = "-"
+* item[=].item[=].item[=].item[=].item[=].type = #time
+* item[=].item[=].item[=].item[=].item[=].required = false
 * item[=].item[+].linkId = "Contact"
 * item[=].item[=].prefix = "3.17"
 * item[=].item[=].text = "Contact"
@@ -443,10 +448,10 @@ Usage: #example
 * item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact#Extension.extension:purposeContact"
 * item[=].item[=].item[=].prefix = "a"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R287-NatureContact#01 "Accueil"
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R287-NatureContact#02 "Prise de rendez-vous"
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R287-NatureContact#09 "éléconsultation"
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R287-NatureContact#15 "Téléexpertise"
+* item[=].item[=].item[=].answerOption[0].valueCoding = $TRE-R287-NatureContact#01 "Accueil"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R287-NatureContact#02 "Prise de rendez-vous"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R287-NatureContact#09 "éléconsultation"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R287-NatureContact#15 "Téléexpertise"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[+].linkId = "description"
 * item[=].item[=].item[=].text = "Description"
@@ -459,8 +464,8 @@ Usage: #example
 * item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level"
 * item[=].item[=].item[=].prefix = "c"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
+* item[=].item[=].item[=].answerOption[0].valueCoding = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
 * item[=].item[=].item[=].required = true
 * item[=].item[+].linkId = "telecommunication"
 * item[=].item[=].prefix = "3.18"
@@ -472,10 +477,10 @@ Usage: #example
 * item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"
 * item[=].item[=].item[=].prefix = "a"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R200-CanalCommunication#1 "Téléphone mobile"
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R200-CanalCommunication#2 "Téléphone fixe"
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R200-CanalCommunication#3 "Courrier électronique"
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R200-CanalCommunication#4 "Adresse web"
+* item[=].item[=].item[=].answerOption[0].valueCoding = $TRE-R200-CanalCommunication#1 "Téléphone mobile"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R200-CanalCommunication#2 "Téléphone fixe"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R200-CanalCommunication#3 "Courrier électronique"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R200-CanalCommunication#4 "Adresse web"
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[+].linkId = "telecomAddress"
 * item[=].item[=].item[=].text = "Adresse"
@@ -494,8 +499,8 @@ Usage: #example
 * item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"
 * item[=].item[=].item[=].prefix = "d"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
-* item[=].item[=].item[=].answerOption.valueCoding = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
+* item[=].item[=].item[=].answerOption[0].valueCoding = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R283-NiveauConfidentialite#2 "Accès restreint"
 * item[=].item[=].item[=].required = true
 * item[=].item[+].linkId = "boiteLettreMSS"
 * item[=].item[=].text = "Boîte aux lettres MSS"
