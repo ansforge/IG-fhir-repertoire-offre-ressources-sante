@@ -20,15 +20,9 @@ Usage: #example
 * subjectType[+] = #PractitionerRole
 * lastReviewDate = "2023-12-05"
 * purpose = "Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé."
-//* code[0] = $TRE-R02-SecteurActivite#SA05
-//* code[+] = $TRE-R02-SecteurActivite#SA07
-//* code[+] = $TRE-R02-SecteurActivite#SA08
-* useContext[0].valueCodeableConcept = $TRE-R02-SecteurActivite#SA05
-* useContext[=].code = #program
-* useContext[+].valueCodeableConcept = $TRE-R02-SecteurActivite#SA07
-* useContext[=].code = #program
-* useContext[+].valueCodeableConcept = $TRE-R02-SecteurActivite#SA08
-* useContext[=].code = #program
+* code[0] = $TRE-R02-SecteurActivite#SA05
+* code[+] = $TRE-R02-SecteurActivite#SA07
+* code[+] = $TRE-R02-SecteurActivite#SA08
 
 * item[0].linkId = "TypeOffreInfoEJ"
 * item[=].prefix = "1"

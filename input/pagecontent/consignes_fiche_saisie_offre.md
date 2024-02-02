@@ -119,6 +119,7 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 ### Critères de recherche pour Search
 
 -   Les critères de recherche, définis dans la spécifications FHIR [search parameters](https://hl7.org/fhir/R4/questionnaire.html#search) doivent être implémentés afin de pouvoir rechercher les fiches de saisie selon le besoin à l'exception de `code` car `item.code` a une cardinalité dans le profile RORQuestionnaire.
+-   Le critère de recherche `category-eg` spécifique à ce cas d'usage doit également être implémenté : https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-questionnaire-category-eg .
 
 ### Paramètres et modificateurs de requêtes FHIR
 
@@ -258,12 +259,12 @@ GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifia
 
 **Requête :**
 
-`GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124`
+`GET [BASE]/Questionnaire?category-eg=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 #critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)
+GET [BASE]/Questionnaire?category-eg=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 #critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)
 
 ```
 
