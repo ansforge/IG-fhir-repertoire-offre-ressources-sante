@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 1, warn = 82, info = 47
+err = 1, warn = 79, info = 47
 IG Publisher Version: 1.5.16
-Generated Fri Feb 02 22:09:34 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Fri Feb 02 22:54:20 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 73 / 4 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CapabilityStatement-ror-consommateur : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CapabilityStatement-ror-serveur : 0 / 0 / 1
@@ -12,7 +12,7 @@ Generated Fri Feb 02 22:09:34 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville : 0 / 7 / 4
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville : 0 / 4 / 4
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-capacity-status : 0 / 0 / 1
@@ -45,6 +45,7 @@ Generated Fri Feb 02 22:09:34 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-organization-price-validity-start-date : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-organization-price-welcome-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-organization-special-price : 0 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-questionnaire-category-eg : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-residential-number : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-residential-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/fsh-generated/resources/SearchParameter-ror-sp-temporality-capacity : 0 / 0 / 1
@@ -199,15 +200,12 @@ WARNING: CodeSystem/output-task-ror-codesystem: CodeSystem: Published code syste
 WARNING: CodeSystem/ror-include-associated-data-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror.json ==
 == fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json ==
-WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[0].code: A code with no system has no defined meaning, and it cannot be validated. A system should be provided
-INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite' could not be found, so the code cannot be validated
-WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[0].value.ofType(CodeableConcept): ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
-WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[1].code: A code with no system has no defined meaning, and it cannot be validated. A system should be provided
-INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[1].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite' could not be found, so the code cannot be validated
-WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[1].value.ofType(CodeableConcept): ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
-WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[2].code: A code with no system has no defined meaning, and it cannot be validated. A system should be provided
-INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[2].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite' could not be found, so the code cannot be validated
-WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[2].value.ofType(CodeableConcept): ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
+WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[0]: ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
+INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite' could not be found, so the code cannot be validated
+WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[1]: ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
+INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[1]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite' could not be found, so the code cannot be validated
+WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[2]: ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR' not found
+INFORMATION: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.code[2]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite' could not be found, so the code cannot be validated
 WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire: Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)
 == fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type.json ==
@@ -241,6 +239,7 @@ WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire: Constrai
 == fsh-generated/resources/SearchParameter-ror-sp-organization-price-validity-start-date.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-organization-price-welcome-type.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-organization-special-price.json ==
+== fsh-generated/resources/SearchParameter-ror-sp-questionnaire-category-eg.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-residential-number.json ==
 WARNING: SearchParameter/ror-sp-residential-number: SearchParameter.expression: The type specified in ofType() is http://hl7.org/fhir/StructureDefinition/Integer which is not a possible candidate for the existing types () in the expression as(Integer). Check the paths and types to be sure this is what is intended
 == fsh-generated/resources/SearchParameter-ror-sp-residential-type.json ==
@@ -384,7 +383,7 @@ WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir
 == fsh-generated/resources/StructureDefinition-ror-practitionerrole-unit-exercise-mode.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-ror-questionnaire.json ==
-INFORMATION: StructureDefinition/ror-questionnaire: StructureDefinition.snapshot.element[33].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/ror-questionnaire: StructureDefinition.snapshot.element[28].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 == fsh-generated/resources/StructureDefinition-ror-task.json ==
 INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[25].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[46].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk

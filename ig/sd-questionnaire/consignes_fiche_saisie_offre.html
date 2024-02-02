@@ -374,6 +374,7 @@ Plus de précision sur la spécification FHIR :
 
 <ul>
   <li>Les critères de recherche, définis dans la spécifications FHIR <a href="https://hl7.org/fhir/R4/questionnaire.html#search">search parameters</a> doivent être implémentés afin de pouvoir rechercher les fiches de saisie selon le besoin à l’exception de <code class="language-plaintext highlighter-rouge">code</code> car <code class="language-plaintext highlighter-rouge">item.code</code> a une cardinalité dans le profile RORQuestionnaire.</li>
+  <li>Le critère de recherche <code class="language-plaintext highlighter-rouge">category-eg</code> spécifique à ce cas d’usage doit également être implémenté : https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-questionnaire-category-eg .</li>
 </ul>
 
 <h3 id="paramètres-et-modificateurs-de-requêtes-fhir">Paramètres et modificateurs de requêtes FHIR</h3>
@@ -506,11 +507,11 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?category-eg=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124</code></p>
 
 <p><strong>Requête expliquée&nbsp;:</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?code<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 <span class="c">#critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?category-eg<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 <span class="c">#critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)</span>
 
 </code></pre></div></div>
 
@@ -568,7 +569,7 @@ Plus de précision sur la spécification FHIR :
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 2, 2024 22:06+0000">2024-02-02</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 2, 2024 22:50+0000">2024-02-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
