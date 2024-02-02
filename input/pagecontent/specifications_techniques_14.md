@@ -10,7 +10,6 @@
 <td width="465">
 <p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p>
 <p>Update<a href="#_ftn1" name="_ftnref1">[2]</a></p>
-<p>Patch<a href="#_ftn1" name="_ftnref1">[3]</a></p>
 </td>
 <td width="465">
 <p>Search<a href="#_ftn2" name="_ftnref2"><sup>[4]</sup></a></p>
@@ -23,7 +22,6 @@
 <td width="465">
 <p>POST</p>
 <p>PUT</p>
-<p>PATCH</p>
 </td>
 <td width="465">
 <p>GET</p>
@@ -47,7 +45,6 @@
 <td width="465">
 <p>POST [base]/Questionnaire {?_format=[mime-type]}</p>
 <p>PUT [base]/Questionnaire/[id]{?&_format=[mime-type]}</p>
-<p>PATCH [base]/Questionnaire/[id]{&amp;_format=[mime-type]}</p>
 </td>
 <td width="465">
 <p>GET [base]/Questionnaire{?[parameters]{&amp;_format=[mime-type]}}</p>
@@ -56,14 +53,13 @@
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#create">https://www.hl7.org/fhir/R4/http.html#create</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://hl7.org/fhir/R4/http.html#create">https://hl7.org/fhir/R4/http.html#create</a> et <a href="https://hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 <p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#update">https://hl7.org/fhir/R4/http.html#update</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
-<p><a href="#_ftnref2" name="_ftn2">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#patch">https://hl7.org/fhir/R4/http.html#patch</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
-<p><a href="#_ftnref2" name="_ftn2">[4]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+<p><a href="#_ftnref2" name="_ftn2">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 
 ### Construction de la réponse de base
 
-#### Create, Update, Patch
+#### Create, Update
 
 ##### Réponse de base -- Succès
 
@@ -152,11 +148,11 @@ POST [BASE]/Questionnaire
   "identifier": [
     {
       "use": "official",
-      "value": "FDS-092"
+      "value": "FDS-109"
     }
   ],
   "version": "0.2.0",
-  "name": "FDS-092",
+  "name": "FDS-109",
   "title": "Consignes fiche de saisie Cabinet de ville de médecine générale",
   "status": "draft",
   "experimental": true,
@@ -368,16 +364,16 @@ GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifia
 
 #### Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
 
-**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. PAr exemple, un cabinet individuel.
+**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. PAr exemple, un Cabinet Libéral Médical.
 
 
 **Requête :**
 
-`GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|SA07`
+`GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|601`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|SA07 #critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)
+GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|601 #critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)
 
 ```

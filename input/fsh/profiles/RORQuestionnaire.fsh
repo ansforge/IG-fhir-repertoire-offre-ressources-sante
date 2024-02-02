@@ -21,7 +21,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * publisher MS
 * description ^short = "Description de l'objet de la feuille de saisie" 
 * description MS
-* derivedFrom ^short = "Fiche(s) de saisie source"
+* derivedFrom ^short = "Fiche(s) de saisie parente(s)"
 * derivedFrom MS
 * approvalDate 0..1 MS
 * approvalDate ^short = "Date de validation de la fiche de saisie"
@@ -30,8 +30,8 @@ Description: "Fiche de saisie de l'offre de soins"
 * effectivePeriod ^short = "Periode de validité de la fiche" 
 * effectivePeriod MS
 * code ^short = "Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
-* code from $JDV-J55-CategorieEG-ROR (required)
-* code MS
+* code from $JDV-J55-CategorieEG-ROR (required) // utilisation de code pour catégoriser les fiches par type d'EG
+* code 1..* MS //cardinalité à validerpar le ROR rendant obligatoire la catégorie d'EG obligatoire pour la définition de la fiche de saisie
 * item ^short = "Structure du champs de la fiche" 
 * item MS
 * item.required ^short = "Champs requis" 
