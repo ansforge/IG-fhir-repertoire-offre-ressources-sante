@@ -413,13 +413,13 @@ Usage: #example
 * item[=].item[=].item[=].prefix = "3.16.2"
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=]item[0].linkId = "numJour"
-* item[=].item[=].item[=].text = "Numéro du jour dans la semaine"
-* item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* item[=].item[=].item[=].prefix = "3.16.2a"
-* item[=].item[=].item[=].type = #integer
-* item[=].item[=].item[=].required = false
-* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].item[0].linkId = "numJour"
+* item[=].item[=].item[=].item[=].text = "Numéro du jour dans la semaine"
+* item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
+* item[=].item[=].item[=].item[=].prefix = "3.16.2a"
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].item[+].linkId = "heures"
 * item[=].item[=].item[=].item[=].text = "Heures"
 * item[=].item[=].item[=].item[=].prefix = "3.16.2b"
@@ -430,7 +430,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[=].text = "Début de la plage horaire"
 * item[=].item[=].item[=].item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.availableTime.availableStartTime"
 * item[=].item[=].item[=].item[=].item[=].prefix = "-"
-* item[=].item[=].item[=]item[=]..item[=].type = #time
+* item[=].item[=].item[=].item[=].item[=].type = #time
 * item[=].item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].item[+].linkId = "availableEndTime"
 * item[=].item[=].item[=].item[=].item[=].text = "Fin de la plage horaire"
