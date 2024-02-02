@@ -364,16 +364,16 @@ GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifia
 
 #### Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
 
-**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. PAr exemple, un Cabinet Libéral Médical.
+**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. PAr exemple, un Centre de santé.
 
 
 **Requête :**
 
-`GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|601`
+`GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|601 #critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)
+GET [BASE]/Questionnaire?code=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 #critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)
 
 ```
