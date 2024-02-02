@@ -24,8 +24,11 @@ Usage: #example
 //* code[+] = $TRE-R02-SecteurActivite#SA07
 //* code[+] = $TRE-R02-SecteurActivite#SA08
 * useContext[0].valueCodeableConcept = $TRE-R02-SecteurActivite#SA05
+* useContext[=].code = #program
 * useContext[+].valueCodeableConcept = $TRE-R02-SecteurActivite#SA07
+* useContext[=].code = #program
 * useContext[+].valueCodeableConcept = $TRE-R02-SecteurActivite#SA08
+* useContext[=].code = #program
 
 * item[0].linkId = "TypeOffreInfoEJ"
 * item[=].prefix = "1"
