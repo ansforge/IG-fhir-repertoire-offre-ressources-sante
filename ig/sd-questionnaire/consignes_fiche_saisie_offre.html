@@ -373,7 +373,7 @@ Plus de précision sur la spécification FHIR :
 <h3 id="critères-de-recherche-pour-search">Critères de recherche pour Search</h3>
 
 <ul>
-  <li>Les critères de recherche, définis dans la spécifications FHIR <a href="https://hl7.org/fhir/R4/questionnaire.html#search">search parameters</a> doivent être implémentés afin de pouvoir rechercher les fiches de saisie selon le besoin.</li>
+  <li>Les critères de recherche, définis dans la spécifications FHIR <a href="https://hl7.org/fhir/R4/questionnaire.html#search">search parameters</a> doivent être implémentés afin de pouvoir rechercher les fiches de saisie selon le besoin à l’exception de <code class="language-plaintext highlighter-rouge">code</code> car <code class="language-plaintext highlighter-rouge">item.code</code> a une cardinalité dans le profile RORQuestionnaire.</li>
 </ul>
 
 <h3 id="paramètres-et-modificateurs-de-requêtes-fhir">Paramètres et modificateurs de requêtes FHIR</h3>
@@ -393,149 +393,82 @@ Plus de précision sur la spécification FHIR :
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Questionnaire</span><span class="w">
 </span><span class="p">{</span><span class="w">
   </span><span class="p">{</span><span class="w">
-  </span><span class="nl">"resourceType"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ror-questionnaire-offre-de-ville"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"meta"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"profile"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="err">&#x1F517;</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testror"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-offre-de-ville"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"identifier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FDS-109"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Consignes fiche de saisie Cabinet de ville de médecine générale"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"use"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FDS-109"</span><span class="w">
+      </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FDS-109"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FDS-109"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Consignes fiche de saisie Cabinet de ville de médecine générale"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"experimental"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"subjectType"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"experimental"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-05"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"publisher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ANS"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.</span><span class="se">\n</span><span class="s2"> Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"jurisdiction"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FR"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:iso:std:iso:3166"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FRANCE"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"subjectType"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="s2">"HealthcareService"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Organization"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Practitioner"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Location"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"PractitionerRole"</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"date"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-05"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"publisher"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ANS"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"contact"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"lastReviewDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-05"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"purpose"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ANS"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"telecom"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://esante.gouv.fr"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.</span><span class="se">\n</span><span class="s2"> Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM."</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"jurisdiction"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:iso:std:iso:3166"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FR"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"FRANCE"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"purpose"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé."</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"lastReviewDate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-05"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"SA05"</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SA05"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"SA07"</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SA07"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"SA08"</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SA08"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"item"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"TypeOffreInfoEJ"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"item"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TypeOffreInfoEJ"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Valeurs de description spécifiques d’un cabinet de ville de médecine générale. Information sur l'EJ"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"idNatstruct-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:idNatSt.value"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"IdNat_Struct (Identification nationale des Entités Juridiques définie dans le CI-SIS)"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"numFINESS-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:finess.value"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Numéro FINESS de l'EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"numSIREN-EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:sirene.value"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1.3"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Numéro SIRET de l'EJ"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"required"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"readOnly"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"TypeEquipementInfo"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Equipement(s) disponible(s)"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"repeats"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"item"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"equipmentType"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment#Extension.extension:equipmentType.value[x]"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"4.a"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Type équipement"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answerValueSet"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"nbInService"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment#Extension.extension:nbInService.value[x]"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"4.b"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Nombre équipement en service"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"equipmentFeature"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit#Extension.extension:equipmentFeature.value[x]"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"4.c"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Type caractéristique de l'équipement"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"answerValueSet"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"linkId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"limitValue"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"definition"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit#Extension.extension:limitValue.value[x]"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"prefix"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"4.d"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Valeur limite"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"quantity"</span><span class="w">
+          </span><span class="nl">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idNatstruct-EJ"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IdNat_Struct (Identification nationale des Entités Juridiques définie dans le CI-SIS)"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization#Organization.identifier:idNatSt.value"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span><span class="err">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 <p>Vous pouvez télécharger le json <a href="Questionnaire-ror-questionnaire-offre-de-ville.json">ici</a> et l’importer dans <a href="https://lhcformbuilder.nlm.nih.gov/">https://lhcformbuilder.nlm.nih.gov/</a> pour le tester et le faire évoluer via cet IHM.</p>
 
@@ -635,7 +568,7 @@ Plus de précision sur la spécification FHIR :
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 2, 2024 19:41+0000">2024-02-02</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 2, 2024 21:16+0000">2024-02-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
