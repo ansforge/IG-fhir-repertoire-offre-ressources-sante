@@ -450,7 +450,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[0].valueCoding = $TRE-R287-NatureContact#01 "Accueil"
 * item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R287-NatureContact#02 "Prise de rendez-vous"
-* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R287-NatureContact#09 "éléconsultation"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R287-NatureContact#09 "Téléconsultation"
 * item[=].item[=].item[=].answerOption[+].valueCoding = $TRE-R287-NatureContact#15 "Téléexpertise"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[+].linkId = "description"
