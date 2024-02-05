@@ -15,6 +15,7 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
+* name.prefix 0..1
 * name.prefix from $JDV-J207-Civilite-ROR (extensible)
 * name.prefix ^short = "Civilite (PersonnePhysique) : Civilite de la personne physique"
 * identifier 1..1
