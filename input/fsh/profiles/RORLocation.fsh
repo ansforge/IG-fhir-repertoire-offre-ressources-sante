@@ -71,8 +71,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..1 and
     iso21090-ADXP-streetNameType named streetNameType 0..1 and
     iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
-    iso21090-ADXP-precinct named precinct 0..1 and
-    iso21090-ADXP-postBox named postalBox 0..1
+    iso21090-ADXP-postBox named postalBox 0..1 and
+    ror-lieu-dit named lieuDit 0..1
 * address.line.extension[careOf] ^short = "pointRemise (Adresse) : Lieu où le destinataire prend possession de son courrier"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse) : Un complément de l'adresse au point géographique"
 * address.line.extension[houseNumber] ^short = "numeroVoie (Adresse) : Un numéro dans la voie"
@@ -80,8 +80,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * address.line.extension[streetNameType] ^short = "typeVoie (Adresse) : Type de voie"
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 * address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse) : Appellation qui est donnée à la voie par les municipalités"
-* address.line.extension[precinct] ^short = "lieuDit (Adresse) : Lieu qui porte un nom rappelant une particularité topographique ou historique"
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse) : Mentions particulières de distribution"
+* address.line.extension[lieuDit] ^short = "lieuDit (Adresse) : Lieu qui porte un nom rappelant une particularité topographique ou historique"
 
 * position ^short = "coordonneeGeographique (LieuRealisationOffre) : Coordonnées géographiques du lieu (système géodésique : WGS84)"
 * position.latitude ^short = "latitude (CoordonneeGeographique) : Une mesure de la distance angulaire nord ou sud depuis l'équateur jusqu'au parallèle du spécifique"
