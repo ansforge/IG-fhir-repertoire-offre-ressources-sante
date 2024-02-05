@@ -372,10 +372,10 @@ Plus de précision sur la spécification FHIR :
 
 <h3 id="critères-de-recherche-pour-search">Critères de recherche pour Search</h3>
 
-<ul>
-  <li>Les critères de recherche, définis dans la spécifications FHIR <a href="https://hl7.org/fhir/R4/questionnaire.html#search">search parameters</a> doivent être implémentés afin de pouvoir rechercher les fiches de saisie selon le besoin à l’exception de <code class="language-plaintext highlighter-rouge">code</code> car <code class="language-plaintext highlighter-rouge">item.code</code> a une cardinalité dans le profile RORQuestionnaire.</li>
-  <li>Le critère de recherche <code class="language-plaintext highlighter-rouge">category-eg</code> spécifique à ce cas d’usage doit également être implémenté : https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-questionnaire-category-eg .</li>
-</ul>
+<p>Les critères de recherche applicables pour RORQuestionnaire sont accesible ici :
+<a href="search_param.html#structuredefinition-ror-questionnaire">paragraphe dédié</a>.</p>
+
+<p><strong>En complément, vous pouvez accéder aux Capability Statements <a href="artifacts.html#behavior-capability-statements">ici</a></strong></p>
 
 <h3 id="paramètres-et-modificateurs-de-requêtes-fhir">Paramètres et modificateurs de requêtes FHIR</h3>
 
@@ -503,25 +503,26 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-4-un-consommateur-souhaite-récupérer-un-ensemble-de-fiches-de-saisie-sur-un-critère-donné">Scénario 4&nbsp;: Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné</h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. PAr exemple, un Centre de santé.</p>
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?category-eg=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Questionnaire?context=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124</code></p>
 
 <p><strong>Requête expliquée&nbsp;:</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?category-eg<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 <span class="c">#critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?context<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 <span class="c"># critère permettant de rechercher les fiches utilisée pour la catégorie d'EG 'Centre de santé' (voir binding)</span>
 
 </code></pre></div></div>
 
 <h4 id="autres-scénarios">Autres scénarios</h4>
 
-<p>Pour construire d’autres requêtes selon vos besoins, vous pouvez consulter les spécifications du standard FHIR et utiliser ce que propose FHIR nativement :</p>
+<p>Pour construire d’autres requêtes selon vos besoins :</p>
 <ul>
-  <li><a href="https://hl7.org/fhir/R4/questionnaire.html#search">Questionnaire - FHIR v4.0.1 (hl7.org)</a></li>
-  <li><a href="https://hl7.org/fhir/R4/http.html">Http - FHIR v4.0.1 (hl7.org)</a></li>
+  <li>vous pouvez consulter les spécifications du standard FHIR <a href="https://hl7.org/fhir/R4/http.html">Http - FHIR v4.0.1 (hl7.org)</a></li>
+  <li>utiliser les critères de recherche défini au <a href="search_param.html#structuredefinition-ror-questionnaire">paragraphe dédié</a></li>
 </ul>
+
 
 
 
@@ -569,7 +570,7 @@ Plus de précision sur la spécification FHIR :
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 5, 2024 13:18+0000">2024-02-05</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 5, 2024 15:29+0000">2024-02-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
