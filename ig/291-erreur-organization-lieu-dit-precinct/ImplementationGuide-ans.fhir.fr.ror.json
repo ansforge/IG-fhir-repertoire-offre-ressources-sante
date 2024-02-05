@@ -10,7 +10,7 @@
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "active",
-  "date" : "2024-02-05T13:07:25+00:00",
+  "date" : "2024-02-05T13:19:57+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1392,6 +1392,18 @@
       },
       "name" : "RORHealthcareServiceSensitiveUnit",
       "description" : "Extension créée dans le cadre du ROR pour signaler que toutes les informations de description d'une offre sont confidentielles car elles présentent un risque d'utilisation à des fins malveillantes.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ror-lieu-dit"
+      },
+      "name" : "RORLieuDit",
+      "description" : "Extension créée dans le cadre du ROR pour indiquer le lieu dit",
       "exampleBoolean" : false
     },
     {

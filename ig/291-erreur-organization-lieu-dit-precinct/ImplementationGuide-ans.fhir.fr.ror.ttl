@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-02-05T13:07:25+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-02-05T13:19:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1309,6 +1309,18 @@
        ] ;
        fhir:name [ fhir:v "RORHealthcareServiceSensitiveUnit" ] ;
        fhir:description [ fhir:v "Extension créée dans le cadre du ROR pour signaler que toutes les informations de description d'une offre sont confidentielles car elles présentent un risque d'utilisation à des fins malveillantes." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-lieu-dit> ;
+         fhir:reference [ fhir:v "StructureDefinition/ror-lieu-dit" ]
+       ] ;
+       fhir:name [ fhir:v "RORLieuDit" ] ;
+       fhir:description [ fhir:v "Extension créée dans le cadre du ROR pour indiquer le lieu dit" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
