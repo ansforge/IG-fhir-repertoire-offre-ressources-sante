@@ -118,8 +118,10 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 
 ### Critères de recherche pour Search
 
--   Les critères de recherche, définis dans la spécifications FHIR [search parameters](https://hl7.org/fhir/R4/questionnaire.html#search) doivent être implémentés afin de pouvoir rechercher les fiches de saisie selon le besoin à l'exception de `code` car `item.code` a une cardinalité dans le profile RORQuestionnaire.
--   Le critère de recherche `category-eg` spécifique à ce cas d'usage doit également être implémenté : https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-questionnaire-category-eg .
+  Les critères de recherche applicables pour RORQuestionnaire sont accesible ici :
+[paragraphe dédié](search_param.html#structuredefinition-ror-questionnaire).
+
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
@@ -254,22 +256,23 @@ GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifia
 
 #### Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
 
-**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. PAr exemple, un Centre de santé.
+**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. Par exemple, un Centre de santé.
 
 
 **Requête :**
 
-`GET [BASE]/Questionnaire?category-eg=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124`
+`GET [BASE]/Questionnaire?context-type-value=context-type-value=https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG|EG$https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Questionnaire?category-eg=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 #critère de recherche sur le code qui référence toutes les catégorie d'EG (voir binding)
+GET [BASE]/Questionnaire?context-type-value=context-type-value=https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG|EG #critère de recherche composite avec le code du contexte toujours fixé à EG dans notre cas d'usage
+$https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 # et permettant de rechercher les fiches utilisée pour la catégorie d'EG 'Centre de santé' (voir binding)
 
 ```
 
 #### Autres scénarios
 
-Pour construire d'autres requêtes selon vos besoins, vous pouvez consulter les spécifications du standard FHIR et utiliser ce que propose FHIR nativement :
-* [Questionnaire - FHIR v4.0.1 (hl7.org)](https://hl7.org/fhir/R4/questionnaire.html#search)
-* [Http - FHIR v4.0.1 (hl7.org)](https://hl7.org/fhir/R4/http.html)
+Pour construire d'autres requêtes selon vos besoins :
+* vous pouvez consulter les spécifications du standard FHIR [Http - FHIR v4.0.1 (hl7.org)](https://hl7.org/fhir/R4/http.html)
+* utiliser les critères de recherche défini au [paragraphe dédié](search_param.html#structuredefinition-ror-questionnaire)
