@@ -677,8 +677,8 @@ POST [BASE]/Organization
         {
             "coding": [
                 {
-                    "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
-                    "code": "POLE", 
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R207-TypeOrganisationInterne/FHIR/TRE-R207-TypeOrganisationInterne",
+                    "code": "1", 
                     "display": "Pôle"
                 }
             ]    
@@ -734,9 +734,9 @@ POST [BASE]/Organization
         {
             "coding": [
                 {
-                    "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
-                    "code": "SERVICE", 
-                    "display": "Service"
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R207-TypeOrganisationInterne/FHIR/TRE-R207-TypeOrganisationInterne",
+                    "code": "2", 
+                    "display": "Structure interne ou Service"
                 }
             ]
         }
@@ -791,8 +791,8 @@ POST [BASE]/Organization
         {
             "coding": [
                 {
-                    "system": "http://interopsante.org/fhir/CodeSystem/fr-v2-3307",
-                    "code": "UF", 
+                    "system": "https://mos.esante.gouv.fr/NOS/TRE_R207-TypeOrganisationInterne/FHIR/TRE-R207-TypeOrganisationInterne",
+                    "code": "3", 
                     "display": "Unité fonctionnelle"
                 }
             ]    
