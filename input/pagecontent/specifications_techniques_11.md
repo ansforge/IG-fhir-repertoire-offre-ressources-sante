@@ -1,60 +1,8 @@
 <!-- ## 3.8	Consultation d’indicateurs de pilotage -->
-
-### Caractéristiques de l'API 
-
-<table width="100%">
-<tbody>
-<tr>
-<td width="19%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Header</strong></p>
-</td>
-<td width="80%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
+<code><span style="color: #ff0000;font-weight:bold;font-size: x-large;">draft</span></code>
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+Cette partie de la spécification est en cours de construction et n'est pas implémentée. Elle est disponible, à titre d'information sur les travaux en cours au niveau du ROR National.
+</p>
 ###  Construction de la requête de base
 
 <table>
@@ -88,7 +36,7 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p>GET [base]/Measure{?[parameters]{&amp;_format=[mime-type]}}</p>
+<p><code>GET [base]/Measure{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
@@ -126,55 +74,20 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-measure), de  **StructureDefinition-ror-measure** applicables à ce cas d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>id</p>
-</td>
-<td width="227">
-<p>topic</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [Structuredefinition-ror-measure](search_param.html#structuredefinition-ror-measure)
+-    [Structuredefinition-ror-measurereport](search_param.html#structuredefinition-ror-measurereport) (critères de recherche applicables à la ressource Measure, grâce au [chainage inversé](https://hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
+`_has:MeasureReport:measure:[NOM CRITERE]`)
 
--    Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-measurereport), de **StructureDefinition-ror-measurereport** applicables à ce cas d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="227">
-<p>date</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-<td width="227">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-Ces critères de recherche sont applicables à la ressource Measure, grâce au [chainage inversé](https://hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
-`_has:MeasureReport:measure:[NOM CRITERE]`
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits dans le [paragraphe dédié](modifiers.html) applicables à ce cas d'usage sont :
-
--   \_revinclude
-
--   \_has, \_count, \_sort
-
--   Tous les prefixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Intégration d'un indicateur dans un système externe
+#### Scénario 1 : Intégration d'un indicateur dans un système externe <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite intégrer un indicateur de pilotage du ROR national, dont l'identifiant est XXX, dans un système externe.
 
@@ -189,7 +102,7 @@ GET [BASE]/Measure?identifier=XXX #critère de recherche sur l’identifiant de 
 &_revinclude=MeasureReport:measure #inclus les MeasureReport qui référencent les Measure
 ```
 
-#### Scénario 2 : Intégration d'indicateurs dans un système externe
+#### Scénario 2 : Intégration d'indicateurs dans un système externe <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite intégrer des indicateurs de pilotage du ROR national dans un système externe, à partir d'une date de mesure (06/10 2023).
 

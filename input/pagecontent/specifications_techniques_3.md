@@ -1,61 +1,5 @@
-<!-- ## Recherche d'offre sur critères principaux -->
-
-### Caractéristiques de l'API
-
-<table width="25%">
-<tbody>
-<tr>
-<td width="45%">
-<p><strong>Endpoint</strong></p>
-</td>
-
-<td width="54%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="45%">
-<p><strong>Header</strong></p>
-</td>
-<td width="54%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="45%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="54%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="45%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="54%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="45%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="54%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="45%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="54%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
+<!-- ## Recherche d'offre sur critères principaux
+<code><span style="background-color: #A6ACAF;color:white;font-weight:bold;font-size: x-large;">ROR 2.1</span></code> -->
 ### Construction de la requête de base
 
 <table>
@@ -141,170 +85,19 @@ Plus de précision sur la spécification FHIR :
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
-    **StructureDefinition-ror-healthcareservice** applicables à ce cas
-    d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>age-range-high</p>
-</td>
-<td width="230">
-<p>name</p>
-</td>
-<td width="230">
-<p>specialty</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>age-range-low</p>
-</td>
-<td width="230">
-<p>psychiatric-sector</p>
-</td>
-<td width="230">
-<p>patient-type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>characteristic</p>
-</td>
-<td width="230">
-<p>service-category</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>intervention-zone</p>
-</td>
-<td width="230">
-<p>service-type</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [StructureDefinition-ror-healthcareservice](search_param.html#structuredefinition-ror-healthcareservice)
+-    [Structuredefinition-ror-organization](search_param.html#structuredefinition-ror-organization) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `organization.[NOM CRITERE]`)
+-    [StructureDefinition-ror-location](search_param.html#structuredefinition-ror-location) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `location.[NOM CRITERE]`)
+-    [StructureDefinition-ror-practioner](search_param.html#structuredefinition-ror-practioner) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]`)
+-    [StructureDefinition-ror-practionerrole](search_param.html#structuredefinition-ror-practionerrole) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:PractitionerRole:service:[NOM CRITERE]`)
+-    [StructureDefinition-ror-task](search_param.html#structuredefinition-ror-task) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`)
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-organization), de
-    **StructureDefinition-ror-organization** applicables à ce cas
-    d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>closing-type</p>
-</td>
-<td width="230">
-<p>identifier</p>
-</td>
-<td width="230">
-<p>type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>drop-zone</p>
-</td>
-<td width="230">
-<p>period-end</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-Ces critères de recherche sont applicables à la ressource
-HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxe
-suivante : `organization.[NOM CRITERE]`
-
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-location), de
-    **StructureDefinition-ror-location** applicables à ce cas d'usage
-    sont :
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>_tag</p>
-</td>
-<td width="230">
-<p>commune-cog</p>
-</td>
-<td width="230">
-<p>near</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>address-postalcode</p>
-</td>
-<td width="230">
-<p>equipment-type</p>
-</td>
-<td width="230">
-<p>near-insee-code</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-Ces critères de recherche sont applicables à la ressource
-HealthcareService, grâce au chainage. Pour cela utiliser la syntaxe
-suivante : `location.[NOM CRITERE]`
-
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-task), de
-    **StructureDefinition-ror-task** applicables à ce cas d'usage
-    sont :
-<table>
-<tbody>
-<tr>
-<td width="228">
-<p>business-status*</p>
-</td>
-<td width="226">
-<p>_id</p>
-</td>
-<td width="226">
-<p>_lastUpdated*</p>
-</td>
-</tr>
-<tr>
-<td width="228">
-<p>Identifier*</p>
-</td>
-<td width="226">
-<p>authored-on*</p>
-</td>
-<td width="226">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-*<i>Critères de recherche qui seront applicables ultérieurement</i>
-
-Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`
-
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html)
-applicables à ce cas d'usage sont :
-
--   \_revinclude, \_include, :iterate
-
--   \_has, \_count, \_sort
-
--   Tous les préfixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 
@@ -361,8 +154,8 @@ GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE
 
 **Requête expliquée :**
 ```sh
-GET [BASE]/HealthcareService?service-category= https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX#critère de recherche sur le type d’offre
-& characteristic= https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|YYY #critère de recherche sur la modalité d’accueil
+GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX#critère de recherche sur le type d’offre
+& characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|YYY #critère de recherche sur la modalité d’accueil
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
@@ -390,20 +183,20 @@ GET [BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.go
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 5 : Recherche multicritère #3 -- ET/OU
+#### Scénario 5 : Recherche multicritère #3 -- ET/OU <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur recherche les offres ayant **(** une catégorie d'établissement = XXX de TRE-R66-CategorieEtablissement **OU** type d'offre = YYY de TRE_R244-CategorieOrganisation **)** **ET** un acte spécifique = ZZZ (TRE-R210-ActeSpecifique).
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_filter=((providedBy:type eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY))&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_filter=((organization.type eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY))&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?_filter=((providedBy:type eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY)) #critère de recherche sur l’acte spécifique OU sur la catégorie d’organisation
+GET [BASE]/HealthcareService?_filter=((organization.type eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY)) #critère de recherche sur l’acte spécifique OU sur la catégorie d’organisation
 &characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ #critère sur l’acte spécifique
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
@@ -414,7 +207,7 @@ GET [BASE]/HealthcareService?_filter=((providedBy:type eq https://mos.esante.gou
 #### Scénario 6 : Recherche à proximité géographique
 
 **Description du scénario :** un consommateur cherche les
-offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnelle) dans un périmètre géographique proche du lieu de résidence d'un patient= à YY km de (latitude,longitude).
+offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnelle) dans un périmètre géographique proche du lieu de résidence d'un patient = à YY km de (latitude,longitude).
 
 **Requête :**
 
@@ -490,9 +283,9 @@ Exemple :
 }
 ```
 
-#### Scénario 7 : Recherche sur une zone d'intervention
+#### Scénario 7 : Recherche sur une zone d'intervention <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** un consommateur cherche les offres proposées dans une commune =XXX faisant partie d'une zone d'intervention.
+**Description du scénario :** un consommateur cherche les offres proposées dans une commune = XXX faisant partie d'une zone d'intervention.
 
 **Requête :**
 
@@ -558,20 +351,20 @@ GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY #critère de 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|XX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune|XX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|XX #critere de recherche sur une ville ou un ensemble de ville via le code commune
+GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune|XX #critere de recherche sur une ville ou un ensemble de ville via le code commune
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR
+#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur recherche les offres proposant une modalité d\'accueil = XX (TRE-R338-ModaliteAccueil) et un niveau d\'expertise (critères modèle 3.0) = YY (TRE_R253-TypeMaternite).
 
@@ -593,7 +386,7 @@ GET [BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
-#### Scénario 12 : Recherche d’offre en anomalie sur une région avec un statut à traiter ou à vérifier
+#### Scénario 12 : Recherche d’offre en anomalie sur une région avec un statut à traiter ou à vérifier <code><span style="color: #ff0000;">draft</span></code>
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 Cette partie de la spécification est en cours de construction.
