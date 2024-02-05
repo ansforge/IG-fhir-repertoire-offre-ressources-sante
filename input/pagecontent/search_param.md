@@ -5467,7 +5467,7 @@ Critères de recherches applicables à la ressource Questionnaire.
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">context-type-value</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">context</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
   <td width="8%" valign="top" style="width:8.66%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -5480,7 +5480,7 @@ Critères de recherches applicables à la ressource Questionnaire.
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">composite</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
   <td width="46%" valign="top" style="width:46.24%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;

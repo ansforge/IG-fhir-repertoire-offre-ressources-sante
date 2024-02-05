@@ -261,13 +261,12 @@ GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifia
 
 **Requête :**
 
-`GET [BASE]/Questionnaire?context-type-value=context-type-value=https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG|EG$https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124`
+`GET [BASE]/Questionnaire?context=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Questionnaire?context-type-value=context-type-value=https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG|EG #critère de recherche composite avec le code du contexte toujours fixé à EG dans notre cas d'usage
-$https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 # et permettant de rechercher les fiches utilisée pour la catégorie d'EG 'Centre de santé' (voir binding)
+GET [BASE]/Questionnaire?context=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 # critère permettant de rechercher les fiches utilisée pour la catégorie d'EG 'Centre de santé' (voir binding)
 
 ```
 
