@@ -1,0 +1,33 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "7fbd7f2d-2a08-4a5a-bd94-7ff1a5b758dc-183",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/7fbd7f2d-2a08-4a5a-bd94-7ff1a5b758dc-183",
+  "name" : "IntersectionCodeRegionTerritorialDivisionRORValueSetAndCodeRegionTerritorialDivisionRORValueSet",
+  "title" : "Intersection of Fusion des valuesets pour le code de la division territoriale And Fusion des valuesets pour le code de la division territoriale",
+  "status" : "active",
+  "date" : "2024-02-05T13:48:35+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR"]
+    }]
+  }
+}
