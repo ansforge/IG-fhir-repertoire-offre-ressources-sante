@@ -1,58 +1,5 @@
-<!-- ## 3.10	Recherche d'offre sur la base d'informations tarifaires -->
-### Caractéristiques de l'API 
-<table width="100%">
-<tbody>
-<tr>
-<td width="19%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Header</strong></p>
-</td>
-<td width="80%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
+<!-- ## 3.10	Recherche d'offre sur la base d'informations tarifaires
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code> -->
 ###  Construction de la requête de base
 
 <table width="680">
@@ -86,7 +33,7 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="589">
-<p>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</p>
+<p><code>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
@@ -124,83 +71,26 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 
 ### Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de **StructureDefinition-ror-healthcareservice** applicables à ce cas d'usage sont :
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [StructureDefinition-ror-healthcareservice](search_param.html#structuredefinition-ror-healthcareservice)
+-    [Structuredefinition-ror-organization](search_param.html#structuredefinition-ror-organization) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `organization.[NOM CRITERE]`)
 
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>identifier</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-organization), de **StructureDefinition-ror-organization** applicables à ce cas d'usage sont :
-
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>price-type</p>
-</td>
-<td width="230">
-<p>price-amount-value</p>
-</td>
-<td width="230">
-<p>price-amount-currency</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>price-residential-type</p>
-</td>
-<td width="230">
-<p>special-price</p>
-</td>
-<td width="230">
-<p>price-dependency-level</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>welcome-type</p>
-</td>
-<td width="230">
-<p>price-validity-start-date</p>
-</td>
-<td width="230">
-<p>price-unit</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au [chainage](http://hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxe suivante : `organization.[NOM CRITERE]`
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits dans le [paragraphe dédié](modifiers.html) applicables à ce cas d'usage sont :
--   \_include
--   \_sort
--   Tous les prefixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Recherche sur critères tarifaires #1
+#### Scénario 1 : Recherche sur critères tarifaires #1 <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres d'établissements dont le type de tarifs = 02 \| forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur à X euros, pour la date de début de validité la plus récente.
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&organization.price-amount-value=ltX&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&_sort=-organization.price-validity-start-date&_include=Healthcareservice:location
+GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&organization.price-amount-value=ltX&_sort=-organization.price-validity-start-date&_include=Healthcareservice:location
 ```
 
 **Requête expliquée :**
@@ -208,12 +98,11 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 ```sh
 GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02 #critère de recherche sur le type de tarif
 &organization.price-amount-value=ltX #critère de recherche sur la valeur du montant 
-&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR #critère de recherche sur la devise du montant 
 &_sort=-organization.price-validity-start-date #modificateur de requête pour trier par date de début de validité décroissante (du plus récent au moins récent)
 &_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
 
-#### Scénario 2 : Recherche sur critères tarifaires #2
+#### Scénario 2 : Recherche sur critères tarifaires #2 <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres d'établissements dont le type de tarifs = 02 \| forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur ou égal à X euros, le type habitation = 03 \| F1 (TRE_R242-TypeHabitation), les conditions tarifaires = 03 \| tarif agréé ASH
 (TRE_R250-ConditionTarifaire).
@@ -221,8 +110,7 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&organization.price-amount-value=leX&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&organization.price-residential-type= https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03&organization.special-price= https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03&_include=Healthcareservice:location
-
+GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&organization.price-amount-value=leX&organization.price-residential-type=https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03&organization.special-price=https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03&_include=Healthcareservice:location
 ```
 
 **Requête expliquée :**
@@ -230,20 +118,19 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 ```sh
 GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02 #critère de recherche sur le type de tarif
 &organization.price-amount-value=ltX #critère de recherche sur la valeur du montant 
-&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR #critère de recherche sur la devise du montant 
-&organization.price-residential-type= https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03 #critère de recherche le type habitation
-&organization.special-price= https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03 #critère de recherche sur les conditions tarifaires
+&organization.price-residential-type=https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03 #critère de recherche le type habitation
+&organization.special-price=https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03 #critère de recherche sur les conditions tarifaires
 &_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
 ```
 
-#### Scénario 3 : Recherche sur critères tarifaires #3
+#### Scénario 3 : Recherche sur critères tarifaires #3 <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres d'établissements dont type de tarifs = 03 \| dépendance (TRE_R246-TypeTarif), le montant est inférieur à X euros, le niveau de dépendance = 02 \| GIR 3-4 (TRE_R237-GroupeTarifaireDependance), la temporalité d\'accueil (au niveau du tarif, pas de l\'offre opérationnelle) = 02 \| permanent (TRE-R240-TemporaliteAccueil).
 
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03&organization.price-amount-value=ltX&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&organization.price-dependency-level=https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02&organization.welcome-type= https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02&_include=Healthcareservice:location  
+GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03&organization.price-amount-value=ltXR&organization.price-dependency-level=https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02&organization.price-welcome-type=https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02&_include=Healthcareservice:location
 ```
 
 **Requête expliquée :**
@@ -251,8 +138,7 @@ GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/
 ```sh
 GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03 #critère de recherche sur le type de tarif
 &organization.price-amount-value=ltX #critère de recherche sur la valeur du montant 
-&organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR #critère de recherche sur la devise du montant 
-&organization.price-dependency-level= https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02 #critère de recherche le niveau de dépendance
-&organization.welcome-type= https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02 #critère de recherche la temporalité d’accueil
-&_include=Healthcareservice:location  #inclus les Location qui sont référencés par les HealthcareService
+&organization.price-dependency-level=https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02 #critère de recherche le niveau de dépendance
+&organization.price-welcome-type=https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02 #critère de recherche la temporalité d’accueil
+&_include=Healthcareservice:location #inclus les Location qui sont référencés par les HealthcareService
 ```

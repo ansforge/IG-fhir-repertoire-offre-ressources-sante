@@ -2,7 +2,7 @@ Instance: ror-sp-organization-price-welcome-type
 InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
-* name = "RORSPOrganization"
+* name = "RORSPOrganizationPriceWelcomeType"
 * description = "Paramètre de recherche décrivant si le tarif s'applique à un hébergement permanent ou à un hébergement temporaire"
 * code = #price-welcome-type
 * base = #Organization

@@ -1,58 +1,9 @@
 <!-- ## 3.11 Recherche d’offre via une technique « Full text » -->
+<code><span style="color: #ff0000;font-weight:bold;font-size: x-large;">draft</span></code>
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+Cette partie de la spécification est en cours de construction et n'est pas implémentée. Elle est disponible, à titre d'information sur les travaux en cours au niveau du ROR National.
+</p>
 
-### Caractéristiques de l'API 
-<table width="100%">
-<tbody>
-<tr>
-<td width="19%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Header</strong></p>
-</td>
-<td width="80%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
 
 ###  Construction de la requête de base
 
@@ -87,7 +38,7 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</p>
+<p><code>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
@@ -126,18 +77,15 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ
 
 ### Critères de recherche
 
--   Tous les critères de recherche, définis dans la [page dédiée](search_param.html), sont applicables.
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Les paramètres et modificateurs de requêtes décrits [page dédiée](modifiers.html) applicables à ce cas d'usage sont :
--   \_revinclude, \_include, :iterate
--   \_has, \_count, \_sort
--   Tous les préfixes de comparaison
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Recherche des offres opérationnelles référençant le texte \"cardio\"
+#### Scénario 1 : Recherche des offres opérationnelles référençant le texte \"cardio\" <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres opérationnelles contenant une chaine de caractères libre («cardio » par exemple).
 
@@ -156,7 +104,7 @@ GET [BASE]/HealthcareService?_content=cardio #filtre sur le contenu textuel des 
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
-#### Scénario 2 : Recherche des offres opérationnelles ou des lieux de réalisation de l'offre référençant le texte \"cardio\"
+#### Scénario 2 : Recherche des offres opérationnelles ou des lieux de réalisation de l'offre référençant le texte \"cardio\" <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur recherche les offres opérationnelles ou les lieux de réalisation de l'offre liés contenant une chaine de caractères libre (« cardio » par exemple).
 
