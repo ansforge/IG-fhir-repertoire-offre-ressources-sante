@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Recherche d&#39;offre sur la base d&#39;informations tarifaires - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.2.0</title>
+    <title>Recherche d&#39;offre sur la base d&#39;informations tarifaires - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.2.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -56,7 +56,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - ci-build
+            <span style="display:inline-block;">0.2.1 - ci-build
 
 
 
@@ -215,7 +215,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.2.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Recherche d&#39;offre sur la base d&#39;informations tarifaires</h2>
   
 
@@ -233,7 +233,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l’API</a></li>
   <li><a href="#construction-de-la-requête-de-base" id="markdown-toc-construction-de-la-requête-de-base">Construction de la requête de base</a></li>
   <li><a href="#construction-de-la-réponse-de-base" id="markdown-toc-construction-de-la-réponse-de-base">Construction de la réponse de base</a></li>
   <li><a href="#critères-de-recherche" id="markdown-toc-critères-de-recherche">Critères de recherche</a></li>
@@ -242,61 +241,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<!-- ## 3.10	Recherche d'offre sur la base d'informations tarifaires -->
-<h3 id="caractéristiques-de-lapi">Caractéristiques de l’API</h3>
-<table width="100%">
-<tbody>
-<tr>
-<td width="19%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Header</strong></p>
-</td>
-<td width="80%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
+<!-- ## 3.10	Recherche d'offre sur la base d'informations tarifaires
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code> -->
 <h3 id="construction-de-la-requête-de-base">Construction de la requête de base</h3>
 
 <table width="680">
@@ -330,7 +276,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="589">
-<p>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</p>
+<p><code>GET [base]/HealthcareService{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
@@ -378,139 +324,73 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="critères-de-recherche">Critères de recherche</h3>
 
+<p>Les critères de recherche applicables sont définis sur la page dédiée pour :</p>
 <ul>
-  <li>Les critères de recherche, définis au <a href="search_param.html#structuredefinition-ror-healthcareservice">paragraphe dédié</a>, de <strong>StructureDefinition-ror-healthcareservice</strong> applicables à ce cas d’usage sont :</li>
+  <li><a href="search_param.html#structuredefinition-ror-healthcareservice">StructureDefinition-ror-healthcareservice</a></li>
+  <li><a href="search_param.html#structuredefinition-ror-organization">Structuredefinition-ror-organization</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxesuivante : <code class="language-plaintext highlighter-rouge">organization.[NOM CRITERE]</code>)</li>
 </ul>
 
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>identifier</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-<ul>
-  <li>Les critères de recherche, définis au <a href="search_param.html#structuredefinition-ror-organization">paragraphe dédié</a>, de <strong>StructureDefinition-ror-organization</strong> applicables à ce cas d’usage sont :</li>
-</ul>
-
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>price-type</p>
-</td>
-<td width="230">
-<p>price-amount-value</p>
-</td>
-<td width="230">
-<p>price-amount-currency</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>price-residential-type</p>
-</td>
-<td width="230">
-<p>special-price</p>
-</td>
-<td width="230">
-<p>price-dependency-level</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>welcome-type</p>
-</td>
-<td width="230">
-<p>price-validity-start-date</p>
-</td>
-<td width="230">
-<p>price-unit</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-<p>Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au <a href="http://hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">organization.[NOM CRITERE]</code></p>
+<p><strong>En complément, vous pouvez accéder aux Capability Statements <a href="artifacts.html#behavior-capability-statements">ici</a></strong></p>
 
 <h3 id="paramètres-et-modificateurs-de-requêtes-fhir">Paramètres et modificateurs de requêtes FHIR</h3>
 
-<p>Les paramètres et modificateurs de requêtes décrits dans le <a href="modifiers.html">paragraphe dédié</a> applicables à ce cas d’usage sont :</p>
-<ul>
-  <li>_include</li>
-  <li>_sort</li>
-  <li>Tous les prefixes de comparaison</li>
-</ul>
+<p>Les paramètres et modificateurs de requêtes sont décrits <a href="modifiers.html">ici</a>.</p>
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="scénario-1-recherche-sur-critères-tarifaires-1">Scénario 1 : Recherche sur critères tarifaires #1</h4>
+<h4 id="scénario-1-recherche-sur-critères-tarifaires-1-draft">Scénario 1 : Recherche sur critères tarifaires #1 <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><strong>Description du scénario :</strong> Un consommateur recherche les offres d’établissements dont le type de tarifs = 02 | forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur à X euros, pour la date de début de validité la plus récente.</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&amp;organization.price-amount-value=ltX&amp;organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&amp;_sort=-organization.price-validity-start-date&amp;_include=Healthcareservice:location
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&amp;organization.price-amount-value=ltX&amp;_sort=-organization.price-validity-start-date&amp;_include=Healthcareservice:location
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?organization.price-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02 <span class="c">#critère de recherche sur le type de tarif</span>
 &amp;organization.price-amount-value<span class="o">=</span>ltX <span class="c">#critère de recherche sur la valeur du montant </span>
-&amp;organization.price-amount-currency<span class="o">=</span>http://hl7.org/fhir/ValueSet/currencies|EUR <span class="c">#critère de recherche sur la devise du montant </span>
 &amp;_sort<span class="o">=</span><span class="nt">-organization</span>.price-validity-start-date <span class="c">#modificateur de requête pour trier par date de début de validité décroissante (du plus récent au moins récent)</span>
 &amp;_include<span class="o">=</span>Healthcareservice:location  <span class="c">#inclus les Location qui sont référencés par les HealthcareService</span>
 </code></pre></div></div>
 
-<h4 id="scénario-2-recherche-sur-critères-tarifaires-2">Scénario 2 : Recherche sur critères tarifaires #2</h4>
+<h4 id="scénario-2-recherche-sur-critères-tarifaires-2-draft">Scénario 2 : Recherche sur critères tarifaires #2 <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><strong>Description du scénario :</strong> Un consommateur recherche les offres d’établissements dont le type de tarifs = 02 | forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur ou égal à X euros, le type habitation = 03 | F1 (TRE_R242-TypeHabitation), les conditions tarifaires = 03 | tarif agréé ASH
 (TRE_R250-ConditionTarifaire).</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&amp;organization.price-amount-value=leX&amp;organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&amp;organization.price-residential-type= https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03&amp;organization.special-price= https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03&amp;_include=Healthcareservice:location
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02&amp;organization.price-amount-value=leX&amp;organization.price-residential-type=https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03&amp;organization.special-price=https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03&amp;_include=Healthcareservice:location
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?organization.price-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|02 <span class="c">#critère de recherche sur le type de tarif</span>
 &amp;organization.price-amount-value<span class="o">=</span>ltX <span class="c">#critère de recherche sur la valeur du montant </span>
-&amp;organization.price-amount-currency<span class="o">=</span>http://hl7.org/fhir/ValueSet/currencies|EUR <span class="c">#critère de recherche sur la devise du montant </span>
-&amp;organization.price-residential-type<span class="o">=</span> https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03 <span class="c">#critère de recherche le type habitation</span>
-&amp;organization.special-price<span class="o">=</span> https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03 <span class="c">#critère de recherche sur les conditions tarifaires</span>
+&amp;organization.price-residential-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R242-TypeHabitation/FHIR/TRE-R242-TypeHabitation|03 <span class="c">#critère de recherche le type habitation</span>
+&amp;organization.special-price<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R250-ConditionTarifaire/FHIR/TRE-R250-ConditionTarifaire|03 <span class="c">#critère de recherche sur les conditions tarifaires</span>
 &amp;_include<span class="o">=</span>Healthcareservice:location  <span class="c">#inclus les Location qui sont référencés par les HealthcareService</span>
 </code></pre></div></div>
 
-<h4 id="scénario-3-recherche-sur-critères-tarifaires-3">Scénario 3 : Recherche sur critères tarifaires #3</h4>
+<h4 id="scénario-3-recherche-sur-critères-tarifaires-3-draft">Scénario 3 : Recherche sur critères tarifaires #3 <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><strong>Description du scénario :</strong> Un consommateur recherche les offres d’établissements dont type de tarifs = 03 | dépendance (TRE_R246-TypeTarif), le montant est inférieur à X euros, le niveau de dépendance = 02 | GIR 3-4 (TRE_R237-GroupeTarifaireDependance), la temporalité d'accueil (au niveau du tarif, pas de l'offre opérationnelle) = 02 | permanent (TRE-R240-TemporaliteAccueil).</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03&amp;organization.price-amount-value=ltX&amp;organization.price-amount-currency=http://hl7.org/fhir/ValueSet/currencies|EUR&amp;organization.price-dependency-level=https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02&amp;organization.welcome-type= https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02&amp;_include=Healthcareservice:location  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?organization.price-type=https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03&amp;organization.price-amount-value=ltXR&amp;organization.price-dependency-level=https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02&amp;organization.price-welcome-type=https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02&amp;_include=Healthcareservice:location
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?organization.price-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R246-TypeTarif/FHIR/TRE-R246-TypeTarif|03 <span class="c">#critère de recherche sur le type de tarif</span>
 &amp;organization.price-amount-value<span class="o">=</span>ltX <span class="c">#critère de recherche sur la valeur du montant </span>
-&amp;organization.price-amount-currency<span class="o">=</span>http://hl7.org/fhir/ValueSet/currencies|EUR <span class="c">#critère de recherche sur la devise du montant </span>
-&amp;organization.price-dependency-level<span class="o">=</span> https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02 <span class="c">#critère de recherche le niveau de dépendance</span>
-&amp;organization.welcome-type<span class="o">=</span> https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02 <span class="c">#critère de recherche la temporalité d’accueil</span>
-&amp;_include<span class="o">=</span>Healthcareservice:location  <span class="c">#inclus les Location qui sont référencés par les HealthcareService</span>
+&amp;organization.price-dependency-level<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R237-GroupeTarifaireDependance/FHIR/TRE-R237-GroupeTarifaireDependance|02 <span class="c">#critère de recherche le niveau de dépendance</span>
+&amp;organization.price-welcome-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R240-TemporaliteAccueil/FHIR/TRE-R240-TemporaliteAccueil|02 <span class="c">#critère de recherche la temporalité d’accueil</span>
+&amp;_include<span class="o">=</span>Healthcareservice:location <span class="c">#inclus les Location qui sont référencés par les HealthcareService</span>
 </code></pre></div></div>
-
 
 
 
@@ -558,7 +438,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 2, 2024 23:12+0000">2024-02-02</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 5, 2024 13:18+0000">2024-02-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

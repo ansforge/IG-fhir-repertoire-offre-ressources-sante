@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Recherche d&#39;offre avec données capacitaires - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.2.0</title>
+    <title>Recherche d&#39;offre avec données capacitaires - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.2.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -56,7 +56,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - ci-build
+            <span style="display:inline-block;">0.2.1 - ci-build
 
 
 
@@ -215,7 +215,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.2.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Recherche d&#39;offre avec données capacitaires</h2>
   
 
@@ -233,70 +233,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#caractéristiques-de-lapi" id="markdown-toc-caractéristiques-de-lapi">Caractéristiques de l’API</a></li>
   <li><a href="#construction-de-la-requête-de-base" id="markdown-toc-construction-de-la-requête-de-base">Construction de la requête de base</a></li>
   <li><a href="#construction-de-la-réponse-de-base" id="markdown-toc-construction-de-la-réponse-de-base">Construction de la réponse de base</a></li>
-  <li><a href="#critères-de-recherche" id="markdown-toc-critères-de-recherche">Critères de recherche</a></li>
-  <li><a href="#paramètres-et-modificateurs-de-requêtes-fhir" id="markdown-toc-paramètres-et-modificateurs-de-requêtes-fhir">Paramètres et modificateurs de requêtes FHIR</a></li>
-  <li><a href="#exemple-de-requêtes" id="markdown-toc-exemple-de-requêtes">Exemple de requêtes</a></li>
+  <li><a href="#critères-de-recherche" id="markdown-toc-critères-de-recherche">Critères de recherche</a>    <ul>
+      <li><a href="#paramètres-et-modificateurs-de-requêtes-fhir" id="markdown-toc-paramètres-et-modificateurs-de-requêtes-fhir">Paramètres et modificateurs de requêtes FHIR</a></li>
+      <li><a href="#exemple-de-requêtes" id="markdown-toc-exemple-de-requêtes">Exemple de requêtes</a></li>
+    </ul>
+  </li>
 </ul>
 
 </div>
-<!-- ## Recherche d'offre avec données capacitaires -->
-
-<h3 id="caractéristiques-de-lapi">Caractéristiques de l’API</h3>
-<table width="100%">
-<tbody>
-<tr>
-<td width="18%">
-<p>Endpoint</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Header</p>
-</td>
-<td width="81%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Encodage</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Version FHIR</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Version package</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Publication</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+<!-- ## Recherche d'offre avec données capacitaires
+<code><span style="background-color: #A6ACAF;color:white;font-weight:bold;font-size: x-large;">ROR 2.1</span></code> -->
 
 <h3 id="construction-de-la-requête-de-base">Construction de la requête de base</h3>
 
@@ -374,153 +322,20 @@ requête, ce qui est différent d’aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
 <a href="https://www.hl7.org/fhir/R4/http.html">https://www.hl7.org/fhir/R4/http.html</a></p>
 
-<h3 id="critères-de-recherche">Critères de recherche</h3>
+<h2 id="critères-de-recherche">Critères de recherche</h2>
 
+<p>Les critères de recherche applicables sont définis sur la page dédiée pour :</p>
 <ul>
-  <li>Les critères de recherche, définis au <a href="search_param.html#structuredefinition-ror-healthcareservice">paragraphe dédié</a>, de
-<strong>StructureDefinition-ror-healthcareservice</strong> applicables à ce cas
-d’usage sont :</li>
-</ul>
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>identifier</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-<ul>
-  <li>Les critères de recherche, définis au <a href="search_param.html#structuredefinition-ror-location">paragraphe dédié</a>, de
-<strong>StructureDefinition-ror-location</strong> applicables à ce cas d’usage
-sont :</li>
-</ul>
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>address-postalcode</p>
-</td>
-<td width="230">
-<p>capacity-type</p>
-</td>
-<td width="230">
-<p>type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>adress-city</p>
-</td>
-<td width="230">
-<p>equipment-type</p>
-</td>
-<td width="230">
-<p>residential-type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>additional-bed-type</p>
-</td>
-<td width="230">
-<p>equipment-feature</p>
-</td>
-<td width="230">
-<p>residential-number</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>crisis-type</p>
-</td>
-<td width="230">
-<p>gender-capacity-available</p>
-</td>
-<td width="230">
-<p>temporary-assignement</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>capacity-closing-type</p>
-</td>
-<td width="230">
-<p>limit-value</p>
-</td>
-<td width="230">
-<p>_lastUpdated</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>capacity-update-date*</p>
-</td>
-<td width="230">
-<p>temporality-capacity</p>
-</td>
-<td width="230">
-<p>nb-capacity</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>capacity-status</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>*<i>Critères de recherche qui seront applicables ultérieurement</i></p>
-
-<p>Ces critères de recherche sont applicables à la ressource
-HealthcareService, grâce au chainage. Pour cela utiliser la syntaxe
-suivante : <code class="language-plaintext highlighter-rouge">location.[NOM CRITERE]</code></p>
-
-<ul>
-  <li>Les critères de recherche, définis au <a href="search_param.html#structuredefinition-ror-task">paragraphe dédié</a>, de <strong>StructureDefinition-ror-task</strong> applicables à ce cas d’usage sont :</li>
+  <li><a href="search_param.html#structuredefinition-ror-healthcareservice">StructureDefinition-ror-healthcareservice</a></li>
+  <li><a href="search_param.html#structuredefinition-ror-location">StructureDefinition-ror-location</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxesuivante : <code class="language-plaintext highlighter-rouge">location.[NOM CRITERE]</code>)</li>
+  <li><a href="search_param.html#structuredefinition-ror-task">StructureDefinition-ror-task</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage inversé</a>. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">_has:HealthcareService:focus:[NOM CRITERE]</code>)</li>
 </ul>
 
-<table>
-<tbody>
-<tr>
-<td width="228">
-<p>business-status*</p>
-</td>
-<td width="226">
-<p>_id</p>
-</td>
-<td width="226">
-<p>_lastUpdated*</p>
-</td>
-</tr>
-<tr>
-<td width="228">
-<p>Identifier*</p>
-</td>
-<td width="226">
-<p>authored-on*</p>
-</td>
-<td width="226">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>*<i>Critères de recherche qui seront applicables ultérieurement</i></p>
-
-<p>Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage inversé</a>. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">_has:HealthcareService:focus:[NOM CRITERE]</code></p>
+<p><strong>En complément, vous pouvez accéder aux Capability Statements <a href="artifacts.html#behavior-capability-statements">ici</a></strong></p>
 
 <h3 id="paramètres-et-modificateurs-de-requêtes-fhir">Paramètres et modificateurs de requêtes FHIR</h3>
 
-<p>Tous les paramètres et modificateurs de requêtes décrits au <a href="modifiers.html">paragraphe dédié</a>
-sont applicables à ce cas d’usage.</p>
+<p>Les paramètres et modificateurs de requêtes sont décrits <a href="modifiers.html">ici</a>.</p>
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
@@ -563,7 +378,7 @@ TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à 
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&amp;location:equipment-type= https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83&amp;_include=HealthcareService:location</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&amp;location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83&amp;_include=HealthcareService:location</code></p>
 
 <p><strong>Requête expliquée :</strong></p>
 
@@ -620,7 +435,7 @@ TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 2, 2024 23:12+0000">2024-02-02</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 5, 2024 13:18+0000">2024-02-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
