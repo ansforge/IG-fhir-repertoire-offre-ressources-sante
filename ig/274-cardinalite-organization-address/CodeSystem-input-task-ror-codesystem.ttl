@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "input-task-ror-codesystem"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">ruleErrorId<a name=\"input-task-ror-codesystem-ruleErrorId\"> </a></td><td>Identifiant de la règle à l'origine de l'anomalie</td></tr><tr><td style=\"white-space:nowrap\">errorValue<a name=\"input-task-ror-codesystem-errorValue\"> </a></td><td>donnée erronée</td></tr><tr><td style=\"white-space:nowrap\">proposedValue<a name=\"input-task-ror-codesystem-proposedValue\"> </a></td><td>nouvelle valeur proposée</td></tr><tr><td style=\"white-space:nowrap\">pathElementError<a name=\"input-task-ror-codesystem-pathElementError\"> </a></td><td>élément en erreur dans la ressource</td></tr><tr><td style=\"white-space:nowrap\">systemRequester<a name=\"input-task-ror-codesystem-systemRequester\"> </a></td><td>système déclarant l'anomalie</td></tr><tr><td style=\"white-space:nowrap\">identifierRequester<a name=\"input-task-ror-codesystem-identifierRequester\"> </a></td><td>Identifiant du déclarant de l'anomalie</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.1"] ; # 
+  fhir:name [ fhir:v "InputTaskRORCodeSystem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-02-06T09:14:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code System pour la définition des éléments spécifiques de input dans ressource RORTask"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:compositional [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "6"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "ruleErrorId" ] ;
+     fhir:display [ fhir:v "ruleErrorId" ] ;
+     fhir:definition [ fhir:v "Identifiant de la règle à l'origine de l'anomalie" ]
+  ] [
+     fhir:code [ fhir:v "errorValue" ] ;
+     fhir:display [ fhir:v "errorValue" ] ;
+     fhir:definition [ fhir:v "donnée erronée" ]
+  ] [
+     fhir:code [ fhir:v "proposedValue" ] ;
+     fhir:display [ fhir:v "proposedValue" ] ;
+     fhir:definition [ fhir:v "nouvelle valeur proposée" ]
+  ] [
+     fhir:code [ fhir:v "pathElementError" ] ;
+     fhir:display [ fhir:v "pathElementError" ] ;
+     fhir:definition [ fhir:v "élément en erreur dans la ressource" ]
+  ] [
+     fhir:code [ fhir:v "systemRequester" ] ;
+     fhir:display [ fhir:v "systemRequester" ] ;
+     fhir:definition [ fhir:v "système déclarant l'anomalie" ]
+  ] [
+     fhir:code [ fhir:v "identifierRequester" ] ;
+     fhir:display [ fhir:v "identifierRequester" ] ;
+     fhir:definition [ fhir:v "Identifiant du déclarant de l'anomalie" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
