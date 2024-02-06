@@ -5528,7 +5528,7 @@ Critères de recherches applicables à la ressource Questionnaire.
   <td width="17%" valign="top" style="width:17.9%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
   padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%">Date de publication</span></span><span style="font-size:8.0pt;line-height:115%"></span><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span style="font-size:8.0pt;line-height:115%">Date de publication</span><span style="font-size:8.0pt;line-height:115%"></span><o:p></o:p></span></p>
   </td>
   <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -5691,7 +5691,7 @@ Critères de recherches applicables à la ressource Questionnaire.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Nom technique de la fiche de saisie <hrefSpécifications FHIR<o:p></o:p></span></p>
+  8.0pt;line-height:115%">Nom technique de la fiche de saisie <o:p></o:p></span></p>
   </td>
  </tr>
 </tbody></table>
