@@ -19,5 +19,5 @@ Source:   RORLocationResidentialCapacity
 Id:       specmetier-to-RORResidentialLocationCapacity
 Title:    "Spécification métier vers l'extension ROR LocationResidentialCapacity"
 * -> "CapaciteHabitation"
-* extension[residentialType] -> "typeHabitation"
+* extension[residentialType] -> "typeHabitation : JDV-J32-TypeHabitation-ROR"
 * extension[residentialNumber] -> "nbHabitation"

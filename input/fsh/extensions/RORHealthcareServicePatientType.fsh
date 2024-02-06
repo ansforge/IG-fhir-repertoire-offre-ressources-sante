@@ -21,6 +21,6 @@ Source:   RORHealthcareServicePatientType
 Id:       specmetier-to-RORHealthcareServicePatientType
 Title:    "Spécification métier vers l'extension ROR HealthcareServicePatientType"
 * -> "Patientele"
-* extension[supportedPatientInfo] -> "publicPrisEnCharge"
+* extension[supportedPatientInfo] -> "publicPrisEnCharge : JDV-J29-PublicPrisEnCharge-ROR"
 * extension[ageRange].value[x].low -> "ageMin"
 * extension[ageRange].value[x].high -> "ageMax"
