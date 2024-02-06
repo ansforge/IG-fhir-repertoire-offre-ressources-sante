@@ -72,7 +72,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     iso21090-ADXP-streetNameType named streetNameType 0..1 and
     iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
     iso21090-ADXP-postBox named postalBox 0..1 and
-    ror-lieu-dit named lieuDit 0..1
+    as-ext-lieu-dit named lieuDit 0..1
 * address.line.extension[careOf] ^short = "pointRemise (Adresse) : Lieu où le destinataire prend possession de son courrier"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse) : Un complément de l'adresse au point géographique"
 * address.line.extension[houseNumber] ^short = "numeroVoie (Adresse) : Un numéro dans la voie"

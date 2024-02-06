@@ -140,7 +140,7 @@ ou nom de l'OI : Nom de l'organisation interne"
     iso21090-ADXP-streetNameType named streetNameType 0..1 and
     iso21090-ADXP-postBox named postalBox 0..1 and
     iso21090-ADXP-streetNameBase named streetNameBase 0..1 and
-    ror-lieu-dit named lieuDit 0..1
+    as-ext-lieu-dit named lieuDit 0..1
 * address.line.extension[careOf] ^short = "pointRemise (Adresse)"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse)"
 * address.line.extension[houseNumber] ^short = "numeroVoie(Adresse)"
