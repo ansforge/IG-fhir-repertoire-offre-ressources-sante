@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 1, warn = 76, info = 43
+err = 3, warn = 76, info = 43
 IG Publisher Version: 1.5.16
-Generated Tue Feb 06 14:00:48 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Tue Feb 06 14:50:52 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 4 / 4 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 0 / 0 / 1
@@ -48,7 +48,7 @@ Generated Tue Feb 06 14:00:48 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-temporality-capacity : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-temporary-assignement : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-RORPractitionerRoleName : 0 / 1 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-as-ext-lieu-dit : 0 / 1 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-as-ext-lieu-dit : 2 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-act-type : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-available-time-effective-opening-closing-date : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-available-time-number-days-of-week : 0 / 1 / 1
@@ -166,7 +166,9 @@ WARNING: CodeSystem/ror-include-associated-data-code-system: CodeSystem: Publish
 == fsh-generated/resources/StructureDefinition-RORPractitionerRoleName.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/RORPractitionerRoleName'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-as-ext-lieu-dit.json ==
-WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/as-ext-lieu-dit'): The Implementation Guide contains no examples for this extension
+ERROR: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-lieu-dit'): Conformance resource /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-as-ext-lieu-dit.json - the canonical URL (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/as-ext-lieu-dit) does not match the URL (https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-lieu-dit)
+WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-lieu-dit'): The Implementation Guide contains no examples for this extension
+ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-as-ext-lieu-dit: URL Mismatch https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/as-ext-lieu-dit vs https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-lieu-dit
 == fsh-generated/resources/StructureDefinition-ror-act-type.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-ror-available-time-effective-opening-closing-date.json ==
