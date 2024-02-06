@@ -57,7 +57,7 @@
   <version value="0.2.0"/>
   <name value="RORLocationSupportedCapacity"/>
   <status value="active"/>
-  <date value="2024-01-24T16:02:26+00:00"/>
+  <date value="2024-02-06T12:55:52+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -187,7 +187,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:capacityType">
@@ -220,11 +220,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.natureCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.natureCapacite : JDV-J187-NatureCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityType.id">
@@ -287,7 +287,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:capacityType.url">
@@ -381,11 +381,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.statutCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.statutCapacite : JDV-J188-TypeStatutCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityStatus.id">
@@ -448,7 +448,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:capacityStatus.url">
@@ -542,11 +542,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.temporaliteCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.temporaliteCapacite : JDV-J189-TemporaliteCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporalityCapacity.id">
@@ -609,7 +609,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:temporalityCapacity.url">
@@ -703,7 +703,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
@@ -770,7 +770,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:nbCapacity.url">
@@ -860,11 +860,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.typeSourceCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.typeSourceCapacite : JDV-J193-TypeSourceCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacitySourceType.id">
@@ -927,7 +927,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:capacitySourceType.url">
@@ -1021,11 +1021,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.genreCapaciteDispo"/>
+        <map value="CapaciteAccueilOperationnelle.genreCapaciteDispo : JDV-J190-GenreCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:genderCapacityAvailable.id">
@@ -1088,7 +1088,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:genderCapacityAvailable.url">
@@ -1182,7 +1182,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
@@ -1249,7 +1249,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:capacityUpdateDate.url">
@@ -1339,11 +1339,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.typeFermetureCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.typeFermetureCapacite : JDV-J191-TypeFermetureCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityClosingType.id">
@@ -1406,7 +1406,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:capacityClosingType.url">
@@ -1500,11 +1500,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.typeLitsSupplementaire"/>
+        <map value="CapaciteAccueilOperationnelle.typeLitsSupplementaire : JDV-J192-TypeLitSupplementaire-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:additionalBedType.id">
@@ -1567,7 +1567,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:additionalBedType.url">
@@ -1661,11 +1661,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.typeCrise"/>
+        <map value="CapaciteAccueilOperationnelle.typeCrise : JDV-J194-TypeCrise-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:crisisType.id">
@@ -1728,7 +1728,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:crisisType.url">
@@ -1822,11 +1822,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapacitePriseCharge.affectationTemporaire"/>
+        <map value="CapacitePriseCharge.affectationTemporaire : JDV-J195-AffectationTemporaire-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporaryAssignement.id">
@@ -1889,7 +1889,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:temporaryAssignement.url">
@@ -2178,7 +2178,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.natureCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.natureCapacite : JDV-J187-NatureCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityType.extension">
@@ -2206,7 +2206,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.statutCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.statutCapacite : JDV-J188-TypeStatutCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityStatus.extension">
@@ -2234,7 +2234,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.temporaliteCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.temporaliteCapacite : JDV-J189-TemporaliteCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporalityCapacity.extension">
@@ -2286,7 +2286,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.typeSourceCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.typeSourceCapacite : JDV-J193-TypeSourceCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacitySourceType.extension">
@@ -2314,7 +2314,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.genreCapaciteDispo"/>
+        <map value="CapaciteAccueilOperationnelle.genreCapaciteDispo : JDV-J190-GenreCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:genderCapacityAvailable.extension">
@@ -2366,7 +2366,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.typeFermetureCapacite"/>
+        <map value="CapaciteAccueilOperationnelle.typeFermetureCapacite : JDV-J191-TypeFermetureCapacite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityClosingType.extension">
@@ -2394,7 +2394,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.typeLitsSupplementaire"/>
+        <map value="CapaciteAccueilOperationnelle.typeLitsSupplementaire : JDV-J192-TypeLitSupplementaire-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:additionalBedType.extension">
@@ -2422,7 +2422,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapaciteAccueilOperationnelle.typeCrise"/>
+        <map value="CapaciteAccueilOperationnelle.typeCrise : JDV-J194-TypeCrise-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:crisisType.extension">
@@ -2450,7 +2450,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-        <map value="CapacitePriseCharge.affectationTemporaire"/>
+        <map value="CapacitePriseCharge.affectationTemporaire : JDV-J195-AffectationTemporaire-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporaryAssignement.extension">

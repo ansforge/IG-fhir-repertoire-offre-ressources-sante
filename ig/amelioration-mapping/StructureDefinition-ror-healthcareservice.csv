@@ -46,7 +46,7 @@ This element can be used to indicate where the current master source of a resour
 "HealthcareService.meta.tag:codeRegion","HealthcareService.meta.tag","codeRegion","","",0,1,"","","Y","Coding {[]} {[]}
 ","Tags applied to this resource","Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.","The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR","",,,,"Meta.tag",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CV","regionSource"
+","n/a","CV","regionSource : JDV-J237-RegionOM-ROR"
 "HealthcareService.implicitRules","HealthcareService.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
 ","A set of rules under which this content was created","A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -83,7 +83,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.extension:ror-territorial-division.extension:typeTerritorialDivision","HealthcareService.extension.extension","typeTerritorialDivision","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","type"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","type : JDV-J223-TypeDivisionTerritoriale-ROR"
 "HealthcareService.extension:ror-territorial-division.extension:typeTerritorialDivision.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.extension:ror-territorial-division.extension:typeTerritorialDivision.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -100,7 +100,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.extension:ror-territorial-division.extension:codeTerritorialDivision","HealthcareService.extension.extension","codeTerritorialDivision","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","code"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","code : JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR"
 "HealthcareService.extension:ror-territorial-division.extension:codeTerritorialDivision.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.extension:ror-territorial-division.extension:codeTerritorialDivision.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -146,7 +146,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.extension:ror-healthcareservice-patient-type.extension:supportedPatientInfo","HealthcareService.extension.extension","supportedPatientInfo","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","publicPrisEnCharge"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","publicPrisEnCharge : JDV-J29-PublicPrisEnCharge-ROR"
 "HealthcareService.extension:ror-healthcareservice-patient-type.extension:supportedPatientInfo.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.extension:ror-healthcareservice-patient-type.extension:supportedPatientInfo.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -230,11 +230,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.extension:ror-healthcareservice-contact.extension:ror-function-contact","HealthcareService.extension.extension","ror-function-contact","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-function-contact]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR qui indique un titre, une position ou une fonction de la personne assurant le contact au sein de l'organisation (directeur, secrétaire, etc.).","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","fonctionContact"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","fonctionContact : JDV-J220-FonctionContact-ROR"
 "HealthcareService.extension:ror-healthcareservice-contact.extension:purposeContact","HealthcareService.extension.extension","purposeContact","","",0,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","natureContact"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","natureContact : JDV-J221-NatureContact-ROR"
 "HealthcareService.extension:ror-healthcareservice-contact.extension:purposeContact.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.extension:ror-healthcareservice-contact.extension:purposeContact.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -268,7 +268,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.extension:ror-healthcareservice-contact.extension:ror-confidentiality-level","HealthcareService.extension.extension","ror-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR pour définir le niveau de restriction de l'accès aux attributs de la classe Contact.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 "HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom","HealthcareService.extension.extension","ror-healthcareservice-contact-telecom","","",0,*,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR pour les télécommunications du contact.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -283,7 +283,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-communication-channel","HealthcareService.extension.extension.extension","ror-telecom-communication-channel","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","canal"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","canal : JDV-J225-CanalCommunication-ROR"
 "HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-usage","HealthcareService.extension.extension.extension","ror-telecom-usage","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -291,7 +291,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-confidentiality-level","HealthcareService.extension.extension.extension","ror-telecom-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 "HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress","HealthcareService.extension.extension.extension","telecomAddress","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -349,12 +349,12 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 ","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","typeOffre (OffreOperationnelle) : Permet de distinguer les offres et de les classer en fonction de leur nature particulière","Identifies the broad category of service being performed or delivered.","Selecting a Service Category then determines the list of relevant service types that can be selected in the primary service type.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS","",,,,"HealthcareService.category",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".code","FiveWs.class","typeOffre"
+","n/a","CD",".code","FiveWs.class","typeOffre : JDV-J238-TypeOffre-ROR"
 "HealthcareService.type","HealthcareService.type","","service type
 ","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","champActivite (OffreOperationnelle) : Domaine dans lequel s'inscrit l'offre","The specific type of service that may be delivered or performed.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR","",,,,"HealthcareService.type",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","champActivite"
+","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","champActivite : JDV-J20-ChampActivite-ROR"
 "HealthcareService.specialty","HealthcareService.specialty","","","",1,*,"","","Y","CodeableConcept {[]} {[]}
 ","Specialties handled by the HealthcareService","Collection of specialties handled by the service site. This is more of a medical term.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"preferred","A specialty that a healthcare service may provide.","http://hl7.org/fhir/ValueSet/c80-practice-codes","","value:coding.system}
 ","",,"open","HealthcareService.specialty",0,*,"ele-1
@@ -363,11 +363,11 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 "HealthcareService.specialty:operationalActivity","HealthcareService.specialty","operationalActivity","","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne","Collection of specialties handled by the service site. This is more of a medical term.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR","",,,,"HealthcareService.specialty",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","ActiviteOperationnelle.activiteOperationnelle"
+","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","ActiviteOperationnelle.activiteOperationnelle : JDV-J17-ActiviteOperationnelle-ROR"
 "HealthcareService.specialty:operationalActivityFamily","HealthcareService.specialty","operationalActivityFamily","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne","Collection of specialties handled by the service site. This is more of a medical term.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR","",,,,"HealthcareService.specialty",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","ActiviteOperationnelle.familleActiviteOperationnelle"
+","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","ActiviteOperationnelle.familleActiviteOperationnelle : JDV-J51-FamilleActiviteOperationnelle-ROR"
 "HealthcareService.location","HealthcareService.location","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}
 ","Location(s) where service may be provided","The location(s) where this healthcare service may be provided.","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","","","","","","","","",,,,,"",,,,"HealthcareService.location",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -402,7 +402,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.telecom.extension:ror-telecom-communication-channel","HealthcareService.telecom.extension","ror-telecom-communication-channel","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
 ","canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication","Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.canal"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.canal : JDV-J225-CanalCommunication-ROR"
 "HealthcareService.telecom.extension:ror-telecom-usage","HealthcareService.telecom.extension","ror-telecom-usage","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
 ","utilisation (Telecommunication) : Utilisation du canal de communication","Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -410,7 +410,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.telecom.extension:ror-telecom-confidentiality-level","HealthcareService.telecom.extension","ror-telecom-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
 ","niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication","Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.niveauConfidentialite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 "HealthcareService.telecom.system","HealthcareService.telecom.system","","","",0,1,"","","Y","code {[]} {[]}
 ","phone | fax | email | pager | url | sms | other","Telecommunications form for contact point - what communications system is required to make use of the contact.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"required","Telecommunications form for contact point.","http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1","",,,,"ContactPoint.system",0,1,"ele-1
 cpt-2","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -500,7 +500,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:receptionType","HealthcareService.characteristic","receptionType","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","temporaliteAccueil (OffreOperationnelle) : Précision sur le mode de prise en charge","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","temporaliteAccueil"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","temporaliteAccueil : JDV-J30-TemporaliteAccueil-ROR"
 "HealthcareService.characteristic:receptionType.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:receptionType.extension","HealthcareService.characteristic.extension","","extensions
@@ -524,7 +524,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:careMode","HealthcareService.characteristic","careMode","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","modePriseEnCharge (OffreOperationnelle) : Caractérise l'hébergement ainsi que le niveau de technicité et d'intensité des soins","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","modePriseEnCharge"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","modePriseEnCharge : JDV-J19-ModePriseEnCharge-ROR"
 "HealthcareService.characteristic:careMode.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:careMode.extension","HealthcareService.characteristic.extension","","extensions
@@ -548,7 +548,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:receptionModality","HealthcareService.characteristic","receptionModality","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","modaliteAccueil (OffreOperationnelle) : Permet de préciser le mode de prise en charge géographiquement","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J226-ModaliteAccueil-ROR/FHIR/JDV-J226-ModaliteAccueil-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","modaliteAccueil"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","modaliteAccueil : JDV-J226-ModaliteAccueil-ROR"
 "HealthcareService.characteristic:receptionModality.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:receptionModality.extension","HealthcareService.characteristic.extension","","extensions
@@ -572,7 +572,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:managementType","HealthcareService.characteristic","managementType","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","modeGestion (OffreOperationnelle) : Mode d’intervention des aides à domicile en fonction de la nature de la relation contractuelle","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","modeGestion"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","modeGestion : JDV-J26-ModeGestion-ROR"
 "HealthcareService.characteristic:managementType.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:managementType.extension","HealthcareService.characteristic.extension","","extensions
@@ -596,7 +596,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:specificAct","HealthcareService.characteristic","specificAct","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","acteSpecifique (OffreOperationnelle) : Action menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","acteSpecifique"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","acteSpecifique : JDV-J16-ActeSpecifique-ROR"
 "HealthcareService.characteristic:specificAct.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:specificAct.extension","HealthcareService.characteristic.extension","","","",1,*,"","","","Extension {[]} {[]}
@@ -632,7 +632,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:outsideOfficeAct","HealthcareService.characteristic","outsideOfficeAct","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","acteRealiseHorsCabinet (OffreOperationnelle) : Permet de décrire l’offre de santé des médecins libéraux réalisée en dehors du cabinet, au sein d’un établissement","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","acteRealiseHorsCabinet"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","acteRealiseHorsCabinet : JDV-J16-ActeSpecifique-ROR"
 "HealthcareService.characteristic:outsideOfficeAct.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:outsideOfficeAct.extension","HealthcareService.characteristic.extension","","","",1,*,"","","","Extension {[]} {[]}
@@ -668,7 +668,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:takingCareSpeciality","HealthcareService.characteristic","takingCareSpeciality","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","specialisationPriseEnCharge (OffreOperationnelle) : Regroupement de troubles, de pathologies ou de déficiences qui nécessitent la mobilisation d'expertises, de compétences et/ou d'équipements spécifiques","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J35-SpecialisationDePriseEnCharge-ROR/FHIR/JDV-J35-SpecialisationDePriseEnCharge-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","specialisationPriseEnCharge"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","specialisationPriseEnCharge : JDV-J35-SpecialisationDePriseEnCharge-ROR"
 "HealthcareService.characteristic:takingCareSpeciality.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:takingCareSpeciality.extension","HealthcareService.characteristic.extension","","extensions
@@ -692,7 +692,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:annualOpening","HealthcareService.characteristic","annualOpening","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","ouvertureAnnuelle (OffreOperationnelle) : Nombre de jours maximum dans l’année au cours desquels la prestation peut être proposée par l'établissement","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J28-OuvertureAnnuelle-ROR/FHIR/JDV-J28-OuvertureAnnuelle-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","ouvertureAnnuelle"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","ouvertureAnnuelle : JDV-J28-OuvertureAnnuelle-ROR"
 "HealthcareService.characteristic:annualOpening.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:annualOpening.extension","HealthcareService.characteristic.extension","","extensions
@@ -716,7 +716,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:ressourceProfession","HealthcareService.characteristic","ressourceProfession","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","professionRessource (OffreOperationnelle) : Traduit la mobilisation de métiers qui constituent un facteur différenciant dans la réalisation de la prestation","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J186-ProfessionRessource-ROR/FHIR/JDV-J186-ProfessionRessource-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","professionRessource"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","professionRessource : JDV-J186-ProfessionRessource-ROR"
 "HealthcareService.characteristic:ressourceProfession.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:ressourceProfession.extension","HealthcareService.characteristic.extension","","extensions
@@ -740,7 +740,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:specificCompetence","HealthcareService.characteristic","specificCompetence","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","competenceSpecifique (OffreOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","competenceSpecifique"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","competenceSpecifique : JDV-J33-CompetenceSpecifique-ROR"
 "HealthcareService.characteristic:specificCompetence.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:specificCompetence.extension","HealthcareService.characteristic.extension","","extensions
@@ -764,7 +764,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:expertiseLevel","HealthcareService.characteristic","expertiseLevel","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","niveauExpertise (OffreOperationnelle) : Niveau de ressources humaines et matérielles engagées dans la réalisation de l'offre","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J227-NiveauExpertise-ROR/FHIR/JDV-J227-NiveauExpertise-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","niveauExpertise"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","niveauExpertise : JDV-J227-NiveauExpertise-ROR"
 "HealthcareService.characteristic:expertiseLevel.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:expertiseLevel.extension","HealthcareService.characteristic.extension","","extensions
@@ -788,7 +788,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:temporalityStopService","HealthcareService.characteristic","temporalityStopService","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","typeFermeture (OffreOperationnelle) : Temporalité d'arrêt de réalisation de la prestation","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J185-TypeFermeture-ROR/FHIR/JDV-J185-TypeFermeture-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","typeFermeture"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","typeFermeture : JDV-J185-TypeFermeture-ROR"
 "HealthcareService.characteristic:temporalityStopService.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:temporalityStopService.extension","HealthcareService.characteristic.extension","","extensions
@@ -836,7 +836,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.availableTime.extension:ror-available-time-type-of-time","HealthcareService.availableTime.extension","ror-available-time-type-of-time","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time]]} {[]}
 ","typePlageHoraire (Horaire) : apporte un contexte à la plage horaire définie par la suite","Extension créée dans le cadre du ROR pour apporter un contexte à la plage horaire définie par la suite. Un planning peut être constitué de plusieurs plages horaires du même type ou de type différent.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typePlageHoraire"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typePlageHoraire : JDV-J41-TypeHoraire-ROR"
 "HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date","HealthcareService.availableTime.extension","ror-available-time-effective-opening-closing-date","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date]]} {[]}
 ","debutDateEffective + finDateEffective (Horaire)","Extension créée dans le cadre du ROR pour décrire le planning d'activité d'un professionnel ou d'une offre.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

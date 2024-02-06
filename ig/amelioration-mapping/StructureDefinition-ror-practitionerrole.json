@@ -9,7 +9,7 @@
   "version" : "0.2.0",
   "name" : "RORPractitionerRole",
   "status" : "active",
-  "date" : "2024-01-24T16:02:26+00:00",
+  "date" : "2024-02-06T12:55:52+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -292,7 +292,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -598,11 +598,11 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "regionSource"
+        "map" : "regionSource : JDV-J237-RegionOM-ROR"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "regionSource"
+        "map" : "regionSource : JDV-J237-RegionOM-ROR"
       }]
     },
     {
@@ -789,7 +789,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -824,11 +824,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "modeExerciceOffre"
+        "map" : "modeExerciceOffre : JDV-J217-ModeExercice-ROR"
       }]
     },
     {
@@ -863,7 +863,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRoleName",
@@ -933,7 +933,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -967,11 +967,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "civiliteExercice"
+        "map" : "civiliteExercice : JDV-J208-CiviliteExercice-ROR"
       }]
     },
     {
@@ -1037,7 +1037,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1177,7 +1177,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
@@ -1247,7 +1247,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1341,7 +1341,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
@@ -1411,7 +1411,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1713,7 +1713,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -1725,7 +1725,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "secteurConventionnement"
+        "map" : "secteurConventionnement : JDV-J218-CNAMAmeliSecteurConventionnement-ROR"
       }]
     },
     {
@@ -1891,7 +1891,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -1938,7 +1938,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -1985,7 +1985,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
@@ -2028,7 +2028,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
@@ -2089,7 +2089,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
@@ -2242,7 +2242,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2306,7 +2306,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2354,7 +2354,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2566,7 +2566,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.typeSavoirFaire"
+        "map" : "SavoirFaire.typeSavoirFaire : JDV-J209-TypeSavoirFaire-ROR"
       }]
     },
     {
@@ -2630,7 +2630,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.specialite"
+        "map" : "SavoirFaire.specialite : JDV-J210-SpecialiteOrdinale-ROR"
       }]
     },
     {
@@ -2694,7 +2694,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.competence"
+        "map" : "SavoirFaire.competence : JDV-J232-Competence-ROR"
       }]
     },
     {
@@ -2758,7 +2758,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.competenceExclusive"
+        "map" : "SavoirFaire.competenceExclusive : JDV-J211-CompetenceExclusive-ROR"
       }]
     },
     {
@@ -2822,7 +2822,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.orientationParticuliere"
+        "map" : "SavoirFaire.orientationParticuliere : JDV-J212-OrientationParticuliere-ROR"
       }]
     },
     {
@@ -2886,7 +2886,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.capacite"
+        "map" : "SavoirFaire.capacite : JDV-J213-CapaciteSavoirFaire-ROR"
       }]
     },
     {
@@ -2950,7 +2950,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.qualificationPAC"
+        "map" : "SavoirFaire.qualificationPAC : JDV-J214-QualificationPAC-ROR"
       }]
     },
     {
@@ -3014,7 +3014,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.DESCNonQualifiant"
+        "map" : "SavoirFaire.DESCNonQualifiant : JDV-J215-DESCnonQualifiant-ROR"
       }]
     },
     {
@@ -3078,7 +3078,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.droitExerciceComplémentaire"
+        "map" : "SavoirFaire.droitExerciceComplémentaire : JDV-J216-DroitExerciceCompl-ROR"
       }]
     },
     {
@@ -3142,7 +3142,7 @@
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "competenceSpecifique"
+        "map" : "competenceSpecifique : JDV-J33-CompetenceSpecifique-ROR"
       }]
     },
     {
@@ -3177,7 +3177,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -3233,7 +3233,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3283,7 +3283,7 @@
         "human" : "A system is required if a value is provided.",
         "expression" : "value.empty() or system.exists()",
         "xpath" : "not(exists(f:value)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Person"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -3374,7 +3374,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -3409,11 +3409,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "canal"
+        "map" : "canal : JDV-J225-CanalCommunication-ROR"
       }]
     },
     {
@@ -3448,7 +3448,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
@@ -3487,11 +3487,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "niveauConfidentialite"
+        "map" : "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
       }]
     },
     {
@@ -3716,7 +3716,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -3856,7 +3856,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3899,11 +3899,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "typePlageHoraire"
+        "map" : "typePlageHoraire : JDV-J41-TypeHoraire-ROR"
       }]
     },
     {
@@ -3938,7 +3938,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -4004,7 +4004,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -4141,7 +4141,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -4273,7 +4273,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
@@ -4315,7 +4315,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -4588,7 +4588,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -4634,7 +4634,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -4709,7 +4709,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -4795,7 +4795,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -4882,11 +4882,11 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "regionSource"
+        "map" : "regionSource : JDV-J237-RegionOM-ROR"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "regionSource"
+        "map" : "regionSource : JDV-J237-RegionOM-ROR"
       }]
     },
     {
@@ -4907,7 +4907,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "modeExerciceOffre"
+        "map" : "modeExerciceOffre : JDV-J217-ModeExercice-ROR"
       }]
     },
     {
@@ -4928,7 +4928,7 @@
       "sliceName" : "exerciseTitle",
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "civiliteExercice"
+        "map" : "civiliteExercice : JDV-J208-CiviliteExercice-ROR"
       }]
     },
     {
@@ -4962,7 +4962,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "secteurConventionnement"
+        "map" : "secteurConventionnement : JDV-J218-CNAMAmeliSecteurConventionnement-ROR"
       }]
     },
     {
@@ -5106,7 +5106,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.typeSavoirFaire"
+        "map" : "SavoirFaire.typeSavoirFaire : JDV-J209-TypeSavoirFaire-ROR"
       }]
     },
     {
@@ -5122,7 +5122,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.specialite"
+        "map" : "SavoirFaire.specialite : JDV-J210-SpecialiteOrdinale-ROR"
       }]
     },
     {
@@ -5138,7 +5138,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.competence"
+        "map" : "SavoirFaire.competence : JDV-J232-Competence-ROR"
       }]
     },
     {
@@ -5154,7 +5154,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.competenceExclusive"
+        "map" : "SavoirFaire.competenceExclusive : JDV-J211-CompetenceExclusive-ROR"
       }]
     },
     {
@@ -5170,7 +5170,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.orientationParticuliere"
+        "map" : "SavoirFaire.orientationParticuliere : JDV-J212-OrientationParticuliere-ROR"
       }]
     },
     {
@@ -5186,7 +5186,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.capacite"
+        "map" : "SavoirFaire.capacite : JDV-J213-CapaciteSavoirFaire-ROR"
       }]
     },
     {
@@ -5202,7 +5202,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.qualificationPAC"
+        "map" : "SavoirFaire.qualificationPAC : JDV-J214-QualificationPAC-ROR"
       }]
     },
     {
@@ -5218,7 +5218,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.DESCNonQualifiant"
+        "map" : "SavoirFaire.DESCNonQualifiant : JDV-J215-DESCnonQualifiant-ROR"
       }]
     },
     {
@@ -5234,7 +5234,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "SavoirFaire.droitExerciceComplémentaire"
+        "map" : "SavoirFaire.droitExerciceComplémentaire : JDV-J216-DroitExerciceCompl-ROR"
       }]
     },
     {
@@ -5250,7 +5250,7 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "competenceSpecifique"
+        "map" : "competenceSpecifique : JDV-J33-CompetenceSpecifique-ROR"
       }]
     },
     {
@@ -5287,7 +5287,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "canal"
+        "map" : "canal : JDV-J225-CanalCommunication-ROR"
       }]
     },
     {
@@ -5319,7 +5319,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "niveauConfidentialite"
+        "map" : "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
       }]
     },
     {
@@ -5355,7 +5355,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "typePlageHoraire"
+        "map" : "typePlageHoraire : JDV-J41-TypeHoraire-ROR"
       }]
     },
     {

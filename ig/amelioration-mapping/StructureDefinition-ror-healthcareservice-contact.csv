@@ -30,11 +30,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Extension.extension:ror-function-contact","Extension.extension","ror-function-contact","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-function-contact]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR qui indique un titre, une position ou une fonction de la personne assurant le contact au sein de l'organisation (directeur, secrétaire, etc.).","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","fonctionContact"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","fonctionContact : JDV-J220-FonctionContact-ROR"
 "Extension.extension:purposeContact","Extension.extension","purposeContact","","",0,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","natureContact"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","natureContact : JDV-J221-NatureContact-ROR"
 "Extension.extension:purposeContact.id","Extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Extension.extension:purposeContact.extension","Extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -68,7 +68,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Extension.extension:ror-confidentiality-level","Extension.extension","ror-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR pour définir le niveau de restriction de l'accès aux attributs de la classe Contact.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 "Extension.extension:ror-healthcareservice-contact-telecom","Extension.extension","ror-healthcareservice-contact-telecom","","",0,*,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR pour les télécommunications du contact.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -83,7 +83,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Extension.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-communication-channel","Extension.extension.extension","ror-telecom-communication-channel","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","canal"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","canal : JDV-J225-CanalCommunication-ROR"
 "Extension.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-usage","Extension.extension.extension","ror-telecom-usage","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -91,7 +91,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Extension.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-confidentiality-level","Extension.extension.extension","ror-telecom-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
 ","Extension","Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 "Extension.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress","Extension.extension.extension","telecomAddress","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

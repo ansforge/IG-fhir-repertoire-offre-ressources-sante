@@ -9,7 +9,7 @@
   "version" : "0.2.0",
   "name" : "RORTerritorialDivision",
   "status" : "active",
-  "date" : "2024-01-24T16:02:26+00:00",
+  "date" : "2024-02-06T12:55:52+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -147,7 +147,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -181,11 +181,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "type"
+        "map" : "type : JDV-J223-TypeDivisionTerritoriale-ROR"
       }]
     },
     {
@@ -251,7 +251,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -349,11 +349,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "code"
+        "map" : "code : JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR"
       }]
     },
     {
@@ -419,7 +419,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -717,7 +717,7 @@
       "max" : "1",
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "type"
+        "map" : "type : JDV-J223-TypeDivisionTerritoriale-ROR"
       }]
     },
     {
@@ -749,7 +749,7 @@
       "max" : "1",
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "code"
+        "map" : "code : JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR"
       }]
     },
     {

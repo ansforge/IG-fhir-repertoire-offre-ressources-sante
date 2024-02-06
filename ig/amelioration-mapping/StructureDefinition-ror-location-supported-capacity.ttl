@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "RORLocationSupportedCapacity"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-01-24T16:02:26+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-02-06T12:55:52+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -158,8 +158,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -196,13 +196,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.natureCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.natureCapacite : JDV-J187-NatureCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:capacityType.id" ] ;
@@ -269,8 +269,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -374,13 +374,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.statutCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.statutCapacite : JDV-J188-TypeStatutCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:capacityStatus.id" ] ;
@@ -447,8 +447,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -552,13 +552,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.temporaliteCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.temporaliteCapacite : JDV-J189-TemporaliteCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:temporalityCapacity.id" ] ;
@@ -625,8 +625,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -730,8 +730,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -803,8 +803,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -901,13 +901,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeSourceCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeSourceCapacite : JDV-J193-TypeSourceCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:capacitySourceType.id" ] ;
@@ -974,8 +974,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1079,13 +1079,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.genreCapaciteDispo" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.genreCapaciteDispo : JDV-J190-GenreCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:genderCapacityAvailable.id" ] ;
@@ -1152,8 +1152,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1257,8 +1257,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -1330,8 +1330,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1428,13 +1428,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeFermetureCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeFermetureCapacite : JDV-J191-TypeFermetureCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:capacityClosingType.id" ] ;
@@ -1501,8 +1501,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1606,13 +1606,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeLitsSupplementaire" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeLitsSupplementaire : JDV-J192-TypeLitSupplementaire-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:additionalBedType.id" ] ;
@@ -1679,8 +1679,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1784,13 +1784,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeCrise" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeCrise : JDV-J194-TypeCrise-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:crisisType.id" ] ;
@@ -1857,8 +1857,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1962,13 +1962,13 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapacitePriseCharge.affectationTemporaire" ]
+         fhir:map [ fhir:v "CapacitePriseCharge.affectationTemporaire : JDV-J195-AffectationTemporaire-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:temporaryAssignement.id" ] ;
@@ -2035,8 +2035,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2287,7 +2287,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.natureCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.natureCapacite : JDV-J187-NatureCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:capacityType.extension" ] ;
@@ -2318,7 +2318,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.statutCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.statutCapacite : JDV-J188-TypeStatutCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:capacityStatus.extension" ] ;
@@ -2349,7 +2349,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.temporaliteCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.temporaliteCapacite : JDV-J189-TemporaliteCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:temporalityCapacity.extension" ] ;
@@ -2404,7 +2404,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeSourceCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeSourceCapacite : JDV-J193-TypeSourceCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:capacitySourceType.extension" ] ;
@@ -2435,7 +2435,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.genreCapaciteDispo" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.genreCapaciteDispo : JDV-J190-GenreCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:genderCapacityAvailable.extension" ] ;
@@ -2490,7 +2490,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeFermetureCapacite" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeFermetureCapacite : JDV-J191-TypeFermetureCapacite-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:capacityClosingType.extension" ] ;
@@ -2521,7 +2521,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeLitsSupplementaire" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeLitsSupplementaire : JDV-J192-TypeLitSupplementaire-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:additionalBedType.extension" ] ;
@@ -2552,7 +2552,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeCrise" ]
+         fhir:map [ fhir:v "CapaciteAccueilOperationnelle.typeCrise : JDV-J194-TypeCrise-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:crisisType.extension" ] ;
@@ -2583,7 +2583,7 @@
        fhir:max [ fhir:v "1" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationSupportedCapacity" ] ;
-         fhir:map [ fhir:v "CapacitePriseCharge.affectationTemporaire" ]
+         fhir:map [ fhir:v "CapacitePriseCharge.affectationTemporaire : JDV-J195-AffectationTemporaire-ROR" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:temporaryAssignement.extension" ] ;

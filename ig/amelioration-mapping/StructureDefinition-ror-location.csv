@@ -46,7 +46,7 @@ This element can be used to indicate where the current master source of a resour
 "Location.meta.tag:codeRegion","Location.meta.tag","codeRegion","","",0,1,"","","Y","Coding {[]} {[]}
 ","Tags applied to this resource","Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.","The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR","",,,,"Meta.tag",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CV","regionSource"
+","n/a","CV","regionSource : JDV-J237-RegionOM-ROR"
 "Location.implicitRules","Location.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
 ","A set of rules under which this content was created","A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -71,11 +71,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-status","Location.extension","ror-location-status","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-status]]} {[]}
 ","statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement","Extension créée dans le cadre du ROR pour indiquer si le lieu est opérationnel, fermé temporairement ou fermé définitivement.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","statut"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","statut : JDV-J224-StatutLieu-ROR"
 "Location.extension:ror-commune-cog","Location.extension","ror-commune-cog","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog]]} {[]}
 ","communeCog (LieuRealisationOffre) : Code officiel géographique (COG) de la commune dans laquelle le lieu est situé","Extension créée dans le cadre du ROR pour représenter le code officiel géographique (COG) de la commune dans laquelle le lieu est situé.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","communeCog"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","communeCog : JDV-J124-Commune"
 "Location.extension:ror-location-equipment","Location.extension","ror-location-equipment","","",0,*,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment]]} {[]}
 ","EquipementSpecifique : Ressource matérielle discriminante pour la réalisation d'une prestation","Extension créée dans le cadre du ROR pour décrire une ressource matérielle discriminante pour la réalisation d'une prestation. Cette extension a été créée, car Device ne correspondait pas à la définition de l'équipement pour le ROR.
  Device représente une instance d'un équipement alors l'équipement pour le ROR correspond juste au nombre d'équipement de même type.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
@@ -91,7 +91,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-equipment.extension:equipmentType","Location.extension.extension","equipmentType","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typeEquipement"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typeEquipement : JDV-J18-EquipementSpecifique-ROR"
 "Location.extension:ror-location-equipment.extension:equipmentType.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-equipment.extension:equipmentType.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -146,7 +146,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-equipment-limit.extension:equipmentFeature","Location.extension.extension","equipmentFeature","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typeCaracteristique"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typeCaracteristique : JDV-J228-TypeCaracteristiqueEquipement-ROR"
 "Location.extension:ror-location-equipment-limit.extension:equipmentFeature.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-equipment-limit.extension:equipmentFeature.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -197,7 +197,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-residential-capacity.extension:residentialType","Location.extension.extension","residentialType","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typeHabitation"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typeHabitation : JDV-J32-TypeHabitation-ROR"
 "Location.extension:ror-location-residential-capacity.extension:residentialType.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-residential-capacity.extension:residentialType.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -248,7 +248,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:capacityType","Location.extension.extension","capacityType","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.natureCapacite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.natureCapacite : JDV-J187-NatureCapacite-ROR"
 "Location.extension:ror-location-supported-capacity.extension:capacityType.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:capacityType.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -265,7 +265,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:capacityStatus","Location.extension.extension","capacityStatus","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.statutCapacite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.statutCapacite : JDV-J188-TypeStatutCapacite-ROR"
 "Location.extension:ror-location-supported-capacity.extension:capacityStatus.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:capacityStatus.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -282,7 +282,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:temporalityCapacity","Location.extension.extension","temporalityCapacity","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.temporaliteCapacite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.temporaliteCapacite : JDV-J189-TemporaliteCapacite-ROR"
 "Location.extension:ror-location-supported-capacity.extension:temporalityCapacity.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:temporalityCapacity.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -316,7 +316,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:capacitySourceType","Location.extension.extension","capacitySourceType","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.typeSourceCapacite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.typeSourceCapacite : JDV-J193-TypeSourceCapacite-ROR"
 "Location.extension:ror-location-supported-capacity.extension:capacitySourceType.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:capacitySourceType.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -333,7 +333,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:genderCapacityAvailable","Location.extension.extension","genderCapacityAvailable","","",0,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.genreCapaciteDispo"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.genreCapaciteDispo : JDV-J190-GenreCapacite-ROR"
 "Location.extension:ror-location-supported-capacity.extension:genderCapacityAvailable.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:genderCapacityAvailable.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -367,7 +367,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:capacityClosingType","Location.extension.extension","capacityClosingType","","",0,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.typeFermetureCapacite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.typeFermetureCapacite : JDV-J191-TypeFermetureCapacite-ROR"
 "Location.extension:ror-location-supported-capacity.extension:capacityClosingType.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:capacityClosingType.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -384,7 +384,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:additionalBedType","Location.extension.extension","additionalBedType","","",0,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.typeLitsSupplementaire"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.typeLitsSupplementaire : JDV-J192-TypeLitSupplementaire-ROR"
 "Location.extension:ror-location-supported-capacity.extension:additionalBedType.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:additionalBedType.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -401,7 +401,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:crisisType","Location.extension.extension","crisisType","","",0,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.typeCrise"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapaciteAccueilOperationnelle.typeCrise : JDV-J194-TypeCrise-ROR"
 "Location.extension:ror-location-supported-capacity.extension:crisisType.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:crisisType.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -418,7 +418,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.extension:ror-location-supported-capacity.extension:temporaryAssignement","Location.extension.extension","temporaryAssignement","","",1,1,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapacitePriseCharge.affectationTemporaire"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","CapacitePriseCharge.affectationTemporaire : JDV-J195-AffectationTemporaire-ROR"
 "Location.extension:ror-location-supported-capacity.extension:temporaryAssignement.id","Location.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.extension:ror-location-supported-capacity.extension:temporaryAssignement.extension","Location.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
@@ -655,7 +655,7 @@ For searching knowing previous names that the location was known by can be very 
 "Location.type","Location.type","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","fonctionLieu (LieuRealisationOffre) : La fonction correspond à la destination d'usage du lieu","Indicates the type of function performed at the location.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J198-FonctionLieu-ROR/FHIR/JDV-J198-FonctionLieu-ROR","",,,,"Location.type",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".code","FiveWs.class","fonctionLieu"
+","n/a","CD",".code","FiveWs.class","fonctionLieu : JDV-J198-FonctionLieu-ROR"
 "Location.telecom","Location.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
 ","telecommunication (LieuRealisationOffre) : Adresse(s) de télécommunication du lieu","The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.","","","","","","","","","",,,,,"",,,,"Location.telecom",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -670,7 +670,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.telecom.extension:ror-telecom-communication-channel","Location.telecom.extension","ror-telecom-communication-channel","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
 ","canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication","Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","canal"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","canal : JDV-J225-CanalCommunication-ROR"
 "Location.telecom.extension:ror-telecom-usage","Location.telecom.extension","ror-telecom-usage","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
 ","utilisation (Telecommunication) : Utilisation du canal de communication","Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -678,7 +678,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.telecom.extension:ror-telecom-confidentiality-level","Location.telecom.extension","ror-telecom-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
 ","niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication","Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 "Location.telecom.system","Location.telecom.system","","","",0,1,"","","Y","code {[]} {[]}
 ","phone | fax | email | pager | url | sms | other","Telecommunications form for contact point - what communications system is required to make use of the contact.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"required","Telecommunications form for contact point.","http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1","",,,,"ContactPoint.system",0,1,"ele-1
 cpt-2","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -756,7 +756,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.address.line.extension:streetNameType","Location.address.line.extension","streetNameType","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType]]} {[]}
 ","typeVoie (Adresse) : Type de voie","The designation given to the street. (e.g. Street, Avenue, Crescent, etc.).","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A","ADXP[partType=STTYP]","typeVoie"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A","ADXP[partType=STTYP]","typeVoie : JDV-J219-TypeVoie-ROR"
 "Location.address.line.extension:streetNameType.id","Location.address.line.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Location.address.line.extension:streetNameType.extension","Location.address.line.extension.extension","","extensions
@@ -842,7 +842,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Location.position.extension:ror-coordinate-reliability","Location.position.extension","ror-coordinate-reliability","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-coordinate-reliability]]} {[]}
 ","coordonneesFiables (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité","Extension créée dans le cadre du ROR pour signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","systemeGeodesique"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","coordonneesFiables"
 "Location.position.modifierExtension","Location.position.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.

@@ -32,7 +32,7 @@
   <version value="0.2.0"/>
   <name value="RORHealthcareServiceContact"/>
   <status value="active"/>
-  <date value="2024-01-24T16:02:26+00:00"/>
+  <date value="2024-02-06T12:55:52+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -162,7 +162,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:name">
@@ -195,7 +195,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
@@ -262,7 +262,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:name.url">
@@ -353,11 +353,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="fonctionContact"/>
+        <map value="fonctionContact : JDV-J220-FonctionContact-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:purposeContact">
@@ -390,11 +390,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="natureContact"/>
+        <map value="natureContact : JDV-J221-NatureContact-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:purposeContact.id">
@@ -457,7 +457,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:purposeContact.url">
@@ -551,7 +551,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
@@ -618,7 +618,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:description.url">
@@ -709,11 +709,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="niveauConfidentialite"/>
+        <map value="niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:ror-healthcareservice-contact-telecom">
@@ -747,7 +747,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
@@ -818,7 +818,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-communication-channel">
@@ -852,11 +852,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="canal"/>
+        <map value="canal : JDV-J225-CanalCommunication-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-usage">
@@ -890,7 +890,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
@@ -928,11 +928,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="niveauConfidentialite"/>
+        <map value="niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress">
@@ -965,7 +965,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
@@ -1032,7 +1032,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress.url">
@@ -1549,7 +1549,7 @@
       </type>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="fonctionContact"/>
+        <map value="fonctionContact : JDV-J220-FonctionContact-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:purposeContact">
@@ -1559,7 +1559,7 @@
       <max value="1"/>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="natureContact"/>
+        <map value="natureContact : JDV-J221-NatureContact-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:purposeContact.extension">
@@ -1615,7 +1615,7 @@
       </type>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="niveauConfidentialite"/>
+        <map value="niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:ror-healthcareservice-contact-telecom">
@@ -1637,7 +1637,7 @@
       <sliceName value="ror-telecom-communication-channel"/>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="canal"/>
+        <map value="canal : JDV-J225-CanalCommunication-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-usage">
@@ -1653,7 +1653,7 @@
       <sliceName value="ror-telecom-confidentiality-level"/>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
-        <map value="niveauConfidentialite"/>
+        <map value="niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"/>
       </mapping>
     </element>
     <element id="Extension.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress">

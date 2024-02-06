@@ -9,7 +9,7 @@
   "version" : "0.2.0",
   "name" : "RORHealthcareServiceContact",
   "status" : "active",
-  "date" : "2024-01-24T16:02:26+00:00",
+  "date" : "2024-02-06T12:55:52+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -143,7 +143,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -177,7 +177,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
@@ -247,7 +247,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -342,11 +342,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "fonctionContact"
+        "map" : "fonctionContact : JDV-J220-FonctionContact-ROR"
       }]
     },
     {
@@ -380,11 +380,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "natureContact"
+        "map" : "natureContact : JDV-J221-NatureContact-ROR"
       }]
     },
     {
@@ -450,7 +450,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -548,7 +548,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
@@ -618,7 +618,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -713,11 +713,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "niveauConfidentialite"
+        "map" : "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
       }]
     },
     {
@@ -752,7 +752,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
@@ -826,7 +826,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -861,11 +861,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "canal"
+        "map" : "canal : JDV-J225-CanalCommunication-ROR"
       }]
     },
     {
@@ -900,7 +900,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
@@ -939,11 +939,11 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "niveauConfidentialite"
+        "map" : "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
       }]
     },
     {
@@ -977,7 +977,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
@@ -1047,7 +1047,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1580,7 +1580,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "fonctionContact"
+        "map" : "fonctionContact : JDV-J220-FonctionContact-ROR"
       }]
     },
     {
@@ -1591,7 +1591,7 @@
       "max" : "1",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "natureContact"
+        "map" : "natureContact : JDV-J221-NatureContact-ROR"
       }]
     },
     {
@@ -1655,7 +1655,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "niveauConfidentialite"
+        "map" : "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
       }]
     },
     {
@@ -1679,7 +1679,7 @@
       "sliceName" : "ror-telecom-communication-channel",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "canal"
+        "map" : "canal : JDV-J225-CanalCommunication-ROR"
       }]
     },
     {
@@ -1697,7 +1697,7 @@
       "sliceName" : "ror-telecom-confidentiality-level",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "niveauConfidentialite"
+        "map" : "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
       }]
     },
     {

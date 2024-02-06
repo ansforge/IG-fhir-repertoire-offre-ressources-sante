@@ -58,7 +58,7 @@
   <version value="0.2.0"/>
   <name value="RORPractitionerRole"/>
   <status value="active"/>
-  <date value="2024-01-24T16:02:26+00:00"/>
+  <date value="2024-02-06T12:55:52+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -330,7 +330,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -627,11 +627,11 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="regionSource"/>
+        <map value="regionSource : JDV-J237-RegionOM-ROR"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="regionSource"/>
+        <map value="regionSource : JDV-J237-RegionOM-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.implicitRules">
@@ -811,7 +811,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-unit-exercise-mode">
@@ -845,11 +845,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="modeExerciceOffre"/>
+        <map value="modeExerciceOffre : JDV-J217-ModeExercice-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name">
@@ -883,7 +883,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRoleName"/>
@@ -950,7 +950,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name.extension:exerciseTitle">
@@ -983,11 +983,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="civiliteExercice"/>
+        <map value="civiliteExercice : JDV-J208-CiviliteExercice-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name.extension:exerciseTitle.id">
@@ -1050,7 +1050,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name.extension:exerciseTitle.url">
@@ -1185,7 +1185,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
@@ -1252,7 +1252,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name.extension:exerciseLastName.url">
@@ -1342,7 +1342,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
@@ -1409,7 +1409,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name.extension:exerciseFirstName.url">
@@ -1704,7 +1704,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -1716,7 +1716,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="secteurConventionnement"/>
+        <map value="secteurConventionnement : JDV-J218-CNAMAmeliSecteurConventionnement-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:contracted.id">
@@ -1875,7 +1875,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -1921,7 +1921,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -1967,7 +1967,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
@@ -2009,7 +2009,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
@@ -2067,7 +2067,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <isModifier value="true"/>
       <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them"/>
@@ -2217,7 +2217,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ResearchSubject"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -2280,7 +2280,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ResearchSubject"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -2327,7 +2327,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ResearchSubject"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -2535,7 +2535,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.typeSavoirFaire"/>
+        <map value="SavoirFaire.typeSavoirFaire : JDV-J209-TypeSavoirFaire-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specialty">
@@ -2598,7 +2598,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.specialite"/>
+        <map value="SavoirFaire.specialite : JDV-J210-SpecialiteOrdinale-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:competence">
@@ -2661,7 +2661,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.competence"/>
+        <map value="SavoirFaire.competence : JDV-J232-Competence-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:exclusiveCompetence">
@@ -2724,7 +2724,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.competenceExclusive"/>
+        <map value="SavoirFaire.competenceExclusive : JDV-J211-CompetenceExclusive-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specificOrientation">
@@ -2787,7 +2787,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.orientationParticuliere"/>
+        <map value="SavoirFaire.orientationParticuliere : JDV-J212-OrientationParticuliere-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:expertiseCapacity">
@@ -2850,7 +2850,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.capacite"/>
+        <map value="SavoirFaire.capacite : JDV-J213-CapaciteSavoirFaire-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:qualificationPAC">
@@ -2913,7 +2913,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.qualificationPAC"/>
+        <map value="SavoirFaire.qualificationPAC : JDV-J214-QualificationPAC-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:nonQualifyingDESC">
@@ -2976,7 +2976,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.DESCNonQualifiant"/>
+        <map value="SavoirFaire.DESCNonQualifiant : JDV-J215-DESCnonQualifiant-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:supplementaryExerciseRight">
@@ -3039,7 +3039,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.droitExerciceComplémentaire"/>
+        <map value="SavoirFaire.droitExerciceComplémentaire : JDV-J216-DroitExerciceCompl-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specificCompetence">
@@ -3102,7 +3102,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="competenceSpecifique"/>
+        <map value="competenceSpecifique : JDV-J33-CompetenceSpecifique-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.location">
@@ -3136,7 +3136,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ResearchSubject"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -3191,7 +3191,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ResearchSubject"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -3240,7 +3240,7 @@
         <human value="A system is required if a value is provided."/>
         <expression value="value.empty() or system.exists()"/>
         <xpath value="not(exists(f:value)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Person"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -3328,7 +3328,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="PractitionerRole.telecom.extension:ror-telecom-communication-channel">
@@ -3362,11 +3362,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="canal"/>
+        <map value="canal : JDV-J225-CanalCommunication-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.telecom.extension:ror-telecom-usage">
@@ -3400,7 +3400,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
@@ -3438,11 +3438,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="niveauConfidentialite"/>
+        <map value="niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.telecom.system">
@@ -3660,7 +3660,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ResearchSubject"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -3794,7 +3794,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -3836,11 +3836,11 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="typePlageHoraire"/>
+        <map value="typePlageHoraire : JDV-J41-TypeHoraire-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date">
@@ -3874,7 +3874,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date.id">
@@ -3937,7 +3937,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date.url">
@@ -4066,7 +4066,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -4195,7 +4195,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
@@ -4236,7 +4236,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <isModifier value="true"/>
       <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
@@ -4498,7 +4498,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -4543,7 +4543,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <isModifier value="true"/>
       <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
@@ -4616,7 +4616,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ResearchSubject"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -4700,7 +4700,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ResearchSubject"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -4781,11 +4781,11 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="regionSource"/>
+        <map value="regionSource : JDV-J237-RegionOM-ROR"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="regionSource"/>
+        <map value="regionSource : JDV-J237-RegionOM-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension">
@@ -4804,7 +4804,7 @@
       </type>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="modeExerciceOffre"/>
+        <map value="modeExerciceOffre : JDV-J217-ModeExercice-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name">
@@ -4823,7 +4823,7 @@
       <sliceName value="exerciseTitle"/>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="civiliteExercice"/>
+        <map value="civiliteExercice : JDV-J208-CiviliteExercice-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name.extension:exerciseLastName">
@@ -4854,7 +4854,7 @@
       </type>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="secteurConventionnement"/>
+        <map value="secteurConventionnement : JDV-J218-CNAMAmeliSecteurConventionnement-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:contracted.extension">
@@ -4987,7 +4987,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.typeSavoirFaire"/>
+        <map value="SavoirFaire.typeSavoirFaire : JDV-J209-TypeSavoirFaire-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specialty">
@@ -5002,7 +5002,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.specialite"/>
+        <map value="SavoirFaire.specialite : JDV-J210-SpecialiteOrdinale-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:competence">
@@ -5017,7 +5017,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.competence"/>
+        <map value="SavoirFaire.competence : JDV-J232-Competence-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:exclusiveCompetence">
@@ -5032,7 +5032,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.competenceExclusive"/>
+        <map value="SavoirFaire.competenceExclusive : JDV-J211-CompetenceExclusive-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specificOrientation">
@@ -5047,7 +5047,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.orientationParticuliere"/>
+        <map value="SavoirFaire.orientationParticuliere : JDV-J212-OrientationParticuliere-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:expertiseCapacity">
@@ -5062,7 +5062,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.capacite"/>
+        <map value="SavoirFaire.capacite : JDV-J213-CapaciteSavoirFaire-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:qualificationPAC">
@@ -5077,7 +5077,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.qualificationPAC"/>
+        <map value="SavoirFaire.qualificationPAC : JDV-J214-QualificationPAC-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:nonQualifyingDESC">
@@ -5092,7 +5092,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.DESCNonQualifiant"/>
+        <map value="SavoirFaire.DESCNonQualifiant : JDV-J215-DESCnonQualifiant-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:supplementaryExerciseRight">
@@ -5107,7 +5107,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="SavoirFaire.droitExerciceComplémentaire"/>
+        <map value="SavoirFaire.droitExerciceComplémentaire : JDV-J216-DroitExerciceCompl-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specificCompetence">
@@ -5122,7 +5122,7 @@
       </binding>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
-        <map value="competenceSpecifique"/>
+        <map value="competenceSpecifique : JDV-J33-CompetenceSpecifique-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.healthcareService">
@@ -5155,7 +5155,7 @@
       </type>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="canal"/>
+        <map value="canal : JDV-J225-CanalCommunication-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.telecom.extension:ror-telecom-usage">
@@ -5185,7 +5185,7 @@
       </type>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="niveauConfidentialite"/>
+        <map value="niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.telecom.value">
@@ -5218,7 +5218,7 @@
       </type>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
-        <map value="typePlageHoraire"/>
+        <map value="typePlageHoraire : JDV-J41-TypeHoraire-ROR"/>
       </mapping>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date">
