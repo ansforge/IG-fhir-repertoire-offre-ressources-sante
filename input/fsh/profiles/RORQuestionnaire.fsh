@@ -33,7 +33,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext ^short = "Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable"
 * useContext 1..*
 * useContext MS
-* useContext from ror-usage-context-type-vs (extensible)
+* useContext.code from ror-usage-context-type-vs (extensible)
 * useContext.code = $TRE-R67-TypeStructure-EJ-EG#EG // fixé 
 * useContext.valueCodeableConcept from $JDV-J55-CategorieEG-ROR (required)
 * useContext.valueCodeableConcept ^short = "Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
