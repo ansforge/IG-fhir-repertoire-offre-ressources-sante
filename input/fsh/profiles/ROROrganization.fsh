@@ -147,8 +147,8 @@ ou nom de l'OI : Nom de l'organisation interne"
     iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..1 MS and
     iso21090-ADXP-streetNameType named streetNameType 0..1 MS and
     iso21090-ADXP-postBox named postalBox 0..1 MS and
-    iso21090-ADXP-streetNameBase named streetNameBase 0..* MS and
-    iso21090-ADXP-precinct named precinct 0..* MS
+    iso21090-ADXP-streetNameBase named streetNameBase 0..1 MS and
+    as-ext-lieu-dit named lieuDit 0..1 MS
 * address.line.extension[careOf] ^short = "pointRemise (Adresse)"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse)"
 * address.line.extension[houseNumber] ^short = "numeroVoie(Adresse)"
@@ -157,7 +157,7 @@ ou nom de l'OI : Nom de l'organisation interne"
 * address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
 * address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse)"
-* address.line.extension[precinct] ^short = "lieuDit (Adresse)"
+* address.line.extension[lieuDit] ^short = "lieuDit (Adresse)"
 
 
 * telecom MS
