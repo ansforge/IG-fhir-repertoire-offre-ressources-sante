@@ -1,7 +1,7 @@
 Instance: 1e8671d40ee5f7837847866915036a8a6ee9625b002e55d044a0e2c1349e3be6
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/1e8671d40ee5f7837847866915036a8a6ee9625b002e55d044a0e2c1349e3be6"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/1e8671d40ee5f7837847866915036a8a6ee9625b002e55d044a0e2c1349e3be6"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationExtensionRorOrganizationAccessibilityLocation"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.extension:ror-organization-accessibility-location"

@@ -1,7 +1,7 @@
 Instance: d8870128c52e4f12e1cd64498ac388fd1f17f239f32cbfa7d5003cf0284dcf00
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/d8870128c52e4f12e1cd64498ac388fd1f17f239f32cbfa7d5003cf0284dcf00"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/d8870128c52e4f12e1cd64498ac388fd1f17f239f32cbfa7d5003cf0284dcf00"
 * version = "0.0"
 * name = "FullIgRORMeasureReportMustSupportElementMeasureReportGroupMeasureScore"
 * title = "IG: full-ig; Profile: RORMeasureReport; Case: Must Support Element; Element: MeasureReport.group.measureScore"

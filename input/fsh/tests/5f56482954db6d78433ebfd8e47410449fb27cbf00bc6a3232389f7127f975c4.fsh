@@ -1,7 +1,7 @@
 Instance: 5f56482954db6d78433ebfd8e47410449fb27cbf00bc6a3232389f7127f975c4
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/5f56482954db6d78433ebfd8e47410449fb27cbf00bc6a3232389f7127f975c4"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/5f56482954db6d78433ebfd8e47410449fb27cbf00bc6a3232389f7127f975c4"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationAddressLineExtensionAdditionalLocator"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.address.line.extension:additionalLocator"

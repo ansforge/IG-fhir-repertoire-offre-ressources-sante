@@ -1,7 +1,7 @@
 Instance: a074ef95de8e9db1269af23f99cd835117491e29969ce4a2df9bf3a551600dfa
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/a074ef95de8e9db1269af23f99cd835117491e29969ce4a2df9bf3a551600dfa"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/a074ef95de8e9db1269af23f99cd835117491e29969ce4a2df9bf3a551600dfa"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationIdentifierIdExterneSynchro"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.identifier:idExterneSynchro"

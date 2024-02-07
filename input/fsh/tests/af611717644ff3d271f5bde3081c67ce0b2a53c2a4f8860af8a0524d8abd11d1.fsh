@@ -1,7 +1,7 @@
 Instance: af611717644ff3d271f5bde3081c67ce0b2a53c2a4f8860af8a0524d8abd11d1
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/af611717644ff3d271f5bde3081c67ce0b2a53c2a4f8860af8a0524d8abd11d1"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/af611717644ff3d271f5bde3081c67ce0b2a53c2a4f8860af8a0524d8abd11d1"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleExtensionRorMetaComment"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.extension:ror-meta-comment"

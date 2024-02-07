@@ -1,7 +1,7 @@
 Instance: 840d55954cdb3dc584db85a7518c4f6e43ab71c6df2824cca0a8df1fde75a86a
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/840d55954cdb3dc584db85a7518c4f6e43ab71c6df2824cca0a8df1fde75a86a"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/840d55954cdb3dc584db85a7518c4f6e43ab71c6df2824cca0a8df1fde75a86a"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationExtensionRorMetaCreationDate"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.extension:ror-meta-creation-date"

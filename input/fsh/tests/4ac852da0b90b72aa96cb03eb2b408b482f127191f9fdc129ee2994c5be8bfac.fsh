@@ -1,7 +1,7 @@
 Instance: 4ac852da0b90b72aa96cb03eb2b408b482f127191f9fdc129ee2994c5be8bfac
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/4ac852da0b90b72aa96cb03eb2b408b482f127191f9fdc129ee2994c5be8bfac"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/4ac852da0b90b72aa96cb03eb2b408b482f127191f9fdc129ee2994c5be8bfac"
 * version = "0.0"
 * name = "FullIgRORMeasureMustSupportElementMeasureType"
 * title = "IG: full-ig; Profile: RORMeasure; Case: Must Support Element; Element: Measure.type"

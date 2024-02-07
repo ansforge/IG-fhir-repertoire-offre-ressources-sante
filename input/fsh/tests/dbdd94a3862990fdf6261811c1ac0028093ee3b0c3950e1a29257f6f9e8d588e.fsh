@@ -1,7 +1,7 @@
 Instance: dbdd94a3862990fdf6261811c1ac0028093ee3b0c3950e1a29257f6f9e8d588e
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/dbdd94a3862990fdf6261811c1ac0028093ee3b0c3950e1a29257f6f9e8d588e"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/dbdd94a3862990fdf6261811c1ac0028093ee3b0c3950e1a29257f6f9e8d588e"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationTelecomExtensionRorTelecomUsage"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.telecom.extension:ror-telecom-usage"

@@ -1,7 +1,7 @@
 Instance: fa0de844cd2e173c1121e45fa0a94ed08613c0a7cd9cb39aee38083691e28fe3
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/fa0de844cd2e173c1121e45fa0a94ed08613c0a7cd9cb39aee38083691e28fe3"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/fa0de844cd2e173c1121e45fa0a94ed08613c0a7cd9cb39aee38083691e28fe3"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceTelecomExtensionRorTelecomConfidentialityLevel"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.telecom.extension:ror-telecom-confidentiality-level"

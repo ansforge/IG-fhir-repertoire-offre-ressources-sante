@@ -1,7 +1,7 @@
 Instance: 32dc950ffd59d4e1a9463a0f2e4dc12b1929ee01063d6d85fc37c1f8ee2304ec
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/32dc950ffd59d4e1a9463a0f2e4dc12b1929ee01063d6d85fc37c1f8ee2304ec"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/32dc950ffd59d4e1a9463a0f2e4dc12b1929ee01063d6d85fc37c1f8ee2304ec"
 * version = "0.0"
 * name = "FullIgRORTaskReadProfile"
 * title = "IG: full-ig; Profile: RORTask; Case: Read Profile"

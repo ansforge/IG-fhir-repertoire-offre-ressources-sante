@@ -1,7 +1,7 @@
 Instance: 37ccce9e59c0c0f1536762a4c18f71c1002c26c58b7ee8ba8f6a32ae2b2e1b76
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/37ccce9e59c0c0f1536762a4c18f71c1002c26c58b7ee8ba8f6a32ae2b2e1b76"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/37ccce9e59c0c0f1536762a4c18f71c1002c26c58b7ee8ba8f6a32ae2b2e1b76"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationAddressLineExtensionPostalBox"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.address.line.extension:postalBox"

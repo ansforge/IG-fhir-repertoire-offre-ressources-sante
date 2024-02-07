@@ -1,7 +1,7 @@
 Instance: f646ea8ebf982e772a55b32d0347a1ffe38e8a70fc0c1574256a96062f2ebeaf
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/f646ea8ebf982e772a55b32d0347a1ffe38e8a70fc0c1574256a96062f2ebeaf"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/f646ea8ebf982e772a55b32d0347a1ffe38e8a70fc0c1574256a96062f2ebeaf"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleSpecialtyExpertiseCapacity"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.specialty:expertiseCapacity"

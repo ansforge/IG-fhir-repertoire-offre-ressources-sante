@@ -1,7 +1,7 @@
 Instance: e77611e7ee666d84426566461ea34c336e94314bc800b7bacb44e93d5f809ad8
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/e77611e7ee666d84426566461ea34c336e94314bc800b7bacb44e93d5f809ad8"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/e77611e7ee666d84426566461ea34c336e94314bc800b7bacb44e93d5f809ad8"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceExtensionRorHealthcareserviceNoConsentHabilitation"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.extension:ror-healthcareservice-no-consent-habilitation"

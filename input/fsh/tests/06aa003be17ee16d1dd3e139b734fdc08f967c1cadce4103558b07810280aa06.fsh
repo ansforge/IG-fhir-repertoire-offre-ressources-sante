@@ -1,7 +1,7 @@
 Instance: 06aa003be17ee16d1dd3e139b734fdc08f967c1cadce4103558b07810280aa06
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/06aa003be17ee16d1dd3e139b734fdc08f967c1cadce4103558b07810280aa06"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/06aa003be17ee16d1dd3e139b734fdc08f967c1cadce4103558b07810280aa06"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationAddressLineExtensionPostalBox"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.address.line.extension:postalBox"

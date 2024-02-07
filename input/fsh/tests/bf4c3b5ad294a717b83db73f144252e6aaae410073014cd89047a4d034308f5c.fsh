@@ -1,7 +1,7 @@
 Instance: bf4c3b5ad294a717b83db73f144252e6aaae410073014cd89047a4d034308f5c
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/bf4c3b5ad294a717b83db73f144252e6aaae410073014cd89047a4d034308f5c"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/bf4c3b5ad294a717b83db73f144252e6aaae410073014cd89047a4d034308f5c"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceAvailableTimeExtensionRorAvailableTimeEffectiveOpeningClosingDate"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date"

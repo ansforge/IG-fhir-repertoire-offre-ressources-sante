@@ -1,7 +1,7 @@
 Instance: 32a00511f98e7ff8b88c971f81f9aeb2cfe5ae8e74f0f4ffac40104328da9715
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/32a00511f98e7ff8b88c971f81f9aeb2cfe5ae8e74f0f4ffac40104328da9715"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/32a00511f98e7ff8b88c971f81f9aeb2cfe5ae8e74f0f4ffac40104328da9715"
 * version = "0.0"
 * name = "FullIgRORMeasureReportMustSupportElementMeasureReportDate"
 * title = "IG: full-ig; Profile: RORMeasureReport; Case: Must Support Element; Element: MeasureReport.date"

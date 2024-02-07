@@ -1,7 +1,7 @@
 Instance: 2745b6a28b20825d68ab314ef8679fa78c195b394021fe4e59fa27546e980070
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/2745b6a28b20825d68ab314ef8679fa78c195b394021fe4e59fa27546e980070"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/2745b6a28b20825d68ab314ef8679fa78c195b394021fe4e59fa27546e980070"
 * version = "0.0"
 * name = "FullIgRORPractitionerMustSupportElementPractitionerMetaTagCodeRegion"
 * title = "IG: full-ig; Profile: RORPractitioner; Case: Must Support Element; Element: Practitioner.meta.tag:codeRegion"

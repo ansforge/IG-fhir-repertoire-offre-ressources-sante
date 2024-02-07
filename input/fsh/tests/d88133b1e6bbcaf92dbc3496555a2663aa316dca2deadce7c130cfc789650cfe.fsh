@@ -1,7 +1,7 @@
 Instance: d88133b1e6bbcaf92dbc3496555a2663aa316dca2deadce7c130cfc789650cfe
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/d88133b1e6bbcaf92dbc3496555a2663aa316dca2deadce7c130cfc789650cfe"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/d88133b1e6bbcaf92dbc3496555a2663aa316dca2deadce7c130cfc789650cfe"
 * version = "0.0"
 * name = "FullIgRORLocationReadProfile"
 * title = "IG: full-ig; Profile: RORLocation; Case: Read Profile"

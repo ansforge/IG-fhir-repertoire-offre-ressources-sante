@@ -1,7 +1,7 @@
 Instance: 9853ec6673a4c31c913fb3bced6e30fcb91910ef81a8a86d1c71ea3a1ce759fe
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/9853ec6673a4c31c913fb3bced6e30fcb91910ef81a8a86d1c71ea3a1ce759fe"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/9853ec6673a4c31c913fb3bced6e30fcb91910ef81a8a86d1c71ea3a1ce759fe"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceMetaTagCodeRegion"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.meta.tag:codeRegion"

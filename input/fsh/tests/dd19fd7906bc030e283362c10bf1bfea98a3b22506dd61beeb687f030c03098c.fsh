@@ -1,7 +1,7 @@
 Instance: dd19fd7906bc030e283362c10bf1bfea98a3b22506dd61beeb687f030c03098c
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/dd19fd7906bc030e283362c10bf1bfea98a3b22506dd61beeb687f030c03098c"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/dd19fd7906bc030e283362c10bf1bfea98a3b22506dd61beeb687f030c03098c"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleAvailableTimeExtensionRorAvailableTimeTypeOfTime"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.availableTime.extension:ror-available-time-type-of-time"

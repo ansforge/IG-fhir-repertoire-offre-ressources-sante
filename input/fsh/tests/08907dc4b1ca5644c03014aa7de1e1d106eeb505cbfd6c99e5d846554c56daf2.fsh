@@ -1,7 +1,7 @@
 Instance: 08907dc4b1ca5644c03014aa7de1e1d106eeb505cbfd6c99e5d846554c56daf2
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/08907dc4b1ca5644c03014aa7de1e1d106eeb505cbfd6c99e5d846554c56daf2"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/08907dc4b1ca5644c03014aa7de1e1d106eeb505cbfd6c99e5d846554c56daf2"
 * version = "0.0"
 * name = "FullIgRORTaskMustSupportElementTaskInputRuleErrorId"
 * title = "IG: full-ig; Profile: RORTask; Case: Must Support Element; Element: Task.input:ruleErrorId"

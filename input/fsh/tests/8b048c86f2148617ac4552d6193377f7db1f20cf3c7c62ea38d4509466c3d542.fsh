@@ -1,7 +1,7 @@
 Instance: 8b048c86f2148617ac4552d6193377f7db1f20cf3c7c62ea38d4509466c3d542
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/8b048c86f2148617ac4552d6193377f7db1f20cf3c7c62ea38d4509466c3d542"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/8b048c86f2148617ac4552d6193377f7db1f20cf3c7c62ea38d4509466c3d542"
 * version = "0.0"
 * name = "FullIgRORTaskMustSupportElementTaskDescription"
 * title = "IG: full-ig; Profile: RORTask; Case: Must Support Element; Element: Task.description"

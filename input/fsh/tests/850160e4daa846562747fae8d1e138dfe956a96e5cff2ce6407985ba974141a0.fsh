@@ -1,7 +1,7 @@
 Instance: 850160e4daa846562747fae8d1e138dfe956a96e5cff2ce6407985ba974141a0
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/850160e4daa846562747fae8d1e138dfe956a96e5cff2ce6407985ba974141a0"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/850160e4daa846562747fae8d1e138dfe956a96e5cff2ce6407985ba974141a0"
 * version = "0.0"
 * name = "FullIgROROrganizationReadProfile"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Read Profile"

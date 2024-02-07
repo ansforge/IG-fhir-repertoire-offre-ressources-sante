@@ -1,7 +1,7 @@
 Instance: f33c713ec96db6d0530274edbe1f04ce39b0ed02cb2ba6f3d8e7137ed662d668
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/f33c713ec96db6d0530274edbe1f04ce39b0ed02cb2ba6f3d8e7137ed662d668"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/f33c713ec96db6d0530274edbe1f04ce39b0ed02cb2ba6f3d8e7137ed662d668"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleCode"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.code"

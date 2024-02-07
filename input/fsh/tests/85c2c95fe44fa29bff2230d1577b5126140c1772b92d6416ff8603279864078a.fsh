@@ -1,7 +1,7 @@
 Instance: 85c2c95fe44fa29bff2230d1577b5126140c1772b92d6416ff8603279864078a
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/85c2c95fe44fa29bff2230d1577b5126140c1772b92d6416ff8603279864078a"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/85c2c95fe44fa29bff2230d1577b5126140c1772b92d6416ff8603279864078a"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationAddressPostalCode"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.address.postalCode"

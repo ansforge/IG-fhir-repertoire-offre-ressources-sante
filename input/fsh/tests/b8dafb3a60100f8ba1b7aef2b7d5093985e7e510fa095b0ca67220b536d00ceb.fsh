@@ -1,7 +1,7 @@
 Instance: b8dafb3a60100f8ba1b7aef2b7d5093985e7e510fa095b0ca67220b536d00ceb
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/b8dafb3a60100f8ba1b7aef2b7d5093985e7e510fa095b0ca67220b536d00ceb"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/b8dafb3a60100f8ba1b7aef2b7d5093985e7e510fa095b0ca67220b536d00ceb"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationExtensionRorTerritorialDivision"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.extension:ror-territorial-division"

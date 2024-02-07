@@ -1,7 +1,7 @@
 Instance: 9baaed8d6544c2b82a67210891566c8bb5eda37a977338f844ed7e4a7ebd5c28
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/9baaed8d6544c2b82a67210891566c8bb5eda37a977338f844ed7e4a7ebd5c28"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/9baaed8d6544c2b82a67210891566c8bb5eda37a977338f844ed7e4a7ebd5c28"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceAvailableTimeExtensionRorAvailableTimeTypeOfTime"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.availableTime.extension:ror-available-time-type-of-time"

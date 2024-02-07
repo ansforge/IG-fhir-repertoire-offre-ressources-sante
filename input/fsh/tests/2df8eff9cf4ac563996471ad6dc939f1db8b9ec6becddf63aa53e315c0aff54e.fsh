@@ -1,7 +1,7 @@
 Instance: 2df8eff9cf4ac563996471ad6dc939f1db8b9ec6becddf63aa53e315c0aff54e
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/2df8eff9cf4ac563996471ad6dc939f1db8b9ec6becddf63aa53e315c0aff54e"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/2df8eff9cf4ac563996471ad6dc939f1db8b9ec6becddf63aa53e315c0aff54e"
 * version = "0.0"
 * name = "FullIgRORTaskMustSupportElementTaskInputPathElementError"
 * title = "IG: full-ig; Profile: RORTask; Case: Must Support Element; Element: Task.input:pathElementError"

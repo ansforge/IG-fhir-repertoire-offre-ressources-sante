@@ -1,7 +1,7 @@
 Instance: 38d920ea35478f082818516d8cc708234c5d894a4e0d9af3c1d101dd0a11e47c
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/38d920ea35478f082818516d8cc708234c5d894a4e0d9af3c1d101dd0a11e47c"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/38d920ea35478f082818516d8cc708234c5d894a4e0d9af3c1d101dd0a11e47c"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleSpecialtyQualificationPAC"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.specialty:qualificationPAC"

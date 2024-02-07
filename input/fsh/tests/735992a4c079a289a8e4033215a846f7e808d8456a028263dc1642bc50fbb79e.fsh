@@ -1,7 +1,7 @@
 Instance: 735992a4c079a289a8e4033215a846f7e808d8456a028263dc1642bc50fbb79e
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/735992a4c079a289a8e4033215a846f7e808d8456a028263dc1642bc50fbb79e"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/735992a4c079a289a8e4033215a846f7e808d8456a028263dc1642bc50fbb79e"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationTelecomValue"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.telecom.value"

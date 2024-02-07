@@ -1,7 +1,7 @@
 Instance: 319bab48dca83f85265a6858b70126f946d2467e08b427a2eda4e626726fb0fc
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/319bab48dca83f85265a6858b70126f946d2467e08b427a2eda4e626726fb0fc"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/319bab48dca83f85265a6858b70126f946d2467e08b427a2eda4e626726fb0fc"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleAvailableTimeExtensionRorAvailableTimeNumberDaysOfWeek"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.availableTime.extension:ror-available-time-number-days-of-week"

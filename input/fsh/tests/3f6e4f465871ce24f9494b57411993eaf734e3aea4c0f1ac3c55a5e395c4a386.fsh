@@ -1,7 +1,7 @@
 Instance: 3f6e4f465871ce24f9494b57411993eaf734e3aea4c0f1ac3c55a5e395c4a386
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/3f6e4f465871ce24f9494b57411993eaf734e3aea4c0f1ac3c55a5e395c4a386"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/3f6e4f465871ce24f9494b57411993eaf734e3aea4c0f1ac3c55a5e395c4a386"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceCharacteristicAnnualOpening"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.characteristic:annualOpening"

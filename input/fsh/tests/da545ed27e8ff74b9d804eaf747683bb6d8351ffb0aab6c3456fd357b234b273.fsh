@@ -1,7 +1,7 @@
 Instance: da545ed27e8ff74b9d804eaf747683bb6d8351ffb0aab6c3456fd357b234b273
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/da545ed27e8ff74b9d804eaf747683bb6d8351ffb0aab6c3456fd357b234b273"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/da545ed27e8ff74b9d804eaf747683bb6d8351ffb0aab6c3456fd357b234b273"
 * version = "0.0"
 * name = "FullIgRORTaskMustSupportElementTaskInputProposedValue"
 * title = "IG: full-ig; Profile: RORTask; Case: Must Support Element; Element: Task.input:proposedValue"

@@ -1,7 +1,7 @@
 Instance: acce2d78e187ca7e9656bfc2900b21c6bf48aa567e362c1856554e6420b94fbf
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/acce2d78e187ca7e9656bfc2900b21c6bf48aa567e362c1856554e6420b94fbf"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/acce2d78e187ca7e9656bfc2900b21c6bf48aa567e362c1856554e6420b94fbf"
 * version = "0.0"
 * name = "FullIgRORTaskMustSupportElementTaskExecutionPeriodEnd"
 * title = "IG: full-ig; Profile: RORTask; Case: Must Support Element; Element: Task.executionPeriod.end"

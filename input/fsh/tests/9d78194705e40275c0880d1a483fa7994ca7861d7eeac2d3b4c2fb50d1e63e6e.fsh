@@ -1,7 +1,7 @@
 Instance: 9d78194705e40275c0880d1a483fa7994ca7861d7eeac2d3b4c2fb50d1e63e6e
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/9d78194705e40275c0880d1a483fa7994ca7861d7eeac2d3b4c2fb50d1e63e6e"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/9d78194705e40275c0880d1a483fa7994ca7861d7eeac2d3b4c2fb50d1e63e6e"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleSpecialtySpecialty"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.specialty:specialty"

@@ -1,7 +1,7 @@
 Instance: 8677d3d70c4fd0d8cf6f81080a9f53f8e1a65f60b42f4ba90c20c689bdbe0b12
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/8677d3d70c4fd0d8cf6f81080a9f53f8e1a65f60b42f4ba90c20c689bdbe0b12"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/8677d3d70c4fd0d8cf6f81080a9f53f8e1a65f60b42f4ba90c20c689bdbe0b12"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationIdentifierNumSIRETType"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.identifier:numSIRET.type"

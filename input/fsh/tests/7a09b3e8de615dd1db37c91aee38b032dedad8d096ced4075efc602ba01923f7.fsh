@@ -1,7 +1,7 @@
 Instance: 7a09b3e8de615dd1db37c91aee38b032dedad8d096ced4075efc602ba01923f7
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/7a09b3e8de615dd1db37c91aee38b032dedad8d096ced4075efc602ba01923f7"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/7a09b3e8de615dd1db37c91aee38b032dedad8d096ced4075efc602ba01923f7"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationAddressLineExtensionLieuDit"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.address.line.extension:lieuDit"

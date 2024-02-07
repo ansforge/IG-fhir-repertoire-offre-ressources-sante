@@ -1,7 +1,7 @@
 Instance: e98e97a5d0429ab858ad17efe53ae621ebac3ccff32680d45e430ad1f97673ef
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/e98e97a5d0429ab858ad17efe53ae621ebac3ccff32680d45e430ad1f97673ef"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/e98e97a5d0429ab858ad17efe53ae621ebac3ccff32680d45e430ad1f97673ef"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationExtensionRorLocationResidentialCapacity"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.extension:ror-location-residential-capacity"

@@ -1,7 +1,7 @@
 Instance: 39e47f825e0b70ba69b8f5d410067cbeaaad3422f6b9ec7e30390ecd14c0012b
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/39e47f825e0b70ba69b8f5d410067cbeaaad3422f6b9ec7e30390ecd14c0012b"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/39e47f825e0b70ba69b8f5d410067cbeaaad3422f6b9ec7e30390ecd14c0012b"
 * version = "0.0"
 * name = "FullIgRORPractitionerMustSupportElementPractitionerTelecomValue"
 * title = "IG: full-ig; Profile: RORPractitioner; Case: Must Support Element; Element: Practitioner.telecom.value"

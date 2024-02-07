@@ -1,7 +1,7 @@
 Instance: 807a1e10f0d3325ce3e22d63e9a310abae1bc3283ef3905d796878f21e1cdbf9
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/807a1e10f0d3325ce3e22d63e9a310abae1bc3283ef3905d796878f21e1cdbf9"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/807a1e10f0d3325ce3e22d63e9a310abae1bc3283ef3905d796878f21e1cdbf9"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationAddressLineExtensionAdditionalLocator"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.address.line.extension:additionalLocator"

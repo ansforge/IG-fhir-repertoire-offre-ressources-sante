@@ -1,7 +1,7 @@
 Instance: e187d4df0fd4a3932160e7fcc00cf9f063d1a965d7552ef4fe9576a782c871cf
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/e187d4df0fd4a3932160e7fcc00cf9f063d1a965d7552ef4fe9576a782c871cf"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/e187d4df0fd4a3932160e7fcc00cf9f063d1a965d7552ef4fe9576a782c871cf"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationMetaTagCodeRegion"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.meta.tag:codeRegion"

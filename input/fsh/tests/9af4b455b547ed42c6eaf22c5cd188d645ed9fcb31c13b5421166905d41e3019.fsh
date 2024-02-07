@@ -1,7 +1,7 @@
 Instance: 9af4b455b547ed42c6eaf22c5cd188d645ed9fcb31c13b5421166905d41e3019
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/9af4b455b547ed42c6eaf22c5cd188d645ed9fcb31c13b5421166905d41e3019"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/9af4b455b547ed42c6eaf22c5cd188d645ed9fcb31c13b5421166905d41e3019"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceName"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.name"

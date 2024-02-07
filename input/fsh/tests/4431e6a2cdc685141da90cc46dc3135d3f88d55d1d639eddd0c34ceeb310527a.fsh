@@ -1,7 +1,7 @@
 Instance: 4431e6a2cdc685141da90cc46dc3135d3f88d55d1d639eddd0c34ceeb310527a
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/4431e6a2cdc685141da90cc46dc3135d3f88d55d1d639eddd0c34ceeb310527a"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/4431e6a2cdc685141da90cc46dc3135d3f88d55d1d639eddd0c34ceeb310527a"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationName"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.name"

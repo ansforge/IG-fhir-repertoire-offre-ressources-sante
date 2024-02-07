@@ -1,7 +1,7 @@
 Instance: 6f94f24562d49ca7a431bab6fa172a65e114289cd35e0c3f88e0cad7ce8cdf2e
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/6f94f24562d49ca7a431bab6fa172a65e114289cd35e0c3f88e0cad7ce8cdf2e"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/6f94f24562d49ca7a431bab6fa172a65e114289cd35e0c3f88e0cad7ce8cdf2e"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceTelecomExtensionRorTelecomCommunicationChannel"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.telecom.extension:ror-telecom-communication-channel"

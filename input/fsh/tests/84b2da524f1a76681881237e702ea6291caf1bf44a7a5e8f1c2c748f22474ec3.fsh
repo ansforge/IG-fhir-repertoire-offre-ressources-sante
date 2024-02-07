@@ -1,7 +1,7 @@
 Instance: 84b2da524f1a76681881237e702ea6291caf1bf44a7a5e8f1c2c748f22474ec3
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/84b2da524f1a76681881237e702ea6291caf1bf44a7a5e8f1c2c748f22474ec3"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/84b2da524f1a76681881237e702ea6291caf1bf44a7a5e8f1c2c748f22474ec3"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationExtensionRorOrganizationDropZone"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.extension:ror-organization-drop-zone"

@@ -1,7 +1,7 @@
 Instance: 041c08b1fb63cd556a82062caf88cade22abf3c0e229eb0928799900f3b7d2aa
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/041c08b1fb63cd556a82062caf88cade22abf3c0e229eb0928799900f3b7d2aa"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/041c08b1fb63cd556a82062caf88cade22abf3c0e229eb0928799900f3b7d2aa"
 * version = "0.0"
 * name = "FullIgRORPractitionerMustSupportElementPractitionerExtensionRorMetaCreationDate"
 * title = "IG: full-ig; Profile: RORPractitioner; Case: Must Support Element; Element: Practitioner.extension:ror-meta-creation-date"

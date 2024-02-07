@@ -1,7 +1,7 @@
 Instance: 0f3907e7960f24ce1078ea2412911ceda4db4dd26822f437e4b91baf5f42e027
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/0f3907e7960f24ce1078ea2412911ceda4db4dd26822f437e4b91baf5f42e027"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/0f3907e7960f24ce1078ea2412911ceda4db4dd26822f437e4b91baf5f42e027"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationPositionExtensionRorCoordinateReliability"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.position.extension:ror-coordinate-reliability"

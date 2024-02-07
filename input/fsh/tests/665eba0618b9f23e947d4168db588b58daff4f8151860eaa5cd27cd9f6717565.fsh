@@ -1,7 +1,7 @@
 Instance: 665eba0618b9f23e947d4168db588b58daff4f8151860eaa5cd27cd9f6717565
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/665eba0618b9f23e947d4168db588b58daff4f8151860eaa5cd27cd9f6717565"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/665eba0618b9f23e947d4168db588b58daff4f8151860eaa5cd27cd9f6717565"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleSpecialtySupplementaryExerciseRight"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.specialty:supplementaryExerciseRight"

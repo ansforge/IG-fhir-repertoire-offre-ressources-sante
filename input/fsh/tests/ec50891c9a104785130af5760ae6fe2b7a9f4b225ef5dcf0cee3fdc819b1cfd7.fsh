@@ -1,7 +1,7 @@
 Instance: ec50891c9a104785130af5760ae6fe2b7a9f4b225ef5dcf0cee3fdc819b1cfd7
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/ec50891c9a104785130af5760ae6fe2b7a9f4b225ef5dcf0cee3fdc819b1cfd7"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ec50891c9a104785130af5760ae6fe2b7a9f4b225ef5dcf0cee3fdc819b1cfd7"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleAvailableTimeExtensionRorAvailableTimeEffectiveOpeningClosingDate"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date"

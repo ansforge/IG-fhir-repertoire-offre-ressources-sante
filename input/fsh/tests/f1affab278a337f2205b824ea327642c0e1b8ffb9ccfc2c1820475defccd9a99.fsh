@@ -1,7 +1,7 @@
 Instance: f1affab278a337f2205b824ea327642c0e1b8ffb9ccfc2c1820475defccd9a99
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/f1affab278a337f2205b824ea327642c0e1b8ffb9ccfc2c1820475defccd9a99"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/f1affab278a337f2205b824ea327642c0e1b8ffb9ccfc2c1820475defccd9a99"
 * version = "0.0"
 * name = "FullIgRORPractitionerRoleMustSupportElementPractitionerRoleExtensionRorMetaCreationDate"
 * title = "IG: full-ig; Profile: RORPractitionerRole; Case: Must Support Element; Element: PractitionerRole.extension:ror-meta-creation-date"

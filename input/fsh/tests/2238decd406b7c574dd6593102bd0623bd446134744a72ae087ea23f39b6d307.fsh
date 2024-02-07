@@ -1,7 +1,7 @@
 Instance: 2238decd406b7c574dd6593102bd0623bd446134744a72ae087ea23f39b6d307
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/2238decd406b7c574dd6593102bd0623bd446134744a72ae087ea23f39b6d307"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/2238decd406b7c574dd6593102bd0623bd446134744a72ae087ea23f39b6d307"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceAvailableTimeExtensionRorAvailableTimeNumberDaysOfWeek"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.availableTime.extension:ror-available-time-number-days-of-week"

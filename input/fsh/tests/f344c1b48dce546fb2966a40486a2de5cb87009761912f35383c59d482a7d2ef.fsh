@@ -1,7 +1,7 @@
 Instance: f344c1b48dce546fb2966a40486a2de5cb87009761912f35383c59d482a7d2ef
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/f344c1b48dce546fb2966a40486a2de5cb87009761912f35383c59d482a7d2ef"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/f344c1b48dce546fb2966a40486a2de5cb87009761912f35383c59d482a7d2ef"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationContactExtensionRorContactFunctionContact"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.contact.extension:ror-contact-function-contact"

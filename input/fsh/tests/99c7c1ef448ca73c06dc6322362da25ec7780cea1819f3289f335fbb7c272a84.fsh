@@ -1,7 +1,7 @@
 Instance: 99c7c1ef448ca73c06dc6322362da25ec7780cea1819f3289f335fbb7c272a84
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/99c7c1ef448ca73c06dc6322362da25ec7780cea1819f3289f335fbb7c272a84"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/99c7c1ef448ca73c06dc6322362da25ec7780cea1819f3289f335fbb7c272a84"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationTelecomExtensionRorTelecomUsage"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.telecom.extension:ror-telecom-usage"

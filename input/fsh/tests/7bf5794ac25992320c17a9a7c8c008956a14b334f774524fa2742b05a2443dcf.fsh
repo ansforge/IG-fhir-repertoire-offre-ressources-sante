@@ -1,7 +1,7 @@
 Instance: 7bf5794ac25992320c17a9a7c8c008956a14b334f774524fa2742b05a2443dcf
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/7bf5794ac25992320c17a9a7c8c008956a14b334f774524fa2742b05a2443dcf"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/7bf5794ac25992320c17a9a7c8c008956a14b334f774524fa2742b05a2443dcf"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationExtensionRorMetaComment"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.extension:ror-meta-comment"

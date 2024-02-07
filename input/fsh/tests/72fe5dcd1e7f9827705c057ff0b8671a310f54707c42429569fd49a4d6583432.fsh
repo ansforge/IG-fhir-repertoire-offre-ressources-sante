@@ -1,7 +1,7 @@
 Instance: 72fe5dcd1e7f9827705c057ff0b8671a310f54707c42429569fd49a4d6583432
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/72fe5dcd1e7f9827705c057ff0b8671a310f54707c42429569fd49a4d6583432"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/72fe5dcd1e7f9827705c057ff0b8671a310f54707c42429569fd49a4d6583432"
 * version = "0.0"
 * name = "FullIgRORTaskMustSupportElementTaskInputIdentifierRequester"
 * title = "IG: full-ig; Profile: RORTask; Case: Must Support Element; Element: Task.input:identifierRequester"

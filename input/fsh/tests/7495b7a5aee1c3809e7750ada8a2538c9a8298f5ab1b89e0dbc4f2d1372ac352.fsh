@@ -1,7 +1,7 @@
 Instance: 7495b7a5aee1c3809e7750ada8a2538c9a8298f5ab1b89e0dbc4f2d1372ac352
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/7495b7a5aee1c3809e7750ada8a2538c9a8298f5ab1b89e0dbc4f2d1372ac352"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/7495b7a5aee1c3809e7750ada8a2538c9a8298f5ab1b89e0dbc4f2d1372ac352"
 * version = "0.0"
 * name = "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceCharacteristicTemporalityStopService"
 * title = "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.characteristic:temporalityStopService"

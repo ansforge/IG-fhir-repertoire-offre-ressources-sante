@@ -1,7 +1,7 @@
 Instance: f9678437f3c2c4d7df79059aefe3d1b508d2764aa1c1e972e2805f3e226fb22f
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/f9678437f3c2c4d7df79059aefe3d1b508d2764aa1c1e972e2805f3e226fb22f"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/f9678437f3c2c4d7df79059aefe3d1b508d2764aa1c1e972e2805f3e226fb22f"
 * version = "0.0"
 * name = "FullIgRORLocationMustSupportElementLocationMetaTagCodeRegion"
 * title = "IG: full-ig; Profile: RORLocation; Case: Must Support Element; Element: Location.meta.tag:codeRegion"

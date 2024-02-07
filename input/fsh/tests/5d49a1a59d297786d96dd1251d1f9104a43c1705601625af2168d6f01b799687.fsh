@@ -1,7 +1,7 @@
 Instance: 5d49a1a59d297786d96dd1251d1f9104a43c1705601625af2168d6f01b799687
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/5d49a1a59d297786d96dd1251d1f9104a43c1705601625af2168d6f01b799687"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/5d49a1a59d297786d96dd1251d1f9104a43c1705601625af2168d6f01b799687"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationIdentifierRppsRang"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.identifier:rppsRang"

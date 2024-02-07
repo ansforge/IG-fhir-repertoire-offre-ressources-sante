@@ -1,7 +1,7 @@
 Instance: 0f2201a50c429fd654e0c9ebffb92c93b58f83b4acbf7dcae9b4bbcbe92b9e9d
 InstanceOf: TestScript
-Usage: #example
-* url = "https://github.com/fhir-crucible/testscript-generator/0f2201a50c429fd654e0c9ebffb92c93b58f83b4acbf7dcae9b4bbcbe92b9e9d"
+Usage: #definition
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/0f2201a50c429fd654e0c9ebffb92c93b58f83b4acbf7dcae9b4bbcbe92b9e9d"
 * version = "0.0"
 * name = "FullIgROROrganizationMustSupportElementOrganizationAddressExtensionRorOrganizationGeolocationExtensionRorConfidenceGeolocation"
 * title = "IG: full-ig; Profile: ROROrganization; Case: Must Support Element; Element: Organization.address.extension:ror-organization-geolocation.extension:ror-confidence-geolocation"
