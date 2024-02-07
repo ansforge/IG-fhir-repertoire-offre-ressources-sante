@@ -94,6 +94,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * position.extension contains RORCoordinateReliability named ror-coordinate-reliability 0..1 MS
 * position.extension[ror-coordinate-reliability] ^short = "systemeGeodesique (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
 
+* managingOrganization only Reference(fr-organization or ROROrganization)
+* partOf only Reference(Location or RORLocation)
+
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
