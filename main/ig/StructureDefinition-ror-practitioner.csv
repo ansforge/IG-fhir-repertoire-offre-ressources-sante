@@ -20,7 +20,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Version specific identifier","The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.","The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.","","","","","","","","",,,,,"",,,,"Meta.versionId",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
-"Practitioner.meta.lastUpdated","Practitioner.meta.lastUpdated","","","",1,1,"","","Y","instant {[]} {[]}
+"Practitioner.meta.lastUpdated","Practitioner.meta.lastUpdated","","","",1,1,"Y","","Y","instant {[]} {[]}
 ","When the resource version last changed","When the resource last changed - e.g. when the version changed.","This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant. This is equivalent to the HTTP Last-Modified and SHOULD have the same value on a [read](http://hl7.org/fhir/R4/http.html#read) interaction.","","","","","","","","",,,,,"",,,,"Meta.lastUpdated",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
@@ -43,7 +43,7 @@ This element can be used to indicate where the current master source of a resour
 ","Slicing pour gérer le code région définissant la région source des données",,"open","Meta.tag",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
-"Practitioner.meta.tag:codeRegion","Practitioner.meta.tag","codeRegion","","",0,1,"","","Y","Coding {[]} {[]}
+"Practitioner.meta.tag:codeRegion","Practitioner.meta.tag","codeRegion","","",0,1,"Y","","Y","Coding {[]} {[]}
 ","Tags applied to this resource","Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.","The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR","",,,,"Meta.tag",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV"
@@ -68,7 +68,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Practitioner.extension:ror-meta-creation-date","Practitioner.extension","ror-meta-creation-date","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date]]} {[]}
+"Practitioner.extension:ror-meta-creation-date","Practitioner.extension","ror-meta-creation-date","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date]]} {[]}
 ","dateCreation (Metadonnee)","Extension créée dans le cadre du ROR qui correspond à la date de création (dans le ROR régional) présente dans les métadonnées.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -80,7 +80,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ","Extensions are always sliced by (at least) url",,"open","DomainResource.modifierExtension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"Practitioner.identifier","Practitioner.identifier","","","",1,1,"","","Y","Identifier {[]} {[]}
+"Practitioner.identifier","Practitioner.identifier","","","",1,1,"Y","","Y","Identifier {[]} {[]}
 ","idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS","An identifier that applies to this person in this role.","","Often, specific identities are assigned for the agent.","","","","","","","",,,,,"",,,,"Practitioner.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX / EI (occasionally, more often EI maps to a resource id or a URL)","PRD-7 (or XCN.1)","n/a","II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]","./id","Identifier","./Identifiers","FiveWs.identifier"
@@ -152,7 +152,7 @@ middle name","",0,*,"","","Y","string {[]} {[]}
 ","Given names (not always 'first'). Includes middle names","Given name.","If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called ""first name"" since given names do not always come first.","","","","","","","","",,,,,"",,,,"HumanName.given",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XPN.2 + XPN.3","n/a","./part[partType = GIV]","./GivenNames"
-"Practitioner.name.prefix","Practitioner.name.prefix","","","",0,1,"","","Y","string {[]} {[]}
+"Practitioner.name.prefix","Practitioner.name.prefix","","","",0,1,"Y","","Y","string {[]} {[]}
 ","Civilite (PersonnePhysique) : Civilite de la personne physique","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"extensible","","https://mos.esante.gouv.fr/NOS/JDV_J207-Civilite-ROR/FHIR/JDV-J207-Civilite-ROR","",,,,"HumanName.prefix",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XPN.5","n/a","./part[partType = PFX]","./TitleCode"
@@ -166,7 +166,7 @@ middle name","",0,*,"","","Y","string {[]} {[]}
 Period is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).","Allows names to be placed in historical context.","","","","","","","",,,,,"",,,,"HumanName.period",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 per-1:If present, start SHALL have a lower value than end {start.hasValue().not() or end.hasValue().not() or (start <= end)}","DR","XPN.13 + XPN.14","n/a","IVL<TS>[lowClosed=""true"" and highClosed=""true""] or URG<TS>[lowClosed=""true"" and highClosed=""true""]","./usablePeriod[type=""IVL<TS>""]","./StartDate and ./EndDate"
-"Practitioner.telecom","Practitioner.telecom","","","",0,*,"","","Y","ContactPoint {[]} {[]}
+"Practitioner.telecom","Practitioner.telecom","","","",0,*,"Y","","Y","ContactPoint {[]} {[]}
 ","boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel","A contact detail for the practitioner, e.g. a telephone number or an email address.","Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific.","Need to know how to reach a practitioner independent to any roles the practitioner may have.","","","","","","","",,,,,"",,,,"Practitioner.telecom",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","XTN","PRT-15, STF-10, ROL-12","n/a","TEL","./telecom","ContactPoint","./ContactPoints"
@@ -177,15 +177,15 @@ cpt-2:A system is required if a value is provided. {value.empty() or system.exis
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Practitioner.telecom.extension:ror-telecom-communication-channel","Practitioner.telecom.extension","ror-telecom-communication-channel","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
+"Practitioner.telecom.extension:ror-telecom-communication-channel","Practitioner.telecom.extension","ror-telecom-communication-channel","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
 ","canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication","Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Practitioner.telecom.extension:ror-telecom-usage","Practitioner.telecom.extension","ror-telecom-usage","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
+"Practitioner.telecom.extension:ror-telecom-usage","Practitioner.telecom.extension","ror-telecom-usage","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
 ","utilisation (Telecommunication) : Utilisation du canal de communication","Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Practitioner.telecom.extension:ror-telecom-confidentiality-level","Practitioner.telecom.extension","ror-telecom-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
+"Practitioner.telecom.extension:ror-telecom-confidentiality-level","Practitioner.telecom.extension","ror-telecom-confidentiality-level","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
 ","niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication","Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -193,7 +193,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","phone | fax | email | pager | url | sms | other","Telecommunications form for contact point - what communications system is required to make use of the contact.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"required","Telecommunications form for contact point.","http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1","",,,,"ContactPoint.system",0,1,"ele-1
 cpt-2","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XTN.3","n/a","./scheme","./ContactPointType"
-"Practitioner.telecom.value","Practitioner.telecom.value","","","",1,1,"","","Y","string {[]} {[]}
+"Practitioner.telecom.value","Practitioner.telecom.value","","","",1,1,"Y","","Y","string {[]} {[]}
 ","adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication","The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).","Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.","Need to support legacy numbers that are not in a tightly controlled format.","","","","","","","",,,,,"",,,,"ContactPoint.value",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","XTN.1 (or XTN.12)","n/a","./url","./Value"
