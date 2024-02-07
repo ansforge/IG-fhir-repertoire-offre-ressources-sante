@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "90293a04-9031-4844-a023-c95339baff20-99",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/90293a04-9031-4844-a023-c95339baff20-99",
+  "id" : "9d3ac5fd-3b85-4af7-9080-0b2c63c842c7-99",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/9d3ac5fd-3b85-4af7-9080-0b2c63c842c7-99",
   "name" : "IntersectionRORMeasureReportAndRORMeasureReport",
   "title" : "Intersection of null And null",
   "status" : "draft",
-  "date" : "2024-02-07T14:28:41+00:00",
+  "date" : "2024-02-07T16:04:47+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -556,16 +556,6 @@
       "comment" : "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
       "min" : 0,
       "max" : "1",
-      "type" : [{
-        "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient",
-        "http://hl7.org/fhir/StructureDefinition/Practitioner",
-        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-        "http://hl7.org/fhir/StructureDefinition/Location",
-        "http://hl7.org/fhir/StructureDefinition/Device",
-        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-        "http://hl7.org/fhir/StructureDefinition/Group"]
-      }],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -649,10 +639,10 @@
       "max" : "1",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Practitioner",
-        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-        "http://hl7.org/fhir/StructureDefinition/Location",
-        "http://hl7.org/fhir/StructureDefinition/Organization"]
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"]
       }],
       "constraint" : [{
         "extension" : [{
