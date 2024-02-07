@@ -447,7 +447,7 @@ Le ROR National répond à l'établissement toutes les informations saisie, l'id
 -   [spécifique serveur] Scénario 10 : Création d'une situation opérationnelle
     -   Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 
-**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_12.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](saisie_offre.html)**
 
 ### Mise à jour de l'offre
 
@@ -498,7 +498,7 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
     -   Un utilisateur ajoute un lieu de réalisation de l'offre dans une offre opérationnelle existante.
 
 
-**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_13.html)**
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](miseAjour_offre.html)**
 
 ### Signalement d’anomalie
 

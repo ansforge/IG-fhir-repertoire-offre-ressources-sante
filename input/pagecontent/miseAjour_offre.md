@@ -782,7 +782,7 @@ PATCH [BASE]/HealthcareService/963
 
 **Description du scénario :** Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
 
-**Requête :** Voir [scénario 10 du cas d'usage saisie de l'offre](specifications_techniques_12.html#spécifique-serveur-scénario-10-création-dune-situation-opérationnelle) (Création d'une situation opérationnelle)
+**Requête :** Voir [scénario 10 du cas d'usage saisie de l'offre](saisie_offre.html#spécifique-serveur-scénario-10-création-dune-situation-opérationnelle) (Création d'une situation opérationnelle)
 
 #### [spécifique serveur] Scénario 10 : Modification de multiples informations sur une offre
 
