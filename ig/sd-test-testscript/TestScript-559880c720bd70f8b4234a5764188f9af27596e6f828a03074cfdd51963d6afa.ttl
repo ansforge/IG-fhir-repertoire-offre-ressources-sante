@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/TestScript/559880c720bd70f8b4234a5764188f9af27596e6f828a03074cfdd51963d6afa> a fhir:TestScript ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "559880c720bd70f8b4234a5764188f9af27596e6f828a03074cfdd51963d6afa"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: TestScript</b><a name=\"559880c720bd70f8b4234a5764188f9af27596e6f828a03074cfdd51963d6afa\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource TestScript &quot;559880c720bd70f8b4234a5764188f9af27596e6f828a03074cfdd51963d6afa&quot; </p></div><p><b>url</b>: <code>https://github.com/fhir-crucible/testscript-generator/559880c720bd70f8b4234a5764188f9af27596e6f828a03074cfdd51963d6afa</code></p><p><b>version</b>: 0.2.0</p><p><b>name</b>: FullIgRORHealthcareServiceMustSupportElementHealthcareServiceCharacteristicTakingCareSpecialityExtensionRorActType</p><p><b>title</b>: IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.characteristic:takingCareSpeciality.extension:ror-act-type</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-02-07 19:21:07+0100</p><p><b>publisher</b>: ANS</p><p><b>contact</b>: ANS: <a href=\"https://esante.gouv.fr\">https://esante.gouv.fr</a></p><p><b>jurisdiction</b>: FRANCE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#FR)</span></p><blockquote><p><b>test</b></p><p><b>name</b>: Generation Feature Not Implemented</p><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Fail - not implemented in generator: multiple discriminators</td><td>1!=1</td><td>false</td></tr></table></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/fhir-crucible/testscript-generator/559880c720bd70f8b4234a5764188f9af27596e6f828a03074cfdd51963d6afa"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "FullIgRORHealthcareServiceMustSupportElementHealthcareServiceCharacteristicTakingCareSpecialityExtensionRorActType"] ; # 
+  fhir:title [ fhir:v "IG: full-ig; Profile: RORHealthcareService; Case: Must Support Element; Element: HealthcareService.characteristic:takingCareSpeciality.extension:ror-act-type"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-02-07T19:21:07+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:test ( [
+     fhir:name [ fhir:v "Generation Feature Not Implemented" ] ;
+     fhir:action ( [
+       fhir:assert [
+         fhir:label [ fhir:v "Fail - not implemented in generator: multiple discriminators" ] ;
+         fhir:expression [ fhir:v "1!=1" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

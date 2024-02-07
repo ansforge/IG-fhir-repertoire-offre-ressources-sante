@@ -1,0 +1,80 @@
+{
+  "resourceType" : "TestScript",
+  "id" : "17c3ca8b02d5be46cfaff4ec064a86f25d7e36863cdb371b4dda352609dc9b51",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: TestScript</b><a name=\"17c3ca8b02d5be46cfaff4ec064a86f25d7e36863cdb371b4dda352609dc9b51\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource TestScript &quot;17c3ca8b02d5be46cfaff4ec064a86f25d7e36863cdb371b4dda352609dc9b51&quot; </p></div><p><b>url</b>: <code>https://github.com/fhir-crucible/testscript-generator/17c3ca8b02d5be46cfaff4ec064a86f25d7e36863cdb371b4dda352609dc9b51</code></p><p><b>version</b>: 0.2.0</p><p><b>name</b>: FullIgRORMeasureMustSupportElementMeasurePurpose</p><p><b>title</b>: IG: full-ig; Profile: RORMeasure; Case: Must Support Element; Element: Measure.purpose</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-02-07 19:21:08+0100</p><p><b>publisher</b>: ANS</p><p><b>contact</b>: ANS: <a href=\"https://esante.gouv.fr\">https://esante.gouv.fr</a></p><p><b>jurisdiction</b>: FRANCE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#FR)</span></p><p><b>profile</b>: <a href=\"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-measure\">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-measure</a> &quot;RORMeasure&quot;</p><h3>Variables</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>DefaultValue</b></td><td><b>Description</b></td><td><b>Hint</b></td></tr><tr><td style=\"display: none\">*</td><td>targetResourceIdRORMeasure</td><td>example</td><td>Enter a known instance id on the destination system. Will be checked for conformance against profile RORMeasure.</td><td>[resource.id]</td></tr></table><blockquote><p><b>test</b></p><p><b>name</b>: Validate the identified resource conforms to the RORMeasure profile</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Label</b></td><td><b>Description</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>ResponseId</b></td></tr><tr><td style=\"display: none\">*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Measure</td><td>Read_Measure_Instance</td><td>Read Measure Instance</td><td>false</td><td>/${targetResourceIdRORMeasure}</td><td>targetInstance</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Assert_Response_OK</td><td>okay</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Description</b></td><td><b>Resource</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Assert_Measure_Returned</td><td>Assert Measure Returned</td><td>Measure</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Description</b></td><td><b>ValidateProfileId</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Assert_Instance_Conforms_to_RORMeasure_Profile</td><td>Assert returned instance conforms to the RORMeasure Profile</td><td>targetProfileRORMeasure</td><td>false</td></tr></table></blockquote></blockquote></div>"
+  },
+  "url" : "https://github.com/fhir-crucible/testscript-generator/17c3ca8b02d5be46cfaff4ec064a86f25d7e36863cdb371b4dda352609dc9b51",
+  "version" : "0.2.0",
+  "name" : "FullIgRORMeasureMustSupportElementMeasurePurpose",
+  "title" : "IG: full-ig; Profile: RORMeasure; Case: Must Support Element; Element: Measure.purpose",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-02-07T19:21:08+01:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "profile" : [{
+    "id" : "targetProfileRORMeasure",
+    "reference" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-measure"
+  }],
+  "variable" : [{
+    "name" : "targetResourceIdRORMeasure",
+    "defaultValue" : "example",
+    "description" : "Enter a known instance id on the destination system. Will be checked for conformance against profile RORMeasure.",
+    "hint" : "[resource.id]"
+  }],
+  "test" : [{
+    "name" : "Validate the identified resource conforms to the RORMeasure profile",
+    "action" : [{
+      "operation" : {
+        "type" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+          "code" : "read"
+        },
+        "resource" : "Measure",
+        "label" : "Read_Measure_Instance",
+        "description" : "Read Measure Instance",
+        "encodeRequestUrl" : false,
+        "params" : "/${targetResourceIdRORMeasure}",
+        "responseId" : "targetInstance"
+      }
+    },
+    {
+      "assert" : {
+        "label" : "Assert_Response_OK",
+        "response" : "okay",
+        "warningOnly" : false
+      }
+    },
+    {
+      "assert" : {
+        "label" : "Assert_Measure_Returned",
+        "description" : "Assert Measure Returned",
+        "resource" : "Measure",
+        "warningOnly" : false
+      }
+    },
+    {
+      "assert" : {
+        "label" : "Assert_Instance_Conforms_to_RORMeasure_Profile",
+        "description" : "Assert returned instance conforms to the RORMeasure Profile",
+        "validateProfileId" : "targetProfileRORMeasure",
+        "warningOnly" : false
+      }
+    }]
+  }]
+}

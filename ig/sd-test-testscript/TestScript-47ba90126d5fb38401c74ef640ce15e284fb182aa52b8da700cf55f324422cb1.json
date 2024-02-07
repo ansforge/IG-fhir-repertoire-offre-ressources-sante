@@ -1,0 +1,114 @@
+{
+  "resourceType" : "TestScript",
+  "id" : "47ba90126d5fb38401c74ef640ce15e284fb182aa52b8da700cf55f324422cb1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: TestScript</b><a name=\"47ba90126d5fb38401c74ef640ce15e284fb182aa52b8da700cf55f324422cb1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource TestScript &quot;47ba90126d5fb38401c74ef640ce15e284fb182aa52b8da700cf55f324422cb1&quot; </p></div><p><b>url</b>: <code>https://github.com/fhir-crucible/testscript-generator/47ba90126d5fb38401c74ef640ce15e284fb182aa52b8da700cf55f324422cb1</code></p><p><b>version</b>: 0.2.0</p><p><b>name</b>: FullIgRORTaskMustSupportElementTaskRequester</p><p><b>title</b>: IG: full-ig; Profile: RORTask; Case: Must Support Element; Element: Task.requester</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-02-07 19:21:09+0100</p><p><b>publisher</b>: ANS</p><p><b>contact</b>: ANS: <a href=\"https://esante.gouv.fr\">https://esante.gouv.fr</a></p><p><b>jurisdiction</b>: FRANCE <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#FR)</span></p><p><b>profile</b>: <a href=\"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task\">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task</a> &quot;RORTask&quot;</p><blockquote><p><b>variable</b></p><p><b>name</b>: targetResourceIdRORTask</p><p><b>defaultValue</b>: example</p><p><b>description</b>: Enter a known instance id on the destination system. Will be checked for conformance against profile RORTask.</p><p><b>hint</b>: [resource.id]</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: referencedInstanceRef</p><p><b>expression</b>: Task.requester.reference</p><p><b>sourceId</b>: targetInstance</p></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Validate the identified resource conforms to the RORTask profile</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Label</b></td><td><b>Description</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>ResponseId</b></td></tr><tr><td style=\"display: none\">*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Task</td><td>Read_Task_Instance</td><td>Read Task Instance</td><td>false</td><td>/${targetResourceIdRORTask}</td><td>targetInstance</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Assert_Response_OK</td><td>okay</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Description</b></td><td><b>Resource</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Assert_Task_Returned</td><td>Assert Task Returned</td><td>Task</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Description</b></td><td><b>ValidateProfileId</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Assert_Instance_Conforms_to_RORTask_Profile</td><td>Assert returned instance conforms to the RORTask Profile</td><td>targetProfileRORTask</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Description</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>resolved_path_contains_reference_element</td><td>resolved path contains reference element</td><td>Task.requester.reference.hasValue()</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Label</b></td><td><b>Description</b></td><td><b>EncodeRequestUrl</b></td><td><b>ResponseId</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Read_referenced_instance</td><td>Read referenced instance</td><td>false</td><td>referencedInstance</td><td>/${referencedInstanceRef}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Label</b></td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Assert_Reference_Read_Response_OK</td><td>Assert Reference Read Response OK</td><td>okay</td><td>false</td></tr></table></blockquote></blockquote></div>"
+  },
+  "url" : "https://github.com/fhir-crucible/testscript-generator/47ba90126d5fb38401c74ef640ce15e284fb182aa52b8da700cf55f324422cb1",
+  "version" : "0.2.0",
+  "name" : "FullIgRORTaskMustSupportElementTaskRequester",
+  "title" : "IG: full-ig; Profile: RORTask; Case: Must Support Element; Element: Task.requester",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-02-07T19:21:09+01:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "profile" : [{
+    "id" : "targetProfileRORTask",
+    "reference" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"
+  }],
+  "variable" : [{
+    "name" : "targetResourceIdRORTask",
+    "defaultValue" : "example",
+    "description" : "Enter a known instance id on the destination system. Will be checked for conformance against profile RORTask.",
+    "hint" : "[resource.id]"
+  },
+  {
+    "name" : "referencedInstanceRef",
+    "expression" : "Task.requester.reference",
+    "sourceId" : "targetInstance"
+  }],
+  "test" : [{
+    "name" : "Validate the identified resource conforms to the RORTask profile",
+    "action" : [{
+      "operation" : {
+        "type" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+          "code" : "read"
+        },
+        "resource" : "Task",
+        "label" : "Read_Task_Instance",
+        "description" : "Read Task Instance",
+        "encodeRequestUrl" : false,
+        "params" : "/${targetResourceIdRORTask}",
+        "responseId" : "targetInstance"
+      }
+    },
+    {
+      "assert" : {
+        "label" : "Assert_Response_OK",
+        "response" : "okay",
+        "warningOnly" : false
+      }
+    },
+    {
+      "assert" : {
+        "label" : "Assert_Task_Returned",
+        "description" : "Assert Task Returned",
+        "resource" : "Task",
+        "warningOnly" : false
+      }
+    },
+    {
+      "assert" : {
+        "label" : "Assert_Instance_Conforms_to_RORTask_Profile",
+        "description" : "Assert returned instance conforms to the RORTask Profile",
+        "validateProfileId" : "targetProfileRORTask",
+        "warningOnly" : false
+      }
+    },
+    {
+      "assert" : {
+        "label" : "resolved_path_contains_reference_element",
+        "description" : "resolved path contains reference element",
+        "expression" : "Task.requester.reference.hasValue()",
+        "warningOnly" : false
+      }
+    },
+    {
+      "operation" : {
+        "type" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+          "code" : "read"
+        },
+        "label" : "Read_referenced_instance",
+        "description" : "Read referenced instance",
+        "encodeRequestUrl" : false,
+        "responseId" : "referencedInstance",
+        "url" : "/${referencedInstanceRef}"
+      }
+    },
+    {
+      "assert" : {
+        "label" : "Assert_Reference_Read_Response_OK",
+        "description" : "Assert Reference Read Response OK",
+        "response" : "okay",
+        "warningOnly" : false
+      }
+    }]
+  }]
+}
