@@ -2,7 +2,7 @@ Instance: ror-sp-organization-special-price
 InstanceOf: SearchParameter
 Usage: #definition
 * status = #active
-* name = "RORSPOrganizationSpecialPrice"
+* name = "RORSPOrganizationPriceSpecialPrice"
 * description = "Paramètre de recherche sur la condition tarifaire"
 * code = #special-price
 * base = #Organization

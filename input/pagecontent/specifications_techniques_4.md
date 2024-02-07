@@ -1,58 +1,5 @@
-<!-- ## Recherche d'offre avec données capacitaires -->
-
-### Caractéristiques de l'API
-<table width="100%">
-<tbody>
-<tr>
-<td width="18%">
-<p>Endpoint</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Header</p>
-</td>
-<td width="81%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Encodage</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Version FHIR</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Version package</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p>Publication</p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+<!-- ## Recherche d'offre avec données capacitaires
+<code><span style="background-color: #A6ACAF;color:white;font-weight:bold;font-size: x-large;">ROR 2.1</span></code> -->
 
 ### Construction de la requête de base
 
@@ -128,147 +75,18 @@ requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
 [https://www.hl7.org/fhir/R4/http.html](https://www.hl7.org/fhir/R4/http.html)
 
-### Critères de recherche
+## Critères de recherche
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-healthcareservice), de
-    **StructureDefinition-ror-healthcareservice** applicables à ce cas
-    d'usage sont :
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>identifier</p>
-</td>
-</tr>
-</tbody>
-</table>
+  Les critères de recherche applicables sont définis sur la page dédiée pour :
+-    [StructureDefinition-ror-healthcareservice](search_param.html#structuredefinition-ror-healthcareservice)
+-    [StructureDefinition-ror-location](search_param.html#structuredefinition-ror-location) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `location.[NOM CRITERE]`)
+-    [StructureDefinition-ror-task](search_param.html#structuredefinition-ror-task) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`)
 
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-location), de
-    **StructureDefinition-ror-location** applicables à ce cas d'usage
-    sont :
-<table>
-<tbody>
-<tr>
-<td width="230">
-<p>address-postalcode</p>
-</td>
-<td width="230">
-<p>capacity-type</p>
-</td>
-<td width="230">
-<p>type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>adress-city</p>
-</td>
-<td width="230">
-<p>equipment-type</p>
-</td>
-<td width="230">
-<p>residential-type</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>additional-bed-type</p>
-</td>
-<td width="230">
-<p>equipment-feature</p>
-</td>
-<td width="230">
-<p>residential-number</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>crisis-type</p>
-</td>
-<td width="230">
-<p>gender-capacity-available</p>
-</td>
-<td width="230">
-<p>temporary-assignement</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>capacity-closing-type</p>
-</td>
-<td width="230">
-<p>limit-value</p>
-</td>
-<td width="230">
-<p>_lastUpdated</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>capacity-update-date*</p>
-</td>
-<td width="230">
-<p>temporality-capacity</p>
-</td>
-<td width="230">
-<p>nb-capacity</p>
-</td>
-</tr>
-<tr>
-<td width="230">
-<p>capacity-status</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-<td width="230">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-*<i>Critères de recherche qui seront applicables ultérieurement</i>
-
-Ces critères de recherche sont applicables à la ressource
-HealthcareService, grâce au chainage. Pour cela utiliser la syntaxe
-suivante : `location.[NOM CRITERE]`
-
--   Les critères de recherche, définis au [paragraphe dédié](search_param.html#structuredefinition-ror-task), de **StructureDefinition-ror-task** applicables à ce cas d'usage sont :
-
-<table>
-<tbody>
-<tr>
-<td width="228">
-<p>business-status*</p>
-</td>
-<td width="226">
-<p>_id</p>
-</td>
-<td width="226">
-<p>_lastUpdated*</p>
-</td>
-</tr>
-<tr>
-<td width="228">
-<p>Identifier*</p>
-</td>
-<td width="226">
-<p>authored-on*</p>
-</td>
-<td width="226">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
-*<i>Critères de recherche qui seront applicables ultérieurement</i>
-
-Ces critères de recherche sont applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`
+**En complément, vous pouvez accéder aux Capability Statements [ici](artifacts.html#behavior-capability-statements)**
 
 ### Paramètres et modificateurs de requêtes FHIR
 
-Tous les paramètres et modificateurs de requêtes décrits au [paragraphe dédié](modifiers.html)
-sont applicables à ce cas d'usage.
+Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html).
 
 ### Exemple de requêtes
 

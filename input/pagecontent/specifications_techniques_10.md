@@ -1,58 +1,9 @@
-<!-- ## 3.9	Création et Mise à jour du lieu de réalisation de l’offre -->
-
-### Caractéristiques de l'API 
-<table width="100%">
-<tbody>
-<tr>
-<td width="19%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Header</strong></p>
-</td>
-<td width="80%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="19%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="80%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+<!-- ## 3.9	Création et Mise à jour du lieu de réalisation de l’offre
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>-->
+<code><span style="color: #ff0000;font-weight:bold;font-size: x-large;">draft</span></code>
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+Cette partie de la spécification est en cours de construction et n'est pas implémentée. Elle est disponible, à titre d'information sur les travaux en cours au niveau du ROR National.
+</p>
 
 ###  Construction de la requête de base
 <table>
@@ -86,8 +37,8 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p>POST [base]/[type] {?_format=[mime-type]}</p>
-<p>PATCH [base]/Location/[id]{&amp;_format=[mime-type]}</p>
+<p><code>POST [base]/[type] {?_format=[mime-type]}</code></p>
+<p><code>PATCH [base]/Location/[id]{&amp;_format=[mime-type]}</code></p>
 </td>
 </tr>
 </tbody>
@@ -124,7 +75,7 @@ Si la mise à jour échoue, le serveur doit répondre :
 
 ### Exemple de requêtes
 
-#### [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre
+#### [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -240,7 +191,8 @@ PATCH [BASE]/HealthcareService/XXX
     ]
 }
 ```
-#### [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge
+
+#### [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -371,7 +323,7 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle
+#### [spécifique serveur] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -404,7 +356,7 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre
+#### [spécifique serveur] Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -446,8 +398,7 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-
-#### [spécifique serveur] Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre
+#### [spécifique serveur] Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -558,7 +509,7 @@ PATCH [BASE]/Location/XXX
 } 
 ```
 
-#### [spécifique serveur] Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre
+#### [spécifique serveur] Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -591,7 +542,7 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre
+#### [spécifique serveur] Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -623,7 +574,8 @@ PATCH [BASE]/Location/XXX
     ]
 }
 ```
-#### [spécifique serveur] Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
+
+#### [spécifique serveur] Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 

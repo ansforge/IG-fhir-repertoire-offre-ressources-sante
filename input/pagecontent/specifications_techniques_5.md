@@ -1,63 +1,5 @@
-<!-- ## Signalement d’anomalie -->
-
-<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-Cette partie de la spécification est en cours de construction.
-</p>
-
-### Caractéristiques de l'API
-
-<table width="100%">
-<tbody>
-<tr>
-<td width="18%">
-<p><strong>Endpoint</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Header</strong></p>
-</td>
-<td width="81%">
-<p>Content-type&nbsp;:=Json + FHIR</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Encodage</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Version FHIR</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Version package</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="18%">
-<p><strong>Publication</strong></p>
-</td>
-<td width="81%">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+<!-- ## Signalement d’anomalie
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code> -->
 
 ### Construction de la requête de base
 
@@ -133,7 +75,7 @@ Plus de précision sur la spécification FHIR :
 
 #### Scénario 1 : Un responsable qualité souhaite signaler une anomalie sur un élément.
 
-**Description du scénario :** Un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d\'un lit disponible = 02 (TRE-R330-StatutCapacite) et disposant d’un nombre de lits supérieur à 0.
+**Description du scénario :** Un responsable qualité souhaite signaler une anomalie sur un élément.
 
 **Requête :**
 
@@ -142,12 +84,15 @@ POST [BASE]/Task
 {	
 	"resourceType": "Task",
 	"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
+	... // ajouter les autres éléments required dans le body
 	"code": [ { "system": "JDV XXX", "value": "12345" } ],
 	"description": "description de notre ano",
 	"focus": "URL HealthcareService"
+	... //ajouter les autres éléments non requis que vous souhaitez transmettre dans le body
 }
 ```
 
+<!-- suppression scenario à la demande du ROR cf issue https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/207 
 #### Scénario 2 : Signalement de plusieurs anomalies
 
 **Description du scénario :** Le moteur de règle crée automatiquement une ou plusieurs anomalies sur un ou plusieurs éléments.
@@ -184,3 +129,4 @@ POST [BASE]/Bundle
 	]
 }
 ```
+-->
