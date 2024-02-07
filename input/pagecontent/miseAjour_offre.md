@@ -42,10 +42,10 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p>PATCH [base]/[Ressource]/[id]{?&amp;_format=[mime-type]}</p>
+<p><code>PATCH [base]/[Ressource]/[id]{?&amp;_format=[mime-type]}</code></p>
 </td>
 <td width="465">
-<p>PUT [base]/[Ressource]/[id]{?&amp;_format=[mime-type]}</p>
+<p><code>PUT [base]/[Ressource]/[id]{?&amp;_format=[mime-type]}</code></p>
 </td>
 </tr>
 </tbody>

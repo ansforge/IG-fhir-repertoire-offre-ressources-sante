@@ -33,7 +33,7 @@
 <p><strong>Construction requ&ecirc;te de base</strong></p>
 </td>
 <td width="465">
-<p>POST [base]/[Ressource]{?{&amp;_format=[mime-type]}}</p>
+<p><code>POST [base]/[Ressource]{?{&amp;_format=[mime-type]}}</code></p>
 </td>
 </tr>
 </tbody>
