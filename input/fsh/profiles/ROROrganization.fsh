@@ -31,7 +31,6 @@ ou nom de l'OI : Nom de l'organisation interne"
 * alias ^short = "nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
 * identifier 0..*
-* identifier.assigner only Reference(fr-organization or ROROrganization)
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
@@ -47,44 +46,37 @@ ou nom de l'OI : Nom de l'organisation interne"
 * identifier[idNatSt].type 1..1
 * identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 
 * identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
-* identifier[idNatSt].assigner only Reference(fr-organization or ROROrganization)
 
 * identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
 * identifier[finess].type 1..1
 * identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
 * identifier[finess].system = "http://finess.esante.gouv.fr"
-* identifier[finess].assigner only Reference(fr-organization or ROROrganization)
 
 * identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
 * identifier[sirene].type 1..1
 * identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
 * identifier[sirene].system = "http://sirene.fr"
-* identifier[sirene].assigner only Reference(fr-organization or ROROrganization)
 
 * identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[rppsRang].type 1..1
 * identifier[rppsRang].type = $TRE-G07-TypeIdentifiantStructure#4
 * identifier[rppsRang].system = "http://rppsrang.esante.gouv.fr"
-* identifier[rppsRang].assigner only Reference(fr-organization or ROROrganization)
 
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
 * identifier[numSIRET].system = "http://sirene.fr"
 * identifier[numSIRET].system ^short = "https://mos.esante.gouv.fr/6.html#_4d544200-4d26-4cc5-8294-c862458f60d8"
-* identifier[numSIRET].assigner only Reference(fr-organization or ROROrganization)
 
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
 * identifier[identifierOI].type 1..1
 * identifier[identifierOI].type = $TRE-R345-TypeIdentifiantAutre#42
 * identifier[identifierOI].system = "https://oi.esante.gouv.fr"
-* identifier[identifierOI].assigner only Reference(fr-organization or ROROrganization)
 
 * identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[adeliRang].type 1..1
 * identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
 * identifier[adeliRang].system = "http://adelirang.esante.gouv.fr"
-* identifier[adeliRang].assigner only Reference(fr-organization or ROROrganization)
 
 // Slice déjà défini dans FrOrganization
 * type 0..* 

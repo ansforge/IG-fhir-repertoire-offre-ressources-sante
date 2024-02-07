@@ -20,7 +20,6 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * identifier 1..1
 * identifier ^short = "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
 * identifier.system = "urn:oid:1.2.250.1.71.4.2.1" //voir issue https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/100
-* identifier.assigner only Reference(fr-organization or ROROrganization)
 
 * telecom 0..*
 * telecom ^short = "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel"
