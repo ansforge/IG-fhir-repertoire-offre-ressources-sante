@@ -26,7 +26,7 @@ Les ressources profilées pour ce cas d'usage spécifique sont :
 Les pipelines de ce repository permettent : 
 * Executer  Sushi
 * Faire les tests avec le validator_cli
-* Publier les pages :  https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/ig/main/ (ou https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/ig/[nom_de_la_branche] pour prévisualiser l'IG d'une branche)
+* Publier les pages :  [https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/ig/main/](https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/main/ig/) (ou https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/[nom_de_la_branche]/ig/ pour prévisualiser l'IG d'une branche)
 
 ![215342980-61686171-e3f8-40c5-865c-efdfc3dd52b4](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/assets/117643165/968d9e59-be53-4874-9a78-5b92000db2f6)
 
