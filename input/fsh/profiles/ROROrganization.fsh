@@ -128,7 +128,7 @@ ou nom de l'OI : Nom de l'organisation interne"
 * contact.telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * contact.telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
-* address MS
+* address 0..1 MS
 * address ^short = "adresseEJ : Adresse géopostale de l'entité juridique ou adresseEG : Adresse(s) géopostale(s) de l'entité géographique."
 * address.postalCode MS
 * address.postalCode ^short = "codePostal (Adresse) : Code Postal ou code postal spécifique CEDEX"
