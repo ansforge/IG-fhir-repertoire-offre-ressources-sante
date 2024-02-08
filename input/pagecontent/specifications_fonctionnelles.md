@@ -416,6 +416,9 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 -   Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
     -   Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 
+-   [solutions BedManagement] Scénario 9 : Remplacement de toutes les données capacitaires
+    -   Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).
+
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
 ### Signalement d’anomalie
