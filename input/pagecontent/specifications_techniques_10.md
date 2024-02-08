@@ -597,7 +597,9 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### Scénario 9 : Remplacement de toutes les données capacitaires <code><span style="color: #ff0000;">draft</span></code>
+#### [Bed Management] Scénario 9 : Remplacement de toutes les données capacitaires <code><span style="color: #ff0000;">draft</span></code>
+
+*Ce scenario cible les éditeurs de solutions de bedmanagement.*
 
 **Description du scénario :** Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).
 
