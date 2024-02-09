@@ -33,6 +33,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 
 * availableTime 0..1 MS
 * availableTime ^short = "horaire (OffreOperationnelle) : heureDebut + heureFin"
+* availableTime.availableStartTime MS
+* availableTime.availableStartTime ^short = "heureDebut (Horaire) : Heure de début de la plage horaire"
+* availableTime.availableEndTime MS
+* availableTime.availableEndTime ^short = "heureFin (Horaire) : Heure de fin de la plage horaire"
 * availableTime.extension ^slicing.discriminator.type = #value
 * availableTime.extension ^slicing.discriminator.path = "url"
 * availableTime.extension ^slicing.rules = #open
