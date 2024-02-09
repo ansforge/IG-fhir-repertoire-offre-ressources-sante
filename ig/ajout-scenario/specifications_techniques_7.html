@@ -252,10 +252,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <td width="538">
 <p>Search<a href="#_ftn1" name="_ftnref1"><sup>[1]</sup></a></p>
 </td>
+<td width="538">
+<p>Read<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
+</td>
 </tr>
 <tr>
 <td width="141">
 <p><strong>M&eacute;thode http associ&eacute;e</strong></p>
+</td>
+<td width="538">
+<p>GET</p>
 </td>
 <td width="538">
 <p>GET</p>
@@ -268,6 +274,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <td width="538">
 <p>Task</p>
 </td>
+<td width="538">
+<p>Task</p>
+</td>
 </tr>
 <tr>
 <td width="141">
@@ -276,11 +285,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <td width="538">
 <p><code>GET [base]/Task{?[parameters]{&amp;_format=[mime-type]}}</code></p>
 </td>
+<td width="538">
+<p><code>GET [base]/Task/[id]{?{&amp;_format=[mime-type]}}</code></p>
+</td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
 <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#search">https://www.hl7.org/fhir/R4/http.html#search</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+<p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#read">https://hl7.org/fhir/R4/http.html#read</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 
 <h3 id="construction-de-la-réponse-de-base">Construction de la réponse de base</h3>
 
@@ -336,11 +349,13 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-1-consultation-du-statut-dune-anomalie-draft">Scénario 1 : Consultation du statut d’une anomalie <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> un responsable qualité ou le moteur de règle souhaite consulter le statut d’une anomalie dont l’identifiant est XXX.</p>
+<p><strong>Description du scénario :</strong> Un responsable qualité ou un système numérique consommateur souhaite consulter le statut d’une anomalie.</p>
+
+<p><strong>Exemple :</strong> Recherche de l’anomalie ayant pour identifiant technique 687</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Task?identifier=XXX</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Task/687</code></p>
 
 <p><strong>Requête expliquée :</strong></p>
 
@@ -436,7 +451,7 @@ GET <span class="o">[</span>BASE]/Task?focus:Organization:_tag<span class="o">=<
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 31, 2024 10:30+0000">2024-01-31</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 9, 2024 11:12+0000">2024-02-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
