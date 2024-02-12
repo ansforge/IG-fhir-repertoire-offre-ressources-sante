@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "fa148641-e50a-43fa-a5be-4595d98b5585-75",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/fa148641-e50a-43fa-a5be-4595d98b5585-75",
+  "id" : "330c6952-4d28-4f71-8097-3c4681d32308-75",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/330c6952-4d28-4f71-8097-3c4681d32308-75",
   "name" : "IntersectionRORHealthcareServiceAndRORHealthcareService",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2024-02-11T15:46:13+00:00",
+  "date" : "2024-02-12T12:45:51+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -2449,7 +2449,7 @@
     },
     {
       "path" : "HealthcareService.availableTime.availableStartTime",
-      "short" : "Opening time of day (ignored if allDay = true)",
+      "short" : "left: Opening time of day (ignored if allDay = true); right: heureDebut (Horaire) : Heure de début de la plage horaire",
       "definition" : "The opening time of day. Note: If the AllDay flag is set, then this time is ignored.",
       "comment" : "The time zone is expected to be for where this HealthcareService is provided at.",
       "min" : 0,
@@ -2468,7 +2468,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2482,7 +2482,7 @@
     },
     {
       "path" : "HealthcareService.availableTime.availableEndTime",
-      "short" : "Closing time of day (ignored if allDay = true)",
+      "short" : "left: Closing time of day (ignored if allDay = true); right: heureFin (Horaire) : Heure de fin de la plage horaire",
       "definition" : "The closing time of day. Note: If the AllDay flag is set, then this time is ignored.",
       "comment" : "The time zone is expected to be for where this HealthcareService is provided at.",
       "min" : 0,
@@ -2501,7 +2501,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
