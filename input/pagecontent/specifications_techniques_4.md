@@ -143,7 +143,7 @@ proposant une table d’opération adaptée à l'obésité du patient adaptée �
 
 **Requête :**
 
-`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|88&location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001&location.limit-value=ge200&_include=HealthcareService:location`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|88&location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001&location.limit-value=ge200|http://unitsofmeasure.org|kg&_include=HealthcareService:location`
 
 **Requête expliquée :**
 
@@ -151,6 +151,6 @@ proposant une table d’opération adaptée à l'obésité du patient adaptée �
 GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025 #critère de recherche sur l’activité opérationnelle
 &location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|88 #critère de recherche sur le type d'équipement "table opératoire"
 &location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001 #critère de recherche sur le type de caractéristique limite "poids"
-&location.limit-value=ge200 #critère de recherche sur la valeur limite "200 kg"
+&location.limit-value=ge200|http://unitsofmeasure.org|kg #critère de recherche sur la valeur limite "200 kg"
 &_include=HealthcareService:location  #inclus les Location qui qui sont référencés par les HealthcareService
 ```
