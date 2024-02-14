@@ -485,25 +485,118 @@ POST [BASE]/HealthcareService
             ]    
         }
     ],
-    "availableTime": {
-        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
-        "availableStartTime": "09:00:00",
-        "availableEndTime": "17:00:00",
-        "extension": [
-            {
-                "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
-                "valueCodeableConcept": {
-                    "coding": [
-                        {
-                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
-                            "code": "02",
-                            "display": "Horaire de fonctionnement"
-                        }
-                    ]
-                }        
-            }
-        ]    
-    },
+    "availableTime": [
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "17:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }        
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "1"
+                }
+            ]    
+        },
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "17:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }        
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "2"
+                }
+            ]    
+        },
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "17:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }        
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "3"
+                }
+            ]    
+        },
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "17:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }        
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "4"
+                }
+            ]    
+        },
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "17:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }        
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "5"
+                }
+            ]    
+        }
+    ],
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
@@ -886,24 +979,155 @@ POST [BASE]/HealthcareService
             ]
         }       
     ],
-    "availableTime": {
-        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-        "allDay": true,
-        "extension": [
-            {
-                "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
-                "valueCodeableConcept": {
-                    "coding": [
-                        {
-                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
-                            "code": "02",
-                            "display": "Horaire de fonctionnement"
-                        }
-                    ]
-                }            
-            }
-        ]
-    },
+    "availableTime": [
+        {
+            "allDay": true,
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }            
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "1"
+                }
+            ]
+        },
+        {
+            "allDay": true,
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }            
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "2"
+                }
+            ]
+        },
+        {
+            "allDay": true,
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }            
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "3"
+                }
+            ]
+        },
+        {
+            "allDay": true,
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }            
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "4"
+                }
+            ]
+        },
+        {
+            "allDay": true,
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }            
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "5"
+                }
+            ]
+        },
+        {
+            "allDay": true,
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }            
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "6"
+                }
+            ]
+        },
+        {
+            "allDay": true,
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "02",
+                                "display": "Horaire de fonctionnement"
+                            }
+                        ]
+                    }            
+                },
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "7"
+                }
+            ]
+        }
+    ],
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
@@ -1056,25 +1280,140 @@ POST [BASE]/HealthcareService
             ]
         }
     ],
-    "availableTime": {
-        "daysOfWeek": ["mon", "tue", "wed", "thu", "fri"],
-        "availableStartTime": "09:00:00",
-        "availableEndTime": "19:00:00",
-        "extension": [
-            {
-                "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
-                "valueCodeableConcept": {
-                    "coding": [
-                        {
-                            "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
-                            "code": "07",
-                            "display": "Horaire de consultation sur RDV"
-                        }
-                    ]        
+    "availableTime": [
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "19:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "07",
+                                "display": "Horaire de consultation sur RDV"
+                            }
+                        ]        
+                    }
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "1"
                 }
-            }
-        ]    
-    },
+            ]    
+        },
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "19:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "07",
+                                "display": "Horaire de consultation sur RDV"
+                            }
+                        ]        
+                    }
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "2"
+                }
+            ]    
+        },
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "19:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "07",
+                                "display": "Horaire de consultation sur RDV"
+                            }
+                        ]        
+                    }
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "3"
+                }
+            ]    
+        },
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "19:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "07",
+                                "display": "Horaire de consultation sur RDV"
+                            }
+                        ]        
+                    }
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "4"
+                }
+            ]    
+        },
+        {
+            "availableStartTime": "14:00:00",
+            "availableEndTime": "19:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "07",
+                                "display": "Horaire de consultation sur RDV"
+                            }
+                        ]        
+                    }
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "5"
+                }
+            ]    
+        },
+        {
+            "availableStartTime": "09:00:00",
+            "availableEndTime": "12:00:00",
+            "extension": [
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time", 
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire",
+                                "code": "06",
+                                "display": "Horaire de consultation sans RDV"
+                            }
+                        ]        
+                    }
+                }, 
+                {
+                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week",
+                    "valueInteger": "5"
+                }
+            ]    
+        }
+    ],
     "extension": [
         {
 			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
