@@ -18,8 +18,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
-* name 1..1
-* name ^short = "raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI)"
+* name 0..1
+* name ^short = "raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI) - Remarque : Décalage provisoire de la cardinalité par rapport au modèle d'exposition (1..1)"
 * name.extension ^slicing.discriminator.type = #value
 * name.extension ^slicing.discriminator.path = "url"
 * name.extension ^slicing.rules = #open
