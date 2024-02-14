@@ -6,7 +6,10 @@ Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-s
 Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS
 Alias: $geolocation = http://hl7.org/fhir/StructureDefinition/geolocation
 
+//TRE / Codesystem 
+Alias:  $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
 Alias: $TRE-R02-SecteurActivite = https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite
+Alias: $TRE-R04-TypeSavoirFaire = https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire
 Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure
 Alias: $TRE-R66-CategorieEtablissement = https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement
 Alias: $TRE-R67-TypeStructure-EJ-EG = https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG
@@ -18,9 +21,11 @@ Alias: $TRE-R210-ActeSpecifique = https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSp
 Alias: $TRE-R213-ModePriseEnCharge = https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge
 Alias: $TRE-R283-NiveauConfidentialite = https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite
 Alias: $TRE-R287-NatureContact = https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact
+Alias: $TRE-R288-TypeProfession = https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession
 Alias: $TRE-R338-ModaliteAccueil = https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil
 
-//JDV
+
+//JDV / Value Set
 Alias: $JDV-J16-ActeSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR
 Alias: $JDV-J17-ActiviteOperationnelle-ROR = https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR
 Alias: $JDV-J18-EquipementSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR
