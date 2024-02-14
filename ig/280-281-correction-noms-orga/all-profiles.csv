@@ -4045,8 +4045,8 @@ When considering if multiple types are appropriate, you should evaluate if child
 We expect that some jurisdictions will profile this optionality to be a single cardinality.","Need to be able to track the kind of organization that this is - different organization types have different uses.","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J203-TypeOrganisationInterne-ROR/FHIR/JDV-J203-TypeOrganisationInterne-ROR","",,,,"Organization.type",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ror-organization","Organization.name","Organization.name","","","",1,1,"","","Y","string {[]} {[]}
-","raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI)","A name associated with the organization.","If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.","Need to use the name as the label of the organization.","","","","","","","",,,,,"",,,,"Organization.name",0,1,"ele-1
+"ror-organization","Organization.name","Organization.name","","","",0,1,"","","Y","string {[]} {[]}
+","raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI) - Remarque : Décalage provisoire de la cardinalité par rapport au modèle d'exposition (1..1)","A name associated with the organization.","If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.","Need to use the name as the label of the organization.","","","","","","","",,,,,"",,,,"Organization.name",0,1,"ele-1
 org-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ror-organization","Organization.name.id","Organization.name.id","","","",0,1,"","","","string {[]} {[]}
