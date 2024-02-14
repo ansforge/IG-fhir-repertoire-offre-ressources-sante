@@ -7,7 +7,7 @@ Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/expo
 Alias: $geolocation = http://hl7.org/fhir/StructureDefinition/geolocation
 
 //TRE / Codesystem 
-Alias:  $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
+Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
 Alias: $TRE-R02-SecteurActivite = https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite
 Alias: $TRE-R04-TypeSavoirFaire = https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire
 Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure
