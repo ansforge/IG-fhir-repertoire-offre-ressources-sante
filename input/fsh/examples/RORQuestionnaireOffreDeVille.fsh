@@ -26,6 +26,10 @@ Usage: #example
 * useContext[=].code = $TRE-R67-TypeStructure-EJ-EG#EG
 * useContext[+].valueCodeableConcept = $TRE-R02-SecteurActivite#SA08
 * useContext[=].code = $TRE-R67-TypeStructure-EJ-EG#EG
+* useContext[+].valueCodeableConcept = $TRE-G15-ProfessionSante#10
+* useContext[=].code = $TRE-R288-TypeProfession#PS
+* useContext[+].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
+* useContext[=].code = $TRE-R04-TypeSavoirFaire#S
 
 * item[0].linkId = "TypeOffreInfoEJ"
 * item[=].prefix = "1"

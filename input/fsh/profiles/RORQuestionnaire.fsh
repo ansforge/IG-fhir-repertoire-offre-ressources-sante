@@ -37,7 +37,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext ^slicing.discriminator.path = "useContext.code"
 * useContext ^slicing.rules = #open
 * useContext ^slicing.description = "Slicing pour définir les différents contextes d'usage de la fiche afin de pouvoir catégoriser ces fiches de consignes par : catégorie d'EG (obligatoire), Spécialité ordinale (optionnel) et profession (optionnel)"
-* useContext ^slicing.ordered = true
+* useContext ^slicing.ordered = false
 * useContext contains
     catEG 1..* and
     catPS 0..* and
