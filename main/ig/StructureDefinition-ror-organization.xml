@@ -123,7 +123,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
   <version value="0.2.1"/>
   <name value="ROROrganization"/>
   <status value="active"/>
-  <date value="2024-02-12T12:45:21+00:00"/>
+  <date value="2024-02-15T16:40:40+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -1980,7 +1980,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -2443,7 +2443,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -2906,7 +2906,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -3369,7 +3369,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -3832,7 +3832,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -4295,7 +4295,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -4758,7 +4758,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -5221,7 +5221,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -7798,7 +7798,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="A system is required if a value is provided."/>
         <expression value="value.empty() or system.exists()"/>
         <xpath value="not(exists(f:value)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <constraint>
         <key value="org-3"/>
@@ -8269,7 +8269,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -10620,7 +10620,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -11349,7 +11349,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="A system is required if a value is provided."/>
         <expression value="value.empty() or system.exists()"/>
         <xpath value="not(exists(f:value)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -11807,7 +11807,7 @@ ou nom de l'OI : Nom de l'organisation interne</td></tr>
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
