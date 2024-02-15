@@ -198,13 +198,24 @@ GET [BASE]/Location?_lastUpdated=ge2023-08-02 #critère de recherche sur la date
 
 **Exemple :** Recherche des informations capacitaires pour les lieux de réalisation de l'offre ayant un identifiant fonctionnel connu par l’instance ROR égale à 11/339772 ou 11/347254.
 
-**Requête :**
+**Requête 1 :**
 
-`GET [BASE]/Location?_filter=(_has:HealthcareService:location:identifier eq 11/339772 or 11/347254)&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?identifier=11/339772,11/347254&_revinclude=HealthcareService:location`
 
-**Requête expliquée :**
+**Requête 1 expliquée :**
 
 ```sh
-GET [BASE]/Location?_filter=(_has:HealthcareService:location:identifier eq 11/339772 or 11/347254) #critère de recherche sur l’identifiant fonctionnel de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
+GET [BASE]/Location?identifier=11/339772,11/347254 #critère de recherche sur l’identifiant fonctionnel de l’offre
+&_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+```
+
+**Requête 2 (_filter) :**
+
+`GET [BASE]/Location?_filter=(identifier eq 11/339772 or 11/347254)&_revinclude=HealthcareService:location`
+
+**Requête 2 expliquée :**
+
+```sh
+GET [BASE]/Location?_filter=(identifier eq 11/339772 or 11/347254) #critère de recherche sur l’identifiant fonctionnel de l’offre
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
