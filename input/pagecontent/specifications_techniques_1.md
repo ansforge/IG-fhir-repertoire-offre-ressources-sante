@@ -153,16 +153,28 @@ GET [BASE]/Location?identifier=52/192675 #critère de recherche sur l’identifi
 
 **Exemple :** Recherche des données capacitaires des lieux de prise en charge ayant pour identifiants techniques 140 et 141.
 
-**Requête :**
+**Requête 1 :**
+
+`GET [BASE]/Location?_id=140,141&_revinclude=HealthcareService:location`
+
+**Requête 1 expliquée :**
+
+```sh
+GET [BASE]/Location?_id=140,141 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+&_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+```
+
+**Requête 2 (_filter) :**
 
 `GET [BASE]/Location?_filter=(_id eq 140 or 141)&_revinclude=HealthcareService:location`
 
-**Requête expliquée :**
+**Requête 2 expliquée :**
 
 ```sh
 GET [BASE]/Location?_filter=(_id eq 140 or 141) #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
+
 
 ####  Scénario 4 : Données capacitaires à partir d'une date de mise à jour
 
