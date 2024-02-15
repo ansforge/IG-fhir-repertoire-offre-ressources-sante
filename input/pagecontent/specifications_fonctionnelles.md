@@ -516,7 +516,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 #### Scénarios
 
 -	Scenario 1 : Consultation du statut d’une anomalie
-    -	Un responsable qualité ou le moteur de règle souhaite consulter le statut d'une anomalie.
+    -	Un responsable qualité ou un système numérique consommateur souhaite consulter le statut d’une anomalie.
 
 -	Scenario 2 : Consultation de la liste des anomalies
     -	Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d'un élément.
