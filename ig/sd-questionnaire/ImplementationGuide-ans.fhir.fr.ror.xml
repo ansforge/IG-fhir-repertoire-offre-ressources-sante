@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"/>
-  <version value="0.2.1"/>
+  <version value="0.2.0"/>
   <name value="ROR"/>
   <title value="Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"/>
   <status value="active"/>
-  <date value="2024-02-06T11:08:12+00:00"/>
+  <date value="2024-02-15T10:41:12+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -61,11 +61,6 @@
     <uri value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"/>
     <packageId value="hl7.fhir.uv.bulkdata"/>
     <version value="2.0.0"/>
-  </dependsOn>
-  <dependsOn id="ans_fr_securisation_transport">
-    <uri value="https://interop.esante.gouv.fr/ig/securisation-transport/ImplementationGuide/ans.fr.securisation-transport"/>
-    <packageId value="ans.fr.securisation-transport"/>
-    <version value="1.2.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -500,17 +495,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/ror-include-associated-data-code-system"/>
-      </reference>
-      <name value="Code System (CS) utilisé pour étendre le CS original avec le query parameter includeAssociatedData"/>
-      <description value="Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l'opération export pour le ROR"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -519,6 +503,17 @@
       <name value="Consignes fiche de saisie Cabinet de ville de médecine générale"/>
       <description value="Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.&#xA; Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM."/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ror-include-associated-data-code-system"/>
+      </reference>
+      <name value="Définition des type de phase de l'essai cliniques incluant https://hl7.org/fhir/R4/valueset-research-study-phase.html"/>
+      <description value="type de phase de l'essai clinique"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -570,8 +565,8 @@
       <reference>
         <reference value="CapabilityStatement/ror-serveur"/>
       </reference>
-      <name value="ROR-Serveur"/>
-      <description value="Système ROR National : Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."/>
+      <name value="ROR-RORServeur"/>
+      <description value="Système ROR National Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -832,6 +827,17 @@
         <valueString value="SearchParameter"/>
       </extension>
       <reference>
+        <reference value="SearchParameter/ror-sp-organization-price-amount-currency"/>
+      </reference>
+      <name value="ror-sp-organization-price-amount-currency"/>
+      <description value="Paramètre de recherche sur la devise du tarif des prestations et services"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
         <reference value="SearchParameter/ror-sp-organization-price-amount-value"/>
       </reference>
       <name value="ror-sp-organization-price-amount-value"/>
@@ -913,6 +919,17 @@
       </reference>
       <name value="ror-sp-organization-special-price"/>
       <description value="Paramètre de recherche sur la condition tarifaire"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/ror-sp-questionnaire-category-eg"/>
+      </reference>
+      <name value="ror-sp-questionnaire-category-eg"/>
+      <description value="Paramètre de recherche pour récupérer les fiches de consignes de saisie selon la catégorie d'EG"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1012,17 +1029,6 @@
       </reference>
       <name value="RORCommuneCog"/>
       <description value="Extension créée dans le cadre du ROR pour représenter le code officiel géographique (COG) de la commune dans laquelle le lieu est situé."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/ror-confidence-geolocation"/>
-      </reference>
-      <name value="RORConfidenceGeolocation"/>
-      <description value="Extension créée dans le cadre du ROR. Il s'agit d'une information supplémentaire pour signaler si la longitude et la latitude sont fiables."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1560,19 +1566,8 @@
       <reference>
         <reference value="ValueSet/ror-include-associated-data-vs"/>
       </reference>
-      <name value="Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData"/>
+      <name value="Value Set pou étendre le Value Set pour query parameter includeAssociatedData"/>
       <description value="Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/ror-usage-context-type-vs"/>
-      </reference>
-      <name value="Value Set type pour le contexte d'usage de la fiche de saisie"/>
-      <description value="Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage de la fiche de saisie avec le code EG"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

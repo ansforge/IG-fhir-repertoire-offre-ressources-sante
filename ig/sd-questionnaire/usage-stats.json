@@ -1,6 +1,6 @@
 {
   "package": "ans.fhir.fr.ror",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
   "extensions": [
@@ -97,13 +97,6 @@
       "title": "RORCommuneCog",
       "types": [
         "CodeableConcept"
-      ]
-    },
-    {
-      "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidence-geolocation",
-      "title": "RORConfidenceGeolocation",
-      "types": [
-        "boolean"
       ]
     },
     {
@@ -935,9 +928,6 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
       "StructureDefinition.snapshot.element"
     ],
-    "http://hl7.org/fhir/StructureDefinition/geolocation": [
-      "Organization.address"
-    ],
     "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator": [
       "Location.address.line",
       "Organization.address.line"
@@ -1049,9 +1039,6 @@
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog": [
       "Location"
     ],
-    "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidence-geolocation": [
-      "Organization.address.extension"
-    ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level": [
       "Extension"
     ],
@@ -1090,7 +1077,8 @@
       "Location"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit": [
-      "Extension"
+      "Extension",
+      "Location"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-residential-capacity": [
       "Location"
