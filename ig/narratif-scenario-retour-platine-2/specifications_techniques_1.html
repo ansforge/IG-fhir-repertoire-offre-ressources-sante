@@ -398,11 +398,21 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Exemple :</strong> Recherche des données capacitaires des lieux de prise en charge ayant pour identifiants techniques 140 et 141.</p>
 
-<p><strong>Requête :</strong></p>
+<p><strong>Requête 1 :</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_id=140,141&amp;_revinclude=HealthcareService:location</code></p>
+
+<p><strong>Requête 1 expliquée :</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_id<span class="o">=</span>140,141 <span class="c">#critère de recherche sur l’identifiant technique du lieu de prise en charge</span>
+&amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
+</code></pre></div></div>
+
+<p><strong>Requête 2 (_filter) :</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_filter=(_id eq 140 or 141)&amp;_revinclude=HealthcareService:location</code></p>
 
-<p><strong>Requête expliquée :</strong></p>
+<p><strong>Requête 2 expliquée :</strong></p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_filter<span class="o">=(</span>_id eq 140 or 141<span class="o">)</span> <span class="c">#critère de recherche sur l’identifiant technique du lieu de prise en charge</span>
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
@@ -429,13 +439,23 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Exemple :</strong> Recherche des informations capacitaires pour les lieux de réalisation de l’offre ayant un identifiant fonctionnel connu par l’instance ROR égale à 11/339772 ou 11/347254.</p>
 
-<p><strong>Requête :</strong></p>
+<p><strong>Requête 1 :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_filter=(_has:HealthcareService:location:identifier eq 11/339772 or 11/347254)&amp;_revinclude=HealthcareService:location</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?identifier=11/339772,11/347254&amp;_revinclude=HealthcareService:location</code></p>
 
-<p><strong>Requête expliquée :</strong></p>
+<p><strong>Requête 1 expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_filter<span class="o">=(</span>_has:HealthcareService:location:identifier eq 11/339772 or 11/347254<span class="o">)</span> <span class="c">#critère de recherche sur l’identifiant fonctionnel de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. </span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?identifier<span class="o">=</span>11/339772,11/347254 <span class="c">#critère de recherche sur l’identifiant fonctionnel de l’offre</span>
+&amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
+</code></pre></div></div>
+
+<p><strong>Requête 2 (_filter) :</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_filter=(identifier eq 11/339772 or 11/347254)&amp;_revinclude=HealthcareService:location</code></p>
+
+<p><strong>Requête 2 expliquée :</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_filter<span class="o">=(</span>identifier eq 11/339772 or 11/347254<span class="o">)</span> <span class="c">#critère de recherche sur l’identifiant fonctionnel de l’offre</span>
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
@@ -485,7 +505,7 @@ Plus de précision sur la spécification FHIR :
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 12, 2024 15:54+0000">2024-01-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 15, 2024 10:01+0000">2024-02-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

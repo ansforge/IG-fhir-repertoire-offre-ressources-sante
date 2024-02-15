@@ -304,7 +304,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="scénario-1-mise-à-jour-du-statut-de-plusieurs-anomalies-draft">Scénario 1 : Mise à jour du statut de plusieurs anomalies <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-1-mise-à-jour-du-statut-dune-anomalie">Scénario 1 : Mise à jour du statut d’une anomalie</h4>
 
 <p><strong>Description du scénario :</strong> Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou un système numérique met à jour le statut de l’anomalie.</p>
 
@@ -313,7 +313,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>Requête :</strong></p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type:</span><span class="w"> </span><span class="err">application/fhir+json</span><span class="w">
-</span><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Task/</span><span class="mi">1309</span><span class="w">
+
+</span><span class="err">Requête</span><span class="w"> </span><span class="err">Postman</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">PATCH</span><span class="w"> </span><span class="err">https://rortest.esante.gouv.fr/anomalies/Task/</span><span class="mi">1309</span><span class="w">
+
+</span><span class="err">Body</span><span class="w"> </span><span class="err">:</span><span class="w"> 
 </span><span class="p">{</span><span class="w">
     </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -355,7 +358,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>Requête :</strong></p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">Content-Type:</span><span class="w"> </span><span class="err">application/fhir+json</span><span class="w">
-</span><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Task/</span><span class="mi">1310</span><span class="w">
+
+</span><span class="err">PRequête</span><span class="w"> </span><span class="err">Postman</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">PATCH</span><span class="w"> </span><span class="err">https://rortest.esante.gouv.fr/anomalies/Task/</span><span class="mi">1310</span><span class="w">
+
+</span><span class="err">Body</span><span class="w"> </span><span class="err">:</span><span class="w">
 </span><span class="p">{</span><span class="w">
     </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -434,7 +440,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 12, 2024 15:54+0000">2024-01-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 15, 2024 10:01+0000">2024-02-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

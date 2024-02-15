@@ -13,7 +13,7 @@
   <version value="0.2.0"/>
   <name value="ROROrganizationNbPermanentSocialHelpPlace"/>
   <status value="active"/>
-  <date value="2024-01-12T15:54:15+00:00"/>
+  <date value="2024-02-15T10:01:20+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -135,7 +135,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.url">
