@@ -75,7 +75,10 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ```json
 Content-Type: application/fhir+json
-PATCH [BASE]/Task/1309
+
+Requête Postman : PATCH https://rortest.esante.gouv.fr/anomalies/Task/1309
+
+Body : 
 {
     "resourceType": "Parameters",
     "parameter": [
@@ -118,7 +121,10 @@ PATCH [BASE]/Task/1309
 
 ```json
 Content-Type: application/fhir+json
-PATCH [BASE]/Task/1310
+
+PRequête Postman : PATCH https://rortest.esante.gouv.fr/anomalies/Task/1310
+
+Body :
 {
     "resourceType": "Parameters",
     "parameter": [

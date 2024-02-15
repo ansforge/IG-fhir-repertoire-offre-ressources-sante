@@ -82,7 +82,10 @@ Plus de précision sur la spécification FHIR :
 **Requête :**
 
 ```json
-POST [BASE]/Task
+
+Requête Postman : POST https://rortest.esante.gouv.fr/anomalies/Task
+
+Body :
 {
     "resourceType": "Task",
     "focus": {
