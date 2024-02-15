@@ -65,7 +65,7 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Mise à jour du statut d'une anomalie <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 1 : Mise à jour du statut d'une anomalie
 
 **Description du scénario :** Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou un système numérique met à jour le statut de l’anomalie.
 
