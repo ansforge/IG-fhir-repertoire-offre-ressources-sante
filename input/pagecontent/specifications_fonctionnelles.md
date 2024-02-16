@@ -66,13 +66,13 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 #### Scénarios
 
 -   Scénario 1 : Données capacitaires sur le périmètre national
-    -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système (Exemple de ROR urgence qui souhaite afficher l\'ensemble des capacités sur une carte).
+    -   Un consommateur souhaite mettre à jour toutes les données capacitaires sur le périmètre national.
 
 -   Scénario 1 bis : Données capacitaires sur une région
-    -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région afin de mettre à jour son système. 
+    -   Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.
 
 -   Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
-    -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge -\> il connait un des identifiants (identifiant de point de saisie ou identifiant externe de synchronisation) et demande à lire une donnée capacitaire en particulier.
+    -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié. 
 
 -   Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
     -   Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
@@ -81,7 +81,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
     -   Un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.
 
 -   Scénario 5 : Données capacitaires d'une offre opérationnelle
-    -   Un consommateur ayant recherché au préalable une offre de santé correspondant à ses critères (exemple : Urgences spécialisées cardiologiques via le service de recherche sur le modèle d'exposition 2.4 du ROR) souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en  paramètre de la recherche.
+    -   Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_1.html)**
 
@@ -416,6 +416,9 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 -   Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
     -   Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 
+-   [solutions BedManagement] Scénario 9 : Remplacement de toutes les données capacitaires
+    -   Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).
+
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
 ### Signalement d’anomalie
@@ -481,11 +484,11 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 
 #### Scénarios
 
--	Scenario 1 : Mise à jour du statut de plusieurs anomalies    
-    -	Le responsable de la donnée en anomalie corrige l'anomalie, le responsable qualité ou le moteur de règle met à jour le statut de l'anomalie (possible en masse).
+-	Scenario 1 : Mise à jour du statut d'une anomalie    
+    -	Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou un système numérique met à jour le statut de l’anomalie.
 
 -	Scenario 2 : Inactivation d’une anomalie    
-    -	Un responsable qualité décide d'inactiver une anomalie (elle a été saisie par erreur par exemple).
+    -	Un responsable qualité ou un système numérique décide d’inactiver une anomalie (elle a été saisie par erreur par exemple).
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_6.html)**
 
@@ -516,7 +519,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 #### Scénarios
 
 -	Scenario 1 : Consultation du statut d’une anomalie
-    -	Un responsable qualité ou le moteur de règle souhaite consulter le statut d'une anomalie.
+    -	Un responsable qualité ou un système numérique consommateur souhaite consulter le statut d’une anomalie.
 
 -	Scenario 2 : Consultation de la liste des anomalies
     -	Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d'un élément.
