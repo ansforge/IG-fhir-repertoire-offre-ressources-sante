@@ -100,7 +100,7 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 #### Scénario 1 : Données capacitaires sur le périmètre national
 
-**Description du scénario :** un consommateur souhaite récupérer l\'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système.
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les données capacitaires sur le périmètre national.
 
 **Requête :**
 
@@ -110,24 +110,13 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 ```sh
 GET [BASE]/Location?_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
-
-```
-
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 4
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
-  Location3 (match) UE3(include)
-  Location4 (match) UE3(include)
 ```
 
 #### Scénario 1bis : Données capacitaires sur une région <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région afin de mettre à jour son système. Par exemple en Bretagne qui est composé des départements 22,29,35,56. 
+**Description du scénario :** Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.
+
+**Exemple :** Recherche des données capacitaires sur la région Bretagne (départements 22, 29, 35, 56). 
 
 **Requête :**
 
@@ -138,7 +127,6 @@ HTTP 200 OK
 ```sh
 GET [BASE]/Location?address-postalcode=35,22,29,56 #critère de recherche sur les codes postaux commencant par les valeurs choisies
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
-
 ```
 
 #### Scénario 1ter : Données capacitaires sur une région source
@@ -161,102 +149,90 @@ GET [BASE]/Location?_tag=52 #critère de recherche sur la region source
 
 #### Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1.
+**Description du scénario :** Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié. 
+
+**Exemple :** Recherche des données capacitaires associées au lieu de prise en charge dont l’identifiant fonctionnel est 52/192675.
 
 **Requête :**
 
-`GET [BASE]/Location?identifier=Location1&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?identifier=52/192675&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Location?identifier=Location1 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+GET [BASE]/Location?identifier=52/192675 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 1
-  Location1 (match) UE1(include)
-```
+#### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés <code><span style="color: #ff0000;">draft</span></code>
 
-#### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
+**Description du scénario :** Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité sur plusieurs lieux de prise en charge = Location1 ou Location2.
+**Exemple :** Recherche des données capacitaires des lieux de prise en charge ayant pour identifiants techniques 140 et 141.
 
-**Requête :**
+**Requête 1 :**
 
-`GET [BASE]/Location?identifier=Location1,Location2&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_id=140,141&_revinclude=HealthcareService:location`
 
-**Requête expliquée :**
+**Requête 1 expliquée :**
 
 ```sh
-GET [BASE]/Location?identifier=Location1,Location2 #critère de recherche sur l’identifiant technique du lieu de prise en charge
+GET [BASE]/Location?_id=140,141 #critère de recherche sur l’identifiant technique du lieu de prise en charge
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 2
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
+**Requête 2 (_filter) :**
+
+`GET [BASE]/Location?_filter=(_id eq 140 or 141)&_revinclude=HealthcareService:location`
+
+**Requête 2 expliquée :**
+
+```sh
+GET [BASE]/Location?_filter=(_id eq 140 or 141) #critère de recherche sur l’identifiant technique du lieu de prise en charge
+&_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
+
 
 ####  Scénario 4 : Données capacitaires à partir d'une date de mise à jour
 
-**Description du scénario :** un consommateur souhaite mettre à jour dans son système les données de capacité à partir d\'une date de mise à jour \>= 06/11/2022-15h00.
+**Description du scénario :** Un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.
+
+**Exemple :** Recherche de toutes les informations capacitaires liées à une offre dont la date de mise à jour est supérieure ou égale au 02/08/2023.
 
 **Requête :**
 
-`GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_lastUpdated=ge2023-08-02&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 ```sh
-GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00 #critère de recherche sur la date de mise à jour/ge=greater or equal
+GET [BASE]/Location?_lastUpdated=ge2023-08-02 #critère de recherche sur la date de mise à jour/ge=greater or equal
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 1
-  Location1 (match) UE1(include)
-```
+#### Scénario 5 : Données capacitaires d'une offre opérationnelle <code><span style="color: #ff0000;">draft</span></code>
 
-#### Scénario 5 : Données capacitaires d'une offre opérationnelle
+**Description du scénario :** Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.
 
-**Prérequis :** un consommateur recherche au préalable une offre de santé correspondant à ses critères via le service de recherche
-sur le modèle d\'exposition 2.4 du ROR. Le service de recherche envoie les identifiants des offres correspondant aux critères.
+**Exemple :** Recherche des informations capacitaires pour les lieux de réalisation de l'offre ayant un identifiant fonctionnel connu par l’instance ROR égale à 11/339772 ou 11/347254.
 
-**Description du scénario :** un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche sur le modèle d\'exposition 2.4 du ROR = UE1 ou UE2 ou UE3.
+**Requête 1 :**
 
-**Requête :**
+`GET [BASE]/Location?identifier=11/339772,11/347254&_revinclude=HealthcareService:location`
 
-`GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3&_revinclude=HealthcareService:location`
-
-**Requête expliquée :**
+**Requête 1 expliquée :**
 
 ```sh
-GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3 #critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. 
+GET [BASE]/Location?identifier=11/339772,11/347254 #critère de recherche sur l’identifiant fonctionnel de l’offre
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
-**Réponse "simplifiée" :**
-```xml
-HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 4
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
-  Location3 (match) UE3(include)
-  Location4 (match) UE3(include)
+**Requête 2 (_filter) :**
+
+`GET [BASE]/Location?_filter=(identifier eq 11/339772 or 11/347254)&_revinclude=HealthcareService:location`
+
+**Requête 2 expliquée :**
+
+```sh
+GET [BASE]/Location?_filter=(identifier eq 11/339772 or 11/347254) #critère de recherche sur l’identifiant fonctionnel de l’offre
+&_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```

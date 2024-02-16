@@ -160,8 +160,10 @@ GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE
 
 **Requête expliquée :**
 ```sh
+
 GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|50 #critère de recherche sur le type d’offre
-& characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|01 #critère de recherche sur la modalité d’accueil
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|01 #critère de recherche sur la modalité d’accueil
+
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
@@ -191,7 +193,7 @@ and (age-range-low le 35|https://unitsofmeasure.org|a and age-range-high ge 35|h
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 5 : Recherche multicritère #3 -- ET/OU
+#### Scénario 5 : Recherche multicritère #3 -- ET/OU <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur recherche les offres ayant **(** une catégorie d'établissement = XXX de TRE-R66-CategorieEtablissement **OU** type d'offre = YYY de TRE_R244-CategorieOrganisation **)** **ET** un acte spécifique = ZZZ (TRE-R210-ActeSpecifique).
 
@@ -431,8 +433,7 @@ GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
-
-#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR
+#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur recherche les offres proposant une modalité d\'accueil = XX (TRE-R338-ModaliteAccueil) et un niveau d\'expertise (critères modèle 3.0) = YY (TRE_R253-TypeMaternite).
 

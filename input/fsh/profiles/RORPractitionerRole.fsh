@@ -4,72 +4,79 @@ Id: ror-practitionerrole
 Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre"
 
 /* Références*/
-* practitioner 1..1
-* healthcareService 1..1
+* practitioner 1..1 MS
+* healthcareService 1..1 MS
 
 /* Données techniques */
-* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1 MS
 * meta.tag ^slicing.discriminator.type = #value
 * meta.tag ^slicing.discriminator.path = "url"
 * meta.tag ^slicing.rules = #open
 * meta.tag ^slicing.description = "Slicing pour gérer le code région définissant la région source des données"
 * meta.tag ^slicing.ordered = false
 * meta.tag contains
-    codeRegion 0..1
+    codeRegion 0..1 MS
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
 
 /* Données fonctionnelles */
-* identifier 0..1 
+* identifier 0..1 MS
 * identifier ^short = "identifiantSituationOperationnelle (SituationOperationnelle) : Identifiant de la situation opérationnelle, unique et persistant au niveau national"
-* code 1..1
+* practitioner only Reference(Practitioner or RORPractitioner)
+* organization only Reference(fr-organization or ROROrganization)
+* code 1..1 MS
+
 * code ^short = "profession (ExerciceProfessionnel) : Profession exercée ou future profession de l'étudiant"
 * code from $JDV-J229-ProfessionSante-ROR (required)
+* practitioner MS
+* healthcareService MS
 
-* availableTime 0..1
+* availableTime 0..1 MS
 * availableTime ^short = "precisionHoraire (SituationOperationnelle) : planning d'activité du professionnel"
+* availableTime.availableStartTime MS
 * availableTime.availableStartTime ^short = "heureDebut (Horaire) : Heure de début de la plage horaire"
+* availableTime.availableEndTime MS
 * availableTime.availableEndTime ^short = "heureFin (Horaire) : Heure de fin de la plage horaire"
 * availableTime.extension ^slicing.discriminator.type = #value
 * availableTime.extension ^slicing.discriminator.path = "url"
 * availableTime.extension ^slicing.rules = #open
 * availableTime.extension contains
-    RORAvailableTimeTypeOfTime named ror-available-time-type-of-time 0..1 and 
-    RORAvailableTimeEffectiveOpeningClosingDate named ror-available-time-effective-opening-closing-date 0..1 and
-    RORAvailableTimeNumberDaysofWeek named ror-available-time-number-days-of-week 0..1
+    RORAvailableTimeTypeOfTime named ror-available-time-type-of-time 0..1 MS and 
+    RORAvailableTimeEffectiveOpeningClosingDate named ror-available-time-effective-opening-closing-date 0..1 MS and
+    RORAvailableTimeNumberDaysofWeek named ror-available-time-number-days-of-week 0..1 MS
 * availableTime.extension[ror-available-time-type-of-time] ^short = "typePlageHoraire (Horaire) : Apporte un contexte à la plage horaire définie par la suite"
 * availableTime.extension[ror-available-time-effective-opening-closing-date] ^short = "debutDateEffective + finDateEffective (Horaire)"
 * availableTime.extension[ror-available-time-number-days-of-week] ^short = "jourSemaine (Horaire) : Numéro du jour dans la semaine"
 
-* telecom 0..1
+* telecom 0..1 MS
 * telecom ^short = "telecommunication (SituationOperationnelle) : Adresse(s) de télécommunication du professionnel dans le cadre de l'offre décrite"
-* telecom.value 1..1
+* telecom.value 1..1 MS
 * telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
 * telecom.extension ^slicing.discriminator.type = #value
 * telecom.extension ^slicing.discriminator.path = "url"
 * telecom.extension ^slicing.rules = #open
 * telecom.extension contains 
-    RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1 and
-    RORTelecomUsage named ror-telecom-usage 0..1 and
-    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1
+    RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1 MS and
+    RORTelecomUsage named ror-telecom-usage 0..1 MS and
+    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 MS
 * telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
 * telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
-* specialty 1..*
+* specialty 1..* MS
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "url"
 * specialty ^slicing.rules = #open
 * specialty contains
-    expertiseType 1..1 and
-    specialty 0..1 and
-    competence 0..1 and
-    exclusiveCompetence 0..1 and
-    specificOrientation 0..1 and
-    expertiseCapacity 0..1 and
-    qualificationPAC 0..1 and
-    nonQualifyingDESC 0..1 and
-    supplementaryExerciseRight 0..1 and
-    specificCompetence 0..*
+    expertiseType 1..1 MS and
+    specialty 0..1 MS and
+    competence 0..1 MS and
+    exclusiveCompetence 0..1 MS and
+    specificOrientation 0..1 MS and
+    expertiseCapacity 0..1 MS and
+    qualificationPAC 0..1 MS and
+    nonQualifyingDESC 0..1 MS and
+    supplementaryExerciseRight 0..1 MS and
+    specificCompetence 0..* MS
 * specialty[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[expertiseType] from $JDV-J209-TypeSavoirFaire-ROR (required)
 * specialty[specialty] ^short = "specialite (SavoirFaire) : Spécialité ordinale"
@@ -91,17 +98,20 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * specialty[specificCompetence] ^short = "competenceSpecifique (SituationOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne"
 * specialty[specificCompetence] from $JDV-J33-CompetenceSpecifique-ROR (required)
 
+* location only Reference(Location or RORLocation)
+* healthcareService only Reference(HealthcareService or RORHealthcareService)
+
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..1 and
-    RORPractitionerRoleName named ror-practitionerrole-name 0..1 and
-    $practitionerRole-contracted named contracted 0..1 and
-    $practitionerRole-hasCAS named optionCAS 0..1 and 
-    $practitionerRole-vitaleAccepted named vitalAccepted 0..1 and
-    RORMetaCreationDate named ror-meta-creation-date 1..1 and
-    RORMetaComment named ror-meta-comment 0..1
+    RORPractitionerRoleUnitExerciseMode named ror-practitionerrole-unit-exercise-mode 1..1 MS and
+    RORPractitionerRoleName named ror-practitionerrole-name 0..1 MS and
+    $practitionerRole-contracted named contracted 0..1 MS and
+    $practitionerRole-hasCAS named optionCAS 0..1 MS and 
+    $practitionerRole-vitaleAccepted named vitalAccepted 0..1 MS and
+    RORMetaCreationDate named ror-meta-creation-date 1..1 MS and
+    RORMetaComment named ror-meta-comment 0..1 MS
 * extension[ror-practitionerrole-unit-exercise-mode] ^short = "modeExerciceOffre (SituationOperationnelle) : statut du professionnel lorsqu'il exerce dans le cadre de l'offre décrite"
 * extension[ror-practitionerrole-name] ^short = "civiliteExercie + nomExercice + prenomExercice (ExerciceProfessionnel)"
 * extension[contracted] ^short = "secteurConventionnement (SituationOperationnelle) : Secteur de conventionnement du professionnel libéral auquel il a adhéré auprès de l'Assurance Maladie"
