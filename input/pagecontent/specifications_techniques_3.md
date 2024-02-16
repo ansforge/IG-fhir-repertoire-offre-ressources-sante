@@ -218,13 +218,13 @@ GET [BASE]/HealthcareService?_filter=((organization.type eq https://mos.esante.g
 
 **Exemple :** Recherche des offres caractérisées par l’activité opérationnelle « 013 – Cardiologie générale », située dans un rayon de 15 kilomètres autour de Saint-Herblain (code commune 44162)
 
-**Requête :**
+**Requête 1 (near-insee-code) :**
 
 ```
 GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013&location.near-insee-code=44162|15|km&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
-**Requête expliquée :**
+**Requête 1 expliquée (near_insee_code) :**
 
 ```sh
 GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013 #critère de recherche sur l’activité opérationnelle
@@ -291,6 +291,25 @@ Exemple :
   ]
 }
 ```
+
+
+**Requête 2 (near) :**
+
+```
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013&location.near=47.21827323906432|-1.6369631507460436|15|km&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revincluded=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
+
+**Requête 2 expliquée (near):**
+```sh
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013 #critère de recherche sur l’activité opérationnelle
+&location.near=47.21827323906432|-1.6369631507460436|15|km #critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
+
 
 #### Scénario 7 : Recherche sur une zone d'intervention <code><span style="color: #ff0000;">draft</span></code>
 
@@ -380,6 +399,7 @@ GET [BASE]/HealthcareService?location.address-postalcode=60000,76620 #critère d
 ```
 GET [BASE]/HealthcareService?_filter=(location.commune-cog eq https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|18000 OR location.commune-cog eq https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|13013)&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|437&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|032&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
+
 
 **Requête expliquée :**
 
