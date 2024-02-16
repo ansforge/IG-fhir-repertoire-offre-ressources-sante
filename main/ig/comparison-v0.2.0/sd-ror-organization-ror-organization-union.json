@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "f656f2e8-d4ea-427c-86f9-9a7a1a00c02e-146",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f656f2e8-d4ea-427c-86f9-9a7a1a00c02e-146",
+  "id" : "567c39c7-4f1b-45b9-8149-97d057a11654-146",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/567c39c7-4f1b-45b9-8149-97d057a11654-146",
   "name" : "UnionROROrganizationAndROROrganization",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-02-16T09:36:04+00:00",
+  "date" : "2024-02-16T16:20:46+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -1195,7 +1195,7 @@
     },
     {
       "path" : "Organization.name",
-      "short" : "raisonSociale (EJ) : Raison sociale complète de l'entité juridique\nou nom de l'EG :  Nom sous lequel l'entité géographique exerce son activité\nou nom de l'OI : Nom de l'organisation interne",
+      "short" : "left: raisonSociale (EJ) : Raison sociale complète de l'entité juridique\nou nom de l'EG :  Nom sous lequel l'entité géographique exerce son activité\nou nom de l'OI : Nom de l'organisation interne; right: raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI) - Remarque : Décalage provisoire de la cardinalité par rapport au modèle d'exposition (1..1)",
       "definition" : "A name associated with the organization.",
       "comment" : "If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.",
       "requirements" : "Need to use the name as the label of the organization.",
@@ -1328,7 +1328,7 @@
     },
     {
       "path" : "Organization.alias",
-      "short" : "nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique",
+      "short" : "left: nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique; right: nomOperationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique",
       "definition" : "A list of alternate names that the organization is known as, or was known as in the past.",
       "comment" : "There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization.",
       "requirements" : "Over time locations and organizations go through many changes and can be known by different names.\n\nFor searching knowing previous names that the organization was known by can be very useful.",
