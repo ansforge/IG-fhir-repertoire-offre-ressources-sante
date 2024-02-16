@@ -390,6 +390,22 @@ Plus de précision sur la spécification FHIR :
 
 </code></pre></div></div>
 
+<h4 id="scénario-1ter-données-capacitaires-sur-une-région-source">Scénario 1ter : Données capacitaires sur une région source</h4>
+
+<p><strong>Description du scénario :</strong> un consommateur souhaite récupérer l'ensemble des données capacitaires sur une région source afin de mettre à jour son système. 
+Par exemple, récupération des données capacitaires pour la région source « 52 – Pays de la Loire »</p>
+
+<p><strong>Requête :</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_tag=52&amp;_revinclude=HealthcareService:location</code></p>
+
+<p><strong>Requête expliquée :</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_tag<span class="o">=</span>52 <span class="c">#critère de recherche sur la region source</span>
+&amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
+
+</code></pre></div></div>
+
 <h4 id="scénario-2-données-capacitaires-sur-un-lieu-de-prise-en-charge-identifié">Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié</h4>
 
 <p><strong>Description du scénario :</strong> un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1.</p>
@@ -530,7 +546,7 @@ sur le modèle d'exposition 2.4 du ROR. Le service de recherche envoie les ident
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 16, 2024 13:11+0000">2024-02-16</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 16, 2024 13:20+0000">2024-02-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
