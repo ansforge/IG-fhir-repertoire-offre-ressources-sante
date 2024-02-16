@@ -90,19 +90,20 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Consultation du statut d’une anomalie <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 1 : Consultation du statut d’une anomalie
 
-**Description du scénario :** un responsable qualité ou le moteur de règle souhaite consulter le statut d'une anomalie dont l’identifiant est XXX.
+**Description du scénario :** Un responsable qualité ou un système numérique consommateur souhaite consulter le statut d’une anomalie.
 
+**Exemple :** Recherche de l’anomalie ayant pour identifiant technique 687
 
 **Requête :**
 
-`GET [BASE]/Task?identifier=XXX`
+`GET [BASE]/Task/687`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Task?identifier=XXX #critère de recherche sur l’identifiant de l’anomalie
+GET [BASE]/Task/687 #recherche d'une anomalie à partir de son identifiant technique
 ```
 
 #### Scénario 2 : Consultation de la liste des anomalies <code><span style="color: #ff0000;">draft</span></code>
