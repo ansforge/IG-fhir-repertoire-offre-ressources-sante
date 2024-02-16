@@ -20,18 +20,17 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 /* Données fonctionnelles */
 * name MS
-* name ^short = "raisonSociale (EJ) : Raison sociale complète de l'entité juridique
-ou nom de l'EG :  Nom sous lequel l'entité géographique exerce son activité
-ou nom de l'OI : Nom de l'organisation interne"
+* name 0..1
+* name ^short = "raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI) - Remarque : Décalage provisoire de la cardinalité par rapport au modèle d'exposition (1..1)"
 * name.extension ^slicing.discriminator.type = #value
 * name.extension ^slicing.discriminator.path = "url"
 * name.extension ^slicing.rules = #open
 * name.extension contains
-    ROROrganizationAdditionalName named ror-organization-additional-name 0..1 MS
-* name.extension[ror-organization-additional-name] ^short = "complementRaisonSociale (EJ) : Suite de la raison sociale, si elle existe"
-
+    ROROrganizationAdditionalName named ror-organization-additional-name 0..1
+* name.extension[ror-organization-additional-name] ^short = "complementRaisonSociale (EJ) ou complementDenominationEG (EG)"
 * alias MS
-* alias ^short = "nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
+* alias 0..1
+* alias ^short = "nomOperationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
