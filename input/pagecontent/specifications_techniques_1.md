@@ -141,6 +141,23 @@ GET [BASE]/Location?address-postalcode=35,22,29,56 #critère de recherche sur le
 
 ```
 
+#### Scénario 1ter : Données capacitaires sur une région source
+
+**Description du scénario :** un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région source afin de mettre à jour son système. 
+Par exemple, récupération des données capacitaires pour la région source « 52 – Pays de la Loire »
+
+**Requête :**
+
+`GET [BASE]/Location?_tag=52&_revinclude=HealthcareService:location`
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/Location?_tag=52 #critère de recherche sur la region source
+&_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
+
+```
+
 
 #### Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
 
