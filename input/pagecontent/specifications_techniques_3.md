@@ -177,14 +177,14 @@ GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_filter=(((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|102) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|233)) and (age-range-low le 35 and age-range-high ge 35))&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_filter=(((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|102) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|233)) and (age-range-low le 35|https://unitsofmeasure.org|a and age-range-high ge 35|https://unitsofmeasure.org|a))&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
 GET [BASE]/HealthcareService?_filter=(((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|102) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|233)) #critère de recherche sur l’activité opérationnelle OU (or) sur la catégorie d’organisation
-and (age-range-low le 35 and age-range-high ge 35)) #critère de recherche sur l'age du patient
+and (age-range-low le 35|https://unitsofmeasure.org|a and age-range-high ge 35|https://unitsofmeasure.org|a)) #critère de recherche sur l'age du patient
 &_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
 &_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
