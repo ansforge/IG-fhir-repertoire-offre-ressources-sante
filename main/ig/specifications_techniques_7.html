@@ -137,9 +137,6 @@
       <li>
         <a href="modifiers.html">Paramètres et modificateurs de requêtes FHIR</a>
       </li>
-      <li>
-        <a href="annexes.html">Annexes</a>
-      </li>
     </ul>
   </li>
   <li>
@@ -334,17 +331,19 @@ Plus de précision sur la spécification FHIR :
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="scénario-1-consultation-du-statut-dune-anomalie-draft">Scénario 1 : Consultation du statut d’une anomalie <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-1-consultation-du-statut-dune-anomalie">Scénario 1 : Consultation du statut d’une anomalie</h4>
 
-<p><strong>Description du scénario :</strong> un responsable qualité ou le moteur de règle souhaite consulter le statut d’une anomalie dont l’identifiant est XXX.</p>
+<p><strong>Description du scénario :</strong> Un responsable qualité ou un système numérique consommateur souhaite consulter le statut d’une anomalie.</p>
+
+<p><strong>Exemple :</strong> Recherche de l’anomalie ayant pour identifiant technique 687</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Task?identifier=XXX</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Task/687</code></p>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Task?identifier<span class="o">=</span>XXX <span class="c">#critère de recherche sur l’identifiant de l’anomalie</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Task/687 <span class="c">#recherche d'une anomalie à partir de son identifiant technique</span>
 </code></pre></div></div>
 
 <h4 id="scénario-2-consultation-de-la-liste-des-anomalies-draft">Scénario 2 : Consultation de la liste des anomalies <code><span style="color: #ff0000;">draft</span></code></h4>
@@ -436,7 +435,7 @@ GET <span class="o">[</span>BASE]/Task?focus:Organization:_tag<span class="o">=<
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 15, 2024 16:40+0000">2024-02-15</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 16, 2024 09:35+0000">2024-02-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

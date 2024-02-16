@@ -137,9 +137,6 @@
       <li>
         <a href="modifiers.html">Paramètres et modificateurs de requêtes FHIR</a>
       </li>
-      <li>
-        <a href="annexes.html">Annexes</a>
-      </li>
     </ul>
   </li>
   <li>
@@ -324,17 +321,17 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
 <ul>
   <li>Scénario 1 : Données capacitaires sur le périmètre national
     <ul>
-      <li>Un consommateur souhaite récupérer l'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système (Exemple de ROR urgence qui souhaite afficher l'ensemble des capacités sur une carte).</li>
+      <li>Un consommateur souhaite mettre à jour toutes les données capacitaires sur le périmètre national.</li>
     </ul>
   </li>
   <li>Scénario 1 bis : Données capacitaires sur une région
     <ul>
-      <li>Un consommateur souhaite récupérer l'ensemble des données capacitaires sur une région afin de mettre à jour son système.</li>
+      <li>Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.</li>
     </ul>
   </li>
   <li>Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
     <ul>
-      <li>Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge -&gt; il connait un des identifiants (identifiant de point de saisie ou identifiant externe de synchronisation) et demande à lire une donnée capacitaire en particulier.</li>
+      <li>Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié.</li>
     </ul>
   </li>
   <li>Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
@@ -349,7 +346,7 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
   </li>
   <li>Scénario 5 : Données capacitaires d’une offre opérationnelle
     <ul>
-      <li>Un consommateur ayant recherché au préalable une offre de santé correspondant à ses critères (exemple : Urgences spécialisées cardiologiques via le service de recherche sur le modèle d’exposition 2.4 du ROR) souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en  paramètre de la recherche.</li>
+      <li>Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.</li>
     </ul>
   </li>
 </ul>
@@ -870,14 +867,14 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 <h4 id="scénarios-8">Scénarios</h4>
 
 <ul>
-  <li>Scenario 1 : Mise à jour du statut de plusieurs anomalies
+  <li>Scenario 1 : Mise à jour du statut d’une anomalie
     <ul>
-      <li>Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou le moteur de règle met à jour le statut de l’anomalie (possible en masse).</li>
+      <li>Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou un système numérique met à jour le statut de l’anomalie.</li>
     </ul>
   </li>
   <li>Scenario 2 : Inactivation d’une anomalie
     <ul>
-      <li>Un responsable qualité décide d’inactiver une anomalie (elle a été saisie par erreur par exemple).</li>
+      <li>Un responsable qualité ou un système numérique décide d’inactiver une anomalie (elle a été saisie par erreur par exemple).</li>
     </ul>
   </li>
 </ul>
@@ -913,7 +910,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 <ul>
   <li>Scenario 1 : Consultation du statut d’une anomalie
     <ul>
-      <li>Un responsable qualité ou le moteur de règle souhaite consulter le statut d’une anomalie.</li>
+      <li>Un responsable qualité ou un système numérique consommateur souhaite consulter le statut d’une anomalie.</li>
     </ul>
   </li>
   <li>Scenario 2 : Consultation de la liste des anomalies
@@ -1023,7 +1020,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 15, 2024 16:40+0000">2024-02-15</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 16, 2024 09:35+0000">2024-02-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
