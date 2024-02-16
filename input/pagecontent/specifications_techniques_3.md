@@ -168,7 +168,7 @@ GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 4 : Recherche multicritères #2 - OU
+#### Scénario 4 : Recherche multicritères #2 - OU <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur cherche les offres ayant un type d’offre OU une activité opérationnelle qu’il indique pour un patient d'âge donné.
 
