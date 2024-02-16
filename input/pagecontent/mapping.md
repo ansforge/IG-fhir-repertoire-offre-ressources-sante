@@ -15,30 +15,14 @@ A noter que Task, Measure et MeasureReport ne font pas partie du mapping, car ce
 
 ### Mapping Practitioner & PractitionerRole
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div style="text-inlin:center;">{%include mapping-Practitioner-PractitionerRole.svg%}</div>
-        </td>    
-    </tr>
-</table>
+<div>{%include mapping-Practitioner-PractitionerRole.svg%}</div>
+
 
 ### Mapping Organization
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div style="text-inlin:center;">{%include mapping-Organization.svg%}</div>
-        </td>    
-    </tr>
-</table>
+<div>{%include mapping-Organization.svg%}</div>
+
 
 ### Mapping Location
 
-<table align="center">
-    <tr>
-        <td align ="center">
-            <div style="text-inlin:center;">{%include mapping-Location.svg%}</div>
-        </td>    
-    </tr>
-</table>
+<div>{%include mapping-Location.svg%}</div>
