@@ -1,0 +1,46 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "code-region-territorial-division-ror-valueset",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune</li><li>Import all the codes that are contained in https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR</li><li>Import all the codes that are contained in https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR</li><li>Import all the codes that are contained in https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR</li><li>Import all the codes that are contained in https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR</li></ul></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset",
+  "version" : "0.2.1",
+  "name" : "CodeRegionTerritorialDivisionRORValueSet",
+  "title" : "Fusion des valuesets pour le code de la division territoriale",
+  "status" : "active",
+  "date" : "2024-02-16T10:35:44+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR"]
+    }]
+  }
+}
