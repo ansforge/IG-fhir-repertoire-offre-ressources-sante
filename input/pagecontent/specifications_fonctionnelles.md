@@ -225,7 +225,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
     - Un consommateur recherche les offres proposant une activité opérationnelle particulière et un mode de prise en charge particulier, sur une ville, ou un ensemble de villes (code commune).
 
 -   Scenario 11 : Recherche sur un critère du modèle d'exposition 3.0
-    -   Un consommateur recherche les offres proposant une modalité d\'accueil et un niveau d\'expertise (critères modèle 3.0).
+    -   Un consommateur recherche les offres proposant une compétence spécifique.
   
 -    Scenario 12 : Recherche d’offre en anomalie
      -   Un responsable qualité recherche les offres en anomalie de sa région.
