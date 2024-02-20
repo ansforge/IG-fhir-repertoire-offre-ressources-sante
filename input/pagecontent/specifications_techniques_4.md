@@ -124,6 +124,8 @@ et disposant d’un lit fermé ré-ouvrable (nature = lit ; statut = fermé ; ty
 
 `GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|391&location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&location.nb-capacity=gt0&_include=HealthcareService:location`
 
+&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/TRE_R333-TypeFermetureCapacite|01&location.nb-capacity=gt0&_include=HealthcareService:location
+
 **Requête expliquée :**
 
 ```sh
@@ -143,13 +145,13 @@ proposant une table d’opération adaptée à l'obésité du patient adaptée �
 
 **Requête :**
 
-`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|88&location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001&location.limit-value=ge200|http://unitsofmeasure.org|kg&_include=HealthcareService:location`
+`GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&location.equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|088&location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001&location.limit-value=ge200|http://unitsofmeasure.org|kg&_include=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
 GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025 #critère de recherche sur l’activité opérationnelle
-&location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|88 #critère de recherche sur le type d'équipement "table opératoire"
+&location.equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|088 #critère de recherche sur le type d'équipement "table opératoire"
 &location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001 #critère de recherche sur le type de caractéristique limite "poids"
 &location.limit-value=ge200|http://unitsofmeasure.org|kg #critère de recherche sur la valeur limite "200 kg"
 &_include=HealthcareService:location  #inclus les Location qui qui sont référencés par les HealthcareService
