@@ -427,17 +427,19 @@ and <span class="o">(</span>age-range-low le 35|https://unitsofmeasure.org|a and
 <h4 id="scénario-5-recherche-multicritère-3--etou-draft">Scénario 5 : Recherche multicritère #3 – ET/OU <code><span style="color: #ff0000;">draft</span></code></h4>
 <p><em>L’utilisation du above dans ce scénario en tant que recherche circulaire est une interprétation des spécifications FHIR R4. Ce fonctionnement est sujet à modification.</em></p>
 
-<p><strong>Description du scénario :</strong> un consommateur recherche les offres ayant <strong>(</strong> une catégorie d’établissement = XXX de TRE-R66-CategorieEtablissement <strong>OU</strong> type d’offre = YYY de TRE_R244-CategorieOrganisation <strong>)</strong> <strong>ET</strong> un acte spécifique = ZZZ (TRE-R210-ActeSpecifique).</p>
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres ayant (une catégorie d’établissement OU un type d’offre) ET un acte spécifique qu’il indique.</p>
+
+<p><strong>Exemple :</strong> recherche des offres de la catégorie d’établissement « 189 - Centre médico-psycho-pédagogique (CMPP) » ou du type d’offre « 62 - Centre médico-psycho-pédagogique (CMPP) », et proposant l’acte spécifique « 0626- Bilan neuropsychologique »</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_filter=((organization.type:above eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY))&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_filter=((organization.type:above eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|189) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|62))&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0626&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_filter<span class="o">=((</span>organization.type:above eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX<span class="o">)</span> or <span class="o">(</span>service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY<span class="o">))</span> <span class="c">#critère de recherche sur la catégorie d'établissement ou sur le type d'offre</span>
-&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ <span class="c">#critère sur l’acte spécifique</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_filter<span class="o">=((</span>organization.type:above eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|189<span class="o">)</span> or <span class="o">(</span>service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|62<span class="o">))</span> <span class="c">#critère de recherche sur la catégorie d'établissement ou sur le type d'offre</span>
+&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0626 <span class="c">#critère sur l’acte spécifique</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -735,7 +737,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 20, 2024 13:37+0000">2024-02-20</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 20, 2024 14:01+0000">2024-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
