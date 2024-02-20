@@ -444,7 +444,6 @@ GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS
 ```
 GET [BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R243-CompetenceSpecifique/FHIR/TRE-R243-CompetenceSpecifique|05&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
-HealthcareService?specific-competence=
 
 **Requête expliquée :**
 
