@@ -71,6 +71,9 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 -   Scénario 1 bis : Données capacitaires sur une région
     -   Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.
 
+-   Scénario 1 ter : Données capacitaires sur une région source
+    -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région source afin de mettre à jour son système. 
+
 -   Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
     -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié. 
 
@@ -192,37 +195,37 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 #### Scénarios
 
 -   Scenario 1 : Recherche sur un critère en saisissant une valeur
-    -   Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'unique valeur recherchée par le consommateur.
+    - Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’unique valeur recherchée par le consommateur.
 
 -   Scenario 2 : Recherche sur un critère en saisissant une liste de valeurs
-    -   Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'une des valeurs recherchées par le consommateur.
+    - Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’une des valeurs recherchées par le consommateur.
 
 -   Scenario 3 : Recherche multicritères #1 -- ET
-    -   Un consommateur cherche les offres ayant un type d'offre **ET** une modalité d'accueil qu’il indique.
+    - Un consommateur cherche les offres ayant un type d’offre **ET** une modalité d’accueil qu’il indique.
 
 -   Scenario 4 : Recherche multicritères #2 -- OU
-    -   Un consommateur cherche les offres ayant à un type d'offre  **OU** une activité opérationnelle qu’il indique.
+    - Un consommateur cherche les offres ayant un type d’offre **OU** une activité opérationnelle qu’il indique pour un patient d'âge donné.
 
 -   Scenario 5 : Recherche multicritères #3 -- ET/OU
     -   Un consommateur recherche les offres ayant (une catégorie d'établissement **OU** un type d'offre) **ET** un acte spécifique qu’il indique.
 
 -   Scenario 6 : Recherche à proximité géographique
-    -   Un consommateur cherche les offres ayant une activité opérationnelle, dans un périmètre géographique proche du lieu de résidence d\'un patient.
+    - Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d'un patient.
 
 -   Scenario 7 : Recherche sur une zone d'intervention
-    -   Un consommateur cherche les offres proposées dans une commune faisant partie d\'une zone d\'intervention.
+    - Un consommateur cherche les offres ayant un type d'offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d'une zone d'intervention.
 
 -   Scenario 8 : Recherche sur un département
-    -   Un consommateur recherche les offres sur un département, ou un ensemble de département (code postal).
+    - Un consommateur recherche les offres ayant une catégorie d’organisation, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).
 
 -   Scenario 9 : Recherche sur une ville #1 -- Code Postal
-    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code postal).
+    - Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).
 
 -   Scenario 10 : Recherche sur une ville #2 -- Code commune
-    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code commune).
+    - Un consommateur recherche les offres proposant une activité opérationnelle particulière et un mode de prise en charge particulier, sur une ville, ou un ensemble de villes (code commune).
 
 -   Scenario 11 : Recherche sur un critère du modèle d'exposition 3.0
-    -   Un consommateur recherche les offres proposant une modalité d\'accueil et un niveau d\'expertise (critères modèle 3.0).
+    -   Un consommateur recherche les offres proposant une compétence spécifique.
   
 -    Scenario 12 : Recherche d’offre en anomalie
      -   Un responsable qualité recherche les offres en anomalie de sa région.
@@ -257,13 +260,13 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 #### Scénarios
 
 -   Scenario 1 : Recherche sur un critère capacitaire #1
-    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit disponible.
+    -   Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.
 
 -   Scenario 2 : Recherche sur un critère capacitaire #2
-    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit fermé réouvrable.
+    -   Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.
 
 -   Scenario 3 : Recherche sur un critère de l'équipement
-    -   Un consommateur cherche une offre de chirurgie traumatologique proposant un appareil de radiologie adapté à l\'obésité du patient.
+    -   Un consommateur cherche une offre pour une activité opérationnelle donnée, et disposant d’équipement respectant certaines caractéristiques.
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_4.html)**
 
