@@ -342,34 +342,38 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-1-recherche-sur-un-critère-en-saisissant-une-valeur">Scénario 1 : Recherche sur un critère en saisissant une valeur</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche les offres ayant\ une activité opérationnelle = XXX.</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’unique valeur recherchée par le consommateur.</p>
+
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par l’activité opérationnelle « 227 - Pédopsychiatrie infanto-juvénile »</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|227&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX <span class="c">#critère de recherche sur l’activité opérationnelle</span>
-&amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
-&amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|227 <span class="c">#critère de recherche sur l’activité opérationnelle</span>
+&amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par HealthcareService </span>
+&amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par HealthcareService</span>
 &amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
 <h4 id="scénario-2-recherche-sur-un-critère-en-saisissant-une-liste-de-valeur">Scénario 2 : Recherche sur un critère en saisissant une liste de valeur</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche les offres ayant à une activité opérationnelle = XXX ou YYY (TRE_R211-ActiviteOperationnelle).</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’une des valeurs recherchées par le consommateur.</p>
+
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par l’activité opérationnelle « 005 – Allergologie » ou l’activité opérationnelle « 481 - Médecine générale à orientation Allergologie ».</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX,YYY&amp;__include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|005,481&amp;__include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX,YYY <span class="c">#critère de recherche sur l’activité opérationnelle</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|005,481 <span class="c">#critère de recherche sur l’activité opérationnelle</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Servicen</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -379,35 +383,41 @@ Plus de précision sur la spécification FHIR :
 </code></pre></div></div>
 <h4 id="scénario-3-recherche-multicritères-1---et">Scénario 3 : Recherche multicritères #1 - ET</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche les offres ayant un type d’offre = XXX (TRE_R244-CategorieOrganisation) <strong>ET</strong> une modalité d’accueil = YYY (TRE_R338-ModaliteAccueil).</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche les offres ayant un type d’offre ET une modalité d’accueil qu’il indique.</p>
+
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par un type d’offre « 50 – Institut thérapeutique éducatif et pédagogique (ITEP)» et une modalité d’accueil « 01 – Accueil séquentiel accepté »</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|YYY&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|50&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|01&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?service-category<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX#critère de recherche sur le <span class="nb">type </span>d’offre
-&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|YYY <span class="c">#critère de recherche sur la modalité d’accueil</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+GET <span class="o">[</span>BASE]/HealthcareService?service-category<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|50 <span class="c">#critère de recherche sur le type d’offre</span>
+&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|01 <span class="c">#critère de recherche sur la modalité d’accueil</span>
+
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
 &amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
-<h4 id="scénario-4-recherche-multicritères-2---ou">Scénario 4 : Recherche multicritères #2 - OU</h4>
+<h4 id="scénario-4-recherche-multicritères-2---ou-draft">Scénario 4 : Recherche multicritères #2 - OU <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche les offres ayant à un type d’offre = XXX (TRE_R244-CategorieOrganisation) <strong>OU</strong> une activité opérationnelle = YYY.
-(TRE_R211-ActiviteOperationnelle)</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche les offres ayant un type d’offre OU une activité opérationnelle qu’il indique pour un patient d’âge donné.</p>
+
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par le type d’offre « 102 - Soins Médicaux et de Réadaptation (SMR) locomoteur » OU une activité opérationnelle « 233 - Réadaptation des affections de l’appareil locomoteur » pour un patient de 35 ans.(age-range-low &lt;=35 et age-range-high &gt;=35)</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_filter=((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|YYY))&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_filter=(((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|102) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|233)) and (age-range-low le 35|https://unitsofmeasure.org|a and age-range-high ge 35|https://unitsofmeasure.org|a))&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_filter<span class="o">=((</span>service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|XXX<span class="o">)</span> or <span class="o">(</span>specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|YYY<span class="o">))</span> <span class="c">#critère de recherche sur l’activité opérationnelle OU (or) sur la catégorie d’organisation</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_filter<span class="o">=(((</span>service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|102<span class="o">)</span> or <span class="o">(</span>specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|233<span class="o">))</span> <span class="c">#critère de recherche sur l’activité opérationnelle OU (or) sur la catégorie d’organisation</span>
+and <span class="o">(</span>age-range-low le 35|https://unitsofmeasure.org|a and age-range-high ge 35|https://unitsofmeasure.org|a<span class="o">))</span> <span class="c">#critère de recherche sur l'age du patient</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -415,18 +425,21 @@ Plus de précision sur la spécification FHIR :
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
 <h4 id="scénario-5-recherche-multicritère-3--etou-draft">Scénario 5 : Recherche multicritère #3 – ET/OU <code><span style="color: #ff0000;">draft</span></code></h4>
+<p><em>L’utilisation du above dans ce scénario en tant que recherche circulaire est une interprétation des spécifications FHIR R4. Ce fonctionnement est sujet à modification.</em></p>
 
-<p><strong>Description du scénario :</strong> un consommateur recherche les offres ayant <strong>(</strong> une catégorie d’établissement = XXX de TRE-R66-CategorieEtablissement <strong>OU</strong> type d’offre = YYY de TRE_R244-CategorieOrganisation <strong>)</strong> <strong>ET</strong> un acte spécifique = ZZZ (TRE-R210-ActeSpecifique).</p>
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres ayant (une catégorie d’établissement OU un type d’offre) ET un acte spécifique qu’il indique.</p>
+
+<p><strong>Exemple :</strong> recherche des offres de la catégorie d’établissement « 189 - Centre médico-psycho-pédagogique (CMPP) » ou du type d’offre « 62 - Centre médico-psycho-pédagogique (CMPP) », et proposant l’acte spécifique « 0626- Bilan neuropsychologique »</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_filter=((organization.type eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY))&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_filter=((organization.type:above eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|189) or (service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|62))&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0626&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_filter<span class="o">=((</span>organization.type eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|XXX<span class="o">)</span> or <span class="o">(</span>service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|YYY<span class="o">))</span> <span class="c">#critère de recherche sur l’acte spécifique OU sur la catégorie d’organisation</span>
-&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|ZZZ <span class="c">#critère sur l’acte spécifique</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_filter<span class="o">=((</span>organization.type:above eq https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|189<span class="o">)</span> or <span class="o">(</span>service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|62<span class="o">))</span> <span class="c">#critère de recherche sur la catégorie d'établissement ou sur le type d'offre</span>
+&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0626 <span class="c">#critère sur l’acte spécifique</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -435,18 +448,19 @@ Plus de précision sur la spécification FHIR :
 </code></pre></div></div>
 <h4 id="scénario-6-recherche-à-proximité-géographique">Scénario 6 : Recherche à proximité géographique</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche les
-offres ayant une activité opérationnelle = XXX (TRE_R211-ActiviteOperationnelle) dans un périmètre géographique proche du lieu de résidence d’un patient = à YY km de (latitude,longitude).</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d’un patient.</p>
 
-<p><strong>Requête :</strong></p>
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par l’activité opérationnelle « 013 – Cardiologie générale », située dans un rayon de 15 kilomètres autour de Saint-Herblain (code commune 44162)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&amp;location.near=latitude|longitude|YY|km&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revincluded=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<p><strong>Requête 1 (near-insee-code) :</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013&amp;location.near-insee-code=44162|15|km&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
-<p><strong>Requête expliquée :</strong></p>
+<p><strong>Requête 1 expliquée (near_insee_code) :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX <span class="c">#critère de recherche sur l’activité opérationnelle</span>
-&amp;location.near<span class="o">=</span>latitude|longitude|YY|km <span class="c">#critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 </span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013 <span class="c">#critère de recherche sur l’activité opérationnelle</span>
+&amp;location.near-insee-code<span class="o">=</span>44162|15|km <span class="c">#critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 </span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -509,18 +523,37 @@ Exemple :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
+<p><strong>Requête 2 (near) :</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013&amp;location.near=47.21827323906432|-1.6369631507460436|15|km&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revincluded=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+</code></pre></div></div>
+
+<p><strong>Requête 2 expliquée (near):</strong></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013 <span class="c">#critère de recherche sur l’activité opérationnelle</span>
+&amp;location.near<span class="o">=</span>47.21827323906432|-1.6369631507460436|15|km <span class="c">#critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 </span>
+&amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
+&amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
+&amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
+&amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
+&amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
+</code></pre></div></div>
+
 <h4 id="scénario-7-recherche-sur-une-zone-dintervention-draft">Scénario 7 : Recherche sur une zone d’intervention <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche les offres proposées dans une commune = XXX faisant partie d’une zone d’intervention.</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche les offres ayant un type d’offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d’une zone d’intervention.</p>
+
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par le type d’offre « 30 – Service d’aide et d’accompagnement à domicile (SAAD) », proposant une activité opérationnelle de type « 293 - Accompagnements pour accomplir les activités domestiques » et ayant la commune 29151 dans la zone d’intervention.</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?intervention-zone=XXX&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revincluded=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?intervention-zone=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|29151&amp;specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|293&amp;service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|30&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?intervention-zone<span class="o">=</span>XXX <span class="c">#critère de recherche sur la commune faisant partie d’une zone d’intervention</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?intervention-zone<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|29151 <span class="c">#critère de recherche sur la commune faisant partie d’une zone d’intervention</span>
+&amp;service-category<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|30 <span class="c">#critère sur le type d'offre</span>
+&amp;specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|293 <span class="c">#critère de recherche sur l’activité opérationnelle</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -529,16 +562,21 @@ Exemple :
 </code></pre></div></div>
 <h4 id="scénario-8-recherche-sur-un-département">Scénario 8 : Recherche sur un département</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur recherche les offres sur un département = XX.</p>
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres ayant un type d’offre, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).</p>
+
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par le type d’offre “21 - Accueil ou hébergement pour personnes âgées dépendantes, sans spécificité » proposant un mode de prise en charge « 46 – Accueil de jour » et une spécialisation de prise en charge « 24 - Handicap à prédominance cognitive avec trouble du comportement (dont traumatisé crânien, syndrome de Korsakoff,…)» et située dans le département 71.</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?location.address-postalcode=XX&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revincluded=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?location.address-postalcode=71&amp;service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|21&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|46&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R245-SpecialisationDePriseEnCharge/FHIR/TRE-R245-SpecialisationDePriseEnCharge|24&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?location.address-postalcode<span class="o">=</span>XX <span class="c"># critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?location.address-postalcode<span class="o">=</span>71 <span class="c"># critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)</span>
+&amp;service-category<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|21 <span class="c">#critère sur le type d'offre</span>
+&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|46 <span class="c">#critère de recherche sur le mode de prise en charge</span>
+&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R245-SpecialisationDePriseEnCharge/FHIR/TRE-R245-SpecialisationDePriseEnCharge|24 <span class="c">#critère de recherche sur la spécialisation de prise en charge</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -548,16 +586,20 @@ Exemple :
 
 <h4 id="scénario-9-recherche-sur-une-ville-1--code-postal">Scénario 9 : Recherche sur une ville #1 – Code Postal</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur recherche les offres sur un ensemble de villes (code postal) = XXXX ou YYYY.</p>
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).</p>
+
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par l’activité opérationnelle «017 – Chirurgie de l’obésité (bariatrique) » et proposant l’acte spécifique «0529 - Pose d’anneau gastrique » sur les communes dont le code postal est 60000 (Frocourt) ou 76620 (Le Havre).</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?location.address-postalcode=XXXX,YYYY&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revincluded=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?location.address-postalcode=60000,76620&amp;specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|017&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0529&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?location.address-postalcode<span class="o">=</span>XXXX,YYYY <span class="c">#critère de recherche sur une ville ou un ensemble de ville en rentrant le code postal </span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?location.address-postalcode<span class="o">=</span>60000,76620 <span class="c">#critère de recherche sur une ville ou un ensemble de ville en rentrant le code postal </span>
+&amp;specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|017 <span class="c">#critère de recherche sur l'activité opérationnelle</span>
+&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0529 <span class="c">#critère de recherche sur l'acte spécifique</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -566,35 +608,56 @@ Exemple :
 </code></pre></div></div>
 <h4 id="scénario-10-recherche-sur-une-ville-2--code-commune">Scénario 10 : Recherche sur une ville #2 – Code commune</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur recherche les offres sur une ville (code communes) = XX.</p>
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres proposant une activité opérationnelle particulière et un mode de prise en charge particulier, sur une ville, ou un ensemble de villes (code commune).</p>
 
-<p><strong>Requête :</strong></p>
+<p><strong>Exemple :</strong> Recherche des offres caractérisées par l’activité opérationnelle « 437 – médecine générale » et un mode de prise en charge « 032 – Consultation », sur les communes 18000 (Bourges) ou 13013 (Belcodène)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune|XX&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revincluded=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<p><strong>Requête 1 (_filter):</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_filter=(location.commune-cog eq https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|18000 OR location.commune-cog eq https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|13013)&amp;specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|437&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|032&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
-<p><strong>Requête expliquée :</strong></p>
+<p><strong>Requête 1 expliquée (_filter) :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?location.commune-cog<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune|XX <span class="c">#critere de recherche sur une ville ou un ensemble de ville via le code commune</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_filter<span class="o">=(</span>location.commune-cog eq https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|18000 OR location.commune-cog eq https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|13013<span class="o">)</span> <span class="c">#critere de recherche sur une ville ou un ensemble de ville via le code commune</span>
+&amp;specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|437  <span class="c">#critère de recherche sur l'activité opérationnelle</span>
+&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|032  <span class="c">#critère de recherche sur le mode de prise en charge</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
 &amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
+
+<p><strong>Requête 2 :</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|18000,13013&amp;specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|437&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|032&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof
+</code></pre></div></div>
+
+<p><strong>Requête 2 expliquée :</strong></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?location.commune-cog<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|18000,13013 <span class="c">#critere de recherche sur une ville ou un ensemble de ville via le code commune</span>
+&amp;specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|437  <span class="c">#critère de recherche sur l'activité opérationnelle</span>
+&amp;characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|032  <span class="c">#critère de recherche sur le mode de prise en charge</span>
+&amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
+&amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
+&amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
+&amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
+&amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
+</code></pre></div></div>
+
 <h4 id="scénario-11-recherche-sur-un-critère-du-modèle-dexposition-30-du-ror-draft">Scénario 11 : Recherche sur un critère du modèle d’exposition 3.0 du ROR <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> un consommateur recherche les offres proposant une modalité d'accueil = XX (TRE-R338-ModaliteAccueil) et un niveau d'expertise (critères modèle 3.0) = YY (TRE_R253-TypeMaternite).</p>
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres proposant une compétence spécifique.</p>
+
+<p><strong>Exemple :</strong> recherche des offres dont la compétence spécifique correspond au code 05 “Neuropsychologue” de la TRE_R243-CompetenceSpecifique.</p>
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|XX&amp;characteristic=https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite|YY&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revincluded=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?characteristic=https://mos.esante.gouv.fr/NOS/TRE_R243-CompetenceSpecifique/FHIR/TRE-R243-CompetenceSpecifique|05&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|XX <span class="c">#critère de recherche sur la modalité d’accueil</span>
-&amp; <span class="nv">characteristic</span><span class="o">=</span> https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite|YY <span class="c">#critère de recherche sur le niveau d’expertise</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?characteristic<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R243-CompetenceSpecifique/FHIR/TRE-R243-CompetenceSpecifique|05 <span class="c">#critère de recherche sur la compétence spécifique</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par Healthcare Service </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par Healthcare Service</span>
@@ -612,7 +675,7 @@ Cette partie de la spécification est en cours de construction.
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&amp;_has:Task:focus:business-status=https://mos.esante.gouv.fr/NOS/TRE_RXXX-StatutAnomalie/FHIR/TRE-RXXX-StatutAnomalie|2,10&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revincluded=PractitionerRole:service&amp;_include=PractitionerRole:practitioner&amp;_revinclude=Task:focus
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX&amp;_has:Task:focus:business-status=https://mos.esante.gouv.fr/NOS/TRE_RXXX-StatutAnomalie/FHIR/TRE-RXXX-StatutAnomalie|2,10&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner&amp;_revinclude=Task:focus
 </code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
@@ -674,7 +737,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 16, 2024 16:20+0000">2024-02-16</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 21, 2024 15:13+0000">2024-02-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
