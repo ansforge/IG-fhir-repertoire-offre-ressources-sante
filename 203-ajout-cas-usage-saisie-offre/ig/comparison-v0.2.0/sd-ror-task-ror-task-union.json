@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "1b4c42fc-07d0-4928-a072-76581d90b2fc-164",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1b4c42fc-07d0-4928-a072-76581d90b2fc-164",
+  "id" : "5fef6cd8-23b2-4557-83d9-ed84d07ebbfa-164",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/5fef6cd8-23b2-4557-83d9-ed84d07ebbfa-164",
   "name" : "UnionRORTaskAndRORTask",
   "title" : "Union of null And null",
   "status" : "draft",
-  "date" : "2024-02-07T09:30:58+00:00",
+  "date" : "2024-02-21T11:26:11+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -402,7 +402,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -785,7 +785,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -928,7 +928,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -1031,7 +1031,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1397,7 +1397,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -1439,7 +1439,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1467,6 +1467,12 @@
         "http://hl7.org/fhir/StructureDefinition/Practitioner",
         "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
         "http://hl7.org/fhir/StructureDefinition/RelatedPerson"]
+      },
+      {
+        "code" : "Reference",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -1490,7 +1496,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1593,6 +1599,13 @@
         "http://hl7.org/fhir/StructureDefinition/Patient",
         "http://hl7.org/fhir/StructureDefinition/Device",
         "http://hl7.org/fhir/StructureDefinition/RelatedPerson"]
+      },
+      {
+        "code" : "Reference",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -1616,7 +1629,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1719,7 +1732,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "binding" : {
@@ -2224,6 +2237,12 @@
         "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
         "http://hl7.org/fhir/StructureDefinition/Group",
         "http://hl7.org/fhir/StructureDefinition/Organization"]
+      },
+      {
+        "code" : "Reference",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -2285,7 +2304,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{

@@ -143,9 +143,6 @@
       <li>
         <a href="modifiers.html">Paramètres et modificateurs de requêtes FHIR</a>
       </li>
-      <li>
-        <a href="annexes.html">Annexes</a>
-      </li>
     </ul>
   </li>
   <li>
@@ -358,7 +355,7 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-1-données-capacitaires-sur-le-périmètre-national">Scénario 1 : Données capacitaires sur le périmètre national</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur souhaite récupérer l'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système.</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite mettre à jour toutes les données capacitaires sur le périmètre national.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -367,23 +364,13 @@ Plus de précision sur la spécification FHIR :
 <p><strong>Requête expliquée :</strong></p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
-
-</code></pre></div></div>
-
-<p><strong>Réponse “simplifiée” :</strong></p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 4
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
-  Location3 (match) UE3(include)
-  Location4 (match) UE3(include)
 </code></pre></div></div>
 
 <h4 id="scénario-1bis-données-capacitaires-sur-une-région-draft">Scénario 1bis : Données capacitaires sur une région <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> un consommateur souhaite récupérer l'ensemble des données capacitaires sur une région afin de mettre à jour son système. Par exemple en Bretagne qui est composé des départements 22,29,35,56.</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.</p>
+
+<p><strong>Exemple :</strong> Recherche des données capacitaires sur la région Bretagne (départements 22, 29, 35, 56).</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -393,101 +380,89 @@ Plus de précision sur la spécification FHIR :
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?address-postalcode<span class="o">=</span>35,22,29,56 <span class="c">#critère de recherche sur les codes postaux commencant par les valeurs choisies</span>
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
-
 </code></pre></div></div>
 
 <h4 id="scénario-2-données-capacitaires-sur-un-lieu-de-prise-en-charge-identifié">Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge = Location1.</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié.</p>
+
+<p><strong>Exemple :</strong> Recherche des données capacitaires associées au lieu de prise en charge dont l’identifiant fonctionnel est 52/192675.</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?identifier=Location1&amp;_revinclude=HealthcareService:location</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?identifier=52/192675&amp;_revinclude=HealthcareService:location</code></p>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?identifier<span class="o">=</span>Location1 <span class="c">#critère de recherche sur l’identifiant technique du lieu de prise en charge</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?identifier<span class="o">=</span>52/192675 <span class="c">#critère de recherche sur l’identifiant technique du lieu de prise en charge</span>
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
-<p><strong>Réponse “simplifiée” :</strong></p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 1
-  Location1 (match) UE1(include)
-</code></pre></div></div>
+<h4 id="scénario-3-données-capacitaires-sur-plusieurs-lieux-de-prise-en-charge-identifiés-draft">Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<h4 id="scénario-3-données-capacitaires-sur-plusieurs-lieux-de-prise-en-charge-identifiés">Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés</h4>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).</p>
 
-<p><strong>Description du scénario :</strong> un consommateur souhaite mettre à jour dans son système les données de capacité sur plusieurs lieux de prise en charge = Location1 ou Location2.</p>
+<p><strong>Exemple :</strong> Recherche des données capacitaires des lieux de prise en charge ayant pour identifiants techniques 140 et 141.</p>
 
-<p><strong>Requête :</strong></p>
+<p><strong>Requête 1 :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?identifier=Location1,Location2&amp;_revinclude=HealthcareService:location</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_id=140,141&amp;_revinclude=HealthcareService:location</code></p>
 
-<p><strong>Requête expliquée :</strong></p>
+<p><strong>Requête 1 expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?identifier<span class="o">=</span>Location1,Location2 <span class="c">#critère de recherche sur l’identifiant technique du lieu de prise en charge</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_id<span class="o">=</span>140,141 <span class="c">#critère de recherche sur l’identifiant technique du lieu de prise en charge</span>
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
-<p><strong>Réponse “simplifiée” :</strong></p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 2
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
+<p><strong>Requête 2 (_filter) :</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_filter=(_id eq 140 or 141)&amp;_revinclude=HealthcareService:location</code></p>
+
+<p><strong>Requête 2 expliquée :</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_filter<span class="o">=(</span>_id eq 140 or 141<span class="o">)</span> <span class="c">#critère de recherche sur l’identifiant technique du lieu de prise en charge</span>
+&amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
 <h4 id="scénario-4-données-capacitaires-à-partir-dune-date-de-mise-à-jour">Scénario 4 : Données capacitaires à partir d’une date de mise à jour</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur souhaite mettre à jour dans son système les données de capacité à partir d'une date de mise à jour &gt;= 06/11/2022-15h00.</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.</p>
+
+<p><strong>Exemple :</strong> Recherche de toutes les informations capacitaires liées à une offre dont la date de mise à jour est supérieure ou égale au 02/08/2023.</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_lastUpdated=ge2022-11-06T15:00&amp;_revinclude=HealthcareService:location</code></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_lastUpdated=ge2023-08-02&amp;_revinclude=HealthcareService:location</code></p>
 
 <p><strong>Requête expliquée :</strong></p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_lastUpdated<span class="o">=</span>ge2022-11-06T15:00 <span class="c">#critère de recherche sur la date de mise à jour/ge=greater or equal</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_lastUpdated<span class="o">=</span>ge2023-08-02 <span class="c">#critère de recherche sur la date de mise à jour/ge=greater or equal</span>
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
-<p><strong>Réponse “simplifiée” :</strong></p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 1
-  Location1 (match) UE1(include)
-</code></pre></div></div>
+<h4 id="scénario-5-données-capacitaires-dune-offre-opérationnelle-draft">Scénario 5 : Données capacitaires d’une offre opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<h4 id="scénario-5-données-capacitaires-dune-offre-opérationnelle">Scénario 5 : Données capacitaires d’une offre opérationnelle</h4>
+<p><strong>Description du scénario :</strong> Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.</p>
 
-<p><strong>Prérequis :</strong> un consommateur recherche au préalable une offre de santé correspondant à ses critères via le service de recherche
-sur le modèle d'exposition 2.4 du ROR. Le service de recherche envoie les identifiants des offres correspondant aux critères.</p>
+<p><strong>Exemple :</strong> Recherche des informations capacitaires pour les lieux de réalisation de l’offre ayant un identifiant fonctionnel connu par l’instance ROR égale à 11/339772 ou 11/347254.</p>
 
-<p><strong>Description du scénario :</strong> un consommateur souhaite connaitre la situation des capacités pour les offres identifiées via le service de recherche sur le modèle d'exposition 2.4 du ROR = UE1 ou UE2 ou UE3.</p>
+<p><strong>Requête 1 :</strong></p>
 
-<p><strong>Requête :</strong></p>
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?identifier=11/339772,11/347254&amp;_revinclude=HealthcareService:location</code></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_has:HealthcareService:location:identifier=UE1,UE2,UE3&amp;_revinclude=HealthcareService:location</code></p>
+<p><strong>Requête 1 expliquée :</strong></p>
 
-<p><strong>Requête expliquée :</strong></p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_has:HealthcareService:location:identifier<span class="o">=</span>UE1,UE2,UE3 <span class="c">#critère de recherche sur l’identifiant de l’offre. Utilisation _has (reverse chaining) car c’est HealthcareService qui fait référence à Location. </span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?identifier<span class="o">=</span>11/339772,11/347254 <span class="c">#critère de recherche sur l’identifiant fonctionnel de l’offre</span>
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
-<p><strong>Réponse “simplifiée” :</strong></p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP 200 OK
-  resourceType: Bundle
-  type: searchset
-  total: 4
-  Location1 (match) UE1(include)
-  Location2 (match) UE2(include)
-  Location3 (match) UE3(include)
-  Location4 (match) UE3(include)
+<p><strong>Requête 2 (_filter) :</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">GET [BASE]/Location?_filter=(identifier eq 11/339772 or 11/347254)&amp;_revinclude=HealthcareService:location</code></p>
+
+<p><strong>Requête 2 expliquée :</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Location?_filter<span class="o">=(</span>identifier eq 11/339772 or 11/347254<span class="o">)</span> <span class="c">#critère de recherche sur l’identifiant fonctionnel de l’offre</span>
+&amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
 
@@ -536,7 +511,7 @@ sur le modèle d'exposition 2.4 du ROR. Le service de recherche envoie les ident
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 7, 2024 09:30+0000">2024-02-07</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 21, 2024 11:25+0000">2024-02-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

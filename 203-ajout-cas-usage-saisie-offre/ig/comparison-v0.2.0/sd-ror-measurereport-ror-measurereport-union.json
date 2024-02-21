@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "1b4c42fc-07d0-4928-a072-76581d90b2fc-98",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1b4c42fc-07d0-4928-a072-76581d90b2fc-98",
+  "id" : "5fef6cd8-23b2-4557-83d9-ed84d07ebbfa-98",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/5fef6cd8-23b2-4557-83d9-ed84d07ebbfa-98",
   "name" : "UnionRORMeasureReportAndRORMeasureReport",
   "title" : "Union of null And null",
   "status" : "draft",
-  "date" : "2024-02-07T09:30:57+00:00",
+  "date" : "2024-02-21T11:26:10+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -407,7 +407,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -490,7 +490,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -529,7 +529,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -557,6 +557,12 @@
         "http://hl7.org/fhir/StructureDefinition/Device",
         "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
         "http://hl7.org/fhir/StructureDefinition/Group"]
+      },
+      {
+        "code" : "Reference",
+        "targetProfile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -620,7 +626,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -716,7 +722,7 @@
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "source" : "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -943,7 +949,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1259,7 +1265,7 @@
         "expression" : "code.empty() or system.exists()",
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{

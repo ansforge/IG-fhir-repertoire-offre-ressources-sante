@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "1b4c42fc-07d0-4928-a072-76581d90b2fc-147",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1b4c42fc-07d0-4928-a072-76581d90b2fc-147",
+  "id" : "5fef6cd8-23b2-4557-83d9-ed84d07ebbfa-147",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/5fef6cd8-23b2-4557-83d9-ed84d07ebbfa-147",
   "name" : "IntersectionROROrganizationAndROROrganization",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2024-02-07T09:30:57+00:00",
+  "date" : "2024-02-21T11:26:11+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -282,7 +282,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -685,7 +685,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1164,7 +1164,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -1211,7 +1211,7 @@
     },
     {
       "path" : "Organization.name",
-      "short" : "raisonSociale (EJ) : Raison sociale complète de l'entité juridique\nou nom de l'EG :  Nom sous lequel l'entité géographique exerce son activité\nou nom de l'OI : Nom de l'organisation interne",
+      "short" : "left: raisonSociale (EJ) : Raison sociale complète de l'entité juridique\nou nom de l'EG :  Nom sous lequel l'entité géographique exerce son activité\nou nom de l'OI : Nom de l'organisation interne; right: raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI) - Remarque : Décalage provisoire de la cardinalité par rapport au modèle d'exposition (1..1)",
       "definition" : "A name associated with the organization.",
       "comment" : "If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.",
       "requirements" : "Need to use the name as the label of the organization.",
@@ -1231,7 +1231,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1344,12 +1344,12 @@
     },
     {
       "path" : "Organization.alias",
-      "short" : "nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique",
+      "short" : "left: nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique; right: nomOperationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique",
       "definition" : "A list of alternate names that the organization is known as, or was known as in the past.",
       "comment" : "There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization.",
       "requirements" : "Over time locations and organizations go through many changes and can be known by different names.\n\nFor searching knowing previous names that the organization was known by can be very useful.",
       "min" : 0,
-      "max" : "*",
+      "max" : "1",
       "type" : [{
         "code" : "string"
       }],
@@ -1364,7 +1364,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -1422,7 +1422,7 @@
         "expression" : "where(use = 'home').empty()",
         "source" : "http://hl7.org/fhir/StructureDefinition/Organization"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -1579,7 +1579,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1774,7 +1774,7 @@
         "expression" : "where(use = 'home').empty()",
         "source" : "http://hl7.org/fhir/StructureDefinition/Organization"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2187,7 +2187,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2326,7 +2326,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2502,7 +2502,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/Encounter"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2915,7 +2915,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "binding" : {
@@ -2965,7 +2965,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -3180,7 +3180,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{

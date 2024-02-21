@@ -1,9 +1,13 @@
+<!-- get modelType -->
+
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Annexes - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.2.1</title>
+    <title>AsLieuDit - Mappings - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.2.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +45,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"18"}
-    h3,h4,h5,h6{--heading-prefix:"18"}</style>
+    <style type="text/css">h2{--heading-prefix:"21.46"}
+    h3,h4,h5,h6{--heading-prefix:"21.46"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -143,9 +147,6 @@
       <li>
         <a href="modifiers.html">Paramètres et modificateurs de requêtes FHIR</a>
       </li>
-      <li>
-        <a href="annexes.html">Annexes</a>
-      </li>
     </ul>
   </li>
   <li>
@@ -188,15 +189,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Annexes</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>AsLieuDit</b></li>
 
           <span style="float:right;">
 
-            <a href="modifiers.html">&lt;prev</a> | 
+            <a href="StructureDefinition-as-ext-lieu-dit-definitions.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="mapping.html">next&gt;</a>
+          | <a href="StructureDefinition-as-ext-lieu-dit.profile.xml.html">next&gt;</a>
 
           </span>
 
@@ -210,16 +211,8 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<style type="text/css">
-h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
-h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
-h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
-h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
-h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
-</style>
-<div class="col-12">
+<div style="counter-reset: section 5" class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.2.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Annexes</h2>
   
 
 
@@ -232,684 +225,98 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
+<ul class="nav nav-tabs">
 
-    <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
-<!-- # Annexes -->
+  <li>
+    <a href="StructureDefinition-as-ext-lieu-dit.html">Content</a>
+  </li>
 
-<h3 id="jeu-de-données-dexemples-pour-la-consultation-des-données-capacitaires">Jeu de données d’exemples pour la <a href="specifications_techniques_1.html">consultation des données capacitaires</a></h3>
 
-<div class="figure">
-    <img src="image16.png" alt="Jeu de données d'exemples: les relations" width="1238" height="922" title="Jeu de données d'exemples: les relations)" />
-</div>
-<p><strong>Figure 7 : Relations entre les données d’exemples</strong></p>
 
-<table width="934">
-<tbody>
-<tr>
-<td colspan="14" width="934">
-<p><strong>Location v3.0</strong></p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>ID</strong></p>
-</td>
-<td colspan="4" width="248">
-<p><strong>Location1</strong></p>
-</td>
-<td colspan="3" width="203">
-<p><strong>Location2</strong></p>
-</td>
-<td colspan="6" width="370">
-<p><strong>Location 3</strong></p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>dateModification</p>
-</td>
-<td colspan="4" width="248">
-<p>2022-11-07T14:38</p>
-</td>
-<td colspan="3" width="203">
-<p>2022-11-06T14:37</p>
-</td>
-<td colspan="6" width="370">
-<p>2022-11-06T14:37</p>
-</td>
-</tr>
-<tr>
-<td colspan="14" width="934">
-<p><strong>LieuRealisationOffre</strong></p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>idExterneSynchro</strong></p>
-</td>
-<td colspan="4" width="248">
-<p>Toto</p>
-</td>
-<td colspan="3" width="203">
-<p>Titi</p>
-</td>
-<td colspan="6" width="370">
-<p>Tata</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>idPointSaisie</strong></p>
-</td>
-<td colspan="4" width="248">
-<p>UE1</p>
-</td>
-<td colspan="3" width="203">
-<p>UE2</p>
-</td>
-<td colspan="6" width="370">
-<p>UF1</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>communeCOG</strong></p>
-</td>
-<td colspan="4" width="248">&nbsp;</td>
-<td colspan="3" width="203">&nbsp;</td>
-<td colspan="6" width="370">&nbsp;</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>Adresse</strong></p>
-</td>
-<td colspan="4" width="248">
-<p><span style="text-decoration: line-through;">27 Rue du Faubourg Saint-Jacques</span></p>
-</td>
-<td colspan="3" width="203">
-<p>100 Bd du G&eacute;n&eacute;ral Leclerc</p>
-</td>
-<td colspan="6" width="370">
-<p>47-83 Bd de l'H&ocirc;pital</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>Adresse/codePostal&nbsp;</strong></p>
-</td>
-<td colspan="4" width="248">
-<p><span style="text-decoration: line-through;">75014</span></p>
-</td>
-<td colspan="3" width="203">
-<p>92110</p>
-</td>
-<td colspan="6" width="370">
-<p>75013</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>Adresse/localite&nbsp;</strong></p>
-</td>
-<td colspan="4" width="248">
-<p><span style="text-decoration: line-through;">Paris</span></p>
-</td>
-<td colspan="3" width="203">
-<p>Clichy</p>
-</td>
-<td colspan="6" width="370">
-<p>Paris</p>
-</td>
-</tr>
-<tr>
-<td colspan="14" width="934">
-<p><strong>EquipementSpecifique</strong></p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>typeEquipement</strong></p>
-</td>
-<td colspan="4" width="248">
-<p>Table de bloc op&eacute;ratoire ob&eacute;sit&eacute; (poids entre 150 et 250 kg) - bariatrique</p>
-</td>
-<td colspan="3" width="203">
-<p>Coronaroscanner</p>
-</td>
-<td colspan="6" width="370">
-<p>Angioscope + Coronaroscanner</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>typeCaracteristique&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>&nbsp;</p>
-</td>
-<td width="57">
-<p>&nbsp;</p>
-</td>
-<td width="54">
-<p>&nbsp;</p>
-</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="64">
-<p>&nbsp;</p>
-</td>
-<td width="77">&nbsp;</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="69">
-<p>&nbsp;</p>
-</td>
-<td width="57">&nbsp;</td>
-<td width="47">&nbsp;</td>
-<td width="74">&nbsp;</td>
-<td width="62">&nbsp;</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>valeurLimite&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>&nbsp;</p>
-</td>
-<td width="57">
-<p>&nbsp;</p>
-</td>
-<td width="54">
-<p>&nbsp;</p>
-</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="64">
-<p>&nbsp;</p>
-</td>
-<td width="77">&nbsp;</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="69">
-<p>&nbsp;</p>
-</td>
-<td width="57">&nbsp;</td>
-<td width="47">&nbsp;</td>
-<td width="74">&nbsp;</td>
-<td width="62">&nbsp;</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td colspan="14" width="934">
-<p><strong>CapacitePriseCharge</strong></p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>affectationTemporaire&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>Aucune</p>
-</td>
-<td width="57">
-<p>Aucune</p>
-</td>
-<td width="54">
-<p>Aucune</p>
-</td>
-<td width="62">
-<p>Aucune</p>
-</td>
-<td width="64">
-<p>Aucune</p>
-</td>
-<td width="77">
-<p>Aucune</p>
-</td>
-<td width="62">
-<p>Covid+</p>
-</td>
-<td width="69">
-<p>Aucune</p>
-</td>
-<td width="57">
-<p>Aucune</p>
-</td>
-<td width="47">
-<p>Aucune</p>
-</td>
-<td width="74">
-<p>Aucune</p>
-</td>
-<td width="62">
-<p>Covid+</p>
-</td>
-<td width="62">
-<p>Covid+</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>natureCapacite</strong></p>
-</td>
-<td width="76">
-<p>Lit</p>
-</td>
-<td width="57">
-<p>Lit</p>
-</td>
-<td width="54">
-<p>Lit</p>
-</td>
-<td width="62">
-<p>Lit</p>
-</td>
-<td width="64">
-<p>Lit</p>
-</td>
-<td width="77">
-<p>Lit</p>
-</td>
-<td width="62">
-<p>Lit</p>
-</td>
-<td width="69">
-<p>Lit</p>
-</td>
-<td width="57">
-<p>Lit</p>
-</td>
-<td width="47">
-<p>Lit</p>
-</td>
-<td width="74">
-<p>Lit</p>
-</td>
-<td width="62">
-<p>Lit</p>
-</td>
-<td width="62">
-<p>Lit</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>statutCapacite</strong></p>
-</td>
-<td width="76">
-<p>Install&eacute;</p>
-</td>
-<td width="57">
-<p>Disponible</p>
-</td>
-<td width="54">
-<p>Occup&eacute;</p>
-</td>
-<td width="62">
-<p>Ferm&eacute;</p>
-</td>
-<td width="64">
-<p>Install&eacute;</p>
-</td>
-<td width="77">
-<p>Disponible</p>
-</td>
-<td width="62">
-<p>Disponible</p>
-</td>
-<td width="69">
-<p>Install&eacute;</p>
-</td>
-<td width="57">
-<p>Disponible</p>
-</td>
-<td width="47">
-<p>Disponible</p>
-</td>
-<td width="74">
-<p>Disponible</p>
-</td>
-<td width="62">
-<p>Disponible</p>
-</td>
-<td width="62">
-<p>Disponible</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>temporaliteCapacite&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>Courante</p>
-</td>
-<td width="57">
-<p>Courante</p>
-</td>
-<td width="54">
-<p>Courante</p>
-</td>
-<td width="62">
-<p>Courante</p>
-</td>
-<td width="64">
-<p>Courante</p>
-</td>
-<td width="77">
-<p>Courante</p>
-</td>
-<td width="62">
-<p>Courante</p>
-</td>
-<td width="69">
-<p>Courante</p>
-</td>
-<td width="57">
-<p>Courante</p>
-</td>
-<td width="47">
-<p>Courante</p>
-</td>
-<td width="74">
-<p>Courante</p>
-</td>
-<td width="62">
-<p>Courante</p>
-</td>
-<td width="62">
-<p>Courante</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>nombreCapacite&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>2</p>
-</td>
-<td width="57">
-<p>1</p>
-</td>
-<td width="54">
-<p>1</p>
-</td>
-<td width="62">
-<p>1</p>
-</td>
-<td width="64">
-<p>14</p>
-</td>
-<td width="77">
-<p>10</p>
-</td>
-<td width="62">
-<p>4</p>
-</td>
-<td width="69">
-<p>24</p>
-</td>
-<td width="57">
-<p>10</p>
-</td>
-<td width="47">
-<p>4</p>
-</td>
-<td width="74">
-<p>6</p>
-</td>
-<td width="62">
-<p>2</p>
-</td>
-<td width="62">
-<p>2</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>dateMAJCapacite&nbsp;</p>
-</td>
-<td width="76">
-<p>07/11/2022 - 14:37</p>
-</td>
-<td width="57">
-<p>07/11/2022 - 14:37</p>
-</td>
-<td width="54">
-<p>07/11/2022 - 14:37</p>
-</td>
-<td width="62">
-<p>01/11/2022 - 12:37</p>
-</td>
-<td width="64">
-<p>06/11/2022 - 14:37</p>
-</td>
-<td width="77">
-<p>06/11/2022 - 14:37</p>
-</td>
-<td width="62">
-<p>06/11/2022 - 14:37</p>
-</td>
-<td width="69">
-<p>06/11/2022 - 14:37</p>
-</td>
-<td width="57">
-<p>06/11/2022 - 14:37</p>
-</td>
-<td width="47">
-<p>06/11/2022 - 14:37</p>
-</td>
-<td width="74">
-<p>06/11/2022 - 14:37</p>
-</td>
-<td width="62">
-<p>06/11/2022 - 14:37</p>
-</td>
-<td width="62">
-<p>06/11/2022 - 14:37</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>genreCapaciteDispo&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="57">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="54">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="62">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="64">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="77">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="62">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="69">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="57">
-<p>Homme</p>
-</td>
-<td width="47">
-<p>Femme</p>
-</td>
-<td width="74">
-<p>Ind&eacute;termin&eacute;</p>
-</td>
-<td width="62">
-<p>Homme</p>
-</td>
-<td width="62">
-<p>Femme</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>typeFermetureCapacite&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>&nbsp;</p>
-</td>
-<td width="57">
-<p>&nbsp;</p>
-</td>
-<td width="54">
-<p>&nbsp;</p>
-</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="64">
-<p>&nbsp;</p>
-</td>
-<td width="77">&nbsp;</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="69">
-<p>&nbsp;</p>
-</td>
-<td width="57">&nbsp;</td>
-<td width="47">&nbsp;</td>
-<td width="74">&nbsp;</td>
-<td width="62">&nbsp;</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>typeLitSupplementaire&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>&nbsp;</p>
-</td>
-<td width="57">
-<p>&nbsp;</p>
-</td>
-<td width="54">
-<p>&nbsp;</p>
-</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="64">
-<p>&nbsp;</p>
-</td>
-<td width="77">&nbsp;</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="69">
-<p>&nbsp;</p>
-</td>
-<td width="57">&nbsp;</td>
-<td width="47">&nbsp;</td>
-<td width="74">&nbsp;</td>
-<td width="62">&nbsp;</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p><strong>typeCrise&nbsp;</strong></p>
-</td>
-<td width="76">
-<p>&nbsp;</p>
-</td>
-<td width="57">
-<p>&nbsp;</p>
-</td>
-<td width="54">
-<p>&nbsp;</p>
-</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="64">
-<p>&nbsp;</p>
-</td>
-<td width="77">
-<p>&nbsp;</p>
-</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="69">
-<p>&nbsp;</p>
-</td>
-<td width="57">
-<p>&nbsp;</p>
-</td>
-<td width="47">
-<p>&nbsp;</p>
-</td>
-<td width="74">
-<p>&nbsp;</p>
-</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-<td width="62">
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
-</table>
+  <li>
+    <a href="StructureDefinition-as-ext-lieu-dit-definitions.html">Detailed Descriptions</a>
+  </li>
 
-<table width="100%">
-<tbody>
-<tr>
-<td colspan="5" width="100%">
-<p><strong>HealthcareService 3.0</strong></p>
-</td>
-</tr>
-<tr>
-<td width="14%">
-<p><strong>ID</strong></p>
-</td>
-<td width="21%">
-<p>UE1</p>
-</td>
-<td width="21%">
-<p>UE2</p>
-</td>
-<td width="21%">
-<p>UE3</p>
-</td>
-<td width="21%">
-<p>UE4</p>
-</td>
-</tr>
-</tbody>
+
+
+  
+    <li class="active">
+      <a href="#">Mappings</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-as-ext-lieu-dit.profile.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-as-ext-lieu-dit.profile.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-as-ext-lieu-dit.profile.ttl.html">TTL</a>
+    </li>
+  
+
+
+</ul>
+
+
+<a name="root"> </a>
+<h2 id="root">Extension: AsLieuDit - Mappings</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2024-02-21
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p>Mappings for the as-ext-lieu-dit extension.</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>AsLieuDit</b></td></tr>
+ <tr><td>Extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
 </table>
 
 
+  <!-- insert notes if present -->
+  
+
 
 
 </div>
+
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -917,6 +324,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    try {
+      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+    } catch(exception) {
+    }
+
+    if (!currentTabIndex)
+      currentTabIndex = '0';
+
+    $( '#tabs' ).tabs({
+      active: currentTabIndex,
+      activate: function( event, ui ) {
+        var active = $('.selector').tabs('option', 'active');
+        currentTabIndex = ui.newTab.index();
+        document.activeElement.blur();
+        try {
+          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+        } catch(exception) {
+        }
+      }
+    });
+  </script>
 
   <script type="text/javascript">
     $(document).ready(function(){
@@ -935,7 +365,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="modifiers.html">&lt;prev</a>
+                <a href="StructureDefinition-as-ext-lieu-dit-definitions.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -943,7 +373,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="mapping.html">next&gt;</a>
+                <a href="StructureDefinition-as-ext-lieu-dit.profile.xml.html">next&gt;</a>
 
               </td>
             </tr>
@@ -953,7 +383,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 7, 2024 09:30+0000">2024-02-07</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 21, 2024 11:25+0000">2024-02-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

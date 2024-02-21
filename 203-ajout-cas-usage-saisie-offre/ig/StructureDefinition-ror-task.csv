@@ -38,7 +38,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ","Extensions are always sliced by (at least) url",,"open","DomainResource.modifierExtension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"Task.identifier","Task.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+"Task.identifier","Task.identifier","","","",0,1,"Y","","","Identifier {[]} {[]}
 ","Identifiant de l'anomalie","The business identifier for this task.","","","","","","","","","",,,,,"",,,,"Task.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.identifier, Event.identifier","n/a","II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]",".id","FiveWs.identifier","CX / EI (occasionally, more often EI maps to a resource id or a URL)"
@@ -58,7 +58,7 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 ","Requisition or grouper id","An identifier that links together multiple tasks and other requests that were created in the same context.","","Billing and/or reporting can be linked to whether multiple requests were created as a single unit.","","","","","","","",,,,,"",,,,"Task.groupIdentifier",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.groupIdentifier","n/a","II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]",".inboundRelationship[typeCode=COMP].source[moodCode=INT].id","CX / EI (occasionally, more often EI maps to a resource id or a URL)"
-"Task.partOf","Task.partOf","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Task]]}
+"Task.partOf","Task.partOf","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Task], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task]]}
 ","Composite task","Task that this particular task is part of.","This should usually be 0..1.","Allows tasks to be broken down into sub-steps (and this division can occur independent of the original task).","","","","","","","",,,,,"",,,,"Task.partOf",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","Event.partOf","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".inboundRelationship[typeCode=COMP].source[moodCode=INT]"
@@ -70,7 +70,7 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 ","Reason for current status","An explanation as to why this task is held, failed, was refused, etc.","This applies to the current status.  Look at the history of the task to see reasons for past statuses.","","","","","","","","",,"example","Codes to identify the reason for current status.  These will typically be specific to a particular workflow.","","",,,,"Task.statusReason",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","CD",".inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN, code=""status change""].reasonCode","CE/CNE/CWE"
-"Task.businessStatus","Task.businessStatus","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
+"Task.businessStatus","Task.businessStatus","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","Statut métier de traitement de l'anomalie","Contains business-specific nuances of the business state.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","There's often a need to track substates of a task - this is often variable by specific workflow implementation.","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J244-StatutMetierAnomalie-ROR/FHIR/JDV-J244-StatutMetierAnomalie-ROR","",,,,"Task.businessStatus",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","CD",".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=""business status""]","CE/CNE/CWE"
@@ -84,7 +84,7 @@ In most cases, Tasks will have an intent of ""order"".","","","","","","","","",
 ","routine | urgent | asap | stat","Indicates how quickly the Task should be addressed with respect to other requests.","Note that FHIR strings SHALL NOT exceed 1MB in size","Used to identify the service level expected while performing a task.","","If missing, this task should be performed with normal priority","","","","","",,"required","The task's priority.","http://hl7.org/fhir/ValueSet/request-priority|4.0.1","",,,,"Task.priority",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.priority","n/a",".priorityCode","FiveWs.grade"
-"Task.code","Task.code","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
+"Task.code","Task.code","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","Thématique de l'anomalie exemples :Exactitude, Complétude, Exhaustivité","A name or code (or both) briefly describing what the task involves.","The title (eg ""My Tasks"", ""Outstanding Tasks for Patient X"") should go into the code.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J241-ThematiqueAnomalie-ROR/FHIR/JDV-J241-ThematiqueAnomalie-ROR","",,,,"Task.code",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.code, Event.code","n/a","CD",".code","FiveWs.what[x]","CE/CNE/CWE"
@@ -92,7 +92,7 @@ In most cases, Tasks will have an intent of ""order"".","","","","","","","","",
 ","Description de l'anomalie","A free-text description of what is to be performed.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,,,,"",,,,"Task.description",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a",".text"
-"Task.focus","Task.focus","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
+"Task.focus","Task.focus","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","référence vers la ressources en anomalie","The request being actioned or the resource being manipulated by this task.","If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.).","Used to identify the thing to be done.","","","","","","","",,,,,"",,,,"Task.focus",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".outboundRelationship[typeCode=SUBJ].target","FiveWs.what[x]"
@@ -128,16 +128,16 @@ per-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 per-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","./high","DR.2"
 "Task.authoredOn","Task.authoredOn","","Created Date
-","",1,1,"","","","dateTime {[]} {[]}
+","",1,1,"Y","","","dateTime {[]} {[]}
 ","Date création de l'anomalie","The date and time this task was created.","","Most often used along with lastUpdated to track duration of task to supporting monitoring and management.","","","","","","","",,,,,"",,,,"Task.authoredOn",0,1,"ele-1
 inv-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.authoredOn","n/a",".participation[typeCode=AUT].time","FiveWs.recorded"
 "Task.lastModified","Task.lastModified","","Update Date
-","",1,1,"","","Y","dateTime {[]} {[]}
+","",1,1,"Y","","Y","dateTime {[]} {[]}
 ","Date de dernière modification","The date and time of last modification to this task.","","Used along with history to track task activity and time in a particular task state.  This enables monitoring and management.","","","","","","","",,,,,"",,,,"Task.lastModified",0,1,"ele-1
 inv-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a",".inboundRelationship[typeCode=SUBJ, ].source[classCode=CACT, moodCode=EVN].effectiveTime"
-"Task.requester","Task.requester","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]]}
+"Task.requester","Task.requester","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole]]}
 ","Who is asking for task to be done","The creator of the task.","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","Identifies who created this task.  May be used by access control mechanisms (e.g., to ensure that only the creator can cancel a task).","","","","","","","",,,,,"",,,,"Task.requester",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","Request.requester","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".participation[typeCode=AUT].role","FiveWs.author"
@@ -146,15 +146,15 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.performer.role, Request.performerType","n/a","CD",".participation[typeCode=PRF].role.code","FiveWs.actor","CE/CNE/CWE"
 "Task.owner","Task.owner","","Performer
-Executer","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/CareTeam], CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]]}
+Executer","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice]]}
 ","Responsible individual","Individual organization or Device currently responsible for task execution.","Tasks may be created with an owner not yet identified.","Identifies who is expected to perform this task.","","","","","","","",,,,,"",,,,"Task.owner",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","Event.performer.actor, Request.performer","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".participation[typeCode=PRF].role","FiveWs.actor"
-"Task.location","Task.location","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}
+"Task.location","Task.location","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location]]}
 ","Where task occurs","Principal physical location where the this task is performed.","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","Ties the event to where the records are likely kept and provides context around the event occurrence (e.g. if it occurred inside or outside a dedicated healthcare setting).","","","","","","","",,,,,"",,,,"Task.location",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","Request.reasonCode, Event.reasonCode","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".participation[typeCode=LOC].role","FiveWs.where[x]"
-"Task.reasonCode","Task.reasonCode","","","",1,1,"","","","CodeableConcept {[]} {[]}
+"Task.reasonCode","Task.reasonCode","","","",1,1,"Y","","","CodeableConcept {[]} {[]}
 ","Type d'action proposée en réponse","A description or code indicating why this task needs to be performed.","This should only be included if there is no focus or if it differs from the reason indicated on the focus.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J242-ActionAnomalie-ROR/FHIR/JDV-J242-ActionAnomalie-ROR","",,,,"Task.reasonCode",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.location","n/a","CD",".reasonCode","FiveWs.why[x]","CE/CNE/CWE","EVN.7"
@@ -202,12 +202,12 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","When fulfillment sought","Over what time-period is fulfillment sought.","Note that period.high is the due date representing the time by which the task should be completed.","E.g. order that authorizes 1 year's services.  Fulfillment is sought for next 3 months.","","","","","","","",,,,,"",,,,"Task.restriction.period",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 per-1:If present, start SHALL have a lower value than end {start.hasValue().not() or end.hasValue().not() or (start <= end)}","n/a","IVL<TS>[lowClosed=""true"" and highClosed=""true""] or URG<TS>[lowClosed=""true"" and highClosed=""true""]",".effectiveTime(IVL<TS>)","DR"
-"Task.restriction.recipient","Task.restriction.recipient","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"Task.restriction.recipient","Task.restriction.recipient","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole]]}
 ","For whom is fulfillment sought?","For requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","","","","","","","","",,,,,"",,,,"Task.restriction.recipient",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".participation[typeCode=SBJ].role"
 "Task.input","Task.input","","Supporting Information
-","",1,*,"","","","BackboneElement {[]} {[]}
+","",1,*,"Y","","","BackboneElement {[]} {[]}
 ","Eléments en entrée pour définir l'anomalie","Additional information that may be needed in the execution of the task.","","Resources and data used to perform the task.  This data is used in the business logic of task execution, and is stored separately because it varies between workflows.","","","","","","","",,,,,"","pattern:type}
 ","slicing pour définir les entrants",,"open","Task.input",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "1b4c42fc-07d0-4928-a072-76581d90b2fc-74",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1b4c42fc-07d0-4928-a072-76581d90b2fc-74",
+  "id" : "5fef6cd8-23b2-4557-83d9-ed84d07ebbfa-74",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/5fef6cd8-23b2-4557-83d9-ed84d07ebbfa-74",
   "name" : "UnionRORHealthcareServiceAndRORHealthcareService",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-02-07T09:30:57+00:00",
+  "date" : "2024-02-21T11:26:10+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -263,7 +263,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -653,7 +653,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -752,7 +752,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -790,7 +790,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -844,7 +844,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -893,7 +893,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -955,7 +955,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/MedicinalProductManufactured"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -996,7 +996,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1307,7 +1307,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1863,7 +1863,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "binding" : {
@@ -2189,7 +2189,7 @@
       "definition" : "A collection of times that the Service Site is available.",
       "comment" : "More detailed availability information may be provided in associated Schedule/Slot resources.",
       "min" : 0,
-      "max" : "1",
+      "max" : "*",
       "type" : [{
         "code" : "BackboneElement"
       }],
@@ -2204,7 +2204,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2334,7 +2334,7 @@
     },
     {
       "path" : "HealthcareService.availableTime.daysOfWeek",
-      "short" : "mon | tue | wed | thu | fri | sat | sun",
+      "short" : "left: mon | tue | wed | thu | fri | sat | sun; right: Remarque : L'utilisation de l'extension ror-available-time-number-days-of-week est privilégiée.",
       "definition" : "Indicates which days of the week are available between the start and end Times.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "min" : 0,
@@ -2404,7 +2404,7 @@
     },
     {
       "path" : "HealthcareService.availableTime.availableStartTime",
-      "short" : "Opening time of day (ignored if allDay = true)",
+      "short" : "left: Opening time of day (ignored if allDay = true); right: heureDebut (Horaire) : Heure de début de la plage horaire",
       "definition" : "The opening time of day. Note: If the AllDay flag is set, then this time is ignored.",
       "comment" : "The time zone is expected to be for where this HealthcareService is provided at.",
       "min" : 0,
@@ -2423,7 +2423,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2437,7 +2437,7 @@
     },
     {
       "path" : "HealthcareService.availableTime.availableEndTime",
-      "short" : "Closing time of day (ignored if allDay = true)",
+      "short" : "left: Closing time of day (ignored if allDay = true); right: heureFin (Horaire) : Heure de fin de la plage horaire",
       "definition" : "The closing time of day. Note: If the AllDay flag is set, then this time is ignored.",
       "comment" : "The time zone is expected to be for where this HealthcareService is provided at.",
       "min" : 0,
@@ -2456,7 +2456,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2488,7 +2488,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
