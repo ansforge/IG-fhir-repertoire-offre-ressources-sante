@@ -128,8 +128,6 @@ et disposant d’un lit fermé ré-ouvrable (nature = lit ; statut = fermé ; ty
 GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|391&location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&location.nb-capacity=gt0&_include=HealthcareService:location
 ```
 
-&location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/TRE_R333-TypeFermetureCapacite|01&location.nb-capacity=gt0&_include=HealthcareService:location
-
 **Requête expliquée :**
 
 ```sh
