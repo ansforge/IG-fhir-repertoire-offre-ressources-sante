@@ -708,9 +708,7 @@ We expect that some jurisdictions will profile this optionality to be a single c
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Organization.name","Organization.name","","","",0,1,"Y","","Y","string {[]} {[]}
-","raisonSociale (EJ) : Raison sociale complète de l'entité juridique
-ou nom de l'EG :  Nom sous lequel l'entité géographique exerce son activité
-ou nom de l'OI : Nom de l'organisation interne","A name associated with the organization.","If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.","Need to use the name as the label of the organization.","","","","","","","",,,,,"",,,,"Organization.name",0,1,"ele-1
+","raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI) - Remarque : Décalage provisoire de la cardinalité par rapport au modèle d'exposition (1..1)","A name associated with the organization.","If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches.","Need to use the name as the label of the organization.","","","","","","","",,,,,"",,,,"Organization.name",0,1,"ele-1
 org-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Organization.name.id","Organization.name.id","","","",0,1,"","","","string {[]} {[]}
@@ -721,14 +719,14 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Organization.name.extension:ror-organization-additional-name","Organization.name.extension","ror-organization-additional-name","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-additional-name]]} {[]}
-","complementRaisonSociale (EJ) : Suite de la raison sociale, si elle existe","Extension créée dans le cadre du ROR pour nom complémentaire de l'EJ (complementRaisonSociale)  ou nom complémentaire de l'EG (DenominationEG)","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Organization.name.extension:ror-organization-additional-name","Organization.name.extension","ror-organization-additional-name","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-additional-name]]} {[]}
+","complementRaisonSociale (EJ) ou complementDenominationEG (EG)","Extension créée dans le cadre du ROR pour nom complémentaire de l'EJ (complementRaisonSociale)  ou nom complémentaire de l'EG (DenominationEG)","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Organization.name.value","Organization.name.value","","","",0,1,"","","","string {[]} {[]}
 ","Primitive value for string","Primitive value for string","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
-"Organization.alias","Organization.alias","","","",0,*,"Y","","","string {[]} {[]}
-","nom opérationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique","A list of alternate names that the organization is known as, or was known as in the past.","There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization.","Over time locations and organizations go through many changes and can be known by different names.
+"Organization.alias","Organization.alias","","","",0,1,"Y","","","string {[]} {[]}
+","nomOperationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique","A list of alternate names that the organization is known as, or was known as in the past.","There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the organization.","Over time locations and organizations go through many changes and can be known by different names.
 
 For searching knowing previous names that the organization was known by can be very useful.","","","","","","","",,,,,"",,,,"Organization.alias",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

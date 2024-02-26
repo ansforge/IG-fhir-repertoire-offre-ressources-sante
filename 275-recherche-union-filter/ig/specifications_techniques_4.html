@@ -335,53 +335,69 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-1-recherche-sur-un-critère-capacitaire-1">Scénario 1 : Recherche sur un critère capacitaire #1</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d'un lit disponible = 02 (TRE-R330-StatutCapacite) et disposant d’un nombre de lits supérieur à 0.</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.</p>
+
+<p><strong>Exemple :</strong> Recherche des offres de soins intensifs neuro-vasculaires (activité opérationnelle « 356 - Soins intensifs spécialisés neurologie vasculaire (USINV) »)
+et disposant d’un lit femme disponible (nature= lit ; statut = disponible ; temporalité = courant ; Genre = femme ; quantité &gt;0).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&amp;location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|02&amp;location.nb-capacity=gt0&amp;_include=HealthcareService:location</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&amp;location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01&amp;location.gender-capacity-available=https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite|01&amp;location.temporality-capacity=https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite|01&amp;location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|02&amp;location.nb-capacity=gt0&amp;_include=HealthcareService:location
+</code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX <span class="c">#critère de recherche sur l’activité opérationnelle</span>
-&amp;location.capacity-status<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|02 <span class="c">#critère de recherche sur la disponibilité d’un lit</span>
-&amp;location.nb-capacity<span class="o">=</span>gt0 <span class="c">#critère de recherche sur quantité de lits disponibles</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|356 <span class="c">#critère de recherche sur l’activité opérationnelle</span>
+&amp;location.capacity-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01 <span class="c">#critère de recherche sur la nature "lit"</span>
+&amp;location.gender-capacity-available<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite|01 <span class="c">#critère de recherche sur le genre des lits "femme"</span>
+&amp;location.temporality-capacity<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite|01 <span class="c">#critère de recherche sur la temporalité de la capacité "courant"</span>
+&amp;location.capacity-status<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|02 <span class="c">#critère de recherche sur un lit disponible</span>
+&amp;location.nb-capacity<span class="o">=</span>gt0 <span class="c">#critère de recherche sur quantité de lits</span>
 &amp;_include<span class="o">=</span>HealthcareService:location  <span class="c">#inclus les Location qui sont référencés par les HealthcareService</span>
 </code></pre></div></div>
 
 <h4 id="scénario-2-recherche-un-critère-capacitaire-2">Scénario 2 : Recherche un critère capacitaire #2</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche les offres proposant une activité opérationnelle = XXX et disposant d'un lit réouvrable = 01 (TRE-R333-TypeFermetureCapacite)  et disposant d’un lit fermé = 05 (TRE-R330-TypeStatutCapacite) et disposant d’un nombre de lits supérieur à 0.</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.</p>
+
+<p><strong>Exemple :</strong> Recherche des offres de surveillance continue pédiatrique (activité opérationnelle « 391 – Surveillance continue spécialisée pédiatrique ») 
+et disposant d’un lit fermé ré-ouvrable (nature = lit ; statut = fermé ; type fermeture = ré-activable).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX&amp;location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&amp;location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&amp;location.nb-capacity=gt0&amp;_include=HealthcareService:location</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|391&amp;location.capacity-type=https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01&amp;location.capacity-closing-type=https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01&amp;location.capacity-status=https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05&amp;location.nb-capacity=gt0&amp;_include=HealthcareService:location
+</code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX <span class="c">#critère de recherche sur l’activité opérationnelle</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|391 <span class="c">#critère de recherche sur l’activité opérationnelle</span>
+&amp;location.capacity-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite|01 <span class="c"># critère de recherche sur la capacité en "lit"</span>
 &amp;location.capacity-closing-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 <span class="c">#critère de recherche sur le lit réouvrable</span>
 &amp;location.capacity-status<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 <span class="c">#critère de recherche sur le lit fermé</span>
-&amp;location.nb-capacity<span class="o">=</span>gt0 <span class="c">#critère de recherche sur quantité de lits disponibles</span>
-&amp;_include<span class="o">=</span>HealthcareService:location  <span class="c">#inclus les Location qui qui sont référencés par les HealthcareService</span>
+&amp;location.nb-capacity<span class="o">=</span>gt0 <span class="c">#critère de recherche sur quantité de lits</span>
+&amp;_include<span class="o">=</span>HealthcareService:location  <span class="c">#inclus les Location qui sont référencés par les HealthcareService</span>
 </code></pre></div></div>
 <h4 id="scénario-3-recherche-sur-un-critère-de-léquipement">Scénario 3 : Recherche sur un critère de l’équipement</h4>
 
-<p><strong>Description du scénario :</strong> un consommateur cherche une offre dont l’activité opérationnelle = chirurgie traumatologique (025 de
-TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à l'obésité du patient (83 de TRE-R212-Equipement).</p>
+<p><strong>Description du scénario :</strong> Un consommateur cherche une offre pour une activité opérationnelle donnée, et disposant d’équipement respectant certaines caractéristiques.</p>
+
+<p><strong>Exemple :</strong> Recherche des offres de chirurgie traumatologique (activité opérationnelle « 025 - Chirurgie orthopédique et traumatologique »)
+proposant une table d’opération adaptée à l’obésité du patient adaptée à un patient de 200 kg (« 088 -Table de bloc opératoire obésité (poids entre 150 et 250 kg) – bariatrique » ; type caractéristique = « poids maximal » ; valeur limite &gt; ou égal à 200 kg).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p><code class="language-plaintext highlighter-rouge">GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&amp;location:equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|83&amp;_include=HealthcareService:location</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025&amp;location.equipment-type=https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|088&amp;location.equipment-feature=https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001&amp;location.limit-value=ge200|http://unitsofmeasure.org|kg&amp;_include=HealthcareService:location
+</code></pre></div></div>
 
 <p><strong>Requête expliquée :</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|XXX <span class="c">#critère de recherche sur l’activité opérationnelle</span>
-&amp;location.capacity-closing-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R333-TypeFermetureCapacite/FHIR/TRE-R333-TypeFermetureCapacite|01 <span class="c">#critère de recherche sur le lit réouvrable</span>
-&amp;location.capacity-status<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite|05 <span class="c">#critère de recherche sur le lit fermé</span>
-&amp;location.nb-capacity<span class="o">=</span>gt0 <span class="c">#critère de recherche sur quantité de lits disponibles</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?specialty<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|025 <span class="c">#critère de recherche sur l’activité opérationnelle</span>
+&amp;location.equipment-type<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement|088 <span class="c">#critère de recherche sur le type d'équipement "table opératoire"</span>
+&amp;location.equipment-feature<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R340-TypeCaracteristiqueEquipement/FHIR/TRE-R340-TypeCaracteristiqueEquipement|001 <span class="c">#critère de recherche sur le type de caractéristique limite "poids"</span>
+&amp;location.limit-value<span class="o">=</span>ge200|http://unitsofmeasure.org|kg <span class="c">#critère de recherche sur la valeur limite "200 kg"</span>
 &amp;_include<span class="o">=</span>HealthcareService:location  <span class="c">#inclus les Location qui qui sont référencés par les HealthcareService</span>
 </code></pre></div></div>
+
 
 
 
@@ -429,7 +445,7 @@ TRE-R211-ActiviteOperationnelle) proposant un appareil de radiologie adapté à 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 16, 2024 10:35+0000">2024-02-16</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 26, 2024 14:29+0000">2024-02-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

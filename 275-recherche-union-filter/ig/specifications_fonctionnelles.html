@@ -329,6 +329,11 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
       <li>Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.</li>
     </ul>
   </li>
+  <li>Scénario 1 ter : Données capacitaires sur une région source
+    <ul>
+      <li>Un consommateur souhaite récupérer l'ensemble des données capacitaires sur une région source afin de mettre à jour son système.</li>
+    </ul>
+  </li>
   <li>Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
     <ul>
       <li>Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié.</li>
@@ -513,7 +518,7 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
   </li>
   <li>Scenario 4 : Recherche multicritères #2 – OU
     <ul>
-      <li>Un consommateur cherche les offres ayant à un type d’offre  <strong>OU</strong> une activité opérationnelle qu’il indique.</li>
+      <li>Un consommateur cherche les offres ayant un type d’offre <strong>OU</strong> une activité opérationnelle qu’il indique pour un patient d’âge donné.</li>
     </ul>
   </li>
   <li>Scenario 5 : Recherche multicritères #3 – ET/OU
@@ -523,32 +528,32 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
   </li>
   <li>Scenario 6 : Recherche à proximité géographique
     <ul>
-      <li>Un consommateur cherche les offres ayant une activité opérationnelle, dans un périmètre géographique proche du lieu de résidence d'un patient.</li>
+      <li>Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d’un patient.</li>
     </ul>
   </li>
   <li>Scenario 7 : Recherche sur une zone d’intervention
     <ul>
-      <li>Un consommateur cherche les offres proposées dans une commune faisant partie d'une zone d'intervention.</li>
+      <li>Un consommateur cherche les offres ayant un type d’offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d’une zone d’intervention.</li>
     </ul>
   </li>
   <li>Scenario 8 : Recherche sur un département
     <ul>
-      <li>Un consommateur recherche les offres sur un département, ou un ensemble de département (code postal).</li>
+      <li>Un consommateur recherche les offres ayant une catégorie d’organisation, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).</li>
     </ul>
   </li>
   <li>Scenario 9 : Recherche sur une ville #1 – Code Postal
     <ul>
-      <li>Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code postal).</li>
+      <li>Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).</li>
     </ul>
   </li>
   <li>Scenario 10 : Recherche sur une ville #2 – Code commune
     <ul>
-      <li>Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code commune).</li>
+      <li>Un consommateur recherche les offres proposant une activité opérationnelle particulière et un mode de prise en charge particulier, sur une ville, ou un ensemble de villes (code commune).</li>
     </ul>
   </li>
   <li>Scenario 11 : Recherche sur un critère du modèle d’exposition 3.0
     <ul>
-      <li>Un consommateur recherche les offres proposant une modalité d'accueil et un niveau d'expertise (critères modèle 3.0).</li>
+      <li>Un consommateur recherche les offres proposant une compétence spécifique.</li>
     </ul>
   </li>
   <li>Scenario 12 : Recherche d’offre en anomalie
@@ -590,17 +595,17 @@ Toute suspicion d’anomalie peut être jugée infondée par le responsable de l
 <ul>
   <li>Scenario 1 : Recherche sur un critère capacitaire #1
     <ul>
-      <li>Un consommateur cherche les offres proposant une activité opérationnelle et disposant d'un lit disponible.</li>
+      <li>Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.</li>
     </ul>
   </li>
   <li>Scenario 2 : Recherche sur un critère capacitaire #2
     <ul>
-      <li>Un consommateur cherche les offres proposant une activité opérationnelle et disposant d'un lit fermé réouvrable.</li>
+      <li>Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.</li>
     </ul>
   </li>
   <li>Scenario 3 : Recherche sur un critère de l’équipement
     <ul>
-      <li>Un consommateur cherche une offre de chirurgie traumatologique proposant un appareil de radiologie adapté à l'obésité du patient.</li>
+      <li>Un consommateur cherche une offre pour une activité opérationnelle donnée, et disposant d’équipement respectant certaines caractéristiques.</li>
     </ul>
   </li>
 </ul>
@@ -1020,7 +1025,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 16, 2024 10:35+0000">2024-02-16</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 26, 2024 14:29+0000">2024-02-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
