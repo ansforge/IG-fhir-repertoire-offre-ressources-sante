@@ -120,12 +120,12 @@ GET [BASE]/Location?_revinclude=HealthcareService:location #inclus les Healthcar
 
 **Requête :**
 
-`GET [BASE]/Location?address-postalcode=35,22,29,56&_revinclude=HealthcareService:location`
+`GET [BASE]/Location?_filter=(address-postalcode eq "22" or "29" or "35" or "36")&_revinclude=HealthcareService:location`
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Location?address-postalcode=35,22,29,56 #critère de recherche sur les codes postaux commencant par les valeurs choisies
+GET [BASE]/Location?_filter=(address-postalcode eq "22" or "29" or "35" or "36") #critère de recherche sur les codes postaux commencant par les valeurs choisies
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
@@ -216,7 +216,6 @@ GET [BASE]/Location?_lastUpdated=ge2023-08-02 #critère de recherche sur la date
 **Exemple :** Recherche des informations capacitaires pour les lieux de réalisation de l'offre ayant un identifiant fonctionnel connu par l’instance ROR égale à 11/339772 ou 11/347254.
 
 **Requête 1 :**
-
 `GET [BASE]/Location?identifier=11/339772,11/347254&_revinclude=HealthcareService:location`
 
 **Requête 1 expliquée :**
