@@ -62,7 +62,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
-* specialty MS
+* specialty 0..* MS
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "url"
 * specialty ^slicing.rules = #open
