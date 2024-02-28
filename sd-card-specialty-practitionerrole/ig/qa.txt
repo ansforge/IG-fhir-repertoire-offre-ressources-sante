@@ -1,12 +1,12 @@
 ROR : Validation Results
 =========================================
 
-err = 3, warn = 74, info = 43
-IG Publisher Version: 1.5.16
-Generated Tue Feb 27 09:43:49 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
- Build Errors : 4 / 4 / 0
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 0 / 0 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 0 / 0 / 1
+err = 5, warn = 74, info = 43
+IG Publisher Version: 1.6.0
+Generated Wed Feb 28 12:51:36 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+ Build Errors : 5 / 4 / 0
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 1 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 1 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-act-type-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-input-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
@@ -111,11 +111,14 @@ ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-reper
 ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/output/CapabilityStatement-ror-consommateur.json.html#/html/body/div/div/div/div/div/pre/code/a at Line 337, column 7: The link 'ImplementationGuide-ans.fhir.fr.ror.html' for "🔗" cannot be resolved
 ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/output/CapabilityStatement-ror-serveur.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 313, column 777: The link 'ImplementationGuide-ans.fhir.fr.ror.html' for "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror" cannot be resolved
 ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/output/CapabilityStatement-ror-serveur.json.html#/html/body/div/div/div/div/div/pre/code/a at Line 337, column 7: The link 'ImplementationGuide-ans.fhir.fr.ror.html' for "🔗" cannot be resolved
+ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/output/specifications_fonctionnelles.html#/html/body/div/div/div/div/div/p/a at Line 745, column 137: The link 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location.html' for "voir description du lieu de réalisation de l’offre" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/CapabilityStatement-ror-consommateur.json ==
+ERROR: CapabilityStatement.text.div: Hyperlink 'ImplementationGuide-ans.fhir.fr.ror.html' at 'div/ul/li/a' for 'https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror' does not resolve
 == fsh-generated/resources/CapabilityStatement-ror-serveur.json ==
+ERROR: CapabilityStatement.text.div: Hyperlink 'ImplementationGuide-ans.fhir.fr.ror.html' at 'div/ul/li/a' for 'https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror' does not resolve
 == fsh-generated/resources/CodeSystem-act-type-ror-codesystem.json ==
 WARNING: CodeSystem/act-type-ror-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.title is mandatory, but it is not present
 WARNING: CodeSystem/act-type-ror-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
