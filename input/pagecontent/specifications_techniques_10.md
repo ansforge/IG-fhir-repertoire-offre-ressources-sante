@@ -628,9 +628,283 @@ PATCH [BASE]/Location/XXX
     </tr>
 </table>
 
-**Requête :**
+**Requête recommandée (via id technique) :**
 ```json
 PATCH [BASE]/Location/XXX
+
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name": "type",
+                    "valueString": "replace"
+                },
+                {
+                    "name": "path",
+                    "valueString": "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity')"
+                },
+                {
+                    "name": "value",
+                    "part": [
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "01",
+												"display": "Installé"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "10"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2023-09-25T15:20:00+01:00"
+								}
+							]
+						},
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "02",
+												"display": "Disponible"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "6"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2023-09-25T15:20:00+01:00"
+								},
+								{
+									"url": "genderCapacityAvailable",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/",
+												"code": "02",
+												"display": "Homme"
+											}
+										]
+									}
+								}
+							]
+						}
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "02",
+												"display": "Disponible"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "4"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2024-02-02T11:30:00+01:00"
+								},
+								{
+									"url": "genderCapacityAvailable",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/",
+												"code": "03",
+												"display": "Indifférencié"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+                }
+            ]
+        }
+    ]
+}
+```
+
+
+**Requête (via identifiant fonctionnel) :**
+*Nous déconseillons l'utilisation du PATCH conditionnel en effet sa maturité en FHIR R4 est "trial use".*  
+```json
+PATCH [BASE]/Location?identifier=YYY
 
 {
     "resourceType": "Parameters",
