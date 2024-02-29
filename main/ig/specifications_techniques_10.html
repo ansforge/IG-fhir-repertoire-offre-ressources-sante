@@ -869,8 +869,280 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
     </tr>
 </table>
 
-<p><strong>Requête :</strong></p>
+<p><strong>Requête recommandée (via id technique) :</strong></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"operation"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"type"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity')"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+						</span><span class="p">{</span><span class="w">
+							</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"</span><span class="p">,</span><span class="w">
+							</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporaryAssignement"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aucune"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityType"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lit"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityStatus"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Installé"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporalityCapacity"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Courant"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nbCapacity"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueInt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacitySourceType"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bed management"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityUpdateDate"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-25T15:20:00+01:00"</span><span class="w">
+								</span><span class="p">}</span><span class="w">
+							</span><span class="p">]</span><span class="w">
+						</span><span class="p">},</span><span class="w">
+						</span><span class="p">{</span><span class="w">
+							</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"</span><span class="p">,</span><span class="w">
+							</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporaryAssignement"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aucune"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityType"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lit"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityStatus"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Disponible"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporalityCapacity"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Courant"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nbCapacity"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueInt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6"</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacitySourceType"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bed management"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityUpdateDate"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-25T15:20:00+01:00"</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"genderCapacityAvailable"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Homme"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">}</span><span class="w">
+							</span><span class="p">]</span><span class="w">
+						</span><span class="p">}</span><span class="w">
+						</span><span class="p">{</span><span class="w">
+							</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"</span><span class="p">,</span><span class="w">
+							</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporaryAssignement"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aucune"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityType"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lit"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityStatus"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Disponible"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporalityCapacity"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Courant"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nbCapacity"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueInt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacitySourceType"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bed management"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityUpdateDate"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-02-02T11:30:00+01:00"</span><span class="w">
+								</span><span class="p">},</span><span class="w">
+								</span><span class="p">{</span><span class="w">
+									</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"genderCapacityAvailable"</span><span class="p">,</span><span class="w">
+									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+											</span><span class="p">{</span><span class="w">
+												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
+												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indifférencié"</span><span class="w">
+											</span><span class="p">}</span><span class="w">
+										</span><span class="p">]</span><span class="w">
+									</span><span class="p">}</span><span class="w">
+								</span><span class="p">}</span><span class="w">
+							</span><span class="p">]</span><span class="w">
+						</span><span class="p">}</span><span class="w">
+					</span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Requête (via identifiant fonctionnel) :</strong>
+<em>Nous déconseillons l’utilisation du PATCH conditionnel en effet sa maturité en FHIR R4 est “trial use”.</em></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location?identifier=YYY</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
     </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
@@ -1186,7 +1458,7 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 29, 2024 09:27+0000">2024-02-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 29, 2024 09:39+0000">2024-02-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
