@@ -437,25 +437,6 @@ package IG #DDDDDD{
      RORPractitionerRole -[#black,dashed,thickness=2]-> RORAvailableTimeEffectiveOpeningClosingDate
      RORPractitionerRole -[#black,dashed,thickness=2]-> RORAvailableTimeNumberDaysofWeek
 
-        class RORPractitionerRoleName{
-
-          Extension.extension => [1..None]
-          Extension.extension:exerciseTitle => [0..1]
-          Extension.extension:exerciseTitle.extension => [None..0]
-          Extension.extension:exerciseTitle.url => [None..None]
-          Extension.extension:exerciseTitle.value[x] => [None..None]
-          Extension.extension:exerciseTitle.value[x]:valueCodeableConcept => [0..1]
-          Extension.extension:exerciseLastName => [1..1]
-          Extension.extension:exerciseLastName.extension => [None..0]
-          Extension.extension:exerciseLastName.url => [None..None]
-          Extension.extension:exerciseLastName.value[x] => [None..None]
-          Extension.extension:exerciseFirstName => [0..1]
-          Extension.extension:exerciseFirstName.extension => [None..0]
-          Extension.extension:exerciseFirstName.url => [None..None]
-          Extension.extension:exerciseFirstName.value[x] => [None..None]
-          Extension.url => [None..None]
-          Extension.value[x] => [None..0]
-        } 
         class AsLieuDit{
 
           Extension.extension => [None..0]
@@ -860,6 +841,25 @@ package IG #DDDDDD{
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
+        } 
+        class RORPractitionerRoleName{
+
+          Extension.extension => [1..None]
+          Extension.extension:exerciseTitle => [0..1]
+          Extension.extension:exerciseTitle.extension => [None..0]
+          Extension.extension:exerciseTitle.url => [None..None]
+          Extension.extension:exerciseTitle.value[x] => [None..None]
+          Extension.extension:exerciseTitle.value[x]:valueCodeableConcept => [0..1]
+          Extension.extension:exerciseLastName => [1..1]
+          Extension.extension:exerciseLastName.extension => [None..0]
+          Extension.extension:exerciseLastName.url => [None..None]
+          Extension.extension:exerciseLastName.value[x] => [None..None]
+          Extension.extension:exerciseFirstName => [0..1]
+          Extension.extension:exerciseFirstName.extension => [None..0]
+          Extension.extension:exerciseFirstName.url => [None..None]
+          Extension.extension:exerciseFirstName.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
         } 
         class RORPractitionerRoleUnitExerciseMode{
 
