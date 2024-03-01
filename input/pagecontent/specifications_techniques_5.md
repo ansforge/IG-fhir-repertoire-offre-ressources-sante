@@ -1,8 +1,5 @@
-<!-- ## Signalement d’anomalie -->
-
-<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-Cette partie de la spécification est en cours de construction.
-</p>
+<!-- ## Signalement d’anomalie
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code> -->
 
 ### Construction de la requête de base
 
@@ -43,7 +40,7 @@ Cette partie de la spécification est en cours de construction.
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#create et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#create">https://www.hl7.org/fhir/R4/http.html#create</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
@@ -80,16 +77,82 @@ Plus de précision sur la spécification FHIR :
 
 **Description du scénario :** Un responsable qualité souhaite signaler une anomalie sur un élément.
 
+**Exemple :** Signalement d’une anomalie sur la catégorie d’établissement pour un établissement spécifique.
+
 **Requête :**
 
 ```json
-POST [BASE]/Task
-{	
-	"resourceType": "Task",
-	"businessStatus": [ { "system": "JDV XX", "value": "12345" } ],
-	"code": [ { "system": "JDV XXX", "value": "12345" } ],
-	"description": "description de notre ano",
-	"focus": "URL HealthcareService"
+
+Requête Postman : POST https://rortest.esante.gouv.fr/anomalies/Task
+
+Body :
+{
+    "resourceType": "Task",
+    "focus": {
+        "type": "Organization",
+        "identifier": {
+            "value": "1910800002"
+        }
+    },
+    "status": "in-progress",
+    "businessStatus": {
+        "coding": [
+            {
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie",
+                "code": "02",
+                "display": "À traiter"
+            }
+        ]
+    },
+    "intent": "order",
+    "reasonCode": {
+        "coding": [
+            {
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie",
+                "code": "COR",
+                "display": "Correction"
+            }
+        ]
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie",
+                "code": "06",
+                "display": "Exactitude"
+            }
+        ]
+    },
+    "input": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem",
+                        "code": "pathElementError"
+                    }
+                ]
+            },
+            "valueExpression": {
+                "language": "text/fhirpath",
+                "expression": "Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')"
+            }
+        },
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem",
+                        "code": "systemRequester"
+                    }
+                ]
+            },
+            "valueString": "IHM"
+        }
+    ], 
+    "authoredOn": "2024-01-03",
+    "lastModified": "2024-01-04",
+    "description": "La catégorie d'établissement n'est pas la bonne"
 }
 ```
 

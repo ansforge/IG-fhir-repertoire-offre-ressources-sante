@@ -1,8 +1,5 @@
-<!-- ## Mise à jour d’anomalie -->
-
-<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-Cette partie de la spécification est en cours de construction.
-</p>
+<!-- ## Mise à jour d’anomalie
+<code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>-->
 
 ### Construction de la requête de base
 
@@ -43,7 +40,7 @@ Cette partie de la spécification est en cours de construction.
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#patch et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#patch <a href="https://www.hl7.org/fhir/R4/http.html#patch">https://www.hl7.org/fhir/R4/http.html#patch</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 
 ### Construction de la réponse de base
 
@@ -68,102 +65,94 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Mise à jour du statut de plusieurs anomalies
+#### Scénario 1 : Mise à jour du statut d'une anomalie
 
-**Description du scénario :** le responsable de la donnée en anomalie corrige des anomalies, le responsable qualité ou le moteur de règle met à jour les statuts métier des anomalies en précisant les identifiants techniques.
-Anomalie XX au statut statutXX
+**Description du scénario :** Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou un système numérique met à jour le statut de l’anomalie.
 
+**Exemple :** Le responsable de la donnée souhaite corriger une anomalie relevée précédemment, dont l'identifiant technique est 1309.
 
 **Requête :**
 
 ```json
 Content-Type: application/fhir+json
-POST [BASE]
 
+Requête Postman : PATCH https://rortest.esante.gouv.fr/anomalies/Task/1309
+
+Body : 
 {
-    "resourceType": "Bundle",
-    "type":"transaction",
-    "entry" : [
-	    {	
-	        "fullUrl": " https://hapi.fhir.org/baseR4/Task/242612", #facultatif
-	        "resource": 
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
                 {
-			        "resourceType": "Parameters",
-			        "parameter": [ 
-                        {
-				            "name": "operation",
-				            "part": [ 
-                                {
-                                    "name": "type",
-                                    "valueString": "replace"
-                                }, 
-                                {
-                                    "name": "path",
-                                    "valueString": "Task.businessStatus"
-                                },
-                                {
-                                    "name": "value",
-                                    "valueCodeableConcept": 
-                                        {
-                                            "coding": [
-                                                {
-                                                    "system": "http://zzz",
-                                                    "code": "260385009",
-                                                    "display": "ND"
-                                                }
-                                            ]
-                                        }
-                                }
-						    ]
-				        }		
-					]
-			    },
-            "request": 
+                    "name": "type",
+                    "valueString": "replace"
+                },
                 {
-                    "method": "PATCH",
-                    "url": " https://hapi.fhir.org/baseR4/Task/242612"
+                    "name": "path",
+                    "valueString": "Task.businessStatus"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie",
+                                "code": "08",
+                                "display": "Corrigé"
+                            }
+                        ]
+                    }
                 }
-		}				
-	]
+            ]
+        }
+    ]
 }
-
 ```
 
 #### Scénario 2 : Inactivation d’une anomalie
 
-**Description du scénario :** un responsable qualité décide d'inactiver une anomalie dont l’identifiant technique = XXX (elle a été saisie par erreur par exemple) en mettant à jour son statut métier à YYY.
+**Description du scénario :** Un responsable qualité ou un système numérique décide d’inactiver une anomalie (elle a été saisie par erreur par exemple).
+
+**Exemple :** Le déclarant de l’anomalie souhaite annuler l’anomalie en question dont l'identifiant technique est 1310.
 
 **Requête :**
 
 ```json
 Content-Type: application/fhir+json
-PATCH [BASE]/Task/XXX
-{
-"resourceType": "Parameters",
-	"parameter": [ {
-	"name": "operation",
-	"part": [ {
-		"name": "type",
-		"valueString": "replace"
-	}, {
-		"name": "path",
-		"valueString": "Task.businessStatus"
-	}, {
-		"name": "value",
-		"valueCodeableConcept": 
-		{
-			"coding": [
-			{
-				"system": "http://zzz",
-				"code": "260385009",
-				"display": "ND"
-				}	],
-				"text": "tetet"
-		}
-		}
-			]
-				}
-				]
-}
 
+PRequête Postman : PATCH https://rortest.esante.gouv.fr/anomalies/Task/1310
+
+Body :
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name": "type",
+                    "valueString": "replace"
+                },
+                {
+                    "name": "path",
+                    "valueString": "Task.businessStatus"
+                },
+                {
+                    "name": "value",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie",
+                                "code": "08",
+                                "display": "Corrigé"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
 ```
