@@ -219,8 +219,8 @@ Title:    "HealthcareService du Modèle exposition ROR V3"
 * specialty[operationalActivity] -> "ActiviteOperationnelle.activiteOperationnelle : JDV-J17-ActiviteOperationnelle-ROR"
 * specialty[operationalActivityFamily] -> "ActiviteOperationnelle.familleActiviteOperationnelle : JDV-J51-FamilleActiviteOperationnelle-ROR"
 
-* notAvailable[closingRepoeningDate].during.start -> "dateFermeture"
-* notAvailable[closingRepoeningDate].during.end -> "datePrevisionnelleReouverture"
+* notAvailable[closingReopeningDate].during.start -> "dateFermeture"
+* notAvailable[closingReopeningDate].during.end -> "datePrevisionnelleReouverture"
 
 * availableTime -> "horaire"
 * availableTime.availableStartTime -> "heureDebut"
