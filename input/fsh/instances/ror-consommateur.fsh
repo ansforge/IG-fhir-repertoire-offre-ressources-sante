@@ -75,8 +75,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Lieux proches du lieu de réalisation de l'offre"
 
-/* * rest.resource[=].searchParam[+].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-status"
+/* * rest.resource[=].searchParam[+].name = "operational-status"
+* rest.resource[=].searchParam[=].definition = "https://hl7.org/fhir/searchparameter-registry.html#Location-operational-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Statut de la ressource" */
 
