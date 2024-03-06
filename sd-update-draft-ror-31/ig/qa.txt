@@ -1,12 +1,12 @@
 ROR : Validation Results
 =========================================
 
-err = 5, warn = 74, info = 43
+err = 9, warn = 74, info = 43
 IG Publisher Version: 1.6.0
-Generated Wed Mar 06 09:29:55 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Wed Mar 06 17:00:42 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.2.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 11 / 4 / 0
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 1 / 0 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 1 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 3 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 3 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-act-type-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-input-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
@@ -122,8 +122,12 @@ WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in 
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/CapabilityStatement-ror-consommateur.json ==
+ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].resource[0].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve
+ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].resource[1].searchParam[3].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve
 ERROR: CapabilityStatement.text.div: Hyperlink 'ImplementationGuide-ans.fhir.fr.ror.html' at 'div/ul/li/a' for 'https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror' does not resolve
 == fsh-generated/resources/CapabilityStatement-ror-serveur.json ==
+ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].resource[0].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve
+ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].resource[1].searchParam[3].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve
 ERROR: CapabilityStatement.text.div: Hyperlink 'ImplementationGuide-ans.fhir.fr.ror.html' at 'div/ul/li/a' for 'https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror' does not resolve
 == fsh-generated/resources/CodeSystem-act-type-ror-codesystem.json ==
 WARNING: CodeSystem/act-type-ror-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.title is mandatory, but it is not present

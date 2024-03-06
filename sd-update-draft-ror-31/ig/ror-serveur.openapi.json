@@ -104,6 +104,18 @@
             "$ref": "#/components/parameters/elements"
           },
           {
+            "name": "_filter",
+            "in": "query",
+            "description": "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails",
+            "schema": {}
+          },
+          {
+            "name": "_has",
+            "in": "query",
+            "description": "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)",
+            "schema": {}
+          },
+          {
             "name": "_id",
             "in": "query",
             "description": "Logical id of this artifact",
@@ -129,12 +141,6 @@
             }
           },
           {
-            "name": "_has",
-            "in": "query",
-            "description": "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)",
-            "schema": {}
-          },
-          {
             "name": "type",
             "in": "query",
             "description": "A code for the type of location",
@@ -155,6 +161,14 @@
             "in": "query",
             "description": "Search for locations where the location.position is near to, or within a specified distance of, the provided coordinates expressed as [latitude]|[longitude]|[distance]|[units] (using the WGS84 datum, see notes).\nIf the units are omitted, then kms should be assumed. If the distance is omitted, then the server can use its own discretion as to what distances should be considered near (and units are irrelevant)\n\nServers may search using various techniques that might have differing accuracies, depending on implementation efficiency.\n\nRequires the near-distance parameter to be provided also",
             "schema": {}
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "Searches for locations with a specific kind of status",
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "address-postalcode",
@@ -295,6 +309,14 @@
             "name": "temporality-capacity",
             "in": "query",
             "description": "Paramètre de recherche pour récupérer le moment où la capacité sera effective",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "temporary-assignement",
+            "in": "query",
+            "description": "Paramètre de recherche pour récupérer les affectations temporaires",
             "schema": {
               "type": "string"
             }
@@ -865,9 +887,91 @@
             }
           },
           {
+            "name": "closing-type",
+            "in": "query",
+            "description": "Paramètre de recherche décrivant le type de fermeture de l\u0027entité géographique, au sens des règles de gestion du SI FINESS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "drop-zone",
             "in": "query",
             "description": "Paramètre de recherche permettant d\u0027indiquer s\u0027il y a une zone poser sur le site concerné",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "period-end",
+            "in": "query",
+            "description": "Paramètre de recherche décrivant la date de fermeture de l\u0027entité géographique",
+            "schema": {
+              "type": "string",
+              "pattern": "([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
+            }
+          },
+          {
+            "name": "price-amount-value",
+            "in": "query",
+            "description": "Paramètre de recherche sur la valeur du tarif des prestations et services",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "price-dependency-level",
+            "in": "query",
+            "description": "Paramètre de recherche sur le niveau de dépendance de la personne âgée accueillie",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "price-residential-type",
+            "in": "query",
+            "description": "Paramètre de recherche sur les caractéristiques de l\u0027hébergement",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "price-type",
+            "in": "query",
+            "description": "Paramètre de recherche sur le type de tarif",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "price-unit",
+            "in": "query",
+            "description": "Paramètre de recherche sur l\u0027unité de référence pour évaluer le prix des prestations et services",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "price-validity-start-date",
+            "in": "query",
+            "description": "Paramètre de recherche sur la dernière date de début de validité du tarif indiqué",
+            "schema": {
+              "type": "string",
+              "pattern": "([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?"
+            }
+          },
+          {
+            "name": "price-welcome-type",
+            "in": "query",
+            "description": "Paramètre de recherche décrivant si le tarif s\u0027applique à un hébergement permanent ou à un hébergement temporaire",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "special-price",
+            "in": "query",
+            "description": "Paramètre de recherche sur la condition tarifaire",
             "schema": {
               "type": "string"
             }
