@@ -370,12 +370,18 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Condition tarifaire" */
 
-/* // Practitioner
+// Practitioner
 * rest.resource[+].type = #Practitioner
 * rest.resource[=].profile = Canonical(ror-practitioner)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
+
+/*
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
@@ -394,14 +400,21 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" 
+*/
 
-/* // PractitionerRole
+// PractitionerRole
 * rest.resource[+].type = #PractitionerRole
 * rest.resource[=].profile = Canonical(ror-practitionerrole)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Identifiant de la situation opérationnelle, unique et persistant au niveau national"
+
+/*
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
