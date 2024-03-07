@@ -6,7 +6,7 @@ Usage: #definition
 * name = "RORServeur"
 * title = "ROR-Serveur"
 * experimental = true
-* date = "2023-11-20T11:35:00+01:00"
+* date = "2024-03-07T11:35:00+01:00"
 * description = "Système ROR National : Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -28,7 +28,7 @@ Usage: #definition
 
 //Search Params toutes ressources
 
-* rest.searchParam[+].name = "_filter"
+* rest.searchParam[0].name = "_filter"
 * rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.searchParam[=].type = #special
 * rest.searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
