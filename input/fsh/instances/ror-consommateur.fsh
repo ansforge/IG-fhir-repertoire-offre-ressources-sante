@@ -24,14 +24,35 @@ Usage: #definition
 * rest.mode = #client
 * rest.documentation = "Recherche d'offres de soins de santé et de leurs capacités"
 * rest.security.cors = false
+* rest.security.service = #oAuth
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 
 //Search Params toutes ressources
 
-* rest.searchParam[0].name = "_filter"
-* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
-* rest.searchParam[=].type = #special
-* rest.searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
+* rest.searchParam[+].name = "_count"
+* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-count"
+* rest.searchParam[=].type = #number
+* rest.searchParam[=].documentation = "Permet de choisir le nombre de résultat par page (Par défaut la recherche retourne 200 résultats maximum par page.)"
+
+* rest.searchParam[+].name = "_sort"
+* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-source"
+* rest.searchParam[=].type = #token
+* rest.searchParam[=].documentation = "Permet de choisir dans quel ordre renvoyer les résultats"
+
+* rest.searchParam[+].name = "_elements"
+* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-elements"
+* rest.searchParam[=].type = #string
+* rest.searchParam[=].documentation = "Permet au consommateur de demander les éléments à retourner de la ressource recherchée"
+
+* rest.searchParam[+].name = "_include"
+* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-include"
+* rest.searchParam[=].type = #token
+* rest.searchParam[=].documentation = "Permet d'inclure des ressources référencées par la ressource recherchée dans le résultat"
+
+* rest.searchParam[+].name = "_revinclude"
+* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-revinclude"
+* rest.searchParam[=].type = #token
+* rest.searchParam[=].documentation = "Permet d'inclure les ressources qui font référence à la ressource recherchée dans le résultat"
 
 // Location
 * rest.resource[+].type = #Location
@@ -42,11 +63,10 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].searchRevInclude = "HealthcareService:location"
 
-/** rest.resource[=].searchParam[+].name = "_filter"
+* rest.resource[=].searchParam[+].name = "_filter"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
-*/
 
 * rest.resource[=].searchParam[+].name = "_has"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-has"
@@ -222,11 +242,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
 
-/** rest.resource[=].searchParam[+].name = "_filter"
+* rest.resource[=].searchParam[+].name = "_filter"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Fournit une syntaxe pour filtrer de manière plus complexe"
-*/
 
 /* * rest.resource[=].searchParam[+].name = "location"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
@@ -306,6 +325,11 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
+
+* rest.resource[=].searchParam[+].name = "_filter"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
+* rest.resource[=].searchParam[=].type = #special
+* rest.resource[=].searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
 
 /* * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
@@ -392,6 +416,12 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
+
+* rest.resource[=].searchParam[+].name = "_filter"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
+* rest.resource[=].searchParam[=].type = #special
+* rest.resource[=].searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
+
 /*
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
@@ -423,6 +453,11 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant de la situation opérationnelle, unique et persistant au niveau national"
+
+* rest.resource[=].searchParam[+].name = "_filter"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
+* rest.resource[=].searchParam[=].type = #special
+* rest.resource[=].searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
 
 /*
 * rest.resource[=].searchParam[+].name = "_id"

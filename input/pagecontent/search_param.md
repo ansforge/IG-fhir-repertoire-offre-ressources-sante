@@ -5268,7 +5268,7 @@ Critères de recherches applicables à la ressource Measure.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails</span><span style='font-size:8.0pt;line-height:
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -5662,7 +5662,7 @@ Critères de recherches applicables à la ressource MeasureReport.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails<span style='mso-spacerun:yes'></span><code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
