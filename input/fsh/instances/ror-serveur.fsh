@@ -26,6 +26,13 @@ Usage: #definition
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 
+//Search Params toutes ressources
+
+* rest.searchParam[+].name = "_filter"
+* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
+* rest.searchParam[=].type = #special
+* rest.searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
+
 // Location
 * rest.resource[+].type = #Location
 * rest.resource[=].profile = Canonical(ror-location)
@@ -35,11 +42,11 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].searchRevInclude = "HealthcareService:location"
 
-* rest.resource[=].searchParam[+].name = "_filter"
+/** rest.resource[=].searchParam[+].name = "_filter"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
-
+*/
 * rest.resource[=].searchParam[+].name = "_has"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-has"
 * rest.resource[=].searchParam[=].type = #special
@@ -214,11 +221,11 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"
 
-* rest.resource[=].searchParam[+].name = "_filter"
+/* * rest.resource[=].searchParam[+].name = "_filter"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Fournit une syntaxe pour filtrer de manière plus complexe"
-
+*/
 /* * rest.resource[=].searchParam[+].name = "location"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
 * rest.resource[=].searchParam[=].type = #reference
