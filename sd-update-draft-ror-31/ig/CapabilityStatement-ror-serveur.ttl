@@ -60,6 +60,7 @@
        fhir:cors [ fhir:v "false"^^xsd:boolean ] ;
        fhir:service ( [
          fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/restful-security-service"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "oAuth" ]
          ] )
        ] ) ;
