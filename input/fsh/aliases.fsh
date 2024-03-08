@@ -10,7 +10,7 @@ Alias: $geolocation = http://hl7.org/fhir/StructureDefinition/geolocation
 Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure
 Alias: $TRE-R345-TypeIdentifiantAutre = https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE-R345-TypeIdentifiantAutre
 Alias: $TRE-R354-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gouv.fr/NOS/TRE_R354-TypeIdentifiantRessourceOperationnelle/FHIR/TRE_R354-TypeIdentifiantRessourceOperationnelle
-Alias: $restful-security-service = http://hl7.org/fhir/ValueSet/restful-security-service
+Alias: $restful-security-service = http://hl7.org/fhir/restful-security-service
 
 //JDV
 Alias: $JDV-J124-Commune = https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune // Solution temporaire en attendant de pouvoir utlisier le JDV IS fr-insee-code (package fr-core)
