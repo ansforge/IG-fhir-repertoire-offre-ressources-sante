@@ -7,7 +7,7 @@ Usage: #definition
 * title = "ROR-Consommateur"
 * experimental = true
 * date = "2024-03-07T11:35:00+01:00"
-* description = "Système qui est autorisé à consommer les données du ROR."
+* description = "Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."
 * kind = #requirements
 * fhirVersion = #4.0.1
 
