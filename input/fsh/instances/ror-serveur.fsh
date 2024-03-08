@@ -24,7 +24,7 @@ Usage: #definition
 * rest.mode = #server
 * rest.documentation = "Recherche d'offres de soins de santé et de leurs capacités"
 * rest.security.cors = false
-* rest.security.service = #oAuth
+* rest.security.service = $restful-security-service#oAuth
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 
 //Search Params toutes ressources
