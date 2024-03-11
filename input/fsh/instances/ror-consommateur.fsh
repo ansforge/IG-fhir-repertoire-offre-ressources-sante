@@ -131,7 +131,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "nb-capacity"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-nb-capacity)
 * rest.resource[=].searchParam[=].type = #number
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le nombre de capacité"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la quantité de lits ou places de la capacité exprimée"
 
 * rest.resource[=].searchParam[+].name = "additional-bed-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-additional-bed-type)
@@ -196,7 +196,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "residential-type"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-residential-type)
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le type d'habitation renseigne sur la taille et le nombre de pièces d'un logement."
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le type d'habitation."
 
 * rest.resource[=].searchParam[+].name = "temporality-capacity"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-temporality-capacity)
