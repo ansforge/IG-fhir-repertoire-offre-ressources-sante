@@ -81,7 +81,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur l'identifiant logique de la ressource"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur l'identifiant logique, également appelé technique, de la ressource"
 
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
