@@ -186,7 +186,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "near-insee-code"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-location-near-insee-code)
 * rest.resource[=].searchParam[=].type = #special
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche positionnelle (code INSEE commune): lieux proches du lieu de réalisation de l'offre via le code COG INSEE"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche positionnelle (code INSEE commune) : lieux proches du lieu de réalisation de l'offre via le code COG INSEE"
 
 * rest.resource[=].searchParam[+].name = "residential-number"
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-residential-number)
