@@ -9,6 +9,8 @@ package IG #DDDDDD{
 
         class RORHealthcareService{
 
+             HealthcareService.id => [None..None]
+             HealthcareService.meta => [None..None]
              HealthcareService.meta.lastUpdated => [1..None]
              HealthcareService.meta.tag => [None..None]
              HealthcareService.meta.tag:codeRegion => [0..1]
@@ -21,6 +23,7 @@ package IG #DDDDDD{
              HealthcareService.extension:ror-healthcareservice-contact => <&plus>[0..*]
              HealthcareService.extension:ror-meta-creation-date => <&plus>[1..1]
              HealthcareService.identifier => [1..1]
+             HealthcareService.active => [None..None]
              HealthcareService.providedBy => [None..None]
              HealthcareService.category => [None..1]
              HealthcareService.type => [1..1]
@@ -83,6 +86,8 @@ package IG #DDDDDD{
 
         class RORLocation{
 
+             Location.id => [None..None]
+             Location.meta => [None..None]
              Location.meta.lastUpdated => [1..None]
              Location.meta.tag => [None..None]
              Location.meta.tag:codeRegion => [0..1]
@@ -100,6 +105,7 @@ package IG #DDDDDD{
              Location.identifier:idLocation => [0..1]
              Location.identifier:idLocation.type => [1..None]
              Location.identifier:idLocation.type.coding.code => [1..None]
+             Location.status => [None..None]
              Location.name => [None..None]
              Location.alias => [None..None]
              Location.alias:nomExterneSynchro => [0..1]
@@ -249,6 +255,8 @@ package IG #DDDDDD{
 
         class RORPractitioner{
 
+             Practitioner.id => [None..None]
+             Practitioner.meta => [None..None]
              Practitioner.meta.lastUpdated => [1..None]
              Practitioner.meta.tag => [None..None]
              Practitioner.meta.tag:codeRegion => [0..1]
@@ -268,6 +276,8 @@ package IG #DDDDDD{
 
         class RORPractitionerRole{
 
+             PractitionerRole.id => [None..None]
+             PractitionerRole.meta => [None..None]
              PractitionerRole.meta.lastUpdated => [1..None]
              PractitionerRole.meta.tag => [None..None]
              PractitionerRole.meta.tag:codeRegion => [0..1]
@@ -278,7 +288,9 @@ package IG #DDDDDD{
              PractitionerRole.extension:contracted.extension => <&plus>[None..0]
              PractitionerRole.extension:contracted.value[x] => <&plus>[None..None]
              PractitionerRole.extension:optionCAS => <&plus>[0..1]
+             PractitionerRole.extension:optionCAS.value[x] => <&plus>[None..None]
              PractitionerRole.extension:vitalAccepted => <&plus>[0..1]
+             PractitionerRole.extension:vitalAccepted.value[x] => <&plus>[None..None]
              PractitionerRole.extension:ror-meta-creation-date => <&plus>[1..1]
              PractitionerRole.extension:ror-meta-comment => <&plus>[0..1]
              PractitionerRole.identifier => [None..1]
@@ -473,6 +485,8 @@ package IG #DDDDDD{
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
+          Extension.value[x].start => [None..None]
+          Extension.value[x].end => [None..None]
         } 
         class RORAvailableTimeNumberDaysofWeek{
 
