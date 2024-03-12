@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "RORLocationEquipmentLimit",
   "status" : "active",
-  "date" : "2024-03-12T16:11:04+00:00",
+  "date" : "2024-03-12T16:23:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,10 +31,6 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "specmetier-to-RORLocationEquipmentLimit",
-    "name" : "Spécification métier vers l'extension ROR LocationEquipmentLimit"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -74,10 +70,6 @@
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationEquipmentLimit",
-        "map" : "LimiteCaracteristiqueEquipement"
       }]
     },
     {
@@ -143,7 +135,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -177,7 +169,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -243,7 +235,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -308,10 +300,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationEquipmentLimit",
-        "map" : "typeCaracteristique"
       }]
     },
     {
@@ -345,7 +333,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -411,7 +399,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -472,10 +460,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationEquipmentLimit",
-        "map" : "valeurLimite"
       }]
     },
     {
@@ -690,11 +674,7 @@
     "element" : [{
       "id" : "Extension",
       "path" : "Extension",
-      "definition" : "Extension créée dans le cadre du ROR qui précise les limites que peut supporter l'équipement le plus tolérant parmi les équipements spécifiques de même type dans cette organisation.",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationEquipmentLimit",
-        "map" : "LimiteCaracteristiqueEquipement"
-      }]
+      "definition" : "Extension créée dans le cadre du ROR qui précise les limites que peut supporter l'équipement le plus tolérant parmi les équipements spécifiques de même type dans cette organisation."
     },
     {
       "id" : "Extension.extension",
@@ -727,11 +707,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationEquipmentLimit",
-        "map" : "typeCaracteristique"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:limitValue",
@@ -755,10 +731,6 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "Quantity"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationEquipmentLimit",
-        "map" : "valeurLimite"
       }]
     },
     {

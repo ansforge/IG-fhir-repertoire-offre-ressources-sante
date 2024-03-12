@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "RORTerritorialDivision",
   "status" : "active",
-  "date" : "2024-03-12T16:11:04+00:00",
+  "date" : "2024-03-12T16:23:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,10 +31,6 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "specmetier-to-RORTerritorialDivisio",
-    "name" : "Spécification métier vers l'extension ROR territorial division"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -78,10 +74,6 @@
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "DivisionTerritoriale"
       }]
     },
     {
@@ -147,7 +139,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -181,7 +173,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -247,7 +239,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -312,10 +304,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "type"
       }]
     },
     {
@@ -349,7 +337,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -415,7 +403,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -480,10 +468,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "code"
       }]
     },
     {
@@ -698,11 +682,7 @@
     "element" : [{
       "id" : "Extension",
       "path" : "Extension",
-      "definition" : "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. \nCela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent.",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "DivisionTerritoriale"
-      }]
+      "definition" : "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. \nCela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent."
     },
     {
       "id" : "Extension.extension",
@@ -735,11 +715,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "type"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:codeTerritorialDivision",
@@ -767,11 +743,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "code"
-      }]
+      }
     },
     {
       "id" : "Extension.url",

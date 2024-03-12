@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.3.0"] ; # 
   fhir:name [ fhir:v "RORLocationResidentialCapacity"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-03-12T16:11:04+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-12T16:23:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -38,9 +38,6 @@
      fhir:identity [ fhir:v "rim" ] ;
      fhir:uri [ fhir:v "http://hl7.org/v3"^^xsd:anyURI ] ;
      fhir:name [ fhir:v "RIM Mapping" ]
-  ] [
-     fhir:identity [ fhir:v "specmetier-to-RORResidentialLocationCapacity" ] ;
-     fhir:name [ fhir:v "Spécification métier vers l'extension ROR LocationResidentialCapacity" ]
   ] ) ; # 
   fhir:kind [ fhir:v "complex-type"] ; # 
   fhir:abstract [ fhir:v "false"^^xsd:boolean] ; # 
@@ -88,10 +85,6 @@
            fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
            fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
          ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORResidentialLocationCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteHabitation" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.id" ] ;
@@ -158,8 +151,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -196,8 +189,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -265,8 +258,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -335,9 +328,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-RORResidentialLocationCapacity" ] ;
-         fhir:map [ fhir:v "typeHabitation" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:residentialNumber" ] ;
@@ -373,8 +363,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -442,8 +432,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -505,9 +495,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-RORResidentialLocationCapacity" ] ;
-         fhir:map [ fhir:v "nbHabitation" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.url" ] ;
@@ -673,11 +660,7 @@
      fhir:element ( [
        fhir:id [ fhir:v "Extension" ] ;
        fhir:path [ fhir:v "Extension" ] ;
-       fhir:definition [ fhir:v "Extension créée dans le cadre du ROR qui décrit un type d'habitation adapté à la réalisation d'une offre." ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORResidentialLocationCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteHabitation" ]
-       ] )
+       fhir:definition [ fhir:v "Extension créée dans le cadre du ROR qui décrit un type d'habitation adapté à la réalisation d'une offre." ]
      ] [
        fhir:id [ fhir:v "Extension.extension" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -708,11 +691,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORResidentialLocationCapacity" ] ;
-         fhir:map [ fhir:v "typeHabitation" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:residentialNumber" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -732,10 +711,6 @@
        fhir:path [ fhir:v "Extension.extension.value[x]" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "integer"^^xsd:anyURI ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORResidentialLocationCapacity" ] ;
-         fhir:map [ fhir:v "nbHabitation" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.url" ] ;

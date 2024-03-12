@@ -23,7 +23,7 @@
   <version value="0.3.0"/>
   <name value="RORHealthcareServicePatientType"/>
   <status value="active"/>
-  <date value="2024-03-12T16:11:04+00:00"/>
+  <date value="2024-03-12T16:23:37+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -45,10 +45,6 @@
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
-  </mapping>
-  <mapping>
-    <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-    <name value="Spécification métier vers l'extension ROR HealthcareServicePatientType"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -88,10 +84,6 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="Patientele"/>
-      </mapping>
     </element>
     <element id="Extension.id">
       <path value="Extension.id"/>
@@ -153,7 +145,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:supportedPatientInfo">
@@ -186,7 +178,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:supportedPatientInfo.id">
@@ -249,7 +241,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:supportedPatientInfo.url">
@@ -312,10 +304,6 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="publicPrisEnCharge"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ageRange">
       <path value="Extension.extension"/>
@@ -347,7 +335,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:ageRange.id">
@@ -410,7 +398,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:ageRange.url">
@@ -539,7 +527,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -581,7 +569,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present"/>
         <expression value="code.empty() or system.exists()"/>
         <xpath value="not(exists(f:code)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Claim"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
       </constraint>
       <constraint>
         <key value="sqty-1"/>
@@ -589,7 +577,7 @@
         <human value="The comparator is not used on a SimpleQuantity"/>
         <expression value="comparator.empty()"/>
         <xpath value="not(exists(f:comparator))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Claim"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -612,10 +600,6 @@
       <mapping>
         <identity value="rim"/>
         <map value="./low"/>
-      </mapping>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="ageMin"/>
       </mapping>
     </element>
     <element id="Extension.extension:ageRange.value[x].high">
@@ -649,7 +633,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present"/>
         <expression value="code.empty() or system.exists()"/>
         <xpath value="not(exists(f:code)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Claim"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
       </constraint>
       <constraint>
         <key value="sqty-1"/>
@@ -657,7 +641,7 @@
         <human value="The comparator is not used on a SimpleQuantity"/>
         <expression value="comparator.empty()"/>
         <xpath value="not(exists(f:comparator))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Claim"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -680,10 +664,6 @@
       <mapping>
         <identity value="rim"/>
         <map value="./high"/>
-      </mapping>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="ageMax"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -895,10 +875,6 @@
     <element id="Extension">
       <path value="Extension"/>
       <definition value="Extension créée dans le cadre du ROR pour décrire un ensemble de personnes qui répondent à des critères leur permettant de  bénéficier de la prestation décrite"/>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="Patientele"/>
-      </mapping>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -927,10 +903,6 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR"/>
       </binding>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="publicPrisEnCharge"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ageRange">
       <path value="Extension.extension"/>
@@ -955,18 +927,10 @@
     <element id="Extension.extension:ageRange.value[x].low">
       <path value="Extension.extension.value[x].low"/>
       <min value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="ageMin"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ageRange.value[x].high">
       <path value="Extension.extension.value[x].high"/>
       <min value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="ageMax"/>
-      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

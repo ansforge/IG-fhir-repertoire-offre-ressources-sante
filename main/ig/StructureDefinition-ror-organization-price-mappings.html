@@ -366,43 +366,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
 </table>
-<a name="specmetier-to-ROROrganizationPrice"> </a><h3>Mappings for Spécification métier vers l'extension ROR OrganizationPrice ()</h3><table class="grid">
- <tr><td colspan="3"><b>ROROrganizationPrice</b></td></tr>
- <tr><td>Extension</td><td>Tarif</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (priceType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>typeTarif</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (priceUnit)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>unitePrix</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (amount)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>montantTarif</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (startDate)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>dateDebutValiditeTarif</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (under60)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>ForfaitSocleHebergement.tarifMoins60Ans</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (deliveryIncluded)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>ForfaitSocleHebergement.prestationsNonObligatoiresIncluses</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (othersDeliveryIncluded)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>ForfaitSocleHebergement.prestationsNonObligatoiresIncluses</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (residentialType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (specialPrice)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (welcomeType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (mealDeliveryName)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>TarifPortageRepas.nomTarifPortageRepas</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (dependencyLevel)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>TarifDependance.groupeTarifaireDependance</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (humanHelpPriceName)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>TarifAidesHumaines.nomTarifAidesHumaines</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (managementType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>TarifAidesHumaines.modeGestion</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (otherAdditionalServiceName)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>TarifPrestationSupplementaire.nomAutrePrestationSupp</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (additionalServiceName)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>TarifPrestationSupplementaire.nomPrestationSupp</td> </tr>
-</table>
 
 
   <!-- insert notes if present -->
@@ -478,7 +441,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 12, 2024 16:11+0000">2024-03-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 12, 2024 16:23+0000">2024-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

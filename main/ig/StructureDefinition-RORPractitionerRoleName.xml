@@ -26,7 +26,7 @@
   <version value="0.3.0"/>
   <name value="RORPractitionerRoleName"/>
   <status value="active"/>
-  <date value="2024-03-12T16:11:04+00:00"/>
+  <date value="2024-03-12T16:23:37+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -48,10 +48,6 @@
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
-  </mapping>
-  <mapping>
-    <identity value="specmetier-to-RORPractitionerRoleName"/>
-    <name value="Spécification métier vers l'extension ROR RORPractitionerRoleName"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -152,7 +148,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:exerciseTitle">
@@ -185,7 +181,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:exerciseTitle.id">
@@ -248,7 +244,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:exerciseTitle.url">
@@ -352,10 +348,6 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
-      <mapping>
-        <identity value="specmetier-to-RORPractitionerRoleName"/>
-        <map value="civiliteExercice"/>
-      </mapping>
     </element>
     <element id="Extension.extension:exerciseLastName">
       <path value="Extension.extension"/>
@@ -387,7 +379,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:exerciseLastName.id">
@@ -450,7 +442,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:exerciseLastName.url">
@@ -509,10 +501,6 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
-      <mapping>
-        <identity value="specmetier-to-RORPractitionerRoleName"/>
-        <map value="nomExercice"/>
-      </mapping>
     </element>
     <element id="Extension.extension:exerciseFirstName">
       <path value="Extension.extension"/>
@@ -544,7 +532,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:exerciseFirstName.id">
@@ -607,7 +595,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
     </element>
     <element id="Extension.extension:exerciseFirstName.url">
@@ -665,10 +653,6 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="specmetier-to-RORPractitionerRoleName"/>
-        <map value="prenomExercice"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -922,10 +906,6 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J208-CiviliteExercice-ROR/FHIR/JDV-J208-CiviliteExercice-ROR"/>
       </binding>
-      <mapping>
-        <identity value="specmetier-to-RORPractitionerRoleName"/>
-        <map value="civiliteExercice"/>
-      </mapping>
     </element>
     <element id="Extension.extension:exerciseLastName">
       <path value="Extension.extension"/>
@@ -946,10 +926,6 @@
       <type>
         <code value="string"/>
       </type>
-      <mapping>
-        <identity value="specmetier-to-RORPractitionerRoleName"/>
-        <map value="nomExercice"/>
-      </mapping>
     </element>
     <element id="Extension.extension:exerciseFirstName">
       <path value="Extension.extension"/>
@@ -970,10 +946,6 @@
       <type>
         <code value="string"/>
       </type>
-      <mapping>
-        <identity value="specmetier-to-RORPractitionerRoleName"/>
-        <map value="prenomExercice"/>
-      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

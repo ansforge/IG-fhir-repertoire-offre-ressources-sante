@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.3.0"] ; # 
   fhir:name [ fhir:v "ROROrganizationPrice"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-03-12T16:11:04+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-12T16:23:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -38,9 +38,6 @@
      fhir:identity [ fhir:v "rim" ] ;
      fhir:uri [ fhir:v "http://hl7.org/v3"^^xsd:anyURI ] ;
      fhir:name [ fhir:v "RIM Mapping" ]
-  ] [
-     fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-     fhir:name [ fhir:v "Spécification métier vers l'extension ROR OrganizationPrice" ]
   ] ) ; # 
   fhir:kind [ fhir:v "complex-type"] ; # 
   fhir:abstract [ fhir:v "false"^^xsd:boolean] ; # 
@@ -88,10 +85,6 @@
            fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
            fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
          ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "Tarif" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.id" ] ;
@@ -158,8 +151,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -196,8 +189,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -265,8 +258,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -335,9 +328,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "typeTarif" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:priceUnit" ] ;
@@ -373,8 +363,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -442,8 +432,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -512,9 +502,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "unitePrix" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:amount" ] ;
@@ -550,8 +537,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -619,8 +606,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -682,9 +669,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "montantTarif" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:startDate" ] ;
@@ -720,8 +704,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -789,8 +773,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -852,9 +836,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "dateDebutValiditeTarif" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:under60" ] ;
@@ -890,8 +871,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -959,8 +940,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1022,9 +1003,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.tarifMoins60Ans" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:deliveryIncluded" ] ;
@@ -1060,8 +1038,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1129,8 +1107,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1199,9 +1177,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:othersDeliveryIncluded" ] ;
@@ -1237,8 +1212,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1306,8 +1281,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1369,9 +1344,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:residentialType" ] ;
@@ -1407,8 +1379,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1476,8 +1448,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1546,9 +1518,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:specialPrice" ] ;
@@ -1584,8 +1553,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1653,8 +1622,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1723,9 +1692,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:welcomeType" ] ;
@@ -1761,8 +1727,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1830,8 +1796,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -1900,9 +1866,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:mealDeliveryName" ] ;
@@ -1938,8 +1901,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2007,8 +1970,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2070,9 +2033,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifPortageRepas.nomTarifPortageRepas" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:dependencyLevel" ] ;
@@ -2108,8 +2068,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2177,8 +2137,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2247,9 +2207,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifDependance.groupeTarifaireDependance" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:humanHelpPriceName" ] ;
@@ -2285,8 +2242,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2354,8 +2311,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2417,9 +2374,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifAidesHumaines.nomTarifAidesHumaines" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:managementType" ] ;
@@ -2455,8 +2409,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2524,8 +2478,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2594,9 +2548,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifAidesHumaines.modeGestion" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:otherAdditionalServiceName" ] ;
@@ -2632,8 +2583,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2701,8 +2652,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2764,9 +2715,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifPrestationSupplementaire.nomAutrePrestationSupp" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:additionalServiceName" ] ;
@@ -2802,8 +2750,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2871,8 +2819,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] )
      ] [
@@ -2941,9 +2889,6 @@
        ] [
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
-       ] [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifPrestationSupplementaire.nomPrestationSupp" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.url" ] ;
@@ -3109,11 +3054,7 @@
      fhir:element ( [
        fhir:id [ fhir:v "Extension" ] ;
        fhir:path [ fhir:v "Extension" ] ;
-       fhir:definition [ fhir:v "Extension créée dans le cadre du ROR pour permettre de définir les tarifs des prestations et services d'une entité géographique." ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "Tarif" ]
-       ] )
+       fhir:definition [ fhir:v "Extension créée dans le cadre du ROR pour permettre de définir les tarifs des prestations et services d'une entité géographique." ]
      ] [
        fhir:id [ fhir:v "Extension.extension" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3144,11 +3085,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J36-TypeTarif-ROR/FHIR/JDV-J36-TypeTarif-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J36-TypeTarif-ROR/FHIR/JDV-J36-TypeTarif-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "typeTarif" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:priceUnit" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3175,11 +3112,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J205-UnitePrix-ROR/FHIR/JDV-J205-UnitePrix-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J205-UnitePrix-ROR/FHIR/JDV-J205-UnitePrix-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "unitePrix" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:amount" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3199,10 +3132,6 @@
        fhir:path [ fhir:v "Extension.extension.value[x]" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "Money"^^xsd:anyURI ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "montantTarif" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:startDate" ] ;
@@ -3223,10 +3152,6 @@
        fhir:path [ fhir:v "Extension.extension.value[x]" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "dateTime"^^xsd:anyURI ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "dateDebutValiditeTarif" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:under60" ] ;
@@ -3247,10 +3172,6 @@
        fhir:path [ fhir:v "Extension.extension.value[x]" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "boolean"^^xsd:anyURI ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.tarifMoins60Ans" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:deliveryIncluded" ] ;
@@ -3278,11 +3199,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:othersDeliveryIncluded" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3302,10 +3219,6 @@
        fhir:path [ fhir:v "Extension.extension.value[x]" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "string"^^xsd:anyURI ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:residentialType" ] ;
@@ -3333,11 +3246,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:specialPrice" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3364,11 +3273,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J39-ConditionTarifaire-ROR/FHIR/JDV-J39-ConditionTarifaire-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J39-ConditionTarifaire-ROR/FHIR/JDV-J39-ConditionTarifaire-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:welcomeType" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3395,11 +3300,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:mealDeliveryName" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3419,10 +3320,6 @@
        fhir:path [ fhir:v "Extension.extension.value[x]" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "string"^^xsd:anyURI ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifPortageRepas.nomTarifPortageRepas" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:dependencyLevel" ] ;
@@ -3450,11 +3347,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J27-GroupeTarifaireDependance-ROR/FHIR/JDV-J27-GroupeTarifaireDependance-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J27-GroupeTarifaireDependance-ROR/FHIR/JDV-J27-GroupeTarifaireDependance-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifDependance.groupeTarifaireDependance" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:humanHelpPriceName" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3474,10 +3367,6 @@
        fhir:path [ fhir:v "Extension.extension.value[x]" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "string"^^xsd:anyURI ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifAidesHumaines.nomTarifAidesHumaines" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:managementType" ] ;
@@ -3505,11 +3394,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifAidesHumaines.modeGestion" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.extension:otherAdditionalServiceName" ] ;
        fhir:path [ fhir:v "Extension.extension" ] ;
@@ -3529,10 +3414,6 @@
        fhir:path [ fhir:v "Extension.extension.value[x]" ] ;
        fhir:type ( [
          fhir:code [ fhir:v "string"^^xsd:anyURI ]
-       ] ) ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifPrestationSupplementaire.nomAutrePrestationSupp" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:additionalServiceName" ] ;
@@ -3560,11 +3441,7 @@
            fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR"^^xsd:anyURI ;
            fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR>
          ]
-       ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-ROROrganizationPrice" ] ;
-         fhir:map [ fhir:v "TarifPrestationSupplementaire.nomPrestationSupp" ]
-       ] )
+       ]
      ] [
        fhir:id [ fhir:v "Extension.url" ] ;
        fhir:path [ fhir:v "Extension.url" ] ;

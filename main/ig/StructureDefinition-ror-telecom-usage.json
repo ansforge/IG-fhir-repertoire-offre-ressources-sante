@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "RORTelecomUsage",
   "status" : "active",
-  "date" : "2024-03-12T16:11:04+00:00",
+  "date" : "2024-03-12T16:23:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,10 +31,6 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "specmetier-to-RORTelecomUsage",
-    "name" : "Spécification métier vers l'extension ROR TelecomCommunicationUsage"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -143,7 +139,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -204,10 +200,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORTelecomUsage",
-        "map" : "utilisation"
       }]
     }]
   },
@@ -232,10 +224,6 @@
       "path" : "Extension.value[x]",
       "type" : [{
         "code" : "string"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORTelecomUsage",
-        "map" : "utilisation"
       }]
     }]
   }

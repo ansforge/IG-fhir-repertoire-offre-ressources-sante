@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "RORLocationSupportedCapacity",
   "status" : "active",
-  "date" : "2024-03-12T16:11:04+00:00",
+  "date" : "2024-03-12T16:23:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,10 +31,6 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "specmetier-to-RORLocationSupportedCapacity",
-    "name" : "Spécification métier vers l'extension ROR LocationSupportedCapacity"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -74,10 +70,6 @@
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapacitePriseCharge + CapaciteAccueilOperationnelle"
       }]
     },
     {
@@ -143,7 +135,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -177,7 +169,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -243,7 +235,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -308,10 +300,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.natureCapacite"
       }]
     },
     {
@@ -345,7 +333,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -411,7 +399,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -476,10 +464,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.statutCapacite"
       }]
     },
     {
@@ -513,7 +497,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -579,7 +563,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -644,10 +628,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.temporaliteCapacite"
       }]
     },
     {
@@ -681,7 +661,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -747,7 +727,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -808,10 +788,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.nombreCapacite"
       }]
     },
     {
@@ -845,7 +821,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -911,7 +887,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -976,10 +952,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.typeSourceCapacite"
       }]
     },
     {
@@ -1013,7 +985,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1079,7 +1051,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1144,10 +1116,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.genreCapaciteDispo"
       }]
     },
     {
@@ -1181,7 +1149,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1247,7 +1215,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1308,10 +1276,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.dateMAJCapacite"
       }]
     },
     {
@@ -1345,7 +1309,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1411,7 +1375,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1476,10 +1440,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.typeFermetureCapacite"
       }]
     },
     {
@@ -1513,7 +1473,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1579,7 +1539,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1644,10 +1604,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.typeLitsSupplementaire"
       }]
     },
     {
@@ -1681,7 +1637,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1747,7 +1703,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1812,10 +1768,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.typeCrise"
       }]
     },
     {
@@ -1849,7 +1801,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1915,7 +1867,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -1980,10 +1932,6 @@
       {
         "identity" : "rim",
         "map" : "N/A"
-      },
-      {
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapacitePriseCharge.affectationTemporaire"
       }]
     },
     {
@@ -2198,11 +2146,7 @@
     "element" : [{
       "id" : "Extension",
       "path" : "Extension",
-      "definition" : "Extension créée dans le cadre du ROR qui indique une série d’enregistrements indiquant la quantité de lit (ou de place) de l'entité pour un statut et une temporalité donnés.",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapacitePriseCharge + CapaciteAccueilOperationnelle"
-      }]
+      "definition" : "Extension créée dans le cadre du ROR qui indique une série d’enregistrements indiquant la quantité de lit (ou de place) de l'entité pour un statut et une temporalité donnés."
     },
     {
       "id" : "Extension.extension",
@@ -2235,11 +2179,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.natureCapacite"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:capacityStatus",
@@ -2267,11 +2207,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.statutCapacite"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:temporalityCapacity",
@@ -2299,11 +2235,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.temporaliteCapacite"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:nbCapacity",
@@ -2327,10 +2259,6 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "integer"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.nombreCapacite"
       }]
     },
     {
@@ -2359,11 +2287,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.typeSourceCapacite"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:genderCapacityAvailable",
@@ -2391,11 +2315,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.genreCapaciteDispo"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:capacityUpdateDate",
@@ -2419,10 +2339,6 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "dateTime"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.dateMAJCapacite"
       }]
     },
     {
@@ -2451,11 +2367,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J191-TypeFermetureCapacite-ROR/FHIR/JDV-J191-TypeFermetureCapacite-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.typeFermetureCapacite"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:additionalBedType",
@@ -2483,11 +2395,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J192-TypeLitSupplementaire-ROR/FHIR/JDV-J192-TypeLitSupplementaire-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.typeLitsSupplementaire"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:crisisType",
@@ -2515,11 +2423,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J194-TypeCrise-ROR/FHIR/JDV-J194-TypeCrise-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapaciteAccueilOperationnelle.typeCrise"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:temporaryAssignement",
@@ -2547,11 +2451,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORLocationSupportedCapacity",
-        "map" : "CapacitePriseCharge.affectationTemporaire"
-      }]
+      }
     },
     {
       "id" : "Extension.url",
