@@ -82,7 +82,11 @@
       "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date",
       "title": "RORAvailableTimeEffectiveOpeningClosingDate",
       "types": [
-        "Period"
+        "Period",
+        "string",
+        "Extension",
+        "dateTime",
+        "dateTime"
       ]
     },
     {
@@ -169,57 +173,6 @@
         "HumanName",
         "CodeableConcept",
         "string",
-        "string",
-        "base64Binary",
-        "boolean",
-        "canonical",
-        "code",
-        "date",
-        "dateTime",
-        "decimal",
-        "id",
-        "instant",
-        "integer",
-        "markdown",
-        "oid",
-        "positiveInt",
-        "string",
-        "time",
-        "unsignedInt",
-        "uri",
-        "url",
-        "uuid",
-        "Address",
-        "Age",
-        "Annotation",
-        "Attachment",
-        "CodeableConcept",
-        "Coding",
-        "ContactPoint",
-        "Count",
-        "Distance",
-        "Duration",
-        "HumanName",
-        "Identifier",
-        "Money",
-        "Period",
-        "Quantity",
-        "Range",
-        "Ratio",
-        "Reference",
-        "SampledData",
-        "Signature",
-        "Timing",
-        "ContactDetail",
-        "Contributor",
-        "DataRequirement",
-        "Expression",
-        "ParameterDefinition",
-        "RelatedArtifact",
-        "TriggerDefinition",
-        "UsageContext",
-        "Dosage",
-        "Meta",
         "base64Binary",
         "boolean",
         "canonical",
@@ -1105,8 +1058,7 @@
       "Organization.address.extension"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level": [
-      "Extension",
-      "HealthcareService.extension"
+      "Extension"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level": [
       "Organization.contact"
@@ -1116,7 +1068,6 @@
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-function-contact": [
       "Extension",
-      "HealthcareService.extension",
       "Organization.contact"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-coordinate-reliability": [
@@ -1126,8 +1077,7 @@
       "HealthcareService"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom": [
-      "Extension",
-      "HealthcareService.extension"
+      "Extension"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-no-consent-habilitation": [
       "HealthcareService"
@@ -1145,8 +1095,7 @@
       "Location"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit": [
-      "Extension",
-      "Location.extension"
+      "Extension"
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-residential-capacity": [
       "Location"
@@ -1212,8 +1161,6 @@
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel": [
       "Extension",
-      "Extension.extension",
-      "HealthcareService.extension.extension",
       "HealthcareService.telecom",
       "Location.telecom",
       "Organization.contact.telecom",
@@ -1223,8 +1170,6 @@
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level": [
       "Extension",
-      "Extension.extension",
-      "HealthcareService.extension.extension",
       "HealthcareService.telecom",
       "Location.telecom",
       "Organization.contact.telecom",
@@ -1234,8 +1179,6 @@
     ],
     "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage": [
       "Extension",
-      "Extension.extension",
-      "HealthcareService.extension.extension",
       "HealthcareService.telecom",
       "Location.telecom",
       "Organization.contact.telecom",

@@ -9,7 +9,7 @@
   "version" : "0.2.1",
   "name" : "RORHealthcareServicePatientType",
   "status" : "active",
-  "date" : "2024-03-04T07:25:47+00:00",
+  "date" : "2024-03-12T09:15:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -143,7 +143,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -177,11 +177,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "publicPrisEnCharge : JDV-J29-PublicPrisEnCharge-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -247,7 +243,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -312,6 +308,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "publicPrisEnCharge"
       }]
     },
     {
@@ -345,7 +345,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -411,7 +411,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -548,7 +548,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -591,7 +591,7 @@
         "human" : "If a code for the unit is present, the system SHALL also be present",
         "expression" : "code.empty() or system.exists()",
         "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ProdCharacteristic"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Claim"
       },
       {
         "key" : "sqty-1",
@@ -599,7 +599,7 @@
         "human" : "The comparator is not used on a SimpleQuantity",
         "expression" : "comparator.empty()",
         "xpath" : "not(exists(f:comparator))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Claim"
       }],
       "isModifier" : false,
       "isSummary" : true,
@@ -660,7 +660,7 @@
         "human" : "If a code for the unit is present, the system SHALL also be present",
         "expression" : "code.empty() or system.exists()",
         "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ProdCharacteristic"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Claim"
       },
       {
         "key" : "sqty-1",
@@ -668,7 +668,7 @@
         "human" : "The comparator is not used on a SimpleQuantity",
         "expression" : "comparator.empty()",
         "xpath" : "not(exists(f:comparator))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Claim"
       }],
       "isModifier" : false,
       "isSummary" : true,
@@ -925,11 +925,7 @@
       "path" : "Extension.extension",
       "sliceName" : "supportedPatientInfo",
       "min" : 0,
-      "max" : "*",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "publicPrisEnCharge : JDV-J29-PublicPrisEnCharge-ROR"
-      }]
+      "max" : "*"
     },
     {
       "id" : "Extension.extension:supportedPatientInfo.extension",
@@ -950,7 +946,11 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "publicPrisEnCharge"
+      }]
     },
     {
       "id" : "Extension.extension:ageRange",

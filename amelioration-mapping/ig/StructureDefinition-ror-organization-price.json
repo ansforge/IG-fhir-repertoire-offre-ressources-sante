@@ -9,7 +9,7 @@
   "version" : "0.2.1",
   "name" : "ROROrganizationPrice",
   "status" : "active",
-  "date" : "2024-03-04T07:25:47+00:00",
+  "date" : "2024-03-12T09:15:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -143,7 +143,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -177,11 +177,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "typeTarif : JDV-J36-TypeTarif-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -247,7 +243,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -312,6 +308,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "typeTarif"
       }]
     },
     {
@@ -345,11 +345,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "unitePrix : JDV-J205-UnitePrix-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -415,7 +411,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -480,6 +476,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "unitePrix"
       }]
     },
     {
@@ -513,11 +513,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "montantTarif"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -583,7 +579,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -644,6 +640,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "montantTarif"
       }]
     },
     {
@@ -677,11 +677,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "dateDebutValiditeTarif"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -747,7 +743,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -808,6 +804,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "dateDebutValiditeTarif"
       }]
     },
     {
@@ -841,11 +841,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.tarifMoins60Ans"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -911,7 +907,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -972,6 +968,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.tarifMoins60Ans"
       }]
     },
     {
@@ -1005,11 +1005,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses : JDV-J206-PrestationNonObligatoireIncluse-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1075,7 +1071,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1140,6 +1136,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
       }]
     },
     {
@@ -1173,11 +1173,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1243,7 +1239,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1304,6 +1300,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
       }]
     },
     {
@@ -1337,11 +1337,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation : JDV-J32-TypeHabitation-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1407,7 +1403,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1472,6 +1468,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"
       }]
     },
     {
@@ -1505,11 +1505,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire : JDV-J39-ConditionTarifaire-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1575,7 +1571,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1640,6 +1636,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"
       }]
     },
     {
@@ -1673,11 +1673,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil : JDV-J30-TemporaliteAccueil-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1743,7 +1739,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1808,6 +1804,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"
       }]
     },
     {
@@ -1841,11 +1841,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPortageRepas.nomTarifPortageRepas"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1911,7 +1907,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1972,6 +1968,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifPortageRepas.nomTarifPortageRepas"
       }]
     },
     {
@@ -2005,11 +2005,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifDependance.groupeTarifaireDependance : JDV-J27-GroupeTarifaireDependance-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2075,7 +2071,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2140,6 +2136,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifDependance.groupeTarifaireDependance"
       }]
     },
     {
@@ -2173,11 +2173,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAidesHumaines.nomTarifAidesHumaines"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2243,7 +2239,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2304,6 +2300,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifAidesHumaines.nomTarifAidesHumaines"
       }]
     },
     {
@@ -2337,11 +2337,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAidesHumaines.modeGestion : JDV-J26-ModeGestion-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2407,7 +2403,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2472,6 +2468,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifAidesHumaines.modeGestion"
       }]
     },
     {
@@ -2505,11 +2505,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPrestationSupplementaire.nomAutrePrestationSupp"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2575,7 +2571,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2636,6 +2632,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifPrestationSupplementaire.nomAutrePrestationSupp"
       }]
     },
     {
@@ -2669,11 +2669,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPrestationSupplementaire.nomPrestationSupp : JDV-J206-PrestationNonObligatoireIncluse-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2739,7 +2735,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -2804,6 +2800,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifPrestationSupplementaire.nomPrestationSupp"
       }]
     },
     {
@@ -3034,11 +3034,7 @@
       "path" : "Extension.extension",
       "sliceName" : "priceType",
       "min" : 1,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "typeTarif : JDV-J36-TypeTarif-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:priceType.extension",
@@ -3059,18 +3055,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J36-TypeTarif-ROR/FHIR/JDV-J36-TypeTarif-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "typeTarif"
+      }]
     },
     {
       "id" : "Extension.extension:priceUnit",
       "path" : "Extension.extension",
       "sliceName" : "priceUnit",
       "min" : 1,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "unitePrix : JDV-J205-UnitePrix-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:priceUnit.extension",
@@ -3091,18 +3087,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J205-UnitePrix-ROR/FHIR/JDV-J205-UnitePrix-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "unitePrix"
+      }]
     },
     {
       "id" : "Extension.extension:amount",
       "path" : "Extension.extension",
       "sliceName" : "amount",
       "min" : 1,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "montantTarif"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:amount.extension",
@@ -3119,6 +3115,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "Money"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "montantTarif"
       }]
     },
     {
@@ -3126,11 +3126,7 @@
       "path" : "Extension.extension",
       "sliceName" : "startDate",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "dateDebutValiditeTarif"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:startDate.extension",
@@ -3147,6 +3143,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "dateDebutValiditeTarif"
       }]
     },
     {
@@ -3154,11 +3154,7 @@
       "path" : "Extension.extension",
       "sliceName" : "under60",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.tarifMoins60Ans"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:under60.extension",
@@ -3175,6 +3171,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "boolean"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.tarifMoins60Ans"
       }]
     },
     {
@@ -3182,11 +3182,7 @@
       "path" : "Extension.extension",
       "sliceName" : "deliveryIncluded",
       "min" : 0,
-      "max" : "*",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses : JDV-J206-PrestationNonObligatoireIncluse-ROR"
-      }]
+      "max" : "*"
     },
     {
       "id" : "Extension.extension:deliveryIncluded.extension",
@@ -3207,18 +3203,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+      }]
     },
     {
       "id" : "Extension.extension:othersDeliveryIncluded",
       "path" : "Extension.extension",
       "sliceName" : "othersDeliveryIncluded",
       "min" : 0,
-      "max" : "*",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
-      }]
+      "max" : "*"
     },
     {
       "id" : "Extension.extension:othersDeliveryIncluded.extension",
@@ -3235,6 +3231,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
       }]
     },
     {
@@ -3242,11 +3242,7 @@
       "path" : "Extension.extension",
       "sliceName" : "residentialType",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation : JDV-J32-TypeHabitation-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:residentialType.extension",
@@ -3267,18 +3263,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"
+      }]
     },
     {
       "id" : "Extension.extension:specialPrice",
       "path" : "Extension.extension",
       "sliceName" : "specialPrice",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire : JDV-J39-ConditionTarifaire-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:specialPrice.extension",
@@ -3299,18 +3295,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J39-ConditionTarifaire-ROR/FHIR/JDV-J39-ConditionTarifaire-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"
+      }]
     },
     {
       "id" : "Extension.extension:welcomeType",
       "path" : "Extension.extension",
       "sliceName" : "welcomeType",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil : JDV-J30-TemporaliteAccueil-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:welcomeType.extension",
@@ -3331,18 +3327,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"
+      }]
     },
     {
       "id" : "Extension.extension:mealDeliveryName",
       "path" : "Extension.extension",
       "sliceName" : "mealDeliveryName",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPortageRepas.nomTarifPortageRepas"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:mealDeliveryName.extension",
@@ -3359,6 +3355,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifPortageRepas.nomTarifPortageRepas"
       }]
     },
     {
@@ -3366,11 +3366,7 @@
       "path" : "Extension.extension",
       "sliceName" : "dependencyLevel",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifDependance.groupeTarifaireDependance : JDV-J27-GroupeTarifaireDependance-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:dependencyLevel.extension",
@@ -3391,18 +3387,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J27-GroupeTarifaireDependance-ROR/FHIR/JDV-J27-GroupeTarifaireDependance-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifDependance.groupeTarifaireDependance"
+      }]
     },
     {
       "id" : "Extension.extension:humanHelpPriceName",
       "path" : "Extension.extension",
       "sliceName" : "humanHelpPriceName",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAidesHumaines.nomTarifAidesHumaines"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:humanHelpPriceName.extension",
@@ -3419,6 +3415,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifAidesHumaines.nomTarifAidesHumaines"
       }]
     },
     {
@@ -3426,11 +3426,7 @@
       "path" : "Extension.extension",
       "sliceName" : "managementType",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAidesHumaines.modeGestion : JDV-J26-ModeGestion-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:managementType.extension",
@@ -3451,18 +3447,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifAidesHumaines.modeGestion"
+      }]
     },
     {
       "id" : "Extension.extension:otherAdditionalServiceName",
       "path" : "Extension.extension",
       "sliceName" : "otherAdditionalServiceName",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPrestationSupplementaire.nomAutrePrestationSupp"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:otherAdditionalServiceName.extension",
@@ -3479,6 +3475,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifPrestationSupplementaire.nomAutrePrestationSupp"
       }]
     },
     {
@@ -3486,11 +3486,7 @@
       "path" : "Extension.extension",
       "sliceName" : "additionalServiceName",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPrestationSupplementaire.nomPrestationSupp : JDV-J206-PrestationNonObligatoireIncluse-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:additionalServiceName.extension",
@@ -3511,7 +3507,11 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "TarifPrestationSupplementaire.nomPrestationSupp"
+      }]
     },
     {
       "id" : "Extension.url",

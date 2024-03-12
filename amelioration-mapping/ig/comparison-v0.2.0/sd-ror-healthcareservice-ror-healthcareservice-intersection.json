@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "f90dc602-a867-4cbd-8b3e-dc4f6f52906f-75",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f90dc602-a867-4cbd-8b3e-dc4f6f52906f-75",
+  "id" : "0564257b-4099-4ccb-806b-0a9c5848cf3e-75",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/0564257b-4099-4ccb-806b-0a9c5848cf3e-75",
   "name" : "IntersectionRORHealthcareServiceAndRORHealthcareService",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2024-03-04T07:26:06+00:00",
+  "date" : "2024-03-12T09:15:47+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -803,6 +803,14 @@
       {
         "identity" : "rim",
         "map" : ".scopingRole.Organization"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "EntiteGeographique"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "OrganisationInterne"
       }]
     },
     {
@@ -860,7 +868,7 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "typeOffre : JDV-J238-TypeOffre-ROR"
+        "map" : "typeOffre"
       }]
     },
     {
@@ -914,7 +922,7 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "champActivite : JDV-J20-ChampActivite-ROR"
+        "map" : "champActivite"
       }]
     },
     {
@@ -1022,6 +1030,10 @@
       {
         "identity" : "rim",
         "map" : ".location.role[classCode=SDLOC]"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "LieuRealisationoffre"
       }]
     },
     {
@@ -1240,7 +1252,7 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "boiteLettreMSS"
+        "map" : "boiteLettreMSS.adresseMSS"
       }]
     },
     {
@@ -1389,7 +1401,7 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "adresseMSS.adresseTelecom"
+        "map" : "adresseTelecom"
       }]
     },
     {

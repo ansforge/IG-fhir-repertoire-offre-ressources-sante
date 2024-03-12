@@ -20,7 +20,7 @@
   <version value="0.2.1"/>
   <name value="RORHealthcareServiceContactTelecom"/>
   <status value="active"/>
-  <date value="2024-03-04T07:25:47+00:00"/>
+  <date value="2024-03-12T09:15:29+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -87,7 +87,7 @@
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="Telecommunication"/>
+        <map value="telecommunication"/>
       </mapping>
     </element>
     <element id="Extension.id">
@@ -150,7 +150,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:ror-telecom-communication-channel">
@@ -184,12 +184,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="canal : JDV-J225-CanalCommunication-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ror-telecom-usage">
       <path value="Extension.extension"/>
@@ -222,12 +218,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="utilisation"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ror-telecom-confidentiality-level">
       <path value="Extension.extension"/>
@@ -260,12 +252,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:telecomAddress">
       <path value="Extension.extension"/>
@@ -297,12 +285,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="adresseTelecom"/>
-      </mapping>
     </element>
     <element id="Extension.extension:telecomAddress.id">
       <path value="Extension.extension.id"/>
@@ -364,7 +348,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:telecomAddress.url">
@@ -422,6 +406,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
+        <map value="adresseTelecom"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -635,7 +623,7 @@
       <definition value="Extension créée dans le cadre du ROR pour les télécommunications du contact."/>
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="Telecommunication"/>
+        <map value="telecommunication"/>
       </mapping>
     </element>
     <element id="Extension.extension">
@@ -651,10 +639,6 @@
         <code value="Extension"/>
         <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"/>
       </type>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="canal : JDV-J225-CanalCommunication-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ror-telecom-usage">
       <path value="Extension.extension"/>
@@ -665,10 +649,6 @@
         <code value="Extension"/>
         <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage"/>
       </type>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="utilisation"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ror-telecom-confidentiality-level">
       <path value="Extension.extension"/>
@@ -679,20 +659,12 @@
         <code value="Extension"/>
         <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"/>
       </type>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:telecomAddress">
       <path value="Extension.extension"/>
       <sliceName value="telecomAddress"/>
       <min value="1"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
-        <map value="adresseTelecom"/>
-      </mapping>
     </element>
     <element id="Extension.extension:telecomAddress.extension">
       <path value="Extension.extension.extension"/>
@@ -707,6 +679,10 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-RORHealthcareServiceContactTelecom"/>
+        <map value="adresseTelecom"/>
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

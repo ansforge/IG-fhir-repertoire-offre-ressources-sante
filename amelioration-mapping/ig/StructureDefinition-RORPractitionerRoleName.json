@@ -9,7 +9,7 @@
   "version" : "0.2.1",
   "name" : "RORPractitionerRoleName",
   "status" : "active",
-  "date" : "2024-03-04T07:25:47+00:00",
+  "date" : "2024-03-12T09:15:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -74,10 +74,6 @@
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleName",
-        "map" : "ExerciceProfessionnel"
       }]
     },
     {
@@ -143,7 +139,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -177,11 +173,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleName",
-        "map" : "civiliteExercice : JDV-J208-CiviliteExercice-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -247,7 +239,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -354,6 +346,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRoleName",
+        "map" : "civiliteExercice"
       }]
     },
     {
@@ -387,11 +383,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleName",
-        "map" : "nomExercice"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -457,7 +449,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -518,6 +510,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRoleName",
+        "map" : "nomExercice"
       }]
     },
     {
@@ -551,11 +547,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleName",
-        "map" : "prenomExercice"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -621,7 +613,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -682,6 +674,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRoleName",
+        "map" : "prenomExercice"
       }]
     },
     {
@@ -896,11 +892,7 @@
     "element" : [{
       "id" : "Extension",
       "path" : "Extension",
-      "definition" : "Extension créée dans le cadre du ROR pour définir l'identité d’exercice d’un professionnel",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleName",
-        "map" : "ExerciceProfessionnel"
-      }]
+      "definition" : "Extension créée dans le cadre du ROR pour définir l'identité d’exercice d’un professionnel"
     },
     {
       "id" : "Extension.extension",
@@ -912,11 +904,7 @@
       "path" : "Extension.extension",
       "sliceName" : "exerciseTitle",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleName",
-        "map" : "civiliteExercice : JDV-J208-CiviliteExercice-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:exerciseTitle.extension",
@@ -952,18 +940,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J208-CiviliteExercice-ROR/FHIR/JDV-J208-CiviliteExercice-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRoleName",
+        "map" : "civiliteExercice"
+      }]
     },
     {
       "id" : "Extension.extension:exerciseLastName",
       "path" : "Extension.extension",
       "sliceName" : "exerciseLastName",
       "min" : 1,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleName",
-        "map" : "nomExercice"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:exerciseLastName.extension",
@@ -980,6 +968,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRoleName",
+        "map" : "nomExercice"
       }]
     },
     {
@@ -987,11 +979,7 @@
       "path" : "Extension.extension",
       "sliceName" : "exerciseFirstName",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleName",
-        "map" : "prenomExercice"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:exerciseFirstName.extension",
@@ -1008,6 +996,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRoleName",
+        "map" : "prenomExercice"
       }]
     },
     {

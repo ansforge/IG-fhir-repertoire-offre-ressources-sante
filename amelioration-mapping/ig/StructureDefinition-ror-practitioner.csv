@@ -46,7 +46,7 @@ This element can be used to indicate where the current master source of a resour
 "Practitioner.meta.tag:codeRegion","Practitioner.meta.tag","codeRegion","","",0,1,"Y","","Y","Coding {[]} {[]}
 ","Tags applied to this resource","Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.","The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR","",,,,"Meta.tag",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV","regionSource : JDV-J237-RegionOM-ROR"
+","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","n/a","CV","regionSource"
 "Practitioner.implicitRules","Practitioner.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
 ","A set of rules under which this content was created","A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -71,7 +71,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.extension:ror-meta-creation-date","Practitioner.extension","ror-meta-creation-date","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date]]} {[]}
 ","dateCreation (Metadonnee)","Extension créée dans le cadre du ROR qui correspond à la date de création (dans le ROR régional) présente dans les métadonnées.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","metadonnee.dateCreation"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Practitioner.modifierExtension","Practitioner.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -155,7 +155,7 @@ middle name","",0,*,"","","Y","string {[]} {[]}
 "Practitioner.name.prefix","Practitioner.name.prefix","","","",0,1,"Y","","Y","string {[]} {[]}
 ","Civilite (PersonnePhysique) : Civilite de la personne physique","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"extensible","","https://mos.esante.gouv.fr/NOS/JDV_J207-Civilite-ROR/FHIR/JDV-J207-Civilite-ROR","",,,,"HumanName.prefix",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","XPN.5","n/a","./part[partType = PFX]","./TitleCode","PersonnePhysique.civilite : JDV-J207-Civilite-ROR"
+","XPN.5","n/a","./part[partType = PFX]","./TitleCode","PersonnePhysique.civilite"
 "Practitioner.name.suffix","Practitioner.name.suffix","","","",0,*,"","","Y","string {[]} {[]}
 ","Parts that come after the name","Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,,,,"",,,,"HumanName.suffix",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -169,7 +169,7 @@ per-1:If present, start SHALL have a lower value than end {start.hasValue().not(
 "Practitioner.telecom","Practitioner.telecom","","","",0,*,"Y","","Y","ContactPoint {[]} {[]}
 ","boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel","A contact detail for the practitioner, e.g. a telephone number or an email address.","Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific.","Need to know how to reach a practitioner independent to any roles the practitioner may have.","","","","","","","",,,,,"",,,,"Practitioner.telecom",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","XTN","PRT-15, STF-10, ROL-12","n/a","TEL","./telecom","ContactPoint","./ContactPoints","boiteLettreMSS"
+cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","XTN","PRT-15, STF-10, ROL-12","n/a","TEL","./telecom","ContactPoint","./ContactPoints","boiteLettreMSS.adresseMSS"
 "Practitioner.telecom.id","Practitioner.telecom.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Practitioner.telecom.extension","Practitioner.telecom.extension","","","",2,*,"","","","Extension {[]} {[]}
@@ -180,15 +180,15 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Practitioner.telecom.extension:ror-telecom-communication-channel","Practitioner.telecom.extension","ror-telecom-communication-channel","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
 ","canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication","Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.canal : JDV-J225-CanalCommunication-ROR"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Practitioner.telecom.extension:ror-telecom-usage","Practitioner.telecom.extension","ror-telecom-usage","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
 ","utilisation (Telecommunication) : Utilisation du canal de communication","Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.utilisation"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Practitioner.telecom.extension:ror-telecom-confidentiality-level","Practitioner.telecom.extension","ror-telecom-confidentiality-level","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
 ","niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication","Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Practitioner.telecom.system","Practitioner.telecom.system","","","",0,1,"","","Y","code {[]} {[]}
 ","phone | fax | email | pager | url | sms | other","Telecommunications form for contact point - what communications system is required to make use of the contact.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"required","Telecommunications form for contact point.","http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1","",,,,"ContactPoint.system",0,1,"ele-1
 cpt-2","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -196,7 +196,7 @@ cpt-2","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 "Practitioner.telecom.value","Practitioner.telecom.value","","","",1,1,"Y","","Y","string {[]} {[]}
 ","adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication","The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).","Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.","Need to support legacy numbers that are not in a tightly controlled format.","","","","","","","",,,,,"",,,,"ContactPoint.value",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","XTN.1 (or XTN.12)","n/a","./url","./Value","adresseMSS.adresseTelecom"
+","XTN.1 (or XTN.12)","n/a","./url","./Value","adresseTelecom"
 "Practitioner.telecom.use","Practitioner.telecom.use","","","",0,1,"","Y","Y","code {[]} {[]}
 ","home | work | temp | old | mobile - purpose of this contact point","Identifies the purpose for the contact point.","Applications can assume that a contact is current unless it explicitly says that it is temporary or old.","Need to track the way a person uses this contact, so a user can choose which is appropriate for their purpose.","","","","","","","",,"required","Use of contact point.","http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1","",,,,"ContactPoint.use",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

@@ -77,7 +77,7 @@
   <version value="0.2.1"/>
   <name value="ROROrganizationPrice"/>
   <status value="active"/>
-  <date value="2024-03-04T07:25:47+00:00"/>
+  <date value="2024-03-12T09:15:29+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -207,7 +207,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:priceType">
@@ -240,12 +240,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="typeTarif : JDV-J36-TypeTarif-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:priceType.id">
       <path value="Extension.extension.id"/>
@@ -307,7 +303,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:priceType.url">
@@ -370,6 +366,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="typeTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:priceUnit">
       <path value="Extension.extension"/>
@@ -401,12 +401,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="unitePrix : JDV-J205-UnitePrix-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:priceUnit.id">
       <path value="Extension.extension.id"/>
@@ -468,7 +464,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:priceUnit.url">
@@ -531,6 +527,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="unitePrix"/>
+      </mapping>
     </element>
     <element id="Extension.extension:amount">
       <path value="Extension.extension"/>
@@ -562,12 +562,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="montantTarif"/>
-      </mapping>
     </element>
     <element id="Extension.extension:amount.id">
       <path value="Extension.extension.id"/>
@@ -629,7 +625,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:amount.url">
@@ -688,6 +684,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="montantTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:startDate">
       <path value="Extension.extension"/>
@@ -719,12 +719,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="dateDebutValiditeTarif"/>
-      </mapping>
     </element>
     <element id="Extension.extension:startDate.id">
       <path value="Extension.extension.id"/>
@@ -786,7 +782,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:startDate.url">
@@ -845,6 +841,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="dateDebutValiditeTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:under60">
       <path value="Extension.extension"/>
@@ -876,12 +876,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.tarifMoins60Ans"/>
-      </mapping>
     </element>
     <element id="Extension.extension:under60.id">
       <path value="Extension.extension.id"/>
@@ -943,7 +939,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:under60.url">
@@ -1002,6 +998,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.tarifMoins60Ans"/>
+      </mapping>
     </element>
     <element id="Extension.extension:deliveryIncluded">
       <path value="Extension.extension"/>
@@ -1033,12 +1033,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses : JDV-J206-PrestationNonObligatoireIncluse-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:deliveryIncluded.id">
       <path value="Extension.extension.id"/>
@@ -1100,7 +1096,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:deliveryIncluded.url">
@@ -1163,6 +1159,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
+      </mapping>
     </element>
     <element id="Extension.extension:othersDeliveryIncluded">
       <path value="Extension.extension"/>
@@ -1194,12 +1194,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
-      </mapping>
     </element>
     <element id="Extension.extension:othersDeliveryIncluded.id">
       <path value="Extension.extension.id"/>
@@ -1261,7 +1257,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:othersDeliveryIncluded.url">
@@ -1320,6 +1316,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
+      </mapping>
     </element>
     <element id="Extension.extension:residentialType">
       <path value="Extension.extension"/>
@@ -1351,12 +1351,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation : JDV-J32-TypeHabitation-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:residentialType.id">
       <path value="Extension.extension.id"/>
@@ -1418,7 +1414,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:residentialType.url">
@@ -1481,6 +1477,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.extension:specialPrice">
       <path value="Extension.extension"/>
@@ -1512,12 +1512,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire : JDV-J39-ConditionTarifaire-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:specialPrice.id">
       <path value="Extension.extension.id"/>
@@ -1579,7 +1575,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:specialPrice.url">
@@ -1642,6 +1638,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"/>
+      </mapping>
     </element>
     <element id="Extension.extension:welcomeType">
       <path value="Extension.extension"/>
@@ -1673,12 +1673,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil : JDV-J30-TemporaliteAccueil-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:welcomeType.id">
       <path value="Extension.extension.id"/>
@@ -1740,7 +1736,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:welcomeType.url">
@@ -1803,6 +1799,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"/>
+      </mapping>
     </element>
     <element id="Extension.extension:mealDeliveryName">
       <path value="Extension.extension"/>
@@ -1834,12 +1834,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifPortageRepas.nomTarifPortageRepas"/>
-      </mapping>
     </element>
     <element id="Extension.extension:mealDeliveryName.id">
       <path value="Extension.extension.id"/>
@@ -1901,7 +1897,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:mealDeliveryName.url">
@@ -1960,6 +1956,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPortageRepas.nomTarifPortageRepas"/>
+      </mapping>
     </element>
     <element id="Extension.extension:dependencyLevel">
       <path value="Extension.extension"/>
@@ -1991,12 +1991,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifDependance.groupeTarifaireDependance : JDV-J27-GroupeTarifaireDependance-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:dependencyLevel.id">
       <path value="Extension.extension.id"/>
@@ -2058,7 +2054,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:dependencyLevel.url">
@@ -2121,6 +2117,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifDependance.groupeTarifaireDependance"/>
+      </mapping>
     </element>
     <element id="Extension.extension:humanHelpPriceName">
       <path value="Extension.extension"/>
@@ -2152,12 +2152,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifAidesHumaines.nomTarifAidesHumaines"/>
-      </mapping>
     </element>
     <element id="Extension.extension:humanHelpPriceName.id">
       <path value="Extension.extension.id"/>
@@ -2219,7 +2215,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:humanHelpPriceName.url">
@@ -2278,6 +2274,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAidesHumaines.nomTarifAidesHumaines"/>
+      </mapping>
     </element>
     <element id="Extension.extension:managementType">
       <path value="Extension.extension"/>
@@ -2309,12 +2309,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifAidesHumaines.modeGestion : JDV-J26-ModeGestion-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:managementType.id">
       <path value="Extension.extension.id"/>
@@ -2376,7 +2372,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:managementType.url">
@@ -2439,6 +2435,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAidesHumaines.modeGestion"/>
+      </mapping>
     </element>
     <element id="Extension.extension:otherAdditionalServiceName">
       <path value="Extension.extension"/>
@@ -2470,12 +2470,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifPrestationSupplementaire.nomAutrePrestationSupp"/>
-      </mapping>
     </element>
     <element id="Extension.extension:otherAdditionalServiceName.id">
       <path value="Extension.extension.id"/>
@@ -2537,7 +2533,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:otherAdditionalServiceName.url">
@@ -2596,6 +2592,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPrestationSupplementaire.nomAutrePrestationSupp"/>
+      </mapping>
     </element>
     <element id="Extension.extension:additionalServiceName">
       <path value="Extension.extension"/>
@@ -2627,12 +2627,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifPrestationSupplementaire.nomPrestationSupp : JDV-J206-PrestationNonObligatoireIncluse-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:additionalServiceName.id">
       <path value="Extension.extension.id"/>
@@ -2694,7 +2690,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:additionalServiceName.url">
@@ -2756,6 +2752,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPrestationSupplementaire.nomPrestationSupp"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -2981,10 +2981,6 @@
       <sliceName value="priceType"/>
       <min value="1"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="typeTarif : JDV-J36-TypeTarif-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:priceType.extension">
       <path value="Extension.extension.extension"/>
@@ -3003,16 +2999,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J36-TypeTarif-ROR/FHIR/JDV-J36-TypeTarif-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="typeTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:priceUnit">
       <path value="Extension.extension"/>
       <sliceName value="priceUnit"/>
       <min value="1"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="unitePrix : JDV-J205-UnitePrix-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:priceUnit.extension">
       <path value="Extension.extension.extension"/>
@@ -3031,16 +3027,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J205-UnitePrix-ROR/FHIR/JDV-J205-UnitePrix-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="unitePrix"/>
+      </mapping>
     </element>
     <element id="Extension.extension:amount">
       <path value="Extension.extension"/>
       <sliceName value="amount"/>
       <min value="1"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="montantTarif"/>
-      </mapping>
     </element>
     <element id="Extension.extension:amount.extension">
       <path value="Extension.extension.extension"/>
@@ -3055,16 +3051,16 @@
       <type>
         <code value="Money"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="montantTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:startDate">
       <path value="Extension.extension"/>
       <sliceName value="startDate"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="dateDebutValiditeTarif"/>
-      </mapping>
     </element>
     <element id="Extension.extension:startDate.extension">
       <path value="Extension.extension.extension"/>
@@ -3079,16 +3075,16 @@
       <type>
         <code value="dateTime"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="dateDebutValiditeTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:under60">
       <path value="Extension.extension"/>
       <sliceName value="under60"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.tarifMoins60Ans"/>
-      </mapping>
     </element>
     <element id="Extension.extension:under60.extension">
       <path value="Extension.extension.extension"/>
@@ -3103,16 +3099,16 @@
       <type>
         <code value="boolean"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.tarifMoins60Ans"/>
+      </mapping>
     </element>
     <element id="Extension.extension:deliveryIncluded">
       <path value="Extension.extension"/>
       <sliceName value="deliveryIncluded"/>
       <min value="0"/>
       <max value="*"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses : JDV-J206-PrestationNonObligatoireIncluse-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:deliveryIncluded.extension">
       <path value="Extension.extension.extension"/>
@@ -3131,16 +3127,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
+      </mapping>
     </element>
     <element id="Extension.extension:othersDeliveryIncluded">
       <path value="Extension.extension"/>
       <sliceName value="othersDeliveryIncluded"/>
       <min value="0"/>
       <max value="*"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
-      </mapping>
     </element>
     <element id="Extension.extension:othersDeliveryIncluded.extension">
       <path value="Extension.extension.extension"/>
@@ -3155,16 +3151,16 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
+      </mapping>
     </element>
     <element id="Extension.extension:residentialType">
       <path value="Extension.extension"/>
       <sliceName value="residentialType"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation : JDV-J32-TypeHabitation-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:residentialType.extension">
       <path value="Extension.extension.extension"/>
@@ -3183,16 +3179,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.extension:specialPrice">
       <path value="Extension.extension"/>
       <sliceName value="specialPrice"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire : JDV-J39-ConditionTarifaire-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:specialPrice.extension">
       <path value="Extension.extension.extension"/>
@@ -3211,16 +3207,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J39-ConditionTarifaire-ROR/FHIR/JDV-J39-ConditionTarifaire-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"/>
+      </mapping>
     </element>
     <element id="Extension.extension:welcomeType">
       <path value="Extension.extension"/>
       <sliceName value="welcomeType"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil : JDV-J30-TemporaliteAccueil-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:welcomeType.extension">
       <path value="Extension.extension.extension"/>
@@ -3239,16 +3235,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"/>
+      </mapping>
     </element>
     <element id="Extension.extension:mealDeliveryName">
       <path value="Extension.extension"/>
       <sliceName value="mealDeliveryName"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifPortageRepas.nomTarifPortageRepas"/>
-      </mapping>
     </element>
     <element id="Extension.extension:mealDeliveryName.extension">
       <path value="Extension.extension.extension"/>
@@ -3263,16 +3259,16 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPortageRepas.nomTarifPortageRepas"/>
+      </mapping>
     </element>
     <element id="Extension.extension:dependencyLevel">
       <path value="Extension.extension"/>
       <sliceName value="dependencyLevel"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifDependance.groupeTarifaireDependance : JDV-J27-GroupeTarifaireDependance-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:dependencyLevel.extension">
       <path value="Extension.extension.extension"/>
@@ -3291,16 +3287,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J27-GroupeTarifaireDependance-ROR/FHIR/JDV-J27-GroupeTarifaireDependance-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifDependance.groupeTarifaireDependance"/>
+      </mapping>
     </element>
     <element id="Extension.extension:humanHelpPriceName">
       <path value="Extension.extension"/>
       <sliceName value="humanHelpPriceName"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifAidesHumaines.nomTarifAidesHumaines"/>
-      </mapping>
     </element>
     <element id="Extension.extension:humanHelpPriceName.extension">
       <path value="Extension.extension.extension"/>
@@ -3315,16 +3311,16 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAidesHumaines.nomTarifAidesHumaines"/>
+      </mapping>
     </element>
     <element id="Extension.extension:managementType">
       <path value="Extension.extension"/>
       <sliceName value="managementType"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifAidesHumaines.modeGestion : JDV-J26-ModeGestion-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:managementType.extension">
       <path value="Extension.extension.extension"/>
@@ -3343,16 +3339,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAidesHumaines.modeGestion"/>
+      </mapping>
     </element>
     <element id="Extension.extension:otherAdditionalServiceName">
       <path value="Extension.extension"/>
       <sliceName value="otherAdditionalServiceName"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifPrestationSupplementaire.nomAutrePrestationSupp"/>
-      </mapping>
     </element>
     <element id="Extension.extension:otherAdditionalServiceName.extension">
       <path value="Extension.extension.extension"/>
@@ -3367,16 +3363,16 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPrestationSupplementaire.nomAutrePrestationSupp"/>
+      </mapping>
     </element>
     <element id="Extension.extension:additionalServiceName">
       <path value="Extension.extension"/>
       <sliceName value="additionalServiceName"/>
       <min value="0"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-ROROrganizationPrice"/>
-        <map value="TarifPrestationSupplementaire.nomPrestationSupp : JDV-J206-PrestationNonObligatoireIncluse-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:additionalServiceName.extension">
       <path value="Extension.extension.extension"/>
@@ -3395,6 +3391,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPrestationSupplementaire.nomPrestationSupp"/>
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

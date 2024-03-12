@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.2.1"] ; # 
   fhir:name [ fhir:v "RORPractitioner"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-03-04T07:25:47+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-12T09:15:29+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -286,8 +286,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -606,7 +606,7 @@
          fhir:map [ fhir:v "fhir:Coding rdfs:subClassOf dt:CDCoding" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "regionSource : JDV-J237-RegionOM-ROR" ]
+         fhir:map [ fhir:v "regionSource" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.implicitRules" ] ;
@@ -797,8 +797,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] )
      ] [
@@ -839,15 +839,11 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
-       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "metadonnee.dateCreation" ]
-       ] )
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Practitioner.modifierExtension" ] ;
        fhir:extension ( [
@@ -899,8 +895,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -1044,8 +1040,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -1298,8 +1294,8 @@
          fhir:expression [ fhir:v "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:xpath [ fhir:v "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Schedule"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Schedule>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -1360,8 +1356,8 @@
          fhir:expression [ fhir:v "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:xpath [ fhir:v "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Schedule"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Schedule>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -1548,8 +1544,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -1795,7 +1791,7 @@
          fhir:map [ fhir:v "./TitleCode" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "PersonnePhysique.civilite : JDV-J207-Civilite-ROR" ]
+         fhir:map [ fhir:v "PersonnePhysique.civilite" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.name.suffix" ] ;
@@ -1872,8 +1868,8 @@
          fhir:expression [ fhir:v "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:xpath [ fhir:v "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Schedule"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Schedule>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -1931,8 +1927,8 @@
          fhir:expression [ fhir:v "value.empty() or system.exists()" ] ;
          fhir:xpath [ fhir:v "not(exists(f:value)) or exists(f:system)" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/ContactDetail"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ContactDetail>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/RelatedPerson"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
          ]
        ] ) ;
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
@@ -1960,7 +1956,7 @@
          fhir:map [ fhir:v "./ContactPoints" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "boiteLettreMSS" ]
+         fhir:map [ fhir:v "boiteLettreMSS.adresseMSS" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.id" ] ;
@@ -2027,8 +2023,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] )
      ] [
@@ -2069,15 +2065,11 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
-       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "adresseMSS.canal : JDV-J225-CanalCommunication-ROR" ]
-       ] )
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.extension:ror-telecom-usage" ] ;
        fhir:path [ fhir:v "Practitioner.telecom.extension" ] ;
@@ -2116,15 +2108,11 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
-       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "adresseMSS.utilisation" ]
-       ] )
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.extension:ror-telecom-confidentiality-level" ] ;
        fhir:path [ fhir:v "Practitioner.telecom.extension" ] ;
@@ -2163,15 +2151,11 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
-       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "adresseMSS.niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR" ]
-       ] )
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.system" ] ;
        fhir:path [ fhir:v "Practitioner.telecom.system" ] ;
@@ -2271,7 +2255,7 @@
          fhir:map [ fhir:v "./Value" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "adresseMSS.adresseTelecom" ]
+         fhir:map [ fhir:v "adresseTelecom" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.use" ] ;
@@ -2400,8 +2384,8 @@
          fhir:expression [ fhir:v "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:xpath [ fhir:v "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Schedule"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Schedule>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -2608,8 +2592,8 @@
          fhir:expression [ fhir:v "data.empty() or contentType.exists()" ] ;
          fhir:xpath [ fhir:v "not(exists(f:data)) or exists(f:contentType)" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/ProdCharacteristic"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ProdCharacteristic>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DocumentReference"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DocumentReference>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -2742,8 +2726,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -2789,8 +2773,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -2941,8 +2925,8 @@
          fhir:expression [ fhir:v "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:xpath [ fhir:v "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Schedule"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Schedule>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -3002,8 +2986,8 @@
          fhir:expression [ fhir:v "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:xpath [ fhir:v "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Schedule"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Schedule>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -3146,7 +3130,7 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "regionSource : JDV-J237-RegionOM-ROR" ]
+         fhir:map [ fhir:v "regionSource" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.extension" ] ;
@@ -3166,11 +3150,7 @@
            fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date>
          ] )
        ] ) ;
-       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "metadonnee.dateCreation" ]
-       ] )
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Practitioner.identifier" ] ;
        fhir:path [ fhir:v "Practitioner.identifier" ] ;
@@ -3201,7 +3181,7 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "PersonnePhysique.civilite : JDV-J207-Civilite-ROR" ]
+         fhir:map [ fhir:v "PersonnePhysique.civilite" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.telecom" ] ;
@@ -3210,7 +3190,7 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "boiteLettreMSS" ]
+         fhir:map [ fhir:v "boiteLettreMSS.adresseMSS" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.extension" ] ;
@@ -3230,11 +3210,7 @@
            fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel>
          ] )
        ] ) ;
-       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "adresseMSS.canal : JDV-J225-CanalCommunication-ROR" ]
-       ] )
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.extension:ror-telecom-usage" ] ;
        fhir:path [ fhir:v "Practitioner.telecom.extension" ] ;
@@ -3249,11 +3225,7 @@
            fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage>
          ] )
        ] ) ;
-       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "adresseMSS.utilisation" ]
-       ] )
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.extension:ror-telecom-confidentiality-level" ] ;
        fhir:path [ fhir:v "Practitioner.telecom.extension" ] ;
@@ -3268,11 +3240,7 @@
            fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level>
          ] )
        ] ) ;
-       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
-       fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "adresseMSS.niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR" ]
-       ] )
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Practitioner.telecom.value" ] ;
        fhir:path [ fhir:v "Practitioner.telecom.value" ] ;
@@ -3281,7 +3249,7 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitioner" ] ;
-         fhir:map [ fhir:v "adresseMSS.adresseTelecom" ]
+         fhir:map [ fhir:v "adresseTelecom" ]
        ] )
      ] [
        fhir:id [ fhir:v "Practitioner.qualification.issuer" ] ;

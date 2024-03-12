@@ -22,7 +22,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
   <version value="0.2.1"/>
   <name value="RORTerritorialDivision"/>
   <status value="active"/>
-  <date value="2024-03-04T07:25:47+00:00"/>
+  <date value="2024-03-12T09:15:29+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -156,7 +156,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:typeTerritorialDivision">
@@ -189,12 +189,8 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
-        <map value="type : JDV-J223-TypeDivisionTerritoriale-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:typeTerritorialDivision.id">
       <path value="Extension.extension.id"/>
@@ -256,7 +252,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:typeTerritorialDivision.url">
@@ -319,6 +315,10 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <map value="type"/>
+      </mapping>
     </element>
     <element id="Extension.extension:codeTerritorialDivision">
       <path value="Extension.extension"/>
@@ -350,12 +350,8 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
-        <map value="code : JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:codeTerritorialDivision.id">
       <path value="Extension.extension.id"/>
@@ -417,7 +413,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:codeTerritorialDivision.url">
@@ -479,6 +475,10 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <map value="code"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -704,10 +704,6 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
       <sliceName value="typeTerritorialDivision"/>
       <min value="1"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
-        <map value="type : JDV-J223-TypeDivisionTerritoriale-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:typeTerritorialDivision.extension">
       <path value="Extension.extension.extension"/>
@@ -726,16 +722,16 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <map value="type"/>
+      </mapping>
     </element>
     <element id="Extension.extension:codeTerritorialDivision">
       <path value="Extension.extension"/>
       <sliceName value="codeTerritorialDivision"/>
       <min value="1"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
-        <map value="code : JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:codeTerritorialDivision.extension">
       <path value="Extension.extension.extension"/>
@@ -754,6 +750,10 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <strength value="required"/>
         <valueSet value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <map value="code"/>
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

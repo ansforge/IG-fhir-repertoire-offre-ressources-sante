@@ -9,7 +9,7 @@
   "version" : "0.2.1",
   "name" : "ROROrganizationLevelRecourseORSAN",
   "status" : "active",
-  "date" : "2024-03-04T07:25:47+00:00",
+  "date" : "2024-03-12T09:15:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,6 +31,10 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "specmetier-to-ROROrganizationLevelRecourseORSAN",
+    "name" : "Spécification métier vers l'extension ROR LevelRecourseORSAN"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -135,7 +139,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -200,6 +204,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganizationLevelRecourseORSAN",
+        "map" : "niveauRecoursORSAN"
       }]
     }]
   },
@@ -228,7 +236,11 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J204-NiveauRecoursORSAN-ROR/FHIR/JDV-J204-NiveauRecoursORSAN-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationLevelRecourseORSAN",
+        "map" : "niveauRecoursORSAN"
+      }]
     }]
   }
 }

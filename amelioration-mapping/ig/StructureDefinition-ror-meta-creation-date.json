@@ -9,7 +9,7 @@
   "version" : "0.2.1",
   "name" : "RORMetaCreationDate",
   "status" : "active",
-  "date" : "2024-03-04T07:25:47+00:00",
+  "date" : "2024-03-12T09:15:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,6 +31,10 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "specmetier-to-RORMetaCreationDate",
+    "name" : "Spécification métier vers l'extension ROR MetaCreationDate"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -151,7 +155,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -212,6 +216,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORMetaCreationDate",
+        "map" : "metadonnee.dateCreation"
       }]
     }]
   },
@@ -236,6 +244,10 @@
       "path" : "Extension.value[x]",
       "type" : [{
         "code" : "dateTime"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORMetaCreationDate",
+        "map" : "metadonnee.dateCreation"
       }]
     }]
   }

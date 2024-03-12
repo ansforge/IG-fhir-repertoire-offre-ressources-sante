@@ -9,7 +9,7 @@
   "version" : "0.2.1",
   "name" : "RORLocationResidentialCapacity",
   "status" : "active",
-  "date" : "2024-03-04T07:25:47+00:00",
+  "date" : "2024-03-12T09:15:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -143,7 +143,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -177,11 +177,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "typeHabitation : JDV-J32-TypeHabitation-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -247,7 +243,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -312,6 +308,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORResidentialLocationCapacity",
+        "map" : "typeHabitation"
       }]
     },
     {
@@ -345,11 +345,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "nbHabitation"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -415,7 +411,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -476,6 +472,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORResidentialLocationCapacity",
+        "map" : "nbHabitation"
       }]
     },
     {
@@ -706,11 +706,7 @@
       "path" : "Extension.extension",
       "sliceName" : "residentialType",
       "min" : 1,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "typeHabitation : JDV-J32-TypeHabitation-ROR"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:residentialType.extension",
@@ -731,18 +727,18 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORResidentialLocationCapacity",
+        "map" : "typeHabitation"
+      }]
     },
     {
       "id" : "Extension.extension:residentialNumber",
       "path" : "Extension.extension",
       "sliceName" : "residentialNumber",
       "min" : 0,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "nbHabitation"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:residentialNumber.extension",
@@ -759,6 +755,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "integer"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORResidentialLocationCapacity",
+        "map" : "nbHabitation"
       }]
     },
     {

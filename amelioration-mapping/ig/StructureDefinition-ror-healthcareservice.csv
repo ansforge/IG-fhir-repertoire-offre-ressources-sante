@@ -46,7 +46,7 @@ This element can be used to indicate where the current master source of a resour
 "HealthcareService.meta.tag:codeRegion","HealthcareService.meta.tag","codeRegion","","",0,1,"Y","","Y","Coding {[]} {[]}
 ","Tags applied to this resource","Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.","The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR","",,,,"Meta.tag",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CV","regionSource : JDV-J237-RegionOM-ROR"
+","n/a","CV","regionSource"
 "HealthcareService.implicitRules","HealthcareService.implicitRules","","","",0,1,"","Y","Y","uri {[]} {[]}
 ","A set of rules under which this content was created","A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.","Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.","","","","","","","","",,,,,"",,,,"Resource.implicitRules",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -73,258 +73,30 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Cela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","zoneIntervention"
-"HealthcareService.extension:ror-territorial-division.id","HealthcareService.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-territorial-division.extension","HealthcareService.extension.extension","","","",2,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-territorial-division.extension:typeTerritorialDivision","HealthcareService.extension.extension","typeTerritorialDivision","","",1,1,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","type : JDV-J223-TypeDivisionTerritoriale-ROR"
-"HealthcareService.extension:ror-territorial-division.extension:typeTerritorialDivision.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-territorial-division.extension:typeTerritorialDivision.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-territorial-division.extension:typeTerritorialDivision.url","HealthcareService.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""typeTerritorialDivision""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-territorial-division.extension:typeTerritorialDivision.value[x]","HealthcareService.extension.extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR","",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-territorial-division.extension:codeTerritorialDivision","HealthcareService.extension.extension","codeTerritorialDivision","","",1,1,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","code : JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR"
-"HealthcareService.extension:ror-territorial-division.extension:codeTerritorialDivision.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-territorial-division.extension:codeTerritorialDivision.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-territorial-division.extension:codeTerritorialDivision.url","HealthcareService.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""codeTerritorialDivision""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-territorial-division.extension:codeTerritorialDivision.value[x]","HealthcareService.extension.extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,"required","","https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset","",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-territorial-division.url","HealthcareService.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-territorial-division""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-territorial-division.value[x]","HealthcareService.extension.value[x]","","","",0,0,"","","","base64Binary {[]} {[]}
-boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
 "HealthcareService.extension:ror-healthcareservice-sensitive-unit","HealthcareService.extension","ror-healthcareservice-sensitive-unit","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit]]} {[]}
 ","uniteSensible (OffreOperationnelle) : Permet de signaler que toutes les informations de description d'une offre sont confidentielles","Extension créée dans le cadre du ROR pour signaler que toutes les informations de description d'une offre sont confidentielles car elles présentent un risque d'utilisation à des fins malveillantes.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","uniteSensible"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.extension:ror-healthcareservice-no-consent-habilitation","HealthcareService.extension","ror-healthcareservice-no-consent-habilitation","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-no-consent-habilitation]]} {[]}
 ","habilitationAuxSoinsSansConsentement (OffreOperationnelle) : permet d'identifier les offres pour lesquelles un établissement est autorisé à prendre en charge des patients sans leur consentement","Extension créée dans le cadre du ROR qui permet d'identifier les offres pour lesquelles un établissement est autorisé par le directeur général de l’ARS après avis du préfet, à prendre en charge des patients sans leur consentement.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","habilitationAuxSoinsSansConsentement"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.extension:ror-healthcareservice-psychiatric-sector","HealthcareService.extension","ror-healthcareservice-psychiatric-sector","","",0,*,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-psychiatric-sector]]} {[]}
 ","secteurPsychiatrique (OffreOperationnelle) : aire géographique à laquelle sont rattachées des structures de relais et de soins qui prennent en charge des patients résidants sur ce secteur","Extension créée dans le cadre du ROR qui correspond à une aire géographique à laquelle sont rattachées des structures de relais et de soins qui prennent en charge des patients résidants sur ce secteur.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","secteurPsychiatrique"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.extension:ror-healthcareservice-patient-type","HealthcareService.extension","ror-healthcareservice-patient-type","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type]]} {[]}
 ","publicPrisEnCharge (Patientele) : Ensemble de personnes qui présentent des caractéristiques psychologiques, intellectuelles, physiques, psycho-motrices, comportementales leur permettant de bénéficier de la prestation décrite","Extension créée dans le cadre du ROR pour décrire un ensemble de personnes qui répondent à des critères leur permettant de  bénéficier de la prestation décrite","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","Patientele"
-"HealthcareService.extension:ror-healthcareservice-patient-type.id","HealthcareService.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension","HealthcareService.extension.extension","","","",1,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:supportedPatientInfo","HealthcareService.extension.extension","supportedPatientInfo","","",0,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","publicPrisEnCharge : JDV-J29-PublicPrisEnCharge-ROR"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:supportedPatientInfo.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:supportedPatientInfo.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:supportedPatientInfo.url","HealthcareService.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""supportedPatientInfo""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:supportedPatientInfo.value[x]","HealthcareService.extension.extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR","",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange","HealthcareService.extension.extension","ageRange","","",1,1,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange.url","HealthcareService.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""ageRange""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange.value[x]","HealthcareService.extension.extension.value[x]","","","",0,1,"","","","Range {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange.value[x].id","HealthcareService.extension.extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange.value[x].extension","HealthcareService.extension.extension.value[x].extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange.value[x].low","HealthcareService.extension.extension.value[x].low","","","",1,1,"","","Y","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}
-","Low limit","The low limit. The boundary is inclusive.","If the low element is missing, the low boundary is not known.","","","","","","","","",,,,,"",,,,"Range.low",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-qty-3:If a code for the unit is present, the system SHALL also be present {code.empty() or system.exists()}sqty-1:The comparator is not used on a SimpleQuantity {comparator.empty()}","n/a","PQ, IVL<PQ>, MO, CO, depending on the values","./low","ageMin"
-"HealthcareService.extension:ror-healthcareservice-patient-type.extension:ageRange.value[x].high","HealthcareService.extension.extension.value[x].high","","","",1,1,"","","Y","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}
-","High limit","The high limit. The boundary is inclusive.","If the high element is missing, the high boundary is not known.","","","","","","","","",,,,,"",,,,"Range.high",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-qty-3:If a code for the unit is present, the system SHALL also be present {code.empty() or system.exists()}sqty-1:The comparator is not used on a SimpleQuantity {comparator.empty()}","n/a","PQ, IVL<PQ>, MO, CO, depending on the values","./high","ageMax"
-"HealthcareService.extension:ror-healthcareservice-patient-type.url","HealthcareService.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-patient-type.value[x]","HealthcareService.extension.value[x]","","","",0,0,"","","","base64Binary {[]} {[]}
-boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
 "HealthcareService.extension:ror-healthcareservice-contact","HealthcareService.extension","ror-healthcareservice-contact","","",0,*,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact]]} {[]}
 ","contact (OffreOperationnelle) : Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service","Extension créée dans le cadre du ROR pour décrire la personne ou le service qui agit comme point de contact de l'offre.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","contact"
-"HealthcareService.extension:ror-healthcareservice-contact.id","HealthcareService.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-contact.extension","HealthcareService.extension.extension","","","",1,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:name","HealthcareService.extension.extension","name","","",0,1,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","nom"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:name.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:name.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:name.url","HealthcareService.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""name""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:name.value[x]","HealthcareService.extension.extension.value[x]","","","",0,1,"","","","HumanName {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-function-contact","HealthcareService.extension.extension","ror-function-contact","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-function-contact]]} {[]}
-","Extension","Extension créée dans le cadre du ROR qui indique un titre, une position ou une fonction de la personne assurant le contact au sein de l'organisation (directeur, secrétaire, etc.).","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","fonctionContact : JDV-J220-FonctionContact-ROR"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:purposeContact","HealthcareService.extension.extension","purposeContact","","",0,1,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","natureContact : JDV-J221-NatureContact-ROR"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:purposeContact.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:purposeContact.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:purposeContact.url","HealthcareService.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""purposeContact""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:purposeContact.value[x]","HealthcareService.extension.extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR","",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:description","HealthcareService.extension.extension","description","","",0,1,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","description"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:description.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:description.extension","HealthcareService.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:description.url","HealthcareService.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""description""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:description.value[x]","HealthcareService.extension.extension.value[x]","","","",0,1,"","","","string {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-confidentiality-level","HealthcareService.extension.extension","ror-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level]]} {[]}
-","Extension","Extension créée dans le cadre du ROR pour définir le niveau de restriction de l'accès aux attributs de la classe Contact.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom","HealthcareService.extension.extension","ror-healthcareservice-contact-telecom","","",0,*,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom]]} {[]}
-","Extension","Extension créée dans le cadre du ROR pour les télécommunications du contact.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","telecom"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.id","HealthcareService.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension","HealthcareService.extension.extension.extension","","","",3,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-communication-channel","HealthcareService.extension.extension.extension","ror-telecom-communication-channel","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
-","Extension","Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","canal : JDV-J225-CanalCommunication-ROR"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-usage","HealthcareService.extension.extension.extension","ror-telecom-usage","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
-","Extension","Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","utilisation"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:ror-telecom-confidentiality-level","HealthcareService.extension.extension.extension","ror-telecom-confidentiality-level","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
-","Extension","Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress","HealthcareService.extension.extension.extension","telecomAddress","","",1,1,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseTelecom"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress.id","HealthcareService.extension.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress.extension","HealthcareService.extension.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress.url","HealthcareService.extension.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""telecomAddress""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.extension:telecomAddress.value[x]","HealthcareService.extension.extension.extension.value[x]","","","",0,1,"","","","string {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.url","HealthcareService.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.extension:ror-healthcareservice-contact-telecom.value[x]","HealthcareService.extension.extension.value[x]","","","",0,0,"","","","base64Binary {[]} {[]}
-boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.url","HealthcareService.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.extension:ror-healthcareservice-contact.value[x]","HealthcareService.extension.value[x]","","","",0,0,"","","","base64Binary {[]} {[]}
-boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
 "HealthcareService.extension:ror-meta-creation-date","HealthcareService.extension","ror-meta-creation-date","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date]]} {[]}
 ","dateCreation (Metadonnee)","Extension créée dans le cadre du ROR qui correspond à la date de création (dans le ROR régional) présente dans les métadonnées.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","metadonnee.dateCreation"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.modifierExtension","HealthcareService.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -344,17 +116,17 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.providedBy","HealthcareService.providedBy","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[http://interopsante.org/fhir/StructureDefinition/FrOrganization], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization]]}
 ","Organization that provides this service","The organization that provides this healthcare service.","This property is recommended to be the same as the Location's managingOrganization, and if not provided should be interpreted as such. If the Location does not have a managing Organization, then this property should be populated.","","","","","","","","",,,,,"",,,,"HealthcareService.providedBy",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".scopingRole.Organization"
+ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".scopingRole.Organization","EntiteGeographique","OrganisationInterne"
 "HealthcareService.category","HealthcareService.category","","service category
 ","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","typeOffre (OffreOperationnelle) : Permet de distinguer les offres et de les classer en fonction de leur nature particulière","Identifies the broad category of service being performed or delivered.","Selecting a Service Category then determines the list of relevant service types that can be selected in the primary service type.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J238-TypeOffre-ROR/FHIR/JDV-J238-TypeOffre-ROR","",,,,"HealthcareService.category",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".code","FiveWs.class","typeOffre : JDV-J238-TypeOffre-ROR"
+","n/a","CD",".code","FiveWs.class","typeOffre"
 "HealthcareService.type","HealthcareService.type","","service type
 ","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","champActivite (OffreOperationnelle) : Domaine dans lequel s'inscrit l'offre","The specific type of service that may be delivered or performed.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR","",,,,"HealthcareService.type",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","champActivite : JDV-J20-ChampActivite-ROR"
+","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","champActivite"
 "HealthcareService.specialty","HealthcareService.specialty","","","",1,*,"Y","","Y","CodeableConcept {[]} {[]}
 ","Specialties handled by the HealthcareService","Collection of specialties handled by the service site. This is more of a medical term.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"preferred","A specialty that a healthcare service may provide.","http://hl7.org/fhir/ValueSet/c80-practice-codes","","value:coding.system}
 ","",,"open","HealthcareService.specialty",0,*,"ele-1
@@ -363,15 +135,15 @@ ref-1:SHALL have a contained resource if a local reference is provided {referenc
 "HealthcareService.specialty:operationalActivity","HealthcareService.specialty","operationalActivity","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne","Collection of specialties handled by the service site. This is more of a medical term.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J17-ActiviteOperationnelle-ROR/FHIR/JDV-J17-ActiviteOperationnelle-ROR","",,,,"HealthcareService.specialty",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","ActiviteOperationnelle.activiteOperationnelle : JDV-J17-ActiviteOperationnelle-ROR"
+","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","ActiviteOperationnelle.activiteOperationnelle"
 "HealthcareService.specialty:operationalActivityFamily","HealthcareService.specialty","operationalActivityFamily","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne","Collection of specialties handled by the service site. This is more of a medical term.","Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J51-FamilleActiviteOperationnelle-ROR/FHIR/JDV-J51-FamilleActiviteOperationnelle-ROR","",,,,"HealthcareService.specialty",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","ActiviteOperationnelle.familleActiviteOperationnelle : JDV-J51-FamilleActiviteOperationnelle-ROR"
+","n/a","CD",".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code","ActiviteOperationnelle.familleActiviteOperationnelle"
 "HealthcareService.location","HealthcareService.location","","","",0,*,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location], CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location]]}
 ","Location(s) where service may be provided","The location(s) where this healthcare service may be provided.","References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.","","","","","","","","",,,,,"",,,,"HealthcareService.location",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".location.role[classCode=SDLOC]","FiveWs.where[x]"
+ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}","n/a","The target of a resource reference is a RIM entry point (Act, Role, or Entity)",".location.role[classCode=SDLOC]","FiveWs.where[x]","LieuRealisationoffre"
 "HealthcareService.name","HealthcareService.name","","","",0,1,"Y","","Y","string {[]} {[]}
 ","nomOffre (OffreOpérationnelle) : Dénomination sous laquelle l'offre est identifiée par le porteur d'offre","Further description of the service as it would be presented to a consumer while searching.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,,,,"",,,,"HealthcareService.name",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -391,7 +163,7 @@ att-1:If the Attachment has data, it SHALL have a contentType {data.empty() or c
 "HealthcareService.telecom","HealthcareService.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
 ","boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’offre opérationnelle","List of contacts related to this specific healthcare service.","If this is empty, then refer to the location's contacts.","","","","","","","","",,,,,"",,,,"HealthcareService.telecom",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","n/a","TEL",".telecom","boiteLettreMSS"
+cpt-2:A system is required if a value is provided. {value.empty() or system.exists()}","n/a","TEL",".telecom","boiteLettreMSS.adresseMSS"
 "HealthcareService.telecom.id","HealthcareService.telecom.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.telecom.extension","HealthcareService.telecom.extension","","","",2,*,"","","","Extension {[]} {[]}
@@ -402,15 +174,15 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.telecom.extension:ror-telecom-communication-channel","HealthcareService.telecom.extension","ror-telecom-communication-channel","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel]]} {[]}
 ","canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication","Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.canal : JDV-J225-CanalCommunication-ROR"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.telecom.extension:ror-telecom-usage","HealthcareService.telecom.extension","ror-telecom-usage","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage]]} {[]}
 ","utilisation (Telecommunication) : Utilisation du canal de communication","Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.utilisation"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.telecom.extension:ror-telecom-confidentiality-level","HealthcareService.telecom.extension","ror-telecom-confidentiality-level","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level]]} {[]}
 ","niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication","Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","adresseMSS.niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.telecom.system","HealthcareService.telecom.system","","","",0,1,"","","Y","code {[]} {[]}
 ","phone | fax | email | pager | url | sms | other","Telecommunications form for contact point - what communications system is required to make use of the contact.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"required","Telecommunications form for contact point.","http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1","",,,,"ContactPoint.system",0,1,"ele-1
 cpt-2","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -418,7 +190,7 @@ cpt-2","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 "HealthcareService.telecom.value","HealthcareService.telecom.value","","","",1,1,"Y","","Y","string {[]} {[]}
 ","adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication","The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).","Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.","Need to support legacy numbers that are not in a tightly controlled format.","","","","","","","",,,,,"",,,,"ContactPoint.value",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","./url","adresseMSS.adresseTelecom"
+","n/a","./url","adresseTelecom"
 "HealthcareService.telecom.use","HealthcareService.telecom.use","","","",0,1,"","Y","Y","code {[]} {[]}
 ","home | work | temp | old | mobile - purpose of this contact point","Identifies the purpose for the contact point.","Applications can assume that a contact is current unless it explicitly says that it is temporary or old.","Need to track the way a person uses this contact, so a user can choose which is appropriate for their purpose.","","","","","","","",,"required","Use of contact point.","http://hl7.org/fhir/ValueSet/contact-point-use|4.0.1","",,,,"ContactPoint.use",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -500,7 +272,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:receptionType","HealthcareService.characteristic","receptionType","","",0,1,"Y","","","CodeableConcept {[]} {[]}
 ","temporaliteAccueil (OffreOperationnelle) : Précision sur le mode de prise en charge","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","temporaliteAccueil : JDV-J30-TemporaliteAccueil-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","temporaliteAccueil"
 "HealthcareService.characteristic:receptionType.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:receptionType.extension","HealthcareService.characteristic.extension","","extensions
@@ -524,7 +296,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:careMode","HealthcareService.characteristic","careMode","","",1,1,"Y","","","CodeableConcept {[]} {[]}
 ","modePriseEnCharge (OffreOperationnelle) : Caractérise l'hébergement ainsi que le niveau de technicité et d'intensité des soins","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J19-ModePriseEnCharge-ROR/FHIR/JDV-J19-ModePriseEnCharge-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","modePriseEnCharge : JDV-J19-ModePriseEnCharge-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","modePriseEnCharge"
 "HealthcareService.characteristic:careMode.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:careMode.extension","HealthcareService.characteristic.extension","","extensions
@@ -548,7 +320,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:receptionModality","HealthcareService.characteristic","receptionModality","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","modaliteAccueil (OffreOperationnelle) : Permet de préciser le mode de prise en charge géographiquement","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J226-ModaliteAccueil-ROR/FHIR/JDV-J226-ModaliteAccueil-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","modaliteAccueil : JDV-J226-ModaliteAccueil-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","modaliteAccueil"
 "HealthcareService.characteristic:receptionModality.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:receptionModality.extension","HealthcareService.characteristic.extension","","extensions
@@ -572,7 +344,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:managementType","HealthcareService.characteristic","managementType","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","modeGestion (OffreOperationnelle) : Mode d’intervention des aides à domicile en fonction de la nature de la relation contractuelle","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","modeGestion : JDV-J26-ModeGestion-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","modeGestion"
 "HealthcareService.characteristic:managementType.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:managementType.extension","HealthcareService.characteristic.extension","","extensions
@@ -596,7 +368,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:specificAct","HealthcareService.characteristic","specificAct","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","acteSpecifique (OffreOperationnelle) : Action menée par un ou plusieurs acteur(s) de santé dans le cadre d’une activité","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","acteSpecifique : JDV-J16-ActeSpecifique-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","acteSpecifique"
 "HealthcareService.characteristic:specificAct.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:specificAct.extension","HealthcareService.characteristic.extension","","","",1,*,"","","","Extension {[]} {[]}
@@ -632,7 +404,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:outsideOfficeAct","HealthcareService.characteristic","outsideOfficeAct","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","acteRealiseHorsCabinet (OffreOperationnelle) : Permet de décrire l’offre de santé des médecins libéraux réalisée en dehors du cabinet, au sein d’un établissement","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J16-ActeSpecifique-ROR/FHIR/JDV-J16-ActeSpecifique-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","acteRealiseHorsCabinet : JDV-J16-ActeSpecifique-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","acteRealiseHorsCabinet"
 "HealthcareService.characteristic:outsideOfficeAct.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:outsideOfficeAct.extension","HealthcareService.characteristic.extension","","","",1,*,"","","","Extension {[]} {[]}
@@ -668,7 +440,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:takingCareSpeciality","HealthcareService.characteristic","takingCareSpeciality","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","specialisationPriseEnCharge (OffreOperationnelle) : Regroupement de troubles, de pathologies ou de déficiences qui nécessitent la mobilisation d'expertises, de compétences et/ou d'équipements spécifiques","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J35-SpecialisationDePriseEnCharge-ROR/FHIR/JDV-J35-SpecialisationDePriseEnCharge-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","specialisationPriseEnCharge : JDV-J35-SpecialisationDePriseEnCharge-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","specialisationPriseEnCharge"
 "HealthcareService.characteristic:takingCareSpeciality.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:takingCareSpeciality.extension","HealthcareService.characteristic.extension","","extensions
@@ -692,7 +464,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:annualOpening","HealthcareService.characteristic","annualOpening","","",0,1,"Y","","","CodeableConcept {[]} {[]}
 ","ouvertureAnnuelle (OffreOperationnelle) : Nombre de jours maximum dans l’année au cours desquels la prestation peut être proposée par l'établissement","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J28-OuvertureAnnuelle-ROR/FHIR/JDV-J28-OuvertureAnnuelle-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","ouvertureAnnuelle : JDV-J28-OuvertureAnnuelle-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","ouvertureAnnuelle"
 "HealthcareService.characteristic:annualOpening.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:annualOpening.extension","HealthcareService.characteristic.extension","","extensions
@@ -716,7 +488,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:ressourceProfession","HealthcareService.characteristic","ressourceProfession","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","professionRessource (OffreOperationnelle) : Traduit la mobilisation de métiers qui constituent un facteur différenciant dans la réalisation de la prestation","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J186-ProfessionRessource-ROR/FHIR/JDV-J186-ProfessionRessource-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","professionRessource : JDV-J186-ProfessionRessource-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","professionRessource"
 "HealthcareService.characteristic:ressourceProfession.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:ressourceProfession.extension","HealthcareService.characteristic.extension","","extensions
@@ -740,7 +512,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:specificCompetence","HealthcareService.characteristic","specificCompetence","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","competenceSpecifique (OffreOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","competenceSpecifique : JDV-J33-CompetenceSpecifique-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","competenceSpecifique"
 "HealthcareService.characteristic:specificCompetence.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:specificCompetence.extension","HealthcareService.characteristic.extension","","extensions
@@ -764,7 +536,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:expertiseLevel","HealthcareService.characteristic","expertiseLevel","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","niveauExpertise (OffreOperationnelle) : Niveau de ressources humaines et matérielles engagées dans la réalisation de l'offre","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J227-NiveauExpertise-ROR/FHIR/JDV-J227-NiveauExpertise-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","niveauExpertise : JDV-J227-NiveauExpertise-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","niveauExpertise"
 "HealthcareService.characteristic:expertiseLevel.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:expertiseLevel.extension","HealthcareService.characteristic.extension","","extensions
@@ -788,7 +560,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.characteristic:temporalityStopService","HealthcareService.characteristic","temporalityStopService","","",0,1,"Y","","","CodeableConcept {[]} {[]}
 ","typeFermeture (OffreOperationnelle) : Temporalité d'arrêt de réalisation de la prestation","Collection of characteristics (attributes).","These could be such things as is wheelchair accessible.","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J185-TypeFermeture-ROR/FHIR/JDV-J185-TypeFermeture-ROR","",,,,"HealthcareService.characteristic",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","CD",".actrelationship[typeCode=PERT].observation","typeFermeture : JDV-J185-TypeFermeture-ROR"
+","n/a","CD",".actrelationship[typeCode=PERT].observation","typeFermeture"
 "HealthcareService.characteristic:temporalityStopService.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "HealthcareService.characteristic:temporalityStopService.extension","HealthcareService.characteristic.extension","","extensions
@@ -836,44 +608,15 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "HealthcareService.availableTime.extension:ror-available-time-type-of-time","HealthcareService.availableTime.extension","ror-available-time-type-of-time","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time]]} {[]}
 ","typePlageHoraire (Horaire) : apporte un contexte à la plage horaire définie par la suite","Extension créée dans le cadre du ROR pour apporter un contexte à la plage horaire définie par la suite. Un planning peut être constitué de plusieurs plages horaires du même type ou de type différent.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typePlageHoraire : JDV-J41-TypeHoraire-ROR"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date","HealthcareService.availableTime.extension","ror-available-time-effective-opening-closing-date","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date]]} {[]}
 ","debutDateEffective + finDateEffective (Horaire)","Extension créée dans le cadre du ROR pour décrire le planning d'activité d'un professionnel ou d'une offre.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date.id","HealthcareService.availableTime.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date.extension","HealthcareService.availableTime.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date.url","HealthcareService.availableTime.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date""/>","","","","",,,,,"",,,,"Extension.url",1,1,"","","N/A"
-"HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date.value[x]","HealthcareService.availableTime.extension.value[x]","","","",0,1,"","","","Period {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","N/A"
-"HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date.value[x].id","HealthcareService.availableTime.extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date.value[x].extension","HealthcareService.availableTime.extension.value[x].extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date.value[x].start","HealthcareService.availableTime.extension.value[x].start","","","",0,1,"","","Y","dateTime {[]} {[]}
-","Starting time with inclusive boundary","The start of the period. The boundary is inclusive.","If the low element is missing, the meaning is that the low boundary is not known.","","","","","","","","",,,,,"",,,,"Period.start",0,1,"ele-1
-per-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","./low","debutDateEffective"
-"HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date.value[x].end","HealthcareService.availableTime.extension.value[x].end","","","",0,1,"","","Y","dateTime {[]} {[]}
-","End time with inclusive boundary, if not ongoing","The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.","The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.","","","If the end of the period is missing, it means that the period is ongoing","","","","","",,,,,"",,,,"Period.end",0,1,"ele-1
-per-1","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","n/a","./high","finDateEffective"
 "HealthcareService.availableTime.extension:ror-available-time-number-days-of-week","HealthcareService.availableTime.extension","ror-available-time-number-days-of-week","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week]]} {[]}
 ","jourSemaine (Horaire) : Numéro du jour dans la semaine","Extension créée dans le cadre du ROR pour indiquer le numéro du jour dans la semaine.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","jourSemaine"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.availableTime.modifierExtension","HealthcareService.availableTime.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.

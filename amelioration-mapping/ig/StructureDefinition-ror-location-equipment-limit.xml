@@ -21,7 +21,7 @@
   <version value="0.2.1"/>
   <name value="RORLocationEquipmentLimit"/>
   <status value="active"/>
-  <date value="2024-03-04T07:25:47+00:00"/>
+  <date value="2024-03-12T09:15:29+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -151,7 +151,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:equipmentFeature">
@@ -184,12 +184,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORLocationEquipmentLimit"/>
-        <map value="typeCaracteristique : JDV-J228-TypeCaracteristiqueEquipement-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:equipmentFeature.id">
       <path value="Extension.extension.id"/>
@@ -251,7 +247,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:equipmentFeature.url">
@@ -314,6 +310,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationEquipmentLimit"/>
+        <map value="typeCaracteristique"/>
+      </mapping>
     </element>
     <element id="Extension.extension:limitValue">
       <path value="Extension.extension"/>
@@ -345,12 +345,8 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
-      <mapping>
-        <identity value="specmetier-to-RORLocationEquipmentLimit"/>
-        <map value="valeurLimite"/>
-      </mapping>
     </element>
     <element id="Extension.extension:limitValue.id">
       <path value="Extension.extension.id"/>
@@ -412,7 +408,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:limitValue.url">
@@ -470,6 +466,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationEquipmentLimit"/>
+        <map value="valeurLimite"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -695,10 +695,6 @@
       <sliceName value="equipmentFeature"/>
       <min value="1"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORLocationEquipmentLimit"/>
-        <map value="typeCaracteristique : JDV-J228-TypeCaracteristiqueEquipement-ROR"/>
-      </mapping>
     </element>
     <element id="Extension.extension:equipmentFeature.extension">
       <path value="Extension.extension.extension"/>
@@ -717,16 +713,16 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J228-TypeCaracteristiqueEquipement-ROR/FHIR/JDV-J228-TypeCaracteristiqueEquipement-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationEquipmentLimit"/>
+        <map value="typeCaracteristique"/>
+      </mapping>
     </element>
     <element id="Extension.extension:limitValue">
       <path value="Extension.extension"/>
       <sliceName value="limitValue"/>
       <min value="1"/>
       <max value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORLocationEquipmentLimit"/>
-        <map value="valeurLimite"/>
-      </mapping>
     </element>
     <element id="Extension.extension:limitValue.extension">
       <path value="Extension.extension.extension"/>
@@ -741,6 +737,10 @@
       <type>
         <code value="Quantity"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-RORLocationEquipmentLimit"/>
+        <map value="valeurLimite"/>
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

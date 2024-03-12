@@ -9,7 +9,7 @@
   "version" : "0.2.1",
   "name" : "RORHealthcareServiceContactTelecom",
   "status" : "active",
-  "date" : "2024-03-04T07:25:47+00:00",
+  "date" : "2024-03-12T09:15:29+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -77,7 +77,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "Telecommunication"
+        "map" : "telecommunication"
       }]
     },
     {
@@ -143,7 +143,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -178,11 +178,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "canal : JDV-J225-CanalCommunication-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -217,11 +213,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "utilisation"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -256,11 +248,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -294,11 +282,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "adresseTelecom"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -364,7 +348,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -425,6 +409,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
+        "map" : "adresseTelecom"
       }]
     },
     {
@@ -642,7 +630,7 @@
       "definition" : "Extension créée dans le cadre du ROR pour les télécommunications du contact.",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "Telecommunication"
+        "map" : "telecommunication"
       }]
     },
     {
@@ -659,10 +647,6 @@
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"]
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "canal : JDV-J225-CanalCommunication-ROR"
       }]
     },
     {
@@ -674,10 +658,6 @@
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage"]
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "utilisation"
       }]
     },
     {
@@ -689,10 +669,6 @@
       "type" : [{
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"]
-      }],
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
       }]
     },
     {
@@ -700,11 +676,7 @@
       "path" : "Extension.extension",
       "sliceName" : "telecomAddress",
       "min" : 1,
-      "max" : "1",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
-        "map" : "adresseTelecom"
-      }]
+      "max" : "1"
     },
     {
       "id" : "Extension.extension:telecomAddress.extension",
@@ -721,6 +693,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORHealthcareServiceContactTelecom",
+        "map" : "adresseTelecom"
       }]
     },
     {
