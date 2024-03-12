@@ -23,7 +23,7 @@
   <version value="0.3.0"/>
   <name value="RORHealthcareServicePatientType"/>
   <status value="active"/>
-  <date value="2024-03-12T18:45:19+00:00"/>
+  <date value="2024-03-12T19:04:09+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -153,7 +153,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:supportedPatientInfo">
@@ -186,7 +186,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:supportedPatientInfo.id">
@@ -249,7 +249,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:supportedPatientInfo.url">
@@ -347,7 +347,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:ageRange.id">
@@ -410,7 +410,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:ageRange.url">
@@ -539,7 +539,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -581,7 +581,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present"/>
         <expression value="code.empty() or system.exists()"/>
         <xpath value="not(exists(f:code)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Claim"/>
       </constraint>
       <constraint>
         <key value="sqty-1"/>
@@ -589,7 +589,7 @@
         <human value="The comparator is not used on a SimpleQuantity"/>
         <expression value="comparator.empty()"/>
         <xpath value="not(exists(f:comparator))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Claim"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -649,7 +649,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present"/>
         <expression value="code.empty() or system.exists()"/>
         <xpath value="not(exists(f:code)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Claim"/>
       </constraint>
       <constraint>
         <key value="sqty-1"/>
@@ -657,7 +657,7 @@
         <human value="The comparator is not used on a SimpleQuantity"/>
         <expression value="comparator.empty()"/>
         <xpath value="not(exists(f:comparator))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Claim"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>

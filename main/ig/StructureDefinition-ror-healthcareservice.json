@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "RORHealthcareService",
   "status" : "active",
-  "date" : "2024-03-12T18:45:19+00:00",
+  "date" : "2024-03-12T19:04:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -258,7 +258,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -749,7 +749,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -784,7 +784,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true,
       "mapping" : [{
@@ -828,7 +828,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -864,7 +864,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -900,7 +900,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -936,7 +936,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true,
       "mapping" : [{
@@ -976,7 +976,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true,
       "mapping" : [{
@@ -1016,7 +1016,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -1070,7 +1070,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
@@ -1217,7 +1217,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "mustSupport" : true,
       "isSummary" : true,
@@ -1571,7 +1571,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "mustSupport" : true,
       "isSummary" : true,
@@ -1740,7 +1740,7 @@
         "human" : "If the Attachment has data, it SHALL have a contentType",
         "expression" : "data.empty() or contentType.exists()",
         "xpath" : "not(exists(f:data)) or exists(f:contentType)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DocumentReference"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -1791,7 +1791,7 @@
         "human" : "A system is required if a value is provided.",
         "expression" : "value.empty() or system.exists()",
         "xpath" : "not(exists(f:value)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Subscription"
+        "source" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -1881,7 +1881,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -1916,7 +1916,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -1952,7 +1952,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -1988,7 +1988,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -2215,7 +2215,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Coverage"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2276,7 +2276,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2449,7 +2449,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2495,7 +2495,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -2792,7 +2792,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2835,7 +2835,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -3073,7 +3073,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3116,7 +3116,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -3354,7 +3354,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3397,7 +3397,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -3635,7 +3635,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3678,7 +3678,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -3916,7 +3916,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3959,7 +3959,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -4186,7 +4186,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -4221,7 +4221,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -4288,7 +4288,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -4579,7 +4579,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -4614,7 +4614,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -4681,7 +4681,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -4983,7 +4983,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -5026,7 +5026,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -5264,7 +5264,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -5307,7 +5307,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -5545,7 +5545,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -5588,7 +5588,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -5826,7 +5826,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -5869,7 +5869,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -6107,7 +6107,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -6150,7 +6150,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -6388,7 +6388,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -6431,7 +6431,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -6795,7 +6795,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -6838,7 +6838,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -6874,7 +6874,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -6910,7 +6910,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mustSupport" : true
     },
@@ -6949,7 +6949,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -7232,7 +7232,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -7278,7 +7278,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -7353,7 +7353,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Coverage"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -7482,7 +7482,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -7528,7 +7528,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -7604,7 +7604,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Coverage"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -7697,7 +7697,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -7863,7 +7863,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "mapping" : [{
         "identity" : "rim",
