@@ -7,9 +7,3 @@ Description: "Extension créée dans le cadre du ROR spécifiant le canal ou la 
 * ^context[=].expression = "HealthcareService.extension.extension"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J225-CanalCommunication-ROR (required)
-
-Mapping:  ConceptMetier_RORTelecomCommunicationChannel
-Source:   RORTelecomCommunicationChannel
-Id:       specmetier-to-RORTelecomCommunicationChannel
-Title:    "Spécification métier vers l'extension ROR TelecomCommunicationChannel"
-* valueCodeableConcept -> "canal"

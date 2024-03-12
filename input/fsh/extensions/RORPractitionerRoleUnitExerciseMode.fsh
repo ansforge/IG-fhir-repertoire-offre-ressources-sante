@@ -5,9 +5,3 @@ Description: "Extension créée dans le cadre du ROR qui correspond au statut du
 * ^context.expression = "PractitionerRole"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J217-ModeExercice-ROR (required)
-
-Mapping:  ConceptMetier_RORPractitionerRoleUnitExerciseMode
-Source:   RORPractitionerRoleUnitExerciseMode
-Id:       specmetier-to-RORPractitionerRoleUnitExerciseMode
-Title:    "Spécification métier vers l'extension ROR RORPractitionerRoleUnitExerciseMode"
-* valueCodeableConcept -> "modeExerciceOffre"

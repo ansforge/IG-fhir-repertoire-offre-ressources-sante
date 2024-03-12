@@ -16,12 +16,3 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
 * extension[typeTerritorialDivision].valueCodeableConcept from $JDV-J223-TypeDivisionTerritoriale-ROR (required)
 * extension[codeTerritorialDivision].value[x] only CodeableConcept 
 * extension[codeTerritorialDivision].valueCodeableConcept from CodeRegionTerritorialDivisionRORValueSet (required)
-
-
-Mapping:  ConceptMetier_RORTerritorialDivision
-Source:   RORTerritorialDivision
-Id:       specmetier-to-RORTerritorialDivisio
-Title:    "Spécification métier vers l'extension ROR territorial division"
-* -> "DivisionTerritoriale"
-* extension[typeTerritorialDivision].valueCodeableConcept -> "type"
-* extension[codeTerritorialDivision].valueCodeableConcept -> "code"

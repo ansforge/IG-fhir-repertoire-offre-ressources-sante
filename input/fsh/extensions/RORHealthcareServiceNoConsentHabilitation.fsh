@@ -4,9 +4,3 @@ Description: "Extension créée dans le cadre du ROR qui permet d'identifier les
 * ^context.type = #element
 * ^context.expression = "HealthcareService"
 * value[x] only boolean
-
-Mapping:  ConceptMetier_RORHealthcareServiceNoConsentHabilitation
-Source:   RORHealthcareServiceNoConsentHabilitation
-Id:       specmetier-to-RORHealthcareServiceNoConsentHabilitation
-Title:    "Spécification métier vers l'extension ROR HealthcareServiceNoConsentHabilitation"
-* valueBoolean -> "habilitationAuxSoinsSansConsentement"

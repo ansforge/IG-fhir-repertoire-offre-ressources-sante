@@ -4,9 +4,3 @@ Description: "Extension créée dans le cadre du ROR pour définir la date de cr
 * ^context.type = #element
 * ^context.expression = "Organization"
 * value[x] only date
-
-Mapping:  ConceptMetier_ROROrganizationCreationDate
-Source:   ROROrganizationCreationDate
-Id:       specmetier-to-ROROrganizationCreationDate
-Title:    "Spécification métier vers l'extension ROR OrganizationCreationDate"
-* valueDate -> "dateCreation"

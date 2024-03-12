@@ -38,21 +38,3 @@ Description: "Extension créée dans le cadre du ROR qui indique une série d’
 * extension[crisisType].valueCodeableConcept from $JDV-J194-TypeCrise-ROR (required)
 * extension[temporaryAssignement].value[x] only CodeableConcept
 * extension[temporaryAssignement].valueCodeableConcept from $JDV-J195-AffectationTemporaire-ROR (required)
-
-
-Mapping:  ConceptMetier_RORLocationSupportedCapacity
-Source:   RORLocationSupportedCapacity
-Id:       specmetier-to-RORLocationSupportedCapacity
-Title:    "Spécification métier vers l'extension ROR LocationSupportedCapacity"
-* -> "CapacitePriseCharge + CapaciteAccueilOperationnelle"
-* extension[capacityType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.natureCapacite"
-* extension[capacityStatus].valueCodeableConcept -> "CapaciteAccueilOperationnelle.statutCapacite"
-* extension[temporalityCapacity].valueCodeableConcept -> "CapaciteAccueilOperationnelle.temporaliteCapacite"
-* extension[nbCapacity].valueInteger -> "CapaciteAccueilOperationnelle.nombreCapacite"
-* extension[capacitySourceType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeSourceCapacite"
-* extension[genderCapacityAvailable].valueCodeableConcept -> "CapaciteAccueilOperationnelle.genreCapaciteDispo"
-* extension[capacityUpdateDate].valueDateTime -> "CapaciteAccueilOperationnelle.dateMAJCapacite"
-* extension[capacityClosingType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeFermetureCapacite"
-* extension[additionalBedType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeLitsSupplementaire"
-* extension[crisisType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeCrise"
-* extension[temporaryAssignement].valueCodeableConcept -> "CapacitePriseCharge.affectationTemporaire"

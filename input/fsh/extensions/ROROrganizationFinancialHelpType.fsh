@@ -5,9 +5,3 @@ Description: "Extension créée dans le cadre du ROR pour préciser l'aide finan
 * ^context.expression = "Organization"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J31-AideFinanciere-ROR (required)
-
-Mapping:  ConceptMetier_ROROrganizationFinancialHelpType
-Source:   ROROrganizationFinancialHelpType
-Id:       specmetier-to-ROROrganizationFinancialHelpType
-Title:    "Spécification métier vers l'extension ROR FinancialHelpType"
-* valueCodeableConcept -> "aideFinanciere"
