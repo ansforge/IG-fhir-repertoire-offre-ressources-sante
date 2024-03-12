@@ -5,3 +5,9 @@ Description: "Extension créée dans le cadre du ROR pour décrire une hiérarch
 * ^context.expression = "Organization"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J204-NiveauRecoursORSAN-ROR (required)
+
+Mapping:  ConceptMetier_ROROrganizationLevelRecourseORSAN
+Source:   ROROrganizationLevelRecourseORSAN
+Id:       specmetier-to-ROROrganizationLevelRecourseORSAN
+Title:    "Spécification métier vers l'extension ROR LevelRecourseORSAN"
+* valueCodeableConcept -> "niveauRecoursORSAN"

@@ -1,0 +1,37 @@
+@startuml
+
+'Declaration des éléments
+rectangle "Vue fonctionnelle ROR" {
+
+    rectangle "Offre opérationnelle \n [[StructureDefinition-ror-healthcareservice.html ROR HealthcareService]] " as Offre#LightSkyBlue;line:Black;text:Black
+
+    rectangle "Entité juridique \n [[StructureDefinition-ror-organization.html ROR Organization]]" as EJ #Gold;line:Black;text:Black
+
+    rectangle "Entité géographique \n [[StructureDefinition-ror-organization.html ROR Organization]]" as EG #Gold;line:Black;text:Black
+
+    rectangle "Organisation interne \n [[StructureDefinition-ror-organization.html ROR Organization]]" as OI #Gold;line:Black;text:Black
+    
+    rectangle "Lieu réalisation offre \n [[StructureDefinition-ror-location.html ROR Location]]" as Lieu #Violet;line:Black;text:Black
+
+    rectangle "Professionnel \n [[StructureDefinition-ror-practitioner.html ROR Practitioner]]" as Professionnel #LimeGreen;line:Black;text:Black
+
+    rectangle "Situation opérationnelle  \n [[StructureDefinition-ror-practitionerrole.html ROR PractitionerRole]]" as SO #LightSeaGreen;line:Black;text:Black
+
+    rectangle "Exercice professionnel \n [[StructureDefinition-ror-practitionerrole.html ROR PractitionerRole]]" as Ex  #LightSeaGreen;line:Black;text:Black
+
+}
+
+'Liens entre éléments
+EJ "1"--"1..*" EG : "      " 
+EG "1..*"-"*" OI : "          "
+EG "0..1"--"*" Offre : "      "
+OI "0..1"--"1..*" Offre
+OI "0..1"-"*" OI
+Offre "1..*"-"1..*" Lieu : "          "
+SO "*"-"1" Offre
+Ex "1"--"1..*" SO
+Professionnel "1"--"1..*" Ex
+
+@enduml
+
+

@@ -6,3 +6,10 @@ Description: "Extension créée dans le cadre du ROR pour décrire le planning d
 * ^context[+].type = #element
 * ^context[=].expression = "PractitionerRole.availableTime"
 * value[x] only Period
+
+Mapping:  ConceptMetier_RORAvailableTimeEffectiveOpeningClosingDate
+Source:   RORAvailableTimeEffectiveOpeningClosingDate
+Id:       specmetier-to-RORAvailableTimeEffectiveOpeningClosingDate
+Title:    "Spécification métier vers l'extension ROR AvailableTimeEffectiveOpeningClosingDate"
+* valuePeriod.start -> "debutDateEffective"
+* valuePeriod.end -> "finDateEffective"

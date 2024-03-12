@@ -183,3 +183,53 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * extension[ror-healthcareservice-patient-type] ^short = "publicPrisEnCharge (Patientele) : Ensemble de personnes qui présentent des caractéristiques psychologiques, intellectuelles, physiques, psycho-motrices, comportementales leur permettant de bénéficier de la prestation décrite"
 * extension[ror-healthcareservice-contact] ^short = "contact (OffreOperationnelle) : Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+
+Mapping:  ConceptMetier_RORHealthcareService
+Source:   RORHealthcareService
+Id:       specmetier-to-RORHealthcareService
+Title:    "HealthcareService du Modèle exposition ROR V3"
+* -> "OffreOperationnelle"
+
+* providedBy -> "EntiteGeographique"
+* providedBy -> "OrganisationInterne"
+* location -> "LieuRealisationoffre"
+
+* id -> "metadonnee.identifiant"
+* comment -> "metadonnee.commentaire"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+
+* identifier -> "identifiantOffre"
+* name -> "nomOffre"
+* category -> "typeOffre"
+* type -> "champActivite"
+* active -> "Pas d'équivalent"
+
+* characteristic[receptionType] -> "temporaliteAccueil"
+* characteristic[careMode] -> "modePriseEnCharge"
+* characteristic[receptionModality] -> "modaliteAccueil"
+* characteristic[managementType] -> "modeGestion"
+* characteristic[specificAct] -> "acteSpecifique"
+* characteristic[outsideOfficeAct] -> "acteRealiseHorsCabinet"
+* characteristic[takingCareSpeciality] -> "specialisationPriseEnCharge"
+* characteristic[annualOpening] -> "ouvertureAnnuelle"
+* characteristic[ressourceProfession] -> "professionRessource"
+* characteristic[specificCompetence] -> "competenceSpecifique"
+* characteristic[expertiseLevel] -> "niveauExpertise"
+* characteristic[temporalityStopService] -> "typeFermeture"
+
+* specialty[operationalActivity] -> "ActiviteOperationnelle.activiteOperationnelle"
+* specialty[operationalActivityFamily] -> "ActiviteOperationnelle.familleActiviteOperationnelle"
+
+* notAvailable[closingReopeningDate].during.start -> "dateFermeture"
+* notAvailable[closingReopeningDate].during.end -> "datePrevisionnelleReouverture"
+
+* availableTime -> "horaire"
+* availableTime.availableStartTime -> "heureDebut"
+* availableTime.availableEndTime -> "heureFin"
+
+* telecom -> "boiteLettreMSS.adresseMSS"
+* telecom.value -> "adresseTelecom"
+
+* extension[ror-territorial-division] -> "zoneIntervention"
