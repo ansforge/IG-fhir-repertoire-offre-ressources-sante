@@ -26,7 +26,7 @@
   <version value="0.3.0"/>
   <name value="RORPractitionerRoleName"/>
   <status value="active"/>
-  <date value="2024-03-12T16:09:00+00:00"/>
+  <date value="2024-03-12T16:11:04+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -48,6 +48,10 @@
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="specmetier-to-RORPractitionerRoleName"/>
+    <name value="Spécification métier vers l'extension ROR RORPractitionerRoleName"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -348,6 +352,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRoleName"/>
+        <map value="civiliteExercice"/>
+      </mapping>
     </element>
     <element id="Extension.extension:exerciseLastName">
       <path value="Extension.extension"/>
@@ -501,6 +509,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRoleName"/>
+        <map value="nomExercice"/>
+      </mapping>
     </element>
     <element id="Extension.extension:exerciseFirstName">
       <path value="Extension.extension"/>
@@ -653,6 +665,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRoleName"/>
+        <map value="prenomExercice"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -906,6 +922,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J208-CiviliteExercice-ROR/FHIR/JDV-J208-CiviliteExercice-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRoleName"/>
+        <map value="civiliteExercice"/>
+      </mapping>
     </element>
     <element id="Extension.extension:exerciseLastName">
       <path value="Extension.extension"/>
@@ -926,6 +946,10 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRoleName"/>
+        <map value="nomExercice"/>
+      </mapping>
     </element>
     <element id="Extension.extension:exerciseFirstName">
       <path value="Extension.extension"/>
@@ -946,6 +970,10 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRoleName"/>
+        <map value="prenomExercice"/>
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

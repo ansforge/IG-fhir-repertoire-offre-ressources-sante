@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "a1af2e8f-d11f-42e2-bca8-df14778f627d-155",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/a1af2e8f-d11f-42e2-bca8-df14778f627d-155",
+  "id" : "89c49c12-42ed-417f-b06d-3726c0435b2c-155",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/89c49c12-42ed-417f-b06d-3726c0435b2c-155",
   "name" : "UnionRORPractitionerAndRORPractitioner",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-03-12T16:09:19+00:00",
+  "date" : "2024-03-12T16:11:24+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -101,6 +101,10 @@
       {
         "identity" : "servd",
         "map" : "Provider"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitioner",
+        "map" : "Professionnel"
       }]
     },
     {
@@ -119,7 +123,11 @@
       }],
       "mustSupport" : false,
       "isModifier" : false,
-      "isSummary" : true
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitioner",
+        "map" : "metadonnee.identifiant"
+      }]
     },
     {
       "path" : "Practitioner.meta",
@@ -151,6 +159,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitioner",
+        "map" : "metadonnee"
       }]
     },
     {
@@ -277,6 +289,10 @@
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitioner",
+        "map" : "dateMiseJour"
       }]
     },
     {
@@ -696,6 +712,10 @@
       {
         "identity" : "servd",
         "map" : "./Identifiers"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitioner",
+        "map" : "idNat_PS"
       }]
     },
     {
@@ -1446,6 +1466,10 @@
       {
         "identity" : "servd",
         "map" : "./TitleCode"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitioner",
+        "map" : "PersonnePhysique.civilite"
       }]
     },
     {
@@ -1609,6 +1633,10 @@
       {
         "identity" : "servd",
         "map" : "./ContactPoints"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitioner",
+        "map" : "boiteLettreMSS.adresseMSS"
       }]
     },
     {
@@ -1754,6 +1782,10 @@
       {
         "identity" : "servd",
         "map" : "./Value"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitioner",
+        "map" : "adresseTelecom"
       }]
     },
     {

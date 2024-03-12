@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 17, warn = 74, info = 43
+err = 19, warn = 74, info = 43
 IG Publisher Version: 1.6.1
-Generated Tue Mar 12 16:12:37 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.3.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Tue Mar 12 16:14:48 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.3.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 11 / 4 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 7 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 7 / 0 / 1
@@ -94,7 +94,7 @@ Generated Tue Mar 12 16:12:37 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-organization-price : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-organization-reopening-date : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitioner : 0 / 1 / 5
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitionerrole : 0 / 1 / 4
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitionerrole : 2 / 1 / 4
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitionerrole-unit-exercise-mode : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-task : 0 / 1 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-telecom-communication-channel : 0 / 1 / 1
@@ -319,9 +319,11 @@ INFORMATION: StructureDefinition/ror-practitioner: StructureDefinition.snapshot.
 INFORMATION: StructureDefinition/ror-practitioner: StructureDefinition.snapshot.element[60].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-ror-practitionerrole.json ==
-INFORMATION: StructureDefinition/ror-practitionerrole: StructureDefinition.snapshot.element[31].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/ror-practitionerrole: StructureDefinition.snapshot.element[58].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/ror-practitionerrole: StructureDefinition.snapshot.element[75].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+ERROR: StructureDefinition/ror-practitionerrole: StructureDefinition.snapshot.element[18].mapping[0]: ElementDefinition.mapping.map: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+INFORMATION: StructureDefinition/ror-practitionerrole: StructureDefinition.snapshot.element[39].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/ror-practitionerrole: StructureDefinition.snapshot.element[66].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/ror-practitionerrole: StructureDefinition.snapshot.element[83].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+ERROR: StructureDefinition/ror-practitionerrole: StructureDefinition.differential.element[8].mapping[0]: ElementDefinition.mapping.map: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-ror-practitionerrole-unit-exercise-mode.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode'): The Implementation Guide contains no examples for this extension

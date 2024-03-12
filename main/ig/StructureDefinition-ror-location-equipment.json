@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "RORLocationEquipment",
   "status" : "active",
-  "date" : "2024-03-12T16:09:00+00:00",
+  "date" : "2024-03-12T16:11:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,6 +31,10 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "specmetier-to-RORLocationEquipment",
+    "name" : "Spécification métier vers l'extension ROR LocationEquipment"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -70,6 +74,10 @@
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocationEquipment",
+        "map" : "EquipementSpecifique"
       }]
     },
     {
@@ -300,6 +308,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORLocationEquipment",
+        "map" : "typeEquipement"
       }]
     },
     {
@@ -460,6 +472,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORLocationEquipment",
+        "map" : "nbEquipementEnService"
       }]
     },
     {
@@ -495,6 +511,10 @@
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocationEquipmentLimit",
+        "map" : "LimiteCaracteristiqueEquipement"
       }]
     },
     {
@@ -709,7 +729,11 @@
     "element" : [{
       "id" : "Extension",
       "path" : "Extension",
-      "definition" : "Extension créée dans le cadre du ROR pour décrire une ressource matérielle discriminante pour la réalisation d'une prestation. Cette extension a été créée, car Device ne correspondait pas à la définition de l'équipement pour le ROR.\n Device représente une instance d'un équipement alors l'équipement pour le ROR correspond juste au nombre d'équipement de même type."
+      "definition" : "Extension créée dans le cadre du ROR pour décrire une ressource matérielle discriminante pour la réalisation d'une prestation. Cette extension a été créée, car Device ne correspondait pas à la définition de l'équipement pour le ROR.\n Device représente une instance d'un équipement alors l'équipement pour le ROR correspond juste au nombre d'équipement de même type.",
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocationEquipment",
+        "map" : "EquipementSpecifique"
+      }]
     },
     {
       "id" : "Extension.extension",
@@ -742,7 +766,11 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J18-EquipementSpecifique-ROR/FHIR/JDV-J18-EquipementSpecifique-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocationEquipment",
+        "map" : "typeEquipement"
+      }]
     },
     {
       "id" : "Extension.extension:nbInService",
@@ -766,6 +794,10 @@
       "path" : "Extension.extension.value[x]",
       "type" : [{
         "code" : "integer"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocationEquipment",
+        "map" : "nbEquipementEnService"
       }]
     },
     {

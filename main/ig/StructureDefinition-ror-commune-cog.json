@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "RORCommuneCog",
   "status" : "active",
-  "date" : "2024-03-12T16:09:00+00:00",
+  "date" : "2024-03-12T16:11:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,6 +31,10 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "specmetier-to-RORCommuneCog",
+    "name" : "Spécification métier vers l'extension ROR CommuneCog"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -200,6 +204,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORCommuneCog",
+        "map" : "communeCog"
       }]
     }]
   },
@@ -228,7 +236,11 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORCommuneCog",
+        "map" : "communeCog"
+      }]
     }]
   }
 }

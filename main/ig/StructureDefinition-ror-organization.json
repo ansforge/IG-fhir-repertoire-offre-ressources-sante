@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "ROROrganization",
   "status" : "active",
-  "date" : "2024-03-12T16:09:00+00:00",
+  "date" : "2024-03-12T16:11:04+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -930,7 +930,11 @@
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganizationPrice",
+        "map" : "Tarif"
+      }]
     },
     {
       "id" : "Organization.extension:ror-territorial-division",
@@ -966,7 +970,11 @@
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORTerritorialDivisio",
+        "map" : "DivisionTerritoriale"
+      }]
     },
     {
       "id" : "Organization.extension:ror-organization-financial-help-type",

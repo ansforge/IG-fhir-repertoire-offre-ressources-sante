@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "a1af2e8f-d11f-42e2-bca8-df14778f627d-74",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/a1af2e8f-d11f-42e2-bca8-df14778f627d-74",
+  "id" : "89c49c12-42ed-417f-b06d-3726c0435b2c-74",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/89c49c12-42ed-417f-b06d-3726c0435b2c-74",
   "name" : "UnionRORHealthcareServiceAndRORHealthcareService",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-03-12T16:09:19+00:00",
+  "date" : "2024-03-12T16:11:24+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -93,6 +93,10 @@
       {
         "identity" : "rim",
         "map" : "act[classCode=ACT][moodCode=DEF]"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "OffreOperationnelle"
       }]
     },
     {
@@ -111,7 +115,11 @@
       }],
       "mustSupport" : false,
       "isModifier" : false,
-      "isSummary" : true
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "metadonnee.identifiant"
+      }]
     },
     {
       "path" : "HealthcareService.meta",
@@ -143,6 +151,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "metadonnee"
       }]
     },
     {
@@ -269,6 +281,10 @@
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "dateMiseJour"
       }]
     },
     {
@@ -679,6 +695,10 @@
       {
         "identity" : "rim",
         "map" : ".id"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "identifiantOffre"
       }]
     },
     {
@@ -717,6 +737,10 @@
       {
         "identity" : "rim",
         "map" : ".statusCode"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "Pas d'équivalent"
       }]
     },
     {
@@ -766,6 +790,14 @@
       {
         "identity" : "rim",
         "map" : ".scopingRole.Organization"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "EntiteGeographique"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "OrganisationInterne"
       }]
     },
     {
@@ -820,6 +852,10 @@
       {
         "identity" : "rim",
         "map" : ".code"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "typeOffre"
       }]
     },
     {
@@ -870,6 +906,10 @@
       {
         "identity" : "rim",
         "map" : ".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "champActivite"
       }]
     },
     {
@@ -973,6 +1013,10 @@
       {
         "identity" : "rim",
         "map" : ".location.role[classCode=SDLOC]"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "LieuRealisationoffre"
       }]
     },
     {
@@ -1006,6 +1050,10 @@
       {
         "identity" : "rim",
         "map" : ".name"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "nomOffre"
       }]
     },
     {
@@ -1039,6 +1087,10 @@
       {
         "identity" : "rim",
         "map" : ".location.role[classCode=SDLOC].desc"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "metadonnee.commentaire"
       }]
     },
     {
@@ -1180,6 +1232,10 @@
       {
         "identity" : "rim",
         "map" : ".telecom"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "boiteLettreMSS.adresseMSS"
       }]
     },
     {
@@ -1325,6 +1381,10 @@
       {
         "identity" : "servd",
         "map" : "./Value"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "adresseTelecom"
       }]
     },
     {
@@ -2214,6 +2274,10 @@
       {
         "identity" : "rim",
         "map" : ".effectiveTime"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "horaire"
       }]
     },
     {
@@ -2433,6 +2497,10 @@
       {
         "identity" : "rim",
         "map" : ".effectiveTime"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "heureDebut"
       }]
     },
     {
@@ -2466,6 +2534,10 @@
       {
         "identity" : "rim",
         "map" : ".effectiveTime"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareService",
+        "map" : "heureFin"
       }]
     },
     {

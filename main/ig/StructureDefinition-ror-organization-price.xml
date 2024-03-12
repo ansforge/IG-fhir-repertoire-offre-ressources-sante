@@ -77,7 +77,7 @@
   <version value="0.3.0"/>
   <name value="ROROrganizationPrice"/>
   <status value="active"/>
-  <date value="2024-03-12T16:09:00+00:00"/>
+  <date value="2024-03-12T16:11:04+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -99,6 +99,10 @@
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="specmetier-to-ROROrganizationPrice"/>
+    <name value="Spécification métier vers l'extension ROR OrganizationPrice"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -138,6 +142,10 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="Tarif"/>
+      </mapping>
     </element>
     <element id="Extension.id">
       <path value="Extension.id"/>
@@ -358,6 +366,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="typeTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:priceUnit">
       <path value="Extension.extension"/>
@@ -515,6 +527,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="unitePrix"/>
+      </mapping>
     </element>
     <element id="Extension.extension:amount">
       <path value="Extension.extension"/>
@@ -667,6 +683,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="montantTarif"/>
       </mapping>
     </element>
     <element id="Extension.extension:startDate">
@@ -821,6 +841,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="dateDebutValiditeTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:under60">
       <path value="Extension.extension"/>
@@ -973,6 +997,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.tarifMoins60Ans"/>
       </mapping>
     </element>
     <element id="Extension.extension:deliveryIncluded">
@@ -1131,6 +1159,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
+      </mapping>
     </element>
     <element id="Extension.extension:othersDeliveryIncluded">
       <path value="Extension.extension"/>
@@ -1283,6 +1315,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
       </mapping>
     </element>
     <element id="Extension.extension:residentialType">
@@ -1441,6 +1477,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.extension:specialPrice">
       <path value="Extension.extension"/>
@@ -1597,6 +1637,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"/>
       </mapping>
     </element>
     <element id="Extension.extension:welcomeType">
@@ -1755,6 +1799,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"/>
+      </mapping>
     </element>
     <element id="Extension.extension:mealDeliveryName">
       <path value="Extension.extension"/>
@@ -1907,6 +1955,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPortageRepas.nomTarifPortageRepas"/>
       </mapping>
     </element>
     <element id="Extension.extension:dependencyLevel">
@@ -2065,6 +2117,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifDependance.groupeTarifaireDependance"/>
+      </mapping>
     </element>
     <element id="Extension.extension:humanHelpPriceName">
       <path value="Extension.extension"/>
@@ -2217,6 +2273,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAidesHumaines.nomTarifAidesHumaines"/>
       </mapping>
     </element>
     <element id="Extension.extension:managementType">
@@ -2375,6 +2435,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAidesHumaines.modeGestion"/>
+      </mapping>
     </element>
     <element id="Extension.extension:otherAdditionalServiceName">
       <path value="Extension.extension"/>
@@ -2527,6 +2591,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPrestationSupplementaire.nomAutrePrestationSupp"/>
       </mapping>
     </element>
     <element id="Extension.extension:additionalServiceName">
@@ -2684,6 +2752,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPrestationSupplementaire.nomPrestationSupp"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -2895,6 +2967,10 @@
     <element id="Extension">
       <path value="Extension"/>
       <definition value="Extension créée dans le cadre du ROR pour permettre de définir les tarifs des prestations et services d'une entité géographique."/>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="Tarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -2923,6 +2999,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J36-TypeTarif-ROR/FHIR/JDV-J36-TypeTarif-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="typeTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:priceUnit">
       <path value="Extension.extension"/>
@@ -2947,6 +3027,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J205-UnitePrix-ROR/FHIR/JDV-J205-UnitePrix-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="unitePrix"/>
+      </mapping>
     </element>
     <element id="Extension.extension:amount">
       <path value="Extension.extension"/>
@@ -2967,6 +3051,10 @@
       <type>
         <code value="Money"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="montantTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:startDate">
       <path value="Extension.extension"/>
@@ -2987,6 +3075,10 @@
       <type>
         <code value="dateTime"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="dateDebutValiditeTarif"/>
+      </mapping>
     </element>
     <element id="Extension.extension:under60">
       <path value="Extension.extension"/>
@@ -3007,6 +3099,10 @@
       <type>
         <code value="boolean"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.tarifMoins60Ans"/>
+      </mapping>
     </element>
     <element id="Extension.extension:deliveryIncluded">
       <path value="Extension.extension"/>
@@ -3031,6 +3127,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
+      </mapping>
     </element>
     <element id="Extension.extension:othersDeliveryIncluded">
       <path value="Extension.extension"/>
@@ -3051,6 +3151,10 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"/>
+      </mapping>
     </element>
     <element id="Extension.extension:residentialType">
       <path value="Extension.extension"/>
@@ -3075,6 +3179,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.extension:specialPrice">
       <path value="Extension.extension"/>
@@ -3099,6 +3207,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J39-ConditionTarifaire-ROR/FHIR/JDV-J39-ConditionTarifaire-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"/>
+      </mapping>
     </element>
     <element id="Extension.extension:welcomeType">
       <path value="Extension.extension"/>
@@ -3123,6 +3235,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"/>
+      </mapping>
     </element>
     <element id="Extension.extension:mealDeliveryName">
       <path value="Extension.extension"/>
@@ -3143,6 +3259,10 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPortageRepas.nomTarifPortageRepas"/>
+      </mapping>
     </element>
     <element id="Extension.extension:dependencyLevel">
       <path value="Extension.extension"/>
@@ -3167,6 +3287,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J27-GroupeTarifaireDependance-ROR/FHIR/JDV-J27-GroupeTarifaireDependance-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifDependance.groupeTarifaireDependance"/>
+      </mapping>
     </element>
     <element id="Extension.extension:humanHelpPriceName">
       <path value="Extension.extension"/>
@@ -3187,6 +3311,10 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAidesHumaines.nomTarifAidesHumaines"/>
+      </mapping>
     </element>
     <element id="Extension.extension:managementType">
       <path value="Extension.extension"/>
@@ -3211,6 +3339,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J26-ModeGestion-ROR/FHIR/JDV-J26-ModeGestion-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifAidesHumaines.modeGestion"/>
+      </mapping>
     </element>
     <element id="Extension.extension:otherAdditionalServiceName">
       <path value="Extension.extension"/>
@@ -3231,6 +3363,10 @@
       <type>
         <code value="string"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPrestationSupplementaire.nomAutrePrestationSupp"/>
+      </mapping>
     </element>
     <element id="Extension.extension:additionalServiceName">
       <path value="Extension.extension"/>
@@ -3255,6 +3391,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J206-PrestationNonObligatoireIncluse-ROR/FHIR/JDV-J206-PrestationNonObligatoireIncluse-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-ROROrganizationPrice"/>
+        <map value="TarifPrestationSupplementaire.nomPrestationSupp"/>
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

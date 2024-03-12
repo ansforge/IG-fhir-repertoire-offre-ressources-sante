@@ -57,7 +57,7 @@
   <version value="0.3.0"/>
   <name value="RORLocationSupportedCapacity"/>
   <status value="active"/>
-  <date value="2024-03-12T16:09:00+00:00"/>
+  <date value="2024-03-12T16:11:04+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -79,6 +79,10 @@
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+    <name value="Spécification métier vers l'extension ROR LocationSupportedCapacity"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -118,6 +122,10 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapacitePriseCharge + CapaciteAccueilOperationnelle"/>
+      </mapping>
     </element>
     <element id="Extension.id">
       <path value="Extension.id"/>
@@ -338,6 +346,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.natureCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:capacityStatus">
       <path value="Extension.extension"/>
@@ -494,6 +506,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.statutCapacite"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporalityCapacity">
@@ -652,6 +668,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.temporaliteCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:nbCapacity">
       <path value="Extension.extension"/>
@@ -804,6 +824,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.nombreCapacite"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacitySourceType">
@@ -962,6 +986,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.typeSourceCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:genderCapacityAvailable">
       <path value="Extension.extension"/>
@@ -1119,6 +1147,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.genreCapaciteDispo"/>
+      </mapping>
     </element>
     <element id="Extension.extension:capacityUpdateDate">
       <path value="Extension.extension"/>
@@ -1271,6 +1303,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.dateMAJCapacite"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityClosingType">
@@ -1429,6 +1465,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.typeFermetureCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:additionalBedType">
       <path value="Extension.extension"/>
@@ -1585,6 +1625,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.typeLitsSupplementaire"/>
       </mapping>
     </element>
     <element id="Extension.extension:crisisType">
@@ -1743,6 +1787,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.typeCrise"/>
+      </mapping>
     </element>
     <element id="Extension.extension:temporaryAssignement">
       <path value="Extension.extension"/>
@@ -1899,6 +1947,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapacitePriseCharge.affectationTemporaire"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -2110,6 +2162,10 @@
     <element id="Extension">
       <path value="Extension"/>
       <definition value="Extension créée dans le cadre du ROR qui indique une série d’enregistrements indiquant la quantité de lit (ou de place) de l'entité pour un statut et une temporalité donnés."/>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapacitePriseCharge + CapaciteAccueilOperationnelle"/>
+      </mapping>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -2138,6 +2194,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.natureCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:capacityStatus">
       <path value="Extension.extension"/>
@@ -2162,6 +2222,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.statutCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:temporalityCapacity">
       <path value="Extension.extension"/>
@@ -2186,6 +2250,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.temporaliteCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:nbCapacity">
       <path value="Extension.extension"/>
@@ -2206,6 +2274,10 @@
       <type>
         <code value="integer"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.nombreCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:capacitySourceType">
       <path value="Extension.extension"/>
@@ -2230,6 +2302,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.typeSourceCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:genderCapacityAvailable">
       <path value="Extension.extension"/>
@@ -2254,6 +2330,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.genreCapaciteDispo"/>
+      </mapping>
     </element>
     <element id="Extension.extension:capacityUpdateDate">
       <path value="Extension.extension"/>
@@ -2274,6 +2354,10 @@
       <type>
         <code value="dateTime"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.dateMAJCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:capacityClosingType">
       <path value="Extension.extension"/>
@@ -2298,6 +2382,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J191-TypeFermetureCapacite-ROR/FHIR/JDV-J191-TypeFermetureCapacite-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.typeFermetureCapacite"/>
+      </mapping>
     </element>
     <element id="Extension.extension:additionalBedType">
       <path value="Extension.extension"/>
@@ -2322,6 +2410,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J192-TypeLitSupplementaire-ROR/FHIR/JDV-J192-TypeLitSupplementaire-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.typeLitsSupplementaire"/>
+      </mapping>
     </element>
     <element id="Extension.extension:crisisType">
       <path value="Extension.extension"/>
@@ -2346,6 +2438,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J194-TypeCrise-ROR/FHIR/JDV-J194-TypeCrise-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapaciteAccueilOperationnelle.typeCrise"/>
+      </mapping>
     </element>
     <element id="Extension.extension:temporaryAssignement">
       <path value="Extension.extension"/>
@@ -2370,6 +2466,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+        <map value="CapacitePriseCharge.affectationTemporaire"/>
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "a1af2e8f-d11f-42e2-bca8-df14778f627d-161",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/a1af2e8f-d11f-42e2-bca8-df14778f627d-161",
+  "id" : "89c49c12-42ed-417f-b06d-3726c0435b2c-161",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/89c49c12-42ed-417f-b06d-3726c0435b2c-161",
   "name" : "UnionRORPractitionerRoleAndRORPractitionerRole",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-03-12T16:09:19+00:00",
+  "date" : "2024-03-12T16:11:24+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -101,6 +101,14 @@
       {
         "identity" : "servd",
         "map" : "ServiceSiteProvider"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "ExerciceProfessionnel"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "SituationOperationnelle"
       }]
     },
     {
@@ -119,7 +127,15 @@
       }],
       "mustSupport" : false,
       "isModifier" : false,
-      "isSummary" : true
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "metadonnee.identifiant"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "metadonnee.identifiant"
+      }]
     },
     {
       "path" : "PractitionerRole.meta",
@@ -151,6 +167,14 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "metadonnee"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "metadonnee"
       }]
     },
     {
@@ -277,6 +301,14 @@
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "dateMiseJour"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "dateMiseJour"
       }]
     },
     {
@@ -696,6 +728,10 @@
       {
         "identity" : "servd",
         "map" : "./Identifiers"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "identifiantSituationOperationnelle"
       }]
     },
     {
@@ -853,6 +889,10 @@
       {
         "identity" : "rim",
         "map" : ".player"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "Professionnel"
       }]
     },
     {
@@ -960,6 +1000,10 @@
       {
         "identity" : "servd",
         "map" : "(ServD maps Practitioners and Organizations via another entity, so this concept is not available)"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "profession"
       }]
     },
     {
@@ -1128,6 +1172,10 @@
       {
         "identity" : "rim",
         "map" : ".player.QualifiedEntity[@classCode = 'QUAL'].code"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "OffreOperationnelle"
       }]
     },
     {
@@ -1184,6 +1232,10 @@
       {
         "identity" : "rim",
         "map" : ".telecom"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "telecommunication"
       }]
     },
     {
@@ -1329,6 +1381,10 @@
       {
         "identity" : "servd",
         "map" : "./Value"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "adresseTelecom"
       }]
     },
     {
@@ -1502,6 +1558,10 @@
       {
         "identity" : "rim",
         "map" : ".effectiveTime"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "horaire"
       }]
     },
     {
@@ -1721,6 +1781,10 @@
       {
         "identity" : "rim",
         "map" : ".effectiveTime"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "heureDebut"
       }]
     },
     {
@@ -1754,6 +1818,10 @@
       {
         "identity" : "rim",
         "map" : ".effectiveTime"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "heureFin"
       }]
     },
     {
