@@ -161,7 +161,7 @@ réactivation de code).
 
 La liste ci-dessous expose la liste des profils génériques profilés.
 
-{% sql SELECT '[' || Name ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description, json_extract(Json, '$.baseDefinition') as "Parent" FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%"%}
+{% sql SELECT '[' || Name ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%"%}
 
 <div class="figure" style="width:100%;">
     <p>{% include vue-fonctionnelle-fhir.svg %}</p>
