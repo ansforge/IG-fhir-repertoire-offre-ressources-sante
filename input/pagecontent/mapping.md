@@ -1,3 +1,5 @@
+<code><span style="color: #ff0000;">draft</span></code>
+
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 A noter que Task, Measure et MeasureReport ne font pas partie du mapping, car cela ne fait pas partie du modèle d'exposition du ROR
 </p>
