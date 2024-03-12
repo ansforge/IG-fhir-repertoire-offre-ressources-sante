@@ -6,9 +6,3 @@ Description: "Extension créée dans le cadre du ROR pour indiquer le numéro du
 * ^context[+].type = #extension
 * ^context[=].expression = "PractitionerRole.availableTime"
 * value[x] only integer
-
-Mapping:  ConceptMetier_RORAvailableTimeNumberDaysofWeek
-Source:   RORAvailableTimeNumberDaysofWeek
-Id:       specmetier-to-RORAvailableTimeNumberDaysofWeek
-Title:    "Spécification métier vers l'extension ROR AvailableTimeNumberDaysofWeek"
-* valueInteger -> "jourSemaine"

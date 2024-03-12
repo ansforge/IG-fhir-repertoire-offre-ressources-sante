@@ -5,8 +5,3 @@ Description: "Extension créée dans le cadre du ROR pour décrire le commentair
 * ^context.expression = "Organization"
 * value[x] only string
 
-Mapping:  ConceptMetier_ROROrganizationComment
-Source:   ROROrganizationComment
-Id:       specmetier-to-ROROrganizationComment
-Title:    "Spécification métier vers l'extension ROR Comment"
-* valueString -> "commentaire"

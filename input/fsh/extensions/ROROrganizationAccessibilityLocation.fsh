@@ -5,9 +5,3 @@ Description: "Extension créée dans le cadre du ROR qui précise dans quelle me
 * ^context.expression = "Organization"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J50-AccessibiliteLieu-ROR (required)
-
-Mapping:  ConceptMetier_ROROrganizationAccessibilityLocation
-Source:   ROROrganizationAccessibilityLocation
-Id:       specmetier-to-ROROrganizationAccessibilityLocation
-Title:    "Spécification métier vers l'extension ROR AccessibilityLocation"
-* valueCodeableConcept -> "accessibiliteLieu"

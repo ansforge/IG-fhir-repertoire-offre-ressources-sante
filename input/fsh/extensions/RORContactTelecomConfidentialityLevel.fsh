@@ -5,9 +5,3 @@ Description: "Extension créée dans le cadre du ROR"
 * ^context.expression = "Organization.contact.telecom"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J222-NiveauConfidentialite-ROR (required)
-
-Mapping:  ConceptMetier_RORContactTelecomConfidentialityLevel
-Source:   RORContactTelecomConfidentialityLevel
-Id:       specmetier-to-RORContactTelecomConfidentialityLevel
-Title:    "Spécification métier vers l'extension ROR ContactTelecomConfidentialityLevel"
-* valueCodeableConcept -> "niveauConfidentialite"

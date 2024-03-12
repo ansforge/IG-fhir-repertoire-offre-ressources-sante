@@ -4,9 +4,3 @@ Description: "Extension créée dans le cadre du ROR qui correspond à une aire 
 * ^context.type = #element
 * ^context.expression = "HealthcareService"
 * value[x] only string
-
-Mapping:  ConceptMetier_RORHealthcareServicePsychiatricSector
-Source:   RORHealthcareServicePsychiatricSector
-Id:       specmetier-to-RORHealthcareServicePsychiatricSector
-Title:    "Spécification métier vers l'extension ROR HealthcareServicePsychiatricSector"
-* valueString -> "utilisation"
