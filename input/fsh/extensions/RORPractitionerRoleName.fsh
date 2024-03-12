@@ -19,7 +19,6 @@ Mapping:  ConceptMetier_RORPractitionerRoleName
 Source:   RORPractitionerRoleName
 Id:       specmetier-to-RORPractitionerRoleName
 Title:    "Spécification métier vers l'extension ROR RORPractitionerRoleName"
-* -> "ExerciceProfessionnel"
-* extension[exerciseLastName] -> "nomExercice"
-* extension[exerciseFirstName] -> "prenomExercice"
-* extension[exerciseTitle] -> "civiliteExercice : JDV-J208-CiviliteExercice-ROR"
+* extension[exerciseLastName].valueString -> "nomExercice"
+* extension[exerciseFirstName].valueString -> "prenomExercice"
+* extension[exerciseTitle].valueCodeableConcept -> "civiliteExercice"

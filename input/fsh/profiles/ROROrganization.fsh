@@ -210,7 +210,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
-
 /*
 Mapping:  ConceptMetier_ROROrganization_EJ
 Source:   ROROrganization
@@ -221,9 +220,7 @@ Title:    "EntiteJuridique du Modèle exposition ROR V3"
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource : JDV-J237-RegionOM-ROR"
-* extension[ror-meta-comment] -> "metadonnee.commentaire"
-* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
+* meta.tag[codeRegion] -> "regionSource"
 
 * identifier[idNatSt] -> "idNatstruct"
 * identifier[finess] -> "numFINESS"
@@ -234,37 +231,30 @@ Title:    "EntiteJuridique du Modèle exposition ROR V3"
 * name -> "raisonSociale"
 * name.extension[ror-organization-additional-name] -> "complementRaisonSociale"
 
-* type[statutJuridiqueINSEE] -> "statutJuridique : JDV-J199-StatutJuridique-ROR"
-* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique : JDV-J200-SousEnsembleAgregatStatutJuridique-ROR"
+* type[statutJuridiqueINSEE] -> "statutJuridique"
+* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique"
 
-* contact -> contact
-* contact.name -> nom
-* contact.purpose -> natureContact : JDV-J221-NatureContact-ROR
-* contact.extension[ror-contact-function-contact] -> fonctionContact : JDV-J220-FonctionContact-ROR
-* contact.extension[ror-contact-description] -> description
-* contact.extension[ror-contact-confidentiality-level] -> niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR
-* contact.telecom -> telecommunication
+* contact -> "contact"
+* contact.name -> "nom"
+* contact.purpose -> "natureContact"
+* contact.telecom -> "telecommunication"
 * contact.telecom.value -> "adresseTelecom"
-* contact.telecom.extension[ror-telecom-communication-channel] -> "canal : JDV-J225-CanalCommunication-ROR"
-* contact.telecom.extension[ror-telecom-usage] -> "utilisation"
-* contact.telecom.extension[ror-telecom-confidentiality-level] -> "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 
 * address -> "adresseEJ"
 * address.city -> "localite"
 * address.postalCode -> "codePostal"
-* address.line.extension[careOf] -> "pointRemise"
-* address.line.extension[additionalLocator] -> "complementPointGeographique"
-* address.line.extension[houseNumber] -> "numeroVoie"
-* address.line.extension[buildingNumberSuffix] -> "extension"
-* address.line.extension[streetNameType] -> "typeVoie : JDV-J219-TypeVoie-ROR"
-* address.line.extension[streetNameBase] -> "libelleVoie"
-* address.line.extension[precinct] -> "lieuDit"
-* address.line.extension[postalBox] -> "mentionDistribution"
+* address.line.extension[careOf].valueString -> "pointRemise"
+* address.line.extension[additionalLocator].valueString -> "complementPointGeographique"
+* address.line.extension[houseNumber].valueString -> "numeroVoie"
+* address.line.extension[buildingNumberSuffix].valueString -> "extension"
+* address.line.extension[streetNameType].valueString -> "typeVoie"
+* address.line.extension[streetNameBase].valueString -> "libelleVoie"
+* address.line.extension[precinct].valueString -> "lieuDit"
+* address.line.extension[postalBox].valueString -> "mentionDistribution"
 
-* extension[ror-organization-closing-type] -> "typeFermeture : JDV-J201-TypeFermeture-ROR"
 * extension[ror-organization-creation-date] -> "dateCreation"
 
-* extension[organization-period].value[x].end -> "dateFermeture"
+* extension[organization-period].valuePeriod.end -> "dateFermeture"
 
 Mapping:  ConceptMetier_ROROrganization_EG
 Source:   ROROrganization
@@ -275,9 +265,7 @@ Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource : JDV-J237-RegionOM-ROR"
-* extension[ror-meta-comment] -> "metadonnee.commentaire"
-* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
+* meta.tag[codeRegion] -> "regionSource"
 
 * identifier[idNatSt] -> "idNatstruct"
 * identifier[finess] -> "numFINESS"
@@ -290,55 +278,28 @@ Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * name -> "denominationEG"
 * name.extension[ror-organization-additional-name] -> "complementDenominationEG"
 
-* type[categorieEtablissement] -> "categorieEG : JDV-J55-CategorieEG-ROR"
-* type[sphParticipation] -> "modaliteParticipationSPH : JDV-J202-ESPIC-ROR"
+* type[categorieEtablissement] -> "categorieEG"
+* type[sphParticipation] -> "modaliteParticipationSPH"
 
 * contact -> "contact"
 * contact.name -> "nom"
-* contact.purpose -> "natureContact : JDV-J221-NatureContact-ROR"
-* contact.extension[ror-contact-function-contact] -> "fonctionContact : JDV-J220-FonctionContact-ROR"
-* contact.extension[ror-contact-description] -> "description"
-* contact.extension[ror-contact-confidentiality-level] -> "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
+* contact.purpose -> "natureContact"
 * contact.telecom -> "telecommunication"
 * contact.telecom.value -> "adresseTelecom"
-* contact.telecom.extension[ror-telecom-communication-channel] -> "canal : JDV-J225-CanalCommunication-ROR"
-* contact.telecom.extension[ror-telecom-usage] -> "utilisation"
-* contact.telecom.extension[ror-telecom-confidentiality-level] -> "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 
-* extension[ror-organization-financial-help-type] -> "aideFinanciere : JDV-J31-AideFinanciere-ROR"
+* extension[ror-organization-financial-help-type] -> "aideFinanciere"
 * extension[ror-organization-accomodation-family] -> "hebergementFamille"
 * extension[ror-organization-nb-permanent-social-help-place] -> "nbPlaceAideSocialPermanent"
 * extension[ror-organization-nb-temporary-social-help-place] -> "nbPlaceAideSocialTemporaire"
-* extension[ror-organization-accessibility-location] -> "accessibiliteLieu : JDV-J50-AccessibiliteLieu-ROR"
-* extension[ror-organization-level-recourse-orsan] -> "niveauRecoursORSAN : JDV-J204-NiveauRecoursORSAN-ROR"
+* extension[ror-organization-accessibility-location] -> "accessibiliteLieu"
+* extension[ror-organization-level-recourse-orsan] -> "niveauRecoursORSAN"
 * extension[ror-organization-drop-zone] -> "zonePoser"
-* extension[ror-organization-closing-type] -> "typeFermeture : JDV-J201-TypeFermeture-ROR"
 * extension[ror-organization-comment] -> "commentaire"
 
-* extension[organization-period].value[x].start -> "dateOuverture"
-* extension[organization-period].value[x].end -> "dateFermeture"
+* extension[organization-period].valuePeriod.start -> "dateOuverture"
+* extension[organization-period].valuePeriod.end -> "dateFermeture"
 
 * extension[ror-territorial-division] -> "territoireSante"
-* extension[ror-territorial-division].extension[typeTerritorialDivision] -> "type : JDV-J223-TypeDivisionTerritoriale-ROR"
-* extension[ror-territorial-division].extension[codeTerritorialDivision] -> "code : JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR"
-
-* extension[ror-organization-price] -> "Tarif"
-* extension[ror-organization-price].extension[priceType] -> "typeTarif : JDV-J36-TypeTarif-ROR"
-* extension[ror-organization-price].extension[priceUnit] -> "unitePrix : JDV-J205-UnitePrix-ROR"
-* extension[ror-organization-price].extension[amount] -> "montantTarif"
-* extension[ror-organization-price].extension[startDate] -> "dateDebutValiditeTarif"
-* extension[ror-organization-price].extension[under60] -> "ForfaitSocleHebergement.tarifMoins60Ans"
-* extension[ror-organization-price].extension[deliveryIncluded] -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses : JDV-J206-PrestationNonObligatoireIncluse-ROR"
-* extension[ror-organization-price].extension[othersDeliveryIncluded] -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
-* extension[ror-organization-price].extension[residentialType] -> "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation : JDV-J32-TypeHabitation-ROR"
-* extension[ror-organization-price].extension[specialPrice] -> "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire : JDV-J39-ConditionTarifaire-ROR"
-* extension[ror-organization-price].extension[welcomeType] -> "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil : JDV-J30-TemporaliteAccueil-ROR"
-* extension[ror-organization-price].extension[mealDeliveryName] -> "TarifPortageRepas.nomTarifPortageRepas"
-* extension[ror-organization-price].extension[dependencyLevel] -> "TarifDependance.groupeTarifaireDependance : JDV-J27-GroupeTarifaireDependance-ROR"
-* extension[ror-organization-price].extension[humanHelpPriceName] -> "TarifAidesHumaines.nomTarifAidesHumaines"
-* extension[ror-organization-price].extension[managementType] -> "TarifAidesHumaines.modeGestion : JDV-J26-ModeGestion-ROR"
-* extension[ror-organization-price].extension[otherAdditionalServiceName] -> "TarifPrestationSupplementaire.nomAutrePrestationSupp"
-* extension[ror-organization-price].extension[additionalServiceName] -> "TarifPrestationSupplementaire.nomPrestationSupp : JDV-J206-PrestationNonObligatoireIncluse-ROR"
 
 Mapping:  ConceptMetier_ROROrganization_OI
 Source:   ROROrganization
@@ -349,25 +310,19 @@ Title:    "OrganisationInterne du Modèle exposition ROR V3"
 * id -> "metadonnee.identifiant"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource : JDV-J237-RegionOM-ROR"
-* extension[ror-meta-comment] -> "metadonnee.commentaire"
-* extension[ror-meta-creation-date] -> "metadonnee.dateCreation"
+* meta.tag[codeRegion] -> "regionSource"
 
 * identifier[identifierOI] -> "identifiantOI"
 
 * name -> "nomOI"
 
-* type[OIType] -> "typeOI : JDV-J203-TypeOrganisationInterne-ROR"
+* type[OIType] -> "typeOI"
 
 * telecom -> "boiteLettreMSS"
 * telecom.value -> "adresseTelecom"
-* telecom.extension[ror-telecom-communication-channel] -> "canal : JDV-J225-CanalCommunication-ROR"
-* telecom.extension[ror-telecom-usage] -> "utilisation"
-* telecom.extension[ror-telecom-confidentiality-level] -> "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
 
 * extension[ror-organization-reopening-date] -> "datePrevisionnelleReouverture"
-* extension[ror-organization-closing-type] -> "typeFermeture : JDV-J201-TypeFermeture-ROR"
 
-* extension[organization-period].value[x].end -> "dateOuverture"
-* extension[organization-period].value[x].end -> "dateFermeture"
+* extension[organization-period].valuePeriod.end -> "dateOuverture"
+* extension[organization-period].valuePeriod.end -> "dateFermeture"
 */

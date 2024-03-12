@@ -4,3 +4,10 @@ Description: "Extension créée dans le cadre du ROR pour nom complémentaire de
 * ^context[0].type = #element
 * ^context[=].expression = "Organization.name"
 * value[x] only string
+
+Mapping:  ConceptMetier_ROROrganizationAdditionalName
+Source:   ROROrganizationAdditionalName
+Id:       specmetier-to-ROROrganizationAdditionalName
+Title:    "Spécification métier vers l'extension ROR AdditionalName"
+* valueString -> "EG.complementDenominationEG"
+* valueString -> "EJ.complementRaisonSociale"

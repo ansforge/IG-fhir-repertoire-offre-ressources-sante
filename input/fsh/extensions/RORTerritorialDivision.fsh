@@ -23,5 +23,5 @@ Source:   RORTerritorialDivision
 Id:       specmetier-to-RORTerritorialDivisio
 Title:    "Spécification métier vers l'extension ROR territorial division"
 * -> "DivisionTerritoriale"
-* extension[typeTerritorialDivision] -> "type : JDV-J223-TypeDivisionTerritoriale-ROR"
-* extension[codeTerritorialDivision] -> "code : JDV-J124-Commune, JDV-J248-DepartementOM-ROR, JDV-J237-RegionOM-ROR, JDV-J249-TerritoireSante-ROR, JDV-J247-Pays-ROR"
+* extension[typeTerritorialDivision].valueCodeableConcept -> "type"
+* extension[codeTerritorialDivision].valueCodeableConcept -> "code"

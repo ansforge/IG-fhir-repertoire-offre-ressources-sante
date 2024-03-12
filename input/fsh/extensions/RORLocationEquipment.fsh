@@ -20,5 +20,5 @@ Source:   RORLocationEquipment
 Id:       specmetier-to-RORLocationEquipment
 Title:    "Spécification métier vers l'extension ROR LocationEquipment"
 * -> "EquipementSpecifique"
-* extension[equipmentType] -> "typeEquipement : JDV-J18-EquipementSpecifique-ROR"
-* extension[nbInService] -> "nbEquipementEnService"
+* extension[equipmentType].valueCodeableConcept -> "typeEquipement"
+* extension[nbInService].valueInteger -> "nbEquipementEnService"

@@ -19,5 +19,5 @@ Source:   RORLocationEquipmentLimit
 Id:       specmetier-to-RORLocationEquipmentLimit
 Title:    "Spécification métier vers l'extension ROR LocationEquipmentLimit"
 * -> "LimiteCaracteristiqueEquipement"
-* extension[equipmentFeature] -> "typeCaracteristique : JDV-J228-TypeCaracteristiqueEquipement-ROR"
-* extension[limitValue] -> "valeurLimite"
+* extension[equipmentFeature].valueCodeableConcept -> "typeCaracteristique"
+* extension[limitValue].valueQuantity -> "valeurLimite"

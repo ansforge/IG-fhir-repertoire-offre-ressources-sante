@@ -18,8 +18,5 @@ Mapping:  ConceptMetier_RORHealthcareServiceContactTelecom
 Source:   RORHealthcareServiceContactTelecom
 Id:       specmetier-to-RORHealthcareServiceContactTelecom
 Title:    "Spécification métier vers l'extension RORHealthcareServiceContactTelecom"
-* -> "Telecommunication"
-* extension[RORTelecomCommunicationChannel] -> "canal : JDV-J225-CanalCommunication-ROR"
-* extension[RORTelecomUsage] -> "utilisation"
-* extension[RORTelecomConfidentialityLevel] -> "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
-* extension[telecomAddress] -> "adresseTelecom"
+* -> "telecommunication"
+* extension[telecomAddress].valueString -> "adresseTelecom"

@@ -5,3 +5,8 @@ Description: "Extension créée dans le cadre du ROR pour définir la date prév
 * ^context.expression = "Organization"
 * value[x] only date
 
+Mapping:  ConceptMetier_ROROrganizationReopeningDate
+Source:   ROROrganizationReopeningDate
+Id:       specmetier-to-ROROrganizationReopeningDate
+Title:    "Spécification métier vers l'extension ROR ReopeningDate"
+* valueDate -> "datePrevisionnelleReouverture"

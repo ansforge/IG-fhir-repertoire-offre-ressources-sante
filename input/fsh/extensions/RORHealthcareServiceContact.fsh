@@ -23,14 +23,7 @@ Mapping:  ConceptMetier_RORHealthcareServiceContact
 Source:   RORHealthcareServiceContact
 Id:       specmetier-to-RORHealthcareServiceContact
 Title:    "Spécification métier vers l'extension ROR HealthcareServiceContact"
-* -> "OffreOperationnelle.contact"
-* extension[name] -> "nom"
-* extension[purposeContact] -> "natureContact : JDV-J221-NatureContact-ROR"
-* extension[description] -> "description"
-* extension[RORConfidentialityLevel] -> "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
-* extension[RORContactFunctionContact] -> "fonctionContact : JDV-J220-FonctionContact-ROR"
-* extension[RORHealthcareServiceContactTelecom] -> "telecom"
-* extension[RORHealthcareServiceContactTelecom].extension[telecomAddress] -> "adresseTelecom"
-* extension[RORHealthcareServiceContactTelecom].extension[RORTelecomCommunicationChannel] -> "canal : JDV-J225-CanalCommunication-ROR"
-* extension[RORHealthcareServiceContactTelecom].extension[RORTelecomUsage] -> "utilisation"
-* extension[RORHealthcareServiceContactTelecom].extension[RORTelecomConfidentialityLevel] -> "niveauConfidentialite : JDV-J222-NiveauConfidentialite-ROR"
+* -> "contact"
+* extension[name].valueHumanName -> "nom"
+* extension[purposeContact].valueCodeableConcept -> "natureContact"
+* extension[description].valueString -> "description"
