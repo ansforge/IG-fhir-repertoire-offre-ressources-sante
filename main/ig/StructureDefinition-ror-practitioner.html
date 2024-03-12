@@ -477,7 +477,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Practitioner</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Practitioner</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Practitioner.extension, Practitioner.extension:ror-meta-creation-date, Practitioner.modifierExtension, Practitioner.telecom.extension, Practitioner.telecom.extension:ror-telecom-communication-channel, Practitioner.telecom.extension:ror-telecom-usage, Practitioner.telecom.extension:ror-telecom-confidentiality-level</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 </table>
 
           
@@ -624,7 +624,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Practitioner</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Practitioner</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Practitioner.meta.extension, Practitioner.extension, Practitioner.extension:ror-meta-creation-date, Practitioner.modifierExtension, Practitioner.identifier.extension, Practitioner.name.extension, Practitioner.telecom.extension, Practitioner.telecom.extension:ror-telecom-communication-channel, Practitioner.telecom.extension:ror-telecom-usage, Practitioner.telecom.extension:ror-telecom-confidentiality-level, Practitioner.qualification.extension, Practitioner.qualification.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>Practitioner.identifier.period, Practitioner.name.period, Practitioner.telecom.period, Practitioner.qualification.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Practitioner.identifier.assigner, Practitioner.qualification.issuer</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
@@ -895,7 +895,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Practitioner</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Practitioner</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Practitioner.extension, Practitioner.extension:ror-meta-creation-date, Practitioner.modifierExtension, Practitioner.telecom.extension, Practitioner.telecom.extension:ror-telecom-communication-channel, Practitioner.telecom.extension:ror-telecom-usage, Practitioner.telecom.extension:ror-telecom-confidentiality-level</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 </table>
 
           
@@ -1042,7 +1042,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Practitioner</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Practitioner</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Practitioner.meta.extension, Practitioner.extension, Practitioner.extension:ror-meta-creation-date, Practitioner.modifierExtension, Practitioner.identifier.extension, Practitioner.name.extension, Practitioner.telecom.extension, Practitioner.telecom.extension:ror-telecom-communication-channel, Practitioner.telecom.extension:ror-telecom-usage, Practitioner.telecom.extension:ror-telecom-confidentiality-level, Practitioner.qualification.extension, Practitioner.qualification.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>Practitioner.identifier.period, Practitioner.name.period, Practitioner.telecom.period, Practitioner.qualification.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Practitioner.identifier.assigner, Practitioner.qualification.issuer</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
@@ -1285,7 +1285,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 12, 2024 19:33+0000">2024-03-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 12, 2024 20:05+0000">2024-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
