@@ -21,7 +21,7 @@
   <version value="0.3.0"/>
   <name value="RORLocationResidentialCapacity"/>
   <status value="active"/>
-  <date value="2024-03-12T16:23:37+00:00"/>
+  <date value="2024-03-12T17:24:09+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -43,6 +43,10 @@
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="specmetier-to-RORResidentialLocationCapacity"/>
+    <name value="Spécification métier vers l'extension ROR LocationResidentialCapacity"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -82,6 +86,10 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
+      <mapping>
+        <identity value="specmetier-to-RORResidentialLocationCapacity"/>
+        <map value="CapaciteHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.id">
       <path value="Extension.id"/>
@@ -143,7 +151,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:residentialType">
@@ -176,7 +184,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:residentialType.id">
@@ -239,7 +247,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:residentialType.url">
@@ -302,6 +310,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORResidentialLocationCapacity"/>
+        <map value="typeHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.extension:residentialNumber">
       <path value="Extension.extension"/>
@@ -333,7 +345,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:residentialNumber.id">
@@ -396,7 +408,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.extension:residentialNumber.url">
@@ -454,6 +466,10 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORResidentialLocationCapacity"/>
+        <map value="nbHabitation"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -665,6 +681,10 @@
     <element id="Extension">
       <path value="Extension"/>
       <definition value="Extension créée dans le cadre du ROR qui décrit un type d'habitation adapté à la réalisation d'une offre."/>
+      <mapping>
+        <identity value="specmetier-to-RORResidentialLocationCapacity"/>
+        <map value="CapaciteHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -693,6 +713,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J32-TypeHabitation-ROR/FHIR/JDV-J32-TypeHabitation-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORResidentialLocationCapacity"/>
+        <map value="typeHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.extension:residentialNumber">
       <path value="Extension.extension"/>
@@ -713,6 +737,10 @@
       <type>
         <code value="integer"/>
       </type>
+      <mapping>
+        <identity value="specmetier-to-RORResidentialLocationCapacity"/>
+        <map value="nbHabitation"/>
+      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

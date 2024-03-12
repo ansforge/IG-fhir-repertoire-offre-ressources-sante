@@ -9,7 +9,7 @@
   "version" : "0.3.0",
   "name" : "RORHealthcareServicePatientType",
   "status" : "active",
-  "date" : "2024-03-12T16:23:37+00:00",
+  "date" : "2024-03-12T17:24:09+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,6 +31,10 @@
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "specmetier-to-RORHealthcareServicePatientType",
+    "name" : "Spécification métier vers l'extension ROR HealthcareServicePatientType"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -70,6 +74,10 @@
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "mapping" : [{
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "Patientele"
       }]
     },
     {
@@ -135,7 +143,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -169,7 +177,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -235,7 +243,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -300,6 +308,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "publicPrisEnCharge"
       }]
     },
     {
@@ -333,7 +345,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -399,7 +411,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }]
     },
     {
@@ -536,7 +548,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -579,7 +591,7 @@
         "human" : "If a code for the unit is present, the system SHALL also be present",
         "expression" : "code.empty() or system.exists()",
         "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Immunization"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Claim"
       },
       {
         "key" : "sqty-1",
@@ -587,7 +599,7 @@
         "human" : "The comparator is not used on a SimpleQuantity",
         "expression" : "comparator.empty()",
         "xpath" : "not(exists(f:comparator))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Immunization"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Claim"
       }],
       "isModifier" : false,
       "isSummary" : true,
@@ -610,6 +622,10 @@
       {
         "identity" : "rim",
         "map" : "./low"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "ageMin"
       }]
     },
     {
@@ -644,7 +660,7 @@
         "human" : "If a code for the unit is present, the system SHALL also be present",
         "expression" : "code.empty() or system.exists()",
         "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Immunization"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Claim"
       },
       {
         "key" : "sqty-1",
@@ -652,7 +668,7 @@
         "human" : "The comparator is not used on a SimpleQuantity",
         "expression" : "comparator.empty()",
         "xpath" : "not(exists(f:comparator))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Immunization"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Claim"
       }],
       "isModifier" : false,
       "isSummary" : true,
@@ -675,6 +691,10 @@
       {
         "identity" : "rim",
         "map" : "./high"
+      },
+      {
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "ageMax"
       }]
     },
     {
@@ -889,7 +909,11 @@
     "element" : [{
       "id" : "Extension",
       "path" : "Extension",
-      "definition" : "Extension créée dans le cadre du ROR pour décrire un ensemble de personnes qui répondent à des critères leur permettant de  bénéficier de la prestation décrite"
+      "definition" : "Extension créée dans le cadre du ROR pour décrire un ensemble de personnes qui répondent à des critères leur permettant de  bénéficier de la prestation décrite",
+      "mapping" : [{
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "Patientele"
+      }]
     },
     {
       "id" : "Extension.extension",
@@ -922,7 +946,11 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR"
-      }
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "publicPrisEnCharge"
+      }]
     },
     {
       "id" : "Extension.extension:ageRange",
@@ -951,12 +979,20 @@
     {
       "id" : "Extension.extension:ageRange.value[x].low",
       "path" : "Extension.extension.value[x].low",
-      "min" : 1
+      "min" : 1,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "ageMin"
+      }]
     },
     {
       "id" : "Extension.extension:ageRange.value[x].high",
       "path" : "Extension.extension.value[x].high",
-      "min" : 1
+      "min" : 1,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORHealthcareServicePatientType",
+        "map" : "ageMax"
+      }]
     },
     {
       "id" : "Extension.url",

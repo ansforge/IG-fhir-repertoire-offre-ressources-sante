@@ -13,7 +13,7 @@
   <version value="0.3.0"/>
   <name value="RORConfidentialityLevel"/>
   <status value="active"/>
-  <date value="2024-03-12T16:23:37+00:00"/>
+  <date value="2024-03-12T17:24:09+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -35,6 +35,10 @@
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="specmetier-to-RORConfidentialityLevel"/>
+    <name value="Spécification métier vers l'extension ROR ConfidentialityLevel"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -147,7 +151,7 @@
         <human value="Must have either extensions or value[x], not both"/>
         <expression value="extension.exists() != value.exists()"/>
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
       </constraint>
     </element>
     <element id="Extension.url">
@@ -210,6 +214,10 @@
         <identity value="rim"/>
         <map value="N/A"/>
       </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORConfidentialityLevel"/>
+        <map value="niveauConfidentialite"/>
+      </mapping>
     </element>
   </snapshot>
   <differential>
@@ -234,6 +242,10 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR"/>
       </binding>
+      <mapping>
+        <identity value="specmetier-to-RORConfidentialityLevel"/>
+        <map value="niveauConfidentialite"/>
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

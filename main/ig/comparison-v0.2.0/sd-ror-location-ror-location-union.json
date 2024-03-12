@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "005b86a6-1233-40e1-9d8b-abfd234508b6-92",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/005b86a6-1233-40e1-9d8b-abfd234508b6-92",
+  "id" : "86fe075f-8ada-4544-9cb4-8f2161b52ae2-92",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/86fe075f-8ada-4544-9cb4-8f2161b52ae2-92",
   "name" : "UnionRORLocationAndRORLocation",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-03-12T16:24:01+00:00",
+  "date" : "2024-03-12T17:24:31+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -93,6 +93,10 @@
       {
         "identity" : "rim",
         "map" : ".Role[classCode=SDLC]"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "LieuRealisationOffre"
       }]
     },
     {
@@ -111,7 +115,11 @@
       }],
       "mustSupport" : false,
       "isModifier" : false,
-      "isSummary" : true
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "metadonnee.identifiant"
+      }]
     },
     {
       "path" : "Location.meta",
@@ -143,6 +151,10 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "metadonnee"
       }]
     },
     {
@@ -269,6 +281,10 @@
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "dateMiseJour"
       }]
     },
     {
@@ -722,6 +738,10 @@
       {
         "identity" : "rim",
         "map" : ".statusCode"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "Pas d'équivalent"
       }]
     },
     {
@@ -805,6 +825,10 @@
       {
         "identity" : "rim",
         "map" : ".name"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "nom"
       }]
     },
     {
@@ -873,6 +897,10 @@
       {
         "identity" : "rim",
         "map" : ".playingEntity[classCode=PLC determinerCode=INSTANCE].desc"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "description"
       }]
     },
     {
@@ -969,6 +997,10 @@
       {
         "identity" : "rim",
         "map" : ".code"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "fonctionLieu"
       }]
     },
     {
@@ -1024,6 +1056,10 @@
       {
         "identity" : "rim",
         "map" : ".telecom"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "telecommunication"
       }]
     },
     {
@@ -1169,6 +1205,10 @@
       {
         "identity" : "servd",
         "map" : "./Value"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "adresseTelecom"
       }]
     },
     {
@@ -1355,6 +1395,10 @@
       {
         "identity" : "rim",
         "map" : ".addr"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "adresse"
       }]
     },
     {
@@ -1760,6 +1804,10 @@
       {
         "identity" : "servd",
         "map" : "./Jurisdiction"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "localite"
       }]
     },
     {
@@ -1899,6 +1947,10 @@
       {
         "identity" : "servd",
         "map" : "./PostalIdentificationCode"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "codePostal"
       }]
     },
     {
@@ -2100,6 +2152,10 @@
       {
         "identity" : "rim",
         "map" : ".playingEntity [classCode=PLC determinerCode=INSTANCE].positionText"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "coordonneeGeographique"
       }]
     },
     {
@@ -2249,6 +2305,10 @@
       {
         "identity" : "rim",
         "map" : "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "longitude"
       }]
     },
     {
@@ -2282,6 +2342,10 @@
       {
         "identity" : "rim",
         "map" : "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "latitude"
       }]
     },
     {
