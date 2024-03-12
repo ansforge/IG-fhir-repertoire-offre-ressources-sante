@@ -1,0 +1,118 @@
+@startuml mapping-Location
+
+left to right direction
+
+scale 1000 width
+
+legend top left
+  <&layers> : slice
+  <&plus> : extension
+endlegend
+
+
+map "metadonnes : meta" as meta #back:LavenderBlush;header:Violet {
+    lastUpdated => dateMiseJour 
+    <&layers> tag[codeRegion] => regionSource
+}
+
+map "EquipementSpecifique : <&plus> RORLocationEquipment" as RORLocationEquipment #back:LavenderBlush;header:Violet {
+    typeEquipement => equipmentType
+    nbInService => nbEquipementEnService
+}
+
+map "LimiteCaracteristiqueEquipement : <&plus> RORLocationEquipmentLimit" as RORLocationEquipmentLimit #back:LavenderBlush;header:Violet {
+    typeCaracteristique => equipmentFeature
+    valeurLimite => limitValue
+}
+
+map "CapaciteHabitation : <&plus> RORLocationResidentialCapacity" as RORLocationResidentialCapacity #back:LavenderBlush;header:Violet {
+    typeHabitation => residentialType
+    nbHabitation => residentialNumber
+}
+
+map "CapacitePriseCharge (CPC) + CapaciteAccueilOperationnelle (CAO) : \n <&plus> RORLocationSupportedCapacity" as RORLocationSupportedCapacity #back:LavenderBlush;header:Violet {
+    CAO.natureCapacite => capacityType
+    CAO.statutCapacite => capacityStatus
+    CAO.temporaliteCapacite => temporalityCapacity
+    CAO.nombreCapacite => nbCapacity
+    CAO.typeSourceCapacite => capacitySourceType
+    CAO.genreCapaciteDispo => genderCapacityAvailable
+    CAO.dateMAJCapacite => capacityUpdateDate
+    CAO.typeFermetureCapacite => capacityClosingType
+    CAO.typeLitsSupplementaire => additionalBedType
+    CAO.typeCrise => crisisType
+    CPC.affectationTemporaire => temporaryAssignement
+}
+
+map "telecommunication : telecom" as telecom #back:LavenderBlush;header:Violet {
+    adresseTelecom => value
+    canal => <&plus> RORTelecomCommunicationChannel
+    utilisation => <&plus> RORTelecomUsage
+    niveauConfidentialite => <&plus> RORTelecomConfidentialityLevel
+}
+
+map "addresse : line" as addressLine #back:LavenderBlush;header:Violet {
+    <&plus> pointRemise => careOf
+    <&plus> complementPointGeographique => additionalLocator
+    <&plus> numeroVoie => houseNumber
+    <&plus> extension => buildingNumberSuffix
+    <&plus> typeVoie => streetNameType
+    <&plus> libelleVoie => streetNameBase
+    <&plus> lieuDit => precinct
+    <&plus> mentionDistribution => postalBox
+}
+
+map "addresse : address" as address #back:LavenderBlush;header:Violet {
+    localite => city
+    codePostal => postalCode
+    line *-> addressLine
+}
+
+map "coordonneeGeographique : position" as position #back:LavenderBlush;header:Violet {
+    longitude => longitude
+    latitude => latitude
+    coordonneesFiables => RORCoordinateReliability
+}
+
+
+map "**LieuRealisationOffre : Location**" as L #back:LavenderBlush;header:Violet {
+    metadonnee => meta 
+    metadonnee.identifiant => id
+    metadonnee.dateCreation => <&plus> RORMetaCreationDate
+    => status
+    nom => name
+    description => description
+    fonctionLieu => type
+    idExterneSynchro => <&layers> identifier[idExterneSynchro]
+    identifiant => <&layers> identifier[idLocation]
+    nomExterneSynchro => alias[nomExterneSynchro]
+    statut => <&plus> RORLocationStatus
+    communeCog => <&plus> RORCommuneCog
+    CapaciteAccueilOperationnelle => <&plus> RORLocationSupportedCapacity 
+    CapacitePriseCharge => <&plus> RORLocationSupportedCapacity
+    CapaciteHabitation => <&plus> RORLocationResidentialCapacity
+    EquipementSpecifique => <&plus> RORLocationEquipment
+    LimiteCaracteristiqueEquipement => <&plus> RORLocationEquipmentLimit
+    coordonneeGeographique => position
+    telecommunication => telecom
+    adresse => address
+}
+
+meta <-- L::metadonnee
+telecom <-- L::telecommunication
+position <-- L::coordonneeGeographique
+L::adresse -> address
+L::EquipementSpecifique --> RORLocationEquipment
+L::LimiteCaracteristiqueEquipement --> RORLocationEquipmentLimit
+L::CapaciteHabitation--> RORLocationResidentialCapacity
+L::CapacitePriseCharge--> RORLocationSupportedCapacity
+L::CapaciteAccueilOperationnelle --> RORLocationSupportedCapacity
+
+
+object "**HealthcareService**" as HS #LightSkyBlue {
+    OffreOperationnelle
+}
+
+HS -> L
+
+@enduml

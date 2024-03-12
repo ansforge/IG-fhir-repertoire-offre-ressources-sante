@@ -46,3 +46,20 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 * extension contains
     RORMetaCreationDate named ror-meta-creation-date 1..1 MS
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+
+Mapping:  ConceptMetier_RORPractitioner
+Source:   RORPractitioner
+Id:       specmetier-to-RORPractitioner
+Title:    "Practitioner du Modèle exposition ROR V3"
+* -> "Professionnel"
+
+* id -> "metadonnee.identifiant"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+
+* identifier -> "idNat_PS"
+* name.prefix -> "PersonnePhysique.civilite"
+
+* telecom -> "boiteLettreMSS.adresseMSS"
+* telecom.value -> "adresseTelecom"

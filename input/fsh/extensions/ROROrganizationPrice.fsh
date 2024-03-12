@@ -48,3 +48,26 @@ Description: "Extension créée dans le cadre du ROR pour permettre de définir 
 * extension[otherAdditionalServiceName].value[x] only string 
 * extension[additionalServiceName].value[x] only CodeableConcept
 * extension[additionalServiceName].valueCodeableConcept from $JDV-J206-PrestationNonObligatoireIncluse-ROR (required)
+
+
+Mapping:  ConceptMetier_ROROrganizationPrice
+Source:   ROROrganizationPrice
+Id:       specmetier-to-ROROrganizationPrice
+Title:    "Spécification métier vers l'extension ROR OrganizationPrice"
+* -> "Tarif"
+* extension[priceType].valueCodeableConcept -> "typeTarif"
+* extension[priceUnit].valueCodeableConcept -> "unitePrix"
+* extension[amount].valueMoney -> "montantTarif"
+* extension[startDate].valueDateTime -> "dateDebutValiditeTarif"
+* extension[under60].valueBoolean -> "ForfaitSocleHebergement.tarifMoins60Ans"
+* extension[deliveryIncluded].valueCodeableConcept -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+* extension[othersDeliveryIncluded].valueString -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+* extension[residentialType].valueCodeableConcept -> "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"
+* extension[specialPrice].valueCodeableConcept -> "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"
+* extension[welcomeType].valueCodeableConcept -> "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"
+* extension[mealDeliveryName].valueString -> "TarifPortageRepas.nomTarifPortageRepas"
+* extension[dependencyLevel].valueCodeableConcept -> "TarifDependance.groupeTarifaireDependance"
+* extension[humanHelpPriceName].valueString -> "TarifAidesHumaines.nomTarifAidesHumaines"
+* extension[managementType].valueCodeableConcept -> "TarifAidesHumaines.modeGestion"
+* extension[otherAdditionalServiceName].valueString -> "TarifPrestationSupplementaire.nomAutrePrestationSupp"
+* extension[additionalServiceName].valueCodeableConcept -> "TarifPrestationSupplementaire.nomPrestationSupp"

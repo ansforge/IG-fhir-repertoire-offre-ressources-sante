@@ -121,3 +121,58 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * extension[vitalAccepted] ^short = "carteVitaleAcceptee (SituationOperationnelle) : Précise si le professionnel, dans le cadre de cette situation opérationnelle, dispose des moyens techniques pour prendre en charge la carte vitale ou pas"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
+
+Mapping:  ConceptMetier_RORPractitionerRole_ExercicePro
+Source:   RORPractitionerRole
+Id:       specmetier-to-RORPractitionerRole-exercicePro
+Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
+* -> "ExerciceProfessionnel"
+
+* practitioner -> "Professionnel"
+
+* id -> "metadonnee.identifiant"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+
+* code -> "profession"
+
+* specialty[specificCompetence] -> "competenceSpecifique"
+* specialty[expertiseType] -> "SavoirFaire.typeSavoirFaire"
+* specialty[specialty] -> "SavoirFaire.specialite"
+* specialty[competence] -> "SavoirFaire.competence"
+* specialty[exclusiveCompetence] -> "SavoirFaire.competenceExclusive"
+* specialty[specificOrientation] -> "SavoirFaire.orientationParticuliere"
+* specialty[expertiseCapacity] -> "SavoirFaire.capacite"
+* specialty[qualificationPAC] -> "SavoirFaire.qualificationPAC"
+* specialty[nonQualifyingDESC] -> "SavoirFaire.DESCNonQualifiant"
+* specialty[supplementaryExerciseRight] -> "SavoirFaire.droitExerciceComplémentaire"
+
+* extension[ror-practitionerrole-name] -> ""
+
+Mapping:  ConceptMetier_RORPractitionerRole_SituationOp
+Source:   RORPractitionerRole
+Id:       specmetier-to-RORPractitionerRole-situationOp
+Title:    "SituationOperationnelle du Modèle exposition ROR V3"
+* -> "SituationOperationnelle"
+
+* healthcareService -> "OffreOperationnelle"
+
+* id -> "metadonnee.identifiant"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+
+* identifier -> "identifiantSituationOperationnelle"
+
+* availableTime -> "horaire"
+* availableTime.availableStartTime -> "heureDebut"
+* availableTime.availableEndTime -> "heureFin"
+
+* telecom -> "telecommunication"
+* telecom.value -> "adresseTelecom"
+
+* extension[contracted].valueCodeableConcept -> "secteurConventionnement"
+* extension[optionCAS].valueBoolean -> "optionContratAccèsAuxSoins"
+* extension[vitalAccepted].valueBoolean -> "carteVitaleAcceptee"
+* extension[ror-practitionerrole-unit-exercise-mode] -> "modeExerciceOffre"

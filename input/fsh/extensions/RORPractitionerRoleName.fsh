@@ -13,3 +13,12 @@ Description: "Extension créée dans le cadre du ROR pour définir l'identité d
 * extension[exerciseLastName].value[x] only string
 * extension[exerciseFirstName].value[x] only string
 * extension[exerciseTitle].valueCodeableConcept from $JDV-J208-CiviliteExercice-ROR (required)
+
+
+Mapping:  ConceptMetier_RORPractitionerRoleName
+Source:   RORPractitionerRoleName
+Id:       specmetier-to-RORPractitionerRoleName
+Title:    "Spécification métier vers l'extension ROR RORPractitionerRoleName"
+* extension[exerciseLastName].valueString -> "nomExercice"
+* extension[exerciseFirstName].valueString -> "prenomExercice"
+* extension[exerciseTitle].valueCodeableConcept -> "civiliteExercice"

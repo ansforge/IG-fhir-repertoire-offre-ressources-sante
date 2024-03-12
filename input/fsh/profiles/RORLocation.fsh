@@ -92,7 +92,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * position.extension ^slicing.discriminator.path = "url"
 * position.extension ^slicing.rules = #open
 * position.extension contains RORCoordinateReliability named ror-coordinate-reliability 0..1 MS
-* position.extension[ror-coordinate-reliability] ^short = "systemeGeodesique (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
+* position.extension[ror-coordinate-reliability] ^short = "coordonneesFiables (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
 
 * managingOrganization only Reference(fr-organization or ROROrganization)
 * partOf only Reference(Location or RORLocation)
@@ -114,3 +114,44 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * extension[ror-location-residential-capacity] ^short = "CapaciteHabitation : type d'habitation adapté à la réalisation d'une offre"
 * extension[ror-location-supported-capacity] ^short = "CapacitePriseCharge :  + CapaciteAccueilOperationnelle"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+
+
+Mapping:  ConceptMetier_RORLocation
+Source:   RORLocation
+Id:       specmetier-to-RORLocation
+Title:    "Location du Modèle exposition ROR V3"
+* -> "LieuRealisationOffre"
+
+* id -> "metadonnee.identifiant"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+
+* name -> "nom"
+* description -> "description"
+* type -> "fonctionLieu"
+* status -> "Pas d'équivalent"
+
+* identifier[idExterneSynchro] -> "idExterneSynchro"
+* identifier[idLocation] -> "identifiant"
+
+* alias[nomExterneSynchro] -> "nomExterneSynchro"
+
+* telecom -> "telecommunication"
+* telecom.value -> "adresseTelecom"
+
+* address -> "adresse"
+* address.city -> "localite"
+* address.postalCode -> "codePostal"
+* address.line.extension[careOf] -> "pointRemise"
+* address.line.extension[additionalLocator] -> "complementPointGeographique"
+* address.line.extension[houseNumber] -> "numeroVoie"
+* address.line.extension[buildingNumberSuffix] -> "extension"
+* address.line.extension[streetNameType] -> "typeVoie"
+* address.line.extension[streetNameBase] -> "libelleVoie"
+* address.line.extension[postalBox] -> "mentionDistribution"
+* address.line.extension[lieuDit] -> "lieuDit"
+
+* position -> "coordonneeGeographique"
+* position.longitude -> "longitude"
+* position.latitude -> "latitude"
