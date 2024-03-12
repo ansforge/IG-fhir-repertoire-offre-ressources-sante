@@ -485,3 +485,24 @@ GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionO
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 &_revinclude=Task:focus #inclus les Task qui référencent le HealthcareService
 ```
+
+#### Scénario 13 : Recherche de l'offre d'un professionnel
+
+**Description du scénario :** Un consommateur cherche les offres d'un professionnel à partir de son identifiant fonctionnel = XXX.
+
+**Requête :**
+
+```
+GET [BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier=XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+```
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier=XXX #critère de recherche sur l'identifiant fonctionnel du professionnel (chainage)
+&_include=HealthcareService:organization #inclus les Organization référencées par HealthcareService 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService
+&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
