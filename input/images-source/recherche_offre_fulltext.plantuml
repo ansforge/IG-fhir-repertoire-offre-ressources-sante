@@ -1,0 +1,6 @@
+@startuml recherche_offre_fulltext
+actor "Consommateur" as C
+actor "ROR national" as ROR
+C -> ROR : Recherche_FullText \n (via le critère de recherche _content)
+ROR --> C : Réponse \n (offres opérationnelles et toutes les classes liées)
+@enduml

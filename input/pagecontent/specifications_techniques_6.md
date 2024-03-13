@@ -10,7 +10,7 @@
 <p><strong>Interaction FHIR</strong></p>
 </td>
 <td width="538">
-<p>Patch<a href="#_ftn1" name="_ftnref1"><sup>[1]</sup></a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1"><sup>[1]</sup></a> (limitée aux attributs de 'premier niveau')</p>
 </td>
 </tr>
 <tr>
@@ -40,7 +40,8 @@
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> https://www.hl7.org/fhir/R4/http.html#patch <a href="https://www.hl7.org/fhir/R4/http.html#patch">https://www.hl7.org/fhir/R4/http.html#patch</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+<p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://www.hl7.org/fhir/R4/http.html#patch">https://www.hl7.org/fhir/R4/http.html#patch</a> et <a href="https://www.hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
+
 
 ### Construction de la réponse de base
 

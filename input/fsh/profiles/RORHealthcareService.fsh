@@ -31,8 +31,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * comment ^short = "commentaire (Metadonnee) : Commentaire qui peut être associé à chaque objet"
 * location only Reference(Location or RORLocation)
 
-* availableTime 0..1 MS
+* availableTime MS
 * availableTime ^short = "horaire (OffreOperationnelle) : heureDebut + heureFin"
+* availableTime.daysOfWeek 0..1
+* availableTime.daysOfWeek ^short = "Remarque : L'utilisation de l'extension ror-available-time-number-days-of-week est privilégiée."
 * availableTime.availableStartTime MS
 * availableTime.availableStartTime ^short = "heureDebut (Horaire) : Heure de début de la plage horaire"
 * availableTime.availableEndTime MS
@@ -46,7 +48,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORAvailableTimeNumberDaysofWeek named ror-available-time-number-days-of-week 0..1 MS
 * availableTime.extension[ror-available-time-type-of-time] ^short = "typePlageHoraire (Horaire) : apporte un contexte à la plage horaire définie par la suite"
 * availableTime.extension[ror-available-time-effective-opening-closing-date] ^short = "debutDateEffective + finDateEffective (Horaire)"
-* availableTime.extension[ror-available-time-number-days-of-week] ^short = "jourSemaine (Horaire) : Numéro du jour dans la semaine"
+* availableTime.extension[ror-available-time-number-days-of-week] ^short = "jourSemaine (Horaire) : Numéro du jour dans la semaine - Remarque : L'utilisation de cette extension est privilégiée à celle de l'élément natif daysOfWeek."
 
 * telecom.value 1..1 MS
 * telecom ^short = "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’offre opérationnelle"

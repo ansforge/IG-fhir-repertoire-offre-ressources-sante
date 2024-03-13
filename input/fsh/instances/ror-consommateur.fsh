@@ -17,7 +17,7 @@ Usage: #definition
 
 * format[+] = #application/fhir+json
 * format[+] = #application/fhir+ndjson
-
+* patchFormat[0] = #application/fhir+json
 * implementationGuide[+] = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
 * implementationGuide[+] = "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"
 
@@ -59,9 +59,10 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-location)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-* rest.resource[=].interaction[+].code = #create
 * rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 * rest.resource[=].searchRevInclude = "HealthcareService:location"
+
 
 * rest.resource[=].searchParam[+].name = "_filter"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
@@ -77,6 +78,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
+
 
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
@@ -214,6 +216,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 * rest.resource[=].searchInclude = "HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner"
 * rest.resource[=].searchRevInclude = "PractitionerRole:service, Task:focus"
 
@@ -487,6 +490,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #create
 * rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
@@ -496,9 +500,10 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
 
 /* // Measure
+
 * rest.resource[+].type = #Measure
 * rest.resource[=].profile = Canonical(ror-measure)
 * rest.resource[=].interaction[+].code = #search-type

@@ -1,0 +1,6 @@
+@startuml extraction_offre_complete
+actor "Consommateur" as C
+actor "ROR national" as ROR
+C -> ROR : Extraction_Offres \n (via critères de recherche)
+ROR --> C : Réponse \n (offres opérationnelles et toutes les \n classes liées = tout le modèle d'exposition)
+@enduml

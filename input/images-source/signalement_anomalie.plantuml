@@ -1,0 +1,7 @@
+@startuml signalement_anomalie
+actor "Consommateur" as C
+actor "ROR national" as ROR
+C -> ROR : Signalement_Anomalie \n (via informations anomalie)
+ROR --> C : Réponse \n (identifiant logique, identifiant fonctionnel et métadonnées de l'anomalie)
+@enduml
+
