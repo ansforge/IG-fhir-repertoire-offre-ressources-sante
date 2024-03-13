@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>RORLocation - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.3.0</title>
+    <title>RORLocation - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.4.0-ballot-1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -60,7 +60,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - trial-use
+            <span style="display:inline-block;">0.4.0-ballot-1 - ci-build
 
 
 
@@ -206,7 +206,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.4.0-ballot-1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -286,7 +286,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.3.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location|0.3.0"/></span>
+      <span class="copy-text">0.4.0-ballot-1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location|0.4.0-ballot-1"/></span>
       </td>
     </tr>
 
@@ -604,7 +604,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Location</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Location</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>Location.extension, Location.extension:ror-location-status, Location.extension:ror-commune-cog, Location.extension:ror-location-equipment, Location.extension:ror-location-residential-capacity, Location.extension:ror-location-supported-capacity, Location.extension:ror-meta-creation-date, Location.modifierExtension, Location.telecom.extension, Location.telecom.extension:ror-telecom-communication-channel, Location.telecom.extension:ror-telecom-usage, Location.telecom.extension:ror-telecom-confidentiality-level, Location.address.line.extension:careOf, Location.address.line.extension:additionalLocator, Location.address.line.extension:houseNumber, Location.address.line.extension:buildingNumberSuffix, Location.address.line.extension:streetNameType, Location.address.line.extension:streetNameBase, Location.address.line.extension:postalBox, Location.address.line.extension:lieuDit, Location.position.extension:ror-coordinate-reliability, Location.position.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Location.managingOrganization, Location.partOf</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
 
@@ -865,7 +865,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Location</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Location</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>Location.meta.extension, Location.extension, Location.extension:ror-location-status, Location.extension:ror-commune-cog, Location.extension:ror-location-equipment, Location.extension:ror-location-residential-capacity, Location.extension:ror-location-supported-capacity, Location.extension:ror-meta-creation-date, Location.modifierExtension, Location.identifier:idExterneSynchro.extension, Location.identifier:idExterneSynchro.type.extension, Location.identifier:idExterneSynchro.type.coding.extension, Location.identifier:idLocation.extension, Location.identifier:idLocation.type.extension, Location.identifier:idLocation.type.coding.extension, Location.telecom.extension, Location.telecom.extension:ror-telecom-communication-channel, Location.telecom.extension:ror-telecom-usage, Location.telecom.extension:ror-telecom-confidentiality-level, Location.address.extension, Location.address.line.extension, Location.address.line.extension:careOf, Location.address.line.extension:additionalLocator, Location.address.line.extension:houseNumber, Location.address.line.extension:buildingNumberSuffix, Location.address.line.extension:streetNameType, Location.address.line.extension:streetNameType.extension, Location.address.line.extension:streetNameBase, Location.address.line.extension:postalBox, Location.address.line.extension:lieuDit, Location.position.extension, Location.position.extension:ror-coordinate-reliability, Location.position.modifierExtension, Location.hoursOfOperation.extension, Location.hoursOfOperation.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>Location.identifier:idExterneSynchro.period, Location.identifier:idLocation.period, Location.telecom.period, Location.address.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Location.identifier:idExterneSynchro.assigner, Location.identifier:idLocation.assigner, Location.managingOrganization, Location.partOf, Location.endpoint</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
@@ -1748,7 +1748,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Location</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Location</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>Location.extension, Location.extension:ror-location-status, Location.extension:ror-commune-cog, Location.extension:ror-location-equipment, Location.extension:ror-location-residential-capacity, Location.extension:ror-location-supported-capacity, Location.extension:ror-meta-creation-date, Location.modifierExtension, Location.telecom.extension, Location.telecom.extension:ror-telecom-communication-channel, Location.telecom.extension:ror-telecom-usage, Location.telecom.extension:ror-telecom-confidentiality-level, Location.address.line.extension:careOf, Location.address.line.extension:additionalLocator, Location.address.line.extension:houseNumber, Location.address.line.extension:buildingNumberSuffix, Location.address.line.extension:streetNameType, Location.address.line.extension:streetNameBase, Location.address.line.extension:postalBox, Location.address.line.extension:lieuDit, Location.position.extension:ror-coordinate-reliability, Location.position.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Location.managingOrganization, Location.partOf</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
 
@@ -2009,7 +2009,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>Location</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>Location</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>Location.meta.extension, Location.extension, Location.extension:ror-location-status, Location.extension:ror-commune-cog, Location.extension:ror-location-equipment, Location.extension:ror-location-residential-capacity, Location.extension:ror-location-supported-capacity, Location.extension:ror-meta-creation-date, Location.modifierExtension, Location.identifier:idExterneSynchro.extension, Location.identifier:idExterneSynchro.type.extension, Location.identifier:idExterneSynchro.type.coding.extension, Location.identifier:idLocation.extension, Location.identifier:idLocation.type.extension, Location.identifier:idLocation.type.coding.extension, Location.telecom.extension, Location.telecom.extension:ror-telecom-communication-channel, Location.telecom.extension:ror-telecom-usage, Location.telecom.extension:ror-telecom-confidentiality-level, Location.address.extension, Location.address.line.extension, Location.address.line.extension:careOf, Location.address.line.extension:additionalLocator, Location.address.line.extension:houseNumber, Location.address.line.extension:buildingNumberSuffix, Location.address.line.extension:streetNameType, Location.address.line.extension:streetNameType.extension, Location.address.line.extension:streetNameBase, Location.address.line.extension:postalBox, Location.address.line.extension:lieuDit, Location.position.extension, Location.position.extension:ror-coordinate-reliability, Location.position.modifierExtension, Location.hoursOfOperation.extension, Location.hoursOfOperation.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>Location.identifier:idExterneSynchro.period, Location.identifier:idLocation.period, Location.telecom.period, Location.address.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
 <tr><td>ref-1</td><td>error</td><td>Location.identifier:idExterneSynchro.assigner, Location.identifier:idLocation.assigner, Location.managingOrganization, Location.partOf, Location.endpoint</td><td>SHALL have a contained resource if a local reference is provided<br/>: reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</td><td></td></tr>
 </table>
@@ -2737,7 +2737,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 10:24+0000">2024-03-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 16:27+0000">2024-03-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
