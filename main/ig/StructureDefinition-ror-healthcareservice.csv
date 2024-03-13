@@ -593,7 +593,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","If an appointment is required for access to this service","Indicates whether or not a prospective consumer will require an appointment for a particular service at a site to be provided by the Organization. Indicates if an appointment is required for access to this service.","","","","","","","","","",,,,,"",,,,"HealthcareService.appointmentRequired",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a",".actrelationship[typeCode=PERT].observation"
-"HealthcareService.availableTime","HealthcareService.availableTime","","","",0,1,"Y","","","BackboneElement {[]} {[]}
+"HealthcareService.availableTime","HealthcareService.availableTime","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","horaire (OffreOperationnelle) : heureDebut + heureFin","A collection of times that the Service Site is available.","More detailed availability information may be provided in associated Schedule/Slot resources.","","","","","","","","",,,,,"",,,,"HealthcareService.availableTime",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a",".effectiveTime","horaire"
@@ -614,7 +614,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.availableTime.extension:ror-available-time-number-days-of-week","HealthcareService.availableTime.extension","ror-available-time-number-days-of-week","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week]]} {[]}
-","jourSemaine (Horaire) : Numéro du jour dans la semaine","Extension créée dans le cadre du ROR pour indiquer le numéro du jour dans la semaine.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","jourSemaine (Horaire) : Numéro du jour dans la semaine - Remarque : L'utilisation de cette extension est privilégiée à celle de l'élément natif daysOfWeek.","Extension créée dans le cadre du ROR pour indiquer le numéro du jour dans la semaine.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "HealthcareService.availableTime.modifierExtension","HealthcareService.availableTime.modifierExtension","","extensions
@@ -624,8 +624,8 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"HealthcareService.availableTime.daysOfWeek","HealthcareService.availableTime.daysOfWeek","","","",0,*,"","","","code {[]} {[]}
-","mon | tue | wed | thu | fri | sat | sun","Indicates which days of the week are available between the start and end Times.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"required","The days of the week.","http://hl7.org/fhir/ValueSet/days-of-week|4.0.1","",,,,"HealthcareService.availableTime.daysOfWeek",0,*,"ele-1
+"HealthcareService.availableTime.daysOfWeek","HealthcareService.availableTime.daysOfWeek","","","",0,1,"","","","code {[]} {[]}
+","Remarque : L'utilisation de l'extension ror-available-time-number-days-of-week est privilégiée.","Indicates which days of the week are available between the start and end Times.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,"required","The days of the week.","http://hl7.org/fhir/ValueSet/days-of-week|4.0.1","",,,,"HealthcareService.availableTime.daysOfWeek",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a",".effectiveTime"
 "HealthcareService.availableTime.allDay","HealthcareService.availableTime.allDay","","","",0,1,"","","","boolean {[]} {[]}

@@ -506,8 +506,8 @@
       }
     },
     "/HealthcareService": {
-      "summary": "manage the collection of resources of type HealthcareService",
-      "description": "Access to services to manage the collection of all resources of type HealthcareService",
+      "summary": "Manager for resources of type HealthcareService",
+      "description": "The Manager for resources of type HealthcareService: provides services to manage the collection of all the HealthcareService instances",
       "get": {
         "summary": "Search all resources of type HealthcareService based on a set of criteria",
         "operationId": "searchHealthcareService",
@@ -672,6 +672,65 @@
             }
           }
         ]
+      },
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createHealthcareService",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/HealthcareService"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/HealthcareService"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
       }
     },
     "/HealthcareService/{rid}": {
@@ -693,6 +752,68 @@
           },
           "200": {
             "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/HealthcareService"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update the current state of the resource",
+        "operationId": "updateHealthcareService",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/HealthcareService"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
             "headers": {
               "ETag": {
                 "description": "Version from Resource.meta.version as a weak ETag",
@@ -797,8 +918,8 @@
       }
     },
     "/Organization": {
-      "summary": "manage the collection of resources of type Organization",
-      "description": "Access to services to manage the collection of all resources of type Organization",
+      "summary": "Manager for resources of type Organization",
+      "description": "The Manager for resources of type Organization: provides services to manage the collection of all the Organization instances",
       "get": {
         "summary": "Search all resources of type Organization based on a set of criteria",
         "operationId": "searchOrganization",
@@ -983,6 +1104,65 @@
             }
           }
         ]
+      },
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createOrganization",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Organization"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Organization"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
       }
     },
     "/Organization/{rid}": {
@@ -1038,14 +1218,26 @@
             "$ref": "#/components/parameters/elements"
           }
         ]
-      }
-    },
-    "/Practitioner": {
-      "summary": "manage the collection of resources of type Practitioner",
-      "description": "Access to services to manage the collection of all resources of type Practitioner",
-      "get": {
-        "summary": "Search all resources of type Practitioner based on a set of criteria",
-        "operationId": "searchPractitioner",
+      },
+      "patch": {
+        "summary": "Change the current state of the resource by providing a patch - a series of change commands",
+        "operationId": "patchOrganization",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Organization"
+              }
+            },
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+              }
+            }
+          }
+        },
         "responses": {
           "default": {
             "description": "Error, with details",
@@ -1058,11 +1250,19 @@
             }
           },
           "200": {
-            "description": "the resource being returned",
+            "description": "the resource being returned after being patched",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Organization"
                 }
               }
             }
@@ -1070,40 +1270,40 @@
         },
         "parameters": [
           {
+            "$ref": "#/components/parameters/rid"
+          },
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
             "$ref": "#/components/parameters/format"
           },
           {
             "$ref": "#/components/parameters/pretty"
           },
           {
-            "$ref": "#/components/parameters/summary"
-          },
-          {
             "$ref": "#/components/parameters/elements"
-          },
-          {
-            "name": "identifier",
-            "in": "query",
-            "description": "A practitioner\u0027s Identifier",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "_filter",
-            "in": "query",
-            "description": "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails",
-            "schema": {}
           }
         ]
       }
     },
-    "/Practitioner/{rid}": {
-      "summary": "Read/Write/etc resource instance of type Practitioner",
-      "description": "Access to services to manage the state of a single resource of type Practitioner",
-      "get": {
-        "summary": "Read the current state of the resource",
-        "operationId": "readPractitioner",
+    "/Practitioner": {
+      "summary": "Manager for resources of type Practitioner",
+      "description": "The Manager for resources of type Practitioner: provides services to manage the collection of all the Practitioner instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createPractitioner",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Practitioner"
+              }
+            }
+          }
+        },
         "responses": {
           "default": {
             "description": "Error, with details",
@@ -1116,7 +1316,75 @@
             }
           },
           "200": {
-            "description": "the resource being returned",
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Practitioner"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
+            "$ref": "#/components/parameters/format"
+          },
+          {
+            "$ref": "#/components/parameters/pretty"
+          },
+          {
+            "$ref": "#/components/parameters/elements"
+          }
+        ]
+      }
+    },
+    "/Practitioner/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Practitioner",
+      "description": "Access to services to manage the state of a single resource of type Practitioner",
+      "patch": {
+        "summary": "Change the current state of the resource by providing a patch - a series of change commands",
+        "operationId": "patchPractitioner",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Practitioner"
+              }
+            },
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being patched",
             "headers": {
               "ETag": {
                 "description": "Version from Resource.meta.version as a weak ETag",
@@ -1154,11 +1422,22 @@
       }
     },
     "/PractitionerRole": {
-      "summary": "manage the collection of resources of type PractitionerRole",
-      "description": "Access to services to manage the collection of all resources of type PractitionerRole",
-      "get": {
-        "summary": "Search all resources of type PractitionerRole based on a set of criteria",
-        "operationId": "searchPractitionerRole",
+      "summary": "Manager for resources of type PractitionerRole",
+      "description": "The Manager for resources of type PractitionerRole: provides services to manage the collection of all the PractitionerRole instances",
+      "post": {
+        "summary": "Create a new resource",
+        "operationId": "createPractitionerRole",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/PractitionerRole"
+              }
+            }
+          }
+        },
         "responses": {
           "default": {
             "description": "Error, with details",
@@ -1171,11 +1450,19 @@
             }
           },
           "200": {
-            "description": "the resource being returned",
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/PractitionerRole"
                 }
               }
             }
@@ -1183,30 +1470,16 @@
         },
         "parameters": [
           {
+            "$ref": "#/components/parameters/summary"
+          },
+          {
             "$ref": "#/components/parameters/format"
           },
           {
             "$ref": "#/components/parameters/pretty"
           },
           {
-            "$ref": "#/components/parameters/summary"
-          },
-          {
             "$ref": "#/components/parameters/elements"
-          },
-          {
-            "name": "identifier",
-            "in": "query",
-            "description": "A practitioner\u0027s Identifier",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "_filter",
-            "in": "query",
-            "description": "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails",
-            "schema": {}
           }
         ]
       }
@@ -1214,9 +1487,25 @@
     "/PractitionerRole/{rid}": {
       "summary": "Read/Write/etc resource instance of type PractitionerRole",
       "description": "Access to services to manage the state of a single resource of type PractitionerRole",
-      "get": {
-        "summary": "Read the current state of the resource",
-        "operationId": "readPractitionerRole",
+      "patch": {
+        "summary": "Change the current state of the resource by providing a patch - a series of change commands",
+        "operationId": "patchPractitionerRole",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/PractitionerRole"
+              }
+            },
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+              }
+            }
+          }
+        },
         "responses": {
           "default": {
             "description": "Error, with details",
@@ -1229,7 +1518,7 @@
             }
           },
           "200": {
-            "description": "the resource being returned",
+            "description": "the resource being returned after being patched",
             "headers": {
               "ETag": {
                 "description": "Version from Resource.meta.version as a weak ETag",

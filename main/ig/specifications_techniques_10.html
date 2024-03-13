@@ -120,6 +120,12 @@
         <a href="specifications_techniques_10.html">Création et Mise à jour du lieu de réalisation de l&apos;offre</a>
       </li>
       <li>
+        <a href="saisie_offre.html">Saisie de l&apos;offre</a>
+      </li>
+      <li>
+        <a href="miseAjour_offre.html">Mise à jour  de l&apos;offre</a>
+      </li>
+      <li>
         <a href="specifications_techniques_5.html">Signalement d&apos;anomalie</a>
       </li>
       <li>
@@ -187,7 +193,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="specifications_techniques_5.html">next&gt;</a>
+          | <a href="saisie_offre.html">next&gt;</a>
 
           </span>
 
@@ -248,7 +254,7 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 <p><strong>Interaction FHIR</strong></p>
 </td>
 <td width="465">
-<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a>, Create<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a> (limitée aux attributs de 'premier niveau'), Create<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
 </td>
 </tr>
 <tr>
@@ -322,7 +328,9 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft">Scénario 1 : Ajout d’un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 1 : Ajout d’un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l'offre de fonction "001 | hébergement", associé à une offre opérationnelle existante dont l’identifiant est XXX, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.</p>
 
@@ -438,7 +446,10 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-<h4 id="scénario-2-ajout-dune-capacité-de-prise-en-charge-draft">Scénario 2 : Ajout d’une capacité de prise en charge <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<h4 id="spécifique-serveur-scénario-2-ajout-dune-capacité-de-prise-en-charge-draft">[spécifique serveur] Scénario 2 : Ajout d’une capacité de prise en charge <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement (via bed management, ...) ajoute dans un lieu de réalisation de l'offre existant dont l’identifiant est XXX, des données capacitaires pour une affectation temporaire : une affectation temporaire "Covid +", 2 lits disponibles (sexe indifférencié), à t0.</p>
 
@@ -566,7 +577,9 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-3-suppression-dune-capacité-daccueil-opérationnelle-draft">Scénario 3 : Suppression d’une capacité d’accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-3-suppression-dune-capacité-daccueil-opérationnelle-draft">[spécifique serveur] Scénario 3 : Suppression d’une capacité d’accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement (via bed management, …) supprime dans un lieu de réalisation de l'offre existant dont l’identifiant est XXX tous les enregistrements liés à l'affectation temporaire "Covid-".</p>
 
@@ -596,7 +609,9 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-4-mise-à-jour-de-ladresse-du-lieu-de-réalisation-de-loffre-draft">Scénario 4 : Mise à jour de l’adresse du lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-4-mise-à-jour-de-ladresse-du-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 4 : Mise à jour de l’adresse du lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement modifie le numéro de voie de l’adresse (nouvelle valeur : YYY) du lieu de réalisation de l’offre dont l’identifiant est XXX.</p>
 
@@ -635,7 +650,9 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-5-ajout-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">Scénario 5 : Ajout d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-5-ajout-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 5 : Ajout d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Ajout d’un équipement spécifique dans un lieu de réalisation de l’offre dont l’identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</p>
 
@@ -743,7 +760,9 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre></div></div>
 
-<h4 id="scénario-6-modification-de-la-quantité-déquipements-spécifiques-dans-un-lieu-de-réalisation-de-loffre-draft">Scénario 6 : Modification de la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-6-modification-de-la-quantité-déquipements-spécifiques-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 6 : Modification de la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Modification de la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre dont l’identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</p>
 
@@ -773,7 +792,9 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="scénario-7-suppression-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">Scénario 7 : Suppression d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-7-suppression-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 7 : Suppression d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement indique qu’il ne dispose plus de l’échographe 3D, il modifie le nombre d’équipement en service : 030 | Echographe 3D, nb en service : 0, aucune limite équipement associée.</p>
 
@@ -802,7 +823,10 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-<h4 id="scénario-8-modification-de-la-valeur-limite-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">Scénario 8 : Modification de la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<h4 id="spécifique-serveur-scénario-8-modification-de-la-valeur-limite-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 8 : Modification de la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement modifie la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre dont l’identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 280 kg.</p>
 
@@ -1448,7 +1472,7 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="specifications_techniques_5.html">next&gt;</a>
+                <a href="saisie_offre.html">next&gt;</a>
 
               </td>
             </tr>
@@ -1458,7 +1482,7 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 16:27+0000">2024-03-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 16:38+0000">2024-03-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

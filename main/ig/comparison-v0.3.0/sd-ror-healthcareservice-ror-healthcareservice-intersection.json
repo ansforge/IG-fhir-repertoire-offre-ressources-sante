@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "1af7c385-e4de-4ee9-a4ec-10b8a36fe33b-78",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1af7c385-e4de-4ee9-a4ec-10b8a36fe33b-78",
+  "id" : "85173f18-c155-4723-b784-482c82e77d89-78",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/85173f18-c155-4723-b784-482c82e77d89-78",
   "name" : "IntersectionRORHealthcareServiceAndRORHealthcareService",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2024-03-13T16:28:13+00:00",
+  "date" : "2024-03-13T16:38:45+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -2445,11 +2445,11 @@
     },
     {
       "path" : "HealthcareService.availableTime.daysOfWeek",
-      "short" : "mon | tue | wed | thu | fri | sat | sun",
+      "short" : "left: mon | tue | wed | thu | fri | sat | sun; right: Remarque : L'utilisation de l'extension ror-available-time-number-days-of-week est privilégiée.",
       "definition" : "Indicates which days of the week are available between the start and end Times.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "min" : 0,
-      "max" : "*",
+      "max" : "1",
       "type" : [{
         "code" : "code"
       }],
