@@ -4,3 +4,9 @@ Description: "Extension créée dans le cadre du ROR pour indiquer le nombre de 
 * ^context.type = #element
 * ^context.expression = "Organization"
 * value[x] only integer
+
+Mapping:  ConceptMetier_ROROrganizationNbPermanentSocialHelpPlace
+Source:   ROROrganizationNbPermanentSocialHelpPlace
+Id:       specmetier-to-ROROrganizationNbPermanentSocialHelpPlace
+Title:    "Spécification métier vers l'extension ROR NbPermanentSocialHelpPlace"
+* valueInteger -> "nbPlaceAideSocialPermanent"

@@ -1,0 +1,6 @@
+@startuml consultation_donnees_capacitaires
+actor "Consommateur" as C
+actor "ROR national" as ROR
+C -> ROR : Recherche_Capacités \n (capacités des lieux de réalisation de l'offre via critères de recherche)
+ROR --> C : Réponse \n (lieu de réalisation de l'offre et identifiants offres opérationnelles liées)
+@enduml

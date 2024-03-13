@@ -16,7 +16,7 @@ The aim of this implementation guide is to define the specifications of the ROR 
 ### Informations sur ce guide d'implémentation
 
 <b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.0 du ROR.<br>
-Cette version du guide d'implementation cible l'implémentation de l'API FHIR dans la solution du ROR National version 2.3.</b>
+Cette version ballot du guide d'implementation cible l'implémentation de l'API FHIR dans la solution du ROR National version 3.2. Il est à destination des implémenteurs du ROR National et des recetteurs à ce stade</b>
 
 Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la manière suivante :
 
@@ -156,6 +156,16 @@ Les systèmes consommateurs du web service du ROR national doivent
 pouvoir intégrer les évolutions régulières des nomenclatures (ajout de
 code, modification de libellé, mise en obsolescence d'un code,
 réactivation de code).
+
+##### Ressources profilées
+
+La liste ci-dessous expose la liste des profils génériques profilés.
+
+{% sql SELECT '[' || Name ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%"%}
+
+<div class="figure" style="width:100%;">
+    <p>{% include vue-fonctionnelle-fhir.svg %}</p>
+</div>
 
 #### Dépendances
 

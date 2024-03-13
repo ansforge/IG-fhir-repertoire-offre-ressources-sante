@@ -13,7 +13,7 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 <p><strong>Interaction FHIR</strong></p>
 </td>
 <td width="465">
-<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a>, Create<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
+<p>Patch<a href="#_ftn1" name="_ftnref1">[1]</a> (limitée aux attributs de 'premier niveau'), Create<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a></p>
 </td>
 </tr>
 <tr>
@@ -75,7 +75,9 @@ Si la mise à jour échoue, le serveur doit répondre :
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Ajout d'un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l\'offre de fonction \"001 \| hébergement\", associé à une offre opérationnelle existante dont l'identifiant est XXX, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.
 
@@ -189,7 +191,10 @@ PATCH [BASE]/HealthcareService/XXX
     ]
 }
 ```
-#### Scénario 2 : Ajout d'une capacité de prise en charge <code><span style="color: #ff0000;">draft</span></code>
+
+#### [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge <code><span style="color: #ff0000;">draft</span></code>
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement (via bed management, \...) ajoute dans un lieu de réalisation de l\'offre existant dont l'identifiant est XXX, des données capacitaires pour une affectation temporaire : une affectation temporaire \"Covid +\", 2 lits disponibles (sexe indifférencié), à t0.
 
@@ -318,7 +323,9 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### Scénario 3 : Suppression d'une capacité d'accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code>
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement (via bed management, ...) supprime dans un lieu de réalisation de l\'offre existant dont l'identifiant est XXX tous les enregistrements liés à l\'affectation temporaire \"Covid-\".
 
@@ -349,7 +356,9 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement modifie le numéro de voie de l'adresse (nouvelle valeur : YYY) du lieu de réalisation de l'offre dont l'identifiant est XXX.
 
@@ -389,8 +398,9 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
+#### [spécifique serveur] Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
-#### Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
@@ -499,7 +509,9 @@ PATCH [BASE]/Location/XXX
 } 
 ```
 
-#### Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
@@ -530,7 +542,9 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement indique qu'il ne dispose plus de l'échographe 3D, il modifie le nombre d'équipement en service : 030 \| Echographe 3D, nb en service : 0, aucune limite équipement associée.
 
@@ -560,7 +574,10 @@ PATCH [BASE]/Location/XXX
     ]
 }
 ```
-#### Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+
+#### [spécifique serveur] Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+
+*Cette requête ne pourra être exécutée que par le serveur.*
 
 **Description du scénario :** Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 
@@ -590,6 +607,583 @@ PATCH [BASE]/Location/XXX
 					"value": 280
 				}
 			]
+                }
+            ]
+        }
+    ]
+}
+```
+
+#### [Bed Management] Scénario 9 : Remplacement de toutes les données capacitaires <code><span style="color: #ff0000;">draft</span></code>
+
+*Ce scenario cible les éditeurs de solutions de bedmanagement.*
+
+**Description du scénario :** Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).
+
+**Exemple :**
+
+<table align="center">
+    <tr>
+		<td align ="center">
+            <b>Avant</b>
+        </td>
+        <td align ="center">
+            <div class="figure">
+				<img src="creation-maj-offre_scenario9_avant.png" title="Avant" width="1000">
+            </div>
+        </td>   
+    </tr>
+	    <tr>
+		<td align ="center">
+            <b>Après</b>
+        </td>
+        <td align ="center">
+            <div class="figure">
+				<img src="creation-maj-offre_scenario9_apres.png" title="Après" width="1000">
+            </div>
+        </td>    
+    </tr>
+</table>
+
+**Requête recommandée (via id technique) :**
+```json
+PATCH [BASE]/Location/XXX
+
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name": "type",
+                    "valueString": "replace"
+                },
+                {
+                    "name": "path",
+                    "valueString": "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity')"
+                },
+                {
+                    "name": "value",
+                    "part": [
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "01",
+												"display": "Installé"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "10"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2023-09-25T15:20:00+01:00"
+								}
+							]
+						},
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "02",
+												"display": "Disponible"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "6"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2023-09-25T15:20:00+01:00"
+								},
+								{
+									"url": "genderCapacityAvailable",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/",
+												"code": "02",
+												"display": "Homme"
+											}
+										]
+									}
+								}
+							]
+						}
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "02",
+												"display": "Disponible"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "4"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2024-02-02T11:30:00+01:00"
+								},
+								{
+									"url": "genderCapacityAvailable",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/",
+												"code": "03",
+												"display": "Indifférencié"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+                }
+            ]
+        }
+    ]
+}
+```
+
+
+**Requête (via identifiant fonctionnel) :**
+*Nous déconseillons l'utilisation du PATCH conditionnel en effet sa maturité en FHIR R4 est "trial use".*  
+```json
+PATCH [BASE]/Location?identifier=YYY
+
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name": "type",
+                    "valueString": "replace"
+                },
+                {
+                    "name": "path",
+                    "valueString": "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity')"
+                },
+                {
+                    "name": "value",
+                    "part": [
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "01",
+												"display": "Installé"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "10"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2023-09-25T15:20:00+01:00"
+								}
+							]
+						},
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "02",
+												"display": "Disponible"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "6"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2023-09-25T15:20:00+01:00"
+								},
+								{
+									"url": "genderCapacityAvailable",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/",
+												"code": "02",
+												"display": "Homme"
+											}
+										]
+									}
+								}
+							]
+						}
+						{
+							"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity",
+							"extension": [
+								{
+									"url": "temporaryAssignement",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
+												"code": "01",
+												"display": "Aucune"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
+												"code": "01",
+												"display": "Lit"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityStatus",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
+												"code": "02",
+												"display": "Disponible"
+											}
+										]
+									}
+								},
+								{
+									"url": "temporalityCapacity",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
+												"code": "01",
+												"display": "Courant"
+											}
+										]
+									}
+								},
+								{
+									"url": "nbCapacity",
+									"valueInt": "4"
+								},
+								{
+									"url": "capacitySourceType",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J193-TypeSourceCapacite-ROR/FHIR/JDV-J193-TypeSourceCapacite-ROR/",
+												"code": "02",
+												"display": "Bed management"
+											}
+										]
+									}
+								},
+								{
+									"url": "capacityUpdateDate",
+									"valueDateTime": "2024-02-02T11:30:00+01:00"
+								},
+								{
+									"url": "genderCapacityAvailable",
+									"valueCodeableConcept": {
+										"coding": [
+											{
+												"system": "https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/",
+												"code": "03",
+												"display": "Indifférencié"
+											}
+										]
+									}
+								}
+							]
+						}
+					]
                 }
             ]
         }

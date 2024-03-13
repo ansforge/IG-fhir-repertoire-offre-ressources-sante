@@ -13,3 +13,12 @@ Description: "Extension créée dans le cadre du ROR pour décrire une ressource
 * extension[equipmentType].value[x] only CodeableConcept
 * extension[equipmentType].valueCodeableConcept from $JDV-J18-EquipementSpecifique-ROR (required)
 * extension[nbInService].value[x] only integer
+
+
+Mapping:  ConceptMetier_RORLocationEquipment
+Source:   RORLocationEquipment
+Id:       specmetier-to-RORLocationEquipment
+Title:    "Spécification métier vers l'extension ROR LocationEquipment"
+* -> "EquipementSpecifique"
+* extension[equipmentType].valueCodeableConcept -> "typeEquipement"
+* extension[nbInService].valueInteger -> "nbEquipementEnService"

@@ -12,3 +12,12 @@ Description: "Extension créée dans le cadre du ROR qui précise les limites qu
 * extension[equipmentFeature].value[x] only CodeableConcept
 * extension[equipmentFeature].valueCodeableConcept from $JDV-J228-TypeCaracteristiqueEquipement-ROR (required)
 * extension[limitValue].value[x] only Quantity
+
+
+Mapping:  ConceptMetier_RORLocationEquipmentLimit
+Source:   RORLocationEquipmentLimit
+Id:       specmetier-to-RORLocationEquipmentLimit
+Title:    "Spécification métier vers l'extension ROR LocationEquipmentLimit"
+* -> "LimiteCaracteristiqueEquipement"
+* extension[equipmentFeature].valueCodeableConcept -> "typeCaracteristique"
+* extension[limitValue].valueQuantity -> "valeurLimite"

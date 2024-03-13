@@ -7,6 +7,8 @@ A ce jour, le guide d'implémentation de l'API FHIR du ROR a pour vocation à r�
 -   Recherche d'offre sur la base d'informations tarifaires
 -   Recherche d'offre via une technique « Full text »
 -   Création et Mise à jour du lieu de réalisation de l’offre
+-   Saisie de l'offre
+-   Mise à jour de l'offre
 -   Signalement d'anomalie
 -   Mise à jour d'anomalie
 -   Consultation d'anomalie
@@ -37,6 +39,8 @@ Pour les cas d'usage couverts par ce guide d'implémentation :
     -   Le système consommateur peut uniquement effectuer les recherches autorisées par son profil d'accès aux données. Plus d'information [ici](https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf) .
 -   Les postconditions sont :
     -   L'exécution des transactions ne provoquera aucune modification sur les données sources extraites.
+-   La mention "serveur" désigne le serveur ROR national.
+
 
 ### Consultation des données capacitaires
 
@@ -51,9 +55,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image6.png" alt="Recherche capacité (modèle expo V3.0)" title="Recherche capacité (modèle expo V3.0)">
-            </div>
+            <div style="text-inlin:center;">{%include consultation_donnees_capacitaires.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -63,16 +65,20 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
     </tr>
 </table>
 
+
 #### Scénarios
 
 -   Scénario 1 : Données capacitaires sur le périmètre national
-    -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur le périmètre national afin de mettre à jour son système (Exemple de ROR urgence qui souhaite afficher l\'ensemble des capacités sur une carte).
+    -   Un consommateur souhaite mettre à jour toutes les données capacitaires sur le périmètre national.
 
 -   Scénario 1 bis : Données capacitaires sur une région
-    -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région afin de mettre à jour son système. 
+    -   Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.
+
+-   Scénario 1 ter : Données capacitaires sur une région source
+    -   Un consommateur souhaite récupérer l\'ensemble des données capacitaires sur une région source afin de mettre à jour son système. 
 
 -   Scénario 2 : Données capacitaires sur un lieu de prise en charge identifié
-    -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge -\> il connait un des identifiants (identifiant de point de saisie ou identifiant externe de synchronisation) et demande à lire une donnée capacitaire en particulier.
+    -   Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié. 
 
 -   Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
     -   Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
@@ -81,7 +87,7 @@ Le ROR National répond au consommateur les lieux de réalisation de l'offre cor
     -   Un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.
 
 -   Scénario 5 : Données capacitaires d'une offre opérationnelle
-    -   Un consommateur ayant recherché au préalable une offre de santé correspondant à ses critères (exemple : Urgences spécialisées cardiologiques via le service de recherche sur le modèle d'exposition 2.4 du ROR) souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en  paramètre de la recherche.
+    -   Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_1.html)**
 
@@ -110,14 +116,10 @@ Il y a deux cas possibles :
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image7.png" alt="Extraction complète offre" title="Extraction complète offre)">
-        </div>
+            <div style="text-inlin:center;">{%include extraction_offre_complete.svg%}</div>
         </td>
-         <td align ="center">
-            <div class="figure">
-                <img src="image8.png" alt="Extraction partielle offre"  title="Extraction partielle offre)">
-            </div>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include extraction_offre_partielle.svg%}</div>
         </td>        
     </tr>
     <tr>
@@ -176,9 +178,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 <table align="center">
     <tr>
         <td align ="center">
-        <div class="figure">
-            <img src="image9.png" alt="Recherche offre" title="Recherche offre">
-        </div>
+            <div style="text-inlin:center;">{%include recherche_offre_criteres_principaux.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -192,37 +192,37 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 #### Scénarios
 
 -   Scenario 1 : Recherche sur un critère en saisissant une valeur
-    -   Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'unique valeur recherchée par le consommateur.
+    - Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’unique valeur recherchée par le consommateur.
 
 -   Scenario 2 : Recherche sur un critère en saisissant une liste de valeurs
-    -   Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'une des valeurs recherchées par le consommateur.
+    - Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’une des valeurs recherchées par le consommateur.
 
 -   Scenario 3 : Recherche multicritères #1 -- ET
-    -   Un consommateur cherche les offres ayant un type d'offre **ET** une modalité d'accueil qu’il indique.
+    - Un consommateur cherche les offres ayant un type d’offre **ET** une modalité d’accueil qu’il indique.
 
 -   Scenario 4 : Recherche multicritères #2 -- OU
-    -   Un consommateur cherche les offres ayant à un type d'offre  **OU** une activité opérationnelle qu’il indique.
+    - Un consommateur cherche les offres ayant un type d’offre **OU** une activité opérationnelle qu’il indique pour un patient d'âge donné.
 
 -   Scenario 5 : Recherche multicritères #3 -- ET/OU
     -   Un consommateur recherche les offres ayant (une catégorie d'établissement **OU** un type d'offre) **ET** un acte spécifique qu’il indique.
 
 -   Scenario 6 : Recherche à proximité géographique
-    -   Un consommateur cherche les offres ayant une activité opérationnelle, dans un périmètre géographique proche du lieu de résidence d\'un patient.
+    - Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d'un patient.
 
 -   Scenario 7 : Recherche sur une zone d'intervention
-    -   Un consommateur cherche les offres proposées dans une commune faisant partie d\'une zone d\'intervention.
+    - Un consommateur cherche les offres ayant un type d'offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d'une zone d'intervention.
 
 -   Scenario 8 : Recherche sur un département
-    -   Un consommateur recherche les offres sur un département, ou un ensemble de département (code postal).
+    - Un consommateur recherche les offres ayant une catégorie d’organisation, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).
 
 -   Scenario 9 : Recherche sur une ville #1 -- Code Postal
-    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code postal).
+    - Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).
 
 -   Scenario 10 : Recherche sur une ville #2 -- Code commune
-    -   Un consommateur recherche les offres sur une ville, ou un ensemble de villes (code commune).
+    - Un consommateur recherche les offres proposant une activité opérationnelle particulière et un mode de prise en charge particulier, sur une ville, ou un ensemble de villes (code commune).
 
 -   Scenario 11 : Recherche sur un critère du modèle d'exposition 3.0
-    -   Un consommateur recherche les offres proposant une modalité d\'accueil et un niveau d\'expertise (critères modèle 3.0).
+    -   Un consommateur recherche les offres proposant une compétence spécifique.
   
 -    Scenario 12 : Recherche d’offre en anomalie
      -   Un responsable qualité recherche les offres en anomalie de sa région.
@@ -242,9 +242,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image10.png" alt="Recherche offre avec données capacitaires" title="Recherche offre avec données capacitaires">
-            </div>
+            <div style="text-inlin:center;">{%include recherche_offre_donnees_capacitaires.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -257,13 +255,13 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 #### Scénarios
 
 -   Scenario 1 : Recherche sur un critère capacitaire #1
-    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit disponible.
+    -   Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.
 
 -   Scenario 2 : Recherche sur un critère capacitaire #2
-    -   Un consommateur cherche les offres proposant une activité opérationnelle et disposant d\'un lit fermé réouvrable.
+    -   Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.
 
 -   Scenario 3 : Recherche sur un critère de l'équipement
-    -   Un consommateur cherche une offre de chirurgie traumatologique proposant un appareil de radiologie adapté à l\'obésité du patient.
+    -   Un consommateur cherche une offre pour une activité opérationnelle donnée, et disposant d’équipement respectant certaines caractéristiques.
   
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_4.html)**
 
@@ -274,9 +272,7 @@ Le ROR National répond au consommateur les offres opérationnelles correspondan
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image15.png" alt="Un consommateur recherche l'offre des établissements sur la base d'informations tarifaires" title="Un consommateur recherche l'offre des établissements sur la base d'informations tarifaires">
-            </div>
+            <div style="text-inlin:center;">{%include recherche_offre_informations_tarifaires.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -313,9 +309,7 @@ Un consommateur recherche une chaine de caractères libre dans le contenu textue
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image20.png" alt="Recherche « Full text »" title="Recherche « Full text »">
-            </div>
+            <div style="text-inlin:center;">{%include recherche_offre_fulltext.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -348,9 +342,7 @@ Un établissement souhaite créer un lieu de réalisation de l'offre (dont les d
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image21.png" alt="Création du lieu de réalisation de l'offre" title="Création du lieu de réalisation de l'offre">
-            </div>
+            <div style="text-inlin:center;">{%include creation_maj_lieu.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -372,11 +364,7 @@ Remarque : Après la création du lieu de réalisation de l'offre, il est néce
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image14.png" alt="Un établissement souhaite mettre à jour un lieu de
-réalisation de l'offre (dont les données capacitaires)" title="Un établissement souhaite mettre à jour un lieu de
-réalisation de l'offre (dont les données capacitaires)">
-            </div>
+            <div style="text-inlin:center;">{%include maj_lieu.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -392,31 +380,134 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 #### Scénarios
 
--   Scénario 1 : Ajout d'un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre
     -   Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l\'offre de fonction \"001 \| hébergement\", associé à une offre opérationnelle existante, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.
 
--   Scénario 2 : Ajout d'une capacité de prise en charge
+-   [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge
     -   Un établissement (via bed management, \...) ajoute dans un lieu de réalisation de l\'offre existant, des données capacitaires pour : une affectation temporaire \"Covid +\", 2 lits disponibles (sexe indifférencié), à t0.
 
--   Scénario 3 : Suppression d'une capacité d'accueil opérationnelle
+-   [spécifique serveur] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle
     -   Un établissement (via bed management, ...) supprime dans un lieu de réalisation de l\'offre existant tous les enregistrements liés à l\'affectation temporaire \"Covid-\".
 
--   Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre
     -   Un établissement modifie le numéro de voie de l'adresse du lieu de réalisation de l'offre.
 
--   Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre
     -   Un établissement ajout un équipement spécifique dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
--   Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre
     -   Un établissement modifie la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
--   Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre
     -   Un établissement indique qu'il ne dispose plus de l'échographe 3D, il modifie la quantité d'équipement en service : 030 \| Echographe 3D, nb en service : 0, aucune limite équipement associée.
 
--   Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
+-   [spécifique serveur] Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
     -   Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 
+-   [solutions BedManagement] Scénario 9 : Remplacement de toutes les données capacitaires
+    -   Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).
+
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
+
+### Saisie de l'offre
+
+#### Description du cas d'usage : Saisie de l'offre
+
+Un serveur souhaite créer une offre.
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include saisie_offre.svg%}</div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Saisie de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+
+Le serveur renseigne les informations nécessaires à l'initialisation de l'offre.
+
+Le ROR National répond à l'établissement toutes les informations saisie, l'identifiant technique et les métadonnées.
+
+#### Scénarios
+
+-   [spécifique serveur] Scénario 1 : Création de l'entité juridique d'un établissement
+    -   Afin de décrire son offre, un établissement crée son entité juridique. 
+-   [spécifique serveur] Scénario 2 : Création de l'entité géographique d'un établissement
+    -   Afin de décrire son offre, un établissement crée son entité géographique. 
+-   [spécifique serveur] Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement
+    -   Un établissement ajoute une offre opérationnelle couvrant une autre zone d'intervention que les offres opérationnelles précédemment enregistrées.
+-   [spécifique serveur] Scénario 4 : Création d'un pôle
+    -   Afin de décrire son offre, un établissement crée un pôle.
+-   [spécifique serveur] Scénario 5 : Création d'un service
+    -   Afin de décrire son offre, un établissement crée un service.
+-   [spécifique serveur] Scénario 6 : Création d'une unité fonctionnelle
+    -   Afin de décrire son offre, un établissement crée une unité fonctionnelle.
+-   [spécifique serveur] Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante
+    -   Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
+-   [spécifique serveur] Scénario 8 : Création d'une offre opérationnelle de ville
+    -   A la suite d'un adossement à l'annuaire, le ROR national crée l'offre opérationnelle d'un cabinet de ville.
+-   [spécifique serveur] Scénario 9 : Création d'un professionnel
+    -   Afin de décrire son offre, un établissement ajoute un professionnel.
+-   [spécifique serveur] Scénario 10 : Création d'une situation opérationnelle
+    -   Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
+
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](saisie_offre.html)**
+
+### Mise à jour de l'offre
+
+#### Description du cas d'usage : Mise à jour de l'offre
+
+Un serveur ou un consommateur souhaite mettre à jour une offre.
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include maj_offre.svg%}</div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Mise à jour de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+Le serveur ou le consommateur renseigne l'identifiant technique de l'offre à mettre à jour et les informations à modifier.
+
+Le ROR National répond à l'établissement, au moins, l'identifiant technique, les métadonnées et l'identifiant fonctionnel de l'offre mise à jour.
+
+#### Scénarios
+
+-   [spécifique serveur] Scénario 1 : Modification d'une entité juridique
+    -   Une entité juridique enregistre un changement d'adresse.
+-   [spécifique serveur] Scénario 2 : Modification d'une entité géographique
+    -   Une entité géographique enregistre un changement de numéro de téléphone et ajoute un contact.
+-   [spécifique serveur] Scénario 3 : Modification d'une organisation interne 
+    -   Un établissement sanitaire modifie le nom d'un service.
+-   [spécifique serveur] Scénario 4 : Modification d'informations sur un professionnel
+    -   L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
+-   [spécifique serveur] Scénario 5 : Modification d'informations sur une situation opérationnelle
+    -   L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
+-   [spécifique serveur] Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique)
+    -   Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite.
+-   [spécifique serveur] Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle)
+    -   Un établissement retire une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au sein d'une structure.
+-   [spécifique serveur] Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville)
+    -   Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
+-   [spécifique serveur] Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
+    -   Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
+-   [spécifique serveur] Scénario 10 : Modification de multiples informations sur une offre
+    -   Un utilisateur ajoute une activité opérationnelle, un acte spécifique, un contact avec son numéro et modifie ses horaires.
+-   Scénario 11 : Ajout d’un lieu de réalisation de l’offre
+    -   Un utilisateur ajoute un lieu de réalisation de l'offre dans une offre opérationnelle existante.
+
+
+**Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](miseAjour_offre.html)**
 
 ### Signalement d’anomalie
 
@@ -430,9 +521,7 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image11.png" alt="Signalement d'anomalie" title="Signalement d'anomalie">
-            </div>
+            <div style="text-inlin:center;">{%include signalement_anomalie.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -467,9 +556,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image12.png" alt="Mise à jour d'anomalie" title="Mise à jour d'anomalie">
-            </div>
+            <div style="text-inlin:center;">{%include maj_anomalie.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -481,11 +568,11 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
 
 #### Scénarios
 
--	Scenario 1 : Mise à jour du statut de plusieurs anomalies    
-    -	Le responsable de la donnée en anomalie corrige l'anomalie, le responsable qualité ou le moteur de règle met à jour le statut de l'anomalie (possible en masse).
+-	Scenario 1 : Mise à jour du statut d'une anomalie    
+    -	Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou un système numérique met à jour le statut de l’anomalie.
 
 -	Scenario 2 : Inactivation d’une anomalie    
-    -	Un responsable qualité décide d'inactiver une anomalie (elle a été saisie par erreur par exemple).
+    -	Un responsable qualité ou un système numérique décide d’inactiver une anomalie (elle a été saisie par erreur par exemple).
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_6.html)**
 
@@ -501,9 +588,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image13.png" alt="Consultation d'anomalie" title="Consultation d'anomalie">
-            </div>
+            <div style="text-inlin:center;">{%include consultation_anomalie.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -516,7 +601,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 #### Scénarios
 
 -	Scenario 1 : Consultation du statut d’une anomalie
-    -	Un responsable qualité ou le moteur de règle souhaite consulter le statut d'une anomalie.
+    -	Un responsable qualité ou un système numérique consommateur souhaite consulter le statut d’une anomalie.
 
 -	Scenario 2 : Consultation de la liste des anomalies
     -	Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d'un élément.
@@ -538,9 +623,7 @@ Un consommateur souhaite consulter des indicateurs de pilotage.
 <table align="center">
     <tr>
         <td align ="center">
-            <div class="figure">
-                <img src="image18.png" alt="Consultation d'indicateurs de pilotage (modèle expo V3.0)" title="Consultation d'indicateurs de pilotage (modèle expo V3.0)">
-            </div>
+            <div style="text-inlin:center;">{%include consultation_indicateurs.svg%}</div>
         </td>    
     </tr>
     <tr>
