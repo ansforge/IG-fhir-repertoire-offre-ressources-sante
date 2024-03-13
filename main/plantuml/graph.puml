@@ -325,6 +325,41 @@ package IG #DDDDDD{
              PractitionerRole.availableTime.availableEndTime => [None..None]
         } 
 
+        class RORQuestionnaire{
+
+             Questionnaire.identifier => [None..1]
+             Questionnaire.version => [None..None]
+             Questionnaire.name => [1..None]
+             Questionnaire.title => [1..None]
+             Questionnaire.derivedFrom => [None..None]
+             Questionnaire.subjectType => [1..None]
+             Questionnaire.date => [None..None]
+             Questionnaire.publisher => [None..None]
+             Questionnaire.description => [None..None]
+             Questionnaire.useContext => [1..None]
+             Questionnaire.useContext:catEG => [1..*]
+             Questionnaire.useContext:catEG.code => [None..None]
+             Questionnaire.useContext:catEG.value[x] => [None..None]
+             Questionnaire.useContext:catEG.value[x]:valueCodeableConcept => [0..1]
+             Questionnaire.useContext:catPS => [0..*]
+             Questionnaire.useContext:catPS.code => [None..None]
+             Questionnaire.useContext:catPS.value[x] => [None..None]
+             Questionnaire.useContext:catPS.value[x]:valueCodeableConcept => [0..1]
+             Questionnaire.useContext:catSpeOrdinal => [0..*]
+             Questionnaire.useContext:catSpeOrdinal.code => [None..None]
+             Questionnaire.useContext:catSpeOrdinal.value[x] => [None..None]
+             Questionnaire.useContext:catSpeOrdinal.value[x]:valueCodeableConcept => [0..1]
+             Questionnaire.approvalDate => [None..None]
+             Questionnaire.lastReviewDate => [None..None]
+             Questionnaire.effectivePeriod => [None..None]
+             Questionnaire.code => [None..0]
+             Questionnaire.item => [None..None]
+             Questionnaire.item.definition => [None..None]
+             Questionnaire.item.code => [None..0]
+             Questionnaire.item.required => [None..None]
+             Questionnaire.item.answerValueSet => [None..None]
+        } 
+
         class RORTask{
 
              Task.identifier => [None..1]
@@ -921,6 +956,18 @@ package IG #DDDDDD{
 
      RORActType -[#black,dotted,thickness=2]-> ActTypeRORValueSet
 
+        class RORUsageContextTypeVS  
+
+     RORQuestionnaire -[#black,dotted,thickness=2]-> RORUsageContextTypeVS
+
+        class RORUsageContextTypeVS  
+
+     RORQuestionnaire -[#black,dotted,thickness=2]-> RORUsageContextTypeVS
+
+        class RORUsageContextTypeVS  
+
+     RORQuestionnaire -[#black,dotted,thickness=2]-> RORUsageContextTypeVS
+
         class CodeRegionTerritorialDivisionRORValueSet  
 
      RORTerritorialDivision -[#black,dotted,thickness=2]-> CodeRegionTerritorialDivisionRORValueSet
@@ -955,6 +1002,10 @@ package "Ressources de base" #palegreen {
  class "PractitionerRole" as  classa6482460b0b027d14fe848816788acb6 
 
     classa6482460b0b027d14fe848816788acb6 --> RORPractitionerRole
+
+ class "Questionnaire" as  class179d692ef9707bcf6d92ff37fd394ec8 
+
+    class179d692ef9707bcf6d92ff37fd394ec8 --> RORQuestionnaire
 
  class "Task" as  classeaeb30f9f18e0c50b178676f3eaef45f 
 

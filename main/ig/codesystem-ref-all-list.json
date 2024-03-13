@@ -85,6 +85,18 @@
       "http://hl7.org/fhir/R4/valueset-identifier-use.html" : "IdentifierUse"
     },
     {
+      "url" : "http://hl7.org/fhir/item-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireItemType",
+      "title" : "QuestionnaireItemType",
+      "description" : "Distinguishes groups from questions and display text and indicates data type for questions.",
+      "oids" : ["2.16.840.1.113883.4.642.4.445"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-item-type.html" : "QuestionnaireItemType"
+    },
+    {
       "url" : "http://hl7.org/fhir/location-mode",
       "version" : "4.0.1",
       "status" : "draft",
@@ -157,6 +169,30 @@
       "http://hl7.org/fhir/R4/valueset-publication-status.html" : "PublicationStatus"
     },
     {
+      "url" : "http://hl7.org/fhir/questionnaire-enable-behavior",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EnableWhenBehavior",
+      "title" : "EnableWhenBehavior",
+      "description" : "Controls how multiple enableWhen values are interpreted -  whether all or any must be true.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1008"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-questionnaire-enable-behavior.html" : "EnableWhenBehavior"
+    },
+    {
+      "url" : "http://hl7.org/fhir/questionnaire-enable-operator",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireItemOperator",
+      "title" : "QuestionnaireItemOperator",
+      "description" : "The criteria by which a question is enabled.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1006"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-questionnaire-enable-operator.html" : "QuestionnaireItemOperator"
+    },
+    {
       "url" : "http://hl7.org/fhir/request-intent",
       "version" : "4.0.1",
       "status" : "draft",
@@ -189,7 +225,8 @@
       "description" : "One of the resource types defined as part of this version of FHIR.",
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-subject-type.html" : "Subject type"
+      "http://hl7.org/fhir/R4/valueset-subject-type.html" : "Subject type",
+      "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
     },
     {
       "url" : "http://hl7.org/fhir/task-intent",
@@ -238,6 +275,18 @@
       "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-organization-type" : "fr-organization-type"
     },
     {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-questionnaire-questions.html" : "Questionnaire Question Codes"
+    },
+    {
       "url" : "http://snomed.info/sct",
       "version" : null,
       "status" : "active",
@@ -247,8 +296,10 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
+      "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+      "http://hl7.org/fhir/R4/valueset-use-context.html" : "ConformanceUseContext",
       "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes"
+      "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
@@ -407,6 +458,18 @@
       "http://hl7.org/fhir/R4/valueset-service-referral-method.html" : "ReferralMethod"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "UsageContextType",
+      "title" : "UsageContextType",
+      "description" : "A code that specifies a type of context being specified by a usage context.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1068"],
+      "uses" : {
+      },
+      "ValueSet-ror-usage-context-type-vs.html" : "Value Set type pour le contexte d'usage de la fiche de saisie"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0116",
       "version" : "2.2.0",
       "status" : "active",
@@ -474,6 +537,7 @@
       "oids" : ["1.0.3166.1"],
       "uses" : {
       },
+      "http://hl7.org/fhir/R4/valueset-use-context.html" : "ConformanceUseContext",
       "http://hl7.org/fhir/R4/valueset-jurisdiction.html" : "Jurisdiction"
     },
     {

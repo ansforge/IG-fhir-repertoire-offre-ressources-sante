@@ -10,7 +10,7 @@
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "active",
-  "date" : "2024-03-13T16:38:24+00:00",
+  "date" : "2024-03-13T17:00:38+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -686,6 +686,18 @@
       "name" : "Code System (CS) utilisé pour étendre le CS original avec le query parameter includeAssociatedData",
       "description" : "Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l'opération export pour le ROR",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/ror-questionnaire-offre-de-ville"
+      },
+      "name" : "Consignes fiche de saisie Cabinet de ville de médecine générale",
+      "description" : "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
     },
     {
       "extension" : [{
@@ -1748,6 +1760,18 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/ror-questionnaire"
+      },
+      "name" : "RORQuestionnaire",
+      "description" : "Fiche de saisie de l'offre de soins",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/ror-task"
       },
       "name" : "RORTask",
@@ -1812,6 +1836,18 @@
       },
       "name" : "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData",
       "description" : "Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ror-usage-context-type-vs"
+      },
+      "name" : "Value Set type pour le contexte d'usage de la fiche de saisie",
+      "description" : "Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale",
       "exampleBoolean" : false
     },
     {
@@ -1913,6 +1949,15 @@
         }],
         "nameUrl" : "specifications_techniques_10.html",
         "title" : "Création et Mise à jour du lieu de réalisation de l'offre",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "consignes_fiche_saisie_offre.html"
+        }],
+        "nameUrl" : "consignes_fiche_saisie_offre.html",
+        "title" : "Consignes fiche de saisie de l'offre",
         "generation" : "markdown"
       },
       {

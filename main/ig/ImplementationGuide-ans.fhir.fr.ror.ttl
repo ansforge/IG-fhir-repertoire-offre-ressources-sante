@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-03-13T16:38:24+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-13T17:00:38+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -603,6 +603,21 @@
        fhir:name [ fhir:v "Code System (CS) utilisé pour étendre le CS original avec le query parameter includeAssociatedData" ] ;
        fhir:description [ fhir:v "Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l'opération export pour le ROR" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Questionnaire" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-offre-de-ville> ;
+         fhir:reference [ fhir:v "Questionnaire/ror-questionnaire-offre-de-ville" ]
+       ] ;
+       fhir:name [ fhir:v "Consignes fiche de saisie Cabinet de ville de médecine générale" ] ;
+       fhir:description [ fhir:v "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM." ] ;
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1664,6 +1679,18 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire> ;
+         fhir:reference [ fhir:v "StructureDefinition/ror-questionnaire" ]
+       ] ;
+       fhir:name [ fhir:v "RORQuestionnaire" ] ;
+       fhir:description [ fhir:v "Fiche de saisie de l'offre de soins" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task> ;
          fhir:reference [ fhir:v "StructureDefinition/ror-task" ]
        ] ;
@@ -1729,6 +1756,18 @@
        ] ;
        fhir:name [ fhir:v "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData" ] ;
        fhir:description [ fhir:v "Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs> ;
+         fhir:reference [ fhir:v "ValueSet/ror-usage-context-type-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Value Set type pour le contexte d'usage de la fiche de saisie" ] ;
+       fhir:description [ fhir:v "Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1822,6 +1861,14 @@
          ] ) ;
          fhir:name [ fhir:v "specifications_techniques_10.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Création et Mise à jour du lieu de réalisation de l'offre" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "consignes_fiche_saisie_offre.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "consignes_fiche_saisie_offre.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Consignes fiche de saisie de l'offre" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
