@@ -4,3 +4,9 @@ Description: "Extension créée dans le cadre du ROR pour préciser si l'établi
 * ^context.type = #element
 * ^context.expression = "Organization"
 * value[x] only boolean
+
+Mapping:  ConceptMetier_ROROrganizationAccomodationFamily
+Source:   ROROrganizationAccomodationFamily
+Id:       specmetier-to-ROROrganizationAccomodationFamily
+Title:    "Spécification métier vers l'extension ROR AccomodationFamily"
+* valueBoolean -> "hebergementFamille"

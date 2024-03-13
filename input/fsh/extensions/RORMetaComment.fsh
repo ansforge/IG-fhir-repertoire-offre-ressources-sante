@@ -4,3 +4,9 @@ Description: "Extension créée dans le cadre du ROR qui correspond au commentai
 * ^context.type = #element
 * ^context.expression = "Organization"
 * value[x] only string
+
+Mapping:  ConceptMetier_RORMetaComment
+Source:   RORMetaComment
+Id:       specmetier-to-RORMetaComment
+Title:    "Spécification métier vers l'extension ROR MetaComment"
+* valueString -> "metadonnee.commentaire"

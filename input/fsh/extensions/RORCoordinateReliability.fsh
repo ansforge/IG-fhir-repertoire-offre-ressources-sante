@@ -9,3 +9,8 @@ Description: "Extension créée dans le cadre du ROR pour signaler si les inform
 * ^context[=].expression = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-eg-location"
 * value[x] only boolean
 
+Mapping:  ConceptMetier_RORCoordinateReliability
+Source:   RORCoordinateReliability
+Id:       specmetier-to-RORCoordinateReliability
+Title:    "Spécification métier vers l'extension ROR CoordinateReliability"
+* valueBoolean -> "coordonneesFiables"

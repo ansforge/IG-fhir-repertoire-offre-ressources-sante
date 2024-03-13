@@ -4,3 +4,9 @@ Description: "Extension créée dans le cadre du ROR pour préciser l’existenc
 * ^context.type = #element
 * ^context.expression = "Organization"
 * value[x] only boolean
+
+Mapping:  ConceptMetier_ROROrganizationDropZone
+Source:   ROROrganizationDropZone
+Id:       specmetier-to-ROROrganizationDropZone
+Title:    "Spécification métier vers l'extension ROR DropZone"
+* valueBoolean -> "zonePoser"

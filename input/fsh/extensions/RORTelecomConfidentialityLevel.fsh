@@ -7,3 +7,9 @@ Description: "Extension créée dans le cadre du ROR qui permet de définir le n
 * ^context[=].expression = "HealthcareService.extension.extension"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JDV-J222-NiveauConfidentialite-ROR (required)
+
+Mapping:  ConceptMetier_RORTelecomConfidentialityLevel
+Source:   RORTelecomConfidentialityLevel
+Id:       specmetier-to-RORTelecomConfidentialityLevel
+Title:    "Spécification métier vers l'extension ROR TelecomConfidentialityLevel"
+* valueCodeableConcept -> "niveauConfidentialite"

@@ -210,3 +210,119 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
+/*
+Mapping:  ConceptMetier_ROROrganization_EJ
+Source:   ROROrganization
+Id:       specmetier-to-ROROrganization-ej
+Title:    "EntiteJuridique du Modèle exposition ROR V3"
+* -> "EntiteJuridique"
+
+* id -> "metadonnee.identifiant"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+
+* identifier[idNatSt] -> "idNatstruct"
+* identifier[finess] -> "numFINESS"
+* identifier[sirene] -> "numSIREN"
+* identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang"
+* identifier[adeliRang] -> "numEJ_RPPS_ADELI_Rang"
+
+* name -> "raisonSociale"
+* name.extension[ror-organization-additional-name] -> "complementRaisonSociale"
+
+* type[statutJuridiqueINSEE] -> "statutJuridique"
+* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique"
+
+* contact -> "contact"
+* contact.name -> "nom"
+* contact.purpose -> "natureContact"
+* contact.telecom -> "telecommunication"
+* contact.telecom.value -> "adresseTelecom"
+
+* address -> "adresseEJ"
+* address.city -> "localite"
+* address.postalCode -> "codePostal"
+* address.line.extension[careOf].valueString -> "pointRemise"
+* address.line.extension[additionalLocator].valueString -> "complementPointGeographique"
+* address.line.extension[houseNumber].valueString -> "numeroVoie"
+* address.line.extension[buildingNumberSuffix].valueString -> "extension"
+* address.line.extension[streetNameType].valueString -> "typeVoie"
+* address.line.extension[streetNameBase].valueString -> "libelleVoie"
+* address.line.extension[precinct].valueString -> "lieuDit"
+* address.line.extension[postalBox].valueString -> "mentionDistribution"
+
+* extension[ror-organization-creation-date] -> "dateCreation"
+
+* extension[organization-period].valuePeriod.end -> "dateFermeture"
+
+Mapping:  ConceptMetier_ROROrganization_EG
+Source:   ROROrganization
+Id:       specmetier-to-ROROrganization-eg
+Title:    "EntiteGeographique du Modèle exposition ROR V3"
+* -> "EntiteGeographique"
+
+* id -> "metadonnee.identifiant"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+
+* identifier[idNatSt] -> "idNatstruct"
+* identifier[finess] -> "numFINESS"
+* identifier[sirene] -> "numSIREN"
+* identifier[numSIRET] -> "numSIRET"
+* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang"
+* identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang"
+
+* alias -> "nomOpérationnel"
+* name -> "denominationEG"
+* name.extension[ror-organization-additional-name] -> "complementDenominationEG"
+
+* type[categorieEtablissement] -> "categorieEG"
+* type[sphParticipation] -> "modaliteParticipationSPH"
+
+* contact -> "contact"
+* contact.name -> "nom"
+* contact.purpose -> "natureContact"
+* contact.telecom -> "telecommunication"
+* contact.telecom.value -> "adresseTelecom"
+
+* extension[ror-organization-financial-help-type] -> "aideFinanciere"
+* extension[ror-organization-accomodation-family] -> "hebergementFamille"
+* extension[ror-organization-nb-permanent-social-help-place] -> "nbPlaceAideSocialPermanent"
+* extension[ror-organization-nb-temporary-social-help-place] -> "nbPlaceAideSocialTemporaire"
+* extension[ror-organization-accessibility-location] -> "accessibiliteLieu"
+* extension[ror-organization-level-recourse-orsan] -> "niveauRecoursORSAN"
+* extension[ror-organization-drop-zone] -> "zonePoser"
+* extension[ror-organization-comment] -> "commentaire"
+
+* extension[organization-period].valuePeriod.start -> "dateOuverture"
+* extension[organization-period].valuePeriod.end -> "dateFermeture"
+
+* extension[ror-territorial-division] -> "territoireSante"
+
+Mapping:  ConceptMetier_ROROrganization_OI
+Source:   ROROrganization
+Id:       specmetier-to-ROROrganization-oi
+Title:    "OrganisationInterne du Modèle exposition ROR V3"
+* -> "OrganisationInterne"
+
+* id -> "metadonnee.identifiant"
+* meta -> "metadonnee"
+* meta.lastUpdated -> "dateMiseJour"
+* meta.tag[codeRegion] -> "regionSource"
+
+* identifier[identifierOI] -> "identifiantOI"
+
+* name -> "nomOI"
+
+* type[OIType] -> "typeOI"
+
+* telecom -> "boiteLettreMSS"
+* telecom.value -> "adresseTelecom"
+
+* extension[ror-organization-reopening-date] -> "datePrevisionnelleReouverture"
+
+* extension[organization-period].valuePeriod.end -> "dateOuverture"
+* extension[organization-period].valuePeriod.end -> "dateFermeture"
+*/
