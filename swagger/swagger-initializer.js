@@ -3,7 +3,7 @@ window.onload = function() {
 
   // the following lines will be replaced by docker/configurator, when it runs in a docker-container
   window.ui = SwaggerUIBundle({
-    url: "https://interop.esante.gouv.fr/ig/fhir/ror/ror-serveur.openapi.json",
+    url: "https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/main/ig/ror-serveur.openapi.json",
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
