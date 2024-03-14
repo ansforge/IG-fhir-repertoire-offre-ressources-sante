@@ -279,7 +279,7 @@
         
           Active
           
-            as of 2024-03-13
+            as of 2024-03-14
           
         
       </td>
@@ -307,7 +307,9 @@
  <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>DR, PRD-8/9 / PRA-5.4</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>CE/CNE/CWE, PRD-1 / STF-18  / PRA-3  / PRT-4  / ROL-3 / ORC-12 / OBR-16 / PV1-7 / PV1-8 / PV1-9 / PV1-17</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty</td><td>CE/CNE/CWE, PRA-5</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (expertiseType)</td><td>CE/CNE/CWE, PRA-5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>CE/CNE/CWE subset one of the sets of component 1-3 or 4-6, C*E.1-8, C*E.10-22</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding (expertiseType)</td><td>CE/CNE/CWE subset one of the sets of component 1-3 or 4-6, C*E.1-8, C*E.10-22</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (specialty)</td><td>CE/CNE/CWE, PRA-5</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (competence)</td><td>CE/CNE/CWE, PRA-5</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (exclusiveCompetence)</td><td>CE/CNE/CWE, PRA-5</td> </tr>
@@ -361,7 +363,11 @@
  <tr><td>&nbsp;&nbsp;&nbsp;organization</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), .scoper</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>n/a, CD, .code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty</td><td>n/a, CD, .player.HealthCareProvider[@classCode = 'PROV'].code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (expertiseType)</td><td>n/a, CD, .player.HealthCareProvider[@classCode = 'PROV'].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>n/a, CV, union(., ./translation)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding (expertiseType)</td><td>n/a, CV, union(., ./translation)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>n/a, ./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (specialty)</td><td>n/a, CD, .player.HealthCareProvider[@classCode = 'PROV'].code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (competence)</td><td>n/a, CD, .player.HealthCareProvider[@classCode = 'PROV'].code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (exclusiveCompetence)</td><td>n/a, CD, .player.HealthCareProvider[@classCode = 'PROV'].code</td> </tr>
@@ -404,7 +410,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>(ServD maps Practitioners and Organizations via another entity, so this concept is not available)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>(ServD maps Practitioners and Organizations via another entity, so this concept is not available)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty</td><td>./Specialty</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (expertiseType)</td><td>./Specialty</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (specialty)</td><td>./Specialty</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (competence)</td><td>./Specialty</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specialty (exclusiveCompetence)</td><td>./Specialty</td> </tr>
@@ -504,7 +509,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 15:20+0000">2024-03-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 14, 2024 16:30+0000">2024-03-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

@@ -302,7 +302,7 @@
         
           Draft
           
-            as of 2024-03-13
+            as of 2024-03-14
           
         
       </td>
@@ -452,7 +452,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>MeasureReport</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>MeasureReport</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>MeasureReport.modifierExtension, MeasureReport.group.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>mrp-1</td><td>error</td><td>MeasureReport</td><td>Measure Reports used for data collection SHALL NOT communicate group and score information<br/>: (type != 'data-collection') or group.exists().not()</td><td></td></tr>
 <tr><td>mrp-2</td><td>error</td><td>MeasureReport</td><td>Stratifiers SHALL be either a single criteria or a set of criteria components<br/>: group.stratifier.stratum.all(value.exists() xor component.exists())</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>MeasureReport.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
@@ -582,7 +582,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>MeasureReport</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>MeasureReport</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>MeasureReport.extension, MeasureReport.modifierExtension, MeasureReport.group.extension, MeasureReport.group.modifierExtension, MeasureReport.group.population.extension, MeasureReport.group.population.modifierExtension, MeasureReport.group.stratifier.extension, MeasureReport.group.stratifier.modifierExtension, MeasureReport.group.stratifier.stratum.extension, MeasureReport.group.stratifier.stratum.modifierExtension, MeasureReport.group.stratifier.stratum.component.extension, MeasureReport.group.stratifier.stratum.component.modifierExtension, MeasureReport.group.stratifier.stratum.population.extension, MeasureReport.group.stratifier.stratum.population.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>mrp-1</td><td>error</td><td>MeasureReport</td><td>Measure Reports used for data collection SHALL NOT communicate group and score information<br/>: (type != 'data-collection') or group.exists().not()</td><td></td></tr>
 <tr><td>mrp-2</td><td>error</td><td>MeasureReport</td><td>Stratifiers SHALL be either a single criteria or a set of criteria components<br/>: group.stratifier.stratum.all(value.exists() xor component.exists())</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>MeasureReport.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
@@ -790,7 +790,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>MeasureReport</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>MeasureReport</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>MeasureReport.modifierExtension, MeasureReport.group.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>mrp-1</td><td>error</td><td>MeasureReport</td><td>Measure Reports used for data collection SHALL NOT communicate group and score information<br/>: (type != 'data-collection') or group.exists().not()</td><td></td></tr>
 <tr><td>mrp-2</td><td>error</td><td>MeasureReport</td><td>Stratifiers SHALL be either a single criteria or a set of criteria components<br/>: group.stratifier.stratum.all(value.exists() xor component.exists())</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>MeasureReport.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
@@ -920,7 +920,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <tr><td>dom-5</td><td>error</td><td>MeasureReport</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
 <tr><td>dom-6</td><td>best practice</td><td>MeasureReport</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>MeasureReport.extension, MeasureReport.modifierExtension, MeasureReport.group.extension, MeasureReport.group.modifierExtension, MeasureReport.group.population.extension, MeasureReport.group.population.modifierExtension, MeasureReport.group.stratifier.extension, MeasureReport.group.stratifier.modifierExtension, MeasureReport.group.stratifier.stratum.extension, MeasureReport.group.stratifier.stratum.modifierExtension, MeasureReport.group.stratifier.stratum.component.extension, MeasureReport.group.stratifier.stratum.component.modifierExtension, MeasureReport.group.stratifier.stratum.population.extension, MeasureReport.group.stratifier.stratum.population.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** elements</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>mrp-1</td><td>error</td><td>MeasureReport</td><td>Measure Reports used for data collection SHALL NOT communicate group and score information<br/>: (type != 'data-collection') or group.exists().not()</td><td></td></tr>
 <tr><td>mrp-2</td><td>error</td><td>MeasureReport</td><td>Stratifiers SHALL be either a single criteria or a set of criteria components<br/>: group.stratifier.stratum.all(value.exists() xor component.exists())</td><td></td></tr>
 <tr><td>per-1</td><td>error</td><td>MeasureReport.period</td><td>If present, start SHALL have a lower value than end<br/>: start.hasValue().not() or end.hasValue().not() or (start &lt;= end)</td><td></td></tr>
@@ -1125,7 +1125,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 15:20+0000">2024-03-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 14, 2024 16:30+0000">2024-03-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
