@@ -63,11 +63,17 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * specialty 0..* MS
+* specialty.coding ^slicing.discriminator.type = #value
+* specialty.coding ^slicing.discriminator.path = "url"
+* specialty.coding ^slicing.rules = #open
+* specialty.coding contains
+    expertiseType 1..1 MS
+* specialty.coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
+* specialty.coding[expertiseType] from $JDV-J209-TypeSavoirFaire-ROR (required)
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "url"
 * specialty ^slicing.rules = #open
 * specialty contains
-    expertiseType 1..1 MS and
     specialty 0..1 MS and
     competence 0..1 MS and
     exclusiveCompetence 0..1 MS and
@@ -77,8 +83,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     nonQualifyingDESC 0..1 MS and
     supplementaryExerciseRight 0..1 MS and
     specificCompetence 0..* MS
-* specialty[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
-* specialty[expertiseType] from $JDV-J209-TypeSavoirFaire-ROR (required)
 * specialty[specialty] ^short = "specialite (SavoirFaire) : Spécialité ordinale"
 * specialty[specialty] from $JDV-J210-SpecialiteOrdinale-ROR (required)
 * specialty[competence] ^short = "competence (SavoirFaire) : Compétence acquise par le professionnel"
