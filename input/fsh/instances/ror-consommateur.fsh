@@ -23,13 +23,13 @@ Usage: #definition
 
 * implementation.description = "HAPI FHIR Test/Demo Server R4 Endpoint"
 * implementation.url = "https://hapi.fhir.org/baseR4"
-
+/*
 * rest.mode = #client
 * rest.documentation = "Recherche d'offres de soins de santé et de leurs capacités"
 * rest.security.cors = false
 * rest.security.service = $restful-security-service#OAuth
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
-
+*/
 //Search Params toutes ressources
 
 * rest.searchParam[+].name = "_count"
