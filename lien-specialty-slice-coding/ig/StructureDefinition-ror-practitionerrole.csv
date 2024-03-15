@@ -156,12 +156,12 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"PractitionerRole.specialty.coding","PractitionerRole.specialty.coding","","","",1,*,"","","Y","Coding {[]} {[]}
+"PractitionerRole.specialty.coding","PractitionerRole.specialty.coding","","","",0,*,"","","Y","Coding {[]} {[]}
 ","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"","value:url}
 ","",,"open","CodeableConcept.coding",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","C*E.1-8, C*E.10-22","n/a","CV","union(., ./translation)"
-"PractitionerRole.specialty.coding:expertiseType","PractitionerRole.specialty.coding","expertiseType","","",1,1,"Y","","Y","Coding {[]} {[]}
+"PractitionerRole.specialty.coding:expertiseType","PractitionerRole.specialty.coding","expertiseType","","",0,1,"Y","","Y","Coding {[]} {[]}
 ","typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J209-TypeSavoirFaire-ROR/FHIR/JDV-J209-TypeSavoirFaire-ROR","",,,,"CodeableConcept.coding",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6","C*E.1-8, C*E.10-22","n/a","CV","union(., ./translation)"
