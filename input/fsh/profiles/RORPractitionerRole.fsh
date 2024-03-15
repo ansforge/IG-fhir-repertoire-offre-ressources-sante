@@ -67,7 +67,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * specialty.coding ^slicing.discriminator.path = "url"
 * specialty.coding ^slicing.rules = #open
 * specialty.coding contains
-    expertiseType 1..1 MS
+    expertiseType 0..1 MS
 * specialty.coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty.coding[expertiseType] from $JDV-J209-TypeSavoirFaire-ROR (required)
 * specialty ^slicing.discriminator.type = #value
