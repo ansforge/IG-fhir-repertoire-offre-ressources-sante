@@ -21,6 +21,9 @@ Usage: #definition
 * implementationGuide[+] = "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"
 * implementationGuide[+] = "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"
 
+* implementation.description = "HAPI FHIR Test/Demo Server R4 Endpoint"
+* implementation.url = "https://hapi.fhir.org/baseR4"
+
 * rest.mode = #client
 * rest.documentation = "Recherche d'offres de soins de santé et de leurs capacités"
 * rest.security.cors = false
