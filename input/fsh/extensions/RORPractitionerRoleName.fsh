@@ -1,5 +1,5 @@
 Extension: RORPractitionerRoleName
-Id: RORPractitionerRoleName
+Id: ror-practitionerrole-name
 Description: "Extension créée dans le cadre du ROR pour définir l'identité d’exercice d’un professionnel"
 * ^context.type = #element
 * ^context.expression = "PractitionerRole"
