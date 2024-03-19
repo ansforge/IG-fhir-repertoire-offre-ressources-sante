@@ -9,7 +9,7 @@
   "version" : "0.4.0-ballot-1",
   "name" : "RORLocationResidentialCapacity",
   "status" : "active",
-  "date" : "2024-03-14T13:39:21+00:00",
+  "date" : "2024-03-19T13:17:15+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -28,13 +28,13 @@
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "specmetier-to-RORResidentialLocationCapacity",
+    "name" : "Spécification métier vers l'extension ROR LocationResidentialCapacity"
+  },
+  {
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "specmetier-to-RORResidentialLocationCapacity",
-    "name" : "Spécification métier vers l'extension ROR LocationResidentialCapacity"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -77,7 +77,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "CapaciteHabitation"
+        "map" : "CapaciteHabitation",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -311,7 +312,8 @@
       },
       {
         "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "typeHabitation"
+        "map" : "typeHabitation",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -475,7 +477,8 @@
       },
       {
         "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "nbHabitation"
+        "map" : "nbHabitation",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -693,7 +696,8 @@
       "definition" : "Extension créée dans le cadre du ROR qui décrit un type d'habitation adapté à la réalisation d'une offre.",
       "mapping" : [{
         "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "CapaciteHabitation"
+        "map" : "CapaciteHabitation",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -730,7 +734,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "typeHabitation"
+        "map" : "typeHabitation",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -758,7 +763,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORResidentialLocationCapacity",
-        "map" : "nbHabitation"
+        "map" : "nbHabitation",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {

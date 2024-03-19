@@ -23,7 +23,7 @@
   <version value="0.4.0-ballot-1"/>
   <name value="RORLocationEquipment"/>
   <status value="active"/>
-  <date value="2024-03-14T13:39:21+00:00"/>
+  <date value="2024-03-19T13:17:15+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -42,13 +42,13 @@
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
   <mapping>
+    <identity value="specmetier-to-RORLocationEquipment"/>
+    <name value="Spécification métier vers l'extension ROR LocationEquipment"/>
+  </mapping>
+  <mapping>
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
-  </mapping>
-  <mapping>
-    <identity value="specmetier-to-RORLocationEquipment"/>
-    <name value="Spécification métier vers l'extension ROR LocationEquipment"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -91,6 +91,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationEquipment"/>
         <map value="EquipementSpecifique"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.id">
@@ -315,6 +316,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationEquipment"/>
         <map value="typeEquipement"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:nbInService">
@@ -472,6 +474,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationEquipment"/>
         <map value="nbEquipementEnService"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:ror-location-equipment-limit">
@@ -510,6 +513,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationEquipmentLimit"/>
         <map value="LimiteCaracteristiqueEquipement"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -724,6 +728,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationEquipment"/>
         <map value="EquipementSpecifique"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension">
@@ -756,6 +761,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationEquipment"/>
         <map value="typeEquipement"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:nbInService">
@@ -780,6 +786,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationEquipment"/>
         <map value="nbEquipementEnService"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:ror-location-equipment-limit">

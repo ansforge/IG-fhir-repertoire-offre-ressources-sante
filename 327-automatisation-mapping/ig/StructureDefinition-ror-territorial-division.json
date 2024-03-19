@@ -9,7 +9,7 @@
   "version" : "0.4.0-ballot-1",
   "name" : "RORTerritorialDivision",
   "status" : "active",
-  "date" : "2024-03-14T13:39:21+00:00",
+  "date" : "2024-03-19T13:17:15+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -28,13 +28,13 @@
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "specmetier-to-RORTerritorialDivisio",
+    "name" : "Spécification métier vers l'extension ROR territorial division"
+  },
+  {
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "specmetier-to-RORTerritorialDivisio",
-    "name" : "Spécification métier vers l'extension ROR territorial division"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -81,7 +81,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "DivisionTerritoriale"
+        "map" : "DivisionTerritoriale",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -315,7 +316,8 @@
       },
       {
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "type"
+        "map" : "type",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -483,7 +485,8 @@
       },
       {
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "code"
+        "map" : "code",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -701,7 +704,8 @@
       "definition" : "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. \nCela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent.",
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "DivisionTerritoriale"
+        "map" : "DivisionTerritoriale",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -738,7 +742,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "type"
+        "map" : "type",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -770,7 +775,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "code"
+        "map" : "code",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {

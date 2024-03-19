@@ -9,7 +9,7 @@
   "version" : "0.4.0-ballot-1",
   "name" : "ROROrganizationPrice",
   "status" : "active",
-  "date" : "2024-03-14T13:39:21+00:00",
+  "date" : "2024-03-19T13:17:15+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -28,13 +28,13 @@
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "specmetier-to-ROROrganizationPrice",
+    "name" : "Spécification métier vers l'extension ROR OrganizationPrice"
+  },
+  {
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "specmetier-to-ROROrganizationPrice",
-    "name" : "Spécification métier vers l'extension ROR OrganizationPrice"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -311,7 +311,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "typeTarif"
+        "map" : "typeTarif",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -479,7 +480,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "unitePrix"
+        "map" : "unitePrix",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -643,7 +645,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "montantTarif"
+        "map" : "montantTarif",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -807,7 +810,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "dateDebutValiditeTarif"
+        "map" : "dateDebutValiditeTarif",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -971,7 +975,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.tarifMoins60Ans"
+        "map" : "ForfaitSocleHebergement.tarifMoins60Ans",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -1139,7 +1144,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -1303,7 +1309,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+        "map" : "ForfaitSocleHebergement.autresPrestationsNonObligatoiresIncluses",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -1471,7 +1478,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"
+        "map" : "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -1639,7 +1647,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"
+        "map" : "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -1807,7 +1816,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"
+        "map" : "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -1971,7 +1981,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPortageRepas.nomTarifPortageRepas"
+        "map" : "TarifPortageRepas.nomTarifPortageRepas",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -2139,7 +2150,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifDependance.groupeTarifaireDependance"
+        "map" : "TarifDependance.groupeTarifaireDependance",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -2303,7 +2315,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAidesHumaines.nomTarifAidesHumaines"
+        "map" : "TarifAidesHumaines.nomTarifAidesHumaines",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -2471,7 +2484,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAidesHumaines.modeGestion"
+        "map" : "TarifAidesHumaines.modeGestion",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -2635,7 +2649,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPrestationSupplementaire.nomAutrePrestationSupp"
+        "map" : "TarifPrestationSupplementaire.nomAutrePrestationSupp",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -2803,7 +2818,8 @@
       },
       {
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPrestationSupplementaire.nomPrestationSupp"
+        "map" : "TarifPrestationSupplementaire.nomPrestationSupp",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3058,7 +3074,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "typeTarif"
+        "map" : "typeTarif",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3090,7 +3107,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "unitePrix"
+        "map" : "unitePrix",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3118,7 +3136,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "montantTarif"
+        "map" : "montantTarif",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3146,7 +3165,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "dateDebutValiditeTarif"
+        "map" : "dateDebutValiditeTarif",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3174,7 +3194,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.tarifMoins60Ans"
+        "map" : "ForfaitSocleHebergement.tarifMoins60Ans",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3206,7 +3227,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3234,7 +3256,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+        "map" : "ForfaitSocleHebergement.autresPrestationsNonObligatoiresIncluses",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3266,7 +3289,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"
+        "map" : "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3298,7 +3322,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"
+        "map" : "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3330,7 +3355,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"
+        "map" : "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3358,7 +3384,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPortageRepas.nomTarifPortageRepas"
+        "map" : "TarifPortageRepas.nomTarifPortageRepas",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3390,7 +3417,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifDependance.groupeTarifaireDependance"
+        "map" : "TarifDependance.groupeTarifaireDependance",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3418,7 +3446,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAidesHumaines.nomTarifAidesHumaines"
+        "map" : "TarifAidesHumaines.nomTarifAidesHumaines",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3450,7 +3479,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifAidesHumaines.modeGestion"
+        "map" : "TarifAidesHumaines.modeGestion",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3478,7 +3508,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPrestationSupplementaire.nomAutrePrestationSupp"
+        "map" : "TarifPrestationSupplementaire.nomAutrePrestationSupp",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -3510,7 +3541,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-ROROrganizationPrice",
-        "map" : "TarifPrestationSupplementaire.nomPrestationSupp"
+        "map" : "TarifPrestationSupplementaire.nomPrestationSupp",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {

@@ -288,7 +288,7 @@
         
           Active
           
-            as of 2024-03-14
+            as of 2024-03-19
           
         
       </td>
@@ -304,7 +304,74 @@
 
 
 
-  <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+  <a name="specmetier-to-RORLocationSupportedCapacity"> </a><h3>Mappings for Spécification métier vers l'extension ROR LocationSupportedCapacity ()</h3><table class="grid">
+ <tr><td colspan="3"><b>RORLocationSupportedCapacity</b></td></tr>
+ <tr><td>Extension</td><td>CapacitePriseCharge + CapaciteAccueilOperationnelle</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (capacityType)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.natureCapacite</td><td><p>Profil 1,
+Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (capacityStatus)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.statutCapacite</td><td><p>Profil 1,
+Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (temporalityCapacity)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.temporaliteCapacite</td><td><p>Profil 1,
+Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (nbCapacity)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.nombreCapacite</td><td><p>Profil 1,
+Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (capacitySourceType)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.typeSourceCapacite</td><td><p>Profil 1,
+Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (genderCapacityAvailable)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.genreCapaciteDispo</td><td><p>Profil 1,
+Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (capacityUpdateDate)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.dateMAJCapacite</td><td><p>Profil 1,
+Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (capacityClosingType)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.typeFermetureCapacite</td><td><p>Profil 1,
+Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (additionalBedType)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.typeLitsSupplementaire</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (crisisType)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.typeCrise</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (temporaryAssignement)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapacitePriseCharge.affectationTemporaire</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0, si affectation temporaire = aucune (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>RORLocationSupportedCapacity</b></td></tr>
  <tr><td>Extension</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
@@ -354,33 +421,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
-</table>
-<a name="specmetier-to-RORLocationSupportedCapacity"> </a><h3>Mappings for Spécification métier vers l'extension ROR LocationSupportedCapacity ()</h3><table class="grid">
- <tr><td colspan="3"><b>RORLocationSupportedCapacity</b></td></tr>
- <tr><td>Extension</td><td>CapacitePriseCharge + CapaciteAccueilOperationnelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (capacityType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.natureCapacite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (capacityStatus)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.statutCapacite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (temporalityCapacity)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.temporaliteCapacite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (nbCapacity)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.nombreCapacite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (capacitySourceType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.typeSourceCapacite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (genderCapacityAvailable)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.genreCapaciteDispo</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (capacityUpdateDate)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.dateMAJCapacite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (capacityClosingType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.typeFermetureCapacite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (additionalBedType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.typeLitsSupplementaire</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (crisisType)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapaciteAccueilOperationnelle.typeCrise</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (temporaryAssignement)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>CapacitePriseCharge.affectationTemporaire</td> </tr>
 </table>
 
 
@@ -457,7 +497,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 14, 2024 13:39+0000">2024-03-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 19, 2024 13:17+0000">2024-03-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

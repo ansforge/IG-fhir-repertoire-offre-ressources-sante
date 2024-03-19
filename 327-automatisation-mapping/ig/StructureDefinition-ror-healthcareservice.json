@@ -9,7 +9,7 @@
   "version" : "0.4.0-ballot-1",
   "name" : "RORHealthcareService",
   "status" : "active",
-  "date" : "2024-03-14T13:39:21+00:00",
+  "date" : "2024-03-19T13:17:15+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -28,6 +28,10 @@
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "specmetier-to-RORHealthcareService",
+    "name" : "HealthcareService du Modèle exposition ROR V3"
+  },
+  {
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
@@ -36,10 +40,6 @@
     "identity" : "w5",
     "uri" : "http://hl7.org/fhir/fivews",
     "name" : "FiveWs Pattern Mapping"
-  },
-  {
-    "identity" : "specmetier-to-RORHealthcareService",
-    "name" : "HealthcareService du Modèle exposition ROR V3"
   }],
   "kind" : "resource",
   "abstract" : false,
@@ -143,7 +143,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -789,11 +790,13 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "DivisionTerritoriale"
+        "map" : "DivisionTerritoriale",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "zoneIntervention"
+        "map" : "zoneIntervention",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -941,7 +944,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "Patientele"
+        "map" : "Patientele",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -981,7 +985,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServiceContact",
-        "map" : "contact"
+        "map" : "contact",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)\nProfil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -1135,7 +1140,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "identifiantOffre"
+        "map" : "identifiantOffre",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -1300,7 +1306,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "typeOffre"
+        "map" : "typeOffre",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -1357,7 +1364,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "champActivite"
+        "map" : "champActivite",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -1478,7 +1486,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "ActiviteOperationnelle.activiteOperationnelle"
+        "map" : "ActiviteOperationnelle.activiteOperationnelle",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -1535,7 +1544,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "ActiviteOperationnelle.familleActiviteOperationnelle"
+        "map" : "ActiviteOperationnelle.familleActiviteOperationnelle",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -1633,7 +1643,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "nomOffre"
+        "map" : "nomOffre",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -1815,7 +1826,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "boiteLettreMSS.adresseMSS"
+        "map" : "boiteLettreMSS.adresseMSS",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -2091,7 +2103,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "adresseTelecom"
+        "map" : "adresseTelecom",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -2996,7 +3009,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "temporaliteAccueil"
+        "map" : "temporaliteAccueil",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -3277,7 +3291,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "modePriseEnCharge"
+        "map" : "modePriseEnCharge",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -3558,7 +3573,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "modaliteAccueil"
+        "map" : "modaliteAccueil",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -3839,7 +3855,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "modeGestion"
+        "map" : "modeGestion",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -4120,7 +4137,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "acteSpecifique"
+        "map" : "acteSpecifique",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -4513,7 +4531,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "acteRealiseHorsCabinet"
+        "map" : "acteRealiseHorsCabinet",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -4906,7 +4925,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "specialisationPriseEnCharge"
+        "map" : "specialisationPriseEnCharge",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -5187,7 +5207,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "ouvertureAnnuelle"
+        "map" : "ouvertureAnnuelle",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -5468,7 +5489,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "professionRessource"
+        "map" : "professionRessource",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -5749,7 +5771,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "competenceSpecifique"
+        "map" : "competenceSpecifique",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -6030,7 +6053,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "niveauExpertise"
+        "map" : "niveauExpertise",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -6311,7 +6335,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "typeFermeture"
+        "map" : "typeFermeture",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -6718,7 +6743,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "horaire"
+        "map" : "horaire",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -7075,7 +7101,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "heureDebut"
+        "map" : "heureDebut",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -7114,7 +7141,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "heureFin"
+        "map" : "heureFin",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -7749,7 +7777,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "dateFermeture"
+        "map" : "dateFermeture",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -7794,7 +7823,8 @@
       },
       {
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "datePrevisionnelleReouverture"
+        "map" : "datePrevisionnelleReouverture",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -7889,7 +7919,8 @@
       "path" : "HealthcareService.id",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -7958,7 +7989,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "zoneIntervention"
+        "map" : "zoneIntervention",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8048,7 +8080,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "identifiantOffre"
+        "map" : "identifiantOffre",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8089,7 +8122,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "typeOffre"
+        "map" : "typeOffre",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8105,7 +8139,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "champActivite"
+        "map" : "champActivite",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8135,7 +8170,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "ActiviteOperationnelle.activiteOperationnelle"
+        "map" : "ActiviteOperationnelle.activiteOperationnelle",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8152,7 +8188,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "ActiviteOperationnelle.familleActiviteOperationnelle"
+        "map" : "ActiviteOperationnelle.familleActiviteOperationnelle",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8176,7 +8213,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "nomOffre"
+        "map" : "nomOffre",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8194,7 +8232,8 @@
       "short" : "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’offre opérationnelle",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "boiteLettreMSS.adresseMSS"
+        "map" : "boiteLettreMSS.adresseMSS",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8249,7 +8288,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "adresseTelecom"
+        "map" : "adresseTelecom",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8305,7 +8345,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "temporaliteAccueil"
+        "map" : "temporaliteAccueil",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8335,7 +8376,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "modePriseEnCharge"
+        "map" : "modePriseEnCharge",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8365,7 +8407,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "modaliteAccueil"
+        "map" : "modaliteAccueil",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8395,7 +8438,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "modeGestion"
+        "map" : "modeGestion",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8425,7 +8469,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "acteSpecifique"
+        "map" : "acteSpecifique",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8465,7 +8510,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "acteRealiseHorsCabinet"
+        "map" : "acteRealiseHorsCabinet",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8505,7 +8551,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "specialisationPriseEnCharge"
+        "map" : "specialisationPriseEnCharge",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8535,7 +8582,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "ouvertureAnnuelle"
+        "map" : "ouvertureAnnuelle",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8565,7 +8613,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "professionRessource"
+        "map" : "professionRessource",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8595,7 +8644,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "competenceSpecifique"
+        "map" : "competenceSpecifique",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8625,7 +8675,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "niveauExpertise"
+        "map" : "niveauExpertise",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8655,7 +8706,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "typeFermeture"
+        "map" : "typeFermeture",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8678,7 +8730,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "horaire"
+        "map" : "horaire",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8733,7 +8786,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "heureDebut"
+        "map" : "heureDebut",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8743,7 +8797,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "heureFin"
+        "map" : "heureFin",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8784,7 +8839,8 @@
       "short" : "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "dateFermeture"
+        "map" : "dateFermeture",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -8793,7 +8849,8 @@
       "short" : "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
-        "map" : "datePrevisionnelleReouverture"
+        "map" : "datePrevisionnelleReouverture",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     }]
   }

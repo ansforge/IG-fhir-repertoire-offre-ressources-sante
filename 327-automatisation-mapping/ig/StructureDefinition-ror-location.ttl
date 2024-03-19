@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.4.0-ballot-1"] ; # 
   fhir:name [ fhir:v "RORLocation"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-03-14T13:39:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-19T13:17:15+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -35,6 +35,9 @@
   ] ) ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:mapping ( [
+     fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
+     fhir:name [ fhir:v "Location du Modèle exposition ROR V3" ]
+  ] [
      fhir:identity [ fhir:v "rim" ] ;
      fhir:uri [ fhir:v "http://hl7.org/v3"^^xsd:anyURI ] ;
      fhir:name [ fhir:v "RIM Mapping" ]
@@ -42,9 +45,6 @@
      fhir:identity [ fhir:v "w5" ] ;
      fhir:uri [ fhir:v "http://hl7.org/fhir/fivews"^^xsd:anyURI ] ;
      fhir:name [ fhir:v "FiveWs Pattern Mapping" ]
-  ] [
-     fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-     fhir:name [ fhir:v "Location du Modèle exposition ROR V3" ]
   ] ) ; # 
   fhir:kind [ fhir:v "resource"] ; # 
   fhir:abstract [ fhir:v "false"^^xsd:boolean] ; # 
@@ -918,7 +918,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationEquipment" ] ;
-         fhir:map [ fhir:v "EquipementSpecifique" ]
+         fhir:map [ fhir:v "EquipementSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.extension:ror-location-residential-capacity" ] ;
@@ -965,7 +966,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORResidentialLocationCapacity" ] ;
-         fhir:map [ fhir:v "CapaciteHabitation" ]
+         fhir:map [ fhir:v "CapaciteHabitation" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.extension:ror-location-supported-capacity" ] ;
@@ -1228,7 +1230,8 @@
          fhir:map [ fhir:v ".id" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "idExterneSynchro" ]
+         fhir:map [ fhir:v "idExterneSynchro" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.identifier:idExterneSynchro.id" ] ;
@@ -2180,7 +2183,8 @@
          fhir:map [ fhir:v ".id" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "identifiant" ]
+         fhir:map [ fhir:v "identifiant" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.identifier:idLocation.id" ] ;
@@ -3232,7 +3236,8 @@
          fhir:map [ fhir:v ".name" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "nom" ]
+         fhir:map [ fhir:v "nom" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.alias" ] ;
@@ -3358,7 +3363,8 @@
          fhir:map [ fhir:v ".playingEntity[classCode=PLC determinerCode=INSTANCE].desc" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "description" ]
+         fhir:map [ fhir:v "description" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.mode" ] ;
@@ -3469,7 +3475,8 @@
          fhir:map [ fhir:v ".code" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "fonctionLieu" ]
+         fhir:map [ fhir:v "fonctionLieu" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.telecom" ] ;
@@ -3526,7 +3533,8 @@
          fhir:map [ fhir:v ".telecom" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "telecommunication" ]
+         fhir:map [ fhir:v "telecommunication" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.telecom.id" ] ;
@@ -3825,7 +3833,8 @@
          fhir:map [ fhir:v "./Value" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "adresseTelecom" ]
+         fhir:map [ fhir:v "adresseTelecom" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.telecom.use" ] ;
@@ -4024,7 +4033,8 @@
          fhir:map [ fhir:v ".addr" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "adresse" ]
+         fhir:map [ fhir:v "adresse" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.id" ] ;
@@ -4466,7 +4476,8 @@
          fhir:map [ fhir:v "ADXP[partType=CAR]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "pointRemise" ]
+         fhir:map [ fhir:v "pointRemise" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:additionalLocator" ] ;
@@ -4522,7 +4533,8 @@
          fhir:map [ fhir:v "ADXP[partType=ADL]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "complementPointGeographique" ]
+         fhir:map [ fhir:v "complementPointGeographique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:houseNumber" ] ;
@@ -4578,7 +4590,8 @@
          fhir:map [ fhir:v "ADXP[partType=BNR]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "numeroVoie" ]
+         fhir:map [ fhir:v "numeroVoie" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:buildingNumberSuffix" ] ;
@@ -4634,7 +4647,8 @@
          fhir:map [ fhir:v "ADXP[partType=BNS]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "extension" ]
+         fhir:map [ fhir:v "extension" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:streetNameType" ] ;
@@ -4690,7 +4704,8 @@
          fhir:map [ fhir:v "ADXP[partType=STTYP]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "typeVoie" ]
+         fhir:map [ fhir:v "typeVoie" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:streetNameType.id" ] ;
@@ -5043,7 +5058,8 @@
          fhir:map [ fhir:v "ADXP[partType=STB]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "libelleVoie" ]
+         fhir:map [ fhir:v "libelleVoie" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:postalBox" ] ;
@@ -5099,7 +5115,8 @@
          fhir:map [ fhir:v "ADXP[partType=POB]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "mentionDistribution" ]
+         fhir:map [ fhir:v "mentionDistribution" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:lieuDit" ] ;
@@ -5146,7 +5163,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "lieuDit" ]
+         fhir:map [ fhir:v "lieuDit" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.value" ] ;
@@ -5223,7 +5241,8 @@
          fhir:map [ fhir:v "./Jurisdiction" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "localite" ]
+         fhir:map [ fhir:v "localite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.district" ] ;
@@ -5366,7 +5385,8 @@
          fhir:map [ fhir:v "./PostalIdentificationCode" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "codePostal" ]
+         fhir:map [ fhir:v "codePostal" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.country" ] ;
@@ -5577,7 +5597,8 @@
          fhir:map [ fhir:v ".playingEntity [classCode=PLC determinerCode=INSTANCE].positionText" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "coordonneeGeographique" ]
+         fhir:map [ fhir:v "coordonneeGeographique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.position.id" ] ;
@@ -5793,7 +5814,8 @@
          fhir:map [ fhir:v "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "longitude" ]
+         fhir:map [ fhir:v "longitude" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.position.latitude" ] ;
@@ -5831,7 +5853,8 @@
          fhir:map [ fhir:v "(RIM Opted not to map the sub-elements of GPS location, is now an OBS)" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "latitude" ]
+         fhir:map [ fhir:v "latitude" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.position.altitude" ] ;
@@ -6565,7 +6588,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "idExterneSynchro" ]
+         fhir:map [ fhir:v "idExterneSynchro" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.identifier:idExterneSynchro.type" ] ;
@@ -6587,7 +6611,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "identifiant" ]
+         fhir:map [ fhir:v "identifiant" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.identifier:idLocation.type" ] ;
@@ -6613,7 +6638,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "nom" ]
+         fhir:map [ fhir:v "nom" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.alias" ] ;
@@ -6644,7 +6670,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "description" ]
+         fhir:map [ fhir:v "description" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.type" ] ;
@@ -6661,7 +6688,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "fonctionLieu" ]
+         fhir:map [ fhir:v "fonctionLieu" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.telecom" ] ;
@@ -6670,7 +6698,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "telecommunication" ]
+         fhir:map [ fhir:v "telecommunication" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.telecom.extension" ] ;
@@ -6729,7 +6758,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "adresseTelecom" ]
+         fhir:map [ fhir:v "adresseTelecom" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address" ] ;
@@ -6737,7 +6767,8 @@
        fhir:short [ fhir:v "adresse (LieuRealisationOffre) : Adresse géopostale du lieu" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "adresse" ]
+         fhir:map [ fhir:v "adresse" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:careOf" ] ;
@@ -6756,7 +6787,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "pointRemise" ]
+         fhir:map [ fhir:v "pointRemise" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:additionalLocator" ] ;
@@ -6775,7 +6807,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "complementPointGeographique" ]
+         fhir:map [ fhir:v "complementPointGeographique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:houseNumber" ] ;
@@ -6794,7 +6827,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "numeroVoie" ]
+         fhir:map [ fhir:v "numeroVoie" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:buildingNumberSuffix" ] ;
@@ -6813,7 +6847,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "extension" ]
+         fhir:map [ fhir:v "extension" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:streetNameType" ] ;
@@ -6832,7 +6867,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "typeVoie" ]
+         fhir:map [ fhir:v "typeVoie" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:streetNameType.value[x]" ] ;
@@ -6861,7 +6897,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "libelleVoie" ]
+         fhir:map [ fhir:v "libelleVoie" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:postalBox" ] ;
@@ -6880,7 +6917,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "mentionDistribution" ]
+         fhir:map [ fhir:v "mentionDistribution" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.line.extension:lieuDit" ] ;
@@ -6899,7 +6937,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "lieuDit" ]
+         fhir:map [ fhir:v "lieuDit" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.city" ] ;
@@ -6907,7 +6946,8 @@
        fhir:short [ fhir:v "localité (Adresse) : Localité ou Libellé du bureau distributeur CEDEX" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "localite" ]
+         fhir:map [ fhir:v "localite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.address.postalCode" ] ;
@@ -6915,7 +6955,8 @@
        fhir:short [ fhir:v "codePostal (Adresse) : Code Postal ou code postal spécifique CEDEX" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "codePostal" ]
+         fhir:map [ fhir:v "codePostal" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.position" ] ;
@@ -6923,7 +6964,8 @@
        fhir:short [ fhir:v "coordonneeGeographique (LieuRealisationOffre) : Coordonnées géographiques du lieu (système géodésique : WGS84)" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "coordonneeGeographique" ]
+         fhir:map [ fhir:v "coordonneeGeographique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.position.extension:ror-coordinate-reliability" ] ;
@@ -6946,7 +6988,8 @@
        fhir:short [ fhir:v "longitude (CoordonneeGeographique) : Une mesure de la distance angulaire est ou ouest depuis le méridien de Greenwich jusqu'au méridien du point spécifique" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "longitude" ]
+         fhir:map [ fhir:v "longitude" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.position.latitude" ] ;
@@ -6954,7 +6997,8 @@
        fhir:short [ fhir:v "latitude (CoordonneeGeographique) : Une mesure de la distance angulaire nord ou sud depuis l'équateur jusqu'au parallèle du spécifique" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocation" ] ;
-         fhir:map [ fhir:v "latitude" ]
+         fhir:map [ fhir:v "latitude" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Location.managingOrganization" ] ;

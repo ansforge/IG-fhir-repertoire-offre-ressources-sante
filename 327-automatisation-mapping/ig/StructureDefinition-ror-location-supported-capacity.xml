@@ -57,7 +57,7 @@
   <version value="0.4.0-ballot-1"/>
   <name value="RORLocationSupportedCapacity"/>
   <status value="active"/>
-  <date value="2024-03-14T13:39:21+00:00"/>
+  <date value="2024-03-19T13:17:15+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -76,13 +76,13 @@
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
   <mapping>
+    <identity value="specmetier-to-RORLocationSupportedCapacity"/>
+    <name value="Spécification métier vers l'extension ROR LocationSupportedCapacity"/>
+  </mapping>
+  <mapping>
     <identity value="rim"/>
     <uri value="http://hl7.org/v3"/>
     <name value="RIM Mapping"/>
-  </mapping>
-  <mapping>
-    <identity value="specmetier-to-RORLocationSupportedCapacity"/>
-    <name value="Spécification métier vers l'extension ROR LocationSupportedCapacity"/>
   </mapping>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -349,6 +349,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.natureCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityStatus">
@@ -510,6 +511,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.statutCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporalityCapacity">
@@ -671,6 +673,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.temporaliteCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:nbCapacity">
@@ -828,6 +831,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.nombreCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacitySourceType">
@@ -989,6 +993,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.typeSourceCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:genderCapacityAvailable">
@@ -1150,6 +1155,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.genreCapaciteDispo"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityUpdateDate">
@@ -1307,6 +1313,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.dateMAJCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityClosingType">
@@ -1468,6 +1475,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.typeFermetureCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:additionalBedType">
@@ -1629,6 +1637,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.typeLitsSupplementaire"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:crisisType">
@@ -1790,6 +1799,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.typeCrise"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporaryAssignement">
@@ -1951,6 +1961,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapacitePriseCharge.affectationTemporaire"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0, si affectation temporaire = aucune (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -2197,6 +2208,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.natureCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityStatus">
@@ -2225,6 +2237,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.statutCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporalityCapacity">
@@ -2253,6 +2266,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.temporaliteCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:nbCapacity">
@@ -2277,6 +2291,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.nombreCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacitySourceType">
@@ -2305,6 +2320,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.typeSourceCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:genderCapacityAvailable">
@@ -2333,6 +2349,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.genreCapaciteDispo"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityUpdateDate">
@@ -2357,6 +2374,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.dateMAJCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:capacityClosingType">
@@ -2385,6 +2403,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.typeFermetureCapacite"/>
+        <comment value="Profil 1,&#xA;Profil 2, si statut capacité &lt;&gt; Exceptionnel (et sauf si uniteSensible = Oui),&#xA;Profil 3, si statut capacité &lt;&gt; Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),&#xA;Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:additionalBedType">
@@ -2413,6 +2432,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.typeLitsSupplementaire"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:crisisType">
@@ -2441,6 +2461,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapaciteAccueilOperationnelle.typeCrise"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:temporaryAssignement">
@@ -2469,6 +2490,7 @@
       <mapping>
         <identity value="specmetier-to-RORLocationSupportedCapacity"/>
         <map value="CapacitePriseCharge.affectationTemporaire"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0, si affectation temporaire = aucune (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.url">

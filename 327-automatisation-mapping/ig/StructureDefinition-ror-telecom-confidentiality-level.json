@@ -9,7 +9,7 @@
   "version" : "0.4.0-ballot-1",
   "name" : "RORTelecomConfidentialityLevel",
   "status" : "active",
-  "date" : "2024-03-14T13:39:21+00:00",
+  "date" : "2024-03-19T13:17:15+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -28,13 +28,13 @@
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
+    "identity" : "specmetier-to-RORTelecomConfidentialityLevel",
+    "name" : "Spécification métier vers l'extension ROR TelecomConfidentialityLevel"
+  },
+  {
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
     "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "specmetier-to-RORTelecomConfidentialityLevel",
-    "name" : "Spécification métier vers l'extension ROR TelecomConfidentialityLevel"
   }],
   "kind" : "complex-type",
   "abstract" : false,
@@ -211,7 +211,8 @@
       },
       {
         "identity" : "specmetier-to-RORTelecomConfidentialityLevel",
-        "map" : "niveauConfidentialite"
+        "map" : "niveauConfidentialite",
+        "comment" : "RORPractitionerRole : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui) / RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / RORLocation : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2 si niveau de confidentialité du telecom = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint\nProfil 0 si niveau de confidentialité du telecom = public"
       }]
     }]
   },
@@ -243,7 +244,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORTelecomConfidentialityLevel",
-        "map" : "niveauConfidentialite"
+        "map" : "niveauConfidentialite",
+        "comment" : "RORPractitionerRole : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui) / RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / RORLocation : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2 si niveau de confidentialité du telecom = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint\nProfil 0 si niveau de confidentialité du telecom = public"
       }]
     }]
   }
