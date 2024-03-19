@@ -10,4 +10,7 @@ Mapping:  ConceptMetier_ROROrganizationAccessibilityLocation
 Source:   ROROrganizationAccessibilityLocation
 Id:       specmetier-to-ROROrganizationAccessibilityLocation
 Title:    "Spécification métier vers l'extension ROR AccessibilityLocation"
-* valueCodeableConcept -> "accessibiliteLieu"
+* valueCodeableConcept -> "accessibiliteLieu" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"

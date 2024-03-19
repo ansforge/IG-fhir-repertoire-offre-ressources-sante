@@ -9,4 +9,7 @@ Mapping:  ConceptMetier_ROROrganizationAccomodationFamily
 Source:   ROROrganizationAccomodationFamily
 Id:       specmetier-to-ROROrganizationAccomodationFamily
 Title:    "Spécification métier vers l'extension ROR AccomodationFamily"
-* valueBoolean -> "hebergementFamille"
+* valueBoolean -> "hebergementFamille" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"

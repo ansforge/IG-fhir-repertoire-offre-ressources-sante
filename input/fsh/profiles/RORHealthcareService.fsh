@@ -196,42 +196,118 @@ Title:    "HealthcareService du Modèle exposition ROR V3"
 * providedBy -> "OrganisationInterne"
 * location -> "LieuRealisationoffre"
 
-* id -> "metadonnee.identifiant"
+* id -> "metadonnee.identifiant" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 * comment -> "metadonnee.commentaire"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
 
-* identifier -> "identifiantOffre"
-* name -> "nomOffre"
-* category -> "typeOffre"
-* type -> "champActivite"
+* identifier -> "identifiantOffre" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* name -> "nomOffre" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* category -> "typeOffre" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* type -> "champActivite" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 * active -> "Pas d'équivalent"
 
-* characteristic[receptionType] -> "temporaliteAccueil"
-* characteristic[careMode] -> "modePriseEnCharge"
-* characteristic[receptionModality] -> "modaliteAccueil"
-* characteristic[managementType] -> "modeGestion"
-* characteristic[specificAct] -> "acteSpecifique"
-* characteristic[outsideOfficeAct] -> "acteRealiseHorsCabinet"
-* characteristic[takingCareSpeciality] -> "specialisationPriseEnCharge"
-* characteristic[annualOpening] -> "ouvertureAnnuelle"
-* characteristic[ressourceProfession] -> "professionRessource"
-* characteristic[specificCompetence] -> "competenceSpecifique"
-* characteristic[expertiseLevel] -> "niveauExpertise"
-* characteristic[temporalityStopService] -> "typeFermeture"
+* characteristic[receptionType] -> "temporaliteAccueil" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* characteristic[careMode] -> "modePriseEnCharge" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* characteristic[receptionModality] -> "modaliteAccueil" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* characteristic[managementType] -> "modeGestion" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* characteristic[specificAct] -> "acteSpecifique" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* characteristic[outsideOfficeAct] -> "acteRealiseHorsCabinet" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* characteristic[takingCareSpeciality] -> "specialisationPriseEnCharge" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* characteristic[annualOpening] -> "ouvertureAnnuelle" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* characteristic[ressourceProfession] -> "professionRessource" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* characteristic[specificCompetence] -> "competenceSpecifique" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* characteristic[expertiseLevel] -> "niveauExpertise" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* characteristic[temporalityStopService] -> "typeFermeture" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 
-* specialty[operationalActivity] -> "ActiviteOperationnelle.activiteOperationnelle"
-* specialty[operationalActivityFamily] -> "ActiviteOperationnelle.familleActiviteOperationnelle"
+* specialty[operationalActivity] -> "ActiviteOperationnelle.activiteOperationnelle" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* specialty[operationalActivityFamily] -> "ActiviteOperationnelle.familleActiviteOperationnelle" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 
-* notAvailable[closingReopeningDate].during.start -> "dateFermeture"
-* notAvailable[closingReopeningDate].during.end -> "datePrevisionnelleReouverture"
+* notAvailable[closingReopeningDate].during.start -> "dateFermeture" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* notAvailable[closingReopeningDate].during.end -> "datePrevisionnelleReouverture" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 
-* availableTime -> "horaire"
-* availableTime.availableStartTime -> "heureDebut"
-* availableTime.availableEndTime -> "heureFin"
+* availableTime -> "horaire" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* availableTime.availableStartTime -> "heureDebut" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* availableTime.availableEndTime -> "heureFin" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 
-* telecom -> "boiteLettreMSS.adresseMSS"
-* telecom.value -> "adresseTelecom"
+* telecom -> "boiteLettreMSS.adresseMSS" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* telecom.value -> "adresseTelecom" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 
-* extension[ror-territorial-division] -> "zoneIntervention"
+* extension[ror-territorial-division] -> "zoneIntervention" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"

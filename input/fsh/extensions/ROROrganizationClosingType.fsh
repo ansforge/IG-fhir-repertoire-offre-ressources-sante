@@ -10,4 +10,7 @@ Mapping:  ConceptMetier_ROROrganizationClosingType
 Source:   ROROrganizationClosingType
 Id:       specmetier-to-ROROrganizationClosingType
 Title:    "Spécification métier vers l'extension ROR ClosingType"
-* valueCodeableConcept -> "typeFermeture"
+* valueCodeableConcept -> "typeFermeture" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"

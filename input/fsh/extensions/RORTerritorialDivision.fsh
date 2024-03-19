@@ -22,6 +22,18 @@ Mapping:  ConceptMetier_RORTerritorialDivision
 Source:   RORTerritorialDivision
 Id:       specmetier-to-RORTerritorialDivisio
 Title:    "Spécification métier vers l'extension ROR territorial division"
-* -> "DivisionTerritoriale"
-* extension[typeTerritorialDivision].valueCodeableConcept -> "type"
-* extension[codeTerritorialDivision].valueCodeableConcept -> "code"
+* -> "DivisionTerritoriale" "RORHealthcareService : Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* extension[typeTerritorialDivision].valueCodeableConcept -> "type" "RORHealthcareService : Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* extension[codeTerritorialDivision].valueCodeableConcept -> "code" "RORHealthcareService : Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
