@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.4.0-ballot-1"] ; # 
   fhir:name [ fhir:v "RORHealthcareService"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-03-19T13:17:15+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-19T15:03:45+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -832,7 +832,7 @@
        ] ) ;
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
+         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
          fhir:map [ fhir:v "DivisionTerritoriale" ] ;
          fhir:comment [ fhir:v "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0" ]
        ] [
@@ -1327,6 +1327,9 @@
          fhir:map [ fhir:v ".scopingRole.Organization" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
+         fhir:map [ fhir:v "EntiteJuridique" ]
+       ] [
+         fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
          fhir:map [ fhir:v "EntiteGeographique" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
@@ -1693,7 +1696,7 @@
          fhir:map [ fhir:v ".location.role[classCode=SDLOC]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "LieuRealisationoffre" ]
+         fhir:map [ fhir:v "LieuRealisationOffre" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.name" ] ;
@@ -8330,6 +8333,9 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
+         fhir:map [ fhir:v "EntiteJuridique" ]
+       ] [
+         fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
          fhir:map [ fhir:v "EntiteGeographique" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
@@ -8440,7 +8446,7 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "LieuRealisationoffre" ]
+         fhir:map [ fhir:v "LieuRealisationOffre" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.name" ] ;
