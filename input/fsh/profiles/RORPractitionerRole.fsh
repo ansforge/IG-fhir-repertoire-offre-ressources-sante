@@ -63,13 +63,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * specialty 0..* MS
-* specialty.coding ^slicing.discriminator.type = #value
-* specialty.coding ^slicing.discriminator.path = "url"
-* specialty.coding ^slicing.rules = #open
-* specialty.coding contains
-    expertiseType 0..1 MS
-* specialty.coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
-* specialty.coding[expertiseType] from $JDV-J209-TypeSavoirFaire-ROR (required)
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "url"
 * specialty ^slicing.rules = #open
@@ -82,31 +75,95 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     qualificationPAC 0..1 MS and
     nonQualifyingDESC 0..1 MS and
     supplementaryExerciseRight 0..1 MS and
-    specificCompetence 0..* MS
-* specialty[specialty] ^short = "specialite (SavoirFaire) : Spécialité ordinale"
-* specialty[specialty] from $JDV-J210-SpecialiteOrdinale-ROR (required)
+    specificCompetence 0..* MS 
+* specialty[specialty].coding ^slicing.discriminator.type = #value
+* specialty[specialty].coding ^slicing.discriminator.path = "url"
+* specialty[specialty].coding ^slicing.rules = #open
+* specialty[specialty].coding contains
+    expertiseType 0..1 MS and
+    specialty 0..1 MS
+* specialty[specialty].coding[specialty] ^short = "specialite (SavoirFaire) : Spécialité ordinale"
+* specialty[specialty].coding[specialty] from $JDV-J210-SpecialiteOrdinale-ROR (required)
+* specialty[specialty].coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[specialty].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#S
-* specialty[competence] ^short = "competence (SavoirFaire) : Compétence acquise par le professionnel"
-* specialty[competence] from $JDV-J232-Competence-ROR (required)
+
+* specialty[competence].coding ^slicing.discriminator.type = #value
+* specialty[competence].coding ^slicing.discriminator.path = "url"
+* specialty[competence].coding ^slicing.rules = #open
+* specialty[competence].coding contains
+    expertiseType 0..1 MS and
+    competence 0..1 MS
+* specialty[competence].coding[competence] ^short = "competence (SavoirFaire) : Compétence acquise par le professionnel"
+* specialty[competence].coding[competence] from $JDV-J232-Competence-ROR (required)
+* specialty[competence].coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[competence].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#C
-* specialty[exclusiveCompetence] ^short = "competenceExclusive (SavoirFaire) : Compétence exclusive"
-* specialty[exclusiveCompetence] from $JDV-J211-CompetenceExclusive-ROR (required)
+
+* specialty[exclusiveCompetence].coding ^slicing.discriminator.type = #value
+* specialty[exclusiveCompetence].coding ^slicing.discriminator.path = "url"
+* specialty[exclusiveCompetence].coding ^slicing.rules = #open
+* specialty[exclusiveCompetence].coding contains
+    expertiseType 0..1 MS and
+    exclusiveCompetence 0..1 MS
+* specialty[exclusiveCompetence].coding[exclusiveCompetence] ^short = "competenceExclusive (SavoirFaire) : Compétence exclusive"
+* specialty[exclusiveCompetence].coding[exclusiveCompetence]  from $JDV-J211-CompetenceExclusive-ROR (required)
+* specialty[exclusiveCompetence].coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[exclusiveCompetence].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#CEX
+
+* specialty[specificOrientation].coding ^slicing.discriminator.type = #value
+* specialty[specificOrientation].coding ^slicing.discriminator.path = "url"
+* specialty[specificOrientation].coding ^slicing.rules = #open
+* specialty[specificOrientation].coding contains
+    expertiseType 0..1 MS and
+    specificOrientation 0..1 MS
 * specialty[specificOrientation] ^short = "orientationParticuliere (SavoirFaire) : Orientation particulière"
 * specialty[specificOrientation] from $JDV-J212-OrientationParticuliere-ROR (required)
+* specialty[specificOrientation].coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[specificOrientation].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#OP
+
+* specialty[expertiseCapacity].coding ^slicing.discriminator.type = #value
+* specialty[expertiseCapacity].coding ^slicing.discriminator.path = "url"
+* specialty[expertiseCapacity].coding ^slicing.rules = #open
+* specialty[expertiseCapacity].coding contains
+    expertiseType 0..1 MS and
+    expertiseCapacity 0..1 MS
 * specialty[expertiseCapacity] ^short = "capacite (SavoirFaire) : Capacité de médecine"
 * specialty[expertiseCapacity] from $JDV-J213-CapaciteSavoirFaire-ROR (required)
+* specialty[expertiseCapacity].coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[expertiseCapacity].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#CAPA
-* specialty[qualificationPAC] ^short = "qualificationPAC (SavoirFaire) : Qualification de praticien adjoint contractuel"
-* specialty[qualificationPAC] from $JDV-J214-QualificationPAC-ROR (required)
+
+* specialty[qualificationPAC].coding ^slicing.discriminator.type = #value
+* specialty[qualificationPAC].coding ^slicing.discriminator.path = "url"
+* specialty[qualificationPAC].coding ^slicing.rules = #open
+* specialty[qualificationPAC].coding contains
+    expertiseType 0..1 MS and
+    qualificationPAC 0..1 MS
+* specialty[qualificationPAC].coding[qualificationPAC] ^short = "qualificationPAC (SavoirFaire) : Qualification de praticien adjoint contractuel"
+* specialty[qualificationPAC].coding[qualificationPAC] from $JDV-J214-QualificationPAC-ROR (required)
+* specialty[qualificationPAC].coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[qualificationPAC].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#PAC
-* specialty[nonQualifyingDESC] ^short = "DESCNonQualifiant (SavoirFaire) : Diplôme d'études spécialisées complémentaires (DESC)"
-* specialty[nonQualifyingDESC] from $JDV-J215-DESCnonQualifiant-ROR (required)
+
+* specialty[nonQualifyingDESC].coding ^slicing.discriminator.type = #value
+* specialty[nonQualifyingDESC].coding ^slicing.discriminator.path = "url"
+* specialty[nonQualifyingDESC].coding ^slicing.rules = #open
+* specialty[nonQualifyingDESC].coding contains
+    expertiseType 0..1 MS and
+    nonQualifyingDESC 0..1 MS
+* specialty[nonQualifyingDESC].coding[nonQualifyingDESC] ^short = "DESCNonQualifiant (SavoirFaire) : Diplôme d'études spécialisées complémentaires (DESC)"
+* specialty[nonQualifyingDESC].coding[nonQualifyingDESC] from $JDV-J215-DESCnonQualifiant-ROR (required)
+* specialty[nonQualifyingDESC].coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[nonQualifyingDESC].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#DNQ
-* specialty[supplementaryExerciseRight] ^short = "droitExerciceComplémentaire (SavoirFaire) : Droit d'exercice complémentaire du professionnel"
-* specialty[supplementaryExerciseRight] from $JDV-J216-DroitExerciceCompl-ROR (required)
+
+* specialty[supplementaryExerciseRight].coding ^slicing.discriminator.type = #value
+* specialty[supplementaryExerciseRight].coding ^slicing.discriminator.path = "url"
+* specialty[supplementaryExerciseRight].coding ^slicing.rules = #open
+* specialty[supplementaryExerciseRight].coding contains
+    expertiseType 0..1 MS and
+    supplementaryExerciseRight 0..1 MS
+* specialty[supplementaryExerciseRight].coding[supplementaryExerciseRight] ^short = "droitExerciceComplémentaire (SavoirFaire) : Droit d'exercice complémentaire du professionnel"
+* specialty[supplementaryExerciseRight].coding[supplementaryExerciseRight] from $JDV-J216-DroitExerciceCompl-ROR (required)
+* specialty[supplementaryExerciseRight].coding[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[supplementaryExerciseRight].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#DEC
+
 * specialty[specificCompetence] ^short = "competenceSpecifique (SituationOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne"
 * specialty[specificCompetence] from $JDV-J33-CompetenceSpecifique-ROR (required)
 
