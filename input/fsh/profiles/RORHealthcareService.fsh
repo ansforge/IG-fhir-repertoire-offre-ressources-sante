@@ -192,9 +192,10 @@ Id:       specmetier-to-RORHealthcareService
 Title:    "HealthcareService du Modèle exposition ROR V3"
 * -> "OffreOperationnelle"
 
+* providedBy -> "EntiteJuridique"
 * providedBy -> "EntiteGeographique"
 * providedBy -> "OrganisationInterne"
-* location -> "LieuRealisationoffre"
+* location -> "LieuRealisationOffre"
 
 * id -> "metadonnee.identifiant" "Profil 1,
 Profil 2,

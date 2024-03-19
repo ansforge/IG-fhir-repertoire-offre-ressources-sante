@@ -20,7 +20,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
 
 Mapping:  ConceptMetier_RORTerritorialDivision
 Source:   RORTerritorialDivision
-Id:       specmetier-to-RORTerritorialDivisio
+Id:       specmetier-to-RORTerritorialDivision
 Title:    "Spécification métier vers l'extension ROR territorial division"
 * -> "DivisionTerritoriale" "RORHealthcareService : Profil 1,
 Profil 2 (sauf si uniteSensible = Oui),
