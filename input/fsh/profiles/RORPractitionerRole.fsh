@@ -85,28 +85,28 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
     specificCompetence 0..* MS
 * specialty[specialty] ^short = "specialite (SavoirFaire) : Spécialité ordinale"
 * specialty[specialty] from $JDV-J210-SpecialiteOrdinale-ROR (required)
-* specialty[specialty].coding[expertiseType] = $JDV-J209-TypeSavoirFaire-ROR#S
+* specialty[specialty].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#S
 * specialty[competence] ^short = "competence (SavoirFaire) : Compétence acquise par le professionnel"
 * specialty[competence] from $JDV-J232-Competence-ROR (required)
-* specialty[competence].coding[expertiseType] = $JDV-J209-TypeSavoirFaire-ROR#C
+* specialty[competence].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#C
 * specialty[exclusiveCompetence] ^short = "competenceExclusive (SavoirFaire) : Compétence exclusive"
 * specialty[exclusiveCompetence] from $JDV-J211-CompetenceExclusive-ROR (required)
-* specialty[exclusiveCompetence].coding[expertiseType] = $JDV-J209-TypeSavoirFaire-ROR#CEX
+* specialty[exclusiveCompetence].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#CEX
 * specialty[specificOrientation] ^short = "orientationParticuliere (SavoirFaire) : Orientation particulière"
 * specialty[specificOrientation] from $JDV-J212-OrientationParticuliere-ROR (required)
-* specialty[specificOrientation].coding[expertiseType] = $JDV-J209-TypeSavoirFaire-ROR#OP
+* specialty[specificOrientation].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#OP
 * specialty[expertiseCapacity] ^short = "capacite (SavoirFaire) : Capacité de médecine"
 * specialty[expertiseCapacity] from $JDV-J213-CapaciteSavoirFaire-ROR (required)
-* specialty[expertiseCapacity].coding[expertiseType] = $JDV-J209-TypeSavoirFaire-ROR#CAPA
+* specialty[expertiseCapacity].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#CAPA
 * specialty[qualificationPAC] ^short = "qualificationPAC (SavoirFaire) : Qualification de praticien adjoint contractuel"
 * specialty[qualificationPAC] from $JDV-J214-QualificationPAC-ROR (required)
-* specialty[qualificationPAC].coding[expertiseType] = $JDV-J209-TypeSavoirFaire-ROR#PAC
+* specialty[qualificationPAC].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#PAC
 * specialty[nonQualifyingDESC] ^short = "DESCNonQualifiant (SavoirFaire) : Diplôme d'études spécialisées complémentaires (DESC)"
 * specialty[nonQualifyingDESC] from $JDV-J215-DESCnonQualifiant-ROR (required)
-* specialty[nonQualifyingDESC].coding[expertiseType] = $JDV-J209-TypeSavoirFaire-ROR#DNQ
+* specialty[nonQualifyingDESC].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#DNQ
 * specialty[supplementaryExerciseRight] ^short = "droitExerciceComplémentaire (SavoirFaire) : Droit d'exercice complémentaire du professionnel"
 * specialty[supplementaryExerciseRight] from $JDV-J216-DroitExerciceCompl-ROR (required)
-* specialty[supplementaryExerciseRight].coding[expertiseType] = $JDV-J209-TypeSavoirFaire-ROR#DEC
+* specialty[supplementaryExerciseRight].coding[expertiseType] = $TRE-R04-TypeSavoirFaire#DEC
 * specialty[specificCompetence] ^short = "competenceSpecifique (SituationOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne"
 * specialty[specificCompetence] from $JDV-J33-CompetenceSpecifique-ROR (required)
 
