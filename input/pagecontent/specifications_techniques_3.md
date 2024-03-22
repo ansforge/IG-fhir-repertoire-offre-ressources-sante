@@ -486,7 +486,7 @@ GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionO
 &_revinclude=Task:focus #inclus les Task qui référencent le HealthcareService
 ```
 
-#### Scénario 13 : Recherche de l'offre d'un professionnel
+#### Scénario 13 : Recherche de l'offre d'un professionnel <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur cherche les offres d'un professionnel à partir de son identifiant fonctionnel = XXX.
 
