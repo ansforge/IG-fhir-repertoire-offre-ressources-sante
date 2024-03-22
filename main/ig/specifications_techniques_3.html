@@ -699,6 +699,25 @@ Cette partie de la spécification est en cours de construction.
 &amp;_revinclude<span class="o">=</span>Task:focus <span class="c">#inclus les Task qui référencent le HealthcareService</span>
 </code></pre></div></div>
 
+<h4 id="scénario-13-recherche-de-loffre-dun-professionnel-draft">Scénario 13&nbsp;: Recherche de l’offre d’un professionnel <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur cherche les offres d’un professionnel à partir de son identifiant fonctionnel = XXX.</p>
+
+<p><strong>Requête :</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier=XXX&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+</code></pre></div></div>
+
+<p><strong>Requête expliquée&nbsp;:</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier<span class="o">=</span>XXX <span class="c">#critère de recherche sur l'identifiant fonctionnel du professionnel (chainage)</span>
+&amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par HealthcareService </span>
+&amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService</span>
+&amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par HealthcareService</span>
+&amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
+&amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
+</code></pre></div></div>
+
 
 
 
@@ -746,7 +765,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 17:00+0000">2024-03-13</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 22, 2024 16:25+0000">2024-03-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

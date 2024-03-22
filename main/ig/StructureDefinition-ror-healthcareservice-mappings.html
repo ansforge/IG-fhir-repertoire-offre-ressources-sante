@@ -288,7 +288,7 @@
         
           Active
           
-            as of 2024-03-13
+            as of 2024-03-22
           
         
       </td>
@@ -304,7 +304,49 @@
 
 
 
-  <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+  <a name="specmetier-to-RORHealthcareService"> </a><h3>Mappings for HealthcareService du Modèle exposition ROR V3 ()</h3><table class="grid">
+ <tr><td colspan="3"><b>RORHealthcareService</b></td></tr>
+ <tr><td>HealthcareService</td><td>OffreOperationnelle</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>metadonnee.identifiant</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-territorial-division)</td><td>zoneIntervention</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>identifiantOffre</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>Pas d'équivalent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;providedBy</td><td>EntiteGeographique, OrganisationInterne</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>typeOffre</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>champActivite</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivity)</td><td>ActiviteOperationnelle.activiteOperationnelle</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivityFamily)</td><td>ActiviteOperationnelle.familleActiviteOperationnelle</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>LieuRealisationoffre</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>nomOffre</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>metadonnee.commentaire</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>boiteLettreMSS.adresseMSS</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>adresseTelecom</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionType)</td><td>temporaliteAccueil</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (careMode)</td><td>modePriseEnCharge</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionModality)</td><td>modaliteAccueil</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (managementType)</td><td>modeGestion</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificAct)</td><td>acteSpecifique</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (outsideOfficeAct)</td><td>acteRealiseHorsCabinet</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (takingCareSpeciality)</td><td>specialisationPriseEnCharge</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (annualOpening)</td><td>ouvertureAnnuelle</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (ressourceProfession)</td><td>professionRessource</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificCompetence)</td><td>competenceSpecifique</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (expertiseLevel)</td><td>niveauExpertise</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (temporalityStopService)</td><td>typeFermeture</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;availableTime</td><td>horaire</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableStartTime</td><td>heureDebut</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableEndTime</td><td>heureFin</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;notAvailable</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;notAvailable (closingReopeningDate)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>dateFermeture</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>datePrevisionnelleReouverture</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>RORHealthcareService</b></td></tr>
  <tr><td>HealthcareService</td><td>Entity. Role, or Act, act[classCode=ACT][moodCode=DEF]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>n/a, N/A</td> </tr>
@@ -463,48 +505,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>FiveWs.where[x]</td> </tr>
 </table>
-<a name="specmetier-to-RORHealthcareService"> </a><h3>Mappings for HealthcareService du Modèle exposition ROR V3 ()</h3><table class="grid">
- <tr><td colspan="3"><b>RORHealthcareService</b></td></tr>
- <tr><td>HealthcareService</td><td>OffreOperationnelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>metadonnee.identifiant</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-territorial-division)</td><td>zoneIntervention</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>identifiantOffre</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>Pas d'équivalent</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;providedBy</td><td>EntiteGeographique, OrganisationInterne</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>typeOffre</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>champActivite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivity)</td><td>ActiviteOperationnelle.activiteOperationnelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivityFamily)</td><td>ActiviteOperationnelle.familleActiviteOperationnelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>LieuRealisationoffre</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>nomOffre</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>metadonnee.commentaire</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>boiteLettreMSS.adresseMSS</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>adresseTelecom</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionType)</td><td>temporaliteAccueil</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (careMode)</td><td>modePriseEnCharge</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionModality)</td><td>modaliteAccueil</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (managementType)</td><td>modeGestion</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificAct)</td><td>acteSpecifique</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (outsideOfficeAct)</td><td>acteRealiseHorsCabinet</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (takingCareSpeciality)</td><td>specialisationPriseEnCharge</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (annualOpening)</td><td>ouvertureAnnuelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (ressourceProfession)</td><td>professionRessource</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificCompetence)</td><td>competenceSpecifique</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (expertiseLevel)</td><td>niveauExpertise</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (temporalityStopService)</td><td>typeFermeture</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;availableTime</td><td>horaire</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableStartTime</td><td>heureDebut</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableEndTime</td><td>heureFin</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;notAvailable</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;notAvailable (closingReopeningDate)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>dateFermeture</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>datePrevisionnelleReouverture</td> </tr>
-</table>
 
 
   <!-- insert notes if present -->
@@ -580,7 +580,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 17:00+0000">2024-03-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 22, 2024 16:25+0000">2024-03-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
