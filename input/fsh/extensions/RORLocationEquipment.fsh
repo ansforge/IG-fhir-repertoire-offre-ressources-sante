@@ -19,6 +19,12 @@ Mapping:  ConceptMetier_RORLocationEquipment
 Source:   RORLocationEquipment
 Id:       specmetier-to-RORLocationEquipment
 Title:    "Spécification métier vers l'extension ROR LocationEquipment"
-* -> "EquipementSpecifique"
-* extension[equipmentType].valueCodeableConcept -> "typeEquipement"
-* extension[nbInService].valueInteger -> "nbEquipementEnService"
+* -> "EquipementSpecifique" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* extension[equipmentType].valueCodeableConcept -> "typeEquipement" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* extension[nbInService].valueInteger -> "nbEquipementEnService" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"

@@ -19,4 +19,8 @@ Source:   RORHealthcareServiceContactTelecom
 Id:       specmetier-to-RORHealthcareServiceContactTelecom
 Title:    "Spécification métier vers l'extension RORHealthcareServiceContactTelecom"
 * -> "telecommunication"
-* extension[telecomAddress].valueString -> "adresseTelecom"
+* extension[telecomAddress].valueString -> "adresseTelecom" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)
+Profil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"

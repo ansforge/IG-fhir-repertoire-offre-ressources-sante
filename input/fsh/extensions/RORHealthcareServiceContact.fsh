@@ -23,7 +23,23 @@ Mapping:  ConceptMetier_RORHealthcareServiceContact
 Source:   RORHealthcareServiceContact
 Id:       specmetier-to-RORHealthcareServiceContact
 Title:    "Spécification métier vers l'extension ROR HealthcareServiceContact"
-* -> "contact"
-* extension[name].valueHumanName -> "nom"
-* extension[purposeContact].valueCodeableConcept -> "natureContact"
-* extension[description].valueString -> "description"
+* -> "contact" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)
+Profil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"
+* extension[name].valueHumanName -> "nom" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)
+Profil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"
+* extension[purposeContact].valueCodeableConcept -> "natureContact" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)
+Profil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"
+* extension[description].valueString -> "description" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)
+Profil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"

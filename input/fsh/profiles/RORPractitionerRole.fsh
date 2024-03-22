@@ -135,18 +135,51 @@ Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
 * meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
 
-* code -> "profession"
+* code -> "profession" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
 
-* specialty[specificCompetence] -> "competenceSpecifique"
-* specialty[expertiseType] -> "SavoirFaire.typeSavoirFaire"
-* specialty[specialty] -> "SavoirFaire.specialite"
-* specialty[competence] -> "SavoirFaire.competence"
-* specialty[exclusiveCompetence] -> "SavoirFaire.competenceExclusive"
-* specialty[specificOrientation] -> "SavoirFaire.orientationParticuliere"
-* specialty[expertiseCapacity] -> "SavoirFaire.capacite"
-* specialty[qualificationPAC] -> "SavoirFaire.qualificationPAC"
-* specialty[nonQualifyingDESC] -> "SavoirFaire.DESCNonQualifiant"
-* specialty[supplementaryExerciseRight] -> "SavoirFaire.droitExerciceComplémentaire"
+* specialty[specificCompetence] -> "competenceSpecifique" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[expertiseType] -> "SavoirFaire.typeSavoirFaire" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[specialty] -> "SavoirFaire.specialite" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[competence] -> "SavoirFaire.competence" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[exclusiveCompetence] -> "SavoirFaire.competenceExclusive" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[specificOrientation] -> "SavoirFaire.orientationParticuliere" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[expertiseCapacity] -> "SavoirFaire.capacite" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[qualificationPAC] -> "SavoirFaire.qualificationPAC" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[nonQualifyingDESC] -> "SavoirFaire.DESCNonQualifiant" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[supplementaryExerciseRight] -> "SavoirFaire.droitExerciceComplémentaire" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
 
 * extension[ror-practitionerrole-name] -> ""
 
@@ -163,16 +196,46 @@ Title:    "SituationOperationnelle du Modèle exposition ROR V3"
 * meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
 
-* identifier -> "identifiantSituationOperationnelle"
+* identifier -> "identifiantSituationOperationnelle" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
 
-* availableTime -> "horaire"
-* availableTime.availableStartTime -> "heureDebut"
-* availableTime.availableEndTime -> "heureFin"
+* availableTime -> "horaire" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* availableTime.availableStartTime -> "heureDebut" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* availableTime.availableEndTime -> "heureFin" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
 
-* telecom -> "telecommunication"
-* telecom.value -> "adresseTelecom"
+* telecom -> "telecommunication" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* telecom.value -> "adresseTelecom" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
 
-* extension[contracted].valueCodeableConcept -> "secteurConventionnement"
-* extension[optionCAS].valueBoolean -> "optionContratAccèsAuxSoins"
-* extension[vitalAccepted].valueBoolean -> "carteVitaleAcceptee"
-* extension[ror-practitionerrole-unit-exercise-mode] -> "modeExerciceOffre"
+* extension[contracted].valueCodeableConcept -> "secteurConventionnement" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* extension[optionCAS].valueBoolean -> "optionContratAccèsAuxSoins" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* extension[vitalAccepted].valueBoolean -> "carteVitaleAcceptee" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* extension[ror-practitionerrole-unit-exercise-mode] -> "modeExerciceOffre" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"

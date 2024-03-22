@@ -10,4 +10,4 @@ Mapping:  ConceptMetier_ROROrganizationLevelRecourseORSAN
 Source:   ROROrganizationLevelRecourseORSAN
 Id:       specmetier-to-ROROrganizationLevelRecourseORSAN
 Title:    "Spécification métier vers l'extension ROR LevelRecourseORSAN"
-* valueCodeableConcept -> "niveauRecoursORSAN"
+* valueCodeableConcept -> "niveauRecoursORSAN" "Profil 1"

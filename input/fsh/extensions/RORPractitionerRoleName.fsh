@@ -19,6 +19,15 @@ Mapping:  ConceptMetier_RORPractitionerRoleName
 Source:   RORPractitionerRoleName
 Id:       specmetier-to-RORPractitionerRoleName
 Title:    "Spécification métier vers l'extension ROR RORPractitionerRoleName"
-* extension[exerciseLastName].valueString -> "nomExercice"
-* extension[exerciseFirstName].valueString -> "prenomExercice"
-* extension[exerciseTitle].valueCodeableConcept -> "civiliteExercice"
+* extension[exerciseLastName].valueString -> "nomExercice" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* extension[exerciseFirstName].valueString -> "prenomExercice" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* extension[exerciseTitle].valueCodeableConcept -> "civiliteExercice" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
+Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"

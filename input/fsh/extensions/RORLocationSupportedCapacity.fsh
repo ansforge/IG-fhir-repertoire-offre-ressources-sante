@@ -45,14 +45,43 @@ Source:   RORLocationSupportedCapacity
 Id:       specmetier-to-RORLocationSupportedCapacity
 Title:    "Spécification métier vers l'extension ROR LocationSupportedCapacity"
 * -> "CapacitePriseCharge + CapaciteAccueilOperationnelle"
-* extension[capacityType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.natureCapacite"
-* extension[capacityStatus].valueCodeableConcept -> "CapaciteAccueilOperationnelle.statutCapacite"
-* extension[temporalityCapacity].valueCodeableConcept -> "CapaciteAccueilOperationnelle.temporaliteCapacite"
-* extension[nbCapacity].valueInteger -> "CapaciteAccueilOperationnelle.nombreCapacite"
-* extension[capacitySourceType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeSourceCapacite"
-* extension[genderCapacityAvailable].valueCodeableConcept -> "CapaciteAccueilOperationnelle.genreCapaciteDispo"
-* extension[capacityUpdateDate].valueDateTime -> "CapaciteAccueilOperationnelle.dateMAJCapacite"
-* extension[capacityClosingType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeFermetureCapacite"
-* extension[additionalBedType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeLitsSupplementaire"
-* extension[crisisType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeCrise"
-* extension[temporaryAssignement].valueCodeableConcept -> "CapacitePriseCharge.affectationTemporaire"
+* extension[capacityType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.natureCapacite" "Profil 1,
+Profil 2, si statut capacité <> Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité <> Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"
+* extension[capacityStatus].valueCodeableConcept -> "CapaciteAccueilOperationnelle.statutCapacite" "Profil 1,
+Profil 2, si statut capacité <> Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité <> Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"
+* extension[temporalityCapacity].valueCodeableConcept -> "CapaciteAccueilOperationnelle.temporaliteCapacite" "Profil 1,
+Profil 2, si statut capacité <> Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité <> Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"
+* extension[nbCapacity].valueInteger -> "CapaciteAccueilOperationnelle.nombreCapacite" "Profil 1,
+Profil 2, si statut capacité <> Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité <> Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"
+* extension[capacitySourceType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeSourceCapacite" "Profil 1,
+Profil 2, si statut capacité <> Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité <> Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui)"
+* extension[genderCapacityAvailable].valueCodeableConcept -> "CapaciteAccueilOperationnelle.genreCapaciteDispo" "Profil 1,
+Profil 2, si statut capacité <> Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité <> Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui)"
+* extension[capacityUpdateDate].valueDateTime -> "CapaciteAccueilOperationnelle.dateMAJCapacite" "Profil 1,
+Profil 2, si statut capacité <> Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité <> Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"
+* extension[capacityClosingType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeFermetureCapacite" "Profil 1,
+Profil 2, si statut capacité <> Exceptionnel (et sauf si uniteSensible = Oui),
+Profil 3, si statut capacité <> Exceptionnel et si champ d'activité = MS (et sauf si uniteSensible = Oui),
+Profil 0, si statut capacité = installé (et sauf si uniteSensible = Oui)"
+* extension[additionalBedType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeLitsSupplementaire" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* extension[crisisType].valueCodeableConcept -> "CapaciteAccueilOperationnelle.typeCrise" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* extension[temporaryAssignement].valueCodeableConcept -> "CapacitePriseCharge.affectationTemporaire" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0, si affectation temporaire = aucune (sauf si uniteSensible = Oui)"

@@ -127,31 +127,94 @@ Title:    "Location du Modèle exposition ROR V3"
 * meta.lastUpdated -> "dateMiseJour"
 * meta.tag[codeRegion] -> "regionSource"
 
-* name -> "nom"
-* description -> "description"
-* type -> "fonctionLieu"
+* name -> "nom" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* description -> "description" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* type -> "fonctionLieu" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 * status -> "Pas d'équivalent"
 
-* identifier[idExterneSynchro] -> "idExterneSynchro"
-* identifier[idLocation] -> "identifiant"
+* identifier[idExterneSynchro] -> "idExterneSynchro" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* identifier[idLocation] -> "identifiant" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 
 * alias[nomExterneSynchro] -> "nomExterneSynchro"
 
-* telecom -> "telecommunication"
-* telecom.value -> "adresseTelecom"
+* telecom -> "telecommunication" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),
+Profil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)"
+* telecom.value -> "adresseTelecom" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),
+Profil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)"
 
-* address -> "adresse"
-* address.city -> "localite"
-* address.postalCode -> "codePostal"
-* address.line.extension[careOf] -> "pointRemise"
-* address.line.extension[additionalLocator] -> "complementPointGeographique"
-* address.line.extension[houseNumber] -> "numeroVoie"
-* address.line.extension[buildingNumberSuffix] -> "extension"
-* address.line.extension[streetNameType] -> "typeVoie"
-* address.line.extension[streetNameBase] -> "libelleVoie"
-* address.line.extension[postalBox] -> "mentionDistribution"
-* address.line.extension[lieuDit] -> "lieuDit"
+* address -> "adresse" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.city -> "localite" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.postalCode -> "codePostal" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.line.extension[careOf] -> "pointRemise" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.line.extension[additionalLocator] -> "complementPointGeographique" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.line.extension[houseNumber] -> "numeroVoie" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.line.extension[buildingNumberSuffix] -> "extension" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.line.extension[streetNameType] -> "typeVoie" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.line.extension[streetNameBase] -> "libelleVoie" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.line.extension[postalBox] -> "mentionDistribution" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* address.line.extension[lieuDit] -> "lieuDit" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 
-* position -> "coordonneeGeographique"
-* position.longitude -> "longitude"
-* position.latitude -> "latitude"
+* position -> "coordonneeGeographique" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* position.longitude -> "longitude" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* position.latitude -> "latitude" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
