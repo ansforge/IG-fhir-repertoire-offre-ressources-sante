@@ -337,6 +337,7 @@ package IG #DDDDDD{
              Questionnaire.publisher => [None..None]
              Questionnaire.description => [None..None]
              Questionnaire.useContext => [1..None]
+             Questionnaire.useContext.code => [None..None]
              Questionnaire.useContext:catEG => [1..*]
              Questionnaire.useContext:catEG.code => [None..None]
              Questionnaire.useContext:catEG.value[x] => [None..None]
@@ -955,6 +956,10 @@ package IG #DDDDDD{
         class ActTypeRORValueSet  
 
      RORActType -[#black,dotted,thickness=2]-> ActTypeRORValueSet
+
+        class RORUsageContextTypeVS  
+
+     RORQuestionnaire -[#black,dotted,thickness=2]-> RORUsageContextTypeVS
 
         class CodeRegionTerritorialDivisionRORValueSet  
 
