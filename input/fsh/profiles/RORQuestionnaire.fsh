@@ -49,7 +49,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext[catEG].valueCodeableConcept MS
 * useContext[catEG] ^short = "Contexte d'usage de la fiche de consignes de saisie afin de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable"
 * useContext[catPS].code from ror-usage-context-type-vs (extensible)
-* useContext[catPS].code = $TRE-R288-TypeProfession#PS // fixé 
+* useContext[catPS].code = $TRE-R288-TypeProfession#P01 // fixé 
 * useContext[catPS].valueCodeableConcept from $JDV-J229-ProfessionSante-ROR (required)
 * useContext[catPS].valueCodeableConcept ^short = "Catégorie(s) de profession pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
 * useContext[catPS].valueCodeableConcept MS

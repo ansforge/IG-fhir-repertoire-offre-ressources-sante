@@ -27,7 +27,7 @@ Usage: #example
 * useContext[+].valueCodeableConcept = $TRE-R02-SecteurActivite#SA08
 * useContext[=].code = $TRE-R67-TypeStructure-EJ-EG#EG
 * useContext[+].valueCodeableConcept = $TRE-G15-ProfessionSante#10
-* useContext[=].code = $TRE-R288-TypeProfession#PS
+* useContext[=].code = $TRE-R288-TypeProfession#P01
 * useContext[+].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
 * useContext[=].code = $TRE-R04-TypeSavoirFaire#S
 

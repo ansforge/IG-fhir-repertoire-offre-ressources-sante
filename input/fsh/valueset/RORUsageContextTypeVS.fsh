@@ -5,4 +5,4 @@ Description: "Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-
 * include codes from system $usage-context-type
 * $TRE-R67-TypeStructure-EJ-EG#EG
 * $TRE-R04-TypeSavoirFaire#S
-* $TRE-R288-TypeProfession#PS
+* $TRE-R288-TypeProfession#P01
