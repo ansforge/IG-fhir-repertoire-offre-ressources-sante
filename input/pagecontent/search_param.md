@@ -2716,7 +2716,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   115%'><o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
-  <td width="16%" rowspan=8 valign=top style='width:16.48%;border-top:none;
+  <td width="16%" rowspan=9 valign=top style='width:16.48%;border-top:none;
   border-left:none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -2727,7 +2727,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
-  <td width="7%" rowspan=8 valign=top style='width:7.36%;border-top:none;
+  <td width="7%" rowspan=9 valign=top style='width:7.36%;border-top:none;
   border-left:none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -2738,7 +2738,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   115%'><o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
-  <td width="9%" rowspan=8 valign=top style='width:9.36%;border-top:none;
+  <td width="9%" rowspan=9 valign=top style='width:9.36%;border-top:none;
   border-left:none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -2859,6 +2859,32 @@ Critères de recherches applicables à la ressource HealthcareService.
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
  </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
+  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>typeFermeture (OffreOperationnelle)</span></span></span></span><span
+  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>Recherche sur la temporalité d'arrêt de réalisation de la prestation.</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
+  style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
+  115%;color:black;mso-color-alt:windowtext'>JDV-J185-TypeFermeture-ROR</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk126766943'></span>
+ </tr>
  <tr style='mso-yfti-irow:12'>
   <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
@@ -2970,29 +2996,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
  </tr>
- <tr style='mso-yfti-irow:15'>
-  <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
-  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
-  style='mso-bookmark:_Hlk126766943'><span class=SpellE><span class=GramE><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>typeFermeture (OffreOperationnelle)</span></span></span></span><span
-  style='mso-bookmark:_Hlk126766943'></span><span style='mso-bookmark:_Hlk126766943'><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
-  </td>
-  <span style='mso-bookmark:_Hlk126766943'></span>
-  <td width="44%" valign=top style='width:44.44%;border-top:none;border-left:
-  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
-  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
-  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='mso-yfti-cnfc:64'><span style='mso-bookmark:_Hlk126766943'><span
-  style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Recherche sur la temporalité d'arrêt de réalisation de la prestation<o:p></o:p></span></span></p>
-  <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
-  _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV-J185-TypeFermeture-ROR</span></span><span style='mso-bookmark:_Hlk126766943'><span
-  style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
-  </td>
-  <span style='mso-bookmark:_Hlk126766943'></span>
- </tr>
+ 
  <tr style='mso-yfti-irow:16'>
   <td width="22%" valign=top style='width:22.36%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
