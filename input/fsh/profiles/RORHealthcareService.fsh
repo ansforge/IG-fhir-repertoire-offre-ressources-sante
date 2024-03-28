@@ -144,16 +144,16 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 
 
 * specialty 1..* MS
-* specialty ^slicing.discriminator.type = #value 
-* specialty ^slicing.discriminator.path = "coding.system" 
-* specialty ^slicing.rules = #open
-* specialty contains
+* specialty.coding ^slicing.discriminator.type = #value 
+* specialty.coding ^slicing.discriminator.path = "system" 
+* specialty.coding ^slicing.rules = #open
+* specialty.coding contains
     operationalActivity 1..1 MS and
     operationalActivityFamily 0..1 MS
-* specialty[operationalActivity] ^short = "activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
-* specialty[operationalActivity] from $JDV-J17-ActiviteOperationnelle-ROR
-* specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne"
-* specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
+* specialty.coding[operationalActivity] ^short = "activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
+* specialty.coding[operationalActivity] from $JDV-J17-ActiviteOperationnelle-ROR
+* specialty.coding[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne"
+* specialty.coding[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
 
 * notAvailable MS
 * notAvailable ^slicing.discriminator.type = #value 
