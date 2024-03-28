@@ -93,7 +93,7 @@ inv-0","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Definition.description","n/a",".text"
 "Questionnaire.useContext","Questionnaire.useContext","","","",1,*,"Y","","Y","UsageContext {[]} {[]}
-","Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable ainsi que pottentiellemnt la spécialité ordinale et la profession","The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate questionnaire instances.","When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.","Assist in searching for appropriate content.","","","","","","","",,,,,"","pattern:useContext.code}
+","Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable ainsi que pottentiellemnt la spécialité ordinale et la profession","The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate questionnaire instances.","When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.","Assist in searching for appropriate content.","","","","","","","",,,,,"","value:useContext.code}
 ","Slicing pour définir les différents contextes d'usage de la fiche afin de pouvoir catégoriser ces fiches de consignes par : catégorie d'EG (obligatoire), Spécialité ordinale (optionnel) et profession (optionnel)",,"open","Questionnaire.useContext",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Definition.useContext","n/a","N/A (to add?)"
@@ -113,7 +113,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Type of context being specified","A code that identifies the type of context being specified by this usage context.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG""/>
   <code value=""EG""/>
-</valueCoding>","","","",,"extensible","","https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs","",,,,"UsageContext.code",1,1,"ele-1
+</valueCoding>","","","",,"extensible","A code that specifies a type of context being specified by a usage context.","http://hl7.org/fhir/ValueSet/usage-context-type","",,,,"UsageContext.code",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","CV","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
 "Questionnaire.useContext:catEG.value[x]","Questionnaire.useContext.value[x]","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
@@ -141,7 +141,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Type of context being specified","A code that identifies the type of context being specified by this usage context.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession""/>
   <code value=""P01""/>
-</valueCoding>","","","",,"extensible","","https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs","",,,,"UsageContext.code",1,1,"ele-1
+</valueCoding>","","","",,"extensible","A code that specifies a type of context being specified by a usage context.","http://hl7.org/fhir/ValueSet/usage-context-type","",,,,"UsageContext.code",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","CV","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
 "Questionnaire.useContext:catPS.value[x]","Questionnaire.useContext.value[x]","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
@@ -169,7 +169,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Type of context being specified","A code that identifies the type of context being specified by this usage context.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire""/>
   <code value=""S""/>
-</valueCoding>","","","",,"extensible","","https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs","",,,,"UsageContext.code",1,1,"ele-1
+</valueCoding>","","","",,"extensible","A code that specifies a type of context being specified by a usage context.","http://hl7.org/fhir/ValueSet/usage-context-type","",,,,"UsageContext.code",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","CV","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
 "Questionnaire.useContext:catSpeOrdinal.value[x]","Questionnaire.useContext.value[x]","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
