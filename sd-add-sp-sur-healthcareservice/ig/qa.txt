@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 99, warn = 80, info = 130
+err = 100, warn = 80, info = 130
 IG Publisher Version: 1.6.3
-Generated Thu Mar 28 09:46:43 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-ballot-1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Thu Mar 28 12:32:55 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-ballot-1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 78 / 4 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 7 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 7 / 0 / 1
@@ -26,6 +26,7 @@ Generated Thu Mar 28 09:46:43 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-age-range-low : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-equipment-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-intervention-zone : 0 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-notavailable-closing-reopeningdate : 1 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-patient-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-psychiatric-sector : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-limit-value : 0 / 0 / 1
@@ -394,6 +395,8 @@ ERROR: Questionnaire.text.div: Hyperlink 'StructureDefinition-ror-location-equip
 == fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-age-range-low.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-equipment-type.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-intervention-zone.json ==
+== fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-notavailable-closing-reopeningdate.json ==
+ERROR: SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate: SearchParameter.expression: Error in search expression 'HealthcareService.notAvailable:closingReopeningDate.during': Error @1, 1: Premature ExpressionNode termination at unexpected token ":"
 == fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-patient-type.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-healthcareservice-psychiatric-sector.json ==
 == fsh-generated/resources/SearchParameter-ror-sp-limit-value.json ==

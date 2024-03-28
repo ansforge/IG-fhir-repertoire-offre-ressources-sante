@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-03-28T09:42:55+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-03-28T12:29:08+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -832,6 +832,18 @@
        ] ;
        fhir:name [ fhir:v "ror-sp-healthcareservice-intervention-zone" ] ;
        fhir:description [ fhir:v "Paramètre de recherche décrivant la zone d'intervention" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate> ;
+         fhir:reference [ fhir:v "SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate" ]
+       ] ;
+       fhir:name [ fhir:v "ror-sp-healthcareservice-notavailable-closing-reopeningdate" ] ;
+       fhir:description [ fhir:v "Paramètre de recherche pour rechercher la date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end)." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
