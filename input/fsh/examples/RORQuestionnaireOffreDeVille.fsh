@@ -20,16 +20,17 @@ Usage: #example
 * subjectType[+] = #PractitionerRole
 * lastReviewDate = "2023-12-05"
 * purpose = "Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé."
-* useContext[0].valueCodeableConcept = $TRE-R02-SecteurActivite#SA05
-* useContext[=].code = $TRE-R67-TypeStructure-EJ-EG#EG
-* useContext[+].valueCodeableConcept = $TRE-R02-SecteurActivite#SA07
-* useContext[=].code = $TRE-R67-TypeStructure-EJ-EG#EG
-* useContext[+].valueCodeableConcept = $TRE-R02-SecteurActivite#SA08
-* useContext[=].code = $TRE-R67-TypeStructure-EJ-EG#EG
-* useContext[+].valueCodeableConcept = $TRE-G15-ProfessionSante#10
-* useContext[=].code = $TRE-R288-TypeProfession#P01
-* useContext[+].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
-* useContext[=].code = $TRE-R04-TypeSavoirFaire#S
+
+* useContext[0].code = $TRE-R67-TypeStructure-EJ-EG#EG
+* useContext[=].valueCodeableConcept = $TRE-R02-SecteurActivite#SA05
+* useContext[+].code = $TRE-R67-TypeStructure-EJ-EG#EG
+* useContext[=].valueCodeableConcept = $TRE-R02-SecteurActivite#SA07
+* useContext[+].code = $TRE-R67-TypeStructure-EJ-EG#EG
+* useContext[=].valueCodeableConcept = $TRE-R02-SecteurActivite#SA08
+* useContext[+].code = $TRE-R288-TypeProfession#P01
+* useContext[=].valueCodeableConcept = $TRE-G15-ProfessionSante#10
+* useContext[+].code = $TRE-R04-TypeSavoirFaire#S
+* useContext[=].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
 
 * item[0].linkId = "TypeOffreInfoEJ"
 * item[=].prefix = "1"
