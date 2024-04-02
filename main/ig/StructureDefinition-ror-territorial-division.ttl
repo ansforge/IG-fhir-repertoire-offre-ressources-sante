@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.4.0-ballot-1"] ; # 
   fhir:name [ fhir:v "RORTerritorialDivision"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-04-02T15:41:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-02T16:06:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -35,7 +35,7 @@
   ] ) ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:mapping ( [
-     fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
+     fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
      fhir:name [ fhir:v "Spécification métier vers l'extension ROR territorial division" ]
   ] [
      fhir:identity [ fhir:v "rim" ] ;
@@ -93,8 +93,9 @@
          ]
        ] ) ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
-         fhir:map [ fhir:v "DivisionTerritoriale" ]
+         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
+         fhir:map [ fhir:v "DivisionTerritoriale" ] ;
+         fhir:comment [ fhir:v "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.id" ] ;
@@ -339,8 +340,9 @@
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
        ] [
-         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
-         fhir:map [ fhir:v "type" ]
+         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
+         fhir:map [ fhir:v "type" ] ;
+         fhir:comment [ fhir:v "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:codeTerritorialDivision" ] ;
@@ -516,8 +518,9 @@
          fhir:identity [ fhir:v "rim" ] ;
          fhir:map [ fhir:v "N/A" ]
        ] [
-         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
-         fhir:map [ fhir:v "code" ]
+         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
+         fhir:map [ fhir:v "code" ] ;
+         fhir:comment [ fhir:v "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.url" ] ;
@@ -685,8 +688,9 @@
        fhir:path [ fhir:v "Extension" ] ;
        fhir:definition [ fhir:v "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. \nCela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent." ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
-         fhir:map [ fhir:v "DivisionTerritoriale" ]
+         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
+         fhir:map [ fhir:v "DivisionTerritoriale" ] ;
+         fhir:comment [ fhir:v "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension" ] ;
@@ -720,8 +724,9 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
-         fhir:map [ fhir:v "type" ]
+         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
+         fhir:map [ fhir:v "type" ] ;
+         fhir:comment [ fhir:v "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:codeTerritorialDivision" ] ;
@@ -751,8 +756,9 @@
          ]
        ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
-         fhir:map [ fhir:v "code" ]
+         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
+         fhir:map [ fhir:v "code" ] ;
+         fhir:comment [ fhir:v "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.url" ] ;

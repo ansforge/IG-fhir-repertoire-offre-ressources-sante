@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.4.0-ballot-1"] ; # 
   fhir:name [ fhir:v "RORHealthcareService"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-04-02T15:41:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-02T16:06:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -158,7 +158,8 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "metadonnee.identifiant" ]
+         fhir:map [ fhir:v "metadonnee.identifiant" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.meta" ] ;
@@ -831,11 +832,13 @@
        ] ) ;
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
-         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivisio" ] ;
-         fhir:map [ fhir:v "DivisionTerritoriale" ]
+         fhir:identity [ fhir:v "specmetier-to-RORTerritorialDivision" ] ;
+         fhir:map [ fhir:v "DivisionTerritoriale" ] ;
+         fhir:comment [ fhir:v "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "zoneIntervention" ]
+         fhir:map [ fhir:v "zoneIntervention" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.extension:ror-healthcareservice-sensitive-unit" ] ;
@@ -1011,7 +1014,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareServicePatientType" ] ;
-         fhir:map [ fhir:v "Patientele" ]
+         fhir:map [ fhir:v "Patientele" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.extension:ror-healthcareservice-contact" ] ;
@@ -1058,7 +1062,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareServiceContact" ] ;
-         fhir:map [ fhir:v "contact" ]
+         fhir:map [ fhir:v "contact" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)\nProfil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.extension:ror-meta-creation-date" ] ;
@@ -1216,7 +1221,8 @@
          fhir:map [ fhir:v ".id" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "identifiantOffre" ]
+         fhir:map [ fhir:v "identifiantOffre" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.active" ] ;
@@ -1321,6 +1327,9 @@
          fhir:map [ fhir:v ".scopingRole.Organization" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
+         fhir:map [ fhir:v "EntiteJuridique" ]
+       ] [
+         fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
          fhir:map [ fhir:v "EntiteGeographique" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
@@ -1384,7 +1393,8 @@
          fhir:map [ fhir:v ".code" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "typeOffre" ]
+         fhir:map [ fhir:v "typeOffre" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.type" ] ;
@@ -1441,7 +1451,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "champActivite" ]
+         fhir:map [ fhir:v "champActivite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.specialty" ] ;
@@ -1563,7 +1574,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "ActiviteOperationnelle.activiteOperationnelle" ]
+         fhir:map [ fhir:v "ActiviteOperationnelle.activiteOperationnelle" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.specialty:operationalActivityFamily" ] ;
@@ -1620,7 +1632,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=COMP.act[classCode=ACT][moodCode=DEF].code" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "ActiviteOperationnelle.familleActiviteOperationnelle" ]
+         fhir:map [ fhir:v "ActiviteOperationnelle.familleActiviteOperationnelle" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.location" ] ;
@@ -1683,7 +1696,7 @@
          fhir:map [ fhir:v ".location.role[classCode=SDLOC]" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "LieuRealisationoffre" ]
+         fhir:map [ fhir:v "LieuRealisationOffre" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.name" ] ;
@@ -1723,7 +1736,8 @@
          fhir:map [ fhir:v ".name" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "nomOffre" ]
+         fhir:map [ fhir:v "nomOffre" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.comment" ] ;
@@ -1906,7 +1920,8 @@
          fhir:map [ fhir:v ".telecom" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "boiteLettreMSS.adresseMSS" ]
+         fhir:map [ fhir:v "boiteLettreMSS.adresseMSS" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.telecom.id" ] ;
@@ -2205,7 +2220,8 @@
          fhir:map [ fhir:v "./Value" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "adresseTelecom" ]
+         fhir:map [ fhir:v "adresseTelecom" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.telecom.use" ] ;
@@ -3122,7 +3138,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "temporaliteAccueil" ]
+         fhir:map [ fhir:v "temporaliteAccueil" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:receptionType.id" ] ;
@@ -3405,7 +3422,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "modePriseEnCharge" ]
+         fhir:map [ fhir:v "modePriseEnCharge" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:careMode.id" ] ;
@@ -3688,7 +3706,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "modaliteAccueil" ]
+         fhir:map [ fhir:v "modaliteAccueil" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:receptionModality.id" ] ;
@@ -3971,7 +3990,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "modeGestion" ]
+         fhir:map [ fhir:v "modeGestion" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:managementType.id" ] ;
@@ -4254,7 +4274,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "acteSpecifique" ]
+         fhir:map [ fhir:v "acteSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:specificAct.id" ] ;
@@ -4658,7 +4679,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "acteRealiseHorsCabinet" ]
+         fhir:map [ fhir:v "acteRealiseHorsCabinet" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:outsideOfficeAct.id" ] ;
@@ -5062,7 +5084,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "specialisationPriseEnCharge" ]
+         fhir:map [ fhir:v "specialisationPriseEnCharge" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:takingCareSpeciality.id" ] ;
@@ -5345,7 +5368,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "ouvertureAnnuelle" ]
+         fhir:map [ fhir:v "ouvertureAnnuelle" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:annualOpening.id" ] ;
@@ -5628,7 +5652,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "professionRessource" ]
+         fhir:map [ fhir:v "professionRessource" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:ressourceProfession.id" ] ;
@@ -5911,7 +5936,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "competenceSpecifique" ]
+         fhir:map [ fhir:v "competenceSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:specificCompetence.id" ] ;
@@ -6194,7 +6220,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "niveauExpertise" ]
+         fhir:map [ fhir:v "niveauExpertise" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:expertiseLevel.id" ] ;
@@ -6477,7 +6504,8 @@
          fhir:map [ fhir:v ".actrelationship[typeCode=PERT].observation" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "typeFermeture" ]
+         fhir:map [ fhir:v "typeFermeture" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:temporalityStopService.id" ] ;
@@ -6892,7 +6920,8 @@
          fhir:map [ fhir:v ".effectiveTime" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "horaire" ]
+         fhir:map [ fhir:v "horaire" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.availableTime.id" ] ;
@@ -7276,7 +7305,8 @@
          fhir:map [ fhir:v ".effectiveTime" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "heureDebut" ]
+         fhir:map [ fhir:v "heureDebut" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.availableTime.availableEndTime" ] ;
@@ -7315,7 +7345,8 @@
          fhir:map [ fhir:v ".effectiveTime" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "heureFin" ]
+         fhir:map [ fhir:v "heureFin" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.notAvailable" ] ;
@@ -7958,7 +7989,8 @@
          fhir:map [ fhir:v "./low" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "dateFermeture" ]
+         fhir:map [ fhir:v "dateFermeture" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.notAvailable:closingReopeningDate.during.end" ] ;
@@ -8001,7 +8033,8 @@
          fhir:map [ fhir:v "./high" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "datePrevisionnelleReouverture" ]
+         fhir:map [ fhir:v "datePrevisionnelleReouverture" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.availabilityExceptions" ] ;
@@ -8102,7 +8135,8 @@
        fhir:path [ fhir:v "HealthcareService.id" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "metadonnee.identifiant" ]
+         fhir:map [ fhir:v "metadonnee.identifiant" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.meta" ] ;
@@ -8171,7 +8205,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "zoneIntervention" ]
+         fhir:map [ fhir:v "zoneIntervention" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.extension:ror-healthcareservice-sensitive-unit" ] ;
@@ -8272,7 +8307,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "identifiantOffre" ]
+         fhir:map [ fhir:v "identifiantOffre" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.active" ] ;
@@ -8297,6 +8333,9 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
+         fhir:map [ fhir:v "EntiteJuridique" ]
+       ] [
+         fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
          fhir:map [ fhir:v "EntiteGeographique" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
@@ -8317,7 +8356,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "typeOffre" ]
+         fhir:map [ fhir:v "typeOffre" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.type" ] ;
@@ -8335,7 +8375,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "champActivite" ]
+         fhir:map [ fhir:v "champActivite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.specialty" ] ;
@@ -8366,7 +8407,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "ActiviteOperationnelle.activiteOperationnelle" ]
+         fhir:map [ fhir:v "ActiviteOperationnelle.activiteOperationnelle" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.specialty:operationalActivityFamily" ] ;
@@ -8385,7 +8427,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "ActiviteOperationnelle.familleActiviteOperationnelle" ]
+         fhir:map [ fhir:v "ActiviteOperationnelle.familleActiviteOperationnelle" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.location" ] ;
@@ -8403,7 +8446,7 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "LieuRealisationoffre" ]
+         fhir:map [ fhir:v "LieuRealisationOffre" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.name" ] ;
@@ -8412,7 +8455,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "nomOffre" ]
+         fhir:map [ fhir:v "nomOffre" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.comment" ] ;
@@ -8428,7 +8472,8 @@
        fhir:short [ fhir:v "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’offre opérationnelle" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "boiteLettreMSS.adresseMSS" ]
+         fhir:map [ fhir:v "boiteLettreMSS.adresseMSS" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.telecom.extension" ] ;
@@ -8487,7 +8532,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "adresseTelecom" ]
+         fhir:map [ fhir:v "adresseTelecom" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.coverageArea" ] ;
@@ -8549,7 +8595,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "temporaliteAccueil" ]
+         fhir:map [ fhir:v "temporaliteAccueil" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:receptionType.extension:ror-act-type" ] ;
@@ -8583,7 +8630,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "modePriseEnCharge" ]
+         fhir:map [ fhir:v "modePriseEnCharge" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:careMode.extension:ror-act-type" ] ;
@@ -8617,7 +8665,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "modaliteAccueil" ]
+         fhir:map [ fhir:v "modaliteAccueil" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:receptionModality.extension:ror-act-type" ] ;
@@ -8651,7 +8700,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "modeGestion" ]
+         fhir:map [ fhir:v "modeGestion" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:managementType.extension:ror-act-type" ] ;
@@ -8685,7 +8735,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "acteSpecifique" ]
+         fhir:map [ fhir:v "acteSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:specificAct.extension" ] ;
@@ -8727,7 +8778,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "acteRealiseHorsCabinet" ]
+         fhir:map [ fhir:v "acteRealiseHorsCabinet" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:outsideOfficeAct.extension" ] ;
@@ -8769,7 +8821,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "specialisationPriseEnCharge" ]
+         fhir:map [ fhir:v "specialisationPriseEnCharge" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:takingCareSpeciality.extension:ror-act-type" ] ;
@@ -8803,7 +8856,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "ouvertureAnnuelle" ]
+         fhir:map [ fhir:v "ouvertureAnnuelle" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:annualOpening.extension:ror-act-type" ] ;
@@ -8837,7 +8891,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "professionRessource" ]
+         fhir:map [ fhir:v "professionRessource" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:ressourceProfession.extension:ror-act-type" ] ;
@@ -8871,7 +8926,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "competenceSpecifique" ]
+         fhir:map [ fhir:v "competenceSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:specificCompetence.extension:ror-act-type" ] ;
@@ -8905,7 +8961,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "niveauExpertise" ]
+         fhir:map [ fhir:v "niveauExpertise" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:expertiseLevel.extension:ror-act-type" ] ;
@@ -8939,7 +8996,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "typeFermeture" ]
+         fhir:map [ fhir:v "typeFermeture" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.characteristic:temporalityStopService.extension:ror-act-type" ] ;
@@ -8963,7 +9021,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "horaire" ]
+         fhir:map [ fhir:v "horaire" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.availableTime.extension:ror-available-time-type-of-time" ] ;
@@ -9022,7 +9081,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "heureDebut" ]
+         fhir:map [ fhir:v "heureDebut" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.availableTime.availableEndTime" ] ;
@@ -9031,7 +9091,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "heureFin" ]
+         fhir:map [ fhir:v "heureFin" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.notAvailable" ] ;
@@ -9067,7 +9128,8 @@
        fhir:short [ fhir:v "dateFermeture (OffreOperationnelle) : Date effective à partir de laquelle la prestation n'est plus assurée" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "dateFermeture" ]
+         fhir:map [ fhir:v "dateFermeture" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "HealthcareService.notAvailable:closingReopeningDate.during.end" ] ;
@@ -9075,7 +9137,8 @@
        fhir:short [ fhir:v "DatePrevisionnelleReouverture (OffreOperationnelle) : date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORHealthcareService" ] ;
-         fhir:map [ fhir:v "datePrevisionnelleReouverture" ]
+         fhir:map [ fhir:v "datePrevisionnelleReouverture" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)" ]
        ] )
      ] )
   ] . # 

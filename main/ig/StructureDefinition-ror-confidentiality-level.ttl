@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.4.0-ballot-1"] ; # 
   fhir:name [ fhir:v "RORConfidentialityLevel"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-04-02T15:41:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-02T16:06:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -235,7 +235,8 @@
          fhir:map [ fhir:v "N/A" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORConfidentialityLevel" ] ;
-         fhir:map [ fhir:v "niveauConfidentialite" ]
+         fhir:map [ fhir:v "niveauConfidentialite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)\nProfil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)" ]
        ] )
      ] )
   ] ; # 
@@ -267,7 +268,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORConfidentialityLevel" ] ;
-         fhir:map [ fhir:v "niveauConfidentialite" ]
+         fhir:map [ fhir:v "niveauConfidentialite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)\nProfil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)" ]
        ] )
      ] )
   ] . # 

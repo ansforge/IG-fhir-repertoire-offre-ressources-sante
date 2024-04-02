@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.4.0-ballot-1"] ; # 
   fhir:name [ fhir:v "RORLocationEquipment"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-04-02T15:41:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-02T16:06:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -91,7 +91,8 @@
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationEquipment" ] ;
-         fhir:map [ fhir:v "EquipementSpecifique" ]
+         fhir:map [ fhir:v "EquipementSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.id" ] ;
@@ -337,7 +338,8 @@
          fhir:map [ fhir:v "N/A" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocationEquipment" ] ;
-         fhir:map [ fhir:v "typeEquipement" ]
+         fhir:map [ fhir:v "typeEquipement" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:nbInService" ] ;
@@ -507,7 +509,8 @@
          fhir:map [ fhir:v "N/A" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORLocationEquipment" ] ;
-         fhir:map [ fhir:v "nbEquipementEnService" ]
+         fhir:map [ fhir:v "nbEquipementEnService" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:ror-location-equipment-limit" ] ;
@@ -553,7 +556,8 @@
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationEquipmentLimit" ] ;
-         fhir:map [ fhir:v "LimiteCaracteristiqueEquipement" ]
+         fhir:map [ fhir:v "LimiteCaracteristiqueEquipement" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.url" ] ;
@@ -722,7 +726,8 @@
        fhir:definition [ fhir:v "Extension créée dans le cadre du ROR pour décrire une ressource matérielle discriminante pour la réalisation d'une prestation. Cette extension a été créée, car Device ne correspondait pas à la définition de l'équipement pour le ROR.\n Device représente une instance d'un équipement alors l'équipement pour le ROR correspond juste au nombre d'équipement de même type." ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationEquipment" ] ;
-         fhir:map [ fhir:v "EquipementSpecifique" ]
+         fhir:map [ fhir:v "EquipementSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension" ] ;
@@ -757,7 +762,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationEquipment" ] ;
-         fhir:map [ fhir:v "typeEquipement" ]
+         fhir:map [ fhir:v "typeEquipement" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:nbInService" ] ;
@@ -781,7 +787,8 @@
        ] ) ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORLocationEquipment" ] ;
-         fhir:map [ fhir:v "nbEquipementEnService" ]
+         fhir:map [ fhir:v "nbEquipementEnService" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "Extension.extension:ror-location-equipment-limit" ] ;

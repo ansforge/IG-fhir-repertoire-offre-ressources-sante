@@ -322,7 +322,7 @@
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a>" : "0.4.0-ballot-1",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a>" : "RORHealthcareService",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2024-04-02T15:41:03+00:00",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2024-04-02T16:06:43+00:00",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "ANS",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
     {
@@ -478,7 +478,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "metadonnee.identifiant"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "metadonnee.identifiant",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
           }
         ]
       },
@@ -1269,12 +1270,14 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORTerritorialDivisio",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "DivisionTerritoriale"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORTerritorialDivision",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "DivisionTerritoriale",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "zoneIntervention"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "zoneIntervention",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -1456,7 +1459,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareServicePatientType",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patientele"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "Patientele",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -1506,7 +1510,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareServiceContact",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "contact"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "contact",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)\nProfil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -1690,7 +1695,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "identifiantOffre"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "identifiantOffre",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -1808,6 +1814,10 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "EntiteJuridique"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "EntiteGeographique"
           },
           {
@@ -1883,7 +1893,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "typeOffre"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "typeOffre",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -1950,7 +1961,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "champActivite"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "champActivite",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -2091,7 +2103,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ActiviteOperationnelle.activiteOperationnelle"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ActiviteOperationnelle.activiteOperationnelle",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -2156,7 +2169,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ActiviteOperationnelle.familleActiviteOperationnelle"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ActiviteOperationnelle.familleActiviteOperationnelle",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -2224,7 +2238,7 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "LieuRealisationoffre"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "LieuRealisationOffre"
           }
         ]
       },
@@ -2272,7 +2286,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "nomOffre"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "nomOffre",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -2486,7 +2501,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "boiteLettreMSS.adresseMSS"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "boiteLettreMSS.adresseMSS",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -2820,7 +2836,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "adresseTelecom"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "adresseTelecom",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -3907,7 +3924,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "temporaliteAccueil"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "temporaliteAccueil",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -4244,7 +4262,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modePriseEnCharge"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modePriseEnCharge",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -4581,7 +4600,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modaliteAccueil"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modaliteAccueil",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -4918,7 +4938,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modeGestion"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modeGestion",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -5255,7 +5276,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "acteSpecifique"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "acteSpecifique",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -5730,7 +5752,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "acteRealiseHorsCabinet"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "acteRealiseHorsCabinet",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -6205,7 +6228,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "specialisationPriseEnCharge"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "specialisationPriseEnCharge",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -6542,7 +6566,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ouvertureAnnuelle"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ouvertureAnnuelle",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -6879,7 +6904,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "professionRessource"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "professionRessource",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -7216,7 +7242,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "competenceSpecifique"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "competenceSpecifique",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -7553,7 +7580,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "niveauExpertise"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "niveauExpertise",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -7890,7 +7918,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "typeFermeture"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "typeFermeture",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -8381,7 +8410,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "horaire"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "horaire",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -8820,7 +8850,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "heureDebut"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "heureDebut",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -8867,7 +8898,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "heureFin"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "heureFin",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -9646,7 +9678,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "dateFermeture"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "dateFermeture",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -9699,7 +9732,8 @@
           },
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "datePrevisionnelleReouverture"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "datePrevisionnelleReouverture",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -9818,7 +9852,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "metadonnee.identifiant"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "metadonnee.identifiant",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
           }
         ]
       },
@@ -9901,7 +9936,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "zoneIntervention"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "zoneIntervention",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10017,7 +10053,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "identifiantOffre"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "identifiantOffre",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10047,6 +10084,10 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "EntiteJuridique"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "EntiteGeographique"
           },
           {
@@ -10068,7 +10109,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "typeOffre"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "typeOffre",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10086,7 +10128,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "champActivite"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "champActivite",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10120,7 +10163,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ActiviteOperationnelle.activiteOperationnelle"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ActiviteOperationnelle.activiteOperationnelle",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10139,7 +10183,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ActiviteOperationnelle.familleActiviteOperationnelle"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ActiviteOperationnelle.familleActiviteOperationnelle",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10159,7 +10204,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "LieuRealisationoffre"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "LieuRealisationOffre"
           }
         ]
       },
@@ -10171,7 +10216,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "nomOffre"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "nomOffre",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10193,7 +10239,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "boiteLettreMSS.adresseMSS"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "boiteLettreMSS.adresseMSS",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10262,7 +10309,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "adresseTelecom"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "adresseTelecom",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10330,7 +10378,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "temporaliteAccueil"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "temporaliteAccueil",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10366,7 +10415,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modePriseEnCharge"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modePriseEnCharge",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10402,7 +10452,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modaliteAccueil"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modaliteAccueil",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10438,7 +10489,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modeGestion"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "modeGestion",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10474,7 +10526,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "acteSpecifique"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "acteSpecifique",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10520,7 +10573,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "acteRealiseHorsCabinet"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "acteRealiseHorsCabinet",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10566,7 +10620,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "specialisationPriseEnCharge"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "specialisationPriseEnCharge",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10602,7 +10657,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ouvertureAnnuelle"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "ouvertureAnnuelle",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10638,7 +10694,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "professionRessource"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "professionRessource",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10674,7 +10731,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "competenceSpecifique"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "competenceSpecifique",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10710,7 +10768,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "niveauExpertise"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "niveauExpertise",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10746,7 +10805,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "typeFermeture"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "typeFermeture",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10775,7 +10835,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "horaire"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "horaire",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10844,7 +10905,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "heureDebut"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "heureDebut",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10856,7 +10918,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "heureFin"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "heureFin",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10901,7 +10964,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "dateFermeture"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "dateFermeture",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       },
@@ -10912,7 +10976,8 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "specmetier-to-RORHealthcareService",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "datePrevisionnelleReouverture"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "datePrevisionnelleReouverture",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.comment">comment</a>" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
           }
         ]
       }
@@ -10994,7 +11059,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 2, 2024 15:41+0000">2024-04-02</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 2, 2024 16:06+0000">2024-04-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

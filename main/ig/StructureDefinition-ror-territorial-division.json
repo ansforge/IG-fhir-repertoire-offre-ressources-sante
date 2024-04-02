@@ -9,7 +9,7 @@
   "version" : "0.4.0-ballot-1",
   "name" : "RORTerritorialDivision",
   "status" : "active",
-  "date" : "2024-04-02T15:41:03+00:00",
+  "date" : "2024-04-02T16:06:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -28,7 +28,7 @@
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
-    "identity" : "specmetier-to-RORTerritorialDivisio",
+    "identity" : "specmetier-to-RORTerritorialDivision",
     "name" : "Spécification métier vers l'extension ROR territorial division"
   },
   {
@@ -80,8 +80,9 @@
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "mapping" : [{
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "DivisionTerritoriale"
+        "identity" : "specmetier-to-RORTerritorialDivision",
+        "map" : "DivisionTerritoriale",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -314,8 +315,9 @@
         "map" : "N/A"
       },
       {
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "type"
+        "identity" : "specmetier-to-RORTerritorialDivision",
+        "map" : "type",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -482,8 +484,9 @@
         "map" : "N/A"
       },
       {
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "code"
+        "identity" : "specmetier-to-RORTerritorialDivision",
+        "map" : "code",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -700,8 +703,9 @@
       "path" : "Extension",
       "definition" : "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. \nCela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent.",
       "mapping" : [{
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "DivisionTerritoriale"
+        "identity" : "specmetier-to-RORTerritorialDivision",
+        "map" : "DivisionTerritoriale",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -737,8 +741,9 @@
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "type"
+        "identity" : "specmetier-to-RORTerritorialDivision",
+        "map" : "type",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -769,8 +774,9 @@
         "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORTerritorialDivisio",
-        "map" : "code"
+        "identity" : "specmetier-to-RORTerritorialDivision",
+        "map" : "code",
+        "comment" : "RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {

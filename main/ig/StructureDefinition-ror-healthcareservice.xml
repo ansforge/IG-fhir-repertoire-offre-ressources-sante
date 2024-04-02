@@ -86,7 +86,7 @@
   <version value="0.4.0-ballot-1"/>
   <name value="RORHealthcareService"/>
   <status value="active"/>
-  <date value="2024-04-02T15:41:03+00:00"/>
+  <date value="2024-04-02T16:06:43+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -216,6 +216,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="metadonnee.identifiant"/>
+        <comment value="Profil 1,&#xA;Profil 2,&#xA;Profil 3,&#xA;Profil 0"/>
       </mapping>
     </element>
     <element id="HealthcareService.meta">
@@ -837,12 +838,14 @@
       </constraint>
       <mustSupport value="true"/>
       <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <identity value="specmetier-to-RORTerritorialDivision"/>
         <map value="DivisionTerritoriale"/>
+        <comment value="RORHealthcareService : Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,&#xA;Profil 2,&#xA;Profil 3,&#xA;Profil 0"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="zoneIntervention"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.extension:ror-healthcareservice-sensitive-unit">
@@ -987,6 +990,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareServicePatientType"/>
         <map value="Patientele"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.extension:ror-healthcareservice-contact">
@@ -1026,6 +1030,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareServiceContact"/>
         <map value="contact"/>
+        <comment value="Profil 1,&#xA;Profil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) &#xA;Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)&#xA;Profil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.extension:ror-meta-creation-date">
@@ -1175,6 +1180,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="identifiantOffre"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.active">
@@ -1272,6 +1278,10 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
+        <map value="EntiteJuridique"/>
+      </mapping>
+      <mapping>
+        <identity value="specmetier-to-RORHealthcareService"/>
         <map value="EntiteGeographique"/>
       </mapping>
       <mapping>
@@ -1337,6 +1347,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="typeOffre"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.type">
@@ -1393,6 +1404,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="champActivite"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.specialty">
@@ -1511,6 +1523,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="ActiviteOperationnelle.activiteOperationnelle"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.specialty:operationalActivityFamily">
@@ -1567,6 +1580,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="ActiviteOperationnelle.familleActiviteOperationnelle"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.location">
@@ -1623,7 +1637,7 @@
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
-        <map value="LieuRealisationoffre"/>
+        <map value="LieuRealisationOffre"/>
       </mapping>
     </element>
     <element id="HealthcareService.name">
@@ -1663,6 +1677,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="nomOffre"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.comment">
@@ -1841,6 +1856,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="boiteLettreMSS.adresseMSS"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.telecom.id">
@@ -2108,6 +2124,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="adresseTelecom"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.telecom.use">
@@ -2982,6 +2999,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="temporaliteAccueil"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:receptionType.id">
@@ -3253,6 +3271,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="modePriseEnCharge"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:careMode.id">
@@ -3524,6 +3543,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="modaliteAccueil"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:receptionModality.id">
@@ -3795,6 +3815,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="modeGestion"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:managementType.id">
@@ -4066,6 +4087,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="acteSpecifique"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:specificAct.id">
@@ -4445,6 +4467,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="acteRealiseHorsCabinet"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:outsideOfficeAct.id">
@@ -4824,6 +4847,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="specialisationPriseEnCharge"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:takingCareSpeciality.id">
@@ -5095,6 +5119,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="ouvertureAnnuelle"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:annualOpening.id">
@@ -5366,6 +5391,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="professionRessource"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:ressourceProfession.id">
@@ -5637,6 +5663,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="competenceSpecifique"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:specificCompetence.id">
@@ -5908,6 +5935,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="niveauExpertise"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:expertiseLevel.id">
@@ -6179,6 +6207,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="typeFermeture"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:temporalityStopService.id">
@@ -6570,6 +6599,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="horaire"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.availableTime.id">
@@ -6914,6 +6944,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="heureDebut"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.availableTime.availableEndTime">
@@ -6952,6 +6983,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="heureFin"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.notAvailable">
@@ -7563,6 +7595,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="dateFermeture"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.notAvailable:closingReopeningDate.during.end">
@@ -7607,6 +7640,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="datePrevisionnelleReouverture"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.availabilityExceptions">
@@ -7698,6 +7732,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="metadonnee.identifiant"/>
+        <comment value="Profil 1,&#xA;Profil 2,&#xA;Profil 3,&#xA;Profil 0"/>
       </mapping>
     </element>
     <element id="HealthcareService.meta">
@@ -7761,6 +7796,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="zoneIntervention"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.extension:ror-healthcareservice-sensitive-unit">
@@ -7844,6 +7880,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="identifiantOffre"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.active">
@@ -7861,6 +7898,10 @@
         <targetProfile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"/>
       </type>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="specmetier-to-RORHealthcareService"/>
+        <map value="EntiteJuridique"/>
+      </mapping>
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="EntiteGeographique"/>
@@ -7882,6 +7923,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="typeOffre"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.type">
@@ -7897,6 +7939,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="champActivite"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.specialty">
@@ -7925,6 +7968,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="ActiviteOperationnelle.activiteOperationnelle"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.specialty:operationalActivityFamily">
@@ -7941,6 +7985,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="ActiviteOperationnelle.familleActiviteOperationnelle"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.location">
@@ -7953,7 +7998,7 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
-        <map value="LieuRealisationoffre"/>
+        <map value="LieuRealisationOffre"/>
       </mapping>
     </element>
     <element id="HealthcareService.name">
@@ -7963,6 +8008,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="nomOffre"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.comment">
@@ -7979,6 +8025,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="boiteLettreMSS.adresseMSS"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.telecom.extension">
@@ -8029,6 +8076,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="adresseTelecom"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.coverageArea">
@@ -8081,6 +8129,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="temporaliteAccueil"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:receptionType.extension:ror-act-type">
@@ -8109,6 +8158,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="modePriseEnCharge"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:careMode.extension:ror-act-type">
@@ -8137,6 +8187,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="modaliteAccueil"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:receptionModality.extension:ror-act-type">
@@ -8165,6 +8216,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="modeGestion"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:managementType.extension:ror-act-type">
@@ -8193,6 +8245,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="acteSpecifique"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:specificAct.extension">
@@ -8229,6 +8282,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="acteRealiseHorsCabinet"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:outsideOfficeAct.extension">
@@ -8265,6 +8319,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="specialisationPriseEnCharge"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:takingCareSpeciality.extension:ror-act-type">
@@ -8293,6 +8348,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="ouvertureAnnuelle"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:annualOpening.extension:ror-act-type">
@@ -8321,6 +8377,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="professionRessource"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:ressourceProfession.extension:ror-act-type">
@@ -8349,6 +8406,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="competenceSpecifique"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:specificCompetence.extension:ror-act-type">
@@ -8377,6 +8435,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="niveauExpertise"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:expertiseLevel.extension:ror-act-type">
@@ -8405,6 +8464,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="typeFermeture"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.characteristic:temporalityStopService.extension:ror-act-type">
@@ -8426,6 +8486,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="horaire"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.availableTime.extension:ror-available-time-type-of-time">
@@ -8476,6 +8537,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="heureDebut"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.availableTime.availableEndTime">
@@ -8485,6 +8547,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="heureFin"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.notAvailable">
@@ -8521,6 +8584,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="dateFermeture"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="HealthcareService.notAvailable:closingReopeningDate.during.end">
@@ -8529,6 +8593,7 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
         <map value="datePrevisionnelleReouverture"/>
+        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
   </differential>

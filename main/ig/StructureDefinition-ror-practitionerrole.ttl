@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.4.0-ballot-1"] ; # 
   fhir:name [ fhir:v "RORPractitionerRole"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-04-02T15:41:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-02T16:06:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -864,7 +864,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "modeExerciceOffre" ]
+         fhir:map [ fhir:v "modeExerciceOffre" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.extension:ror-practitionerrole-name" ] ;
@@ -1100,7 +1101,8 @@
          fhir:map [ fhir:v "N/A" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "secteurConventionnement" ]
+         fhir:map [ fhir:v "secteurConventionnement" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.extension:optionCAS" ] ;
@@ -1298,7 +1300,8 @@
          fhir:map [ fhir:v "N/A" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "optionContratAccèsAuxSoins" ]
+         fhir:map [ fhir:v "optionContratAccèsAuxSoins" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.extension:vitalAccepted" ] ;
@@ -1496,7 +1499,8 @@
          fhir:map [ fhir:v "N/A" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "carteVitaleAcceptee" ]
+         fhir:map [ fhir:v "carteVitaleAcceptee" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.extension:ror-meta-creation-date" ] ;
@@ -1704,7 +1708,8 @@
          fhir:map [ fhir:v "./Identifiers" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "identifiantSituationOperationnelle" ]
+         fhir:map [ fhir:v "identifiantSituationOperationnelle" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.active" ] ;
@@ -1989,7 +1994,8 @@
          fhir:map [ fhir:v "(ServD maps Practitioners and Organizations via another entity, so this concept is not available)" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "profession" ]
+         fhir:map [ fhir:v "profession" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty" ] ;
@@ -2123,7 +2129,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.typeSavoirFaire" ]
+         fhir:map [ fhir:v "SavoirFaire.typeSavoirFaire" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:specialty" ] ;
@@ -2186,7 +2193,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.specialite" ]
+         fhir:map [ fhir:v "SavoirFaire.specialite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:competence" ] ;
@@ -2249,7 +2257,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.competence" ]
+         fhir:map [ fhir:v "SavoirFaire.competence" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:exclusiveCompetence" ] ;
@@ -2312,7 +2321,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.competenceExclusive" ]
+         fhir:map [ fhir:v "SavoirFaire.competenceExclusive" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:specificOrientation" ] ;
@@ -2375,7 +2385,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.orientationParticuliere" ]
+         fhir:map [ fhir:v "SavoirFaire.orientationParticuliere" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:expertiseCapacity" ] ;
@@ -2438,7 +2449,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.capacite" ]
+         fhir:map [ fhir:v "SavoirFaire.capacite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:qualificationPAC" ] ;
@@ -2501,7 +2513,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.qualificationPAC" ]
+         fhir:map [ fhir:v "SavoirFaire.qualificationPAC" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:nonQualifyingDESC" ] ;
@@ -2564,7 +2577,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.DESCNonQualifiant" ]
+         fhir:map [ fhir:v "SavoirFaire.DESCNonQualifiant" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:supplementaryExerciseRight" ] ;
@@ -2627,7 +2641,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.droitExerciceComplémentaire" ]
+         fhir:map [ fhir:v "SavoirFaire.droitExerciceComplémentaire" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:specificCompetence" ] ;
@@ -2690,7 +2705,8 @@
          fhir:map [ fhir:v "./Specialty" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "competenceSpecifique" ]
+         fhir:map [ fhir:v "competenceSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.location" ] ;
@@ -2873,7 +2889,8 @@
          fhir:map [ fhir:v ".telecom" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "telecommunication" ]
+         fhir:map [ fhir:v "telecommunication" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.telecom.id" ] ;
@@ -3172,7 +3189,8 @@
          fhir:map [ fhir:v "./Value" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "adresseTelecom" ]
+         fhir:map [ fhir:v "adresseTelecom" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.telecom.use" ] ;
@@ -3362,7 +3380,8 @@
          fhir:map [ fhir:v ".effectiveTime" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "horaire" ]
+         fhir:map [ fhir:v "horaire" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.availableTime.id" ] ;
@@ -3746,7 +3765,8 @@
          fhir:map [ fhir:v ".effectiveTime" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "heureDebut" ]
+         fhir:map [ fhir:v "heureDebut" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.availableTime.availableEndTime" ] ;
@@ -3785,7 +3805,8 @@
          fhir:map [ fhir:v ".effectiveTime" ]
        ] [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "heureFin" ]
+         fhir:map [ fhir:v "heureFin" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.notAvailable" ] ;
@@ -4223,7 +4244,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "modeExerciceOffre" ]
+         fhir:map [ fhir:v "modeExerciceOffre" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.extension:ror-practitionerrole-name" ] ;
@@ -4275,7 +4297,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "secteurConventionnement" ]
+         fhir:map [ fhir:v "secteurConventionnement" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.extension:optionCAS" ] ;
@@ -4297,7 +4320,8 @@
        fhir:path [ fhir:v "PractitionerRole.extension.value[x]" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "optionContratAccèsAuxSoins" ]
+         fhir:map [ fhir:v "optionContratAccèsAuxSoins" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.extension:vitalAccepted" ] ;
@@ -4319,7 +4343,8 @@
        fhir:path [ fhir:v "PractitionerRole.extension.value[x]" ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "carteVitaleAcceptee" ]
+         fhir:map [ fhir:v "carteVitaleAcceptee" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.extension:ror-meta-creation-date" ] ;
@@ -4359,7 +4384,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "identifiantSituationOperationnelle" ]
+         fhir:map [ fhir:v "identifiantSituationOperationnelle" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.practitioner" ] ;
@@ -4409,7 +4435,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "profession" ]
+         fhir:map [ fhir:v "profession" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty" ] ;
@@ -4440,7 +4467,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.typeSavoirFaire" ]
+         fhir:map [ fhir:v "SavoirFaire.typeSavoirFaire" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:specialty" ] ;
@@ -4459,7 +4487,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.specialite" ]
+         fhir:map [ fhir:v "SavoirFaire.specialite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:competence" ] ;
@@ -4478,7 +4507,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.competence" ]
+         fhir:map [ fhir:v "SavoirFaire.competence" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:exclusiveCompetence" ] ;
@@ -4497,7 +4527,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.competenceExclusive" ]
+         fhir:map [ fhir:v "SavoirFaire.competenceExclusive" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:specificOrientation" ] ;
@@ -4516,7 +4547,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.orientationParticuliere" ]
+         fhir:map [ fhir:v "SavoirFaire.orientationParticuliere" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:expertiseCapacity" ] ;
@@ -4535,7 +4567,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.capacite" ]
+         fhir:map [ fhir:v "SavoirFaire.capacite" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:qualificationPAC" ] ;
@@ -4554,7 +4587,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.qualificationPAC" ]
+         fhir:map [ fhir:v "SavoirFaire.qualificationPAC" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:nonQualifyingDESC" ] ;
@@ -4573,7 +4607,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.DESCNonQualifiant" ]
+         fhir:map [ fhir:v "SavoirFaire.DESCNonQualifiant" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:supplementaryExerciseRight" ] ;
@@ -4592,7 +4627,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "SavoirFaire.droitExerciceComplémentaire" ]
+         fhir:map [ fhir:v "SavoirFaire.droitExerciceComplémentaire" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.specialty:specificCompetence" ] ;
@@ -4611,7 +4647,8 @@
        ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-exercicePro" ] ;
-         fhir:map [ fhir:v "competenceSpecifique" ]
+         fhir:map [ fhir:v "competenceSpecifique" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.location" ] ;
@@ -4654,7 +4691,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "telecommunication" ]
+         fhir:map [ fhir:v "telecommunication" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.telecom.extension" ] ;
@@ -4713,7 +4751,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "adresseTelecom" ]
+         fhir:map [ fhir:v "adresseTelecom" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.availableTime" ] ;
@@ -4723,7 +4762,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "horaire" ]
+         fhir:map [ fhir:v "horaire" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.availableTime.extension:ror-available-time-type-of-time" ] ;
@@ -4777,7 +4817,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "heureDebut" ]
+         fhir:map [ fhir:v "heureDebut" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] [
        fhir:id [ fhir:v "PractitionerRole.availableTime.availableEndTime" ] ;
@@ -4786,7 +4827,8 @@
        fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "specmetier-to-RORPractitionerRole-situationOp" ] ;
-         fhir:map [ fhir:v "heureFin" ]
+         fhir:map [ fhir:v "heureFin" ] ;
+         fhir:comment [ fhir:v "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)" ]
        ] )
      ] )
   ] . # 

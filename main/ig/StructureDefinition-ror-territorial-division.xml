@@ -22,7 +22,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
   <version value="0.4.0-ballot-1"/>
   <name value="RORTerritorialDivision"/>
   <status value="active"/>
-  <date value="2024-04-02T15:41:03+00:00"/>
+  <date value="2024-04-02T16:06:43+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -41,7 +41,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
   </jurisdiction>
   <fhirVersion value="4.0.1"/>
   <mapping>
-    <identity value="specmetier-to-RORTerritorialDivisio"/>
+    <identity value="specmetier-to-RORTerritorialDivision"/>
     <name value="Spécification métier vers l'extension ROR territorial division"/>
   </mapping>
   <mapping>
@@ -92,8 +92,9 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
       </constraint>
       <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <identity value="specmetier-to-RORTerritorialDivision"/>
         <map value="DivisionTerritoriale"/>
+        <comment value="RORHealthcareService : Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,&#xA;Profil 2,&#xA;Profil 3,&#xA;Profil 0"/>
       </mapping>
     </element>
     <element id="Extension.id">
@@ -316,8 +317,9 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <map value="N/A"/>
       </mapping>
       <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <identity value="specmetier-to-RORTerritorialDivision"/>
         <map value="type"/>
+        <comment value="RORHealthcareService : Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:codeTerritorialDivision">
@@ -477,8 +479,9 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <map value="N/A"/>
       </mapping>
       <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <identity value="specmetier-to-RORTerritorialDivision"/>
         <map value="code"/>
+        <comment value="RORHealthcareService : Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.url">
@@ -691,8 +694,9 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
       <path value="Extension"/>
       <definition value="Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. &#xA;Cela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent."/>
       <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <identity value="specmetier-to-RORTerritorialDivision"/>
         <map value="DivisionTerritoriale"/>
+        <comment value="RORHealthcareService : Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui) / ROROrganization : Profil 1,&#xA;Profil 2,&#xA;Profil 3,&#xA;Profil 0"/>
       </mapping>
     </element>
     <element id="Extension.extension">
@@ -723,8 +727,9 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR"/>
       </binding>
       <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <identity value="specmetier-to-RORTerritorialDivision"/>
         <map value="type"/>
+        <comment value="RORHealthcareService : Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension:codeTerritorialDivision">
@@ -751,8 +756,9 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
         <valueSet value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"/>
       </binding>
       <mapping>
-        <identity value="specmetier-to-RORTerritorialDivisio"/>
+        <identity value="specmetier-to-RORTerritorialDivision"/>
         <map value="code"/>
+        <comment value="RORHealthcareService : Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.url">
