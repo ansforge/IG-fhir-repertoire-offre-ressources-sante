@@ -9,7 +9,7 @@
   "version" : "0.4.0-ballot-1",
   "name" : "ROROrganization",
   "status" : "active",
-  "date" : "2024-04-02T14:42:30+00:00",
+  "date" : "2024-04-02T15:15:10+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1942,7 +1942,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2002,7 +2002,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2419,7 +2419,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2479,7 +2479,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2896,7 +2896,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2956,7 +2956,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -3373,7 +3373,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -3433,7 +3433,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -3850,7 +3850,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -3910,7 +3910,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -4327,7 +4327,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -4387,7 +4387,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -4804,7 +4804,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -4864,7 +4864,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -5281,7 +5281,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -5341,7 +5341,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -7845,7 +7845,7 @@
         "human" : "A system is required if a value is provided.",
         "expression" : "value.empty() or system.exists()",
         "xpath" : "not(exists(f:value)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       },
       {
         "key" : "org-3",
@@ -8332,7 +8332,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -10764,7 +10764,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -10830,7 +10830,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "mustSupport" : true,
       "isSummary" : true,
@@ -11519,7 +11519,7 @@
         "human" : "A system is required if a value is provided.",
         "expression" : "value.empty() or system.exists()",
         "xpath" : "not(exists(f:value)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -11993,7 +11993,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -12106,7 +12106,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "mapping" : [{
         "identity" : "rim",
