@@ -32,7 +32,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * code 0..0 //hors cas d'usage du ROR ? http://hl7.org/fhir/R4/valueset-questionnaire-questions.html
 * useContext 1..*
 * useContext MS
-* useContext ^short = "Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable ainsi que pottentiellemnt la spécialité ordinale et la profession"
+* useContext ^short = "Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable ainsi que potentiellemnt la spécialité ordinale et la profession"
 * useContext ^slicing.discriminator.type = #value
 * useContext ^slicing.discriminator.path = "useContext.code"
 * useContext ^slicing.rules = #open
