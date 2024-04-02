@@ -16,4 +16,8 @@ Mapping:  ConceptMetier_RORConfidentialityLevel
 Source:   RORConfidentialityLevel
 Id:       specmetier-to-RORConfidentialityLevel
 Title:    "Spécification métier vers l'extension ROR ConfidentialityLevel"
-* valueCodeableConcept -> "niveauConfidentialite"
+* valueCodeableConcept -> "niveauConfidentialite" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public (sauf si uniteSensible = Oui) 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint (sauf si uniteSensible = Oui)
+Profil 0 si niveau de confidentialité  du contact= public (sauf si uniteSensible = Oui)"

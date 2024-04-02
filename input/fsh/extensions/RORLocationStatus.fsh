@@ -10,4 +10,7 @@ Mapping:  ConceptMetier_RORLocationStatus
 Source:   RORLocationStatus
 Id:       specmetier-to-RORLocationStatus
 Title:    "Spécification métier vers l'extension ROR LocationStatus"
-* valueCodeableConcept -> "statut"
+* valueCodeableConcept -> "statut" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"

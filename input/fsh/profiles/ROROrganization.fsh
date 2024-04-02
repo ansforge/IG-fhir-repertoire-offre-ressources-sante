@@ -217,40 +217,120 @@ Id:       specmetier-to-ROROrganization-ej
 Title:    "EntiteJuridique du Modèle exposition ROR V3"
 * -> "EntiteJuridique"
 
-* id -> "metadonnee.identifiant"
+* id -> "metadonnee.identifiant" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* meta.tag[codeRegion] -> "regionSource" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
-* identifier[idNatSt] -> "idNatstruct"
-* identifier[finess] -> "numFINESS"
-* identifier[sirene] -> "numSIREN"
-* identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang"
+* identifier[idNatSt] -> "idNatstruct" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* identifier[finess] -> "numFINESS" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* identifier[sirene] -> "numSIREN" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 * identifier[adeliRang] -> "numEJ_RPPS_ADELI_Rang"
 
-* name -> "raisonSociale"
+* name -> "raisonSociale" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 * name.extension[ror-organization-additional-name] -> "complementRaisonSociale"
 
-* type[statutJuridiqueINSEE] -> "statutJuridique"
-* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique"
+* type[statutJuridiqueINSEE] -> "statutJuridique" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
-* contact -> "contact"
-* contact.name -> "nom"
-* contact.purpose -> "natureContact"
-* contact.telecom -> "telecommunication"
-* contact.telecom.value -> "adresseTelecom"
+* contact -> "contact" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public"
+* contact.name -> "nom" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public"
+* contact.purpose -> "natureContact" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public"
+* contact.telecom -> "telecommunication" "Profil 1,
+Profil 2 si niveau de confidentialité du telecom = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
+Profil 0 si niveau de confidentialité du telecom = public"
+* contact.telecom.value -> "adresseTelecom" "Profil 1,
+Profil 2 si niveau de confidentialité du telecom = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
+Profil 0 si niveau de confidentialité du telecom = public"
 
-* address -> "adresseEJ"
-* address.city -> "localite"
-* address.postalCode -> "codePostal"
-* address.line.extension[careOf].valueString -> "pointRemise"
-* address.line.extension[additionalLocator].valueString -> "complementPointGeographique"
-* address.line.extension[houseNumber].valueString -> "numeroVoie"
-* address.line.extension[buildingNumberSuffix].valueString -> "extension"
-* address.line.extension[streetNameType].valueString -> "typeVoie"
-* address.line.extension[streetNameBase].valueString -> "libelleVoie"
-* address.line.extension[precinct].valueString -> "lieuDit"
-* address.line.extension[postalBox].valueString -> "mentionDistribution"
+* address -> "adresseEJ" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.city -> "localite" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.postalCode -> "codePostal" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.line.extension[careOf].valueString -> "pointRemise" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.line.extension[additionalLocator].valueString -> "complementPointGeographique" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.line.extension[houseNumber].valueString -> "numeroVoie" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.line.extension[buildingNumberSuffix].valueString -> "extension" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.line.extension[streetNameType].valueString -> "typeVoie" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.line.extension[streetNameBase].valueString -> "libelleVoie" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.line.extension[precinct].valueString -> "lieuDit" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* address.line.extension[postalBox].valueString -> "mentionDistribution" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
 * extension[ror-organization-creation-date] -> "dateCreation"
 
@@ -262,44 +342,109 @@ Id:       specmetier-to-ROROrganization-eg
 Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * -> "EntiteGeographique"
 
-* id -> "metadonnee.identifiant"
+* id -> "metadonnee.identifiant" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* meta.tag[codeRegion] -> "regionSource" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
-* identifier[idNatSt] -> "idNatstruct"
-* identifier[finess] -> "numFINESS"
-* identifier[sirene] -> "numSIREN"
-* identifier[numSIRET] -> "numSIRET"
-* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang"
+* identifier[idNatSt] -> "idNatstruct" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* identifier[finess] -> "numFINESS" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* identifier[sirene] -> "numSIREN" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* identifier[numSIRET] -> "numSIRET" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 * identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang"
 
 * alias -> "nomOpérationnel"
 * name -> "denominationEG"
 * name.extension[ror-organization-additional-name] -> "complementDenominationEG"
 
-* type[categorieEtablissement] -> "categorieEG"
-* type[sphParticipation] -> "modaliteParticipationSPH"
+* type[categorieEtablissement] -> "categorieEG" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* type[sphParticipation] -> "modaliteParticipationSPH" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
-* contact -> "contact"
-* contact.name -> "nom"
-* contact.purpose -> "natureContact"
-* contact.telecom -> "telecommunication"
-* contact.telecom.value -> "adresseTelecom"
+* contact -> "contact" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public"
+* contact.name -> "nom" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public"
+* contact.purpose -> "natureContact" "Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public"
+* contact.telecom -> "telecommunication" "Profil 1,
+Profil 2 si niveau de confidentialité du telecom = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
+Profil 0 si niveau de confidentialité du telecom = public"
+* contact.telecom.value -> "adresseTelecom" "Profil 1,
+Profil 2 si niveau de confidentialité du telecom = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public 
+Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
+Profil 0 si niveau de confidentialité du telecom = public"
 
-* extension[ror-organization-financial-help-type] -> "aideFinanciere"
-* extension[ror-organization-accomodation-family] -> "hebergementFamille"
-* extension[ror-organization-nb-permanent-social-help-place] -> "nbPlaceAideSocialPermanent"
-* extension[ror-organization-nb-temporary-social-help-place] -> "nbPlaceAideSocialTemporaire"
-* extension[ror-organization-accessibility-location] -> "accessibiliteLieu"
-* extension[ror-organization-level-recourse-orsan] -> "niveauRecoursORSAN"
-* extension[ror-organization-drop-zone] -> "zonePoser"
+* extension[ror-organization-financial-help-type] -> "aideFinanciere" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* extension[ror-organization-accomodation-family] -> "hebergementFamille" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* extension[ror-organization-nb-permanent-social-help-place] -> "nbPlaceAideSocialPermanent" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* extension[ror-organization-nb-temporary-social-help-place] -> "nbPlaceAideSocialTemporaire" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* extension[ror-organization-accessibility-location] -> "accessibiliteLieu" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
+* extension[ror-organization-level-recourse-orsan] -> "niveauRecoursORSAN" "Profil 1"
+* extension[ror-organization-drop-zone] -> "zonePoser" "Profil 1"
 * extension[ror-organization-comment] -> "commentaire"
 
 * extension[organization-period].valuePeriod.start -> "dateOuverture"
 * extension[organization-period].valuePeriod.end -> "dateFermeture"
 
-* extension[ror-territorial-division] -> "territoireSante"
+* extension[ror-territorial-division] -> "territoireSante" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
 Mapping:  ConceptMetier_ROROrganization_OI
 Source:   ROROrganization
@@ -307,16 +452,28 @@ Id:       specmetier-to-ROROrganization-oi
 Title:    "OrganisationInterne du Modèle exposition ROR V3"
 * -> "OrganisationInterne"
 
-* id -> "metadonnee.identifiant"
+* id -> "metadonnee.identifiant" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 * meta -> "metadonnee"
 * meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* meta.tag[codeRegion] -> "regionSource" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
-* identifier[identifierOI] -> "identifiantOI"
+* identifier[identifierOI] -> "identifiantOI" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
 * name -> "nomOI"
 
-* type[OIType] -> "typeOI"
+* type[OIType] -> "typeOI" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
 
 * telecom -> "boiteLettreMSS"
 * telecom.value -> "adresseTelecom"

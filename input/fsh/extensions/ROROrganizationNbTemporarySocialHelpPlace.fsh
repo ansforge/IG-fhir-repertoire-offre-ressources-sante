@@ -9,4 +9,7 @@ Mapping:  ConceptMetier_ROROrganizationNbTemporarySocialHelpPlace
 Source:   ROROrganizationNbTemporarySocialHelpPlace
 Id:       specmetier-to-ROROrganizationNbTemporarySocialHelpPlace
 Title:    "Spécification métier vers l'extension ROR NbTemporarySocialHelpPlace"
-* valueInteger -> "nbPlaceAideSocialTemporaire"
+* valueInteger -> "nbPlaceAideSocialTemporaire" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"

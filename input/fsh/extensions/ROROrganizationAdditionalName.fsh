@@ -10,4 +10,7 @@ Source:   ROROrganizationAdditionalName
 Id:       specmetier-to-ROROrganizationAdditionalName
 Title:    "Spécification métier vers l'extension ROR AdditionalName"
 * valueString -> "EG.complementDenominationEG"
-* valueString -> "EJ.complementRaisonSociale"
+* valueString -> "EJ.complementRaisonSociale" "Profil 1,
+Profil 2,
+Profil 3,
+Profil 0"
