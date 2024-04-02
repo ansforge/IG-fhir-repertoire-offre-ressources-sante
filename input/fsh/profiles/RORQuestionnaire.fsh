@@ -33,7 +33,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext 1..*
 * useContext MS
 * useContext ^short = "Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable ainsi que potentiellemnt la spécialité ordinale et la profession"
-* useContext ^slicing.discriminator.type = #value
+* useContext ^slicing.discriminator.type = #pattern
 * useContext ^slicing.discriminator.path = "useContext.code"
 * useContext ^slicing.rules = #open
 * useContext ^slicing.description = "Slicing pour définir les différents contextes d'usage de la fiche afin de pouvoir catégoriser ces fiches de consignes par : catégorie d'EG (obligatoire), Spécialité ordinale (optionnel) et profession (optionnel)"
