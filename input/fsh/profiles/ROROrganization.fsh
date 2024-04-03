@@ -33,9 +33,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * alias ^short = "nomOperationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
 * identifier MS
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
+* * identifier ^slicing.description = "slice de la slice héritée pour répondre au cas d'usage du ROR"
 * identifier contains
     //idNatSt 0..1 MS and
     //finess 0..1 MS and
