@@ -285,10 +285,10 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
+      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
       "http://hl7.org/fhir/R4/valueset-use-context.html" : "ConformanceUseContext",
-      "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes",
       "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
-      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set"
+      "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
@@ -325,18 +325,6 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-definition-topic.html" : "DefinitionTopic"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
-      "version" : "1.0.0",
-      "status" : "draft",
-      "name" : "LocationType",
-      "title" : "Location type",
-      "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.\r\rThis includes several 'non physical' codes which are still considered a location.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1108"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R4/valueset-location-physical-type.html" : "Location type"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/measure-data-usage",
@@ -484,6 +472,28 @@
       "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
     },
     {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type",
+      "version" : "2.0.0",
+      "status" : "draft",
+      "name" : "FRCoreCodeSystemLocationIdentifierType",
+      "title" : "FR Core CodeSystem Location Identifier Type",
+      "description" : "Location identifier type",
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.0.0/ValueSet-fr-core-vs-location-identifier-type.html" : "FR Core ValueSet Location identifier type"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-physical-type",
+      "version" : "2.0.0",
+      "status" : "draft",
+      "name" : "FRCoreCodeSystemLocationPhysicalType",
+      "title" : "FR Core CodeSystem Location Physical Type",
+      "description" : "Location physical type",
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.0.0/ValueSet-fr-core-vs-location-physical-type.html" : "FR Core ValueSet Location physical type"
+    },
+    {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-3307",
       "version" : "2.0.0",
       "status" : "draft",
@@ -563,8 +573,8 @@
       "oids" : ["1.2.250.1.71.4.2.4"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J55-CategorieEG-ROR.html" : "JDV_J55-CategorieEG-ROR",
-      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J101-SecteurActivite-RASS.html" : "JDV_J101-SecteurActivite-RASS"
+      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J101-SecteurActivite-RASS.html" : "JDV_J101-SecteurActivite-RASS",
+      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J55-CategorieEG-ROR.html" : "JDV_J55-CategorieEG-ROR"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire",
@@ -576,8 +586,8 @@
       "oids" : ["1.2.250.1.213.1.6.1.16"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J209-TypeSavoirFaire-ROR.html" : "JDV_J209-TypeSavoirFaire-ROR",
-      "ValueSet-ror-usage-context-type-vs.html" : "Value Set type pour le contexte d'usage de la fiche de saisie"
+      "ValueSet-ror-usage-context-type-vs.html" : "Value Set type pour le contexte d'usage de la fiche de saisie",
+      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J209-TypeSavoirFaire-ROR.html" : "JDV_J209-TypeSavoirFaire-ROR"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice",
@@ -949,8 +959,8 @@
       "oids" : ["1.2.250.1.213.1.6.1.135"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J130-CNAMAmeliSecteurConventionnement-RASS.html" : "JDV_J130-CNAMAmeliSecteurConventionnement-RASS",
-      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J218-CNAMAmeliSecteurConventionnement-ROR.html" : "JDV_J218-CNAMAmeliSecteurConventionnement-ROR"
+      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J218-CNAMAmeliSecteurConventionnement-ROR.html" : "JDV_J218-CNAMAmeliSecteurConventionnement-ROR",
+      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J130-CNAMAmeliSecteurConventionnement-RASS.html" : "JDV_J130-CNAMAmeliSecteurConventionnement-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
@@ -986,8 +996,8 @@
       "oids" : ["1.2.250.1.213.1.6.1.136"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J201-TypeFermeture-ROR.html" : "JDV_J201-TypeFermeture-ROR",
-      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J185-TypeFermeture-ROR.html" : "JDV_J185-TypeFermeture-ROR"
+      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J185-TypeFermeture-ROR.html" : "JDV_J185-TypeFermeture-ROR",
+      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J201-TypeFermeture-ROR.html" : "JDV_J201-TypeFermeture-ROR"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact",
@@ -1252,7 +1262,8 @@
       "oids" : ["1.2.250.1.213.2.28"],
       "uses" : {
       },
-      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J210-SpecialiteOrdinale-ROR.html" : "JDV_J210-SpecialiteOrdinale-ROR"
+      "https://interop.esante.gouv.fr/ig/nos/1.2.0/ValueSet-JDV-J210-SpecialiteOrdinale-ROR.html" : "JDV_J210-SpecialiteOrdinale-ROR",
+      "https://hl7.fr/ig/fhir/core/2.0.0/ValueSet-fr-core-vs-practitioner-specialty.html" : "FR Core ValueSet Practitioner specialty"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R39-Competence/FHIR/TRE-R39-Competence",
@@ -1470,8 +1481,8 @@
       "oids" : ["1.0.3166.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-jurisdiction.html" : "Jurisdiction",
-      "http://hl7.org/fhir/R4/valueset-use-context.html" : "ConformanceUseContext"
+      "http://hl7.org/fhir/R4/valueset-use-context.html" : "ConformanceUseContext",
+      "http://hl7.org/fhir/R4/valueset-jurisdiction.html" : "Jurisdiction"
     },
     {
       "url" : "urn:iso:std:iso:3166:-2",

@@ -9,6 +9,7 @@ package IG #DDDDDD{
 
         class RORHealthcareService{
 
+             HealthcareService => [None..None]
              HealthcareService.id => [None..None]
              HealthcareService.meta => [None..None]
              HealthcareService.meta.lastUpdated => [1..None]
@@ -25,7 +26,7 @@ package IG #DDDDDD{
              HealthcareService.identifier => [1..1]
              HealthcareService.active => [None..None]
              HealthcareService.providedBy => [None..None]
-             HealthcareService.category => [None..1]
+             HealthcareService.category => [None..None]
              HealthcareService.type => [1..1]
              HealthcareService.specialty => [1..None]
              HealthcareService.specialty:operationalActivity => [1..1]
@@ -38,7 +39,7 @@ package IG #DDDDDD{
              HealthcareService.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
              HealthcareService.telecom.extension:ror-telecom-usage => <&plus>[0..1]
              HealthcareService.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
-             HealthcareService.telecom.value => [1..None]
+             HealthcareService.telecom.value => [None..None]
              HealthcareService.coverageArea => [None..None]
              HealthcareService.characteristic => [1..None]
              HealthcareService.characteristic.extension:ror-act-type => <&plus>[0..1]
@@ -71,6 +72,7 @@ package IG #DDDDDD{
              HealthcareService.characteristic:temporalityStopService => [0..1]
              HealthcareService.characteristic:temporalityStopService.extension:ror-act-type => <&plus>[0..0]
              HealthcareService.availableTime => [None..None]
+             HealthcareService.availableTime.extension => [None..None]
              HealthcareService.availableTime.extension:ror-available-time-type-of-time => <&plus>[0..1]
              HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date => <&plus>[0..1]
              HealthcareService.availableTime.extension:ror-available-time-number-days-of-week => <&plus>[0..1]
@@ -87,6 +89,7 @@ package IG #DDDDDD{
 
         class RORLocation{
 
+             Location => [None..None]
              Location.id => [None..None]
              Location.meta => [None..None]
              Location.meta.lastUpdated => [1..None]
@@ -101,23 +104,23 @@ package IG #DDDDDD{
              Location.extension:ror-meta-creation-date => <&plus>[1..1]
              Location.identifier => [None..None]
              Location.identifier:idExterneSynchro => [0..1]
-             Location.identifier:idExterneSynchro.type => [1..None]
+             Location.identifier:idExterneSynchro.type => [None..None]
              Location.identifier:idExterneSynchro.type.coding.code => [1..None]
              Location.identifier:idLocation => [0..1]
-             Location.identifier:idLocation.type => [1..None]
+             Location.identifier:idLocation.type => [None..None]
              Location.identifier:idLocation.type.coding.code => [1..None]
              Location.status => [None..None]
              Location.name => [None..None]
              Location.alias => [None..None]
              Location.alias:nomExterneSynchro => [0..1]
              Location.description => [None..None]
-             Location.type => [None..1]
+             Location.type => [None..None]
              Location.telecom => [None..None]
              Location.telecom.extension => [2..None]
              Location.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
              Location.telecom.extension:ror-telecom-usage => <&plus>[0..1]
              Location.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
-             Location.telecom.value => [1..None]
+             Location.telecom.value => [None..None]
              Location.address => [None..None]
              Location.address.line.extension:careOf => <&plus>[0..1]
              Location.address.line.extension:additionalLocator => <&plus>[0..1]
@@ -131,6 +134,7 @@ package IG #DDDDDD{
              Location.address.city => [None..None]
              Location.address.postalCode => [None..None]
              Location.position => [None..None]
+             Location.position.extension => [None..None]
              Location.position.extension:ror-coordinate-reliability => <&plus>[0..1]
              Location.position.longitude => [None..None]
              Location.position.latitude => [None..None]
@@ -980,13 +984,13 @@ package IG #DDDDDD{
 
 package "Ressources de base" #palegreen {
 
- class "HealthcareService" as  classccfbac0a7f2dd501f3a20274066b28a3 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service" as  class926ccf2bb5a615fff3ac07e356f8a997 
 
-    classccfbac0a7f2dd501f3a20274066b28a3 --> RORHealthcareService
+    class926ccf2bb5a615fff3ac07e356f8a997 --> RORHealthcareService
 
- class "Location" as  classce5bf551379459c1c61d2a204061c455 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 
-    classce5bf551379459c1c61d2a204061c455 --> RORLocation
+    class505b865d93b3b02ed3aff95e782d498a --> RORLocation
 
  class "Measure" as  class0cbbe0321e0c40dfa77a159ef6bfad6b 
 

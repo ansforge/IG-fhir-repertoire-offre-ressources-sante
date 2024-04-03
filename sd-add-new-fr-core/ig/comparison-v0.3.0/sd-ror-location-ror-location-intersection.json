@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "79c29c30-8b3d-4e41-b164-2f92009921e6-111",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/79c29c30-8b3d-4e41-b164-2f92009921e6-111",
+  "id" : "7a375f44-d953-431e-9843-c93df4973f38-114",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/7a375f44-d953-431e-9843-c93df4973f38-114",
   "name" : "IntersectionRORLocationAndRORLocation",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2024-04-03T15:16:08+00:00",
+  "date" : "2024-04-03T16:23:04+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -663,7 +663,7 @@
     },
     {
       "path" : "Location.identifier",
-      "short" : "Unique code or number identifying the location to its users",
+      "short" : "left: Unique code or number identifying the location to its users; right: Identifiant fonctionnel du lieu. Il est recommandé de remplir ce champs pour faciliter l'identification des ressources.",
       "definition" : "Unique code or number identifying the location to its users.",
       "requirements" : "Organization label locations in registries, need to keep track of those.",
       "min" : 0,
@@ -1022,11 +1022,12 @@
     {
       "path" : "Location.telecom",
       "short" : "telecommunication (LieuRealisationOffre) : Adresse(s) de télécommunication du lieu",
-      "definition" : "The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.",
+      "definition" : "left: The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.; right: Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.",
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "ContactPoint"
+        "code" : "ContactPoint",
+        "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -1140,7 +1141,7 @@
       "short" : "phone | fax | email | pager | url | sms | other",
       "definition" : "Telecommunications form for contact point - what communications system is required to make use of the contact.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "code"
@@ -1311,7 +1312,7 @@
       "path" : "Location.telecom.period",
       "short" : "Time period when the contact point was/is in use",
       "definition" : "Time period when the contact point was/is in use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1370,13 +1371,14 @@
     {
       "path" : "Location.address",
       "short" : "adresse (LieuRealisationOffre) : Adresse géopostale du lieu",
-      "definition" : "Physical location.",
-      "comment" : "Additional addresses should be recorded using another instance of the Location resource, or via the Organization.",
+      "definition" : "left: Physical location.; right: An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.",
+      "comment" : "left: Additional addresses should be recorded using another instance of the Location resource, or via the Organization.; right: Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location] resource).",
       "requirements" : "If locations can be visited, we need to keep track of their address.",
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "Address"
+        "code" : "Address",
+        "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -1971,7 +1973,7 @@
     },
     {
       "path" : "Location.address.country",
-      "short" : "Country (e.g. can be ISO 3166 2 or 3 letter code)",
+      "short" : "left: Country (e.g. can be ISO 3166 2 or 3 letter code); right: Country (will be ISO 3166 3 letter code; code=FRA for France)",
       "definition" : "Country - a nation as commonly understood or generally accepted.",
       "comment" : "ISO 3166 3 letter codes can be used in place of a human readable country name.",
       "min" : 0,
@@ -2018,7 +2020,7 @@
       "path" : "Location.address.period",
       "short" : "Time period when address was/is in use",
       "definition" : "Time period when address was/is in use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "requirements" : "Allows addresses to be placed in historical context.",
       "min" : 0,
       "max" : "1",
@@ -2202,8 +2204,8 @@
     },
     {
       "path" : "Location.position.extension",
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "short" : "left: Additional content defined by implementations; right: Extension",
+      "definition" : "left: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.; right: An Extension",
       "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
       "alias" : ["extensions",
       "user content"],
@@ -2467,7 +2469,7 @@
           "valueBoolean" : true
         }],
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Location",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location",
         "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"]
       }],
       "constraint" : [{
