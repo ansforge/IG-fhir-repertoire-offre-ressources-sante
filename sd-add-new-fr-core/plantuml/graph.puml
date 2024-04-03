@@ -187,27 +187,6 @@ package IG #DDDDDD{
              Organization.extension:ror-meta-creation-date => <&plus>[1..1]
              Organization.extension:ror-organization-comment => <&plus>[0..1]
              Organization.identifier => [None..None]
-             Organization.identifier:idNatSt => [0..1]
-             Organization.identifier:idNatSt.type => [None..None]
-             Organization.identifier:idNatSt.system => [None..None]
-             Organization.identifier:finess => [0..1]
-             Organization.identifier:finess.type => [None..None]
-             Organization.identifier:finess.system => [None..None]
-             Organization.identifier:sirene => [0..1]
-             Organization.identifier:sirene.type => [None..None]
-             Organization.identifier:sirene.system => [None..None]
-             Organization.identifier:rppsRang => [0..1]
-             Organization.identifier:rppsRang.type => [None..None]
-             Organization.identifier:rppsRang.system => [None..None]
-             Organization.identifier:numSIRET => [0..1]
-             Organization.identifier:numSIRET.type => [None..None]
-             Organization.identifier:numSIRET.system => [None..None]
-             Organization.identifier:identifierOI => [0..1]
-             Organization.identifier:identifierOI.type => [None..None]
-             Organization.identifier:identifierOI.system => [None..None]
-             Organization.identifier:adeliRang => [0..1]
-             Organization.identifier:adeliRang.type => [None..None]
-             Organization.identifier:adeliRang.system => [None..None]
              Organization.type => [None..None]
              Organization.type:statutJuridiqueINSEE => [0..1]
              Organization.type:sousEnsembleAgregatStatutJuridique => [0..1]
@@ -225,7 +204,6 @@ package IG #DDDDDD{
              Organization.telecom.value => [None..None]
              Organization.address => [None..1]
              Organization.address.extension:inseeCode => <&plus>[None..None]
-             Organization.address.extension:inseeCode.extension => <&plus>[None..0]
              Organization.address.extension:inseeCode.value[x] => <&plus>[None..None]
              Organization.address.extension:ror-organization-geolocation => <&plus>[0..1]
              Organization.address.extension:ror-organization-geolocation.extension => <&plus>[2..None]
@@ -242,6 +220,7 @@ package IG #DDDDDD{
              Organization.address.city => [None..None]
              Organization.address.postalCode => [None..None]
              Organization.partOf => [None..None]
+             Organization.contact.extension => [None..None]
              Organization.contact.extension:ror-contact-function-contact => <&plus>[0..1]
              Organization.contact.extension:ror-contact-description => <&plus>[0..1]
              Organization.contact.extension:ror-contact-confidentiality-level => <&plus>[0..1]
@@ -984,9 +963,9 @@ package "Ressources de base" #palegreen {
 
     class3dfc5c74a4be59950c5247f2b94092c7 --> RORMeasureReport
 
- class "http://interopsante.org/fhir/StructureDefinition/FrOrganization" as  class8851530b55b5391f2e88430de6209c3c 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization" as  class7273115ddeceb35c4c7044f07f832f67 
 
-    class8851530b55b5391f2e88430de6209c3c --> ROROrganization
+    class7273115ddeceb35c4c7044f07f832f67 --> ROROrganization
 
  class "Practitioner" as  classe1fdce734a2fd9596ad930bdb139ca06 
 

@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "4ea056f1-2d48-4cd4-8c53-b09aaea88827-159",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/4ea056f1-2d48-4cd4-8c53-b09aaea88827-159",
-  "name" : "IntersectionFrAddressAndFrAddress",
-  "title" : "Intersection of null And null",
+  "id" : "9dba59ff-a743-434a-be59-e1c8fe99e25c-90",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/9dba59ff-a743-434a-be59-e1c8fe99e25c-90",
+  "name" : "IntersectionFrAddressAndFRCoreAddressProfile",
+  "title" : "Intersection of null And FR Core Address Profile",
   "status" : "active",
-  "date" : "2024-04-03T08:07:30+00:00",
+  "date" : "2024-04-03T09:10:50+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "Address",
@@ -311,7 +311,7 @@
     },
     {
       "path" : "Address.city",
-      "short" : "Name of city, town etc.",
+      "short" : "left: Name of city, town etc.; right: Les communes existantes sont définies ici : https://public.opendatasoft.com/explore/dataset/correspondance-code-insee-code-postal/table.",
       "definition" : "The name of the city, town, suburb, village or other community or delivery center.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "alias" : ["Municpality"],
@@ -502,7 +502,7 @@
       "path" : "Address.country",
       "short" : "Country (will be ISO 3166 3 letter code; code=FRA for France)",
       "definition" : "Country - a nation as commonly understood or generally accepted.",
-      "comment" : "ISO 3166 3 letter codes can be used in place of a full country name. FRA for France.",
+      "comment" : "left: ISO 3166 3 letter codes can be used in place of a full country name. FRA for France.; right: ISO 3166 3 letter codes can be used in place of a human readable country name.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -547,7 +547,7 @@
       "path" : "Address.period",
       "short" : "Time period when address was/is in use",
       "definition" : "Time period when address was/is in use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "requirements" : "Allows addresses to be placed in historical context.",
       "min" : 0,
       "max" : "1",
