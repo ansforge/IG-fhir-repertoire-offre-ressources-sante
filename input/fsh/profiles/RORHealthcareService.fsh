@@ -29,7 +29,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * type ^short = "champActivite (OffreOperationnelle) : Domaine dans lequel s'inscrit l'offre"
 * type from $JDV-J20-ChampActivite-ROR (required)
 * comment ^short = "commentaire (Metadonnee) : Commentaire qui peut être associé à chaque objet"
-* location only Reference(Location or RORLocation)
+* location only Reference(fr-core-location or RORLocation)
 
 * availableTime MS
 * availableTime ^short = "horaire (OffreOperationnelle) : heureDebut + heureFin"
@@ -64,7 +64,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
 * telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
-* coverageArea only Reference(Location or RORLocation)
+* coverageArea only Reference(fr-core-location or RORLocation)
 * characteristic 1..* MS
 
 * characteristic.extension ^slicing.discriminator.type = #value
