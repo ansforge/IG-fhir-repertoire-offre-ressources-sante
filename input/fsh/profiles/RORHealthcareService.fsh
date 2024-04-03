@@ -1,5 +1,5 @@
 Profile: RORHealthcareService
-Parent: HealthcareService
+Parent: fr-core-healthcareservice
 Id: ror-healthcareservice
 Description: "Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne"
 
