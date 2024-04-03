@@ -33,7 +33,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * alias ^short = "nomOperationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
 * identifier MS
-* identifier ^slicing.discriminator.type = #value
+/** identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
@@ -79,7 +79,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[adeliRang].type 1..1 MS
 * identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
 * identifier[adeliRang].system = "http://adelirang.esante.gouv.fr"
-
+*/
 // Slice déjà définie dans FrOrganization
 * type MS
 * type contains
