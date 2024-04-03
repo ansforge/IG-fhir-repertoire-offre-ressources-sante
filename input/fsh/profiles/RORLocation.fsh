@@ -1,5 +1,5 @@
 Profile: RORLocation
-Parent: Location
+Parent: fr-core-location
 Id: ror-location
 Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre." 
 
@@ -95,7 +95,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * position.extension[ror-coordinate-reliability] ^short = "coordonneesFiables (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
 
 * managingOrganization only Reference(fr-core-organization or ROROrganization)
-* partOf only Reference(Location or RORLocation)
+* partOf only Reference(fr-core-location or RORLocation)
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
