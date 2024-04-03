@@ -20,7 +20,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * name ^short = "nomOffre (OffreOpérationnelle) : Dénomination sous laquelle l'offre est identifiée par le porteur d'offre"
 * name MS
 * providedBy MS
-* providedBy only Reference(fr-organization or ROROrganization)
+* providedBy only Reference(fr-core-organization or ROROrganization)
 * location MS
 * category 0..1 MS
 * category ^short = "typeOffre (OffreOperationnelle) : Permet de distinguer les offres et de les classer en fonction de leur nature particulière"

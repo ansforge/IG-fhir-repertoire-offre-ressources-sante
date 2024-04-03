@@ -22,7 +22,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * identifier 0..1 MS
 * identifier ^short = "identifiantSituationOperationnelle (SituationOperationnelle) : Identifiant de la situation opérationnelle, unique et persistant au niveau national"
 * practitioner only Reference(Practitioner or RORPractitioner)
-* organization only Reference(fr-organization or ROROrganization)
+* organization only Reference(fr-core-organization or ROROrganization)
 * code 1..1 MS
 
 * code ^short = "profession (ExerciceProfessionnel) : Profession exercée ou future profession de l'étudiant"

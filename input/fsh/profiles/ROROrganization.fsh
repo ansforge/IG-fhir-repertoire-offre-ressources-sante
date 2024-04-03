@@ -1,10 +1,10 @@
 Profile: ROROrganization
-Parent: fr-organization
+Parent: fr-core-organization
 Id: ror-organization
 Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
 
 /* Références*/
-* partOf only Reference(fr-organization or ROROrganization)
+* partOf only Reference(fr-core-organization or ROROrganization)
 * partOf MS
 
 /* Données techniques */
