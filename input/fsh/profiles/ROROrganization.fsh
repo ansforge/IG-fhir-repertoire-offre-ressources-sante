@@ -210,7 +210,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
-/*
+
 Mapping:  ConceptMetier_ROROrganization_EJ
 Source:   ROROrganization
 Id:       specmetier-to-ROROrganization-ej
@@ -482,4 +482,3 @@ Profil 0"
 
 * extension[organization-period].valuePeriod.end -> "dateOuverture"
 * extension[organization-period].valuePeriod.end -> "dateFermeture"
-*/
