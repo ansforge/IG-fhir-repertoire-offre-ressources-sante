@@ -304,7 +304,306 @@
 
 
 
-  <a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+  <a name="specmetier-to-ROROrganization-ej"> </a><h3>Mappings for EntiteJuridique du Modèle exposition ROR V3 ()</h3><table class="grid">
+ <tr><td colspan="3"><b>ROROrganization</b></td></tr>
+ <tr><td>Organization</td><td>EntiteJuridique</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>metadonnee.identifiant</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-creation-date)</td><td>dateCreation</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (idNatSt)</td><td>idNatstruct</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (sirene)</td><td>numSIREN</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (finess)</td><td>numFINESS</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (adeliRang)</td><td>numEJ_RPPS_ADELI_Rang</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (rppsRang)</td><td>numEJ_RPPS_ADELI_Rang</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type (statutJuridiqueINSEE)</td><td>statutJuridique</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type (sousEnsembleAgregatStatutJuridique)</td><td>sousEnsembleAgregatStatutJuridique</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>raisonSociale</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (ror-organization-additional-name)</td><td>complementRaisonSociale</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;address</td><td>adresseEJ</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (careOf)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>pointRemise</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (additionalLocator)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>complementPointGeographique</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (houseNumber)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>numeroVoie</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (buildingNumberSuffix)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>extension</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (streetNameType)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>typeVoie</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (postalBox)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>mentionDistribution</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (streetNameBase)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>libelleVoie</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (lieuDit)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>lieuDit</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;city</td><td>localite</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;postalCode</td><td>codePostal</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contact</td><td>contact</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;purpose</td><td>natureContact</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name</td><td>nom</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;telecom</td><td>telecommunication</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du telecom = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
+Profil 0 si niveau de confidentialité du telecom = public</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>adresseTelecom</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du telecom = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
+Profil 0 si niveau de confidentialité du telecom = public</p>
+</td> </tr>
+</table>
+<a name="specmetier-to-ROROrganization-eg"> </a><h3>Mappings for EntiteGeographique du Modèle exposition ROR V3 ()</h3><table class="grid">
+ <tr><td colspan="3"><b>ROROrganization</b></td></tr>
+ <tr><td>Organization</td><td>EntiteGeographique</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>metadonnee.identifiant</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-territorial-division)</td><td>territoireSante</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-financial-help-type)</td><td>aideFinanciere</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-accomodation-family)</td><td>hebergementFamille</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-nb-permanent-social-help-place)</td><td>nbPlaceAideSocialPermanent</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-nb-temporary-social-help-place)</td><td>nbPlaceAideSocialTemporaire</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-accessibility-location)</td><td>accessibiliteLieu</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-level-recourse-orsan)</td><td>niveauRecoursORSAN</td><td><p>Profil 1</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-drop-zone)</td><td>zonePoser</td><td><p>Profil 1</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-comment)</td><td>commentaire</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (idNatSt)</td><td>idNatstruct</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (sirene)</td><td>numSIREN</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (finess)</td><td>numFINESS</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (adeliRang)</td><td>numEG_RPPS_ADELI_Rang</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (rppsRang)</td><td>numEG_RPPS_ADELI_Rang</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (numSIRET)</td><td>numSIRET</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type (categorieEtablissement)</td><td>categorieEG</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type (sphParticipation)</td><td>modaliteParticipationSPH</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>denominationEG</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (ror-organization-additional-name)</td><td>complementDenominationEG</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;alias</td><td>nomOpérationnel</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contact</td><td>contact</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;purpose</td><td>natureContact</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name</td><td>nom</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du contact = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
+Profil 0 si niveau de confidentialité  du contact= public</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;telecom</td><td>telecommunication</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du telecom = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
+Profil 0 si niveau de confidentialité du telecom = public</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>adresseTelecom</td><td><p>Profil 1,
+Profil 2 si niveau de confidentialité du telecom = public ou restreint,
+Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public
+Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
+Profil 0 si niveau de confidentialité du telecom = public</p>
+</td> </tr>
+</table>
+<a name="specmetier-to-ROROrganization-oi"> </a><h3>Mappings for OrganisationInterne du Modèle exposition ROR V3 ()</h3><table class="grid">
+ <tr><td colspan="3"><b>ROROrganization</b></td></tr>
+ <tr><td>Organization</td><td>OrganisationInterne</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>metadonnee.identifiant</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-reopening-date)</td><td>datePrevisionnelleReouverture</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (identifierOI)</td><td>identifiantOI</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type (OIType)</td><td>typeOI</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>nomOI</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>boiteLettreMSS</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>adresseTelecom</td><td></td> </tr>
+</table>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>ROROrganization</b></td></tr>
  <tr><td>Organization</td><td>(also see master files messages)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>XON.10 / XON.3</td> </tr>
@@ -356,6 +655,20 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>CX.4 / EI-2-4</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>CX.1 / EI.1</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>CX.7 + CX.8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>CX.4 / (CX.4,CX.9,CX.10)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (numSIRET)</td><td>XON.10 / XON.3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>CE/CNE/CWE, CX.5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>CX.4 / EI-2-4</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>CX.1 / EI.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>DR, CX.7 + CX.8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>CX.4 / (CX.4,CX.9,CX.10)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (identifierOI)</td><td>XON.10 / XON.3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>CE/CNE/CWE, CX.5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>CX.4 / EI-2-4</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>CX.1 / EI.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>DR, CX.7 + CX.8</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>CX.4 / (CX.4,CX.9,CX.10)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>No equivalent in HL7 v2</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>No equivalent in v2</td> </tr>
@@ -425,7 +738,28 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (shortName)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (description)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (usePeriod)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-price)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-territorial-division)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-financial-help-type)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-accomodation-family)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-nb-permanent-social-help-place)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-nb-temporary-social-help-place)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-accessibility-location)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-level-recourse-orsan)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-drop-zone)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-reopening-date)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-creation-date)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-organization-closing-type)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (organization-period)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x] (valuePeriod)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.scopes[Role](classCode=IDENT)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier (idNatSt)</td><td>.scopes[Role](classCode=IDENT)</td> </tr>
@@ -495,6 +829,24 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>Role.effectiveTime or implied by context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (numSIRET)</td><td>.scopes[Role](classCode=IDENT)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use</td><td>n/a, Role.code or implied by context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>n/a, CD, Role.code or implied by context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>n/a, II.root or Role.id.root</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>n/a, II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>n/a, IVL&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;] or URG&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;], Role.effectiveTime or implied by context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (identifierOI)</td><td>.scopes[Role](classCode=IDENT)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;use</td><td>n/a, Role.code or implied by context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>n/a, CD, Role.code or implied by context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>n/a, II.root or Role.id.root</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>n/a, II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>n/a, IVL&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;] or URG&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;], Role.effectiveTime or implied by context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>n/a, The target of a resource reference is a RIM entry point (Act, Role, or Entity), II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>.status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>.code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type (organizationType)</td><td>.code</td> </tr>
@@ -575,9 +927,29 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (careOf)</td><td>n/a, N/A, ADXP[partType=CAR]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x] (valueString)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (additionalLocator)</td><td>n/a, N/A, ADXP[partType=ADL]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x] (valueString)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (houseNumber)</td><td>n/a, N/A, ADXP[partType=BNR]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x] (valueString)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (buildingNumberSuffix)</td><td>n/a, N/A, ADXP[partType=BNS]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x] (valueString)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (streetNameType)</td><td>n/a, N/A, ADXP[partType=STTYP]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
@@ -585,7 +957,21 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x] (valueString)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (postalBox)</td><td>n/a, N/A, ADXP[partType=POB]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x] (valueString)</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (streetNameBase)</td><td>n/a, N/A, ADXP[partType=STB]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x] (valueString)</td><td>n/a, N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (lieuDit)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;city</td><td>AD.part[parttype = CTY]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;district</td><td>AD.part[parttype = CNT | CPA]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state</td><td>AD.part[parttype = STA]</td> </tr>
@@ -643,6 +1029,16 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>./Value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>./StartDate and ./EndDate</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>./IdentifierIssuingAuthority</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (numSIRET)</td><td>./Identifiers</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>./IdentifierType</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>./Value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>./StartDate and ./EndDate</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>./IdentifierIssuingAuthority</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (identifierOI)</td><td>./Identifiers</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system</td><td>./IdentifierType</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>./Value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>./StartDate and ./EndDate</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigner</td><td>./IdentifierIssuingAuthority</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>./Status (however this concept in ServD more covers why the organization is active or not, could be delisted, deregistered, not operational yet) this could alternatively be derived from ./StartDate and ./EndDate and given a context date.</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type (organizationType)</td><td>n/a</td> </tr>
@@ -685,6 +1081,8 @@
  <tr><td>&nbsp;&nbsp;&nbsp;identifier (finess)</td><td>FiveWs.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier (adeliRang)</td><td>FiveWs.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier (rppsRang)</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (numSIRET)</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier (identifierOI)</td><td>FiveWs.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>FiveWs.status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>FiveWs.class</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type (organizationType)</td><td>FiveWs.class</td> </tr>
@@ -771,7 +1169,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 3, 2024 10:16+0000">2024-04-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-ballot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 3, 2024 15:15+0000">2024-04-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

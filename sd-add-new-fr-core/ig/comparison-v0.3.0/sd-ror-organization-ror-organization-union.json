@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "2ce15109-081a-41a5-be4c-8c6da4991dc8-167",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/2ce15109-081a-41a5-be4c-8c6da4991dc8-167",
+  "id" : "79c29c30-8b3d-4e41-b164-2f92009921e6-167",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/79c29c30-8b3d-4e41-b164-2f92009921e6-167",
   "name" : "UnionROROrganizationAndROROrganization",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-04-03T10:17:04+00:00",
+  "date" : "2024-04-03T15:16:08+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -112,6 +112,18 @@
       {
         "identity" : "servd",
         "map" : "Organization"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "EntiteJuridique"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "EntiteGeographique"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-oi",
+        "map" : "OrganisationInterne"
       }]
     },
     {
@@ -130,7 +142,22 @@
       }],
       "mustSupport" : false,
       "isModifier" : false,
-      "isSummary" : true
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-oi",
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
+      }]
     },
     {
       "path" : "Organization.meta",
@@ -162,6 +189,18 @@
       {
         "identity" : "rim",
         "map" : "N/A"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "metadonnee"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "metadonnee"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-oi",
+        "map" : "metadonnee"
       }]
     },
     {
@@ -288,6 +327,18 @@
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "dateMiseJour"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "dateMiseJour"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-oi",
+        "map" : "dateMiseJour"
       }]
     },
     {
@@ -1296,6 +1347,19 @@
       {
         "identity" : "servd",
         "map" : ".PreferredName/Name"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "raisonSociale",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "denominationEG"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-oi",
+        "map" : "nomOI"
       }]
     },
     {
@@ -1421,6 +1485,10 @@
       {
         "identity" : "rim",
         "map" : ".name"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "nomOpérationnel"
       }]
     },
     {
@@ -1499,6 +1567,10 @@
       {
         "identity" : "servd",
         "map" : "./ContactPoints"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-oi",
+        "map" : "boiteLettreMSS"
       }]
     },
     {
@@ -1644,6 +1716,10 @@
       {
         "identity" : "servd",
         "map" : "./Value"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-oi",
+        "map" : "adresseTelecom"
       }]
     },
     {
@@ -1851,6 +1927,11 @@
       {
         "identity" : "servd",
         "map" : "./PrimaryAddress and ./OtherAddresses"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "adresseEJ",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -2256,6 +2337,11 @@
       {
         "identity" : "servd",
         "map" : "./Jurisdiction"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "localite",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -2395,6 +2481,11 @@
       {
         "identity" : "servd",
         "map" : "./PostalIdentificationCode"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "codePostal",
+        "comment" : "Profil 1,\nProfil 2,\nProfil 3,\nProfil 0"
       }]
     },
     {
@@ -2702,7 +2793,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "Aa resource (or, for logical models, the URI of the logical model).",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/2ce15109-081a-41a5-be4c-8c6da4991dc8-92"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/79c29c30-8b3d-4e41-b164-2f92009921e6-92"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -2823,6 +2914,16 @@
       {
         "identity" : "rim",
         "map" : ".contactParty"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "contact",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint\nProfil 0 si niveau de confidentialité  du contact= public"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "contact",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint\nProfil 0 si niveau de confidentialité  du contact= public"
       }]
     },
     {
@@ -2989,6 +3090,16 @@
       {
         "identity" : "rim",
         "map" : "./type"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "natureContact",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint\nProfil 0 si niveau de confidentialité  du contact= public"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "natureContact",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint\nProfil 0 si niveau de confidentialité  du contact= public"
       }]
     },
     {
@@ -3039,6 +3150,16 @@
       {
         "identity" : "rim",
         "map" : "./name"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "nom",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint\nProfil 0 si niveau de confidentialité  du contact= public"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "nom",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du contact = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint\nProfil 0 si niveau de confidentialité  du contact= public"
       }]
     },
     {
@@ -3101,6 +3222,16 @@
       {
         "identity" : "rim",
         "map" : "./telecom"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "telecommunication",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du telecom = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint\nProfil 0 si niveau de confidentialité du telecom = public"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "telecommunication",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du telecom = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint\nProfil 0 si niveau de confidentialité du telecom = public"
       }]
     },
     {
@@ -3246,6 +3377,16 @@
       {
         "identity" : "servd",
         "map" : "./Value"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "adresseTelecom",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du telecom = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint\nProfil 0 si niveau de confidentialité du telecom = public"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "adresseTelecom",
+        "comment" : "Profil 1,\nProfil 2 si niveau de confidentialité du telecom = public ou restreint,\nProfil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public \nProfil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint\nProfil 0 si niveau de confidentialité du telecom = public"
       }]
     },
     {
