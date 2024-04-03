@@ -30,7 +30,7 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * reasonCode from $JDV-J242-ActionAnomalie-ROR
 * owner only Reference(ROROrganization or RORPractitioner or RORPractitionerRole or RORHealthcareService or fr-core-organization or fr-core-healthcare-service)
 * owner MS
-* location only Reference(RORLocation or fr-core_location)
+* location only Reference(RORLocation or fr-core-location)
 * restriction.recipient only Reference(ROROrganization or RORPractitioner or RORPractitionerRole or fr-core-organization)
 * input MS
 
