@@ -33,18 +33,19 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * alias ^short = "nomOperationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
 * identifier MS
-/** identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
-    idNatSt 0..1 MS and
-    finess 0..1 MS and
-    sirene 0..1 MS and
-    rppsRang 0..1 MS and
+    //idNatSt 0..1 MS and
+    //finess 0..1 MS and
+    //sirene 0..1 MS and
+    //rppsRang 0..1 MS and
     numSIRET 0..1 MS and 
-    identifierOI 0..1 MS and
-    adeliRang 0..1 MS
-* identifier[idNatSt] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
+    identifierOI 0..1 MS 
+    //and
+    //adeliRang 0..1 MS
+/** identifier[idNatSt] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
 * identifier[idNatSt].type 1..1 MS
 * identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 
 * identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
@@ -63,7 +64,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[rppsRang].type 1..1 MS
 * identifier[rppsRang].type = $TRE-G07-TypeIdentifiantStructure#4
 * identifier[rppsRang].system = "http://rppsrang.esante.gouv.fr"
-
+*/
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1 MS
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
@@ -74,7 +75,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[identifierOI].type 1..1 MS
 * identifier[identifierOI].type = $TRE-R345-TypeIdentifiantAutre#42
 * identifier[identifierOI].system = "https://oi.esante.gouv.fr"
-
+/*
 * identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[adeliRang].type 1..1 MS
 * identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
@@ -323,7 +324,7 @@ Profil 0"
 Profil 2,
 Profil 3,
 Profil 0"
-* address.line.extension[precinct].valueString -> "lieuDit" "Profil 1,
+* address.line.extension[lieuDit].valueString -> "lieuDit" "Profil 1,
 Profil 2,
 Profil 3,
 Profil 0"
