@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-125",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-125",
+  "id" : "aeab980a-754e-444e-a97a-9e9eba5a3651-125",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/aeab980a-754e-444e-a97a-9e9eba5a3651-125",
   "name" : "UnionRORPractitionerAndRORPractitioner",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-04-04T08:25:20+00:00",
+  "date" : "2024-04-04T09:31:04+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -659,11 +659,11 @@
     },
     {
       "path" : "Practitioner.identifier",
-      "short" : "idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS",
+      "short" : "left: idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS; right: An identifier for the person as this agent",
       "definition" : "An identifier that applies to this person in this role.",
       "requirements" : "Often, specific identities are assigned for the agent.",
       "min" : 1,
-      "max" : "1",
+      "max" : "*",
       "type" : [{
         "code" : "Identifier"
       }],
@@ -719,12 +719,18 @@
       }]
     },
     {
+      "id" : "Practitioner.identifier.id",
       "path" : "Practitioner.identifier.id",
       "representation" : ["xmlAttr"],
       "short" : "Unique id for inter-element referencing",
       "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
@@ -732,16 +738,30 @@
         }],
         "code" : "http://hl7.org/fhirpath/System.String"
       }],
-      "mustSupport" : false,
-      "isModifier" : false,
-      "isSummary" : false,
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
       }]
     },
     {
+      "id" : "Practitioner.identifier.extension",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Practitioner.identifier.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
       "short" : "Additional content defined by implementations",
       "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
       "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -749,9 +769,15 @@
       "user content"],
       "min" : 0,
       "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
       "type" : [{
         "code" : "Extension"
       }],
+      "condition" : ["ele-1"],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -774,9 +800,6 @@
         "expression" : "extension.exists() != value.exists()",
         "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
       }],
-      "mustSupport" : false,
-      "isModifier" : false,
-      "isSummary" : false,
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
@@ -787,6 +810,7 @@
       }]
     },
     {
+      "id" : "Practitioner.identifier.use",
       "path" : "Practitioner.identifier.use",
       "short" : "usual | official | temp | secondary | old (If known)",
       "definition" : "The purpose of this identifier.",
@@ -794,9 +818,15 @@
       "requirements" : "Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Identifier.use",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "code"
       }],
+      "condition" : ["ele-1"],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -808,10 +838,14 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : true,
+      "isModifierReason" : "This is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one.",
       "isSummary" : true,
       "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "IdentifierUse"
+        }],
         "strength" : "required",
         "description" : "Identifies the purpose for this identifier, if known .",
         "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
@@ -830,6 +864,7 @@
       }]
     },
     {
+      "id" : "Practitioner.identifier.type",
       "path" : "Practitioner.identifier.type",
       "short" : "Description of identifier",
       "definition" : "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
@@ -837,9 +872,15 @@
       "requirements" : "Allows users to make use of identifiers when the identifier system is not known.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Identifier.type",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "CodeableConcept"
       }],
+      "condition" : ["ele-1"],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -851,13 +892,15 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
-      "isModifier" : false,
       "isSummary" : true,
       "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "IdentifierType"
+        }],
         "strength" : "extensible",
         "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-128"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -885,192 +928,28 @@
       }]
     },
     {
-      "id" : "Practitioner.identifier.type.id",
-      "path" : "Practitioner.identifier.type.id",
-      "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Element.id",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-          "valueUrl" : "string"
-        }],
-        "code" : "http://hl7.org/fhirpath/System.String"
-      }],
-      "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
-    },
-    {
-      "id" : "Practitioner.identifier.type.extension",
-      "path" : "Practitioner.identifier.type.extension",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "value",
-          "path" : "url"
-        }],
-        "description" : "Extensions are always sliced by (at least) url",
-        "rules" : "open"
-      },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
-      "min" : 0,
-      "max" : "*",
-      "base" : {
-        "path" : "Element.extension",
-        "min" : 0,
-        "max" : "*"
-      },
-      "type" : [{
-        "code" : "Extension"
-      }],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])"
-        }],
-        "key" : "ext-1",
-        "severity" : "error",
-        "human" : "Must have either extensions or value[x], not both",
-        "expression" : "extension.exists() != value.exists()",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
-      }],
-      "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
-    },
-    {
-      "id" : "Practitioner.identifier.type.coding",
-      "path" : "Practitioner.identifier.type.coding",
-      "short" : "Code defined by a terminology system",
-      "definition" : "A reference to a code defined by a terminology system.",
-      "comment" : "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
-      "min" : 0,
-      "max" : "*",
-      "base" : {
-        "path" : "CodeableConcept.coding",
-        "min" : 0,
-        "max" : "*"
-      },
-      "type" : [{
-        "code" : "Coding"
-      }],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "isModifier" : false,
-      "isSummary" : true,
-      "mapping" : [{
-        "identity" : "v2",
-        "map" : "C*E.1-8, C*E.10-22"
-      },
-      {
-        "identity" : "rim",
-        "map" : "union(., ./translation)"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-      }]
-    },
-    {
-      "id" : "Practitioner.identifier.type.text",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-        "valueBoolean" : true
-      }],
-      "path" : "Practitioner.identifier.type.text",
-      "short" : "Plain text representation of the concept",
-      "definition" : "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-      "comment" : "Very often the text is the same as a displayName of one of the codings.",
-      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "CodeableConcept.text",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "string"
-      }],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "isModifier" : false,
-      "isSummary" : true,
-      "mapping" : [{
-        "identity" : "v2",
-        "map" : "C*E.9. But note many systems use C*E.2 for this"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./originalText[mediaType/code=\"text/plain\"]/data"
-      },
-      {
-        "identity" : "orim",
-        "map" : "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-      }]
-    },
-    {
+      "id" : "Practitioner.identifier.system",
       "path" : "Practitioner.identifier.system",
       "short" : "The namespace for the identifier value",
-      "definition" : "left: Establishes the namespace for the value - that is, a URL that describes a set values that are unique.; right: Establishes the namespace for the value - that is, a OID that describes a set values that are unique.\r\nthe namespace for the practitioner identifier value is fixed in France.\r\nPour un PS identifié à partir de sa carte CPS, OID = 1.2.250.1.71.4.2.1\r\nPour un employé identifié au sein de sa structure, OID de l'établissement, branche de gestion des employés ou http://hopitalTest.fr/fhir/namingsystem/employes",
+      "definition" : "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
       "comment" : "Identifier.system is always case sensitive.",
       "requirements" : "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Identifier.system",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "uri"
       }],
+      "patternUri" : "urn:oid:1.2.250.1.71.4.2.1",
       "example" : [{
         "label" : "General",
         "valueUri" : "http://www.acme.com/identifiers/patient"
       }],
+      "condition" : ["ele-1"],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -1082,8 +961,6 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
-      "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "rim",
@@ -1103,12 +980,18 @@
       }]
     },
     {
+      "id" : "Practitioner.identifier.value",
       "path" : "Practitioner.identifier.value",
       "short" : "The value that is unique",
       "definition" : "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
-      "comment" : "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension]. Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
+      "comment" : "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Identifier.value",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "string"
       }],
@@ -1116,6 +999,7 @@
         "label" : "General",
         "valueString" : "123456"
       }],
+      "condition" : ["ele-1"],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -1127,8 +1011,6 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
-      "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "rim",
@@ -1148,15 +1030,22 @@
       }]
     },
     {
+      "id" : "Practitioner.identifier.period",
       "path" : "Practitioner.identifier.period",
       "short" : "Time period when id is/was valid for use",
       "definition" : "Time period during which identifier is/was valid for use.",
       "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Identifier.period",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "Period"
       }],
+      "condition" : ["ele-1"],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -1179,8 +1068,6 @@
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
-      "mustSupport" : false,
-      "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "rim",
@@ -1208,16 +1095,23 @@
       }]
     },
     {
+      "id" : "Practitioner.identifier.assigner",
       "path" : "Practitioner.identifier.assigner",
       "short" : "Organization that issued id (may be just text)",
       "definition" : "Organization that issued/manages the identifier.",
       "comment" : "The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Identifier.assigner",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
       }],
+      "condition" : ["ele-1"],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -1240,8 +1134,6 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
-      "mustSupport" : false,
-      "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "rim",
@@ -2532,7 +2424,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "Specific qualification the practitioner has to provide a service.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-131"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/aeab980a-754e-444e-a97a-9e9eba5a3651-128"
       },
       "mapping" : [{
         "identity" : "rim",
