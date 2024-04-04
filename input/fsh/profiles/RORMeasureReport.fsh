@@ -13,8 +13,8 @@ Description: "Valeur pour un indicateur de pilotage du ROR National"
 * type ^short = "Type de mesure" // utilisation du valueSet http://hl7.org/fhir/R4/valueset-measure-report-type.html (Required)
 * measure MS
 * measure ^short = "L'indicateur de pilotage du ROR National calculé"
-* subject only Reference(RORPractitioner or RORPractitionerRole or RORLocation or fr-core-location)
-* reporter only Reference(RORPractitioner or RORPractitionerRole or RORLocation or ROROrganization or fr-core-organization or fr-core-location)
+* subject only Reference(RORPractitioner or RORPractitionerRole or RORLocation or fr-core-location or fr-core-practitioner)
+* reporter only Reference(RORPractitioner or RORPractitionerRole or RORLocation or ROROrganization or fr-core-organization or fr-core-location or fr-core-practitioner)
 * date 1..1 MS
 * date ^short = "Date de la mesure"
 * period MS

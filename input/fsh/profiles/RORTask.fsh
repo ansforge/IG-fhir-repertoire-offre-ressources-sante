@@ -23,15 +23,15 @@ Description: "Anomalie concerant une donnée dans une ressource du ROR"
 * authoredOn ^short = "Date création de l'anomalie"
 * lastModified 1..1 MS
 * lastModified ^short = "Date de dernière modification"
-* requester only Reference(ROROrganization or RORPractitioner or RORPractitionerRole or fr-core-organization)
+* requester only Reference(ROROrganization or RORPractitioner or RORPractitionerRole or fr-core-organization or fr-core-practitioner)
 * requester MS
 * reasonCode 1..1 MS
 * reasonCode ^short = "Type d'action proposée en réponse"
 * reasonCode from $JDV-J242-ActionAnomalie-ROR
-* owner only Reference(ROROrganization or RORPractitioner or RORPractitionerRole or RORHealthcareService or fr-core-organization or fr-core-healthcare-service)
+* owner only Reference(ROROrganization or RORPractitioner or RORPractitionerRole or RORHealthcareService or fr-core-organization or fr-core-healthcare-service or fr-core-practitioner)
 * owner MS
 * location only Reference(RORLocation or fr-core-location)
-* restriction.recipient only Reference(ROROrganization or RORPractitioner or RORPractitionerRole or fr-core-organization)
+* restriction.recipient only Reference(ROROrganization or RORPractitioner or RORPractitionerRole or fr-core-organization or fr-core-practitioner)
 * input MS
 
 * input ^short = "Eléments en entrée pour définir l'anomalie"
