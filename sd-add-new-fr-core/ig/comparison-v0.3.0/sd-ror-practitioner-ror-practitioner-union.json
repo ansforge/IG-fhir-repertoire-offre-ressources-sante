@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "ce40c659-f754-46d3-befa-fd3a21236d0b-125",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/ce40c659-f754-46d3-befa-fd3a21236d0b-125",
+  "id" : "f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-125",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-125",
   "name" : "UnionRORPractitionerAndRORPractitioner",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-04-03T17:10:17+00:00",
+  "date" : "2024-04-04T08:25:20+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -16,8 +16,8 @@
   "snapshot" : {
     "element" : [{
       "path" : "Practitioner",
-      "short" : "A person with a  formal responsibility in the provisioning of healthcare or related services",
-      "definition" : "A person who is directly or indirectly involved in the provisioning of healthcare.",
+      "short" : "left: A person with a  formal responsibility in the provisioning of healthcare or related services; right: A person with a  formal responsibility in the provisioning of healthcare or related services | Prestataire de santé",
+      "definition" : "left: A person who is directly or indirectly involved in the provisioning of healthcare.; right: A person who is directly or indirectly involved in the provisioning of healthcare | Un professionnel impliqué directement ou indirectement dans la prise en charge d'une personne.",
       "min" : 0,
       "max" : "*",
       "constraint" : [{
@@ -857,7 +857,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-128"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -885,9 +885,181 @@
       }]
     },
     {
+      "id" : "Practitioner.identifier.type.id",
+      "path" : "Practitioner.identifier.type.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Practitioner.identifier.type.extension",
+      "path" : "Practitioner.identifier.type.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])"
+        }],
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Practitioner.identifier.type.coding",
+      "path" : "Practitioner.identifier.type.coding",
+      "short" : "Code defined by a terminology system",
+      "definition" : "A reference to a code defined by a terminology system.",
+      "comment" : "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
+      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "CodeableConcept.coding",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.1-8, C*E.10-22"
+      },
+      {
+        "identity" : "rim",
+        "map" : "union(., ./translation)"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+      }]
+    },
+    {
+      "id" : "Practitioner.identifier.type.text",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+        "valueBoolean" : true
+      }],
+      "path" : "Practitioner.identifier.type.text",
+      "short" : "Plain text representation of the concept",
+      "definition" : "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
+      "comment" : "Very often the text is the same as a displayName of one of the codings.",
+      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "CodeableConcept.text",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.9. But note many systems use C*E.2 for this"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./originalText[mediaType/code=\"text/plain\"]/data"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
+      }]
+    },
+    {
       "path" : "Practitioner.identifier.system",
       "short" : "The namespace for the identifier value",
-      "definition" : "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
+      "definition" : "left: Establishes the namespace for the value - that is, a URL that describes a set values that are unique.; right: Establishes the namespace for the value - that is, a OID that describes a set values that are unique.\r\nthe namespace for the practitioner identifier value is fixed in France.\r\nPour un PS identifié à partir de sa carte CPS, OID = 1.2.250.1.71.4.2.1\r\nPour un employé identifié au sein de sa structure, OID de l'établissement, branche de gestion des employés ou http://hopitalTest.fr/fhir/namingsystem/employes",
       "comment" : "Identifier.system is always case sensitive.",
       "requirements" : "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
       "min" : 0,
@@ -979,7 +1151,7 @@
       "path" : "Practitioner.identifier.period",
       "short" : "Time period when id is/was valid for use",
       "definition" : "Time period during which identifier is/was valid for use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1133,9 +1305,9 @@
     },
     {
       "path" : "Practitioner.name",
-      "short" : "The name(s) associated with the practitioner",
-      "definition" : "The name(s) associated with the practitioner.",
-      "comment" : "The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.  \r\rIn general, select the value to be used in the ResourceReference.display based on this:\r\r1. There is more than 1 name\r2. Use = usual\r3. Period is current to the date of the usage\r4. Use = official\r5. Other order as decided by internal business rules.",
+      "short" : "left: The name(s) associated with the practitioner; right: Name of a human - parts and usage",
+      "definition" : "left: The name(s) associated with the practitioner.; right: A human's name with the ability to identify parts and usage.",
+      "comment" : "left: The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.  \r\rIn general, select the value to be used in the ResourceReference.display based on this:\r\r1. There is more than 1 name\r2. Use = usual\r3. Period is current to the date of the usage\r4. Use = official\r5. Other order as decided by internal business rules.; right: Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.",
       "requirements" : "The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display.",
       "min" : 0,
       "max" : "*",
@@ -1281,7 +1453,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "The use of a human name.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/name-use|4.0.1"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/name-use"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -1474,7 +1646,7 @@
     },
     {
       "path" : "Practitioner.name.suffix",
-      "short" : "Parts that come after the name",
+      "short" : "left: Parts that come after the name; right: jeu de valeurs pour spécifier le titre de la personne",
       "definition" : "Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "min" : 0,
@@ -1496,6 +1668,11 @@
       "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
+      "binding" : {
+        "strength" : "example",
+        "description" : "Civilités d'exercice d'un professionnel du RASS",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J79-CiviliteExercice-RASS/FHIR/JDV-J79-CiviliteExercice-RASS"
+      },
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
@@ -1513,7 +1690,7 @@
       "path" : "Practitioner.name.period",
       "short" : "Time period when name was/is in use",
       "definition" : "Indicates the period of time when this name was valid for the named person.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "requirements" : "Allows names to be placed in historical context.",
       "min" : 0,
       "max" : "1",
@@ -1573,7 +1750,7 @@
     {
       "path" : "Practitioner.telecom",
       "short" : "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel",
-      "definition" : "A contact detail for the practitioner, e.g. a telephone number or an email address.",
+      "definition" : "left: A contact detail for the practitioner, e.g. a telephone number or an email address.; right: Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.",
       "comment" : "Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific.",
       "requirements" : "Need to know how to reach a practitioner independent to any roles the practitioner may have.",
       "min" : 0,
@@ -1872,7 +2049,7 @@
       "path" : "Practitioner.telecom.period",
       "short" : "Time period when the contact point was/is in use",
       "definition" : "Time period when the contact point was/is in use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1930,9 +2107,9 @@
     },
     {
       "path" : "Practitioner.address",
-      "short" : "Address(es) of the practitioner that are not role specific (typically home address)",
-      "definition" : "Address(es) of the practitioner that are not role specific (typically home address). \rWork addresses are not typically entered in this property as they are usually role dependent.",
-      "comment" : "The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address).",
+      "short" : "left: Address(es) of the practitioner that are not role specific (typically home address); right: An address expressed using postal conventions (as opposed to GPS or other location definition formats)",
+      "definition" : "left: Address(es) of the practitioner that are not role specific (typically home address). \rWork addresses are not typically entered in this property as they are usually role dependent.; right: An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.",
+      "comment" : "left: The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address).; right: Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location] resource).",
       "requirements" : "The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations.",
       "min" : 0,
       "max" : "*",
@@ -2129,7 +2306,7 @@
     },
     {
       "path" : "Practitioner.qualification",
-      "short" : "Certification, licenses, or training pertaining to the provision of care",
+      "short" : "left: Certification, licenses, or training pertaining to the provision of care; right: Qualifications obtained by training and certification | Diplômes. Les différents diplômes sont : les diplômes d'état français, les commissions de qualification, les diplômes d'études spécialisées, les DESC groupe 1 et 2, les capacités, les diplômes d'un pays de l'EEE, les diplômes d'université (DU) ou Inter-Universitaire, les certificats d'étude spéciale, les attestations, les diplômes européens d'études spécialisées, les diplômes de 2ème cycle non qualifiant et les autres types de diplômes. Pour plus d'informations, consulter le jeu de valeurs associé.",
       "definition" : "The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality.",
       "min" : 0,
       "max" : "*",
@@ -2353,9 +2530,9 @@
       "isModifier" : false,
       "isSummary" : false,
       "binding" : {
-        "strength" : "example",
+        "strength" : "preferred",
         "description" : "Specific qualification the practitioner has to provide a service.",
-        "valueSet" : "http://terminology.hl7.org/ValueSet/v2-2.7-0360"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-131"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -2386,7 +2563,7 @@
       "path" : "Practitioner.qualification.period",
       "short" : "Period during which the qualification is valid",
       "definition" : "Period during which the qualification is valid.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "requirements" : "Qualifications are often for a limited period of time, and can be revoked.",
       "min" : 0,
       "max" : "1",

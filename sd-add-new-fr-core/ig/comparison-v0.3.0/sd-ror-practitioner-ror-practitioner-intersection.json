@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "ce40c659-f754-46d3-befa-fd3a21236d0b-126",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/ce40c659-f754-46d3-befa-fd3a21236d0b-126",
+  "id" : "f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-126",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-126",
   "name" : "IntersectionRORPractitionerAndRORPractitioner",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2024-04-03T17:10:17+00:00",
+  "date" : "2024-04-04T08:25:20+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -16,8 +16,8 @@
   "snapshot" : {
     "element" : [{
       "path" : "Practitioner",
-      "short" : "A person with a  formal responsibility in the provisioning of healthcare or related services",
-      "definition" : "A person who is directly or indirectly involved in the provisioning of healthcare.",
+      "short" : "left: A person with a  formal responsibility in the provisioning of healthcare or related services; right: A person with a  formal responsibility in the provisioning of healthcare or related services | Prestataire de santé",
+      "definition" : "left: A person who is directly or indirectly involved in the provisioning of healthcare.; right: A person who is directly or indirectly involved in the provisioning of healthcare | Un professionnel impliqué directement ou indirectement dans la prise en charge d'une personne.",
       "min" : 0,
       "max" : "*",
       "constraint" : [{
@@ -869,7 +869,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f70c4f4d-711c-4e8a-8d8e-b638c9ec9ddc-129"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -899,10 +899,10 @@
     {
       "path" : "Practitioner.identifier.system",
       "short" : "The namespace for the identifier value",
-      "definition" : "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
+      "definition" : "left: Establishes the namespace for the value - that is, a URL that describes a set values that are unique.; right: Establishes the namespace for the value - that is, a OID that describes a set values that are unique.\r\nthe namespace for the practitioner identifier value is fixed in France.\r\nPour un PS identifié à partir de sa carte CPS, OID = 1.2.250.1.71.4.2.1\r\nPour un employé identifié au sein de sa structure, OID de l'établissement, branche de gestion des employés ou http://hopitalTest.fr/fhir/namingsystem/employes",
       "comment" : "Identifier.system is always case sensitive.",
       "requirements" : "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "uri"
@@ -947,7 +947,7 @@
       "short" : "The value that is unique",
       "definition" : "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
       "comment" : "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension]. Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "string"
@@ -991,7 +991,7 @@
       "path" : "Practitioner.identifier.period",
       "short" : "Time period when id is/was valid for use",
       "definition" : "Time period during which identifier is/was valid for use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1145,14 +1145,15 @@
     },
     {
       "path" : "Practitioner.name",
-      "short" : "The name(s) associated with the practitioner",
-      "definition" : "The name(s) associated with the practitioner.",
-      "comment" : "The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.  \r\rIn general, select the value to be used in the ResourceReference.display based on this:\r\r1. There is more than 1 name\r2. Use = usual\r3. Period is current to the date of the usage\r4. Use = official\r5. Other order as decided by internal business rules.",
+      "short" : "left: The name(s) associated with the practitioner; right: Name of a human - parts and usage",
+      "definition" : "left: The name(s) associated with the practitioner.; right: A human's name with the ability to identify parts and usage.",
+      "comment" : "left: The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.  \r\rIn general, select the value to be used in the ResourceReference.display based on this:\r\r1. There is more than 1 name\r2. Use = usual\r3. Period is current to the date of the usage\r4. Use = official\r5. Other order as decided by internal business rules.; right: Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.",
       "requirements" : "The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display.",
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "HumanName"
+        "code" : "HumanName",
+        "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -1293,7 +1294,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "The use of a human name.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/name-use|4.0.1"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/name-use"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -1486,7 +1487,7 @@
     },
     {
       "path" : "Practitioner.name.suffix",
-      "short" : "Parts that come after the name",
+      "short" : "left: Parts that come after the name; right: jeu de valeurs pour spécifier le titre de la personne",
       "definition" : "Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "min" : 0,
@@ -1508,6 +1509,11 @@
       "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
+      "binding" : {
+        "strength" : "extensible",
+        "description" : "Civilités d'exercice d'un professionnel du RASS",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J79-CiviliteExercice-RASS/FHIR/JDV-J79-CiviliteExercice-RASS"
+      },
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
@@ -1525,7 +1531,7 @@
       "path" : "Practitioner.name.period",
       "short" : "Time period when name was/is in use",
       "definition" : "Indicates the period of time when this name was valid for the named person.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "requirements" : "Allows names to be placed in historical context.",
       "min" : 0,
       "max" : "1",
@@ -1585,13 +1591,14 @@
     {
       "path" : "Practitioner.telecom",
       "short" : "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel",
-      "definition" : "A contact detail for the practitioner, e.g. a telephone number or an email address.",
+      "definition" : "left: A contact detail for the practitioner, e.g. a telephone number or an email address.; right: Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.",
       "comment" : "Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific.",
       "requirements" : "Need to know how to reach a practitioner independent to any roles the practitioner may have.",
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "ContactPoint"
+        "code" : "ContactPoint",
+        "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -1713,7 +1720,7 @@
       "short" : "phone | fax | email | pager | url | sms | other",
       "definition" : "Telecommunications form for contact point - what communications system is required to make use of the contact.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "code"
@@ -1884,7 +1891,7 @@
       "path" : "Practitioner.telecom.period",
       "short" : "Time period when the contact point was/is in use",
       "definition" : "Time period when the contact point was/is in use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1942,14 +1949,15 @@
     },
     {
       "path" : "Practitioner.address",
-      "short" : "Address(es) of the practitioner that are not role specific (typically home address)",
-      "definition" : "Address(es) of the practitioner that are not role specific (typically home address). \rWork addresses are not typically entered in this property as they are usually role dependent.",
-      "comment" : "The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address).",
+      "short" : "left: Address(es) of the practitioner that are not role specific (typically home address); right: An address expressed using postal conventions (as opposed to GPS or other location definition formats)",
+      "definition" : "left: Address(es) of the practitioner that are not role specific (typically home address). \rWork addresses are not typically entered in this property as they are usually role dependent.; right: An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.",
+      "comment" : "left: The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address).; right: Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location] resource).",
       "requirements" : "The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations.",
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "Address"
+        "code" : "Address",
+        "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -2141,7 +2149,7 @@
     },
     {
       "path" : "Practitioner.qualification",
-      "short" : "Certification, licenses, or training pertaining to the provision of care",
+      "short" : "left: Certification, licenses, or training pertaining to the provision of care; right: Qualifications obtained by training and certification | Diplômes. Les différents diplômes sont : les diplômes d'état français, les commissions de qualification, les diplômes d'études spécialisées, les DESC groupe 1 et 2, les capacités, les diplômes d'un pays de l'EEE, les diplômes d'université (DU) ou Inter-Universitaire, les certificats d'étude spéciale, les attestations, les diplômes européens d'études spécialisées, les diplômes de 2ème cycle non qualifiant et les autres types de diplômes. Pour plus d'informations, consulter le jeu de valeurs associé.",
       "definition" : "The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality.",
       "min" : 0,
       "max" : "*",
@@ -2365,13 +2373,8 @@
       "isModifier" : false,
       "isSummary" : false,
       "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "Qualification"
-        }],
-        "strength" : "example",
-        "description" : "Specific qualification the practitioner has to provide a service.",
-        "valueSet" : "http://terminology.hl7.org/ValueSet/v2-2.7-0360"
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J105-EnsembleDiplome-RASS/FHIR/JDV-J105-EnsembleDiplome-RASS"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -2402,7 +2405,7 @@
       "path" : "Practitioner.qualification.period",
       "short" : "Period during which the qualification is valid",
       "definition" : "Period during which the qualification is valid.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "requirements" : "Qualifications are often for a limited period of time, and can be revoked.",
       "min" : 0,
       "max" : "1",

@@ -272,6 +272,7 @@ package IG #DDDDDD{
 
         class RORPractitioner{
 
+             Practitioner => [None..None]
              Practitioner.id => [None..None]
              Practitioner.meta => [None..None]
              Practitioner.meta.lastUpdated => [1..None]
@@ -281,13 +282,15 @@ package IG #DDDDDD{
              Practitioner.extension:ror-meta-creation-date => <&plus>[1..1]
              Practitioner.identifier => [1..1]
              Practitioner.identifier.system => [None..None]
-             Practitioner.name.prefix => [None..1]
+             Practitioner.identifier:rpps => [None..1]
+             Practitioner.identifier:adeli => [None..1]
+             Practitioner.name.prefix => [None..None]
              Practitioner.telecom => [None..None]
              Practitioner.telecom.extension => [2..None]
              Practitioner.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
              Practitioner.telecom.extension:ror-telecom-usage => <&plus>[0..1]
              Practitioner.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
-             Practitioner.telecom.value => [1..None]
+             Practitioner.telecom.value => [None..None]
              Practitioner.qualification.issuer => [None..None]
         } 
 
@@ -1004,9 +1007,9 @@ package "Ressources de base" #palegreen {
 
     class7273115ddeceb35c4c7044f07f832f67 --> ROROrganization
 
- class "Practitioner" as  classe1fdce734a2fd9596ad930bdb139ca06 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" as  class722d091912544e694771fe1d2c6739cb 
 
-    classe1fdce734a2fd9596ad930bdb139ca06 --> RORPractitioner
+    class722d091912544e694771fe1d2c6739cb --> RORPractitioner
 
  class "PractitionerRole" as  classa6482460b0b027d14fe848816788acb6 
 
