@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "1e74e7f7-6844-4ebd-87f1-f700045833a5-155",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1e74e7f7-6844-4ebd-87f1-f700045833a5-155",
+  "id" : "1a42f846-8d96-4d09-826a-08bd32b4a05b-155",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1a42f846-8d96-4d09-826a-08bd32b4a05b-155",
   "name" : "UnionFrContactPointAndFrContactPoint",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-04-08T13:37:04+00:00",
+  "date" : "2024-04-08T14:06:23+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "ContactPoint",
@@ -33,7 +33,7 @@
         "severity" : "error",
         "human" : "A system is required if a value is provided.",
         "expression" : "value.empty() or system.exists()",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "mustSupport" : false,
       "isModifier" : false,
@@ -321,7 +321,7 @@
         "severity" : "error",
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
       }],
       "mustSupport" : false,
       "isModifier" : false,
