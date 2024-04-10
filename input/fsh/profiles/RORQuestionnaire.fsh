@@ -66,8 +66,8 @@ Description: "Fiche de saisie de l'offre de soins"
 * item.linkId ^short = "Unique id pour l'item de la fiche"
 * item.prefix MS
 * item.text MS
-* item.text = ^short = "Texte pour l'item"
-* item.type = ^short = "Ti=ype de l'item group | display | boolean | decimal | integer | date | dateTime ..."
+* item.text ^short = "Texte pour l'item"
+* item.type ^short = "Ti=ype de l'item group | display | boolean | decimal | integer | date | dateTime ..."
 * item.enableWhen MS
 * item.enableWhen ^short = "Item autorisé / disponible que sous condition"
 * item.enableBehavior MS
@@ -81,10 +81,10 @@ Description: "Fiche de saisie de l'offre de soins"
 * item.answerValueSet ^short = "Ensemble de valeurs autorisées en réponse" 
 * item.answerValueSet MS
 * item.answerOption MS
-* item.answerOption ^short "Réponses permises"
+* item.answerOption ^short = "Réponses permises"
 * item.answerOption.initialSelected MS
 * item.answerOption.initialSelected ^short = "Option de réponse sélectionnée par défaut"
 * item.definition ^short = "Element concerné par la saisie" 
 * item.definition MS
 * item.initial MS
-* item.initial ^short "Valeur(s) initiale(s)"
+* item.initial ^short = "Valeur(s) initiale(s)"
