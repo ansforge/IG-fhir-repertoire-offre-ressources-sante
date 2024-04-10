@@ -23,7 +23,7 @@
   <version value="0.4.0-ballot-1"/>
   <name value="RORHealthcareServicePatientType"/>
   <status value="active"/>
-  <date value="2024-04-02T16:06:43+00:00"/>
+  <date value="2024-04-10T16:04:08+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -583,7 +583,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present"/>
         <expression value="code.empty() or system.exists()"/>
         <xpath value="not(exists(f:code)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Dosage"/>
       </constraint>
       <constraint>
         <key value="sqty-1"/>
@@ -591,7 +591,7 @@
         <human value="The comparator is not used on a SimpleQuantity"/>
         <expression value="comparator.empty()"/>
         <xpath value="not(exists(f:comparator))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Dosage"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -652,7 +652,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present"/>
         <expression value="code.empty() or system.exists()"/>
         <xpath value="not(exists(f:code)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Dosage"/>
       </constraint>
       <constraint>
         <key value="sqty-1"/>
@@ -660,7 +660,7 @@
         <human value="The comparator is not used on a SimpleQuantity"/>
         <expression value="comparator.empty()"/>
         <xpath value="not(exists(f:comparator))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Dosage"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
