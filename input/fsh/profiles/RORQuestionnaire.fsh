@@ -9,6 +9,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * identifier ^short = "Identifiant de la fiche de saisie. Exemple FDS-092"
 * version ^short = "version de la fiche de saisie"
 * version MS
+* status ^short = "Statut de la fiche"
 * name 1..1 MS
 * name ^short = "Nom utilisé par les systèmes pour référencer la fiche exemple FDS-092"
 * title 1..1 MS
