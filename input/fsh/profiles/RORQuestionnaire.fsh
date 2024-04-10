@@ -13,7 +13,6 @@ Description: "Fiche de saisie de l'offre de soins"
 * name ^short = "Nom utilisé par les systèmes pour référencer la fiche exemple FDS-092"
 * title 1..1 MS
 * title ^short = "Titre de la fiche. Exemple Unité d'accueil de jour, Equipe spécialisée Alzheimer (ESA), Unité d'Hébergement « traditionnelle » , en EHPAD Petite unité de vie (PUV)"
-* status MS
 * subjectType 1..* MS
 * subjectType ^short = "Types de Ressources qui seront alimentées lors de la saisie de cette fiche : HealthcareService, Organization, Practioner, PractionerRole, Location"
 * date ^short = "Date du dernier changement"
