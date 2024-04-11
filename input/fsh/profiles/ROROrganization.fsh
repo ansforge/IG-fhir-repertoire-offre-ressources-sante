@@ -52,7 +52,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
 * identifier[finess].type 1..1 MS
 * identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
-* identifier[finess].system = "http://finess.esante.gouv.fr"
+* identifier[finess].system = "https://finess.esante.gouv.fr"
 
 * identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
 * identifier[sirene].type 1..1 MS
@@ -62,7 +62,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[rppsRang].type 1..1 MS
 * identifier[rppsRang].type = $TRE-G07-TypeIdentifiantStructure#4
-* identifier[rppsRang].system = "http://rppsrang.esante.gouv.fr"
+* identifier[rppsRang].system = "https://rppsrang.esante.gouv.fr"
 
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1 MS
@@ -78,7 +78,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[adeliRang].type 1..1 MS
 * identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
-* identifier[adeliRang].system = "http://adelirang.esante.gouv.fr"
+* identifier[adeliRang].system = "https://adelirang.esante.gouv.fr"
 
 // Slice déjà définie dans FrOrganization
 * type MS
