@@ -311,6 +311,12 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le secteur psychiatrique de l'offre opérationnelle"
 
+* rest.resource[=].searchParam[+].name = "notavailable-closing-reopeningdate"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-healthcareservice-notavailable-closing-reopeningdate)
+* rest.resource[=].searchParam[=].type = #date
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche de date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end)"
+
+
 // Organization
 * rest.resource[+].type = #Organization
 * rest.resource[=].profile = Canonical(ror-organization)
