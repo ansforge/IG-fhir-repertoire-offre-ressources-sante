@@ -162,7 +162,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 //* address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
 * address.line.extension[postBox] MS
 * address.line.extension[streetNameBase] MS
-* address.line.extension[lieuDit] ^short MS
+* address.line.extension[lieuDit] MS
 
 
 * telecom MS
@@ -333,7 +333,7 @@ Profil 0"
 Profil 2,
 Profil 3,
 Profil 0"
-* address.line.extension[postalBox].valueString -> "mentionDistribution" "Profil 1,
+* address.line.extension[postBox].valueString -> "mentionDistribution" "Profil 1,
 Profil 2,
 Profil 3,
 Profil 0"
