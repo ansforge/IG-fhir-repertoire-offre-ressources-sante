@@ -9,6 +9,7 @@ package IG #DDDDDD{
 
         class RORHealthcareService{
 
+             HealthcareService => [None..None]
              HealthcareService.id => [None..None]
              HealthcareService.meta => [None..None]
              HealthcareService.meta.lastUpdated => [1..None]
@@ -25,7 +26,7 @@ package IG #DDDDDD{
              HealthcareService.identifier => [1..1]
              HealthcareService.active => [None..None]
              HealthcareService.providedBy => [None..None]
-             HealthcareService.category => [None..1]
+             HealthcareService.category => [None..None]
              HealthcareService.type => [1..1]
              HealthcareService.specialty => [1..None]
              HealthcareService.specialty:operationalActivity => [1..1]
@@ -38,7 +39,7 @@ package IG #DDDDDD{
              HealthcareService.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
              HealthcareService.telecom.extension:ror-telecom-usage => <&plus>[0..1]
              HealthcareService.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
-             HealthcareService.telecom.value => [1..None]
+             HealthcareService.telecom.value => [None..None]
              HealthcareService.coverageArea => [None..None]
              HealthcareService.characteristic => [1..None]
              HealthcareService.characteristic.extension:ror-act-type => <&plus>[0..1]
@@ -71,6 +72,7 @@ package IG #DDDDDD{
              HealthcareService.characteristic:temporalityStopService => [0..1]
              HealthcareService.characteristic:temporalityStopService.extension:ror-act-type => <&plus>[0..0]
              HealthcareService.availableTime => [None..None]
+             HealthcareService.availableTime.extension => [None..None]
              HealthcareService.availableTime.extension:ror-available-time-type-of-time => <&plus>[0..1]
              HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date => <&plus>[0..1]
              HealthcareService.availableTime.extension:ror-available-time-number-days-of-week => <&plus>[0..1]
@@ -87,6 +89,7 @@ package IG #DDDDDD{
 
         class RORLocation{
 
+             Location => [None..None]
              Location.id => [None..None]
              Location.meta => [None..None]
              Location.meta.lastUpdated => [1..None]
@@ -101,23 +104,23 @@ package IG #DDDDDD{
              Location.extension:ror-meta-creation-date => <&plus>[1..1]
              Location.identifier => [None..None]
              Location.identifier:idExterneSynchro => [0..1]
-             Location.identifier:idExterneSynchro.type => [1..None]
+             Location.identifier:idExterneSynchro.type => [None..None]
              Location.identifier:idExterneSynchro.type.coding.code => [1..None]
              Location.identifier:idLocation => [0..1]
-             Location.identifier:idLocation.type => [1..None]
+             Location.identifier:idLocation.type => [None..None]
              Location.identifier:idLocation.type.coding.code => [1..None]
              Location.status => [None..None]
              Location.name => [None..None]
              Location.alias => [None..None]
              Location.alias:nomExterneSynchro => [0..1]
              Location.description => [None..None]
-             Location.type => [None..1]
+             Location.type => [None..None]
              Location.telecom => [None..None]
              Location.telecom.extension => [2..None]
              Location.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
              Location.telecom.extension:ror-telecom-usage => <&plus>[0..1]
              Location.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
-             Location.telecom.value => [1..None]
+             Location.telecom.value => [None..None]
              Location.address => [None..None]
              Location.address.line.extension:careOf => <&plus>[0..1]
              Location.address.line.extension:additionalLocator => <&plus>[0..1]
@@ -131,6 +134,7 @@ package IG #DDDDDD{
              Location.address.city => [None..None]
              Location.address.postalCode => [None..None]
              Location.position => [None..None]
+             Location.position.extension => [None..None]
              Location.position.extension:ror-coordinate-reliability => <&plus>[0..1]
              Location.position.longitude => [None..None]
              Location.position.latitude => [None..None]
@@ -166,6 +170,9 @@ package IG #DDDDDD{
 
         class ROROrganization{
 
+             Organization => [None..None]
+             Organization.id => [None..None]
+             Organization.meta => [None..None]
              Organization.meta.lastUpdated => [1..None]
              Organization.meta.tag => [None..None]
              Organization.meta.tag:codeRegion => [0..1]
@@ -183,36 +190,35 @@ package IG #DDDDDD{
              Organization.extension:ror-organization-creation-date => <&plus>[0..1]
              Organization.extension:ror-organization-closing-type => <&plus>[0..1]
              Organization.extension:organization-period => <&plus>[0..1]
+             Organization.extension:organization-period.value[x].start => <&plus>[None..None]
+             Organization.extension:organization-period.value[x].end => <&plus>[None..None]
              Organization.extension:ror-meta-comment => <&plus>[0..1]
              Organization.extension:ror-meta-creation-date => <&plus>[1..1]
              Organization.extension:ror-organization-comment => <&plus>[0..1]
              Organization.identifier => [None..None]
-             Organization.identifier:idNatSt => [0..1]
-             Organization.identifier:idNatSt.type => [None..None]
-             Organization.identifier:idNatSt.system => [None..None]
-             Organization.identifier:finess => [0..1]
-             Organization.identifier:finess.type => [None..None]
-             Organization.identifier:finess.system => [None..None]
-             Organization.identifier:sirene => [0..1]
-             Organization.identifier:sirene.type => [None..None]
-             Organization.identifier:sirene.system => [None..None]
-             Organization.identifier:rppsRang => [0..1]
-             Organization.identifier:rppsRang.type => [None..None]
-             Organization.identifier:rppsRang.system => [None..None]
+             Organization.identifier:idNatSt => [None..None]
+             Organization.identifier:idNatSt.type => [1..None]
+             Organization.identifier:idNatSt.system => [1..None]
+             Organization.identifier:sirene => [None..1]
+             Organization.identifier:sirene.type => [1..None]
+             Organization.identifier:sirene.system => [1..None]
+             Organization.identifier:finess => [None..1]
+             Organization.identifier:finess.type => [1..None]
+             Organization.identifier:finess.system => [1..None]
+             Organization.identifier:adeliRang => [None..1]
+             Organization.identifier:adeliRang.type => [1..None]
+             Organization.identifier:rppsRang => [None..1]
+             Organization.identifier:rppsRang.type => [1..None]
              Organization.identifier:numSIRET => [0..1]
-             Organization.identifier:numSIRET.type => [None..None]
-             Organization.identifier:numSIRET.system => [None..None]
+             Organization.identifier:numSIRET.type => [1..None]
+             Organization.identifier:numSIRET.system => [1..None]
              Organization.identifier:identifierOI => [0..1]
-             Organization.identifier:identifierOI.type => [None..None]
-             Organization.identifier:identifierOI.system => [None..None]
-             Organization.identifier:adeliRang => [0..1]
-             Organization.identifier:adeliRang.type => [None..None]
-             Organization.identifier:adeliRang.system => [None..None]
-             Organization.type => [None..None]
-             Organization.type:statutJuridiqueINSEE => [0..1]
+             Organization.identifier:identifierOI.type => [1..None]
+             Organization.identifier:identifierOI.system => [1..None]
+             Organization.type:statutJuridiqueINSEE => [None..None]
+             Organization.type:sphParticipation => [None..None]
              Organization.type:sousEnsembleAgregatStatutJuridique => [0..1]
              Organization.type:categorieEtablissement => [0..1]
-             Organization.type:sphParticipation => [0..1]
              Organization.type:OIType => [0..1]
              Organization.name => [None..None]
              Organization.name.extension:ror-organization-additional-name => <&plus>[0..1]
@@ -225,28 +231,37 @@ package IG #DDDDDD{
              Organization.telecom.value => [None..None]
              Organization.address => [None..1]
              Organization.address.extension:inseeCode => <&plus>[None..None]
-             Organization.address.extension:inseeCode.extension => <&plus>[None..0]
              Organization.address.extension:inseeCode.value[x] => <&plus>[None..None]
              Organization.address.extension:ror-organization-geolocation => <&plus>[0..1]
              Organization.address.extension:ror-organization-geolocation.extension => <&plus>[2..None]
              Organization.address.extension:ror-organization-geolocation.extension:ror-confidence-geolocation => <&plus>[0..1]
-             Organization.address.line.extension:careOf => <&plus>[0..1]
-             Organization.address.line.extension:additionalLocator => <&plus>[0..1]
-             Organization.address.line.extension:houseNumber => <&plus>[0..1]
-             Organization.address.line.extension:buildingNumberSuffix => <&plus>[0..1]
-             Organization.address.line.extension:streetNameType => <&plus>[0..1]
+             Organization.address.line.extension:careOf => <&plus>[None..None]
+             Organization.address.line.extension:careOf.value[x] => <&plus>[None..None]
+             Organization.address.line.extension:additionalLocator => <&plus>[None..None]
+             Organization.address.line.extension:additionalLocator.value[x] => <&plus>[None..None]
+             Organization.address.line.extension:houseNumber => <&plus>[None..None]
+             Organization.address.line.extension:houseNumber.value[x] => <&plus>[None..None]
+             Organization.address.line.extension:buildingNumberSuffix => <&plus>[None..None]
+             Organization.address.line.extension:buildingNumberSuffix.value[x] => <&plus>[None..None]
+             Organization.address.line.extension:streetNameType => <&plus>[None..None]
              Organization.address.line.extension:streetNameType.value[x] => <&plus>[None..None]
-             Organization.address.line.extension:postalBox => <&plus>[0..1]
-             Organization.address.line.extension:streetNameBase => <&plus>[0..1]
-             Organization.address.line.extension:lieuDit => <&plus>[0..1]
+             Organization.address.line.extension:postBox => <&plus>[None..None]
+             Organization.address.line.extension:postBox.value[x] => <&plus>[None..None]
+             Organization.address.line.extension:streetNameBase => <&plus>[None..None]
+             Organization.address.line.extension:streetNameBase.value[x] => <&plus>[None..None]
+             Organization.address.line.extension:lieuDit => <&plus>[None..None]
+             Organization.address.line.extension:lieuDit.value[x] => <&plus>[None..None]
              Organization.address.city => [None..None]
              Organization.address.postalCode => [None..None]
              Organization.partOf => [None..None]
+             Organization.contact => [None..None]
+             Organization.contact.extension => [None..None]
              Organization.contact.extension:ror-contact-function-contact => <&plus>[0..1]
              Organization.contact.extension:ror-contact-description => <&plus>[0..1]
              Organization.contact.extension:ror-contact-confidentiality-level => <&plus>[0..1]
              Organization.contact.purpose => [None..None]
              Organization.contact.name => [None..None]
+             Organization.contact.telecom => [None..None]
              Organization.contact.telecom.extension => [2..None]
              Organization.contact.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
              Organization.contact.telecom.extension:ror-telecom-usage => <&plus>[0..1]
@@ -256,6 +271,7 @@ package IG #DDDDDD{
 
         class RORPractitioner{
 
+             Practitioner => [None..None]
              Practitioner.id => [None..None]
              Practitioner.meta => [None..None]
              Practitioner.meta.lastUpdated => [1..None]
@@ -263,16 +279,25 @@ package IG #DDDDDD{
              Practitioner.meta.tag:codeRegion => [0..1]
              Practitioner.extension => [1..None]
              Practitioner.extension:ror-meta-creation-date => <&plus>[1..1]
-             Practitioner.identifier => [1..1]
-             Practitioner.identifier.system => [None..None]
-             Practitioner.name.prefix => [None..1]
+             Practitioner.identifier => [1..None]
+             Practitioner.identifier:idNatPs => [1..None]
+             Practitioner.identifier:rpps => [None..0]
+             Practitioner.identifier:adeli => [None..0]
+             Practitioner.name.prefix => [None..None]
              Practitioner.telecom => [None..None]
              Practitioner.telecom.extension => [2..None]
              Practitioner.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
              Practitioner.telecom.extension:ror-telecom-usage => <&plus>[0..1]
              Practitioner.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
-             Practitioner.telecom.value => [1..None]
+             Practitioner.telecom.value => [None..None]
+             Practitioner.qualification => [None..None]
              Practitioner.qualification.issuer => [None..None]
+             Practitioner.qualification:degree => [None..None]
+             Practitioner.qualification:degree.issuer => [None..None]
+             Practitioner.qualification:exercicePro => [None..None]
+             Practitioner.qualification:exercicePro.issuer => [None..None]
+             Practitioner.qualification:savoirFaire => [None..None]
+             Practitioner.qualification:savoirFaire.issuer => [None..None]
         } 
 
         class RORPractitionerRole{
@@ -463,7 +488,6 @@ package IG #DDDDDD{
      ROROrganization -[#black,dashed,thickness=2]-> RORTelecomUsage
      ROROrganization -[#black,dashed,thickness=2]-> RORTelecomConfidentialityLevel
      ROROrganization -[#black,dashed,thickness=2]-> RORConfidenceGeolocation
-     ROROrganization -[#black,dashed,thickness=2]-> AsLieuDit
      ROROrganization -[#black,dashed,thickness=2]-> RORContactFunctionContact
      ROROrganization -[#black,dashed,thickness=2]-> RORContactDescription
      ROROrganization -[#black,dashed,thickness=2]-> RORContactConfidentialityLevel
@@ -967,13 +991,13 @@ package IG #DDDDDD{
 
 package "Ressources de base" #palegreen {
 
- class "HealthcareService" as  classccfbac0a7f2dd501f3a20274066b28a3 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service" as  class926ccf2bb5a615fff3ac07e356f8a997 
 
-    classccfbac0a7f2dd501f3a20274066b28a3 --> RORHealthcareService
+    class926ccf2bb5a615fff3ac07e356f8a997 --> RORHealthcareService
 
- class "Location" as  classce5bf551379459c1c61d2a204061c455 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 
-    classce5bf551379459c1c61d2a204061c455 --> RORLocation
+    class505b865d93b3b02ed3aff95e782d498a --> RORLocation
 
  class "Measure" as  class0cbbe0321e0c40dfa77a159ef6bfad6b 
 
@@ -983,13 +1007,13 @@ package "Ressources de base" #palegreen {
 
     class3dfc5c74a4be59950c5247f2b94092c7 --> RORMeasureReport
 
- class "http://interopsante.org/fhir/StructureDefinition/FrOrganization" as  class8851530b55b5391f2e88430de6209c3c 
+ class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization" as  class02104d9d29574b85b8bdd491de969f0d 
 
-    class8851530b55b5391f2e88430de6209c3c --> ROROrganization
+    class02104d9d29574b85b8bdd491de969f0d --> ROROrganization
 
- class "Practitioner" as  classe1fdce734a2fd9596ad930bdb139ca06 
+ class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner" as  class8e95a74d3099b6c1bdd4ef690920bb75 
 
-    classe1fdce734a2fd9596ad930bdb139ca06 --> RORPractitioner
+    class8e95a74d3099b6c1bdd4ef690920bb75 --> RORPractitioner
 
  class "PractitionerRole" as  classa6482460b0b027d14fe848816788acb6 
 

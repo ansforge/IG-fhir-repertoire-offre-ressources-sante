@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "7cdc23a7-7c5d-43e3-8b56-e12c7ae65109-78",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/7cdc23a7-7c5d-43e3-8b56-e12c7ae65109-78",
+  "id" : "7b116361-7551-4816-9414-a3760abc172b-78",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/7b116361-7551-4816-9414-a3760abc172b-78",
   "name" : "IntersectionRORHealthcareServiceAndRORHealthcareService",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2024-04-12T12:13:36+00:00",
+  "date" : "2024-04-12T16:15:37+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -765,7 +765,8 @@
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://interopsante.org/fhir/StructureDefinition/FrOrganization",
-        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"]
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization",
+        "#sd-fr-organization-as-organization"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -992,7 +993,7 @@
       "max" : "*",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Location",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location",
         "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"]
       }],
       "constraint" : [{
@@ -1207,12 +1208,13 @@
     {
       "path" : "HealthcareService.telecom",
       "short" : "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’offre opérationnelle",
-      "definition" : "List of contacts related to this specific healthcare service.",
+      "definition" : "left: List of contacts related to this specific healthcare service.; right: Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.",
       "comment" : "If this is empty, then refer to the location's contacts.",
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "ContactPoint"
+        "code" : "ContactPoint",
+        "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point"]
       }],
       "constraint" : [{
         "extension" : [{
@@ -1326,7 +1328,7 @@
       "short" : "phone | fax | email | pager | url | sms | other",
       "definition" : "Telecommunications form for contact point - what communications system is required to make use of the contact.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "code"
@@ -1497,7 +1499,7 @@
       "path" : "HealthcareService.telecom.period",
       "short" : "Time period when the contact point was/is in use",
       "definition" : "Time period when the contact point was/is in use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -1562,7 +1564,7 @@
       "max" : "*",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Location",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location",
         "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"]
       }],
       "constraint" : [{
@@ -2359,8 +2361,8 @@
     },
     {
       "path" : "HealthcareService.availableTime.extension",
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "short" : "left: Additional content defined by implementations; right: Extension",
+      "definition" : "left: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.; right: An Extension",
       "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
       "alias" : ["extensions",
       "user content"],
@@ -2776,7 +2778,7 @@
       "path" : "HealthcareService.notAvailable.during",
       "short" : "Service not available from this date",
       "definition" : "Service is not available (seasonally or for a public holiday) from this date.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{

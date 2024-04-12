@@ -1,11 +1,18 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "7cdc23a7-7c5d-43e3-8b56-e12c7ae65109-156",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/7cdc23a7-7c5d-43e3-8b56-e12c7ae65109-156",
-  "name" : "IntersectionFrContactPointAndFrContactPoint",
-  "title" : "Intersection of null And null",
+  "id" : "7b116361-7551-4816-9414-a3760abc172b-83",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/7b116361-7551-4816-9414-a3760abc172b-83",
+  "name" : "UnionFrContactPointAndFRCoreContactPointProfile",
+  "title" : "Union of null And FR Core Contact Point Profile",
   "status" : "active",
-  "date" : "2024-04-12T12:13:36+00:00",
+  "date" : "2024-04-12T16:15:37+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France"
+    }]
+  }],
   "snapshot" : {
     "element" : [{
       "path" : "ContactPoint",
@@ -295,7 +302,7 @@
       "path" : "ContactPoint.period",
       "short" : "Time period when the contact point was/is in use",
       "definition" : "Time period when the contact point was/is in use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "min" : 0,
       "max" : "1",
       "type" : [{

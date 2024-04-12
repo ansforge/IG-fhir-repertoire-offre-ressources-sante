@@ -1,11 +1,18 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "7cdc23a7-7c5d-43e3-8b56-e12c7ae65109-158",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/7cdc23a7-7c5d-43e3-8b56-e12c7ae65109-158",
-  "name" : "UnionFrAddressAndFrAddress",
-  "title" : "Union of null And null",
+  "id" : "7b116361-7551-4816-9414-a3760abc172b-86",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/7b116361-7551-4816-9414-a3760abc172b-86",
+  "name" : "UnionFrAddressAndAsAddressExtendedProfile",
+  "title" : "Union of null And AS Address Extended Datatype Profile",
   "status" : "active",
-  "date" : "2024-04-12T12:13:36+00:00",
+  "date" : "2024-04-12T16:15:37+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "snapshot" : {
     "element" : [{
       "path" : "Address",
@@ -310,8 +317,125 @@
       }]
     },
     {
+      "id" : "Address.line.id",
+      "path" : "Address.line.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Address.line.extension",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
+      "path" : "Address.line.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "condition" : ["ele-1"],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+        }],
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      },
+      {
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "id" : "Address.line.value",
+      "path" : "Address.line.value",
+      "representation" : ["xmlAttr"],
+      "short" : "Primitive value for string",
+      "definition" : "Primitive value for string",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "string.value",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/regex",
+          "valueString" : "[ \\r\\n\\t\\S]+"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "maxLength" : 1048576
+    },
+    {
       "path" : "Address.city",
-      "short" : "Name of city, town etc.",
+      "short" : "left: Name of city, town etc.; right: Les communes existantes sont définies ici : https://public.opendatasoft.com/explore/dataset/correspondance-code-insee-code-postal/table.",
       "definition" : "The name of the city, town, suburb, village or other community or delivery center.",
       "comment" : "Note that FHIR strings SHALL NOT exceed 1MB in size",
       "alias" : ["Municpality"],
@@ -385,9 +509,13 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J84-DepartementOM-RASS/FHIR/JDV-J84-DepartementOM-RASS"
+      },
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
@@ -502,7 +630,7 @@
       "path" : "Address.country",
       "short" : "Country (will be ISO 3166 3 letter code; code=FRA for France)",
       "definition" : "Country - a nation as commonly understood or generally accepted.",
-      "comment" : "ISO 3166 3 letter codes can be used in place of a full country name. FRA for France.",
+      "comment" : "left: ISO 3166 3 letter codes can be used in place of a full country name. FRA for France.; right: ISO 3166 3 letter codes can be used in place of a human readable country name.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -519,9 +647,13 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
+      "binding" : {
+        "strength" : "example",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J74-Pays-RASS/FHIR/JDV-J74-Pays-RASS"
+      },
       "mapping" : [{
         "identity" : "rim",
         "map" : "n/a"
@@ -547,7 +679,7 @@
       "path" : "Address.period",
       "short" : "Time period when address was/is in use",
       "definition" : "Time period when address was/is in use.",
-      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration].",
+      "comment" : "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
       "requirements" : "Allows addresses to be placed in historical context.",
       "min" : 0,
       "max" : "1",
