@@ -87,18 +87,20 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 // Slice déjà définie dans FrOrganization
 * type MS
 * type contains
-    statutJuridiqueINSEE 0..1 MS and
+    //statutJuridiqueINSEE 0..1 MS and
     sousEnsembleAgregatStatutJuridique 0..1 MS and
     categorieEtablissement 0..1 MS and
-    sphParticipation 0..1 MS and
+    //sphParticipation 0..1 MS and
     OIType 0..1 MS
 * type[statutJuridiqueINSEE] ^short = "statutJuridique (EJ) : Situation juridique de l’établissement"
+* type[statutJuridiqueINSEE] MS
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
 * type[sousEnsembleAgregatStatutJuridique] ^short = "sousEnsembleAgregatStatutJuridique (EJ) : Deuxième niveau dans l’arborescence des statuts juridiques"
 * type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
 * type[categorieEtablissement] ^short = "categorieEG (EG) : Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
 * type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
 * type[sphParticipation] ^short = "modaliteParticipationSPH (EG) : Modalités de participation au service public hospitalier"
+* type[sphParticipation] MS
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
 * type[OIType] ^short = "typeOI (OI) : Type d'organisation interne"
 * type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
@@ -143,24 +145,24 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.extension[ror-organization-geolocation] ^short = "extension pour définir les données de géolocalisation de l'EG"
 * address.extension[ror-organization-geolocation].extension contains
     RORConfidenceGeolocation named ror-confidence-geolocation 0..1 MS
-* address.line.extension contains
-    iso21090-ADXP-careOf named careOf 0..1 MS and
-    iso21090-ADXP-additionalLocator named additionalLocator 0..1 MS and
-    iso21090-ADXP-houseNumber named houseNumber 0..1 MS and
-    iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..1 MS and
-    iso21090-ADXP-streetNameType named streetNameType 0..1 MS and
-    iso21090-ADXP-postBox named postalBox 0..1 MS and
-    iso21090-ADXP-streetNameBase named streetNameBase 0..1 MS and
-    as-ext-lieu-dit named lieuDit 0..1 MS
-* address.line.extension[careOf] ^short = "pointRemise (Adresse)"
-* address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse)"
-* address.line.extension[houseNumber] ^short = "numeroVoie(Adresse)"
-* address.line.extension[buildingNumberSuffix] ^short = "(Adresse)"
-* address.line.extension[streetNameType] ^short = "typeVoie (Adresse)"
-* address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
-* address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
-* address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse)"
-* address.line.extension[lieuDit] ^short = "lieuDit (Adresse)"
+//* address.line.extension contains
+    //iso21090-ADXP-careOf named careOf 0..1 MS and
+    //iso21090-ADXP-additionalLocator named additionalLocator 0..1 MS and
+    //iso21090-ADXP-houseNumber named houseNumber 0..1 MS and
+    //iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..1 MS and
+    //iso21090-ADXP-streetNameType named streetNameType 0..1 MS and
+    //iso21090-ADXP-postBox named postalBox 0..1 MS
+    //iso21090-ADXP-streetNameBase named streetNameBase 0..1 MS and
+    //as-ext-lieu-dit named lieuDit 0..1 MS
+* address.line.extension[careOf] MS
+* address.line.extension[additionalLocator] MS
+* address.line.extension[houseNumber] MS
+* address.line.extension[buildingNumberSuffix] MS
+* address.line.extension[streetNameType] MS
+//* address.line.extension[streetNameType].valueString from $JDV-J219-TypeVoie-ROR (required)
+* address.line.extension[postBox] MS
+* address.line.extension[streetNameBase] MS
+* address.line.extension[lieuDit] ^short MS
 
 
 * telecom MS
