@@ -10,7 +10,7 @@
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "active",
-  "date" : "2024-05-02T15:56:22+00:00",
+  "date" : "2024-05-02T16:52:08+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -731,7 +731,7 @@
         "reference" : "CapabilityStatement/ror-consommateur"
       },
       "name" : "ROR-Consommateur",
-      "description" : "Système qui est autorisé à consommer les données du ROR.",
+      "description" : "Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national.",
       "exampleBoolean" : false
     },
     {
@@ -743,7 +743,7 @@
         "reference" : "CapabilityStatement/ror-serveur"
       },
       "name" : "ROR-Serveur",
-      "description" : "Système ROR National : Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national.",
+      "description" : "Capability Statement pour le Système ROR National. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national.",
       "exampleBoolean" : false
     },
     {
@@ -900,6 +900,18 @@
       },
       "name" : "ror-sp-healthcareservice-intervention-zone",
       "description" : "Paramètre de recherche décrivant la zone d'intervention",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate"
+      },
+      "name" : "ror-sp-healthcareservice-notavailable-closing-reopeningdate",
+      "description" : "Paramètre de recherche pour rechercher la date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end).",
       "exampleBoolean" : false
     },
     {
@@ -1736,6 +1748,18 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/ror-questionnaire"
+      },
+      "name" : "RORQuestionnaire",
+      "description" : "Fiche de saisie de l'offre de soins",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/ror-task"
       },
       "name" : "RORTask",
@@ -1800,6 +1824,18 @@
       },
       "name" : "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData",
       "description" : "Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ror-usage-context-type-vs"
+      },
+      "name" : "Value Set type pour le contexte d'usage de la fiche de saisie",
+      "description" : "Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession",
       "exampleBoolean" : false
     },
     {

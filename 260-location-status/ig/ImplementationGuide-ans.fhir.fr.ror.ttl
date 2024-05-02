@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2024-05-02T15:56:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-05-02T16:52:08+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -648,7 +648,7 @@
          fhir:reference [ fhir:v "CapabilityStatement/ror-consommateur" ]
        ] ;
        fhir:name [ fhir:v "ROR-Consommateur" ] ;
-       fhir:description [ fhir:v "Système qui est autorisé à consommer les données du ROR." ] ;
+       fhir:description [ fhir:v "Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -660,7 +660,7 @@
          fhir:reference [ fhir:v "CapabilityStatement/ror-serveur" ]
        ] ;
        fhir:name [ fhir:v "ROR-Serveur" ] ;
-       fhir:description [ fhir:v "Système ROR National : Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national." ] ;
+       fhir:description [ fhir:v "Capability Statement pour le Système ROR National. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -817,6 +817,18 @@
        ] ;
        fhir:name [ fhir:v "ror-sp-healthcareservice-intervention-zone" ] ;
        fhir:description [ fhir:v "Paramètre de recherche décrivant la zone d'intervention" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate> ;
+         fhir:reference [ fhir:v "SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate" ]
+       ] ;
+       fhir:name [ fhir:v "ror-sp-healthcareservice-notavailable-closing-reopeningdate" ] ;
+       fhir:description [ fhir:v "Paramètre de recherche pour rechercher la date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end)." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1652,6 +1664,18 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire> ;
+         fhir:reference [ fhir:v "StructureDefinition/ror-questionnaire" ]
+       ] ;
+       fhir:name [ fhir:v "RORQuestionnaire" ] ;
+       fhir:description [ fhir:v "Fiche de saisie de l'offre de soins" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task> ;
          fhir:reference [ fhir:v "StructureDefinition/ror-task" ]
        ] ;
@@ -1717,6 +1741,18 @@
        ] ;
        fhir:name [ fhir:v "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData" ] ;
        fhir:description [ fhir:v "Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs> ;
+         fhir:reference [ fhir:v "ValueSet/ror-usage-context-type-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Value Set type pour le contexte d'usage de la fiche de saisie" ] ;
+       fhir:description [ fhir:v "Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

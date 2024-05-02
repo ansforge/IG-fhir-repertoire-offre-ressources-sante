@@ -56,8 +56,8 @@
       "sources" : ["2.16.840.1.113883.3.88.12.80.72"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/common-tags",
@@ -71,11 +71,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.79"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
       "StructureDefinition-ror-location.html" : "RORLocation",
-      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
       "StructureDefinition-ror-organization.html" : "ROROrganization",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/composite-measure-scoring",
@@ -105,11 +105,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.71"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
       "StructureDefinition-ror-location.html" : "RORLocation",
-      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
       "StructureDefinition-ror-organization.html" : "ROROrganization",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
@@ -123,11 +123,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.73"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
       "StructureDefinition-ror-location.html" : "RORLocation",
-      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
       "StructureDefinition-ror-organization.html" : "ROROrganization",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
@@ -141,9 +141,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.512"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
       "StructureDefinition-ror-location.html" : "RORLocation",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/definition-topic",
@@ -187,8 +187,22 @@
       "uses" : {
       },
       "StructureDefinition-ror-location.html" : "RORLocation",
-      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
-      "StructureDefinition-ror-organization.html" : "ROROrganization"
+      "StructureDefinition-ror-organization.html" : "ROROrganization",
+      "StructureDefinition-ror-practitioner.html" : "RORPractitioner"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/item-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireItemType",
+      "title" : "QuestionnaireItemType",
+      "description" : "Distinguishes groups from questions and display text and indicates data type for questions.",
+      "systems" : ["http://hl7.org/fhir/item-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.444"],
+      "sources" : ["2.16.840.1.113883.4.642.3.444"],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/jurisdiction",
@@ -206,7 +220,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.48"],
       "uses" : {
       },
-      "StructureDefinition-ror-measure.html" : "RORMeasure"
+      "StructureDefinition-ror-measure.html" : "RORMeasure",
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -220,14 +235,15 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-ror-task.html" : "RORTask",
-      "StructureDefinition-ror-measure.html" : "RORMeasure",
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
       "StructureDefinition-ror-location.html" : "RORLocation",
       "StructureDefinition-ror-measurereport.html" : "RORMeasureReport",
-      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-task.html" : "RORTask",
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
       "StructureDefinition-ror-organization.html" : "ROROrganization",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-measure.html" : "RORMeasure",
+      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/location-mode",
@@ -301,8 +317,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1236"],
       "uses" : {
       },
-      "StructureDefinition-ror-measure.html" : "RORMeasure",
-      "StructureDefinition-ror-measurereport.html" : "RORMeasureReport"
+      "StructureDefinition-ror-measurereport.html" : "RORMeasureReport",
+      "StructureDefinition-ror-measure.html" : "RORMeasure"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/measure-population",
@@ -316,8 +332,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.765"],
       "uses" : {
       },
-      "StructureDefinition-ror-measure.html" : "RORMeasure",
-      "StructureDefinition-ror-measurereport.html" : "RORMeasureReport"
+      "StructureDefinition-ror-measurereport.html" : "RORMeasureReport",
+      "StructureDefinition-ror-measure.html" : "RORMeasure"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/measure-report-status",
@@ -443,7 +459,64 @@
       "sources" : ["2.16.840.1.113883.4.642.3.3"],
       "uses" : {
       },
-      "StructureDefinition-ror-measure.html" : "RORMeasure"
+      "StructureDefinition-ror-measure.html" : "RORMeasure",
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-answers",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireAnswerCodes",
+      "title" : "Questionnaire Answer Codes",
+      "description" : "Example list of codes for answers to questions. (Not complete or necessarily appropriate.)",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.446"],
+      "sources" : ["2.16.840.1.113883.4.642.3.446"],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-enable-behavior",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EnableWhenBehavior",
+      "title" : "EnableWhenBehavior",
+      "description" : "Controls how multiple enableWhen values are interpreted -  whether all or any must be true.",
+      "systems" : ["http://hl7.org/fhir/questionnaire-enable-behavior"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1007"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1007"],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-enable-operator",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireItemOperator",
+      "title" : "QuestionnaireItemOperator",
+      "description" : "The criteria by which a question is enabled.",
+      "systems" : ["http://hl7.org/fhir/questionnaire-enable-operator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1005"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1005"],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-questions",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireQuestionCodes",
+      "title" : "Questionnaire Question Codes",
+      "description" : "Example list of codes for questions and groups of questions. (Not necessarily complete or appropriate.)",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.443"],
+      "sources" : ["2.16.840.1.113883.4.642.3.443"],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/request-priority",
@@ -458,6 +531,20 @@
       "uses" : {
       },
       "StructureDefinition-ror-task.html" : "RORTask"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.27"],
+      "sources" : ["2.16.840.1.113883.4.642.3.27"],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-labels",
@@ -477,11 +564,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
       "StructureDefinition-ror-location.html" : "RORLocation",
-      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
       "StructureDefinition-ror-organization.html" : "ROROrganization",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/service-provision-conditions",
@@ -561,6 +648,42 @@
       "StructureDefinition-ror-task.html" : "RORTask"
     },
     {
+      "url" : "http://hl7.org/fhir/ValueSet/usage-context-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "UsageContextType",
+      "title" : "UsageContextType",
+      "description" : "A code that specifies a type of context being specified by a usage context.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/usage-context-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.101"],
+      "sources" : ["2.16.840.1.113883.4.642.3.101"],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/use-context",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Context of Use ValueSet",
+      "title" : "ConformanceUseContext",
+      "description" : "This value set defines a base set of codes that can be used to indicate that the content in a resource was developed with a focus and intent of supporting use within particular contexts.",
+      "systems" : [
+        "http://unstats.un.org/unsd/methods/m49/m49.htm",
+        "http://hl7.org/fhir/administrative-gender",
+        "urn:iso:std:iso:3166",
+        "http://hl7.org/fhir/practitioner-specialty",
+        "http://nucc.org/provider-taxonomy",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.28"],
+      "sources" : ["2.16.840.1.113883.4.642.3.28"],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
+    },
+    {
       "url" : "http://interopsante.org/fhir/ValueSet/fr-organization-identifier-type",
       "version" : "1.0.1",
       "status" : "active",
@@ -637,6 +760,23 @@
         "http://hl7.org/fhir/uv/bulkdata/CodeSystem/include-associated-data",
         "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-include-associated-data-code-system"
       ]
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs",
+      "version" : "0.2.1",
+      "status" : "active",
+      "name" : "RORUsageContextTypeVS",
+      "title" : "Value Set type pour le contexte d'usage de la fiche de saisie",
+      "description" : "Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire",
+        "https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession",
+        "https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ror-questionnaire.html" : "RORQuestionnaire"
     }
   ]
 }
