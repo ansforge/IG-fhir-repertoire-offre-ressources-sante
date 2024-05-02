@@ -1,0 +1,939 @@
+@startuml
+set namespaceSeparator ?
+hide circle
+hide class fields
+
+package IG #DDDDDD{
+
+     package Profiles #DDDDDD{
+
+        class RORHealthcareService{
+
+             HealthcareService.meta.lastUpdated => [1..None]
+             HealthcareService.meta.tag => [None..None]
+             HealthcareService.meta.tag:codeRegion => [0..1]
+             HealthcareService.extension => [3..None]
+             HealthcareService.extension:ror-territorial-division => <&plus>[0..*]
+             HealthcareService.extension:ror-healthcareservice-sensitive-unit => <&plus>[1..1]
+             HealthcareService.extension:ror-healthcareservice-no-consent-habilitation => <&plus>[0..1]
+             HealthcareService.extension:ror-healthcareservice-psychiatric-sector => <&plus>[0..*]
+             HealthcareService.extension:ror-healthcareservice-patient-type => <&plus>[1..1]
+             HealthcareService.extension:ror-healthcareservice-contact => <&plus>[0..*]
+             HealthcareService.extension:ror-meta-creation-date => <&plus>[1..1]
+             HealthcareService.identifier => [1..1]
+             HealthcareService.providedBy => [None..None]
+             HealthcareService.category => [None..1]
+             HealthcareService.type => [1..1]
+             HealthcareService.specialty => [1..None]
+             HealthcareService.specialty:operationalActivity => [1..1]
+             HealthcareService.specialty:operationalActivityFamily => [0..1]
+             HealthcareService.location => [None..None]
+             HealthcareService.name => [None..None]
+             HealthcareService.comment => [None..None]
+             HealthcareService.telecom => [None..None]
+             HealthcareService.telecom.extension => [2..None]
+             HealthcareService.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
+             HealthcareService.telecom.extension:ror-telecom-usage => <&plus>[0..1]
+             HealthcareService.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
+             HealthcareService.telecom.value => [1..None]
+             HealthcareService.coverageArea => [None..None]
+             HealthcareService.characteristic => [1..None]
+             HealthcareService.characteristic.extension:ror-act-type => <&plus>[0..1]
+             HealthcareService.characteristic:receptionType => [0..1]
+             HealthcareService.characteristic:receptionType.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:careMode => [1..1]
+             HealthcareService.characteristic:careMode.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:receptionModality => [0..*]
+             HealthcareService.characteristic:receptionModality.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:managementType => [0..*]
+             HealthcareService.characteristic:managementType.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:specificAct => [0..*]
+             HealthcareService.characteristic:specificAct.extension => [1..None]
+             HealthcareService.characteristic:specificAct.extension:ror-act-type => <&plus>[1..1]
+             HealthcareService.characteristic:specificAct.extension:ror-act-type.value[x] => <&plus>[None..None]
+             HealthcareService.characteristic:outsideOfficeAct => [0..*]
+             HealthcareService.characteristic:outsideOfficeAct.extension => [1..None]
+             HealthcareService.characteristic:outsideOfficeAct.extension:ror-act-type => <&plus>[1..1]
+             HealthcareService.characteristic:outsideOfficeAct.extension:ror-act-type.value[x] => <&plus>[None..None]
+             HealthcareService.characteristic:takingCareSpeciality => [0..*]
+             HealthcareService.characteristic:takingCareSpeciality.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:annualOpening => [0..1]
+             HealthcareService.characteristic:annualOpening.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:ressourceProfession => [0..*]
+             HealthcareService.characteristic:ressourceProfession.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:specificCompetence => [0..*]
+             HealthcareService.characteristic:specificCompetence.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:expertiseLevel => [0..*]
+             HealthcareService.characteristic:expertiseLevel.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.characteristic:temporalityStopService => [0..1]
+             HealthcareService.characteristic:temporalityStopService.extension:ror-act-type => <&plus>[0..0]
+             HealthcareService.availableTime => [None..1]
+             HealthcareService.availableTime.extension:ror-available-time-type-of-time => <&plus>[0..1]
+             HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date => <&plus>[0..1]
+             HealthcareService.availableTime.extension:ror-available-time-number-days-of-week => <&plus>[0..1]
+             HealthcareService.notAvailable => [None..None]
+             HealthcareService.notAvailable:closingReopeningDate => [0..1]
+             HealthcareService.notAvailable:closingReopeningDate.id => [1..None]
+             HealthcareService.notAvailable:closingReopeningDate.description => [None..None]
+             HealthcareService.notAvailable:closingReopeningDate.during.start => [None..None]
+             HealthcareService.notAvailable:closingReopeningDate.during.end => [None..None]
+        } 
+
+        class RORLocation{
+
+             Location.meta.lastUpdated => [1..None]
+             Location.meta.tag => [None..None]
+             Location.meta.tag:codeRegion => [0..1]
+             Location.extension => [2..None]
+             Location.extension:ror-commune-cog => <&plus>[1..1]
+             Location.extension:ror-location-equipment => <&plus>[0..*]
+             Location.extension:ror-location-residential-capacity => <&plus>[0..*]
+             Location.extension:ror-location-supported-capacity => <&plus>[0..*]
+             Location.extension:ror-meta-creation-date => <&plus>[1..1]
+             Location.identifier => [None..None]
+             Location.identifier:idExterneSynchro => [0..1]
+             Location.identifier:idExterneSynchro.type => [1..None]
+             Location.identifier:idExterneSynchro.type.coding.code => [1..None]
+             Location.identifier:idLocation => [0..1]
+             Location.identifier:idLocation.type => [1..None]
+             Location.identifier:idLocation.type.coding.code => [1..None]
+             Location.operationalStatus => [None..None]
+             Location.name => [None..None]
+             Location.alias => [None..None]
+             Location.alias:nomExterneSynchro => [0..1]
+             Location.description => [None..None]
+             Location.type => [None..1]
+             Location.telecom => [None..None]
+             Location.telecom.extension => [2..None]
+             Location.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
+             Location.telecom.extension:ror-telecom-usage => <&plus>[0..1]
+             Location.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
+             Location.telecom.value => [1..None]
+             Location.address => [None..None]
+             Location.address.line.extension:careOf => <&plus>[0..1]
+             Location.address.line.extension:additionalLocator => <&plus>[0..1]
+             Location.address.line.extension:houseNumber => <&plus>[0..1]
+             Location.address.line.extension:buildingNumberSuffix => <&plus>[0..1]
+             Location.address.line.extension:streetNameType => <&plus>[0..1]
+             Location.address.line.extension:streetNameType.value[x] => <&plus>[None..None]
+             Location.address.line.extension:streetNameBase => <&plus>[0..1]
+             Location.address.line.extension:postalBox => <&plus>[0..1]
+             Location.address.line.extension:lieuDit => <&plus>[0..1]
+             Location.address.city => [None..None]
+             Location.address.postalCode => [None..None]
+             Location.position => [None..None]
+             Location.position.extension:ror-coordinate-reliability => <&plus>[0..1]
+             Location.position.longitude => [None..None]
+             Location.position.latitude => [None..None]
+             Location.managingOrganization => [None..None]
+             Location.partOf => [None..None]
+        } 
+
+        class RORMeasure{
+
+             Measure.identifier => [1..1]
+             Measure.status => [None..None]
+             Measure.date => [None..None]
+             Measure.purpose => [1..None]
+             Measure.topic => [1..1]
+             Measure.type => [1..1]
+             Measure.group.code => [1..None]
+             Measure.group.description => [1..None]
+        } 
+
+        class RORMeasureReport{
+
+             MeasureReport.identifier => [1..1]
+             MeasureReport.status => [None..None]
+             MeasureReport.type => [None..None]
+             MeasureReport.measure => [None..None]
+             MeasureReport.subject => [None..None]
+             MeasureReport.date => [1..None]
+             MeasureReport.reporter => [None..None]
+             MeasureReport.period => [None..None]
+             MeasureReport.group.code => [1..None]
+             MeasureReport.group.measureScore => [1..None]
+        } 
+
+        class ROROrganization{
+
+             Organization.meta.lastUpdated => [1..None]
+             Organization.meta.tag => [None..None]
+             Organization.meta.tag:codeRegion => [0..1]
+             Organization.extension => [1..None]
+             Organization.extension:ror-organization-price => <&plus>[0..*]
+             Organization.extension:ror-territorial-division => <&plus>[0..*]
+             Organization.extension:ror-organization-financial-help-type => <&plus>[0..*]
+             Organization.extension:ror-organization-accomodation-family => <&plus>[0..1]
+             Organization.extension:ror-organization-nb-permanent-social-help-place => <&plus>[0..1]
+             Organization.extension:ror-organization-nb-temporary-social-help-place => <&plus>[0..1]
+             Organization.extension:ror-organization-accessibility-location => <&plus>[0..1]
+             Organization.extension:ror-organization-level-recourse-orsan => <&plus>[0..1]
+             Organization.extension:ror-organization-drop-zone => <&plus>[0..1]
+             Organization.extension:ror-organization-reopening-date => <&plus>[0..1]
+             Organization.extension:ror-organization-creation-date => <&plus>[0..1]
+             Organization.extension:ror-organization-closing-type => <&plus>[0..1]
+             Organization.extension:organization-period => <&plus>[0..1]
+             Organization.extension:ror-meta-comment => <&plus>[0..1]
+             Organization.extension:ror-meta-creation-date => <&plus>[1..1]
+             Organization.extension:ror-organization-comment => <&plus>[0..1]
+             Organization.identifier => [None..None]
+             Organization.identifier:idNatSt => [0..1]
+             Organization.identifier:idNatSt.type => [None..None]
+             Organization.identifier:idNatSt.system => [None..None]
+             Organization.identifier:finess => [0..1]
+             Organization.identifier:finess.type => [None..None]
+             Organization.identifier:finess.system => [None..None]
+             Organization.identifier:sirene => [0..1]
+             Organization.identifier:sirene.type => [None..None]
+             Organization.identifier:sirene.system => [None..None]
+             Organization.identifier:rppsRang => [0..1]
+             Organization.identifier:rppsRang.type => [None..None]
+             Organization.identifier:rppsRang.system => [None..None]
+             Organization.identifier:numSIRET => [0..1]
+             Organization.identifier:numSIRET.type => [None..None]
+             Organization.identifier:numSIRET.system => [None..None]
+             Organization.identifier:identifierOI => [0..1]
+             Organization.identifier:identifierOI.type => [None..None]
+             Organization.identifier:identifierOI.system => [None..None]
+             Organization.identifier:adeliRang => [0..1]
+             Organization.identifier:adeliRang.type => [None..None]
+             Organization.identifier:adeliRang.system => [None..None]
+             Organization.type => [None..None]
+             Organization.type:statutJuridiqueINSEE => [0..1]
+             Organization.type:sousEnsembleAgregatStatutJuridique => [0..1]
+             Organization.type:categorieEtablissement => [0..1]
+             Organization.type:sphParticipation => [0..1]
+             Organization.type:OIType => [0..1]
+             Organization.name => [None..None]
+             Organization.name.extension:ror-organization-additional-name => <&plus>[0..1]
+             Organization.alias => [None..None]
+             Organization.telecom => [None..None]
+             Organization.telecom.extension => [2..None]
+             Organization.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
+             Organization.telecom.extension:ror-telecom-usage => <&plus>[0..1]
+             Organization.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
+             Organization.telecom.value => [None..None]
+             Organization.address => [None..1]
+             Organization.address.extension:inseeCode => <&plus>[None..None]
+             Organization.address.extension:inseeCode.extension => <&plus>[None..0]
+             Organization.address.extension:inseeCode.value[x] => <&plus>[None..None]
+             Organization.address.extension:ror-organization-geolocation => <&plus>[0..1]
+             Organization.address.extension:ror-organization-geolocation.extension => <&plus>[2..None]
+             Organization.address.extension:ror-organization-geolocation.extension:ror-confidence-geolocation => <&plus>[0..1]
+             Organization.address.line.extension:careOf => <&plus>[0..1]
+             Organization.address.line.extension:additionalLocator => <&plus>[0..1]
+             Organization.address.line.extension:houseNumber => <&plus>[0..1]
+             Organization.address.line.extension:buildingNumberSuffix => <&plus>[0..1]
+             Organization.address.line.extension:streetNameType => <&plus>[0..1]
+             Organization.address.line.extension:streetNameType.value[x] => <&plus>[None..None]
+             Organization.address.line.extension:postalBox => <&plus>[0..1]
+             Organization.address.line.extension:streetNameBase => <&plus>[0..1]
+             Organization.address.line.extension:lieuDit => <&plus>[0..1]
+             Organization.address.city => [None..None]
+             Organization.address.postalCode => [None..None]
+             Organization.partOf => [None..None]
+             Organization.contact.extension:ror-contact-function-contact => <&plus>[0..1]
+             Organization.contact.extension:ror-contact-description => <&plus>[0..1]
+             Organization.contact.extension:ror-contact-confidentiality-level => <&plus>[0..1]
+             Organization.contact.purpose => [None..None]
+             Organization.contact.name => [None..None]
+             Organization.contact.telecom.extension => [2..None]
+             Organization.contact.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
+             Organization.contact.telecom.extension:ror-telecom-usage => <&plus>[0..1]
+             Organization.contact.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
+             Organization.contact.telecom.value => [None..None]
+        } 
+
+        class RORPractitioner{
+
+             Practitioner.meta.lastUpdated => [1..None]
+             Practitioner.meta.tag => [None..None]
+             Practitioner.meta.tag:codeRegion => [0..1]
+             Practitioner.extension => [1..None]
+             Practitioner.extension:ror-meta-creation-date => <&plus>[1..1]
+             Practitioner.identifier => [1..1]
+             Practitioner.identifier.system => [None..None]
+             Practitioner.name.prefix => [None..1]
+             Practitioner.telecom => [None..None]
+             Practitioner.telecom.extension => [2..None]
+             Practitioner.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
+             Practitioner.telecom.extension:ror-telecom-usage => <&plus>[0..1]
+             Practitioner.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
+             Practitioner.telecom.value => [1..None]
+             Practitioner.qualification.issuer => [None..None]
+        } 
+
+        class RORPractitionerRole{
+
+             PractitionerRole.meta.lastUpdated => [1..None]
+             PractitionerRole.meta.tag => [None..None]
+             PractitionerRole.meta.tag:codeRegion => [0..1]
+             PractitionerRole.extension => [2..None]
+             PractitionerRole.extension:ror-practitionerrole-unit-exercise-mode => <&plus>[1..1]
+             PractitionerRole.extension:ror-practitionerrole-name => <&plus>[0..1]
+             PractitionerRole.extension:contracted => <&plus>[0..1]
+             PractitionerRole.extension:contracted.extension => <&plus>[None..0]
+             PractitionerRole.extension:contracted.value[x] => <&plus>[None..None]
+             PractitionerRole.extension:optionCAS => <&plus>[0..1]
+             PractitionerRole.extension:vitalAccepted => <&plus>[0..1]
+             PractitionerRole.extension:ror-meta-creation-date => <&plus>[1..1]
+             PractitionerRole.extension:ror-meta-comment => <&plus>[0..1]
+             PractitionerRole.identifier => [None..1]
+             PractitionerRole.practitioner => [1..None]
+             PractitionerRole.organization => [None..None]
+             PractitionerRole.code => [1..1]
+             PractitionerRole.specialty => [1..None]
+             PractitionerRole.specialty:expertiseType => [1..1]
+             PractitionerRole.specialty:specialty => [0..1]
+             PractitionerRole.specialty:competence => [0..1]
+             PractitionerRole.specialty:exclusiveCompetence => [0..1]
+             PractitionerRole.specialty:specificOrientation => [0..1]
+             PractitionerRole.specialty:expertiseCapacity => [0..1]
+             PractitionerRole.specialty:qualificationPAC => [0..1]
+             PractitionerRole.specialty:nonQualifyingDESC => [0..1]
+             PractitionerRole.specialty:supplementaryExerciseRight => [0..1]
+             PractitionerRole.specialty:specificCompetence => [0..*]
+             PractitionerRole.location => [None..None]
+             PractitionerRole.healthcareService => [1..1]
+             PractitionerRole.telecom => [None..1]
+             PractitionerRole.telecom.extension => [2..None]
+             PractitionerRole.telecom.extension:ror-telecom-communication-channel => <&plus>[1..1]
+             PractitionerRole.telecom.extension:ror-telecom-usage => <&plus>[0..1]
+             PractitionerRole.telecom.extension:ror-telecom-confidentiality-level => <&plus>[1..1]
+             PractitionerRole.telecom.value => [1..None]
+             PractitionerRole.availableTime => [None..1]
+             PractitionerRole.availableTime.extension:ror-available-time-type-of-time => <&plus>[0..1]
+             PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date => <&plus>[0..1]
+             PractitionerRole.availableTime.extension:ror-available-time-number-days-of-week => <&plus>[0..1]
+             PractitionerRole.availableTime.availableStartTime => [None..None]
+             PractitionerRole.availableTime.availableEndTime => [None..None]
+        } 
+
+        class RORTask{
+
+             Task.identifier => [None..1]
+             Task.partOf => [None..None]
+             Task.status => [None..None]
+             Task.businessStatus => [1..None]
+             Task.code => [1..None]
+             Task.description => [None..None]
+             Task.focus => [1..None]
+             Task.executionPeriod.start => [None..None]
+             Task.executionPeriod.end => [None..None]
+             Task.authoredOn => [1..None]
+             Task.lastModified => [1..None]
+             Task.requester => [None..None]
+             Task.owner => [None..None]
+             Task.location => [None..None]
+             Task.reasonCode => [1..None]
+             Task.restriction.recipient => [None..None]
+             Task.input => [1..None]
+             Task.input:ruleErrorId => [0..1]
+             Task.input:ruleErrorId.type => [None..None]
+             Task.input:ruleErrorId.value[x] => [None..None]
+             Task.input:errorValue => [0..*]
+             Task.input:errorValue.type => [None..None]
+             Task.input:proposedValue => [0..*]
+             Task.input:proposedValue.type => [None..None]
+             Task.input:pathElementError => [0..1]
+             Task.input:pathElementError.type => [None..None]
+             Task.input:pathElementError.value[x] => [None..None]
+             Task.input:systemRequester => [1..1]
+             Task.input:systemRequester.type => [None..None]
+             Task.input:systemRequester.value[x] => [None..None]
+             Task.input:identifierRequester => [0..1]
+             Task.input:identifierRequester.type => [None..None]
+             Task.input:identifierRequester.value[x] => [None..None]
+             Task.output => [None..None]
+             Task.output:newValue => [0..*]
+             Task.output:newValue.type => [None..None]
+             Task.output:identifierAnalyst => [0..1]
+             Task.output:identifierAnalyst.type => [None..None]
+             Task.output:identifierAnalyst.value[x] => [None..None]
+         }
+
+     }
+     package extension #paleturquoise {
+
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORTerritorialDivision
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORHealthcareServiceSensitiveUnit
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORHealthcareServiceNoConsentHabilitation
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORHealthcareServicePsychiatricSector
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORHealthcareServicePatientType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORHealthcareServiceContact
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORMetaCreationDate
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORTelecomCommunicationChannel
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORTelecomUsage
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORTelecomConfidentialityLevel
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORActType
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeTypeOfTime
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeEffectiveOpeningClosingDate
+     RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeNumberDaysofWeek
+     RORLocation -[#black,dashed,thickness=2]-> RORCommuneCog
+     RORLocation -[#black,dashed,thickness=2]-> RORLocationEquipment
+     RORLocation -[#black,dashed,thickness=2]-> RORLocationResidentialCapacity
+     RORLocation -[#black,dashed,thickness=2]-> RORLocationSupportedCapacity
+     RORLocation -[#black,dashed,thickness=2]-> RORMetaCreationDate
+     RORLocation -[#black,dashed,thickness=2]-> RORTelecomCommunicationChannel
+     RORLocation -[#black,dashed,thickness=2]-> RORTelecomUsage
+     RORLocation -[#black,dashed,thickness=2]-> RORTelecomConfidentialityLevel
+     RORLocation -[#black,dashed,thickness=2]-> AsLieuDit
+     RORLocation -[#black,dashed,thickness=2]-> RORCoordinateReliability
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationPrice
+     ROROrganization -[#black,dashed,thickness=2]-> RORTerritorialDivision
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationFinancialHelpType
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationAccomodationFamily
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationNbPermanentSocialHelpPlace
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationNbTemporarySocialHelpPlace
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationAccessibilityLocation
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationLevelRecourseORSAN
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationDropZone
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationReopeningDate
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationCreationDate
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationClosingType
+     ROROrganization -[#black,dashed,thickness=2]-> RORMetaComment
+     ROROrganization -[#black,dashed,thickness=2]-> RORMetaCreationDate
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationComment
+     ROROrganization -[#black,dashed,thickness=2]-> ROROrganizationAdditionalName
+     ROROrganization -[#black,dashed,thickness=2]-> RORTelecomCommunicationChannel
+     ROROrganization -[#black,dashed,thickness=2]-> RORTelecomUsage
+     ROROrganization -[#black,dashed,thickness=2]-> RORTelecomConfidentialityLevel
+     ROROrganization -[#black,dashed,thickness=2]-> RORConfidenceGeolocation
+     ROROrganization -[#black,dashed,thickness=2]-> AsLieuDit
+     ROROrganization -[#black,dashed,thickness=2]-> RORContactFunctionContact
+     ROROrganization -[#black,dashed,thickness=2]-> RORContactDescription
+     ROROrganization -[#black,dashed,thickness=2]-> RORContactConfidentialityLevel
+     ROROrganization -[#black,dashed,thickness=2]-> RORTelecomConfidentialityLevel
+     ROROrganization -[#black,dashed,thickness=2]-> RORTelecomUsage
+     ROROrganization -[#black,dashed,thickness=2]-> RORTelecomCommunicationChannel
+     RORPractitioner -[#black,dashed,thickness=2]-> RORMetaCreationDate
+     RORPractitioner -[#black,dashed,thickness=2]-> RORTelecomCommunicationChannel
+     RORPractitioner -[#black,dashed,thickness=2]-> RORTelecomUsage
+     RORPractitioner -[#black,dashed,thickness=2]-> RORTelecomConfidentialityLevel
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORPractitionerRoleUnitExerciseMode
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORPractitionerRoleName
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORMetaCreationDate
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORMetaComment
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORTelecomCommunicationChannel
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORTelecomUsage
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORTelecomConfidentialityLevel
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORAvailableTimeTypeOfTime
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORAvailableTimeEffectiveOpeningClosingDate
+     RORPractitionerRole -[#black,dashed,thickness=2]-> RORAvailableTimeNumberDaysofWeek
+
+        class RORPractitionerRoleName{
+
+          Extension.extension => [1..None]
+          Extension.extension:exerciseTitle => [0..1]
+          Extension.extension:exerciseTitle.extension => [None..0]
+          Extension.extension:exerciseTitle.url => [None..None]
+          Extension.extension:exerciseTitle.value[x] => [None..None]
+          Extension.extension:exerciseTitle.value[x]:valueCodeableConcept => [0..1]
+          Extension.extension:exerciseLastName => [1..1]
+          Extension.extension:exerciseLastName.extension => [None..0]
+          Extension.extension:exerciseLastName.url => [None..None]
+          Extension.extension:exerciseLastName.value[x] => [None..None]
+          Extension.extension:exerciseFirstName => [0..1]
+          Extension.extension:exerciseFirstName.extension => [None..0]
+          Extension.extension:exerciseFirstName.url => [None..None]
+          Extension.extension:exerciseFirstName.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class AsLieuDit{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORActType{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORAvailableTimeEffectiveOpeningClosingDate{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORAvailableTimeNumberDaysofWeek{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORAvailableTimeTypeOfTime{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORCommuneCog{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORConfidenceGeolocation{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORConfidentialityLevel{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORContactConfidentialityLevel{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORContactDescription{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORContactFunctionContact{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORContactTelecomConfidentialityLevel{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORContactTelecomUsage{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORCoordinateReliability{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORHealthcareServiceContactTelecom{
+
+          Extension.extension => [3..None]
+          Extension.extension:ror-telecom-communication-channel => [1..1]
+          Extension.extension:ror-telecom-usage => [0..1]
+          Extension.extension:ror-telecom-confidentiality-level => [1..1]
+          Extension.extension:telecomAddress => [1..1]
+          Extension.extension:telecomAddress.extension => [None..0]
+          Extension.extension:telecomAddress.url => [None..None]
+          Extension.extension:telecomAddress.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class RORHealthcareServiceContact{
+
+          Extension.extension => [1..None]
+          Extension.extension:name => [0..1]
+          Extension.extension:name.extension => [None..0]
+          Extension.extension:name.url => [None..None]
+          Extension.extension:name.value[x] => [None..None]
+          Extension.extension:ror-function-contact => [0..1]
+          Extension.extension:purposeContact => [0..1]
+          Extension.extension:purposeContact.extension => [None..0]
+          Extension.extension:purposeContact.url => [None..None]
+          Extension.extension:purposeContact.value[x] => [None..None]
+          Extension.extension:description => [0..1]
+          Extension.extension:description.extension => [None..0]
+          Extension.extension:description.url => [None..None]
+          Extension.extension:description.value[x] => [None..None]
+          Extension.extension:ror-confidentiality-level => [1..1]
+          Extension.extension:ror-healthcareservice-contact-telecom => [0..*]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class RORHealthcareServiceNoConsentHabilitation{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORHealthcareServicePatientType{
+
+          Extension.extension => [1..None]
+          Extension.extension:supportedPatientInfo => [0..*]
+          Extension.extension:supportedPatientInfo.extension => [None..0]
+          Extension.extension:supportedPatientInfo.url => [None..None]
+          Extension.extension:supportedPatientInfo.value[x] => [None..None]
+          Extension.extension:ageRange => [1..1]
+          Extension.extension:ageRange.extension => [None..0]
+          Extension.extension:ageRange.url => [None..None]
+          Extension.extension:ageRange.value[x] => [None..None]
+          Extension.extension:ageRange.value[x].low => [1..None]
+          Extension.extension:ageRange.value[x].high => [1..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class RORHealthcareServicePsychiatricSector{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORHealthcareServiceSensitiveUnit{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORLocationEquipmentLimit{
+
+          Extension.extension => [2..None]
+          Extension.extension:equipmentFeature => [1..1]
+          Extension.extension:equipmentFeature.extension => [None..0]
+          Extension.extension:equipmentFeature.url => [None..None]
+          Extension.extension:equipmentFeature.value[x] => [None..None]
+          Extension.extension:limitValue => [1..1]
+          Extension.extension:limitValue.extension => [None..0]
+          Extension.extension:limitValue.url => [None..None]
+          Extension.extension:limitValue.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class RORLocationEquipment{
+
+          Extension.extension => [1..None]
+          Extension.extension:equipmentType => [1..1]
+          Extension.extension:equipmentType.extension => [None..0]
+          Extension.extension:equipmentType.url => [None..None]
+          Extension.extension:equipmentType.value[x] => [None..None]
+          Extension.extension:nbInService => [0..1]
+          Extension.extension:nbInService.extension => [None..0]
+          Extension.extension:nbInService.url => [None..None]
+          Extension.extension:nbInService.value[x] => [None..None]
+          Extension.extension:ror-location-equipment-limit => [0..*]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class RORLocationResidentialCapacity{
+
+          Extension.extension => [1..None]
+          Extension.extension:residentialType => [1..1]
+          Extension.extension:residentialType.extension => [None..0]
+          Extension.extension:residentialType.url => [None..None]
+          Extension.extension:residentialType.value[x] => [None..None]
+          Extension.extension:residentialNumber => [0..1]
+          Extension.extension:residentialNumber.extension => [None..0]
+          Extension.extension:residentialNumber.url => [None..None]
+          Extension.extension:residentialNumber.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class RORLocationSupportedCapacity{
+
+          Extension.extension => [7..None]
+          Extension.extension:capacityType => [1..1]
+          Extension.extension:capacityType.extension => [None..0]
+          Extension.extension:capacityType.url => [None..None]
+          Extension.extension:capacityType.value[x] => [None..None]
+          Extension.extension:capacityStatus => [1..1]
+          Extension.extension:capacityStatus.extension => [None..0]
+          Extension.extension:capacityStatus.url => [None..None]
+          Extension.extension:capacityStatus.value[x] => [None..None]
+          Extension.extension:temporalityCapacity => [1..1]
+          Extension.extension:temporalityCapacity.extension => [None..0]
+          Extension.extension:temporalityCapacity.url => [None..None]
+          Extension.extension:temporalityCapacity.value[x] => [None..None]
+          Extension.extension:nbCapacity => [1..1]
+          Extension.extension:nbCapacity.extension => [None..0]
+          Extension.extension:nbCapacity.url => [None..None]
+          Extension.extension:nbCapacity.value[x] => [None..None]
+          Extension.extension:capacitySourceType => [1..1]
+          Extension.extension:capacitySourceType.extension => [None..0]
+          Extension.extension:capacitySourceType.url => [None..None]
+          Extension.extension:capacitySourceType.value[x] => [None..None]
+          Extension.extension:genderCapacityAvailable => [0..1]
+          Extension.extension:genderCapacityAvailable.extension => [None..0]
+          Extension.extension:genderCapacityAvailable.url => [None..None]
+          Extension.extension:genderCapacityAvailable.value[x] => [None..None]
+          Extension.extension:capacityUpdateDate => [1..1]
+          Extension.extension:capacityUpdateDate.extension => [None..0]
+          Extension.extension:capacityUpdateDate.url => [None..None]
+          Extension.extension:capacityUpdateDate.value[x] => [None..None]
+          Extension.extension:capacityClosingType => [0..1]
+          Extension.extension:capacityClosingType.extension => [None..0]
+          Extension.extension:capacityClosingType.url => [None..None]
+          Extension.extension:capacityClosingType.value[x] => [None..None]
+          Extension.extension:additionalBedType => [0..1]
+          Extension.extension:additionalBedType.extension => [None..0]
+          Extension.extension:additionalBedType.url => [None..None]
+          Extension.extension:additionalBedType.value[x] => [None..None]
+          Extension.extension:crisisType => [0..1]
+          Extension.extension:crisisType.extension => [None..0]
+          Extension.extension:crisisType.url => [None..None]
+          Extension.extension:crisisType.value[x] => [None..None]
+          Extension.extension:temporaryAssignement => [1..1]
+          Extension.extension:temporaryAssignement.extension => [None..0]
+          Extension.extension:temporaryAssignement.url => [None..None]
+          Extension.extension:temporaryAssignement.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class RORMetaComment{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORMetaCreationDate{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationAccessibilityLocation{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationAccomodationFamily{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationAdditionalName{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationClosingType{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationComment{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationCreationDate{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationDropZone{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationFinancialHelpType{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationLevelRecourseORSAN{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationNbPermanentSocialHelpPlace{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationNbTemporarySocialHelpPlace{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class ROROrganizationPrice{
+
+          Extension.extension => [3..None]
+          Extension.extension:priceType => [1..1]
+          Extension.extension:priceType.extension => [None..0]
+          Extension.extension:priceType.url => [None..None]
+          Extension.extension:priceType.value[x] => [None..None]
+          Extension.extension:priceUnit => [1..1]
+          Extension.extension:priceUnit.extension => [None..0]
+          Extension.extension:priceUnit.url => [None..None]
+          Extension.extension:priceUnit.value[x] => [None..None]
+          Extension.extension:amount => [1..1]
+          Extension.extension:amount.extension => [None..0]
+          Extension.extension:amount.url => [None..None]
+          Extension.extension:amount.value[x] => [None..None]
+          Extension.extension:startDate => [0..1]
+          Extension.extension:startDate.extension => [None..0]
+          Extension.extension:startDate.url => [None..None]
+          Extension.extension:startDate.value[x] => [None..None]
+          Extension.extension:under60 => [0..1]
+          Extension.extension:under60.extension => [None..0]
+          Extension.extension:under60.url => [None..None]
+          Extension.extension:under60.value[x] => [None..None]
+          Extension.extension:deliveryIncluded => [0..*]
+          Extension.extension:deliveryIncluded.extension => [None..0]
+          Extension.extension:deliveryIncluded.url => [None..None]
+          Extension.extension:deliveryIncluded.value[x] => [None..None]
+          Extension.extension:othersDeliveryIncluded => [0..*]
+          Extension.extension:othersDeliveryIncluded.extension => [None..0]
+          Extension.extension:othersDeliveryIncluded.url => [None..None]
+          Extension.extension:othersDeliveryIncluded.value[x] => [None..None]
+          Extension.extension:residentialType => [0..1]
+          Extension.extension:residentialType.extension => [None..0]
+          Extension.extension:residentialType.url => [None..None]
+          Extension.extension:residentialType.value[x] => [None..None]
+          Extension.extension:specialPrice => [0..1]
+          Extension.extension:specialPrice.extension => [None..0]
+          Extension.extension:specialPrice.url => [None..None]
+          Extension.extension:specialPrice.value[x] => [None..None]
+          Extension.extension:welcomeType => [0..1]
+          Extension.extension:welcomeType.extension => [None..0]
+          Extension.extension:welcomeType.url => [None..None]
+          Extension.extension:welcomeType.value[x] => [None..None]
+          Extension.extension:mealDeliveryName => [0..1]
+          Extension.extension:mealDeliveryName.extension => [None..0]
+          Extension.extension:mealDeliveryName.url => [None..None]
+          Extension.extension:mealDeliveryName.value[x] => [None..None]
+          Extension.extension:dependencyLevel => [0..1]
+          Extension.extension:dependencyLevel.extension => [None..0]
+          Extension.extension:dependencyLevel.url => [None..None]
+          Extension.extension:dependencyLevel.value[x] => [None..None]
+          Extension.extension:humanHelpPriceName => [0..1]
+          Extension.extension:humanHelpPriceName.extension => [None..0]
+          Extension.extension:humanHelpPriceName.url => [None..None]
+          Extension.extension:humanHelpPriceName.value[x] => [None..None]
+          Extension.extension:managementType => [0..1]
+          Extension.extension:managementType.extension => [None..0]
+          Extension.extension:managementType.url => [None..None]
+          Extension.extension:managementType.value[x] => [None..None]
+          Extension.extension:otherAdditionalServiceName => [0..1]
+          Extension.extension:otherAdditionalServiceName.extension => [None..0]
+          Extension.extension:otherAdditionalServiceName.url => [None..None]
+          Extension.extension:otherAdditionalServiceName.value[x] => [None..None]
+          Extension.extension:additionalServiceName => [0..1]
+          Extension.extension:additionalServiceName.extension => [None..0]
+          Extension.extension:additionalServiceName.url => [None..None]
+          Extension.extension:additionalServiceName.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class ROROrganizationReopeningDate{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORPractitionerRoleUnitExerciseMode{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORTelecomCommunicationChannel{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORTelecomConfidentialityLevel{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORTelecomUsage{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class RORTerritorialDivision{
+
+          Extension.extension => [2..None]
+          Extension.extension:typeTerritorialDivision => [1..1]
+          Extension.extension:typeTerritorialDivision.extension => [None..0]
+          Extension.extension:typeTerritorialDivision.url => [None..None]
+          Extension.extension:typeTerritorialDivision.value[x] => [None..None]
+          Extension.extension:codeTerritorialDivision => [1..1]
+          Extension.extension:codeTerritorialDivision.extension => [None..0]
+          Extension.extension:codeTerritorialDivision.url => [None..None]
+          Extension.extension:codeTerritorialDivision.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+         }
+     }
+     package valueset #PaleVioletRed{
+
+        class ActTypeRORValueSet  
+
+     RORActType -[#black,dotted,thickness=2]-> ActTypeRORValueSet
+
+        class CodeRegionTerritorialDivisionRORValueSet  
+
+     RORTerritorialDivision -[#black,dotted,thickness=2]-> CodeRegionTerritorialDivisionRORValueSet
+       }
+
+package "Ressources de base" #palegreen {
+
+ class "HealthcareService" as  classccfbac0a7f2dd501f3a20274066b28a3 
+
+    classccfbac0a7f2dd501f3a20274066b28a3 --> RORHealthcareService
+
+ class "Location" as  classce5bf551379459c1c61d2a204061c455 
+
+    classce5bf551379459c1c61d2a204061c455 --> RORLocation
+
+ class "Measure" as  class0cbbe0321e0c40dfa77a159ef6bfad6b 
+
+    class0cbbe0321e0c40dfa77a159ef6bfad6b --> RORMeasure
+
+ class "MeasureReport" as  class3dfc5c74a4be59950c5247f2b94092c7 
+
+    class3dfc5c74a4be59950c5247f2b94092c7 --> RORMeasureReport
+
+ class "http://interopsante.org/fhir/StructureDefinition/FrOrganization" as  class8851530b55b5391f2e88430de6209c3c 
+
+    class8851530b55b5391f2e88430de6209c3c --> ROROrganization
+
+ class "Practitioner" as  classe1fdce734a2fd9596ad930bdb139ca06 
+
+    classe1fdce734a2fd9596ad930bdb139ca06 --> RORPractitioner
+
+ class "PractitionerRole" as  classa6482460b0b027d14fe848816788acb6 
+
+    classa6482460b0b027d14fe848816788acb6 --> RORPractitionerRole
+
+ class "Task" as  classeaeb30f9f18e0c50b178676f3eaef45f 
+
+    classeaeb30f9f18e0c50b178676f3eaef45f --> RORTask
+}
+@enduml
