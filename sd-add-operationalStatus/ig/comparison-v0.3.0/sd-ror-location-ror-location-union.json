@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "186d993e-94e8-412c-af43-1eb3faf85470-95",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/186d993e-94e8-412c-af43-1eb3faf85470-95",
+  "id" : "93765806-992a-44c6-b542-aba645c48b6a-92",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/93765806-992a-44c6-b542-aba645c48b6a-92",
   "name" : "UnionRORLocationAndRORLocation",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2024-05-03T12:32:23+00:00",
+  "date" : "2024-05-03T14:23:31+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -746,7 +746,7 @@
     },
     {
       "path" : "Location.operationalStatus",
-      "short" : "The operational status of the location (typically only for a bed/room)",
+      "short" : "left: The operational status of the location (typically only for a bed/room); right: statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement",
       "definition" : "The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance.",
       "comment" : "Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.",
       "min" : 0,
@@ -765,11 +765,11 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
-        "strength" : "preferred",
+        "strength" : "required",
         "description" : "The operational status if the location (where typically a bed/room).",
         "valueSet" : "http://terminology.hl7.org/ValueSet/v2-0116"
       },
@@ -792,6 +792,11 @@
       {
         "identity" : "w5",
         "map" : "FiveWs.status"
+      },
+      {
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "Statut",
+        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -2471,7 +2476,7 @@
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{

@@ -93,7 +93,6 @@ package IG #DDDDDD{
              Location.meta.tag => [None..None]
              Location.meta.tag:codeRegion => [0..1]
              Location.extension => [2..None]
-             Location.extension:ror-location-status => <&plus>[0..1]
              Location.extension:ror-commune-cog => <&plus>[1..1]
              Location.extension:ror-location-equipment => <&plus>[0..*]
              Location.extension:ror-location-residential-capacity => <&plus>[0..*]
@@ -107,6 +106,7 @@ package IG #DDDDDD{
              Location.identifier:idLocation.type => [1..None]
              Location.identifier:idLocation.type.coding.code => [1..None]
              Location.status => [None..None]
+             Location.operationalStatus => [None..None]
              Location.name => [None..None]
              Location.alias => [None..None]
              Location.alias:nomExterneSynchro => [0..1]
@@ -446,7 +446,6 @@ package IG #DDDDDD{
      RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeTypeOfTime
      RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeEffectiveOpeningClosingDate
      RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeNumberDaysofWeek
-     RORLocation -[#black,dashed,thickness=2]-> RORLocationStatus
      RORLocation -[#black,dashed,thickness=2]-> RORCommuneCog
      RORLocation -[#black,dashed,thickness=2]-> RORLocationEquipment
      RORLocation -[#black,dashed,thickness=2]-> RORLocationResidentialCapacity
@@ -714,12 +713,6 @@ package IG #DDDDDD{
           Extension.extension:residentialNumber.value[x] => [None..None]
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
-        } 
-        class RORLocationStatus{
-
-          Extension.extension => [None..0]
-          Extension.url => [None..None]
-          Extension.value[x] => [None..None]
         } 
         class RORLocationSupportedCapacity{
 
