@@ -154,6 +154,11 @@ Profil 0 (sauf si uniteSensible = Oui)"
 
 * alias[nomExterneSynchro] -> "nomExterneSynchro"
 
+* operationalStatus -> "Statut" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+
 * telecom -> "telecommunication" "Profil 1,
 Profil 2 (sauf si uniteSensible = Oui),
 Profil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),
@@ -217,11 +222,6 @@ Profil 2 (sauf si uniteSensible = Oui),
 Profil 3 (sauf si uniteSensible = Oui),
 Profil 0 (sauf si uniteSensible = Oui)"
 * position.latitude -> "latitude" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-
- * operationalStatus -> "Statut" "Profil 1,
 Profil 2 (sauf si uniteSensible = Oui),
 Profil 3 (sauf si uniteSensible = Oui),
 Profil 0 (sauf si uniteSensible = Oui)"
