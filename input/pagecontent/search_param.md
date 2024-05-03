@@ -1088,6 +1088,66 @@
   mso-fareast-language:FR'>JDV_J188-TypeStatutCapacite-ROR issu de la TRE-R330-TypeStatutCapacite<o:p></o:p></span></p>
   </td>
  </tr>
+<tr style='mso-yfti-irow:25'>
+<td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
+  solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
+  class=SpellE><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'></span></span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><span class=SpellE>Statut</span><span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;mso-bidi-font-family:
+  "Times New Roman";mso-fareast-language:FR'>operational</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'>-status<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><span style='mso-spacerun:yes'></span>Oui<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
+  class=SpellE><span class=GramE><span style='font-size:8.0pt;line-height:115%;
+  font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;mso-bidi-font-family:
+  "Times New Roman";mso-fareast-language:FR'>token</span></span></span><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid #8EAADB 1.0pt;
+  border-right:solid #8EAADB 1.0pt;mso-border-top-alt:solid #8EAADB .5pt;
+  mso-border-left-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'>Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
+  style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
+  mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
+  mso-fareast-language:FR'>JDV_J204-StatutLieu-ROR issu de la
+  TRE_R203-StatutLieu<o:p></o:p></span></p>
+  </td>
+ </tr>
  <tr style='mso-yfti-irow:14'>
   <td valign=top style='border:solid #8EAADB 1.0pt;border-top:none;mso-border-top-alt:
   solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;
