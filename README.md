@@ -4,6 +4,7 @@
 
 # Contexte
 
+
 ## Contexte métier du projet
 Le Répertoire de l’Offre et des Ressources en santé et accompagnement médico-social ([ROR](https://esante.gouv.fr/produits-services/repertoire-ror)) est le référentiel (au sens gisement de données) de description de l’offre de santé des établissements sanitaires, des établissements et services du médico-social et des structures de ville.
 
