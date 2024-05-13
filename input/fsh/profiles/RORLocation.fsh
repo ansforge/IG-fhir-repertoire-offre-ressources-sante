@@ -23,6 +23,13 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * type ^short = "fonctionLieu (LieuRealisationOffre) : La fonction correspond à la destination d'usage du lieu"
 * type from $JDV-J198-FonctionLieu-ROR (required)
 * managingOrganization MS
+* managingOrganization only Reference(fr-organization or ROROrganization)
+* operationalStatus MS
+* operationalStatus ^short = "statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
+* operationalStatus from $JDV-J224-StatutLieu-ROR (required)
+
+* partOf MS
+* partOf only Reference(Location or RORLocation)
 
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
@@ -94,21 +101,16 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * position.extension contains RORCoordinateReliability named ror-coordinate-reliability 0..1 MS
 * position.extension[ror-coordinate-reliability] ^short = "coordonneesFiables (CoordonneeGeographique) : Permet de signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité"
 
-* managingOrganization only Reference(fr-organization or ROROrganization)
-* partOf only Reference(Location or RORLocation)
-
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    RORLocationStatus named ror-location-status 0..1 MS and
     RORCommuneCog named ror-commune-cog 1..1 MS and
     RORLocationEquipment named ror-location-equipment 0..* MS and
     RORLocationResidentialCapacity named ror-location-residential-capacity 0..* MS and
     RORLocationSupportedCapacity named ror-location-supported-capacity 0..* MS and
     RORMetaCreationDate named ror-meta-creation-date 1..1 MS
 
-* extension[ror-location-status] ^short = "statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
 * extension[ror-commune-cog] ^short = "communeCog (LieuRealisationOffre) : Code officiel géographique (COG) de la commune dans laquelle le lieu est situé"
 * extension[ror-location-equipment] ^short = "EquipementSpecifique : Ressource matérielle discriminante pour la réalisation d'une prestation"
 * extension[ror-location-residential-capacity] ^short = "CapaciteHabitation : type d'habitation adapté à la réalisation d'une offre"
@@ -151,6 +153,11 @@ Profil 3 (sauf si uniteSensible = Oui),
 Profil 0 (sauf si uniteSensible = Oui)"
 
 * alias[nomExterneSynchro] -> "nomExterneSynchro"
+
+* operationalStatus -> "Statut" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
 
 * telecom -> "telecommunication" "Profil 1,
 Profil 2 (sauf si uniteSensible = Oui),
