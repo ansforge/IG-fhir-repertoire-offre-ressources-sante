@@ -1,4 +1,4 @@
-# Release 0.4.0-ballot-1 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 3.2 du ROR National.
+### Release 0.4.0-ballot-1 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 3.2 du ROR National.
 Cette version ballot est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'apporter de l'information aux consommateurs concernant les nouveautés en cours d'implémentation.
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/5?closed=1) :
 
