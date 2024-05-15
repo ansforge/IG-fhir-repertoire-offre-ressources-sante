@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 89, warn = 84, info = 129
+err = 89, warn = 84, info = 145
 IG Publisher Version: 1.6.7
-Generated Mon May 13 09:10:09 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-ballot-1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Wed May 15 15:13:56 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-ballot-1 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 86 / 4 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 8 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 8 / 0 / 1
@@ -98,7 +98,7 @@ Generated Mon May 13 09:10:09 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitionerrole-name : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitionerrole-unit-exercise-mode : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-questionnaire : 0 / 0 / 8
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-task : 0 / 1 / 3
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-task : 0 / 1 / 19
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-telecom-communication-channel : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-telecom-confidentiality-level : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-telecom-usage : 0 / 1 / 1
@@ -566,6 +566,22 @@ INFORMATION: StructureDefinition/ror-questionnaire: StructureDefinition.differen
 == fsh-generated/resources/StructureDefinition-ror-task.json ==
 INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[25].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[46].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[58].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[64].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[70].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[76].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[82].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[88].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[100].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.snapshot.element[106].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.differential.element[19].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.differential.element[22].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.differential.element[24].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.differential.element[29].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.differential.element[32].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.differential.element[36].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-ballot-1
+INFORMATION: StructureDefinition/ror-task: StructureDefinition.differential.element[38].pattern.ofType(CodeableConcept): Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-ballot-1
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-ror-telecom-communication-channel.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel'): The Implementation Guide contains no examples for this extension
