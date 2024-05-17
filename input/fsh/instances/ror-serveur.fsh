@@ -115,7 +115,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le statut de la ressource"
 
 * rest.resource[=].searchParam[+].name = "operational-status"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-operational-status-status"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-operational-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le statut opérationnel du lieu, fermé temporairement ou fermé définitivement."
 
