@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Recherche d'offre sur critères principaux - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.3.0</title>
+    <title>Recherche d'offre sur critères principaux - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.4.0-snapshot-1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -47,16 +47,16 @@
       <div class="container">    <!-- container -->
           <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-  <a no-external="true" id="hl7-search-lnk" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
-</div>
-<div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
-  <a no-external="true" id="hl7-logo" href="https://esante.gouv.fr/"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
-</div>
+    <a no-external="true" id="hl7-search-lnk" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+  </div>
+  <div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
+    <a no-external="true" id="hl7-logo" href="https://esante.gouv.fr/"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
+  </div>
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - trial-use
+            <span style="display:inline-block;">0.4.0-snapshot-1 - qa-preview
 
 
 
@@ -118,6 +118,15 @@
       </li>
       <li>
         <a href="specifications_techniques_10.html">Création et Mise à jour du lieu de réalisation de l'offre</a>
+      </li>
+      <li>
+        <a href="consignes_fiche_saisie_offre.html">Consignes fiche de saisie de l'offre</a>
+      </li>
+      <li>
+        <a href="saisie_offre.html">Saisie de l'offre</a>
+      </li>
+      <li>
+        <a href="miseAjour_offre.html">Mise à jour  de l'offre</a>
       </li>
       <li>
         <a href="specifications_techniques_5.html">Signalement d'anomalie</a>
@@ -209,7 +218,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.3.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.4.0-snapshot-1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Recherche d'offre sur critères principaux</h2>
   
 
@@ -327,8 +336,8 @@ Plus de précision sur la spécification FHIR :
   <li><a href="search_param.html#structuredefinition-ror-healthcareservice">StructureDefinition-ror-healthcareservice</a></li>
   <li><a href="search_param.html#structuredefinition-ror-organization">Structuredefinition-ror-organization</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxesuivante&nbsp;: <code class="language-plaintext highlighter-rouge">organization.[NOM CRITERE]</code>)</li>
   <li><a href="search_param.html#structuredefinition-ror-location">StructureDefinition-ror-location</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxesuivante&nbsp;: <code class="language-plaintext highlighter-rouge">location.[NOM CRITERE]</code>)</li>
-  <li><a name="l600">​</a><a href="search_param.html#structuredefinition-ror-practioner">StructureDefinition-ror-practioner</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]</code>)</li>
-  <li><a name="l611">​</a><a href="search_param.html#structuredefinition-ror-practionerrole">StructureDefinition-ror-practionerrole</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:[NOM CRITERE]</code>)</li>
+  <li><a name="l618">​</a><a href="search_param.html#structuredefinition-ror-practioner">StructureDefinition-ror-practioner</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]</code>)</li>
+  <li><a name="l629">​</a><a href="search_param.html#structuredefinition-ror-practionerrole">StructureDefinition-ror-practionerrole</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:[NOM CRITERE]</code>)</li>
   <li><a href="search_param.html#structuredefinition-ror-task">StructureDefinition-ror-task</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage inversé</a>. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">_has:HealthcareService:focus:[NOM CRITERE]</code>)</li>
 </ul>
 
@@ -690,6 +699,25 @@ Cette partie de la spécification est en cours de construction.
 &amp;_revinclude<span class="o">=</span>Task:focus <span class="c">#inclus les Task qui référencent le HealthcareService</span>
 </code></pre></div></div>
 
+<h4 id="scénario-13-recherche-de-loffre-dun-professionnel-draft">Scénario 13&nbsp;: Recherche de l’offre d’un professionnel <code><span style="color: #ff0000;">draft</span></code></h4>
+
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur cherche les offres d’un professionnel à partir de son identifiant fonctionnel = XXX.</p>
+
+<p><strong>Requête :</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier=XXX&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+</code></pre></div></div>
+
+<p><strong>Requête expliquée&nbsp;:</strong></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier<span class="o">=</span>XXX <span class="c">#critère de recherche sur l'identifiant fonctionnel du professionnel (chainage)</span>
+&amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par HealthcareService </span>
+&amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService</span>
+&amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par HealthcareService</span>
+&amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
+&amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
+</code></pre></div></div>
+
 
 
 
@@ -702,13 +730,7 @@ Cette partie de la spécification est en cours de construction.
   <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
   <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
     <div class="container">    <!-- container -->
@@ -737,14 +759,13 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 09:33+0000">2024-03-13</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 23, 2024 12:16+0000">2024-05-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
-                      Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html" target="_blank">Historique des versions </a>
-                  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose" target="_blank">New Issue</a>
-                
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html" target="_blank">Historique des versions </a>
+ | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose" target="_blank">New Issue</a>
 
           
         </p>
@@ -772,20 +793,8 @@ Cette partie de la spécification est en cours de construction.
   <script src="assets/js/vendor.js" type="text/javascript"> </script>
     <!-- Fin ajout ANS -->
 
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
   
-  <!-- feedback form - Google forms -->
-  <!-- v0.1, 2021-01-09 -->
-
-
-  
-    
-  
-
-
-
-  <!-- / feedback form -->
 
     <!-- Analytics Below
   ================================================== -->

@@ -70,10 +70,11 @@ package IG #DDDDDD{
              HealthcareService.characteristic:expertiseLevel.extension:ror-act-type => <&plus>[0..0]
              HealthcareService.characteristic:temporalityStopService => [0..1]
              HealthcareService.characteristic:temporalityStopService.extension:ror-act-type => <&plus>[0..0]
-             HealthcareService.availableTime => [None..1]
+             HealthcareService.availableTime => [None..None]
              HealthcareService.availableTime.extension:ror-available-time-type-of-time => <&plus>[0..1]
              HealthcareService.availableTime.extension:ror-available-time-effective-opening-closing-date => <&plus>[0..1]
              HealthcareService.availableTime.extension:ror-available-time-number-days-of-week => <&plus>[0..1]
+             HealthcareService.availableTime.daysOfWeek => [None..1]
              HealthcareService.availableTime.availableStartTime => [None..None]
              HealthcareService.availableTime.availableEndTime => [None..None]
              HealthcareService.notAvailable => [None..None]
@@ -92,7 +93,6 @@ package IG #DDDDDD{
              Location.meta.tag => [None..None]
              Location.meta.tag:codeRegion => [0..1]
              Location.extension => [2..None]
-             Location.extension:ror-location-status => <&plus>[0..1]
              Location.extension:ror-commune-cog => <&plus>[1..1]
              Location.extension:ror-location-equipment => <&plus>[0..*]
              Location.extension:ror-location-residential-capacity => <&plus>[0..*]
@@ -106,6 +106,7 @@ package IG #DDDDDD{
              Location.identifier:idLocation.type => [1..None]
              Location.identifier:idLocation.type.coding.code => [1..None]
              Location.status => [None..None]
+             Location.operationalStatus => [None..None]
              Location.name => [None..None]
              Location.alias => [None..None]
              Location.alias:nomExterneSynchro => [0..1]
@@ -324,6 +325,55 @@ package IG #DDDDDD{
              PractitionerRole.availableTime.availableEndTime => [None..None]
         } 
 
+        class RORQuestionnaire{
+
+             Questionnaire.identifier => [None..1]
+             Questionnaire.version => [None..None]
+             Questionnaire.name => [1..None]
+             Questionnaire.title => [1..None]
+             Questionnaire.derivedFrom => [None..None]
+             Questionnaire.status => [None..None]
+             Questionnaire.subjectType => [1..None]
+             Questionnaire.date => [None..None]
+             Questionnaire.publisher => [None..None]
+             Questionnaire.description => [None..None]
+             Questionnaire.useContext => [1..None]
+             Questionnaire.useContext.code => [None..None]
+             Questionnaire.useContext:catEG => [1..*]
+             Questionnaire.useContext:catEG.code => [None..None]
+             Questionnaire.useContext:catEG.value[x] => [None..None]
+             Questionnaire.useContext:catEG.value[x]:valueCodeableConcept => [0..1]
+             Questionnaire.useContext:catPS => [0..*]
+             Questionnaire.useContext:catPS.code => [None..None]
+             Questionnaire.useContext:catPS.value[x] => [None..None]
+             Questionnaire.useContext:catPS.value[x]:valueCodeableConcept => [0..1]
+             Questionnaire.useContext:catSpeOrdinal => [0..*]
+             Questionnaire.useContext:catSpeOrdinal.code => [None..None]
+             Questionnaire.useContext:catSpeOrdinal.value[x] => [None..None]
+             Questionnaire.useContext:catSpeOrdinal.value[x]:valueCodeableConcept => [0..1]
+             Questionnaire.purpose => [None..None]
+             Questionnaire.approvalDate => [None..None]
+             Questionnaire.lastReviewDate => [None..None]
+             Questionnaire.effectivePeriod => [None..None]
+             Questionnaire.code => [None..0]
+             Questionnaire.item => [None..None]
+             Questionnaire.item.linkId => [None..None]
+             Questionnaire.item.definition => [None..None]
+             Questionnaire.item.code => [None..0]
+             Questionnaire.item.prefix => [None..None]
+             Questionnaire.item.text => [None..None]
+             Questionnaire.item.type => [None..None]
+             Questionnaire.item.enableWhen => [None..None]
+             Questionnaire.item.enableBehavior => [None..None]
+             Questionnaire.item.required => [None..None]
+             Questionnaire.item.repeats => [None..None]
+             Questionnaire.item.readOnly => [None..None]
+             Questionnaire.item.answerValueSet => [None..None]
+             Questionnaire.item.answerOption => [None..None]
+             Questionnaire.item.answerOption.initialSelected => [None..None]
+             Questionnaire.item.initial => [None..None]
+        } 
+
         class RORTask{
 
              Task.identifier => [None..1]
@@ -396,7 +446,6 @@ package IG #DDDDDD{
      RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeTypeOfTime
      RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeEffectiveOpeningClosingDate
      RORHealthcareService -[#black,dashed,thickness=2]-> RORAvailableTimeNumberDaysofWeek
-     RORLocation -[#black,dashed,thickness=2]-> RORLocationStatus
      RORLocation -[#black,dashed,thickness=2]-> RORCommuneCog
      RORLocation -[#black,dashed,thickness=2]-> RORLocationEquipment
      RORLocation -[#black,dashed,thickness=2]-> RORLocationResidentialCapacity
@@ -449,25 +498,6 @@ package IG #DDDDDD{
      RORPractitionerRole -[#black,dashed,thickness=2]-> RORAvailableTimeEffectiveOpeningClosingDate
      RORPractitionerRole -[#black,dashed,thickness=2]-> RORAvailableTimeNumberDaysofWeek
 
-        class RORPractitionerRoleName{
-
-          Extension.extension => [1..None]
-          Extension.extension:exerciseTitle => [0..1]
-          Extension.extension:exerciseTitle.extension => [None..0]
-          Extension.extension:exerciseTitle.url => [None..None]
-          Extension.extension:exerciseTitle.value[x] => [None..None]
-          Extension.extension:exerciseTitle.value[x]:valueCodeableConcept => [0..1]
-          Extension.extension:exerciseLastName => [1..1]
-          Extension.extension:exerciseLastName.extension => [None..0]
-          Extension.extension:exerciseLastName.url => [None..None]
-          Extension.extension:exerciseLastName.value[x] => [None..None]
-          Extension.extension:exerciseFirstName => [0..1]
-          Extension.extension:exerciseFirstName.extension => [None..0]
-          Extension.extension:exerciseFirstName.url => [None..None]
-          Extension.extension:exerciseFirstName.value[x] => [None..None]
-          Extension.url => [None..None]
-          Extension.value[x] => [None..0]
-        } 
         class AsLieuDit{
 
           Extension.extension => [None..0]
@@ -664,12 +694,6 @@ package IG #DDDDDD{
           Extension.extension:residentialNumber.value[x] => [None..None]
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
-        } 
-        class RORLocationStatus{
-
-          Extension.extension => [None..0]
-          Extension.url => [None..None]
-          Extension.value[x] => [None..None]
         } 
         class RORLocationSupportedCapacity{
 
@@ -875,6 +899,25 @@ package IG #DDDDDD{
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
         } 
+        class RORPractitionerRoleName{
+
+          Extension.extension => [1..None]
+          Extension.extension:exerciseTitle => [0..1]
+          Extension.extension:exerciseTitle.extension => [None..0]
+          Extension.extension:exerciseTitle.url => [None..None]
+          Extension.extension:exerciseTitle.value[x] => [None..None]
+          Extension.extension:exerciseTitle.value[x]:valueCodeableConcept => [0..1]
+          Extension.extension:exerciseLastName => [1..1]
+          Extension.extension:exerciseLastName.extension => [None..0]
+          Extension.extension:exerciseLastName.url => [None..None]
+          Extension.extension:exerciseLastName.value[x] => [None..None]
+          Extension.extension:exerciseFirstName => [0..1]
+          Extension.extension:exerciseFirstName.extension => [None..0]
+          Extension.extension:exerciseFirstName.url => [None..None]
+          Extension.extension:exerciseFirstName.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
         class RORPractitionerRoleUnitExerciseMode{
 
           Extension.extension => [None..0]
@@ -920,6 +963,10 @@ package IG #DDDDDD{
 
      RORActType -[#black,dotted,thickness=2]-> ActTypeRORValueSet
 
+        class RORUsageContextTypeVS  
+
+     RORQuestionnaire -[#black,dotted,thickness=2]-> RORUsageContextTypeVS
+
         class CodeRegionTerritorialDivisionRORValueSet  
 
      RORTerritorialDivision -[#black,dotted,thickness=2]-> CodeRegionTerritorialDivisionRORValueSet
@@ -954,6 +1001,10 @@ package "Ressources de base" #palegreen {
  class "PractitionerRole" as  classa6482460b0b027d14fe848816788acb6 
 
     classa6482460b0b027d14fe848816788acb6 --> RORPractitionerRole
+
+ class "Questionnaire" as  class179d692ef9707bcf6d92ff37fd394ec8 
+
+    class179d692ef9707bcf6d92ff37fd394ec8 --> RORQuestionnaire
 
  class "Task" as  classeaeb30f9f18e0c50b178676f3eaef45f 
 

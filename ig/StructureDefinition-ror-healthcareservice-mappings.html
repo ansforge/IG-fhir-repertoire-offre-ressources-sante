@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>RORHealthcareService - Mappings - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.3.0</title>
+    <title>RORHealthcareService - Mappings - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.4.0-snapshot-1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -45,22 +45,22 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"19.38"}
-    h3,h4,h5,h6{--heading-prefix:"19.38"}</style>
+    <style type="text/css">h2{--heading-prefix:"22.39"}
+    h3,h4,h5,h6{--heading-prefix:"22.39"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-  <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
-</div>
-<div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
-  <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-</div>
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+  </div>
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.3.0 - trial-use
+            <span style="display:inline-block;">0.4.0-snapshot-1 - qa-preview
 
 
 
@@ -122,6 +122,15 @@
       </li>
       <li>
         <a href="specifications_techniques_10.html">Création et Mise à jour du lieu de réalisation de l&apos;offre</a>
+      </li>
+      <li>
+        <a href="consignes_fiche_saisie_offre.html">Consignes fiche de saisie de l&apos;offre</a>
+      </li>
+      <li>
+        <a href="saisie_offre.html">Saisie de l&apos;offre</a>
+      </li>
+      <li>
+        <a href="miseAjour_offre.html">Mise à jour  de l&apos;offre</a>
       </li>
       <li>
         <a href="specifications_techniques_5.html">Signalement d&apos;anomalie</a>
@@ -191,7 +200,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-ror-healthcareservice.profile.xml.html">next&gt;</a>
+          | <a href="StructureDefinition-ror-healthcareservice-testing.html">next&gt;</a>
 
           </span>
 
@@ -206,7 +215,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.3.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.4.0-snapshot-1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -272,14 +281,14 @@
 <a name="root"> </a>
 <h2 id="root">Resource Profile: RORHealthcareService - Mappings</h2>
 
-  <table class="colsi">
+  <table class="colsd">
     <tr>
 
       <td colspan="2">
         
-          Active
+          Draft
           
-            as of 2024-03-13
+            as of 2024-05-23
           
         
       </td>
@@ -295,7 +304,152 @@
 
 
 
-  <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+  <a name="specmetier-to-RORHealthcareService"> </a><h3>Mappings for HealthcareService du Modèle exposition ROR V3 ()</h3><table class="grid">
+ <tr><td colspan="3"><b>RORHealthcareService</b></td></tr>
+ <tr><td>HealthcareService</td><td>OffreOperationnelle</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>metadonnee.identifiant</td><td><p>Profil 1,
+Profil 2,
+Profil 3,
+Profil 0</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-territorial-division)</td><td>zoneIntervention</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>identifiantOffre</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>Pas d'équivalent</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;providedBy</td><td>EntiteJuridique, EntiteGeographique, OrganisationInterne</td><td>, , </td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>typeOffre</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>champActivite</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivity)</td><td>ActiviteOperationnelle.activiteOperationnelle</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivityFamily)</td><td>ActiviteOperationnelle.familleActiviteOperationnelle</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>LieuRealisationOffre</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>nomOffre</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>metadonnee.commentaire</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>boiteLettreMSS.adresseMSS</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>adresseTelecom</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionType)</td><td>temporaliteAccueil</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (careMode)</td><td>modePriseEnCharge</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionModality)</td><td>modaliteAccueil</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (managementType)</td><td>modeGestion</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificAct)</td><td>acteSpecifique</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (outsideOfficeAct)</td><td>acteRealiseHorsCabinet</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (takingCareSpeciality)</td><td>specialisationPriseEnCharge</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (annualOpening)</td><td>ouvertureAnnuelle</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (ressourceProfession)</td><td>professionRessource</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificCompetence)</td><td>competenceSpecifique</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (expertiseLevel)</td><td>niveauExpertise</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (temporalityStopService)</td><td>typeFermeture</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;availableTime</td><td>horaire</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableStartTime</td><td>heureDebut</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableEndTime</td><td>heureFin</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;notAvailable</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;notAvailable (closingReopeningDate)</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>dateFermeture</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>datePrevisionnelleReouverture</td><td><p>Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)</p>
+</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>RORHealthcareService</b></td></tr>
  <tr><td>HealthcareService</td><td>Entity. Role, or Act, act[classCode=ACT][moodCode=DEF]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>n/a, N/A</td> </tr>
@@ -454,48 +608,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>FiveWs.where[x]</td> </tr>
 </table>
-<a name="specmetier-to-RORHealthcareService"> </a><h3>Mappings for HealthcareService du Modèle exposition ROR V3 ()</h3><table class="grid">
- <tr><td colspan="3"><b>RORHealthcareService</b></td></tr>
- <tr><td>HealthcareService</td><td>OffreOperationnelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>metadonnee.identifiant</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-territorial-division)</td><td>zoneIntervention</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>identifiantOffre</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>Pas d'équivalent</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;providedBy</td><td>EntiteGeographique, OrganisationInterne</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>typeOffre</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>champActivite</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivity)</td><td>ActiviteOperationnelle.activiteOperationnelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivityFamily)</td><td>ActiviteOperationnelle.familleActiviteOperationnelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>LieuRealisationoffre</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>nomOffre</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>metadonnee.commentaire</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>boiteLettreMSS.adresseMSS</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value</td><td>adresseTelecom</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionType)</td><td>temporaliteAccueil</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (careMode)</td><td>modePriseEnCharge</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionModality)</td><td>modaliteAccueil</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (managementType)</td><td>modeGestion</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificAct)</td><td>acteSpecifique</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (outsideOfficeAct)</td><td>acteRealiseHorsCabinet</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (takingCareSpeciality)</td><td>specialisationPriseEnCharge</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (annualOpening)</td><td>ouvertureAnnuelle</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (ressourceProfession)</td><td>professionRessource</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificCompetence)</td><td>competenceSpecifique</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (expertiseLevel)</td><td>niveauExpertise</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (temporalityStopService)</td><td>typeFermeture</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;availableTime</td><td>horaire</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableStartTime</td><td>heureDebut</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableEndTime</td><td>heureFin</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;notAvailable</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;notAvailable (closingReopeningDate)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>dateFermeture</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>datePrevisionnelleReouverture</td> </tr>
-</table>
 
 
   <!-- insert notes if present -->
@@ -513,36 +625,9 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    try {
-      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
-    } catch(exception) {
-    }
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
-    if (!currentTabIndex)
-      currentTabIndex = '0';
-
-    $( '#tabs' ).tabs({
-      active: currentTabIndex,
-      activate: function( event, ui ) {
-        var active = $('.selector').tabs('option', 'active');
-        currentTabIndex = ui.newTab.index();
-        document.activeElement.blur();
-        try {
-          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
-        } catch(exception) {
-        }
-      }
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
@@ -561,7 +646,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="StructureDefinition-ror-healthcareservice.profile.xml.html">next&gt;</a>
+                <a href="StructureDefinition-ror-healthcareservice-testing.html">next&gt;</a>
 
               </td>
             </tr>
@@ -571,14 +656,13 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 09:33+0000">2024-03-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 23, 2024 12:16+0000">2024-05-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
-                      Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Historique des versions </a>
-                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">New Issue</a>
-                
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Historique des versions </a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">New Issue</a>
 
           </span>
         </p>
@@ -606,20 +690,8 @@
   <script src="assets/js/vendor.js" type="text/javascript"> </script>
   <!-- Fin ajout ANS -->
 
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-  
-    
-  
-
-
-
-<!-- / feedback form  -->
 
   <!-- Analytics Below
   ================================================== -->
