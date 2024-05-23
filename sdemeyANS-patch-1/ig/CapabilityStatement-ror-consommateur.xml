@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="ror-consommateur"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">ROR-Consommateur</h2><ul><li>Implementation Guide Version: 0.4.0-snapshot-1 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>application/fhir+json</code>, <code>application/fhir+ndjson</code></li><li>Supported Patch Formats: <code>application/fhir+json</code></li><li>Published on: 2024-03-12 11:35:00+0100 </li><li>Published by: ANS </li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as &quot;SHALL NOT&quot;. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><p>This CapabilityStatement instantiates the CapabilityStatement<a href="http://hl7.org/fhir/uv/bulkdata/STU2/CapabilityStatement-bulk-data.html">FHIR Bulk Data Access Implementation Guide</a></p><h3 id="shallIGs">SHALL Support the Following Implementation Guides</h3><ul><li><a href="index.html">https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror</a></li><li><a href="http://hl7.org/fhir/uv/bulkdata/STU2/ImplementationGuide-hl7.fhir.uv.bulkdata.html">http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata</a></li></ul><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>client</code></h3></div><div class="panel-body"><div><p>Recherche d'offres de soins de santé et de leurs capacités</p>
+</div><div class="lead"><em>Security</em></div><div class="row"><div class="col-lg-6">Enable CORS: no</div><div class="col-lg-6">Security services supported: <code>OAuth</code></div></div><blockquote><div><p>L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)</p>
+</div></blockquote><div class="lead"><em>Summary of System-wide Interactions</em></div></div></div><h3 id="resourcesCap1">Capabilities by Resource/Profile</h3><h4 id="resourcesSummary1">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class="text-center"><b title="GET a resource (read interaction)">R</b></th><th class="text-center"><b title="GET all set of resources of the type (search interaction)">S</b></th><th class="text-center"><b title="PUT a new resource version (update interaction)">U</b></th><th class="text-center"><b title="PATCH a new resource version (patch interaction)">P</b></th><th class="text-center"><b title="POST a new resource (create interaction)">C</b></th><th><b title="Required and recommended search parameters">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href="#Location1-1">Location</a></td><td><a href="StructureDefinition-ror-location.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location</a></td><td>y</td><td class="text-center">y</td><td class="text-center"></td><td class="text-center">y</td><td class="text-center"></td><td>_filter, _has, _id, _lastUpdated, _tag, type, identifier, near, status, operational-status, address-postalcode, address-city, capacity-status, nb-capacity, additional-bed-type, capacity-closing-type, capacity-type, capacity-update-date, crisis-type, equipment-type, equipment-feature, gender-capacity-available, limit-value, commune-cog, near-insee-code, residential-number, residential-type, temporality-capacity, temporary-assignement</td><td/><td><code>HealthcareService:location</code></td><td/></tr><tr><td><a href="#HealthcareService1-2">HealthcareService</a></td><td><a href="StructureDefinition-ror-healthcareservice.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice</a></td><td>y</td><td class="text-center">y</td><td class="text-center"></td><td class="text-center">y</td><td class="text-center"></td><td>_id, _lastUpdated, _tag, _has, _filter, identifier, name, service-category, service-type, characteristic, specialty, age-range-high, age-range-low, intervention-zone, patient-type, psychiatric-sector, notavailable-closing-reopeningdate</td><td><code>HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner</code></td><td><code>PractitionerRole:service, Task:focus</code></td><td/></tr><tr><td><a href="#Organization1-3">Organization</a></td><td><a href="StructureDefinition-ror-organization.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization</a></td><td></td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td>_id, _lastUpdated, _tag, _filter, identifier, name, type, closing-type, drop-zone, period-end, price-amount-value, price-dependency-level, price-residential-type, price-type, price-unit, price-validity-start-date, price-welcome-type, special-price</td><td/><td/><td/></tr><tr><td><a href="#Practitioner1-4">Practitioner</a></td><td><a href="StructureDefinition-ror-practitioner.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner</a></td><td>y</td><td class="text-center">y</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td>identifier, _filter</td><td/><td/><td/></tr><tr><td><a href="#PractitionerRole1-5">PractitionerRole</a></td><td><a href="StructureDefinition-ror-practitionerrole.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole</a></td><td>y</td><td class="text-center">y</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td>identifier, _filter</td><td/><td/><td/></tr><tr><td><a href="#Questionnaire1-6">Questionnaire</a></td><td><a href="StructureDefinition-ror-questionnaire.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire</a></td><td>y</td><td class="text-center">y</td><td class="text-center"></td><td class="text-center"></td><td class="text-center"></td><td>_id, _lastUpdated, identifier, status, context, name, title, description, version, date</td><td/><td/><td/></tr></tbody></table></div><hr/><div class="panel panel-default"><div class="panel-heading"><h4 id="Location1-1" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Location</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ror-location.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <code>search-type</code>, <code>read</code>, <code>patch</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_filter</td><td><code>special</code></td><td><div><p>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la <a href="https://hl7.org/fhir/search_filter.html">documentation</a> pour plus de détails</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>_has</td><td><code>special</code></td><td><div><p>Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div><p>Identifiant logique de la ressource</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date de la dernière mise a jour de la ressource</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_tag</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le code de la région de la source de la donnée</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/location.html#search">type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur sur la destination d'usage du lieu</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/location.html#search">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant logique du lieu de réalisation de l'offre. Il correspond à l'identifiant externe de synchronisation est l'identifiant défini par le porteur d'offre pour la zone d'hébergement des lits.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/location.html#search">near</a></td><td><code>special</code></td><td><div><p>Permet la recherche positionnelle (coordonnées géographique): lieux proches du lieu de réalisation de l'offre</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/location.html#search">status</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le statut de la ressource</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/location.html#search">operational-status</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le statut opérationnel du lieu, fermé temporairement ou fermé définitivement.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/location.html#search">address-postalcode</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur le code Postal ou code postal spécifique CEDEX</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/location.html#search">address-city</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur la localité ou Libellé du bureau distributeur CEDEX</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-capacity-status.html">capacity-status</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le statut de la capacité</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-nb-capacity.html">nb-capacity</a></td><td><code>number</code></td><td><div><p>Permet la recherche sur la quantité de lits ou places de la capacité exprimée</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-additional-bed-type.html">additional-bed-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type des lits disponibles</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-capacity-closing-type.html">capacity-closing-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de la fermeture de la capacité</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-capacity-type.html">capacity-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la nature de la capacité</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-capacity-update-date.html">capacity-update-date</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date à laquelle la capacité d'accueil a été mise à jour dans la source.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-crisis-type.html">crisis-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de la crise qui permet de mobiliser le nombre de lits supplémentaires décrits.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-equipment-type.html">equipment-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type d'un equipement. Les équipements spécifiques décrits sont des ressources propres de la structure ou mises à disposition dans le cadre d'une convention à la condition qu'elles soient utilisées sur site.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-equipment-feature.html">equipment-feature</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'élément qui indique la caractéristique de l'équipement pour laquelle une valeur limite est précisée.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-gender-capacity-available.html">gender-capacity-available</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le genre disponible de la capacité</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-limit-value.html">limit-value</a></td><td><code>quantity</code></td><td><div><p>Permet la recherche sur la valeur limite : correspond à la valeur extrême associée à une caractéristique de l'équipement.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-location-commune-cog.html">commune-cog</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le code officiel géographique (cog) de la commune dans laquelle le lieu est situé</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-location-near-insee-code.html">near-insee-code</a></td><td><code>special</code></td><td><div><p>Permet la recherche positionnelle (code INSEE commune) : lieux proches du lieu de réalisation de l'offre via le code COG INSEE</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-residential-number.html">residential-number</a></td><td><code>number</code></td><td><div><p>Permet la recherche sur le nombre d'habitation du même type.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-residential-type.html">residential-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type d'habitation.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-temporality-capacity.html">temporality-capacity</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la capacité des affectations temporaires. Indique le moment où cette capacité sera effective. Il est ainsi possible de décrire la situation immédiate, ou de fournir des informations prospectives de capacités, prenant notamment en compte les entrées et sorties déjà identifiés de patients.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-temporary-assignement.html">temporary-assignement</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur les affectations temporaires. L'affectation temporaire permet de réserver tout ou partie des lits d'une zone d'hébergement pour des patients selon qu'ils soient -ou non- concernés par une pathologie (Covid+, Covid-, ...) ou un évènement (catastrophe naturelle, attentat, ...).</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="HealthcareService1-2" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>HealthcareService</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ror-healthcareservice.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <code>search-type</code>, <code>read</code>, <code>patch</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant logique de la ressource</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Date de la dernière mise a jour</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_tag</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le code de la région de la source de la donnée</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>_has</td><td><code>special</code></td><td><div><p>Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>_filter</td><td><code>special</code></td><td><div><p>Fournit une syntaxe pour filtrer de manière plus complexe</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/healthcareservice.html#search">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant métier de l’offre</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/healthcareservice.html#search">name</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur la dénomination sous laquelle l'offre est identifiée</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/healthcareservice.html#search">service-category</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type d'offre</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/healthcareservice.html#search">service-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le domaine dans lequel s'inscrit l'offre</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/healthcareservice.html#search">characteristic</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur les caractéristiques de l'offre</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/healthcareservice.html#search">specialty</a></td><td><code>token</code></td><td><div><p>Ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-healthcareservice-age-range-high.html">age-range-high</a></td><td><code>quantity</code></td><td><div><p>Permet la recherche sur l'age maximum de la patientèle</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-healthcareservice-age-range-low.html">age-range-low</a></td><td><code>quantity</code></td><td><div><p>Permet la recherche sur l'age minimum de la patientèle</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-healthcareservice-intervention-zone.html">intervention-zone</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la zone d'intervention</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-healthcareservice-patient-type.html">patient-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de public pris en charge</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-healthcareservice-psychiatric-sector.html">psychiatric-sector</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur le secteur psychiatrique de l'offre opérationnelle</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-healthcareservice-notavailable-closing-reopeningdate.html">notavailable-closing-reopeningdate</a></td><td><code>date</code></td><td><div><p>Permet la recherche de date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end)</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Organization1-3" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Organization</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ror-organization.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul/></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant logique de la ressource</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date de la dernière mise a jour</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_tag</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le code de la région de la source de la donnée</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>_filter</td><td><code>special</code></td><td><div><p>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la <a href="https://hl7.org/fhir/search_filter.html">documentation</a> pour plus de détails</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/organization.html#search">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identification nationale de l'Entité Géographique définie dans le CI-SIS</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/organization.html#search">name</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur le nom de l'organisation interne</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/organization.html#search">type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-closing-type.html">closing-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-drop-zone.html">drop-zone</a></td><td><code>token</code></td><td><div><p>Indique s'il y a une zone poser sur le site concerné</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-period-end.html">period-end</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date de fermeture de l'entité géographique</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-price-amount-value.html">price-amount-value</a></td><td><code>number</code></td><td><div><p>Permet la recherche sur la valeur du tarif des prestations et services</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-price-dependency-level.html">price-dependency-level</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le niveau de dépendance de la personne âgée accueillie</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-price-residential-type.html">price-residential-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur les caractéristiques tarifaires de l'hébergement</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-price-type.html">price-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de tarif</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-price-unit.html">price-unit</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'unité de référence pour évaluer le prix des prestations et services</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-price-validity-start-date.html">price-validity-start-date</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la dernière date de début de validité du tarif indiqué</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-price-welcome-type.html">price-welcome-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le tarif applicable à un hébergement permanent ou à un hébergement temporaire</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="SearchParameter-ror-sp-organization-special-price.html">special-price</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la condition tarifaire</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Practitioner1-4" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Practitioner</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ror-practitioner.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <code>search-type</code>, <code>read</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/practitioner.html#search">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>_filter</td><td><code>special</code></td><td><div><p>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la <a href="https://hl7.org/fhir/search_filter.html">documentation</a> pour plus de détails</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="PractitionerRole1-5" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>PractitionerRole</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ror-practitionerrole.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <code>search-type</code>, <code>read</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/practitionerrole.html#search">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant de la situation opérationnelle, unique et persistant au niveau national</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>_filter</td><td><code>special</code></td><td><div><p>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la <a href="https://hl7.org/fhir/search_filter.html">documentation</a> pour plus de détails</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Questionnaire1-6" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Questionnaire</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ror-questionnaire.html">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li>Supports <code>search-type</code>, <code>read</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_id</a></td><td><code>token</code></td><td><div><p>Identifiant logique de la ressource</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date de la dernière mise a jour de la ressource</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html#search">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant de la fiche de consignes</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html#search">status</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le statut de la fiche de consignes</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html#search">context</a></td><td><code>token</code></td><td><div><p>Permet la recherche selon la catégorie de la fiche. Voir <a href="consignes_fiche_saisie_offre.html#sc%C3%A9nario-4-un-consommateur-souhaite-r%C3%A9cup%C3%A9rer-un-ensemble-de-fiches-de-saisie-sur-un-crit%C3%A8re-donn%C3%A9">scenario exemple</a></p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html#search">name</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur le nom de la fiche de consignes</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html#search">title</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur le titre de la fiche de consignes</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html#search">description</a></td><td><code>string</code></td><td><div><p>Permet la recherche dans la description de la fiche de consignes</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html#search">version</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la version de la fiche de consignes</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaire.html#search">date</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date de publication de la fiche de consignes</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/ror/CapabilityStatement/ror-consommateur"/>
+  <version value="0.4.0-snapshot-1"/>
+  <name value="RORConsommateur"/>
+  <title value="ROR-Consommateur"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-03-12T11:35:00+01:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <kind value="requirements"/>
+  <instantiates value="http://hl7.org/fhir/uv/bulkdata/CapabilityStatement/bulk-data">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="SHOULD"/>
+    </extension>
+  </instantiates>
+  <fhirVersion value="4.0.1"/>
+  <format value="application/fhir+json"/>
+  <format value="application/fhir+ndjson"/>
+  <patchFormat value="application/fhir+json"/>
+  <implementationGuide value="https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"/>
+  <implementationGuide value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"/>
+  <rest>
+    <mode value="client"/>
+    <documentation value="Recherche d'offres de soins de santé et de leurs capacités"/>
+    <security>
+      <cors value="false"/>
+      <service>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/restful-security-service"/>
+          <code value="OAuth"/>
+        </coding>
+      </service>
+      <description value="L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"/>
+    </security>
+    <resource>
+      <type value="Location"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"/>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+        <documentation value="Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."/>
+      </interaction>
+      <searchRevInclude value="HealthcareService:location"/>
+      <searchParam>
+        <name value="_filter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-filter"/>
+        <type value="special"/>
+        <documentation value="Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"/>
+      </searchParam>
+      <searchParam>
+        <name value="_has"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-has"/>
+        <type value="special"/>
+        <documentation value="Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"/>
+      </searchParam>
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Identifiant logique de la ressource"/>
+      </searchParam>
+      <searchParam>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Permet la recherche sur la date de la dernière mise a jour de la ressource"/>
+      </searchParam>
+      <searchParam>
+        <name value="_tag"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-tag"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le code de la région de la source de la donnée"/>
+      </searchParam>
+      <searchParam>
+        <name value="type"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Location-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur sur la destination d'usage du lieu"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Location-identifier"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'identifiant logique du lieu de réalisation de l'offre. Il correspond à l'identifiant externe de synchronisation est l'identifiant défini par le porteur d'offre pour la zone d'hébergement des lits."/>
+      </searchParam>
+      <searchParam>
+        <name value="near"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Location-near"/>
+        <type value="special"/>
+        <documentation value="Permet la recherche positionnelle (coordonnées géographique): lieux proches du lieu de réalisation de l'offre"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Location-status"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le statut de la ressource"/>
+      </searchParam>
+      <searchParam>
+        <name value="operational-status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Location-operational-status"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le statut opérationnel du lieu, fermé temporairement ou fermé définitivement."/>
+      </searchParam>
+      <searchParam>
+        <name value="address-postalcode"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Location-address-postalcode"/>
+        <type value="string"/>
+        <documentation value="Permet la recherche sur le code Postal ou code postal spécifique CEDEX"/>
+      </searchParam>
+      <searchParam>
+        <name value="address-city"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Location-address-city"/>
+        <type value="string"/>
+        <documentation value="Permet la recherche sur la localité ou Libellé du bureau distributeur CEDEX"/>
+      </searchParam>
+      <searchParam>
+        <name value="capacity-status"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-status"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le statut de la capacité"/>
+      </searchParam>
+      <searchParam>
+        <name value="nb-capacity"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-nb-capacity"/>
+        <type value="number"/>
+        <documentation value="Permet la recherche sur la quantité de lits ou places de la capacité exprimée"/>
+      </searchParam>
+      <searchParam>
+        <name value="additional-bed-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-additional-bed-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type des lits disponibles"/>
+      </searchParam>
+      <searchParam>
+        <name value="capacity-closing-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-closing-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type de la fermeture de la capacité"/>
+      </searchParam>
+      <searchParam>
+        <name value="capacity-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur la nature de la capacité"/>
+      </searchParam>
+      <searchParam>
+        <name value="capacity-update-date"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-update-date"/>
+        <type value="date"/>
+        <documentation value="Permet la recherche sur la date à laquelle la capacité d'accueil a été mise à jour dans la source."/>
+      </searchParam>
+      <searchParam>
+        <name value="crisis-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-crisis-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type de la crise qui permet de mobiliser le nombre de lits supplémentaires décrits."/>
+      </searchParam>
+      <searchParam>
+        <name value="equipment-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type d'un equipement. Les équipements spécifiques décrits sont des ressources propres de la structure ou mises à disposition dans le cadre d'une convention à la condition qu'elles soient utilisées sur site."/>
+      </searchParam>
+      <searchParam>
+        <name value="equipment-feature"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-feature"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'élément qui indique la caractéristique de l'équipement pour laquelle une valeur limite est précisée."/>
+      </searchParam>
+      <searchParam>
+        <name value="gender-capacity-available"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-gender-capacity-available"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le genre disponible de la capacité"/>
+      </searchParam>
+      <searchParam>
+        <name value="limit-value"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-limit-value"/>
+        <type value="quantity"/>
+        <documentation value="Permet la recherche sur la valeur limite : correspond à la valeur extrême associée à une caractéristique de l'équipement."/>
+      </searchParam>
+      <searchParam>
+        <name value="commune-cog"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-commune-cog"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le code officiel géographique (cog) de la commune dans laquelle le lieu est situé"/>
+      </searchParam>
+      <searchParam>
+        <name value="near-insee-code"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-near-insee-code"/>
+        <type value="special"/>
+        <documentation value="Permet la recherche positionnelle (code INSEE commune) : lieux proches du lieu de réalisation de l'offre via le code COG INSEE"/>
+      </searchParam>
+      <searchParam>
+        <name value="residential-number"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-residential-number"/>
+        <type value="number"/>
+        <documentation value="Permet la recherche sur le nombre d'habitation du même type."/>
+      </searchParam>
+      <searchParam>
+        <name value="residential-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-residential-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type d'habitation."/>
+      </searchParam>
+      <searchParam>
+        <name value="temporality-capacity"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-temporality-capacity"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur la capacité des affectations temporaires. Indique le moment où cette capacité sera effective. Il est ainsi possible de décrire la situation immédiate, ou de fournir des informations prospectives de capacités, prenant notamment en compte les entrées et sorties déjà identifiés de patients."/>
+      </searchParam>
+      <searchParam>
+        <name value="temporary-assignement"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-temporary-assignement"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur les affectations temporaires. L'affectation temporaire permet de réserver tout ou partie des lits d'une zone d'hébergement pour des patients selon qu'ils soient -ou non- concernés par une pathologie (Covid+, Covid-, ...) ou un évènement (catastrophe naturelle, attentat, ...)."/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="HealthcareService"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"/>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+        <documentation value="Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."/>
+      </interaction>
+      <searchInclude value="HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner"/>
+      <searchRevInclude value="PractitionerRole:service, Task:focus"/>
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'identifiant logique de la ressource"/>
+      </searchParam>
+      <searchParam>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Date de la dernière mise a jour"/>
+      </searchParam>
+      <searchParam>
+        <name value="_tag"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-tag"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le code de la région de la source de la donnée"/>
+      </searchParam>
+      <searchParam>
+        <name value="_has"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-has"/>
+        <type value="special"/>
+        <documentation value="Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)"/>
+      </searchParam>
+      <searchParam>
+        <name value="_filter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-filter"/>
+        <type value="special"/>
+        <documentation value="Fournit une syntaxe pour filtrer de manière plus complexe"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'identifiant métier de l’offre"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-name"/>
+        <type value="string"/>
+        <documentation value="Permet la recherche sur la dénomination sous laquelle l'offre est identifiée"/>
+      </searchParam>
+      <searchParam>
+        <name value="service-category"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-service-category"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type d'offre"/>
+      </searchParam>
+      <searchParam>
+        <name value="service-type"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-service-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le domaine dans lequel s'inscrit l'offre"/>
+      </searchParam>
+      <searchParam>
+        <name value="characteristic"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur les caractéristiques de l'offre"/>
+      </searchParam>
+      <searchParam>
+        <name value="specialty"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/HealthcareService-specialty"/>
+        <type value="token"/>
+        <documentation value="Ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"/>
+      </searchParam>
+      <searchParam>
+        <name value="age-range-high"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-age-range-high"/>
+        <type value="quantity"/>
+        <documentation value="Permet la recherche sur l'age maximum de la patientèle"/>
+      </searchParam>
+      <searchParam>
+        <name value="age-range-low"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-age-range-low"/>
+        <type value="quantity"/>
+        <documentation value="Permet la recherche sur l'age minimum de la patientèle"/>
+      </searchParam>
+      <searchParam>
+        <name value="intervention-zone"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-intervention-zone"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur la zone d'intervention"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-patient-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type de public pris en charge"/>
+      </searchParam>
+      <searchParam>
+        <name value="psychiatric-sector"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-psychiatric-sector"/>
+        <type value="string"/>
+        <documentation value="Permet la recherche sur le secteur psychiatrique de l'offre opérationnelle"/>
+      </searchParam>
+      <searchParam>
+        <name value="notavailable-closing-reopeningdate"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate"/>
+        <type value="date"/>
+        <documentation value="Permet la recherche de date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end)"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Organization"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"/>
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'identifiant logique de la ressource"/>
+      </searchParam>
+      <searchParam>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Permet la recherche sur la date de la dernière mise a jour"/>
+      </searchParam>
+      <searchParam>
+        <name value="_tag"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-tag"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le code de la région de la source de la donnée"/>
+      </searchParam>
+      <searchParam>
+        <name value="_filter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-filter"/>
+        <type value="special"/>
+        <documentation value="Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-identifier"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'identification nationale de l'Entité Géographique définie dans le CI-SIS"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-name"/>
+        <type value="string"/>
+        <documentation value="Permet la recherche sur le nom de l'organisation interne"/>
+      </searchParam>
+      <searchParam>
+        <name value="type"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Organization-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"/>
+      </searchParam>
+      <searchParam>
+        <name value="closing-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-closing-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS"/>
+      </searchParam>
+      <searchParam>
+        <name value="drop-zone"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-drop-zone"/>
+        <type value="token"/>
+        <documentation value="Indique s'il y a une zone poser sur le site concerné"/>
+      </searchParam>
+      <searchParam>
+        <name value="period-end"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-period-end"/>
+        <type value="date"/>
+        <documentation value="Permet la recherche sur la date de fermeture de l'entité géographique"/>
+      </searchParam>
+      <searchParam>
+        <name value="price-amount-value"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-amount-value"/>
+        <type value="number"/>
+        <documentation value="Permet la recherche sur la valeur du tarif des prestations et services"/>
+      </searchParam>
+      <searchParam>
+        <name value="price-dependency-level"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-dependency-level"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le niveau de dépendance de la personne âgée accueillie"/>
+      </searchParam>
+      <searchParam>
+        <name value="price-residential-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-residential-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur les caractéristiques tarifaires de l'hébergement"/>
+      </searchParam>
+      <searchParam>
+        <name value="price-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-type"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le type de tarif"/>
+      </searchParam>
+      <searchParam>
+        <name value="price-unit"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-unit"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'unité de référence pour évaluer le prix des prestations et services"/>
+      </searchParam>
+      <searchParam>
+        <name value="price-validity-start-date"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-validity-start-date"/>
+        <type value="date"/>
+        <documentation value="Permet la recherche sur la dernière date de début de validité du tarif indiqué"/>
+      </searchParam>
+      <searchParam>
+        <name value="price-welcome-type"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-welcome-type"/>
+        <type value="token"/>
+        <documentation value=" Permet la recherche sur le tarif applicable à un hébergement permanent ou à un hébergement temporaire"/>
+      </searchParam>
+      <searchParam>
+        <name value="special-price"/>
+        <definition value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-special-price"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur la condition tarifaire"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Practitioner"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner"/>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-identifier"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"/>
+      </searchParam>
+      <searchParam>
+        <name value="_filter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-filter"/>
+        <type value="special"/>
+        <documentation value="Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="PractitionerRole"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole"/>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'identifiant de la situation opérationnelle, unique et persistant au niveau national"/>
+      </searchParam>
+      <searchParam>
+        <name value="_filter"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-filter"/>
+        <type value="special"/>
+        <documentation value="Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Questionnaire"/>
+      <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"/>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-id"/>
+        <type value="token"/>
+        <documentation value="Identifiant logique de la ressource"/>
+      </searchParam>
+      <searchParam>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Permet la recherche sur la date de la dernière mise a jour de la ressource"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-identifier"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur l'identifiant de la fiche de consignes"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-status"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur le statut de la fiche de consignes"/>
+      </searchParam>
+      <searchParam>
+        <name value="context"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-context"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche selon la catégorie de la fiche. Voir [scenario exemple](consignes_fiche_saisie_offre.html#sc%C3%A9nario-4-un-consommateur-souhaite-r%C3%A9cup%C3%A9rer-un-ensemble-de-fiches-de-saisie-sur-un-crit%C3%A8re-donn%C3%A9)"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-name"/>
+        <type value="string"/>
+        <documentation value="Permet la recherche sur le nom de la fiche de consignes"/>
+      </searchParam>
+      <searchParam>
+        <name value="title"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-title"/>
+        <type value="string"/>
+        <documentation value="Permet la recherche sur le titre de la fiche de consignes"/>
+      </searchParam>
+      <searchParam>
+        <name value="description"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-description"/>
+        <type value="string"/>
+        <documentation value="Permet la recherche dans la description de la fiche de consignes"/>
+      </searchParam>
+      <searchParam>
+        <name value="version"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-version"/>
+        <type value="token"/>
+        <documentation value="Permet la recherche sur la version de la fiche de consignes"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Questionnaire-date"/>
+        <type value="date"/>
+        <documentation value="Permet la recherche sur la date de publication de la fiche de consignes"/>
+      </searchParam>
+    </resource>
+    <searchParam>
+      <name value="_count"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-count"/>
+      <type value="number"/>
+      <documentation value="Permet de choisir le nombre de résultat par page (Par défaut la recherche retourne 200 résultats maximum par page.)"/>
+    </searchParam>
+    <searchParam>
+      <name value="_sort"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-source"/>
+      <type value="token"/>
+      <documentation value="Permet de choisir dans quel ordre renvoyer les résultats"/>
+    </searchParam>
+    <searchParam>
+      <name value="_elements"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-elements"/>
+      <type value="string"/>
+      <documentation value="Permet au consommateur de demander les éléments à retourner de la ressource recherchée"/>
+    </searchParam>
+    <searchParam>
+      <name value="_include"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-include"/>
+      <type value="token"/>
+      <documentation value="Permet d'inclure des ressources référencées par la ressource recherchée dans le résultat"/>
+    </searchParam>
+    <searchParam>
+      <name value="_revinclude"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Resource-revinclude"/>
+      <type value="token"/>
+      <documentation value="Permet d'inclure les ressources qui font référence à la ressource recherchée dans le résultat"/>
+    </searchParam>
+    <operation>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <name value="export"/>
+      <definition value="http://hl7.org/fhir/uv/bulkdata/OperationDefinition/export"/>
+      <documentation value="Utilisation de https://hl7.org/fhir/uv/bulkdata/export.html avec ajout de la valeur _myCompleteExtract pour utiliser le query parameter includeAssociatedData."/>
+    </operation>
+  </rest>
+</CapabilityStatement>
