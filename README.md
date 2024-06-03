@@ -4,6 +4,7 @@
 
 # Contexte
 
+
 ## Contexte métier du projet
 Le Répertoire de l’Offre et des Ressources en santé et accompagnement médico-social ([ROR](https://esante.gouv.fr/produits-services/repertoire-ror)) est le référentiel (au sens gisement de données) de description de l’offre de santé des établissements sanitaires, des établissements et services du médico-social et des structures de ville.
 
@@ -24,7 +25,7 @@ Les ressources profilées pour ce cas d'usage spécifique sont :
 
 # CI/CD
 Les pipelines de ce repository permettent : 
-* Executer  Sushi
+* Executer Sushi
 * Faire les tests avec le validator_cli
 * Publier les pages :  [https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/main/ig/](https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/main/ig/) (ou https://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/[nom_de_la_branche]/ig/ pour prévisualiser l'IG d'une branche)
 

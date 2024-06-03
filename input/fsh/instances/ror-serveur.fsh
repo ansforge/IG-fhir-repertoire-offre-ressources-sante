@@ -114,6 +114,11 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le statut de la ressource"
 
+* rest.resource[=].searchParam[+].name = "operational-status"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-operational-status"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le statut opérationnel du lieu, fermé temporairement ou fermé définitivement."
+
 * rest.resource[=].searchParam[+].name = "address-postalcode"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-address-postalcode"
 * rest.resource[=].searchParam[=].type = #string
@@ -310,6 +315,12 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = Canonical(ror-sp-healthcareservice-psychiatric-sector)
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le secteur psychiatrique de l'offre opérationnelle"
+
+* rest.resource[=].searchParam[+].name = "notavailable-closing-reopeningdate"
+* rest.resource[=].searchParam[=].definition = Canonical(ror-sp-healthcareservice-notavailable-closing-reopeningdate)
+* rest.resource[=].searchParam[=].type = #date
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche de date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end)"
+
 
 // Organization
 * rest.resource[+].type = #Organization

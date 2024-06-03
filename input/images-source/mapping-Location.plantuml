@@ -79,14 +79,13 @@ map "**LieuRealisationOffre : Location**" as L #back:LavenderBlush;header:Violet
     metadonnee => meta 
     metadonnee.identifiant => id
     metadonnee.dateCreation => <&plus> RORMetaCreationDate
-    => status
+    statut => operationalStatus
     nom => name
     description => description
     fonctionLieu => type
     idExterneSynchro => <&layers> identifier[idExterneSynchro]
     identifiant => <&layers> identifier[idLocation]
     nomExterneSynchro => alias[nomExterneSynchro]
-    statut => <&plus> RORLocationStatus
     communeCog => <&plus> RORCommuneCog
     CapaciteAccueilOperationnelle => <&plus> RORLocationSupportedCapacity 
     CapacitePriseCharge => <&plus> RORLocationSupportedCapacity

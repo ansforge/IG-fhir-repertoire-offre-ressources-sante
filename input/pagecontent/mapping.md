@@ -8,7 +8,7 @@ A noter que Task, Measure et MeasureReport ne font pas partie du mapping, car ce
 
 <div>{%include vue-fonctionnelle-fhir.svg%}</div>
 
-Le fichier définissant le mapping FHIR pour le modèle d'exposition 3.0 du ROR est consultable et téléchargeable [ici](mappingFHIR_ROR_ME3_2024_01_10.xlsx)
+Le fichier définissant le mapping FHIR pour le modèle d'exposition 3.0 du ROR est consultable et téléchargeable [ici](mappingFHIR_ROR_ME3_2024_03_05.xlsx)
 
 
 ### Mapping HealthcareService

@@ -43,20 +43,23 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[finess] 0..1 MS
 * identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
 * identifier[finess].type 1..1 MS
-//* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
-* identifier[finess].system = "http://finess.esante.gouv.fr"
+
+* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
+* identifier[finess].system = "https://finess.esante.gouv.fr"
 
 * identifier[sirene] 0..1 MS
 * identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
 * identifier[sirene].type 1..1 MS
-//* identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[sirene].system = "http://sirene.fr"
+
+* identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
+* identifier[sirene].system = "https://sirene.fr"
 
 * identifier[rppsRang] 0..1 MS
 * identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[rppsRang].type 1..1 MS
+
 //* identifier[rppsRang].type = $TRE-G07-TypeIdentifiantStructure#4
-//* identifier[rppsRang].system = "http://rppsrang.esante.gouv.fr"
+//* identifier[rppsRang].system = "https://rppsrang.esante.gouv.fr"
 
 * identifier[adeliRang] 0..1 MS
 * identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
@@ -75,7 +78,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1 MS
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
-* identifier[numSIRET].system = "http://sirene.fr"
+* identifier[numSIRET].system = "https://sirene.fr"
 * identifier[numSIRET].system ^short = "https://mos.esante.gouv.fr/6.html#_4d544200-4d26-4cc5-8294-c862458f60d8"
 
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
@@ -84,7 +87,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[identifierOI].system = "https://oi.esante.gouv.fr"
 
 
-// Slice déjà définie dans FrOrganization
 * type MS
 * type contains
     //statutJuridiqueINSEE 0..1 MS and
@@ -209,9 +211,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-accessibility-location] ^short = "accessibiliteLieu (EG) : Précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public"
 * extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
-* extension[ror-organization-reopening-date] ^short = "datePrevisionnelleReouverture (OI)"
+* extension[ror-organization-reopening-date] ^short = "datePrevisionnelleReouverture (OI) : Date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
 * extension[ror-organization-creation-date] ^short = "dateCreation (EJ) : Date de création de l'entité juridique"
-* extension[ror-organization-closing-type] ^short = "typeFermeture (EJ + EG + OI) : Date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
+* extension[ror-organization-closing-type] ^short = "typeFermeture (EJ + EG + OI) : Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture."
 * extension[organization-period] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
