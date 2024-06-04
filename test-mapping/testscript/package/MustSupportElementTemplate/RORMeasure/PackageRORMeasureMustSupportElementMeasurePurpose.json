@@ -1,0 +1,70 @@
+{
+  "id": "c1c07f8090dab5ddae8887cd3c70e4cd4f3c4e01f407423a56fe47895b563512",
+  "url": "https://github.com/fhir-crucible/testscript-generator/c1c07f8090dab5ddae8887cd3c70e4cd4f3c4e01f407423a56fe47895b563512",
+  "version": "0.0",
+  "name": "PackageRORMeasureMustSupportElementMeasurePurpose",
+  "title": "IG: package; Profile: RORMeasure; Case: Must Support Element; Element: Measure.purpose",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-06-04T14:02:04+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileRORMeasure",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-measure"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdRORMeasure",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile RORMeasure.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the RORMeasure profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Measure",
+            "label": "Read_Measure_Instance",
+            "description": "Read Measure Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdRORMeasure}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Measure_Returned",
+            "description": "Assert Measure Returned",
+            "resource": "Measure",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_RORMeasure_Profile",
+            "description": "Assert returned instance conforms to the RORMeasure Profile",
+            "validateProfileId": "targetProfileRORMeasure",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

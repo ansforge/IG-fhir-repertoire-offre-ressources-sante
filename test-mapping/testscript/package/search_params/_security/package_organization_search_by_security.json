@@ -1,0 +1,80 @@
+{
+  "id": "Package-Organization-Search_by-Security",
+  "url": "https://github.com/fhir-crucible/testscript-generator",
+  "version": "0.0",
+  "name": "Package_Organization_Search_by_Security",
+  "title": "package organization search_by security",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-06-04T14:02:04+00:00",
+  "publisher": "The MITRE Corporation",
+  "fixture": [
+    {
+      "id": "example_organization",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "fixtures/example_organization.json"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "name": "i3a82OgQDhDtHoYc",
+      "expression": "Organization.meta.security",
+      "sourceId": "lsj3I7ax77Z9eGcc"
+    }
+  ],
+  "setup": {
+    "action": [
+      {
+        "operation": {
+          "type": {
+            "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+            "code": "create"
+          },
+          "label": "Operation_1",
+          "encodeRequestUrl": false,
+          "responseId": "lsj3I7ax77Z9eGcc",
+          "sourceId": "example_organization"
+        }
+      }
+    ]
+  },
+  "test": [
+    {
+      "name": "Test_1",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "search"
+            },
+            "resource": "Organization",
+            "label": "Operation_2",
+            "encodeRequestUrl": false,
+            "params": "?_security=${i3a82OgQDhDtHoYc}"
+          }
+        }
+      ]
+    }
+  ],
+  "teardown": {
+    "action": [
+      {
+        "operation": {
+          "type": {
+            "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+            "code": "delete"
+          },
+          "resource": "Organization",
+          "label": "Operation_3",
+          "encodeRequestUrl": false,
+          "params": "/${i3a82OgQDhDtHoYc}"
+        }
+      }
+    ]
+  },
+  "resourceType": "TestScript"
+}

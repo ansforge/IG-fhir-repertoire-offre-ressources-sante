@@ -1,0 +1,70 @@
+{
+  "id": "5b471bff303b56c29df6eebcf377e81fb3bb262ddb9b4bebc988bb293487664c",
+  "url": "https://github.com/fhir-crucible/testscript-generator/5b471bff303b56c29df6eebcf377e81fb3bb262ddb9b4bebc988bb293487664c",
+  "version": "0.0",
+  "name": "PackageRORLocationMustSupportElementLocationExtensionRorLocationSupportedCapacity",
+  "title": "IG: package; Profile: RORLocation; Case: Must Support Element; Element: Location.extension:ror-location-supported-capacity",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-06-04T14:02:04+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileRORLocation",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdRORLocation",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile RORLocation.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the RORLocation profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Location",
+            "label": "Read_Location_Instance",
+            "description": "Read Location Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdRORLocation}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Location_Returned",
+            "description": "Assert Location Returned",
+            "resource": "Location",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_RORLocation_Profile",
+            "description": "Assert returned instance conforms to the RORLocation Profile",
+            "validateProfileId": "targetProfileRORLocation",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

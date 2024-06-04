@@ -1,0 +1,70 @@
+{
+  "id": "c15892bde34aad6edb08a659ab0b2fd903512172c5be21e3f5f85c569a35c6b6",
+  "url": "https://github.com/fhir-crucible/testscript-generator/c15892bde34aad6edb08a659ab0b2fd903512172c5be21e3f5f85c569a35c6b6",
+  "version": "0.0",
+  "name": "PackageRORTaskMustSupportElementTaskLastModified",
+  "title": "IG: package; Profile: RORTask; Case: Must Support Element; Element: Task.lastModified",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-06-04T14:02:05+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileRORTask",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdRORTask",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile RORTask.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the RORTask profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Task",
+            "label": "Read_Task_Instance",
+            "description": "Read Task Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdRORTask}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Task_Returned",
+            "description": "Assert Task Returned",
+            "resource": "Task",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_RORTask_Profile",
+            "description": "Assert returned instance conforms to the RORTask Profile",
+            "validateProfileId": "targetProfileRORTask",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

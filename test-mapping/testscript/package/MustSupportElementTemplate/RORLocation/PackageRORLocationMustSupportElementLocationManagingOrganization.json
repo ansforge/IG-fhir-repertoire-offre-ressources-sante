@@ -1,0 +1,104 @@
+{
+  "id": "acf331e3d903673bdd229b2d92cc027eee2070919b5d9fe8bf4f56183a8282ca",
+  "url": "https://github.com/fhir-crucible/testscript-generator/acf331e3d903673bdd229b2d92cc027eee2070919b5d9fe8bf4f56183a8282ca",
+  "version": "0.0",
+  "name": "PackageRORLocationMustSupportElementLocationManagingOrganization",
+  "title": "IG: package; Profile: RORLocation; Case: Must Support Element; Element: Location.managingOrganization",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-06-04T14:02:04+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileRORLocation",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdRORLocation",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile RORLocation.",
+      "hint": "[resource.id]"
+    },
+    {
+      "name": "referencedInstanceRef",
+      "expression": "Location.managingOrganization.reference",
+      "sourceId": "targetInstance"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the RORLocation profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Location",
+            "label": "Read_Location_Instance",
+            "description": "Read Location Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdRORLocation}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Location_Returned",
+            "description": "Assert Location Returned",
+            "resource": "Location",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_RORLocation_Profile",
+            "description": "Assert returned instance conforms to the RORLocation Profile",
+            "validateProfileId": "targetProfileRORLocation",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "resolved_path_contains_reference_element",
+            "description": "resolved path contains reference element",
+            "expression": "Location.managingOrganization.reference.hasValue()",
+            "warningOnly": false
+          }
+        },
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "label": "Read_referenced_instance",
+            "description": "Read referenced instance",
+            "encodeRequestUrl": false,
+            "responseId": "referencedInstance",
+            "url": "/${referencedInstanceRef}"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Reference_Read_Response_OK",
+            "description": "Assert Reference Read Response OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}

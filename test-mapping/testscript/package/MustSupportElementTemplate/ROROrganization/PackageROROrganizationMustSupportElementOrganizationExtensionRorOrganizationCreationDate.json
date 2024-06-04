@@ -1,0 +1,70 @@
+{
+  "id": "aa42b5f8c50280ee3e11d786aca0ac07c8b169f5845e27531be66f732338a1aa",
+  "url": "https://github.com/fhir-crucible/testscript-generator/aa42b5f8c50280ee3e11d786aca0ac07c8b169f5845e27531be66f732338a1aa",
+  "version": "0.0",
+  "name": "PackageROROrganizationMustSupportElementOrganizationExtensionRorOrganizationCreationDate",
+  "title": "IG: package; Profile: ROROrganization; Case: Must Support Element; Element: Organization.extension:ror-organization-creation-date",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-06-04T14:02:04+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileROROrganization",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdROROrganization",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile ROROrganization.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the ROROrganization profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Organization",
+            "label": "Read_Organization_Instance",
+            "description": "Read Organization Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdROROrganization}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Organization_Returned",
+            "description": "Assert Organization Returned",
+            "resource": "Organization",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_ROROrganization_Profile",
+            "description": "Assert returned instance conforms to the ROROrganization Profile",
+            "validateProfileId": "targetProfileROROrganization",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}
