@@ -43,23 +43,20 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[finess] 0..1 MS
 * identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
 * identifier[finess].type 1..1 MS
-
-* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
-* identifier[finess].system = "https://finess.esante.gouv.fr"
+//* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
+* identifier[finess].system = "http://finess.esante.gouv.fr"
 
 * identifier[sirene] 0..1 MS
 * identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
 * identifier[sirene].type 1..1 MS
-
-* identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[sirene].system = "https://sirene.fr"
+//* identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
+* identifier[sirene].system = "http://sirene.fr"
 
 * identifier[rppsRang] 0..1 MS
 * identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[rppsRang].type 1..1 MS
-
 //* identifier[rppsRang].type = $TRE-G07-TypeIdentifiantStructure#4
-//* identifier[rppsRang].system = "https://rppsrang.esante.gouv.fr"
+//* identifier[rppsRang].system = "http://rppsrang.esante.gouv.fr"
 
 * identifier[adeliRang] 0..1 MS
 * identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
@@ -78,14 +75,14 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1 MS
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
-* identifier[numSIRET].system = "https://sirene.fr"
+* identifier[numSIRET].system = "http://sirene.fr"
 * identifier[numSIRET].system ^short = "https://mos.esante.gouv.fr/6.html#_4d544200-4d26-4cc5-8294-c862458f60d8"
 
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
 * identifier[identifierOI].type 1..1 MS
 * identifier[identifierOI].type = $TRE-R345-TypeIdentifiantAutre#42
 * identifier[identifierOI].system = "https://oi.esante.gouv.fr"
-
+// Slice déjà définie dans FrOrganization
 
 * type MS
 * type contains
