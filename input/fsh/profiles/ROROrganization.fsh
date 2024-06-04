@@ -38,19 +38,19 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[idNatSt] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
 * identifier[idNatSt].type 1..1 MS
 //* identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 
-* identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
+//* identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
 
 * identifier[finess] 0..1 MS
 * identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
 * identifier[finess].type 1..1 MS
 //* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
-* identifier[finess].system = "http://finess.esante.gouv.fr"
+// * identifier[finess].system = "http://finess.esante.gouv.fr"
 
 * identifier[sirene] 0..1 MS
 * identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
 * identifier[sirene].type 1..1 MS
 //* identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[sirene].system = "http://sirene.fr"
+//* identifier[sirene].system = "http://sirene.fr"
 
 * identifier[rppsRang] 0..1 MS
 * identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
@@ -75,7 +75,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
 * identifier[numSIRET].type 1..1 MS
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
-* identifier[numSIRET].system = "http://sirene.fr"
+* identifier[numSIRET].system = "https://sirene.fr"
 * identifier[numSIRET].system ^short = "https://mos.esante.gouv.fr/6.html#_4d544200-4d26-4cc5-8294-c862458f60d8"
 
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
