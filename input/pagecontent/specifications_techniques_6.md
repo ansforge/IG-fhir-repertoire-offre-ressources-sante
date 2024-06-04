@@ -146,8 +146,8 @@ Body :
                         "coding": [
                             {
                                 "system": "https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie",
-                                "code": "08",
-                                "display": "Corrigé"
+                                "code": "03",
+                                "display": "Annulé"
                             }
                         ]
                     }
