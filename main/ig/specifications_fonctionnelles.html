@@ -243,6 +243,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#recherche-doffre-sur-la-base-dinformations-tarifaires" id="markdown-toc-recherche-doffre-sur-la-base-dinformations-tarifaires">Recherche d’offre sur la base d’informations tarifaires</a></li>
   <li><a href="#recherche-doffre-via-une-technique-full-text" id="markdown-toc-recherche-doffre-via-une-technique-full-text">Recherche d’offre via une technique «&nbsp;Full text&nbsp;»</a></li>
   <li><a href="#création-et-mise-à-jour-du-lieu-de-réalisation-de-loffre" id="markdown-toc-création-et-mise-à-jour-du-lieu-de-réalisation-de-loffre">Création et Mise à jour du lieu de réalisation de l’offre</a></li>
+  <li><a href="#consignes-fiche-de-saisie-de-loffre" id="markdown-toc-consignes-fiche-de-saisie-de-loffre">Consignes fiche de saisie de l’offre</a></li>
   <li><a href="#saisie-de-loffre" id="markdown-toc-saisie-de-loffre">Saisie de l’offre</a></li>
   <li><a href="#mise-à-jour-de-loffre" id="markdown-toc-mise-à-jour-de-loffre">Mise à jour de l’offre</a></li>
   <li><a href="#signalement-danomalie" id="markdown-toc-signalement-danomalie">Signalement d’anomalie</a></li>
@@ -741,7 +742,7 @@ V3.0)</b>
     </tr>
 </table>
 
-<p><a name="l1633">​</a>L’établissement renseigne l’identifiant technique du lieu de réalisation de l’offre à mettre à jour et les informations à modifier (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location.html">voir description du lieu de réalisation de l’offre</a>).</p>
+<p><a name="l1637">​</a>L’établissement renseigne l’identifiant technique du lieu de réalisation de l’offre à mettre à jour et les informations à modifier (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location.html">voir description du lieu de réalisation de l’offre</a>).</p>
 
 <p>Le ROR National répond à l’établissement, au moins, l’identifiant technique, les métadonnées et l’identifiant fonctionnel du lieu de réalisation de l’offre mis à jour.</p>
 
@@ -797,6 +798,70 @@ V3.0)</b>
 
 <p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_10.html">ici</a></strong></p>
 
+<h3 id="consignes-fiche-de-saisie-de-loffre">Consignes fiche de saisie de l’offre</h3>
+
+<h4 id="description-du-cas-dusage-création-des-consignes-de-fiche-de-saisie-de-loffre">Description du cas d’usage&nbsp;: création des consignes de fiche de saisie de l’offre</h4>
+
+<p>Un serveur souhaite créer les consignes de fiche de saisie de l’offre.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 316 270" zoomAndPan="magnify" preserveAspectRatio="none" width="316px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:316px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="34" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="34"></line><line y1="81.2969" x1="267" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="267"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="53" y="77.9951" font-family="sans-serif" fill="#000000">Serveur</text><ellipse cx="34.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M34.5,21.5 L34.5,48.5 M21.5,29.5 L47.5,29.5 M34.5,48.5 L21.5,63.5 M34.5,48.5 L47.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="53" y="201.8232" font-family="sans-serif" fill="#000000">Serveur</text><ellipse cx="34.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M34.5,221.625 L34.5,248.625 M21.5,229.625 L47.5,229.625 M34.5,248.625 L21.5,263.625 M34.5,248.625 L47.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="220" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="267.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M267.5,21.5 L267.5,48.5 M254.5,29.5 L280.5,29.5 M267.5,48.5 L254.5,63.5 M267.5,48.5 L280.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="220" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="267.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M267.5,221.625 L267.5,248.625 M254.5,229.625 L280.5,229.625 M267.5,248.625 L254.5,263.625 M267.5,248.625 L280.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="255.5,123.5625,265.5,127.5625,255.5,131.5625,259.5,127.5625"></polygon><line y1="127.5625" x1="34.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="261.5"></line><text lengthAdjust="spacing" x="41.5" font-size="13" textLength="205" y="107.3638" font-family="sans-serif" fill="#000000">Creation_consignes_fiche_saisie</text><text lengthAdjust="spacing" x="45.5" font-size="13" textLength="141" y="122.4966" font-family="sans-serif" fill="#000000">(données de création)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="45.5,167.8281,35.5,171.8281,45.5,175.8281,41.5,171.8281"></polygon><line y1="171.8281" x1="39.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="266.5"></line><text lengthAdjust="spacing" x="51.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="55.5" font-size="13" textLength="200" y="166.7622" font-family="sans-serif" fill="#000000">(contenu + id + métadonnées)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Création des consignes fiche de saisie de l'offre (modèle expo
+V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="description-du-cas-dusage-récupération-des-fiches-de-saisie-de-loffre">Description du cas d’usage&nbsp;: récupération des fiches de saisie de l’offre</h4>
+
+<p>Un consommateur souhaite rechercher et récupérer les consignes de fiche de saisie de l’offre.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 394 270" zoomAndPan="magnify" preserveAspectRatio="none" width="394px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:394px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="345" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="345"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="298" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="345.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M345.5,21.5 L345.5,48.5 M332.5,29.5 L358.5,29.5 M345.5,48.5 L332.5,63.5 M345.5,48.5 L358.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="298" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="345.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M345.5,221.625 L345.5,248.625 M332.5,229.625 L358.5,229.625 M345.5,248.625 L332.5,263.625 M345.5,248.625 L358.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="333.5,123.5625,343.5,127.5625,333.5,131.5625,337.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="339.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="218" y="107.3638" font-family="sans-serif" fill="#000000">Recherche_consignes_fiche_saisie</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="256" y="122.4966" font-family="sans-serif" fill="#000000">(Recherche consignes fiche(s) de saisie)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="344.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="188" y="166.7622" font-family="sans-serif" fill="#000000">(Fiche(s) consignes de saisie)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Recherche fiche de saisie de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios-7">Scénarios</h4>
+
+<ul>
+  <li>[spécifique serveur] Scénario 1 : Création d’une fiche de consignes de saisie
+    <ul>
+      <li>Un consommateur souhaite créer une nouvelle fiche de consignes de saisie pour un cabinet de ville de médecine générale.</li>
+    </ul>
+  </li>
+  <li>Scénario 2&nbsp;: Un consommateur souhaite récupérer l’ensemble des fiches
+    <ul>
+      <li>Un consommateur souhaite récupérer l’ensemble des fiches.</li>
+    </ul>
+  </li>
+  <li>Scénario 3 : Un consommateur souhaite récupérer une fiche
+    <ul>
+      <li>Un consommateur souhaite récupérer une fiche.</li>
+    </ul>
+  </li>
+  <li>Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
+    <ul>
+      <li>Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ces cas d’usage sont accessibles <a href="consignes_fiche_saisie_offre.html">ici</a></strong></p>
+
 <h3 id="saisie-de-loffre">Saisie de l’offre</h3>
 
 <h4 id="description-du-cas-dusage-saisie-de-loffre">Description du cas d’usage&nbsp;: Saisie de l’offre</h4>
@@ -820,7 +885,7 @@ V3.0)</b>
 
 <p>Le ROR National répond à l’établissement toutes les informations saisie, l’identifiant technique et les métadonnées.</p>
 
-<h4 id="scénarios-7">Scénarios</h4>
+<h4 id="scénarios-8">Scénarios</h4>
 
 <ul>
   <li>[spécifique serveur] Scénario 1&nbsp;: Création de l’entité juridique d’un établissement
@@ -900,7 +965,7 @@ V3.0)</b>
 
 <p>Le ROR National répond à l’établissement, au moins, l’identifiant technique, les métadonnées et l’identifiant fonctionnel de l’offre mise à jour.</p>
 
-<h4 id="scénarios-8">Scénarios</h4>
+<h4 id="scénarios-9">Scénarios</h4>
 
 <ul>
   <li>[spécifique serveur] Scénario 1&nbsp;: Modification d’une entité juridique
@@ -984,7 +1049,7 @@ Le ROR National répond au consommateur l’identifiant technique, les métadonn
     </tr>
 </table>
 
-<h4 id="scénarios-9">Scénarios</h4>
+<h4 id="scénarios-10">Scénarios</h4>
 
 <ul>
   <li>Scenario 1 : Signalement d’une anomalie
@@ -1024,7 +1089,7 @@ Le ROR National retourne au service numérique l’identifiant technique, les m�
     </tr>
 </table>
 
-<h4 id="scénarios-10">Scénarios</h4>
+<h4 id="scénarios-11">Scénarios</h4>
 
 <ul>
   <li>Scenario 1 : Mise à jour du statut d’une anomalie
@@ -1063,7 +1128,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
     </tr>
 </table>
 
-<h4 id="scénarios-11">Scénarios</h4>
+<h4 id="scénarios-12">Scénarios</h4>
 
 <ul>
   <li>Scenario 1 : Consultation du statut d’une anomalie
@@ -1113,7 +1178,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 
 <p>Le ROR National répond au consommateur les indicateurs correspondants aux critères de recherche.</p>
 
-<h4 id="scénarios-12">Scénarios</h4>
+<h4 id="scénarios-13">Scénarios</h4>
 
 <ul>
   <li>Scénario 1&nbsp;: Intégration d’un indicateur dans un système externe
@@ -1170,7 +1235,7 @@ Le ROR National répond au consommateur la ou les anomalies correspondantes aux 
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 23, 2024 14:57+0000">2024-05-23</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 2, 2024 15:46+0000">2024-07-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
