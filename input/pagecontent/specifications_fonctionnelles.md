@@ -409,6 +409,62 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
+### Consignes fiche de saisie de l'offre
+
+#### Description du cas d'usage : création des consignes de fiche de saisie de l'offre
+
+Un serveur souhaite créer les consignes de fiche de saisie de l'offre.
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include creation_consignes_fiche-saisie.svg%}</div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Création des consignes fiche de saisie de l'offre (modèle expo
+V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+
+#### Description du cas d'usage : récupération des fiches de saisie de l'offre
+
+Un consommateur souhaite rechercher et récupérer les consignes de fiche de saisie de l'offre.
+
+<table align="center">
+    <tr>
+        <td align ="center">
+            <div style="text-inlin:center;">{%include recherche_consignes_fiche_saisie.svg%}</div>
+        </td>    
+    </tr>
+    <tr>
+        <td align ="center">
+            <b>Recherche fiche de saisie de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+
+#### Scénarios
+
+-   [spécifique serveur] Scénario 1 : Création d’une fiche de consignes de saisie
+    -   Un consommateur souhaite créer une nouvelle fiche de consignes de saisie pour un cabinet de ville de médecine générale.
+
+-   Scénario 2 : Un consommateur souhaite récupérer l’ensemble des fiches
+    -   Un consommateur souhaite récupérer l’ensemble des fiches.
+
+-   Scénario 3 : Un consommateur souhaite récupérer une fiche
+    -   Un consommateur souhaite récupérer une fiche.
+
+-   Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
+    -   Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.
+  
+
+**Les spécifications techniques pour répondre à ces cas d'usage sont accessibles [ici](consignes_fiche_saisie_offre.html)**
+
 ### Saisie de l'offre
 
 #### Description du cas d'usage : Saisie de l'offre
