@@ -148,12 +148,6 @@ POST [BASE]/Questionnaire
 {
   {
   "resourceType": "Questionnaire",
-  "id": "testror",
-  "meta": {
-    "profile": [
-      "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
-    ]
-  },
   "version": "0.1",
   "name": "FDS-109",
   "title": "Consignes fiche de saisie Cabinet de ville de médecine générale",
