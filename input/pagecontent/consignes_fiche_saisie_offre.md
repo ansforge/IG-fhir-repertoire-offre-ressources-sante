@@ -59,7 +59,7 @@
 
 <blockquote class="stu-note">
 <p>
-A noter que le PUT (update) n'est pas disponible dans la version 3.2 du ROR National. Son implémentation est programmée pour al version 3.3.
+A noter que le PUT (update) n'est pas disponible dans la version 3.2 du ROR National. Son implémentation est programmée pour la version 3.3.
 </p>
 </blockquote>
 
