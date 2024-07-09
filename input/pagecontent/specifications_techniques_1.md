@@ -75,7 +75,7 @@ Si la recherche échoue, le serveur doit répondre :
 
 -   Un header avec un un code erreur HTTP 4XX ou 5XX
 
--   Un body contenant une ressource OperationOutcome[^3] qui donne les
+-   Un body contenant une ressource [OperationOutcome](http://hl7.org/fhir/R4/operationoutcome.html) qui donne les
     détails sur la raison de l'échec
 
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
@@ -164,7 +164,7 @@ GET [BASE]/Location?identifier=52/192675 #critère de recherche sur l’identifi
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
-#### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 3 : Données capacitaires sur plusieurs lieux de prise en charge identifiés
 
 **Description du scénario :** Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).
 
@@ -209,7 +209,7 @@ GET [BASE]/Location?_lastUpdated=ge2023-08-02 #critère de recherche sur la date
 &_revinclude=HealthcareService:location #inclus les HealthcareService qui référencent les Location
 ```
 
-#### Scénario 5 : Données capacitaires d'une offre opérationnelle <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 5 : Données capacitaires d'une offre opérationnelle
 
 **Description du scénario :** Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.
 
