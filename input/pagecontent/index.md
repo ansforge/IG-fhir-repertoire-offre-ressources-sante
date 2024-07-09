@@ -430,44 +430,4 @@ La liste ci-dessous expose la liste des profils génériques profilés.
   minor-latin"><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:6;mso-yfti-lastrow:yes;height:44.2pt;mso-height-rule:
-  exactly">
-  <td width="34%" style="width:34.72%;border:solid #5B9BD5 1.0pt;border-top:
-  none;mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-alt:solid #5B9BD5 .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;mso-height-rule:exactly">
-  <p class="TableParagraph" style="margin-top:6.0pt;margin-right:5.1pt;
-  margin-bottom:6.0pt;margin-left:5.1pt;mso-element:frame;mso-element-frame-hspace:
-  7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:paragraph;
-  mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;mso-height-rule:
-  exactly"><a name="Ref_05"><span style="font-size:10.0pt;mso-ansi-language:
-  FR">[Ref_06] </span></a><span style="font-size:10.0pt;mso-bidi-font-size:
-  11.0pt;color:#0070C0;mso-ansi-language:FR">Guide d'implémentation Sécurisation de la couche transport API REST</span><span style="font-size:10.0pt;mso-ansi-language:FR"><o:p></o:p></span></p>
-  </td>
-  <td width="9%" style="width:9.72%;border-top:none;border-left:none;
-  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
-  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
-  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
-  mso-height-rule:exactly">
-  <p class="TableParagraph" align="center" style="margin-top:6.0pt;margin-right:
-  0cm;margin-bottom:6.0pt;margin-left:0cm;text-align:center;mso-element:frame;
-  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
-  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
-  mso-height-rule:exactly"><span style="font-size:10.0pt;mso-ascii-font-family:
-  Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Arial;
-  mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
-  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">1.2.0<o:p></o:p></span></p>
-  </td>
-  <td width="55%" style="width:55.56%;border-top:none;border-left:none;
-  border-bottom:solid #5B9BD5 1.0pt;border-right:solid #5B9BD5 1.0pt;
-  mso-border-top-alt:solid #5B9BD5 .5pt;mso-border-left-alt:solid #5B9BD5 .5pt;
-  mso-border-alt:solid #5B9BD5 .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:44.2pt;
-  mso-height-rule:exactly">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-element:frame;
-  mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
-  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:3.65pt;
-  mso-height-rule:exactly"><a href="https://interop.esante.gouv.fr/ig/securisation-transport/"><span style="font-size:9.0pt;line-height:115%;font-family:&quot;Segoe UI&quot;,sans-serif">https://interop.esante.gouv.fr/ig/securisation-transport/</span></a><span class="cf01"><span style="font-size:9.0pt;line-height:115%"> </span></span><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
-  mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
-  minor-latin"><o:p></o:p></span></p>
-  </td>
- </tr>
 </tbody></table>
