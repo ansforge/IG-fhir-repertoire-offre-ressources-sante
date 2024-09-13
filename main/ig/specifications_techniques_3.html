@@ -327,7 +327,7 @@ détails sur la raison de l’échec</p>
 <p>Remarque&nbsp;: l’échec d’une recherche est la non-possibilité d’exécuter la
 requête, ce qui est différent d’aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-[https://www.hl7.org/fhir/R4/http.html]](https://www.hl7.org/fhir/R4/http.html)</p>
+<a href="https://www.hl7.org/fhir/R4/http.html">https://www.hl7.org/fhir/R4/http.html</a></p>
 
 <h3 id="critères-de-recherche">Critères de recherche</h3>
 
@@ -336,8 +336,8 @@ Plus de précision sur la spécification FHIR :
   <li><a href="search_param.html#structuredefinition-ror-healthcareservice">StructureDefinition-ror-healthcareservice</a></li>
   <li><a href="search_param.html#structuredefinition-ror-organization">Structuredefinition-ror-organization</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxesuivante&nbsp;: <code class="language-plaintext highlighter-rouge">organization.[NOM CRITERE]</code>)</li>
   <li><a href="search_param.html#structuredefinition-ror-location">StructureDefinition-ror-location</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxesuivante&nbsp;: <code class="language-plaintext highlighter-rouge">location.[NOM CRITERE]</code>)</li>
-  <li><a name="l618">​</a><a href="search_param.html#structuredefinition-ror-practioner">StructureDefinition-ror-practioner</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]</code>)</li>
-  <li><a name="l629">​</a><a href="search_param.html#structuredefinition-ror-practionerrole">StructureDefinition-ror-practionerrole</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:[NOM CRITERE]</code>)</li>
+  <li><a name="l620">​</a><a href="search_param.html#structuredefinition-ror-practioner">StructureDefinition-ror-practioner</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]</code>)</li>
+  <li><a name="l631">​</a><a href="search_param.html#structuredefinition-ror-practionerrole">StructureDefinition-ror-practionerrole</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:[NOM CRITERE]</code>)</li>
   <li><a href="search_param.html#structuredefinition-ror-task">StructureDefinition-ror-task</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage inversé</a>. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">_has:HealthcareService:focus:[NOM CRITERE]</code>)</li>
 </ul>
 
@@ -412,7 +412,7 @@ GET <span class="o">[</span>BASE]/HealthcareService?service-category<span class=
 &amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
-<h4 id="scénario-4-recherche-multicritères-2---ou-draft">Scénario 4&nbsp;: Recherche multicritères #2 - OU <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-4-recherche-multicritères-2---ou">Scénario 4&nbsp;: Recherche multicritères #2 - OU</h4>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur cherche les offres ayant un type d’offre OU une activité opérationnelle qu’il indique pour un patient d’âge donné.</p>
 
@@ -433,7 +433,7 @@ and <span class="o">(</span>age-range-low le 35|https://unitsofmeasure.org|a and
 &amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
-<h4 id="scénario-5-recherche-multicritère-3--etou-draft">Scénario 5&nbsp;: Recherche multicritère #3 – ET/OU <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-5-recherche-multicritère-3--etou">Scénario 5&nbsp;: Recherche multicritère #3 – ET/OU</h4>
 <p><em>L’utilisation du above dans ce scénario en tant que recherche circulaire est une interprétation des spécifications FHIR R4. Ce fonctionnement est sujet à modification.</em></p>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur recherche les offres ayant (une catégorie d’établissement OU un type d’offre) ET un acte spécifique qu’il indique.</p>
@@ -547,7 +547,7 @@ Exemple :
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
 
-<h4 id="scénario-7-recherche-sur-une-zone-dintervention-draft">Scénario 7&nbsp;: Recherche sur une zone d’intervention <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-7-recherche-sur-une-zone-dintervention">Scénario 7&nbsp;: Recherche sur une zone d’intervention</h4>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur cherche les offres ayant un type d’offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d’une zone d’intervention.</p>
 
@@ -653,7 +653,7 @@ Exemple :
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
 
-<h4 id="scénario-11-recherche-sur-un-critère-du-modèle-dexposition-30-du-ror-draft">Scénario 11&nbsp;: Recherche sur un critère du modèle d’exposition 3.0 du ROR <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-11-recherche-sur-un-critère-du-modèle-dexposition-30-du-ror">Scénario 11&nbsp;: Recherche sur un critère du modèle d’exposition 3.0 du ROR</h4>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur recherche les offres proposant une compétence spécifique.</p>
 
@@ -759,7 +759,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 9, 2024 14:18+0000">2024-07-09</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 13, 2024 14:28+0000">2024-09-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
