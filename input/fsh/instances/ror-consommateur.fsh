@@ -579,7 +579,7 @@ Usage: #definition
 /** rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"*/
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
 
 * rest.resource[=].searchParam[+].name = "_lastUpdated"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
@@ -624,7 +624,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "date"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-date"
 * rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la date de publication de la fiche de consignes"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la date de publication de la fiche de consignes"*/
 
 /** rest.resource[=].searchParam[+].name = "effective"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-effective"

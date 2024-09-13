@@ -81,7 +81,7 @@ détails sur la raison de l'échec
 Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
 requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
-[https://www.hl7.org/fhir/R4/http.html]](https://www.hl7.org/fhir/R4/http.html)
+[https://www.hl7.org/fhir/R4/http.html](https://www.hl7.org/fhir/R4/http.html)
 
 ### Critères de recherche
 
@@ -170,7 +170,7 @@ GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 4 : Recherche multicritères #2 - OU <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 4 : Recherche multicritères #2 - OU
 
 **Description du scénario :** Un consommateur cherche les offres ayant un type d’offre OU une activité opérationnelle qu’il indique pour un patient d'âge donné.
 
@@ -193,7 +193,7 @@ and (age-range-low le 35|https://unitsofmeasure.org|a and age-range-high ge 35|h
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 5 : Recherche multicritère #3 -- ET/OU <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 5 : Recherche multicritère #3 -- ET/OU
 *L'utilisation du above dans ce scénario en tant que recherche circulaire est une interprétation des spécifications FHIR R4. Ce fonctionnement est sujet à modification.*
 
 **Description du scénario :** Un consommateur recherche les offres ayant (une catégorie d’établissement OU un type d’offre) ET un acte spécifique qu’il indique.
@@ -316,7 +316,7 @@ GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 ```
 
 
-#### Scénario 7 : Recherche sur une zone d'intervention <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 7 : Recherche sur une zone d'intervention
 
 **Description du scénario :** Un consommateur cherche les offres ayant un type d'offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d'une zone d'intervention.
 
@@ -436,7 +436,7 @@ GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
-#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 11 : Recherche sur un critère du modèle d'exposition 3.0 du ROR
 
 **Description du scénario :** Un consommateur recherche les offres proposant une compétence spécifique.
 

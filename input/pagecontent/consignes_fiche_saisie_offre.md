@@ -9,10 +9,10 @@
 </td>
 <td width="465">
 <p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p>
-<p>Update<a href="#_ftn1" name="_ftnref1">[2]</a></p>
+<p>Update<a href="#_ftn2" name="_ftnref2">[2]</a> <code><span style="color: #ff0000;">draft</span></code></p>
 </td>
 <td width="465">
-<p>Search<a href="#_ftn2" name="_ftnref2"><sup>[4]</sup></a></p>
+<p>Search<a href="#_ftn3" name="_ftnref3"><sup>[3]</sup></a></p>
 </td>
 </tr>
 <tr>
@@ -21,7 +21,7 @@
 </td>
 <td width="465">
 <p>POST</p>
-<p>PUT</p>
+<p>PUT <code><span style="color: #ff0000;">draft</span></code></p>
 </td>
 <td width="465">
 <p>GET</p>
@@ -44,7 +44,7 @@
 </td>
 <td width="465">
 <p><code>POST [base]/Questionnaire {?_format=[mime-type]}</code></p>
-<p><code>PUT [base]/Questionnaire/[id]{?&_format=[mime-type]}</code></p>
+<p><code>PUT [base]/Questionnaire/[id]{?&_format=[mime-type]}</code> <code><span style="color: #ff0000;">draft</span></code></p>
 </td>
 <td width="465">
 <p><code>GET [base]/Questionnaire{?[parameters]{&amp;_format=[mime-type]}}</code></p>
@@ -56,6 +56,12 @@
 <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://hl7.org/fhir/R4/http.html#create">https://hl7.org/fhir/R4/http.html#create</a> et <a href="https://hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 <p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#update">https://hl7.org/fhir/R4/http.html#update</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 <p><a href="#_ftnref3" name="_ftn3">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
+
+<blockquote class="stu-note">
+<p>
+A noter que le PUT (update) n'est pas disponible dans la version 3.2 du ROR National. Son implémentation est programmée pour la version 3.3.
+</p>
+</blockquote>
 
 ### Construction de la réponse de base
 
@@ -98,7 +104,7 @@ Si la recherche est un succès, le serveur répond :
 
 -   Un header avec un code 200 OK HTTP
 
--   Un body contenant une ressource Bundle[^27] dont le type = searchset.\ Le bundle encapsule 0 à n ressources Measure corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche.\ Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise \"total\". Dans le cas où il n'y a pas de résultat le service renvoie \"total\": 0.
+-   Un body contenant une ressource [Bundle](https://www.hl7.org/fhir/R4/bundle.html) dont le type = searchset.\ Le bundle encapsule 0 à n ressources Measure corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche.\ Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise \"total\". Dans le cas où il n'y a pas de résultat le service renvoie \"total\": 0.
 
 Remarque : la recherche est un succès à partir du moment où la requête peut être exécutée. Il peut il y avoir 0 à n correspondances.
 
@@ -142,12 +148,6 @@ POST [BASE]/Questionnaire
 {
   {
   "resourceType": "Questionnaire",
-  "id": "testror",
-  "meta": {
-    "profile": [
-      "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
-    ]
-  },
   "version": "0.1",
   "name": "FDS-109",
   "title": "Consignes fiche de saisie Cabinet de ville de médecine générale",
@@ -237,7 +237,7 @@ GET [BASE]/Questionnaire #recherche sans critère pour récupérer toutes les fi
 
 ```
 
-#### Scénario 3 : Un consommateur souhaite récupérer une fiche
+#### Scénario 3 : Un consommateur souhaite récupérer une fiche <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite récupérer une fiche
 
@@ -254,7 +254,7 @@ GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifia
 ```
 
 
-#### Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
+#### Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. Par exemple, un Centre de santé.
 
