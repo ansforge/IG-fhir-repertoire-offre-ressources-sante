@@ -3832,11 +3832,47 @@ Critères de recherches applicables à la ressource Organization.
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">La catégorie d'établissement est le cadre
-  réglementaire dans lequel s'exerce l'activité de l'entité géographique.<o:p></o:p></span></p>
+  réglementaire dans lequel s'exerce l'activité de l'entité géographique. <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
   8.0pt;line-height:115%">JDV_J55-CategorieEG-ROR issu de
   TRE_R66-CategorieEtablissement, TRE_R316-AutreCategorieEtablissement et
   TRE_R02-SecteurActivite<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:7">
+  <td width="24%" valign="top" style="width:24.48%;border:solid #8EAADB 1.0pt;
+  border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">typeOI</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="16%" valign="top" style="width:16.1%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">type</span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.68%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Oui<o:p></o:p></span></p>
+  </td>
+  <td width="7%" valign="top" style="width:7.54%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span class="SpellE"><span class="GramE"><span style="font-size:8.0pt;line-height:115%">token</span></span></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  </td>
+  <td width="44%" valign="top" style="width:44.22%;border-top:none;border-left:
+  none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
+  mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
+  mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">Type d'organisation interne. <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
+  8.0pt;line-height:115%">JDV_J203-TypeOrganisationInterne-ROR/FHIR/JDV-J203-TypeOrganisationInterne-ROR issu de la
+TRE_R213-ModePriseEnCharge<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:8">
