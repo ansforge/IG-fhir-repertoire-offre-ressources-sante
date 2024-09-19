@@ -347,7 +347,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" => pas encore implémenté
+* rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource"
 
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Organization-identifier"
