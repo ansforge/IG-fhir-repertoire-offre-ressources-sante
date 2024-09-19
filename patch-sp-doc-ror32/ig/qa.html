@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for ROR</h1>
- <p>Generated Wed Sep 18 16:36:20 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Thu Sep 19 15:13:19 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.6.25</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.ror, Canonical = https://interop.esante.gouv.fr/ig/fhir/ror</td></tr>
@@ -86,9 +86,9 @@ hl7.fhir.fr.core#1.1.0:     <a href="https://simplifier.net/resolve?scope=hl7.fh
   <li>
 hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-parameter-code.html">GuideParameterCode</a>
  (15 uses),     <code>_id</code>
- (8 uses),     <code>_lastUpdated</code>
- (6 uses),     <code>_tag</code>
- (6 uses),     <code>type</code>
+ (12 uses),     <code>_lastUpdated</code>
+ (10 uses),     <code>_tag</code>
+ (10 uses),     <code>type</code>
  (2 uses),     <code>identifier</code>
  (2 uses),     <code>near</code>
  (2 uses),     <code>status</code>
@@ -101,21 +101,18 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (2 uses),     <code>service-type</code>
  (2 uses),     <code>characteristic</code>
  (2 uses),     <code>specialty</code>
+ (2 uses),     <code>_content</code>
  (2 uses),     <code>identifier</code>
  (2 uses),     <code>name</code>
- (2 uses),     <code>type</code>
- (2 uses),     <code>identifier</code>
- (2 uses),     <code>identifier</code>
  (2 uses),     <code>_source</code>
- (2 uses),     <a href="http://hl7.org/fhir/R4/medicationknowledge.html">MedicationKnowledge</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a>
  (6 uses),     <a href="http://hl7.org/fhir/R4/healthcareservice.html">HealthcareService</a>
  (7 uses),     <a href="http://hl7.org/fhir/R4/valueset-common-tags.html">CommonTags</a>
  (5 uses),     <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a>
- (11 uses),     <a href="http://hl7.org/fhir/R4/episodeofcare.html">EpisodeOfCare</a>
- (52 uses),     <a href="http://hl7.org/fhir/R4/location.html">Location</a>
- (15 uses),     <a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a>
- (2 uses),     <a href="http://hl7.org/fhir/R4/organizationaffiliation.html">OrganizationAffiliation</a>
- (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-provision-conditions.html">ServiceProvisionConditions</a>
+ (11 uses),     <a href="http://hl7.org/fhir/R4/careteam.html">CareTeam</a>
+ (56 uses),     <a href="http://hl7.org/fhir/R4/location.html">Location</a>
+ (15 uses),     <a href="http://hl7.org/fhir/R4/bodystructure.html">BodyStructure</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-provision-conditions.html">ServiceProvisionConditions</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-program.html">Program</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-referral-method.html">ReferralMethod</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/endpoint.html">Endpoint</a>
@@ -134,18 +131,18 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-measure-type.html">MeasureType</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-measure-improvement-notation.html">MeasureImprovementNotation</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-measure-population.html">MeasurePopulationType</a>
- (3 uses),     <a href="http://hl7.org/fhir/R4/plandefinition.html">PlanDefinition</a>
- (8 uses),     <a href="http://hl7.org/fhir/R4/valueset-measure-data-usage.html">MeasureDataUsage</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/metadatatypes.html#TriggerDefinition">TriggerDefinition</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-measure-data-usage.html">MeasureDataUsage</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/measurereport.html">MeasureReport</a>
  (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-measure-report-status.html">MeasureReportStatus</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-measure-report-type.html">MeasureReportType</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/list.html">List</a>
- (2 uses),     <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>
- (16 uses),     <a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a>
- (10 uses),     <a href="http://hl7.org/fhir/R4/valueset-organization-type.html">OrganizationType</a>
- (1 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-organization-type.html">OrganizationType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a>
- (17 uses),     <a href="http://hl7.org/fhir/R4/researchstudy.html">ResearchStudy</a>
+ (17 uses),     <a href="http://hl7.org/fhir/R4/plandefinition.html">PlanDefinition</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/researchstudy.html">ResearchStudy</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/insuranceplan.html">InsurancePlan</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-use-context.html">Context of Use ValueSet</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-usage-context-type.html">UsageContextType</a>
@@ -735,22 +732,22 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.resource[0]&#8203;.searchParam[1]&#8203;.definition (l1&#8203;/c35472)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.resource[0]&#8203;.searchParam[1]&#8203;.definition (l1&#8203;/c35138)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.resource[1]&#8203;.searchParam[3]&#8203;.definition (l1&#8203;/c43586)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.resource[1]&#8203;.searchParam[3]&#8203;.definition (l1&#8203;/c43252)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[0]&#8203;.definition (l1&#8203;/c52871)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[0]&#8203;.definition (l1&#8203;/c52008)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[2]&#8203;.definition (l1&#8203;/c53285)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[2]&#8203;.definition (l1&#8203;/c52422)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[3]&#8203;.definition (l1&#8203;/c53494)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[3]&#8203;.definition (l1&#8203;/c52631)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[4]&#8203;.definition (l1&#8203;/c53710)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[4]&#8203;.definition (l1&#8203;/c52847)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -763,22 +760,22 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.resource[0]&#8203;.searchParam[1]&#8203;.definition (l1&#8203;/c36192)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.resource[0]&#8203;.searchParam[1]&#8203;.definition (l1&#8203;/c35856)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.resource[1]&#8203;.searchParam[3]&#8203;.definition (l1&#8203;/c44386)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.resource[1]&#8203;.searchParam[3]&#8203;.definition (l1&#8203;/c44050)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[0]&#8203;.definition (l1&#8203;/c54097)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[0]&#8203;.definition (l1&#8203;/c53230)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[2]&#8203;.definition (l1&#8203;/c54511)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[2]&#8203;.definition (l1&#8203;/c53644)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[3]&#8203;.definition (l1&#8203;/c54720)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[3]&#8203;.definition (l1&#8203;/c53853)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[4]&#8203;.definition (l1&#8203;/c54936)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
+     <td><b>CapabilityStatement&#8203;.rest[0]&#8203;.searchParam[4]&#8203;.definition (l1&#8203;/c54069)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude' does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -1645,13 +1642,13 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[48]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c266991)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[48]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c266958)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[163]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c418150)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[163]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c418107)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[169]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c427001)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[169]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c426953)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[13]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'HealthcareService.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>
@@ -1751,16 +1748,16 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[42]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c180166)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[42]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c180161)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[62]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c208554)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[62]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c208539)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[82]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c234305)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[82]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c234265)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[110]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c267956)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[110]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c267911)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[13]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'Location.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>
@@ -1831,7 +1828,7 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[29]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c63043)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[29]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c63038)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[4]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'Measure.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>
@@ -1850,7 +1847,7 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[16]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c54147)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[16]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c54132)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[4]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'MeasureReport.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>
@@ -1895,79 +1892,79 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[44]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c319412)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[44]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c319258)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[50]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c328065)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[50]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c327891)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[53]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c333334)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[53]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c333160)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[59]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c341952)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[59]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c341758)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[62]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c347221)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[62]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c347027)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[68]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c355890)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[68]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c355676)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[71]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c361147)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[71]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c360933)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[77]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c369787)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[77]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c369553)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[80]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c375064)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[80]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c374830)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[86]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c383758)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[86]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c383504)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[89]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c389054)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[89]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c388800)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[95]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c397768)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[95]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c397494)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[98]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c403051)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[98]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c402777)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[104]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c411703)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[104]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c411409)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[107]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c416984)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[107]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c416690)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[169]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c507431)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[169]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c511157)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[218]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c558898)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[218]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c562596)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[246]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c598794)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[246]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c602402)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[22]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c610547)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[22]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c614142)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[25]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c611120)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[25]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c614715)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[28]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c611747)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[28]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c615342)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[31]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c612327)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[31]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c615922)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[34]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c612975)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[34]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c616570)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[37]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c613699)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[37]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l1&#8203;/c617294)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[40]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c614296)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[40]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l1&#8203;/c617891)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[13]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'Organization.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>
@@ -2179,16 +2176,16 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[26]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c86655)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[26]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c86650)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[38]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c102273)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[38]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c102258)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[49]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c115571)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[49]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c115536)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[60]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c131191)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[60]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c131148)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[13]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'Practitioner.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>
@@ -2213,16 +2210,16 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[18]&#8203;.mapping[0] (l1&#8203;/c138511)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ElementDefinition.mapping.map: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[39]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c165094)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[39]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c165089)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[66]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c208234)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[66]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c208189)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[83]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c231218)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[83]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c231168)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[8]&#8203;.mapping[0] (l1&#8203;/c237392)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ElementDefinition.mapping.map: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[8]&#8203;.mapping[0] (l1&#8203;/c237337)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ElementDefinition.mapping.map: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[13]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'PractitionerRole.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>
@@ -2276,16 +2273,16 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[42]&#8203;.pattern&#8203;.ofType(Coding) (l1&#8203;/c172674)</b></td><td><b>information</b></td><td title="UNKNOWN_CODESYSTEM"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[50]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c183848)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[50]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c183843)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[14]&#8203;.pattern&#8203;.ofType(Coding) (l1&#8203;/c242722)</b></td><td><b>information</b></td><td title="UNKNOWN_CODESYSTEM"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[14]&#8203;.pattern&#8203;.ofType(Coding) (l1&#8203;/c242717)</b></td><td><b>information</b></td><td title="UNKNOWN_CODESYSTEM"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[18]&#8203;.pattern&#8203;.ofType(Coding) (l1&#8203;/c243820)</b></td><td><b>information</b></td><td title="UNKNOWN_CODESYSTEM"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[18]&#8203;.pattern&#8203;.ofType(Coding) (l1&#8203;/c243815)</b></td><td><b>information</b></td><td title="UNKNOWN_CODESYSTEM"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[22]&#8203;.pattern&#8203;.ofType(Coding) (l1&#8203;/c244968)</b></td><td><b>information</b></td><td title="UNKNOWN_CODESYSTEM"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire' could not be found, so the code cannot be validated</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[22]&#8203;.pattern&#8203;.ofType(Coding) (l1&#8203;/c244963)</b></td><td><b>information</b></td><td title="UNKNOWN_CODESYSTEM"><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[4]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'Questionnaire.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>
@@ -2301,58 +2298,58 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[25]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c172049)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[25]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c172019)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[46]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c203092)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[46]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c203027)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[58]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c221449)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[58]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c221379)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[64]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c229845)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[64]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c229775)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[70]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c239262)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[70]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c239192)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[76]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c248714)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[76]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c248644)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[82]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c257168)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[82]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c257098)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[88]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c265655)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[88]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c265585)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[100]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c283429)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[100]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c283359)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[106]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c292952)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[106]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c292882)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[19]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c298625)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[19]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c298555)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[22]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c299072)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[22]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c299002)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[24]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c299444)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[24]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c299374)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[26]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c299839)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[26]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c299769)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[29]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c300329)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[29]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c300259)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[32]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c300840)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[32]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c300770)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[36]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c301563)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[36]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c301493)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[38]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c301987)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-snapshot-2</b></td>
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[38]&#8203;.pattern&#8203;.ofType(CodeableConcept) (l1&#8203;/c301917)</b></td><td><b>information</b></td><td title="MSG_DRAFT"><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem|0.4.0-snapshot-2</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[4]&#8203;.binding</b></td><td><b>warning</b></td><td title=""><b><img style="vertical-align: text-bottom" src="new.png" height="16px" width="36px" alt="New Rule: "> The definition for the element 'Task.language' binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental</b></td>

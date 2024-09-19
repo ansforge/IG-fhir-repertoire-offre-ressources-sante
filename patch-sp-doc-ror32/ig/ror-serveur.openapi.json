@@ -1001,10 +1001,12 @@
             }
           },
           {
-            "name": "_filter",
+            "name": "_content",
             "in": "query",
-            "description": "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails",
-            "schema": {}
+            "description": "Search on the entire content of the resource",
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "identifier",
@@ -1018,14 +1020,6 @@
             "name": "name",
             "in": "query",
             "description": "A portion of the organization\u0027s name or alias",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "type",
-            "in": "query",
-            "description": "A code for the type of organization",
             "schema": {
               "type": "string"
             }
