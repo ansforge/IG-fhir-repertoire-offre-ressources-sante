@@ -62,7 +62,7 @@
   <version value="0.4.0-snapshot-2"/>
   <name value="RORQuestionnaire"/>
   <status value="draft"/>
-  <date value="2024-09-13T14:28:16+00:00"/>
+  <date value="2024-10-07T14:01:40+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -2380,7 +2380,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
       </constraint>
       <mustSupport value="true"/>
       <isSummary value="true"/>
@@ -2720,7 +2720,7 @@
       <short value="Unique id pour l'item de la fiche"/>
       <definition value="An identifier that is unique within the Questionnaire allowing linkage to the equivalent item in a QuestionnaireResponse resource."/>
       <comment value="This ''can'' be a meaningful identifier (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here."/>
-      <requirements value="[QuestionnaireResponse](questionnaireresponse.html#) does not require omitted items to be included and may have some items that repeat, so linkage based on position alone is not sufficient."/>
+      <requirements value="[QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html#) does not require omitted items to be included and may have some items that repeat, so linkage based on position alone is not sufficient."/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -2753,7 +2753,7 @@
       <path value="Questionnaire.item.definition"/>
       <short value="Element concerné par la saisie"/>
       <definition value="This element is a URI that refers to an [ElementDefinition](http://hl7.org/fhir/R4/elementdefinition.html) that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource. A detailed description of the construction of the URI is shown in Comments, below. If this element is present then the following element values MAY be derived from the Element Definition if the corresponding elements of this Questionnaire resource instance have no value:&#xA;&#xA;* code (ElementDefinition.code) &#xA;* type (ElementDefinition.type) &#xA;* required (ElementDefinition.min) &#xA;* repeats (ElementDefinition.max) &#xA;* maxLength (ElementDefinition.maxLength) &#xA;* answerValueSet (ElementDefinition.binding)&#xA;* options (ElementDefinition.binding)."/>
-      <comment value="The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) and always starts with the [canonical URL](http://hl7.org/fhir/R4/references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](http://hl7.org/fhir/R4/element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition."/>
+      <comment value="The uri refers to an ElementDefinition in a [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html#) and always starts with the [canonical URL](http://hl7.org/fhir/R4/references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](http://hl7.org/fhir/R4/element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition."/>
       <requirements value="A common pattern is to define a set of data elements and then build multiple questionnaires for different circumstances to gather the data. This element provides traceability to the common definition and allows the content for the question to come from the underlying definition."/>
       <min value="0"/>
       <max value="1"/>
