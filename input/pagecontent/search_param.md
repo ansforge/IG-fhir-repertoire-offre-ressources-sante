@@ -2207,7 +2207,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Permet d’utiliser les paramètres de recherche des ressources faisant référence à une autre ressource (chainage inversé)<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Permet d’utiliser les paramètres de recherche des ressources faisant référence à une autre ressource (chainage inversé) <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -3508,7 +3508,7 @@ Critères de recherches applicables à la ressource Organization.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -3566,7 +3566,7 @@ Critères de recherches applicables à la ressource Organization.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>Recherche sur le contenu textuel de la ressource </span><span style='font-size:8.0pt;line-height:
   115%;font-family:"Arial",sans-serif;mso-fareast-font-family:Calibri;
   mso-bidi-font-family:"Times New Roman";mso-fareast-language:FR'><o:p></o:p></span></p>
   </td>
@@ -4294,7 +4294,7 @@ TRE_R213-ModePriseEnCharge<o:p></o:p></span></p>
 
 ### StructureDefinition-ror-practitioner
 
-Critères de recherches applicables à la ressource Practioner.
+Critères de recherches applicables à la ressource Practitioner.
 
 <table class=MsoTable15Grid4Accent5 border=1 cellspacing=0 cellpadding=0
  width="100%" style='width:100.0%;border-collapse:collapse;border:none;
@@ -4386,7 +4386,7 @@ Critères de recherches applicables à la ressource Practioner.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4497,7 +4497,7 @@ Critères de recherches applicables à la ressource Practioner.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Identification technique de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Identification technique de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4542,7 +4542,7 @@ Critères de recherches applicables à la ressource Practioner.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
-  de dernière mise à jour. <code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  de dernière mise à jour.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
@@ -4580,7 +4580,7 @@ Critères de recherches applicables à la ressource Practioner.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Code région de la source de la donnée.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
+  8.0pt;line-height:115%'>Code région de la source de la donnée.<o:p></o:p></span></p>
   </td>
  </tr>
   <tr style="mso-yfti-irow:2">
@@ -4614,7 +4614,7 @@ Critères de recherches applicables à la ressource Practioner.
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -4713,7 +4713,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4824,7 +4824,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%'><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  mso-fareast-language:FR'>Identification technique de la ressource <code><span style="color: #ff0000;">draft</span></code><span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
+  mso-fareast-language:FR'>Identification technique de la ressource<span style='mso-spacerun:yes'></span><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:0'>
@@ -4869,7 +4869,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext'>Date
-  de dernière mise à jour.<code><span style="color: #ff0000;">draft</span></code></span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
+  de dernière mise à jour.</span><span style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
@@ -4907,7 +4907,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-  8.0pt;line-height:115%'>Code région de la source de la donnée.<code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
+  8.0pt;line-height:115%'>Code région de la source de la donnée.<o:p></o:p></span></p>
   </td>
  </tr>
   <tr style="mso-yfti-irow:2">
@@ -4941,7 +4941,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant de la situation opérationnelle, unique et persistant au niveau national.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant de la situation opérationnelle, unique et persistant au niveau national. <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
