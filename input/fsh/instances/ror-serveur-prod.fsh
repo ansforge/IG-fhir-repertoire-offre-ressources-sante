@@ -2,10 +2,11 @@ Instance: ror-serveur-prod
 InstanceOf: CapabilityStatement
 Usage: #definition
 * name = "RestServer"
-* title = "CapabilityStatement du serveur de prod ROR 3.2"
+* title = "Serveur de prod ROR 3.2"
 * status = #active
 * date = "2024-07-29T09:03:47.483+00:00"
-* publisher = "Not provided"
+* description = "Capability Statement du Système ROR National version 3.2 mis en production en juilet 2024."
+* publisher = "ANS"
 * kind = #instance
 * software.name = "HAPI FHIR Server"
 * software.version = "6.4.4"
