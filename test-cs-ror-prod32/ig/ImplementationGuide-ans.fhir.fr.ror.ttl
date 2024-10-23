@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-10-23T08:00:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-10-23T08:17:39+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -582,17 +582,6 @@
        ] ;
        fhir:name [ fhir:v "AsLieuDit" ] ;
        fhir:description [ fhir:v "Extension créée dans le cadre du ROR pour indiquer le lieu dit" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/CapabilityStatement/ror-serveur-prod> ;
-         fhir:reference [ fhir:v "CapabilityStatement/ror-serveur-prod" ]
-       ] ;
-       fhir:name [ fhir:v "CapabilityStatement du serveur de prod ROR 3.2" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1747,6 +1736,18 @@
        ] ;
        fhir:name [ fhir:v "RORTerritorialDivision" ] ;
        fhir:description [ fhir:v "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. \nCela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/CapabilityStatement/ror-serveur-prod> ;
+         fhir:reference [ fhir:v "CapabilityStatement/ror-serveur-prod" ]
+       ] ;
+       fhir:name [ fhir:v "Serveur de prod ROR 3.2" ] ;
+       fhir:description [ fhir:v "Capability Statement du Système ROR National version 3.2 mis en production en juilet 2024." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
