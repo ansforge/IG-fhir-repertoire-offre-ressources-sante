@@ -220,7 +220,7 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-healthcareservice)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-* rest.resource[=].interaction[+].code = #patch
+//* rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 * rest.resource[=].searchInclude = "HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner"
 * rest.resource[=].searchRevInclude = "PractitionerRole:service, Task:focus"
@@ -323,6 +323,8 @@ Usage: #definition
 // Organization
 * rest.resource[+].type = #Organization
 * rest.resource[=].profile = Canonical(ror-organization)
+* rest.resource[=].interaction[+].code = #search-type
+* rest.resource[=].interaction[+].code = #read
 
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
@@ -493,7 +495,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Recherche dans le contenu textuel de la ressource" */
 
-/* // Task
+// Task
 * rest.resource[+].type = #Task
 * rest.resource[=].profile = Canonical(ror-task)
 * rest.resource[=].interaction[+].code = #search-type
