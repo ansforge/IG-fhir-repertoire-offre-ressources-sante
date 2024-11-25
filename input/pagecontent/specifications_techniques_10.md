@@ -1,9 +1,5 @@
 <!-- ## 3.9	Création et Mise à jour du lieu de réalisation de l’offre
 <code><span style="background-color: #58D68D;color:white;font-weight:bold;font-size: x-large;">ROR 2.3</span></code>-->
-<code><span style="color: #ff0000;font-weight:bold;font-size: x-large;">draft</span></code>
-<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-Cette partie de la spécification est en cours de construction et n'est pas implémentée. Elle est disponible, à titre d'information sur les travaux en cours au niveau du ROR National.
-</p>
 
 ###  Construction de la requête de base
 <table>
@@ -192,7 +188,7 @@ PATCH [BASE]/HealthcareService/XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
