@@ -433,7 +433,7 @@ Usage: #definition
 //* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
 //* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
-
+/*
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"
 * rest.resource[=].searchParam[=].type = #token
@@ -443,7 +443,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
-/*
+*/
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
@@ -458,7 +458,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
-
+/*
 * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
@@ -473,7 +473,7 @@ Usage: #definition
 //* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
 //* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
-
+/*
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
 * rest.resource[=].searchParam[=].type = #token
@@ -483,8 +483,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
 * rest.resource[=].searchParam[=].documentation = "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails"
-
-/*
+*/
 * rest.resource[=].searchParam[+].name = "_id"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
@@ -499,7 +498,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-tag"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Code de la région de la source de la donnée"
-
+/*
 * rest.resource[=].searchParam[+].name = "_content"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-content"
 * rest.resource[=].searchParam[=].type = #string
