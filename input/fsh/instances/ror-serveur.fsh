@@ -431,9 +431,9 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-practitioner)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-//* rest.resource[=].interaction[0].code = #create
+//* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
-* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
+//* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"
@@ -472,9 +472,9 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-practitionerrole)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-//* rest.resource[=].interaction[0].code = #create
+//* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
-* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
+//* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
