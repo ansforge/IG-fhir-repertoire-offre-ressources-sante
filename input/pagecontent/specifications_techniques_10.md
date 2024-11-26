@@ -87,70 +87,76 @@ Si la mise à jour échoue, le serveur doit répondre :
 
 ```json
 POST [BASE]/Location 
-{	
-"resourceType": "Location",
-    "type": [ 
-		{ 
-			"coding": [ 
-				{
-					"system": "https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu",
-					"code": "001",
-					"display": "Hébergement"
-                } 
-			] 
-		} 
-	],
-	"extension": [
+{
+  "resourceType": "Location",
+  "id": "ror-location-exemple",
+  "type": [
+    {
+      "coding": [
         {
-			"url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog",
-			"valueCodeableConcept": {
-				"coding": [
-					{
-						"system": "https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune",
-						"code": "78646",
-						"display": "Versailles"
-					}
-				]	
-			}
-		}
+          "code": "001",
+          "system": "https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu",
+          "display": "Hébergement"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "78646",
+            "system": "https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune",
+            "display": "Versailles"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+      "valueDateTime": "2023-06-30T00:00:00.000Z"
+    }
+  ],
+  "address": {
+    "city": "Versailles",
+    "postalCode": "78000",
+    "line": [
+      "7 rue porte de Buc",
+      "78000 Versailles",
+      null
     ],
-	"address": {
-        "city": "Versailles",
-        "postalCode": "78000",
-        "line": [
-			"7 rue porte de Buc",
-			"78000 Versailles"
-        ],
-        "_line": [
-			{
-            	"extension": [
-					{
-						"id": "Location.address.line.extension:houseNumber",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-						"valueString": "7"
-					}
-				]
-			}, 
-			{
-				"extension": [
-					{
-						"id": "Location.address.line.extension:streetNameType",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
-						"valueString": "rue"
-					}
-				]
-			},
-                        {
-				"extension": [
-					{
-						"id": "Location.address.line.extension:streetNameBase",
-						"url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
-						"valueString": "porte de Buc"
-					}
-				]
-			}
-		]
-	}
+    "_line": [
+      {
+        "extension": [
+          {
+            "id": "Location.address.line.extension:houseNumber",
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString": "7"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "id": "Location.address.line.extension:streetNameType",
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
+            "valueString": "rue"
+          }
+        ]
+      },
+      {
+        "extension": [
+          {
+            "id": "Location.address.line.extension:streetNameBase",
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
+            "valueString": "porte de Buc"
+          }
+        ]
+      }
+    ]
+  }
 }
 
 ```
