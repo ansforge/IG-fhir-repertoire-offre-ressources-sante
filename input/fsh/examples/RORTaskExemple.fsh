@@ -14,11 +14,11 @@ Usage: #example
 * intent = #order
 * reasonCode = $TRE-R349-ActionAnomalie#COR "Correction"
 * code = $TRE-R350-ThematiqueAnomalie#06 "Exactitude"
-* input[0].type = $input-task-ror-codesystem#pathElementError
-* input[=].valueExpression.language = #text/fhirpath
-* input[=].valueExpression.expression = "Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')"
-* input[+].type = $input-task-ror-codesystem#systemRequester
-* input[=].valueString = "IHM"
+* input[pathElementError][0].type = $input-task-ror-codesystem#pathElementError
+* input[pathElementError][=].valueExpression.language = #text/fhirpath
+* input[pathElementError][=].valueExpression.expression = "Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')"
+* input[systemRequester][+].type = $input-task-ror-codesystem#systemRequester
+* input[systemRequester][=].valueString = "IHM"
 * authoredOn = "2024-01-03"
 * lastModified = "2024-01-04"
 * description = "La catégorie d'établissement n'est pas la bonne"
