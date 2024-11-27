@@ -4,6 +4,7 @@ Alias: $TRE-R13-Commune = https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TR
 Instance: ror-location-exemple
 InstanceOf: RORLocation
 Usage: #example
+* meta.lastUpdated = "2023-12-20T10:00:00+01:00"
 * type = $TRE-R343-FonctionLieu#001 "Hébergement"
 * extension[0]
   * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"
