@@ -6,7 +6,7 @@ Alias: $TRE-R200-CanalCommunication = https://mos.esante.gouv.fr/NOS/TRE_R200-Ca
 Alias: $TRE-R241-AideFinanciere = https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere
 
 Instance: ror-organisation-exemple-eg
-InstanceOf: ROROrganisation
+InstanceOf: ROROrganization
 Usage: #example
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"

@@ -2,8 +2,8 @@ Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G0
 Alias: $TRE-R72-FinessStatutJuridique = https://mos.esante.gouv.fr/NOS/TRE_R72-FinessStatutJuridique/FHIR/TRE-R72-FinessStatutJuridique
 Alias: $TRE-R69-FinessAgregatStatutJuridiqueNiv2 = https://mos.esante.gouv.fr/NOS/TRE_R69-FinessAgregatStatutJuridiqueNiv2/FHIR/TRE-R69-FinessAgregatStatutJuridiqueNiv2
 
-Instance: ror-organisation-exemple-ej
-InstanceOf: ROROrganisation
+Instance: ror-organization-exemple-ej
+InstanceOf: ROROrganization
 Usage: #example
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"
