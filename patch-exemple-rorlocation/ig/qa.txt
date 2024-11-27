@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 86, warn = 81, info = 53
+err = 83, warn = 81, info = 53
 IG Publisher Version: 1.7.5
-Generated Tue Nov 26 15:53:11 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Wed Nov 27 13:44:51 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 70 / 5 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 6 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 6 / 0 / 1
@@ -12,7 +12,7 @@ Generated Tue Nov 26 15:53:11 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple : 4 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple : 1 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville : 62 / 1 / 2
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type : 0 / 0 / 1
@@ -213,9 +213,6 @@ WARNING: CodeSystem/ror-include-associated-data-code-system: CodeSystem: Publish
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror.json ==
 == fsh-generated/resources/Location-ror-location-exemple.json ==
 ERROR: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'JDV_J124_Commune' (https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20240628120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune#78646)
-ERROR: Location/ror-location-exemple: Location.address.line[0].extension[0].id: id value 'Location.address.line.extension:houseNumber' is not valid
-ERROR: Location/ror-location-exemple: Location.address.line[1].extension[0].id: id value 'Location.address.line.extension:streetNameType' is not valid
-ERROR: Location/ror-location-exemple: Location.address.line[2].extension[0].id: id value 'Location.address.line.extension:streetNameBase' is not valid
 == fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json ==
 WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire: Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)
 INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
