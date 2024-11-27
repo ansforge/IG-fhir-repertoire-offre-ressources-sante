@@ -1,0 +1,128 @@
+{
+  "resourceType" : "Organization",
+  "id" : "ror-organisation-exemple-eg",
+  "meta" : {
+    "lastUpdated" : "2023-12-20T10:00:00+01:00",
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ror-organisation-exemple-eg</b></p><a name=\"ror-organisation-exemple-eg\"> </a><a name=\"hcror-organisation-exemple-eg\"> </a><a name=\"ror-organisation-exemple-eg-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-organization.html\">ROROrganization</a></p></div><p><b>RORMetaCreationDate</b>: 2023-12-09 14:30:00+0100</p><p><b>ROROrganizationFinancialHelpType</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere 02}\">Habilité Aide Sociale</span></p><p><b>ROROrganizationAccomodationFamily</b>: false</p><p><b>identifier</b>: Identifiant national de structure/392131725800020, SIRET/92131725800020</p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 460}\">Service autonomie aide (SAA)</span></p><p><b>name</b>: Quiétude BOIS COLOMBES</p><p><b>address</b>: 45 rue du général Leclerc, 92270 BOIS-COLOMBES BOIS-COLOMBES 92270 </p><p><b>partOf</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Organization/1111\">??</a></p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Purpose</b></td><td><b>Telecom</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact 06}\">standard</span></td><td>ph: 01.01.01.01.01</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+    "valueDateTime" : "2023-12-09T14:30:00+01:00"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-financial-help-type",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere",
+        "code" : "02",
+        "display" : "Habilité Aide Sociale"
+      }]
+    }
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-accomodation-family",
+    "valueBoolean" : false
+  }],
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure",
+        "code" : "40",
+        "display" : "Identifiant national de structure"
+      }]
+    },
+    "system" : "urn:oid:1.2.250.1.71.4.2.2",
+    "value" : "392131725800020"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure",
+        "code" : "3",
+        "display" : "SIRET"
+      }]
+    },
+    "system" : "http://sirene.fr",
+    "value" : "92131725800020"
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
+      "code" : "460",
+      "display" : "Service autonomie aide (SAA)"
+    }]
+  }],
+  "name" : "Quiétude BOIS COLOMBES",
+  "address" : [{
+    "line" : ["45 rue du général Leclerc, 92270 BOIS-COLOMBES"],
+    "_line" : [{
+      "extension" : [{
+        "id" : "Location.address.line.extension:houseNumber",
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+        "valueString" : "45"
+      },
+      {
+        "id" : "Location.address.line.extension:streetNameType",
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType",
+        "valueString" : "rue"
+      },
+      {
+        "id" : "Location.address.line.extension:streetNameBase",
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase",
+        "valueString" : "du général Leclerc"
+      }]
+    }],
+    "city" : "BOIS-COLOMBES",
+    "postalCode" : "92270"
+  }],
+  "partOf" : {
+    "reference" : "Organization/1111"
+  },
+  "contact" : [{
+    "extension" : [{
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
+          "code" : "1",
+          "display" : "Accès libre"
+        }]
+      }
+    }],
+    "purpose" : {
+      "coding" : [{
+        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact",
+        "code" : "06",
+        "display" : "standard"
+      }]
+    },
+    "telecom" : [{
+      "extension" : [{
+        "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication",
+            "code" : "2",
+            "display" : "Téléphone fixe"
+          }]
+        }
+      },
+      {
+        "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
+            "code" : "1",
+            "display" : "Accès libre"
+          }]
+        }
+      }],
+      "system" : "phone",
+      "value" : "01.01.01.01.01"
+    }]
+  }]
+}

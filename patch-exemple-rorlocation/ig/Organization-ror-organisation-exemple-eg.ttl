@@ -1,0 +1,139 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/Organization/ror-organisation-exemple-eg> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ror-organisation-exemple-eg"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2023-12-20T10:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ror-organisation-exemple-eg</b></p><a name=\"ror-organisation-exemple-eg\"> </a><a name=\"hcror-organisation-exemple-eg\"> </a><a name=\"ror-organisation-exemple-eg-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-organization.html\">ROROrganization</a></p></div><p><b>RORMetaCreationDate</b>: 2023-12-09 14:30:00+0100</p><p><b>ROROrganizationFinancialHelpType</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere 02}\">Habilité Aide Sociale</span></p><p><b>ROROrganizationAccomodationFamily</b>: false</p><p><b>identifier</b>: Identifiant national de structure/392131725800020, SIRET/92131725800020</p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 460}\">Service autonomie aide (SAA)</span></p><p><b>name</b>: Quiétude BOIS COLOMBES</p><p><b>address</b>: 45 rue du général Leclerc, 92270 BOIS-COLOMBES BOIS-COLOMBES 92270 </p><p><b>partOf</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Organization/1111\">??</a></p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Purpose</b></td><td><b>Telecom</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact 06}\">standard</span></td><td>ph: 01.01.01.01.01</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2023-12-09T14:30:00+01:00"^^xsd:dateTime ]
+  ] [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-financial-help-type"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "02" ] ;
+         fhir:display [ fhir:v "Habilité Aide Sociale" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-accomodation-family"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "40" ] ;
+         fhir:display [ fhir:v "Identifiant national de structure" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "392131725800020" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "3" ] ;
+         fhir:display [ fhir:v "SIRET" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://sirene.fr"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "92131725800020" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "460" ] ;
+       fhir:display [ fhir:v "Service autonomie aide (SAA)" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Quiétude BOIS COLOMBES"] ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "45 rue du général Leclerc, 92270 BOIS-COLOMBES" ;
+       fhir:extension ( [
+         fhir:id [ fhir:v "Location.address.line.extension:houseNumber" ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "45" ]
+       ] [
+         fhir:id [ fhir:v "Location.address.line.extension:streetNameType" ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "rue" ]
+       ] [
+         fhir:id [ fhir:v "Location.address.line.extension:streetNameBase" ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "du général Leclerc" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "BOIS-COLOMBES" ] ;
+     fhir:postalCode [ fhir:v "92270" ]
+  ] ) ; # 
+  fhir:partOf [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Organization/1111> ;
+     fhir:reference [ fhir:v "Organization/1111" ]
+  ] ; # 
+  fhir:contact ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1" ] ;
+           fhir:display [ fhir:v "Accès libre" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:purpose [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "06" ] ;
+         fhir:display [ fhir:v "standard" ]
+       ] )
+     ] ;
+     fhir:telecom ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "2" ] ;
+             fhir:display [ fhir:v "Téléphone fixe" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "1" ] ;
+             fhir:display [ fhir:v "Accès libre" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "01.01.01.01.01" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
