@@ -2,7 +2,7 @@ Alias: $TRE-R343-FonctionLieu = https://mos.esante.gouv.fr/NOS/TRE_R343-Fonction
 Alias: $TRE-R13-Commune = https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune
 
 Instance: ror-location-exemple
-InstanceOf: Location
+InstanceOf: RORLocation
 Usage: #example
 * type = $TRE-R343-FonctionLieu#001 "Hébergement"
 * extension[0]
