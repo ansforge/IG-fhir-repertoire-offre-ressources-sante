@@ -11,7 +11,7 @@ Usage: #example
 * healthcareService = Reference(HealthcareService/9597)
 * identifier.value = "11102379616"
 * code = $TRE-G15-ProfessionSante#60 "Infirmier"
-* specialty[expertiseType][+].valueCodeableConcept = $TRE-R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire#CEX "Compétence exclusive"
+* specialty[expertiseType].valueCodeableConcept = $TRE-R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire#CEX "Compétence exclusive"
 
 * extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"
 * extension[=].valueDateTime = "2023-12-09T14:30:00+01:00"
