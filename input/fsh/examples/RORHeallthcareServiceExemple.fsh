@@ -32,32 +32,32 @@ Usage: #example
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
 * availableTime[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* availableTime[=].extension[=].valueInteger = "2"
+* availableTime[=].extension[=].valueInteger = 2
 * availableTime[+].allDay = true
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
 * availableTime[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* availableTime[=].extension[=].valueInteger = "3"
+* availableTime[=].extension[=].valueInteger = 3
 * availableTime[+].allDay = true
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
 * availableTime[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* availableTime[=].extension[=].valueInteger = "4"
+* availableTime[=].extension[=].valueInteger = 4
 * availableTime[+].allDay = true
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
 * availableTime[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* availableTime[=].extension[=].valueInteger = "5"
+* availableTime[=].extension[=].valueInteger = 5
 * availableTime[+].allDay = true
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
 * availableTime[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* availableTime[=].extension[=].valueInteger = "6"
+* availableTime[=].extension[=].valueInteger = 6
 * availableTime[+].allDay = true
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
 * availableTime[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* availableTime[=].extension[=].valueInteger = "7"
+* availableTime[=].extension[=].valueInteger = 7
 * extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"
 * extension[=].valueDateTime = "2023-12-09T14:30:00+01:00"
 * extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit"
