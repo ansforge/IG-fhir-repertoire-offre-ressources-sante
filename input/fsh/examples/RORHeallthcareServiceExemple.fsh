@@ -11,6 +11,7 @@ Alias: $ror-telecom-communication-channel = https://interop.esante.gouv.fr/ig/fh
 Instance: ror-healthcareservice-exemple
 InstanceOf: RORHealthcareService
 Usage: #example
+Description: "Exemple basique pour RORHealthcareService n'ayant pas forcément de cohérence fonctionnelle"
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"
 * meta.lastUpdated = "2023-12-20T10:00:00+01:00"

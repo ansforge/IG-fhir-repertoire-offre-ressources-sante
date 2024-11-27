@@ -8,6 +8,7 @@ Alias: $TRE-R241-AideFinanciere = https://mos.esante.gouv.fr/NOS/TRE_R241-AideFi
 Instance: ror-organisation-exemple-eg
 InstanceOf: ROROrganization
 Usage: #example
+Description: "Exemple basique pour RORPOrganization décrivant une Entité Géographique (EG) n'ayant pas forcément de cohérence fonctionnelle"
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"
 * meta.lastUpdated = "2023-12-20T10:00:00+01:00"

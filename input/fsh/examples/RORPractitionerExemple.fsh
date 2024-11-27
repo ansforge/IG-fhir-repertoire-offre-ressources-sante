@@ -4,6 +4,7 @@ Alias: $TRE-R283-NiveauConfidentialite = https://mos.esante.gouv.fr/NOS/TRE_R283
 Instance: ror-practitioner-exemple
 InstanceOf: RORPractitioner
 Usage: #example
+Description: "Exemple basique pour RORPRactitioner n'ayant pas forcément de cohérence fonctionnelle"
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner"
 * meta.lastUpdated = "2023-12-20T10:00:00+01:00"

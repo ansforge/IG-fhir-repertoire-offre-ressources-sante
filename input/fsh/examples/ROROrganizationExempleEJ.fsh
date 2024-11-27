@@ -5,6 +5,7 @@ Alias: $TRE-R69-FinessAgregatStatutJuridiqueNiv2 = https://mos.esante.gouv.fr/NO
 Instance: ror-organization-exemple-ej
 InstanceOf: ROROrganization
 Usage: #example
+Description: "Exemple basique pour RORPOrganization décrivant une Entité Juridique (EJ) n'ayant pas forcément de cohérence fonctionnelle"
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"
 * meta.lastUpdated = "2023-12-20T10:00:00+01:00"

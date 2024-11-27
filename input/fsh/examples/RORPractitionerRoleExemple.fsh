@@ -4,6 +4,8 @@ Alias: $TRE-R23-ModeExercice = https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExerci
 Instance: ror-practitionerrole-exemple
 InstanceOf: RORPractitionerRole
 Usage: #example
+Description: "Exemple basique pour RORPRactitionerRole n'ayant pas forcément de cohérence fonctionnelle"
+
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole"
 * meta.lastUpdated = "2023-12-20T10:00:00+01:00"
 * practitioner = Reference(Practitioner/2524)

@@ -6,6 +6,7 @@ Alias: $input-task-ror-codesystem = https://interop.esante.gouv.fr/ig/fhir/ror/C
 Instance: ror-task-exemple
 InstanceOf: RORTask
 Usage: #example
+Description: "Exemple basique pour RORTask n'ayant pas forcément de cohérence fonctionnelle"
 
 * focus.type = "Organization"
 * focus.identifier.value = "1910800002"
@@ -21,4 +22,4 @@ Usage: #example
 * input[systemRequester][=].valueString = "IHM"
 * authoredOn = "2024-01-03"
 * lastModified = "2024-01-04"
-* description = "La catégorie d'établissement n'est pas la bonne"
+* description = "Ici la catégorie d'établissement n'est pas la bonne"
