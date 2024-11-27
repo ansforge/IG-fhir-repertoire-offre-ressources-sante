@@ -27,7 +27,7 @@ Usage: #example
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
 * availableTime[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"
-* availableTime[=].extension[=].valueInteger = "1"
+* availableTime[=].extension[=].valueInteger = 1
 * availableTime[+].allDay = true
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
