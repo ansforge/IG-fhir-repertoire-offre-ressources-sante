@@ -4,7 +4,7 @@ Alias: $TRE-R350-ThematiqueAnomalie = https://mos.esante.gouv.fr/NOS/TRE_R350-Th
 Alias: $input-task-ror-codesystem = https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem
 
 Instance: ror-task-exemple
-InstanceOf: Task
+InstanceOf: RORTask
 Usage: #example
 Description: "Exemple basique pour RORTask n'ayant pas forcément de cohérence fonctionnelle"
 

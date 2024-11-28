@@ -1,5 +1,5 @@
 Instance: ror-questionnaire-offre-de-ville
-InstanceOf: Questionnaire
+InstanceOf: RORQuestionnaire
 Usage: #example
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
