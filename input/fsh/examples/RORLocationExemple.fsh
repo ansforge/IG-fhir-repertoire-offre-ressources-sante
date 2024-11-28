@@ -2,10 +2,11 @@ Alias: $TRE-R343-FonctionLieu = https://mos.esante.gouv.fr/NOS/TRE_R343-Fonction
 Alias: $TRE-R13-Commune = https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune
 
 Instance: ror-location-exemple
-InstanceOf: RORLocation
+InstanceOf: Location
 Usage: #example
 Description: "Exemple basique pour RORLocation n'ayant pas forcément de cohérence fonctionnelle"
 
+* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"
 * meta.lastUpdated = "2023-12-20T10:00:00+01:00"
 * type = $TRE-R343-FonctionLieu#001 "Hébergement"
 * extension[0]

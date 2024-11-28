@@ -9,7 +9,7 @@ Alias: $ror-telecom-communication-channel = https://interop.esante.gouv.fr/ig/fh
 
 
 Instance: ror-healthcareservice-exemple
-InstanceOf: RORHealthcareService
+InstanceOf: HealthcareService
 Usage: #example
 Description: "Exemple basique pour RORHealthcareService n'ayant pas forcément de cohérence fonctionnelle"
 

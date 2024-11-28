@@ -7,7 +7,7 @@ Alias: $TRE-R283-NiveauConfidentialite = https://mos.esante.gouv.fr/NOS/TRE_R283
 Alias: $ror-telecom-communication-channel = https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel
 
 Instance: ror-healthcareservice-exemple-ville
-InstanceOf: RORHealthcareService
+InstanceOf: HealthcareService
 Usage: #example
 Description: "Exemple basique pour RORHealthcareService décrivant une offre de ville, mais n'ayant pas forcément de cohérence fonctionnelle"
 

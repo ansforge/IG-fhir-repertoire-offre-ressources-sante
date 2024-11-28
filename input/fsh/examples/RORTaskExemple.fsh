@@ -4,10 +4,11 @@ Alias: $TRE-R350-ThematiqueAnomalie = https://mos.esante.gouv.fr/NOS/TRE_R350-Th
 Alias: $input-task-ror-codesystem = https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem
 
 Instance: ror-task-exemple
-InstanceOf: RORTask
+InstanceOf: Task
 Usage: #example
 Description: "Exemple basique pour RORTask n'ayant pas forcément de cohérence fonctionnelle"
 
+* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"
 * focus.type = "Organization"
 * focus.identifier.value = "1910800002"
 * status = #in-progress

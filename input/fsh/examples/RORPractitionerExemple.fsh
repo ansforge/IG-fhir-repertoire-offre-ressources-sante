@@ -2,7 +2,7 @@ Alias: $TRE-R200-CanalCommunication = https://mos.esante.gouv.fr/NOS/TRE_R200-Ca
 Alias: $TRE-R283-NiveauConfidentialite = https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite
 
 Instance: ror-practitioner-exemple
-InstanceOf: RORPractitioner
+InstanceOf: Practitioner
 Usage: #example
 Description: "Exemple basique pour RORPRactitioner n'ayant pas forcément de cohérence fonctionnelle"
 
