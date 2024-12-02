@@ -88,7 +88,7 @@ Si la mise à jour échoue, le serveur doit répondre :
 ```json
 POST [BASE]/Location 
 ```
-  {%include StructureDefinition-{{[ror-location-exemple]}}-{{json}}-html.xhtml%}
+  {%include StructureDefinition-ror-location-exemple-json-html.xhtml%}
 
 -   Ajout de la référence au nouveau lieu créé (dont l'identifiant est YYY) dans la ressource de l'offre opérationnelle concernée
 
