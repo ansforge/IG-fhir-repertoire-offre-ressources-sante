@@ -1,8 +1,8 @@
 Instance: ror-questionnaire-offre-de-ville
-InstanceOf: RORQuestionnaire
+InstanceOf: Questionnaire
 Usage: #example
 
-* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
+* meta.profile = "ror-questionnaire"
 * version = "0.1"
 * name = "FDS-109"
 * title = "Consignes fiche de saisie Cabinet de ville de médecine générale"
