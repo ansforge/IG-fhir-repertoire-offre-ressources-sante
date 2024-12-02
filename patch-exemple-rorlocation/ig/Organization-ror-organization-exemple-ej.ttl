@@ -17,13 +17,14 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ror-organization-exemple-ej</b></p><a name=\"ror-organization-exemple-ej\"> </a><a name=\"hcror-organization-exemple-ej\"> </a><a name=\"ror-organization-exemple-ej-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-organization.html\">ROROrganization</a></p></div><p><b>RORMetaCreationDate</b>: 2023-12-09 14:30:00+0100</p><p><b>identifier</b>: Identifiant national de structure/2921317258, SIREN/921317258</p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R72-FinessStatutJuridique/FHIR/TRE-R72-FinessStatutJuridique 72}\">Société à responsabilité limitée (SARL)</span>, <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R69-FinessAgregatStatutJuridiqueNiv2/FHIR/TRE-R69-FinessAgregatStatutJuridiqueNiv2 2200}\">Organisme privé à caractère commercial</span></p><p><b>name</b>: Quiétude</p><p><b>address</b>: 103 rue des Bourguignons, 92270 BOIS-COLOMBES BOIS-COLOMBES 92270 </p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ror-organization-exemple-ej</b></p><a name=\"ror-organization-exemple-ej\"> </a><a name=\"hcror-organization-exemple-ej\"> </a><a name=\"ror-organization-exemple-ej-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-organization.html\">ROROrganization</a></p></div><p><b>RORMetaCreationDate</b>: 2023-12-09 14:30:00+0100</p><p><b>identifier</b>: Identifiant national de structure/2921317258 (use: official, ), FINESS/458174839, SIREN/921317258</p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R72-FinessStatutJuridique/FHIR/TRE-R72-FinessStatutJuridique 72}\">Société à responsabilité limitée (SARL)</span>, <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R69-FinessAgregatStatutJuridiqueNiv2/FHIR/TRE-R69-FinessAgregatStatutJuridiqueNiv2 2200}\">Organisme privé à caractère commercial</span></p><p><b>name</b>: Quiétude</p><p><b>address</b>: 103 rue des Bourguignons, 92270 BOIS-COLOMBES BOIS-COLOMBES 92270 </p></div>"
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "2023-12-09T14:30:00+01:00"^^xsd:dateTime ]
   ] ) ; # 
   fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
      fhir:type [
        fhir:coding ( [
          fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure"^^xsd:anyURI ] ;
@@ -37,11 +38,21 @@
      fhir:type [
        fhir:coding ( [
          fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "FINESS" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://finess.esante.gouv.fr"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "458174839" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "2" ] ;
          fhir:display [ fhir:v "SIREN" ]
        ] )
      ] ;
-     fhir:system [ fhir:v "http://sirene.fr"^^xsd:anyURI ] ;
+     fhir:system [ fhir:v "https://sirene.fr"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "921317258" ]
   ] ) ; # 
   fhir:type ( [
