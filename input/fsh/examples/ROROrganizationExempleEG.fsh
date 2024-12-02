@@ -27,6 +27,8 @@ Description: "Exemple basique pour RORPOrganization décrivant une Entité Géog
 
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3 "SIRET"
 * identifier[numSIRET].system = "https://sirene.fr"
+* identifier[idNatSt].value = "12345687900034"
+
 * type[categorieEtablissement] = $TRE-R66-CategorieEtablissement#460 "Service autonomie aide (SAA)"
 * address.city = "BOIS-COLOMBES"
 * address.postalCode = "92270"
