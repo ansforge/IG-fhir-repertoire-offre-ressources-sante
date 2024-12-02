@@ -10,14 +10,22 @@ Description: "Exemple basique pour RORPOrganization décrivant une Entité Jurid
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"
 * meta.lastUpdated = "2023-12-20T10:00:00+01:00"
 * name = "Quiétude"
-* identifier[0].value = "2921317258"
-* identifier[=].type = $TRE-G07-TypeIdentifiantStructure#40 "Identifiant national de structure"
-* identifier[=].system = "urn:oid:1.2.250.1.71.4.2.2"
-* identifier[+].value = "921317258"
-* identifier[=].type = $TRE-G07-TypeIdentifiantStructure#2 "SIREN"
-* identifier[=].system = "http://sirene.fr"
-* type[0] = $TRE-R72-FinessStatutJuridique#72 "Société à responsabilité limitée (SARL)"
-* type[+] = $TRE-R69-FinessAgregatStatutJuridiqueNiv2#2200 "Organisme privé à caractère commercial"
+
+* identifier[idNatSt].use = #official
+* identifier[idNatSt].value = "2921317258"
+* identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 "Identifiant national de structure"
+* identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
+
+* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 "FINESS"
+* identifier[finess].system = "https://finess.esante.gouv.fr"
+* identifier[finess].value = "458174839"
+
+* identifier[sirene].value = "921317258"
+* identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 "SIREN"
+* identifier[sirene].system = "http://sirene.fr"
+
+* type[statutJuridiqueINSEE] = $TRE-R72-FinessStatutJuridique#72 "Société à responsabilité limitée (SARL)"
+* type[sousEnsembleAgregatStatutJuridique] = $TRE-R69-FinessAgregatStatutJuridiqueNiv2#2200 "Organisme privé à caractère commercial"
 * address.city = "BOIS-COLOMBES"
 * address.postalCode = "92270"
 * address.line = "103 rue des Bourguignons, 92270 BOIS-COLOMBES"

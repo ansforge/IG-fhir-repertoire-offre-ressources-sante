@@ -14,13 +14,20 @@ Description: "Exemple basique pour RORPOrganization décrivant une Entité Géog
 * meta.lastUpdated = "2023-12-20T10:00:00+01:00"
 * name = "Quiétude BOIS COLOMBES"
 * partOf = Reference(Organization/1111)
-* identifier[0].value = "392131725800020"
-* identifier[=].type = $TRE-G07-TypeIdentifiantStructure#40 "Identifiant national de structure"
-* identifier[=].system = "urn:oid:1.2.250.1.71.4.2.2"
-* identifier[+].value = "92131725800020"
-* identifier[=].type = $TRE-G07-TypeIdentifiantStructure#3 "SIRET"
-* identifier[=].system = "http://sirene.fr"
-* type = $TRE-R66-CategorieEtablissement#460 "Service autonomie aide (SAA)"
+
+* identifier[idNatSt].use = #official
+* identifier[idNatSt].value = "392131725800020"
+* identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 "Identifiant national de structure"
+* identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
+* identifier[idNatSt].value = "92131725800020"
+
+* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 "FINESS"
+* identifier[finess].system = "https://finess.esante.gouv.fr"
+* identifier[finess].value = "458174839"
+
+* identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3 "SIRET"
+* identifier[numSIRET].system = "http://sirene.fr"
+* type[categorieEtablissement] = $TRE-R66-CategorieEtablissement#460 "Service autonomie aide (SAA)"
 * address.city = "BOIS-COLOMBES"
 * address.postalCode = "92270"
 * address.line = "45 rue du général Leclerc, 92270 BOIS-COLOMBES"
