@@ -19,7 +19,6 @@ Description: "Exemple basique pour RORPOrganization décrivant une Entité Géog
 * identifier[idNatSt].value = "392131725800020"
 * identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 "Identifiant national de structure"
 * identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
-* identifier[idNatSt].value = "92131725800020"
 
 * identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 "FINESS"
 * identifier[finess].system = "https://finess.esante.gouv.fr"
@@ -27,7 +26,7 @@ Description: "Exemple basique pour RORPOrganization décrivant une Entité Géog
 
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3 "SIRET"
 * identifier[numSIRET].system = "https://sirene.fr"
-* identifier[numSIRET].value = "12345687900034"
+* identifier[numSIRET].value = "92131725800020"
 
 * type[categorieEtablissement] = $TRE-R66-CategorieEtablissement#460 "Service autonomie aide (SAA)"
 * address.city = "BOIS-COLOMBES"
