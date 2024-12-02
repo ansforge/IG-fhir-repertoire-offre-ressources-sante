@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 70, errors = 139, warn = 67, info = 64-->
+<!-- broken links = 70, errors = 137, warn = 71, info = 65-->
 <head>
   <title>ROR : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for ROR</h1>
- <p>Generated Mon Dec 02 17:33:07 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Mon Dec 02 17:53:14 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.7.5</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.ror, Canonical = https://interop.esante.gouv.fr/ig/fhir/ror</td></tr>
@@ -179,7 +179,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 139, warn = 67, info = 64, broken links = 70</td></tr>
+ <tr><td>Summary:</td><td> errors = 137, warn = 71, info = 65, broken links = 70</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -212,8 +212,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_IG-fhir-repertoire-offre-ressources-sante_IG-fhir-repertoire-offre-ressources-sante_igSource_fsh-generated_resources_HealthcareService-ror-healthcareservice-exemple-ville"><b>/home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville</b></a></td><td><b>6</b></td><td><b>2</b></td><td><b>2</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_IG-fhir-repertoire-offre-ressources-sante_IG-fhir-repertoire-offre-ressources-sante_igSource_fsh-generated_resources_Location-ror-location-exemple"><b>/home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_IG-fhir-repertoire-offre-ressources-sante_IG-fhir-repertoire-offre-ressources-sante_igSource_fsh-generated_resources_Location-ror-location-exemple"><b>/home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple</b></a></td><td><b>0</b></td><td><b>4</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_IG-fhir-repertoire-offre-ressources-sante_IG-fhir-repertoire-offre-ressources-sante_igSource_fsh-generated_resources_Organization-ror-organisation-exemple-eg"><b>/home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Organization-ror-organisation-exemple-eg</b></a></td><td><b>12</b></td><td><b>0</b></td><td><b>2</b></td>
@@ -803,11 +803,20 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Location&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept) (l24&#8203;/c8)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'JDV_J124_Commune' (https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20240628120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune#78646)</b></td>
+   <tr style="background-color: #ffebcc">
+     <td><b>Location&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l24&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Location&#8203;.address&#8203;.line[0]&#8203;.extension[1]&#8203;.value&#8203;.ofType(string) (l54&#8203;/c33)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('rue') was not found in the value set 'JDV_J219_TypeVoie_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000), and a code is required from this value set  (error message = The System URI could not be determined for the code 'rue' in the ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000'; The provided code '#rue' was not found in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000')</b></td>
+   <tr style="background-color: #ffebcc">
+     <td><b>Location&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept) (l24&#8203;/c8)</b></td><td><b>warning</b></td><td title=""><b>Unable to check whether the code is in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20240628120000' because the code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM was not found</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Location&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept) (l24&#8203;/c8)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20240628120000' because the code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM was not found</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Location&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l24&#8203;/c8)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Location&#8203;.address&#8203;.line[0]&#8203;.extension[1]&#8203;.value&#8203;.ofType(string) (l54&#8203;/c33)</b></td><td><b>information</b></td><td><b>Reference to retired CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie|20231215120000</b> (from <a href="qa-txservers.html#https://smt.esante.gouv.fr/fhir">https://smt.esante.gouv.fr/fhir<ta>, see <a href="qa-tx.html#l228">log</a>)</td>
    </tr>
 </table>
 <hr/>
@@ -856,10 +865,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Organization&#8203;.contact[0]&#8203;.purpose (l99&#8203;/c8)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'JDV_J221_NatureContact_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR|20240426120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact#06)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Organization&#8203;.contact[0]&#8203;.telecom[0]&#8203;.extension[0] (l127&#8203;/c14)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://interopsante.org/fhir/StructureDefinition/FrContactPoint|1.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl133" class="flip" onclick="flip('l133')">Show Reasoning</span><div id="l133" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://interopsante.org/fhir/StructureDefinition/FrContactPoint|1.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Organization.contact[0].telecom[0].extension[0]: discriminator = true and ('http://interopsante.org/fhir/StructureDefinition/FrContactPointEmailType' in url)</li></ul></div></td>
+     <td><b><a href="">Organization&#8203;.contact[0]&#8203;.telecom[0]&#8203;.extension[0] (l127&#8203;/c14)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://interopsante.org/fhir/StructureDefinition/FrContactPoint|1.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl136" class="flip" onclick="flip('l136')">Show Reasoning</span><div id="l136" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://interopsante.org/fhir/StructureDefinition/FrContactPoint|1.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Organization.contact[0].telecom[0].extension[0]: discriminator = true and ('http://interopsante.org/fhir/StructureDefinition/FrContactPointEmailType' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Organization&#8203;.contact[0]&#8203;.telecom[0]&#8203;.extension[1] (l139&#8203;/c14)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://interopsante.org/fhir/StructureDefinition/FrContactPoint|1.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl134" class="flip" onclick="flip('l134')">Show Reasoning</span><div id="l134" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://interopsante.org/fhir/StructureDefinition/FrContactPoint|1.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Organization.contact[0].telecom[0].extension[1]: discriminator = true and ('http://interopsante.org/fhir/StructureDefinition/FrContactPointEmailType' in url)</li></ul></div></td>
+     <td><b><a href="">Organization&#8203;.contact[0]&#8203;.telecom[0]&#8203;.extension[1] (l139&#8203;/c14)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://interopsante.org/fhir/StructureDefinition/FrContactPoint|1.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl137" class="flip" onclick="flip('l137')">Show Reasoning</span><div id="l137" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://interopsante.org/fhir/StructureDefinition/FrContactPoint|1.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Organization.contact[0].telecom[0].extension[1]: discriminator = true and ('http://interopsante.org/fhir/StructureDefinition/FrContactPointEmailType' in url)</li></ul></div></td>
    </tr>
 </table>
 <hr/>
@@ -2294,9 +2303,6 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 <h2>Terminology_TX_NoValid_16</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="Location-ror-location-exemple.html">fsh-generated/resources/Location-ror-location-exemple.json</a></td><td><b>The value provided ('rue') was not found in the value set 'JDV_J219_TypeVoie_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000), and a code is required from this value set  (error message = The System URI could not be determined for the code 'rue' in the ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000'; The provided code '#rue' was not found in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000')</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
      <td><a href="Organization-ror-organisation-exemple-eg.html">fsh-generated/resources/Organization-ror-organisation-exemple-eg.json</a></td><td><b>The value provided ('rue') was not found in the value set 'JDV_J219_TypeVoie_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000), and a code is required from this value set  (error message = The System URI could not be determined for the code 'rue' in the ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000'; The provided code '#rue' was not found in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000')</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
@@ -2315,9 +2321,6 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="HealthcareService-ror-healthcareservice-exemple-ville.html">fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville.json</a></td><td><b>None of the codings provided are in the value set 'JDV_J225_CanalCommunication_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR|20220826120000), and a coding from this value set is required) (codes = https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel#2)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Location-ror-location-exemple.html">fsh-generated/resources/Location-ror-location-exemple.json</a></td><td><b>None of the codings provided are in the value set 'JDV_J124_Commune' (https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20240628120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune#78646)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Organization-ror-organisation-exemple-eg.html">fsh-generated/resources/Organization-ror-organisation-exemple-eg.json</a></td><td><b>None of the codings provided are in the value set 'JDV_J221_NatureContact_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR|20240426120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact#06)</b></td>

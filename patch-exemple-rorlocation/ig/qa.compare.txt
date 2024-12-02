@@ -1,7 +1,7 @@
 ROR : Validation Results
 =========================================
 
-err = 139, warn = 67, info = 64
+err = 137, warn = 71, info = 65
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 70 / 5 / 0
@@ -14,7 +14,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://int
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 11 / 2 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville : 6 / 2 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple : 2 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple : 0 / 4 / 2
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Organization-ror-organisation-exemple-eg : 12 / 0 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Organization-ror-organization-exemple-ej : 13 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Practitioner-ror-practitioner-exemple : 0 / 0 / 1
@@ -246,8 +246,11 @@ ERROR: HealthcareService/ror-healthcareservice-exemple-ville: HealthcareService.
 ERROR: HealthcareService/ror-healthcareservice-exemple-ville: HealthcareService.location[0]: Unable to resolve resource with reference 'Location/1215'
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror.json ==
 == fsh-generated/resources/Location-ror-location-exemple.json ==
-ERROR: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'JDV_J124_Commune' (https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20240628120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune#78646)
-ERROR: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): The value provided ('rue') was not found in the value set 'JDV_J219_TypeVoie_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000), and a code is required from this value set  (error message = The System URI could not be determined for the code 'rue' in the ValueSet 'https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000'; The provided code '#rue' was not found in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000')
+WARNING: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated
+WARNING: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20240628120000' because the code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM was not found
+WARNING: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept): A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20240628120000' because the code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM was not found
+WARNING: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated
+INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): Reference to retired CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie|20231215120000
 == fsh-generated/resources/Organization-ror-organisation-exemple-eg.json ==
 ERROR: Organization/ror-organisation-exemple-eg: Organization.type[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile Organization.type:statutJuridiqueINSEE - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
 ERROR: Organization/ror-organisation-exemple-eg: Organization.type[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile Organization.type:sousEnsembleAgregatStatutJuridique - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
