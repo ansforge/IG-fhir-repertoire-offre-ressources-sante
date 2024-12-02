@@ -2,7 +2,7 @@ Alias: $TRE-G15-ProfessionSante = https://mos.esante.gouv.fr/NOS/TRE_G15-Profess
 Alias: $TRE-R23-ModeExercice = https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice
 
 Instance: ror-practitionerrole-exemple
-InstanceOf: PractitionerRole
+InstanceOf: RORPractitionerRole
 Usage: #example
 Description: "Exemple basique pour RORPRactitionerRole n'ayant pas forcément de cohérence fonctionnelle"
 

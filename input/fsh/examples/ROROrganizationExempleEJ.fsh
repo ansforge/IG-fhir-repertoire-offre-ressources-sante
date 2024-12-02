@@ -22,7 +22,7 @@ Description: "Exemple basique pour RORPOrganization décrivant une Entité Jurid
 
 * identifier[sirene].value = "921317258"
 * identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 "SIREN"
-* identifier[sirene].system = "http://sirene.fr"
+* identifier[sirene].system = "https://sirene.fr"
 
 * type[statutJuridiqueINSEE] = $TRE-R72-FinessStatutJuridique#72 "Société à responsabilité limitée (SARL)"
 * type[sousEnsembleAgregatStatutJuridique] = $TRE-R69-FinessAgregatStatutJuridiqueNiv2#2200 "Organisme privé à caractère commercial"
