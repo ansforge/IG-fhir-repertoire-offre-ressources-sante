@@ -1,5 +1,5 @@
 Alias: $TRE-R343-FonctionLieu = https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu
-Alias: $TRE-R13-Commune = https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune
+Alias: $TRE-R13-Commune = https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM
 
 Instance: ror-location-exemple
 InstanceOf: RORLocation
@@ -19,6 +19,6 @@ Description: "Exemple basique pour RORLocation n'ayant pas forcément de cohére
 * address.line.extension[0].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
 * address.line.extension[=].valueString = "7"
 * address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType"
-* address.line.extension[=].valueString = "rue"
+* address.line.extension[=].valueString = "RUE"
 * address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase"
 * address.line.extension[=].valueString = "porte de Buc"
