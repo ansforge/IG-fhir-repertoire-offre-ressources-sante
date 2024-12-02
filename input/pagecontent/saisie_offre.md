@@ -71,7 +71,7 @@ Plus de précision sur la spécification FHIR :
 
 ### Exemple de requêtes
 
-#### [spécifique serveur] Scénario 1 : Création de l'entité juridique 
+#### [spécifique serveur] Scénario 1 : Création de l'entité juridique <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -170,7 +170,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 2 : Création de l'entité géographique
+#### [spécifique serveur] Scénario 2 : Création de l'entité géographique <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -343,7 +343,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement
+#### [spécifique serveur] Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -729,7 +729,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### [spécifique serveur] Scénario 4 : Création d'un pôle
+#### [spécifique serveur] Scénario 4 : Création d'un pôle <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -786,7 +786,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 5 : Création d'un service
+#### [spécifique serveur] Scénario 5 : Création d'un service <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -843,7 +843,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 6 : Création d'une unité fonctionnelle
+#### [spécifique serveur] Scénario 6 : Création d'une unité fonctionnelle <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -900,7 +900,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante
+#### [spécifique serveur] Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -1219,7 +1219,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### [spécifique serveur] Scénario 8 : Création d'une offre opérationnelle de ville
+#### [spécifique serveur] Scénario 8 : Création d'une offre opérationnelle de ville <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -1505,7 +1505,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### [spécifique serveur] Scénario 9 : Création d'un professionnel
+#### [spécifique serveur] Scénario 9 : Création d'un professionnel <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -1575,7 +1575,7 @@ POST [BASE]/Practitioner
 }
 ```
 
-#### [spécifique serveur] Scénario 10 : Création d'une situation opérationnelle
+#### [spécifique serveur] Scénario 10 : Création d'une situation opérationnelle <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
