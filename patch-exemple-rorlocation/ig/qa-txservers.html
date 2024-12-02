@@ -11,7 +11,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for ROR</h1>
- <p>Generated Mon Dec 02 18:14:04 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>))</p>
+ <p>Generated Mon Dec 02 18:27:13 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -224,7 +224,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:ce89f1b5-c76b-45f1-8a91-f9c4db8b1828</td>
+    <td>urn:uuid:c0a3ab47-ddc4-417d-9184-60959a1aa2b2</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4</td>
   </tr>
@@ -238,7 +238,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:4939453a-38ae-467c-b1cd-38a60f46518a</td>
+    <td>urn:uuid:84b8ee74-1add-4830-b1d9-22f96f5cb38c</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4</td>
   </tr>
@@ -565,18 +565,18 @@
     <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
     <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>https://mos.esante.gouv.fr/NOS/JDV_J31-AideFinanciere-ROR/FHIR/JDV-J31-AideFinanciere-ROR</td>
+    <td>auth = , candidates=</td>
   </tr>
   <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J31-AideFinanciere-ROR/FHIR/JDV-J31-AideFinanciere-ROR--0|20200424120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>https://mos.esante.gouv.fr/NOS/JDV_J31-AideFinanciere-ROR/FHIR/JDV-J31-AideFinanciere-ROR</td>
+    <td>auth = , candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
@@ -1043,7 +1043,7 @@
 </table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
 <a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 27. Code Systems used: </p>
+<p>Use Count: 28. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -1089,6 +1089,12 @@
   </tr>
   <tr>
     <td>https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://mos.esante.gouv.fr/NOS/JDV_J31-AideFinanciere-ROR/FHIR/JDV-J31-AideFinanciere-ROR</td>
     <td>0</td>
     <td>1</td>
     <td></td>
@@ -1178,7 +1184,7 @@
 </table>
 <h2>Server: https://smt.esante.gouv.fr/fhir</h2>
 <a href="https://smt.esante.gouv.fr/fhir"></a>
-<p>Use Count: 346. Code Systems used: </p>
+<p>Use Count: 344. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -1275,12 +1281,6 @@
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice</td>
     <td>1</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere</td>
-    <td>0</td>
     <td>2</td>
     <td></td>
   </tr>
