@@ -3,7 +3,7 @@ Alias: $TRE-R72-FinessStatutJuridique = https://mos.esante.gouv.fr/NOS/TRE_R72-F
 Alias: $TRE-R69-FinessAgregatStatutJuridiqueNiv2 = https://mos.esante.gouv.fr/NOS/TRE_R69-FinessAgregatStatutJuridiqueNiv2/FHIR/TRE-R69-FinessAgregatStatutJuridiqueNiv2
 
 Instance: ror-organization-exemple-ej
-InstanceOf: Organization
+InstanceOf: ROROrganization
 Usage: #example
 Description: "Exemple basique pour RORPOrganization décrivant une Entité Juridique (EJ) n'ayant pas forcément de cohérence fonctionnelle"
 

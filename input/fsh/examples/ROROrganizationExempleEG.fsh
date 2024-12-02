@@ -6,7 +6,7 @@ Alias: $TRE-R200-CanalCommunication = https://mos.esante.gouv.fr/NOS/TRE_R200-Ca
 Alias: $TRE-R241-AideFinanciere = https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere
 
 Instance: ror-organisation-exemple-eg
-InstanceOf: Organization
+InstanceOf: ROROrganization
 Usage: #example
 Description: "Exemple basique pour RORPOrganization décrivant une Entité Géographique (EG) n'ayant pas forcément de cohérence fonctionnelle"
 
