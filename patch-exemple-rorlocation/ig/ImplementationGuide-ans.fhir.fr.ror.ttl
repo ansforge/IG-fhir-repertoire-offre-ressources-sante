@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-02T18:24:17+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-03T13:53:16+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -605,7 +605,7 @@
          fhir:reference [ fhir:v "Questionnaire/ror-questionnaire-offre-de-ville" ]
        ] ;
        fhir:name [ fhir:v "Consignes fiche de saisie Cabinet de ville de médecine générale" ] ;
-       fhir:description [ fhir:v "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM." ] ;
+       fhir:description [ fhir:v "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle." ] ;
        fhir:example [
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire>
@@ -660,36 +660,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "HealthcareService" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/HealthcareService/ror-healthcareservice-exemple> ;
-         fhir:reference [ fhir:v "HealthcareService/ror-healthcareservice-exemple" ]
-       ] ;
-       fhir:name [ fhir:v "ror-healthcareservice-exemple" ] ;
-       fhir:description [ fhir:v "Exemple basique pour RORHealthcareService n'ayant pas forcément de cohérence fonctionnelle" ] ;
-       fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "HealthcareService" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/HealthcareService/ror-healthcareservice-exemple-ville> ;
-         fhir:reference [ fhir:v "HealthcareService/ror-healthcareservice-exemple-ville" ]
-       ] ;
-       fhir:name [ fhir:v "ror-healthcareservice-exemple-ville" ] ;
-       fhir:description [ fhir:v "Exemple basique pour RORHealthcareService décrivant une offre de ville, mais n'ayant pas forcément de cohérence fonctionnelle" ] ;
-       fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Location" ]
        ] ) ;
        fhir:reference [
@@ -697,69 +667,10 @@
          fhir:reference [ fhir:v "Location/ror-location-exemple" ]
        ] ;
        fhir:name [ fhir:v "ror-location-exemple" ] ;
-       fhir:description [ fhir:v "Exemple basique pour RORLocation n'ayant pas forcément de cohérence fonctionnelle" ] ;
+       fhir:description [ fhir:v "Exemple 'fake' pour RORLocation n'ayant pas forcément de cohérence fonctionnelle." ] ;
        fhir:example [
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Organization" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Organization/ror-organisation-exemple-eg> ;
-         fhir:reference [ fhir:v "Organization/ror-organisation-exemple-eg" ]
-       ] ;
-       fhir:name [ fhir:v "ror-organisation-exemple-eg" ] ;
-       fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Organization" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Organization/ror-organization-exemple-ej> ;
-         fhir:reference [ fhir:v "Organization/ror-organization-exemple-ej" ]
-       ] ;
-       fhir:name [ fhir:v "ror-organization-exemple-ej" ] ;
-       fhir:description [ fhir:v "Exemple basique pour RORPOrganization décrivant une Entité Juridique (EJ) n'ayant pas forcément de cohérence fonctionnelle" ] ;
-       fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Practitioner/ror-practitioner-exemple> ;
-         fhir:reference [ fhir:v "Practitioner/ror-practitioner-exemple" ]
-       ] ;
-       fhir:name [ fhir:v "ror-practitioner-exemple" ] ;
-       fhir:description [ fhir:v "Exemple basique pour RORPRactitioner n'ayant pas forcément de cohérence fonctionnelle" ] ;
-       fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "PractitionerRole" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/PractitionerRole/ror-practitionerrole-exemple> ;
-         fhir:reference [ fhir:v "PractitionerRole/ror-practitionerrole-exemple" ]
-       ] ;
-       fhir:name [ fhir:v "ror-practitionerrole-exemple" ] ;
-       fhir:description [ fhir:v "Exemple basique pour RORPRactitionerRole n'ayant pas forcément de cohérence fonctionnelle" ] ;
-       fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole>
        ]
      ] [
        fhir:extension ( [
@@ -1215,7 +1126,7 @@
          fhir:reference [ fhir:v "Task/ror-task-exemple" ]
        ] ;
        fhir:name [ fhir:v "ror-task-exemple" ] ;
-       fhir:description [ fhir:v "Exemple basique pour RORTask n'ayant pas forcément de cohérence fonctionnelle" ] ;
+       fhir:description [ fhir:v "Exemple 'fake' pour RORTask n'ayant pas forcément de cohérence fonctionnelle" ] ;
        fhir:example [
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task>
