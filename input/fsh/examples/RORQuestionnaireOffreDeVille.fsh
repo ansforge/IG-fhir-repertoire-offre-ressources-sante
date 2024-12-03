@@ -1,6 +1,7 @@
 Instance: ror-questionnaire-offre-de-ville
 InstanceOf: RORQuestionnaire
 Usage: #example
+Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle."
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
 * version = "0.1"

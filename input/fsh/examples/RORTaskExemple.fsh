@@ -6,7 +6,7 @@ Alias: $input-task-ror-codesystem = https://interop.esante.gouv.fr/ig/fhir/ror/C
 Instance: ror-task-exemple
 InstanceOf: RORTask
 Usage: #example
-Description: "Exemple basique pour RORTask n'ayant pas forcément de cohérence fonctionnelle"
+Description: "Exemple 'fake' pour RORTask n'ayant pas forcément de cohérence fonctionnelle"
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"
 * focus.type = "Organization"
