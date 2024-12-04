@@ -23,6 +23,7 @@ Description: "Exemple basique pour RORHealthcareService n'ayant pas forcément d
 * specialty[operationalActivity] = $TRE-R211-ActiviteOperationnelle#183 "Traitement neurochirurgical de la douleur"
 
 * characteristic[careMode] = $TRE-R213-ModePriseEnCharge#28 "Hospitalisation complète (HC)"
+* characteristic[careMode].id = 
 * characteristic[specificCompetence] = $TRE-R210-ActeSpecifique#0320 "Neuromodulation sacrée"
 * availableTime[0].allDay = true
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
