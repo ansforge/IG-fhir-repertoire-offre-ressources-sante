@@ -11,7 +11,7 @@
   <name value="ROR"/>
   <title value="Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"/>
   <status value="draft"/>
-  <date value="2024-12-03T17:40:42+00:00"/>
+  <date value="2024-12-04T09:18:19+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -568,6 +568,50 @@
       <name value="ROR-Consommateur"/>
       <description value="Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="HealthcareService"/>
+      </extension>
+      <reference>
+        <reference value="HealthcareService/ror-healthcareservice-exemple"/>
+      </reference>
+      <name value="ror-healthcareservice-exemple"/>
+      <description value="Exemple basique pour RORHealthcareService n'ayant pas forcément de cohérence fonctionnelle"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="HealthcareService"/>
+      </extension>
+      <reference>
+        <reference value="HealthcareService/ror-healthcareservice-exemple-ville"/>
+      </reference>
+      <name value="ror-healthcareservice-exemple-ville"/>
+      <description value="Exemple basique pour RORHealthcareService décrivant une offre de ville, mais n'ayant pas forcément de cohérence fonctionnelle"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ror-practitioner-exemple"/>
+      </reference>
+      <name value="ror-practitioner-exemple"/>
+      <description value="Exemple basique pour RORPRactitioner n'ayant pas forcément de cohérence fonctionnelle"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/ror-practitionerrole-exemple"/>
+      </reference>
+      <name value="ror-practitionerrole-exemple"/>
+      <description value="Exemple basique pour RORPRactitionerRole n'ayant pas forcément de cohérence fonctionnelle"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

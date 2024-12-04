@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "ror-practitioner-exemple",
+  "meta" : {
+    "lastUpdated" : "2023-12-20T10:00:00+01:00",
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ror-practitioner-exemple</b></p><a name=\"ror-practitioner-exemple\"> </a><a name=\"hcror-practitioner-exemple\"> </a><a name=\"ror-practitioner-exemple-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-practitioner.html\">RORPractitioner</a></p></div><p><b>RORMetaCreationDate</b>: 2023-12-09 14:30:00+0100</p><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.1</code>/11111573474</p><p><b>name</b>: Cyndi CHANMET </p><p><b>telecom</b>: <a href=\"mailto:cyndi.chanmet@lifen.mssante.fr\">cyndi.chanmet@lifen.mssante.fr</a></p><p><b>gender</b>: Female</p></div>"
+  },
+  "extension" : [{
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date",
+    "valueDateTime" : "2023-12-09T14:30:00+01:00"
+  }],
+  "identifier" : [{
+    "system" : "urn:oid:1.2.250.1.71.4.2.1",
+    "value" : "11111573474"
+  }],
+  "name" : [{
+    "family" : "CHANMET",
+    "given" : ["Cyndi"]
+  }],
+  "telecom" : [{
+    "extension" : [{
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication",
+          "code" : "3",
+          "display" : "Courrier électronique"
+        }]
+      }
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite",
+          "code" : "2",
+          "display" : "Accès restreint"
+        }]
+      }
+    }],
+    "system" : "email",
+    "value" : "cyndi.chanmet@lifen.mssante.fr"
+  }],
+  "gender" : "female"
+}
