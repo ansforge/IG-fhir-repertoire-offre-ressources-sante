@@ -37,57 +37,57 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains
-    idNatSt 0..1 MS and
-    finess 0..1 MS and
-    sirene 0..1 MS and
-    rppsRang 0..1 MS and
-    numSIRET 0..1 MS and 
-    identifierOI 0..1 MS and
-    adeliRang 0..1 MS
+    idNatSt 0..1 and
+    finess 0..1 and
+    sirene 0..1 and
+    rppsRang 0..1 and
+    numSIRET 0..1 and 
+    identifierOI 0..1 and
+    adeliRang 0..1
 * identifier[idNatSt] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
-* identifier[idNatSt].type 1..1 MS
+* identifier[idNatSt].type 1..1
 * identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 
 * identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
 
 * identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
-* identifier[finess].type 1..1 MS
+* identifier[finess].type 1..1
 * identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
 * identifier[finess].system = "https://finess.esante.gouv.fr"
 
 * identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
-* identifier[sirene].type 1..1 MS
+* identifier[sirene].type 1..1
 * identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
 * identifier[sirene].system = "https://sirene.fr"
 
 * identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
-* identifier[rppsRang].type 1..1 MS
+* identifier[rppsRang].type 1..1
 * identifier[rppsRang].type = $TRE-G07-TypeIdentifiantStructure#4
 * identifier[rppsRang].system = "https://rppsrang.esante.gouv.fr"
 
 * identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
-* identifier[numSIRET].type 1..1 MS
+* identifier[numSIRET].type 1..1
 * identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
 * identifier[numSIRET].system = "https://sirene.fr"
 * identifier[numSIRET].system ^short = "https://mos.esante.gouv.fr/6.html#_4d544200-4d26-4cc5-8294-c862458f60d8"
 
 * identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
-* identifier[identifierOI].type 1..1 MS
+* identifier[identifierOI].type 1..1
 * identifier[identifierOI].type = $TRE-R345-TypeIdentifiantAutre#42
 * identifier[identifierOI].system = "https://oi.esante.gouv.fr"
 
 * identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
-* identifier[adeliRang].type 1..1 MS
+* identifier[adeliRang].type 1..1
 * identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
 * identifier[adeliRang].system = "https://adelirang.esante.gouv.fr"
 
 // Slice déjà définie dans FrOrganization
 * type MS
 * type contains
-    statutJuridiqueINSEE 0..1 MS and
-    sousEnsembleAgregatStatutJuridique 0..1 MS and
-    categorieEtablissement 0..1 MS and
-    sphParticipation 0..1 MS and
-    OIType 0..1 MS
+    statutJuridiqueINSEE 0..1 and
+    sousEnsembleAgregatStatutJuridique 0..1 and
+    categorieEtablissement 0..1 and
+    sphParticipation 0..1 and
+    OIType 0..1
 * type[statutJuridiqueINSEE] ^short = "statutJuridique (EJ) : Situation juridique de l’établissement"
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
 * type[sousEnsembleAgregatStatutJuridique] ^short = "sousEnsembleAgregatStatutJuridique (EJ) : Deuxième niveau dans l’arborescence des statuts juridiques"

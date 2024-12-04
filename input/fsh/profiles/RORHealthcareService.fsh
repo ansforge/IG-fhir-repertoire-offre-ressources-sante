@@ -79,18 +79,18 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic ^slicing.discriminator[=].path = "extension(https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type)"
 * characteristic ^slicing.rules = #open
 * characteristic contains
-    receptionType 0..1 MS and
-    careMode 1..1 MS and
-    receptionModality 0..* MS and
-    managementType 0..* MS and
-    specificAct 0..* MS and
-    outsideOfficeAct 0..* MS and
-    takingCareSpeciality 0..* MS and
-    annualOpening 0..1 MS and
-    ressourceProfession 0..* MS and
-    specificCompetence 0..* MS and
-    expertiseLevel 0..* MS and
-    temporalityStopService 0..1 MS
+    receptionType 0..1 and
+    careMode 1..1 and
+    receptionModality 0..* and
+    managementType 0..* and
+    specificAct 0..* and
+    outsideOfficeAct 0..* and
+    takingCareSpeciality 0..* and
+    annualOpening 0..1 and
+    ressourceProfession 0..* and
+    specificCompetence 0..* and
+    expertiseLevel 0..* and
+    temporalityStopService 0..1
 
 * characteristic[receptionType] ^short = "temporaliteAccueil (OffreOperationnelle) : Précision sur le mode de prise en charge"
 * characteristic[receptionType] from $JDV-J30-TemporaliteAccueil-ROR (required)
@@ -148,8 +148,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * specialty ^slicing.discriminator.path = "coding.system" 
 * specialty ^slicing.rules = #open
 * specialty contains
-    operationalActivity 1..1 MS and
-    operationalActivityFamily 0..1 MS
+    operationalActivity 1..1 and
+    operationalActivityFamily 0..1
 * specialty[operationalActivity] ^short = "activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
 * specialty[operationalActivity] from $JDV-J17-ActiviteOperationnelle-ROR
 * specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne"
