@@ -67,16 +67,16 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 * specialty ^slicing.discriminator.path = "url"
 * specialty ^slicing.rules = #open
 * specialty contains
-    expertiseType 1..1 MS and
-    specialty 0..1 MS and
-    competence 0..1 MS and
-    exclusiveCompetence 0..1 MS and
-    specificOrientation 0..1 MS and
-    expertiseCapacity 0..1 MS and
-    qualificationPAC 0..1 MS and
-    nonQualifyingDESC 0..1 MS and
-    supplementaryExerciseRight 0..1 MS and
-    specificCompetence 0..* MS
+    expertiseType 1..1 and
+    specialty 0..1 and
+    competence 0..1 and
+    exclusiveCompetence 0..1 and
+    specificOrientation 0..1 and
+    expertiseCapacity 0..1 and
+    qualificationPAC 0..1 and
+    nonQualifyingDESC 0..1 and
+    supplementaryExerciseRight 0..1 and
+    specificCompetence 0..*
 * specialty[expertiseType] ^short = "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)"
 * specialty[expertiseType] from $JDV-J209-TypeSavoirFaire-ROR (required)
 * specialty[specialty] ^short = "specialite (SavoirFaire) : Spécialité ordinale"
