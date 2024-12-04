@@ -7,7 +7,7 @@ Usage: #definition
 * code = #notavailable-closing-reopeningdate
 * base = #HealthcareService
 * type = #date
-* expression = "HealthcareService.notAvailable:closingReopeningDate.during"
+* expression = "HealthcareService.notAvailable.where(id='closingReopeningDate').during"
 * comparator[0] = #eq
 * comparator[+] = #ne
 * comparator[+] = #gt
