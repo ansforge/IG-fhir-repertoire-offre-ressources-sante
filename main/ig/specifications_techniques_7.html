@@ -51,7 +51,12 @@
   </div>
   <div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
     <a no-external="true" id="hl7-logo" href="https://esante.gouv.fr/"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
+    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
@@ -328,8 +333,8 @@ Plus de précision sur la spécification FHIR :
   <li><a href="search_param.html#structuredefinition-ror-healthcareservice">StructureDefinition-ror-healthcareservice</a> (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">focus:HealthcareService:[NOM CRITERE]</code>)</li>
   <li><a href="search_param.html#structuredefinition-ror-organization">Structuredefinition-ror-organization</a> (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">focus:Organization:[NOM CRITERE]</code>)</li>
   <li><a href="search_param.html#structuredefinition-ror-location">StructureDefinition-ror-location</a> (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">focus:Location:[NOM CRITERE]</code>)</li>
-  <li><a name="l623">​</a><a href="search_param.html#structuredefinition-ror-practioner">StructureDefinition-ror-practioner</a> (critères de recherche applicables à la ressource ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">focus:Practitioner:[NOM CRITERE]</code>)</li>
-  <li><a name="l631">​</a><a href="search_param.html#structuredefinition-ror-practionerrole">StructureDefinition-ror-practionerrole</a> (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">focus:PractitionerRole:[NOM CRITERE]</code>)</li>
+  <li><a name="l629">​</a><a href="search_param.html#structuredefinition-ror-practioner">StructureDefinition-ror-practioner</a> (critères de recherche applicables à la ressource ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">focus:Practitioner:[NOM CRITERE]</code>)</li>
+  <li><a name="l637">​</a><a href="search_param.html#structuredefinition-ror-practionerrole">StructureDefinition-ror-practionerrole</a> (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">focus:PractitionerRole:[NOM CRITERE]</code>)</li>
 </ul>
 
 <p><strong>En complément, vous pouvez accéder aux Capability Statements <a href="artifacts.html#behavior-capability-statements">ici</a></strong></p>
@@ -438,7 +443,7 @@ GET <span class="o">[</span>BASE]/Task?focus:Organization:_tag<span class="o">=<
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 2, 2024 10:17+0000">2024-12-02</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 4, 2024 15:03+0000">2024-12-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
