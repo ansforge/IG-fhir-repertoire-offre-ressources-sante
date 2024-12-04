@@ -18,8 +18,8 @@ Description: "Exemple basique pour RORHealthcareService décrivant une offre de 
 * location = Reference(Location/1215)
 * identifier.value = "ZZZ"
 * type = $TRE-R227-ChampActivite#05 "Ville"
-* specialty = $TRE-R211-ActiviteOperationnelle#437 "Médecine générale"
-* characteristic = $TRE-R213-ModePriseEnCharge#32 "Consultation (CS)"
+* specialty[operationalActivity] = $TRE-R211-ActiviteOperationnelle#437 "Médecine générale"
+* characteristic[careMode] = $TRE-R213-ModePriseEnCharge#32 "Consultation (CS)"
 * availableTime[0].availableStartTime = "09:00:00"
 * availableTime[=].availableEndTime = "19:00:00"
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"

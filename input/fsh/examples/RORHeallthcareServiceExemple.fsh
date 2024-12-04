@@ -20,10 +20,10 @@ Description: "Exemple basique pour RORHealthcareService n'ayant pas forcément d
 * location = Reference(Location/5253)
 * identifier.value = "ZZZ"
 * type = $TRE-R227-ChampActivite#01 "Médecine, Chirurgie, Obstétrique (MCO)"
-* specialty[0] = $TRE-R211-ActiviteOperationnelle#183 "Traitement neurochirurgical de la douleur"
-* specialty[+] = $TRE-R211-ActiviteOperationnelle#440 "Chirurgie intracrânienne"
-* characteristic[0] = $TRE-R213-ModePriseEnCharge#28 "Hospitalisation complète (HC)"
-* characteristic[+] = $TRE-R210-ActeSpecifique#0320 "Neuromodulation sacrée"
+* specialty[operationalActivity] = $TRE-R211-ActiviteOperationnelle#183 "Traitement neurochirurgical de la douleur"
+
+* characteristic[careMode] = $TRE-R213-ModePriseEnCharge#28 "Hospitalisation complète (HC)"
+* characteristic[specificCompetence] = $TRE-R210-ActeSpecifique#0320 "Neuromodulation sacrée"
 * availableTime[0].allDay = true
 * availableTime[=].extension[0].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"
 * availableTime[=].extension[=].valueCodeableConcept = $TRE-R252-TypeHoraire#02 "Horaire de fonctionnement"
