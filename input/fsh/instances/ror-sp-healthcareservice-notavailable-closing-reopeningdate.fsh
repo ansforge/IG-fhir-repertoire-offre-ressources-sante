@@ -7,7 +7,7 @@ Usage: #definition
 * code = #notavailable-closing-reopeningdate
 * base = #HealthcareService
 * type = #date
-* expression = "HealthcareService.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date').extension.where(url='HealthcareService.availableTime').value.as(Period)"
+* expression = "HealthcareService.notAvailable.where(id='closingReopeningDate').during"
 * comparator[0] = #eq
 * comparator[+] = #ne
 * comparator[+] = #gt
