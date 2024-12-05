@@ -11,8 +11,8 @@ Alias: $TRE-R332-GenreCapacite = https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCa
 Alias: $TRE-R354-TypeIdentifiantRessourceOperationnelle = https://mos.esante.gouv.fr/NOS/TRE_R354-TypeIdentifiantRessourceOperationnelle/FHIR/TRE-R354-TypeIdentifiantRessourceOperationnelle
 Alias: $TRE-R343-FonctionLieu = https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu
 
-Instance: 
-InstanceOf: ror-location-exemple-1
+Instance: ror-location-exemple-1
+InstanceOf: RORLocation
 Usage: #example
 * meta
   * lastUpdated = "2024-12-05T01:42:39.000+00:00"
