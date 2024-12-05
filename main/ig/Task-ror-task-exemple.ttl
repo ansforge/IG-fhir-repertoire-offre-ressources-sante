@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/Task/ror-task-exemple> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ror-task-exemple"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ror-task-exemple</b></p><a name=\"ror-task-exemple\"> </a><a name=\"hcror-task-exemple\"> </a><a name=\"ror-task-exemple-fr-FR\"> </a><p><b>status</b>: In Progress</p><p><b>businessStatus</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie 02}\">À traiter</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie 06}\">Exactitude</span></p><p><b>description</b>: Ici la catégorie d'établissement n'est pas la bonne</p><p><b>focus</b>: Identifier: 1910800002</p><p><b>authoredOn</b>: 2024-01-03</p><p><b>lastModified</b>: 2024-01-04</p><p><b>reasonCode</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie COR}\">Correction</span></p><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem systemRequester}\">systemRequester</span></p><p><b>value</b>: IHM</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes:{https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem pathElementError}\">pathElementError</span></p><p><b>value</b>: <span title=\"text/fhirpath\"><code>Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')</code></span></p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "in-progress"] ; # 
+  fhir:businessStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "02" ] ;
+       fhir:display [ fhir:v "À traiter" ]
+     ] )
+  ] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "06" ] ;
+       fhir:display [ fhir:v "Exactitude" ]
+     ] )
+  ] ; # 
+  fhir:description [ fhir:v "Ici la catégorie d'établissement n'est pas la bonne"] ; # 
+  fhir:focus [
+     fhir:type [ fhir:v "Organization"^^xsd:anyURI ] ;
+     fhir:identifier [
+       fhir:value [ fhir:v "1910800002" ]
+     ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2024-01-03"^^xsd:date] ; # 
+  fhir:lastModified [ fhir:v "2024-01-04"^^xsd:date] ; # 
+  fhir:reasonCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "COR" ] ;
+       fhir:display [ fhir:v "Correction" ]
+     ] )
+  ] ; # 
+  fhir:input ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "systemRequester" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "IHM" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "pathElementError" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Expression ;
+       fhir:language [ fhir:v "text/fhirpath" ] ;
+       fhir:expression [ fhir:v "Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

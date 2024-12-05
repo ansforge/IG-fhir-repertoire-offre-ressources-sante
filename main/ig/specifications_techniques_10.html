@@ -345,72 +345,74 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location</span><span class="w"> 
-</span><span class="p">{</span><span class="w">	
-</span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> 
-		</span><span class="p">{</span><span class="w"> 
-			</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> 
-				</span><span class="p">{</span><span class="w">
-					</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu"</span><span class="p">,</span><span class="w">
-					</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
-					</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hébergement"</span><span class="w">
-                </span><span class="p">}</span><span class="w"> 
-			</span><span class="p">]</span><span class="w"> 
-		</span><span class="p">}</span><span class="w"> 
-	</span><span class="p">],</span><span class="w">
-	</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ror-location-exemple"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-20T10:00:00+01:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extensions"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"div"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div xmlns=</span><span class="se">\"</span><span class="s2">http://www.w3.org/1999/xhtml</span><span class="se">\"</span><span class="s2">&gt;&lt;p class=</span><span class="se">\"</span><span class="s2">res-header-id</span><span class="se">\"</span><span class="s2">&gt;&lt;b&gt;Generated Narrative: Location ror-location-exemple&lt;/b&gt;&lt;/p&gt;&lt;a name=</span><span class="se">\"</span><span class="s2">ror-location-exemple</span><span class="se">\"</span><span class="s2">&gt; &lt;/a&gt;&lt;a name=</span><span class="se">\"</span><span class="s2">hcror-location-exemple</span><span class="se">\"</span><span class="s2">&gt; &lt;/a&gt;&lt;a name=</span><span class="se">\"</span><span class="s2">ror-location-exemple-fr-FR</span><span class="se">\"</span><span class="s2">&gt; &lt;/a&gt;&lt;div style=</span><span class="se">\"</span><span class="s2">display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%</span><span class="se">\"</span><span class="s2">&gt;&lt;p style=</span><span class="se">\"</span><span class="s2">margin-bottom: 0px</span><span class="se">\"</span><span class="s2">&gt;Last updated: 2023-12-20 10:00:00+0100&lt;/p&gt;&lt;p style=</span><span class="se">\"</span><span class="s2">margin-bottom: 0px</span><span class="se">\"</span><span class="s2">&gt;Profile: &lt;a href=</span><span class="se">\"</span><span class="s2">StructureDefinition-ror-location.html</span><span class="se">\"</span><span class="s2">&gt;RORLocation&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;RORCommuneCog&lt;/b&gt;: &lt;span title=</span><span class="se">\"</span><span class="s2">Codes:{https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM 78646}</span><span class="se">\"</span><span class="s2">&gt;Versailles&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORMetaCreationDate&lt;/b&gt;: 2022-01-01 00:00:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=</span><span class="se">\"</span><span class="s2">Codes:{https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu 001}</span><span class="se">\"</span><span class="s2">&gt;Hébergement&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 7 rue porte de Buc Versailles 78000 &lt;/p&gt;&lt;/div&gt;"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-			</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"</span><span class="p">,</span><span class="w">
-			</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-				</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-					</span><span class="p">{</span><span class="w">
-						</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune"</span><span class="p">,</span><span class="w">
-						</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78646"</span><span class="p">,</span><span class="w">
-						</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Versailles"</span><span class="w">
-					</span><span class="p">}</span><span class="w">
-				</span><span class="p">]</span><span class="w">	
-			</span><span class="p">}</span><span class="w">
-		</span><span class="p">}</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78646"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Versailles"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"valueDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-01T00:00:00Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
-	</span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Versailles"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hébergement"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"line"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-			</span><span class="s2">"7 rue porte de Buc"</span><span class="p">,</span><span class="w">
-			</span><span class="s2">"78000 Versailles"</span><span class="w">
+            </span><span class="s2">"7 rue porte de Buc"</span><span class="w">
         </span><span class="p">],</span><span class="w">
         </span><span class="nl">"_line"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-			</span><span class="p">{</span><span class="w">
-            	</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-					</span><span class="p">{</span><span class="w">
-						</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location.address.line.extension:houseNumber"</span><span class="p">,</span><span class="w">
-						</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"</span><span class="p">,</span><span class="w">
-						</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="w">
-					</span><span class="p">}</span><span class="w">
-				</span><span class="p">]</span><span class="w">
-			</span><span class="p">},</span><span class="w"> 
-			</span><span class="p">{</span><span class="w">
-				</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-					</span><span class="p">{</span><span class="w">
-						</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location.address.line.extension:streetNameType"</span><span class="p">,</span><span class="w">
-						</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType"</span><span class="p">,</span><span class="w">
-						</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rue"</span><span class="w">
-					</span><span class="p">}</span><span class="w">
-				</span><span class="p">]</span><span class="w">
-			</span><span class="p">},</span><span class="w">
-                        </span><span class="p">{</span><span class="w">
-				</span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-					</span><span class="p">{</span><span class="w">
-						</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location.address.line.extension:streetNameBase"</span><span class="p">,</span><span class="w">
-						</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase"</span><span class="p">,</span><span class="w">
-						</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"porte de Buc"</span><span class="w">
-					</span><span class="p">}</span><span class="w">
-				</span><span class="p">]</span><span class="w">
-			</span><span class="p">}</span><span class="w">
-		</span><span class="p">]</span><span class="w">
-	</span><span class="p">}</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RUE"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"porte de Buc"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Versailles"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78000"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-
 </span></code></pre></div></div>
 
 <ul>
@@ -1480,7 +1482,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 4, 2024 15:03+0000">2024-12-04</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 5, 2024 09:03+0000">2024-12-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

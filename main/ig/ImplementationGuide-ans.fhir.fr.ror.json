@@ -10,7 +10,7 @@
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "draft",
-  "date" : "2024-12-04T15:03:14+00:00",
+  "date" : "2024-12-05T09:03:52+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -690,7 +690,7 @@
         "reference" : "Questionnaire/ror-questionnaire-offre-de-ville"
       },
       "name" : "Consignes fiche de saisie Cabinet de ville de médecine générale",
-      "description" : "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.",
+      "description" : "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle.",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
     },
     {
@@ -739,6 +739,18 @@
       "name" : "ROR-Consommateur",
       "description" : "Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/ror-location-exemple"
+      },
+      "name" : "ror-location-exemple",
+      "description" : "Exemple 'fake' pour RORLocation n'ayant pas forcément de cohérence fonctionnelle.",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"
     },
     {
       "extension" : [{
@@ -1183,6 +1195,18 @@
       "name" : "ror-sp-temporary-assignement",
       "description" : "Paramètre de recherche pour récupérer les affectations temporaires",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ror-task-exemple"
+      },
+      "name" : "ror-task-exemple",
+      "description" : "Exemple 'fake' pour RORTask n'ayant pas forcément de cohérence fonctionnelle",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"
     },
     {
       "extension" : [{

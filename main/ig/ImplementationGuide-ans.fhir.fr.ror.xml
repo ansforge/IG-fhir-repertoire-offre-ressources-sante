@@ -11,7 +11,7 @@
   <name value="ROR"/>
   <title value="Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"/>
   <status value="draft"/>
-  <date value="2024-12-04T15:03:14+00:00"/>
+  <date value="2024-12-05T09:03:52+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -523,7 +523,7 @@
         <reference value="Questionnaire/ror-questionnaire-offre-de-ville"/>
       </reference>
       <name value="Consignes fiche de saisie Cabinet de ville de médecine générale"/>
-      <description value="Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.&#xA; Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM."/>
+      <description value="Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle."/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"/>
     </resource>
     <resource>
@@ -568,6 +568,17 @@
       <name value="ROR-Consommateur"/>
       <description value="Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/ror-location-exemple"/>
+      </reference>
+      <name value="ror-location-exemple"/>
+      <description value="Exemple 'fake' pour RORLocation n'ayant pas forcément de cohérence fonctionnelle."/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -975,6 +986,17 @@
       <name value="ror-sp-temporary-assignement"/>
       <description value="Paramètre de recherche pour récupérer les affectations temporaires"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/ror-task-exemple"/>
+      </reference>
+      <name value="ror-task-exemple"/>
+      <description value="Exemple 'fake' pour RORTask n'ayant pas forcément de cohérence fonctionnelle"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
