@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-04T13:30:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-05T17:47:14+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -686,6 +686,20 @@
        fhir:example [
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Location" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Location/ror-location-exemple-1> ;
+         fhir:reference [ fhir:v "Location/ror-location-exemple-1" ]
+       ] ;
+       fhir:name [ fhir:v "ror-location-exemple-1" ] ;
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location>
        ]
      ] [
        fhir:extension ( [
