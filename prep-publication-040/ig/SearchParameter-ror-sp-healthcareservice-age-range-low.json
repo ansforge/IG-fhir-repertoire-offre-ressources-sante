@@ -1,0 +1,42 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "ror-sp-healthcareservice-age-range-low",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter ror-sp-healthcareservice-age-range-low</b></p><a name=\"ror-sp-healthcareservice-age-range-low\"> </a><a name=\"hcror-sp-healthcareservice-age-range-low\"> </a><a name=\"ror-sp-healthcareservice-age-range-low-fr-FR\"> </a><h2>RORHealthcareServiceAgeRangeLow</h2><p>Parameter <code>age-range-low</code>:<code>quantity</code></p><div><p>Paramètre de recherche décrivant l'age minimum de la patientèle</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html\">HealthcareService</a></td></tr><tr><td>Expression</td><td><code>HealthcareService.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type').extension.where(url = 'ageRange').value.as(Range).low</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr><tr><td>Comparators</td><td>Allowed: eq, ne, gt, lt, ge, le, sa, eb, ap</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-age-range-low",
+  "version" : "0.4.0-snapshot-2",
+  "name" : "RORHealthcareServiceAgeRangeLow",
+  "status" : "active",
+  "date" : "2024-12-05T14:59:16+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Paramètre de recherche décrivant l'age minimum de la patientèle",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "code" : "age-range-low",
+  "base" : ["HealthcareService"],
+  "type" : "quantity",
+  "expression" : "HealthcareService.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type').extension.where(url = 'ageRange').value.as(Range).low",
+  "comparator" : ["eq",
+  "ne",
+  "gt",
+  "lt",
+  "ge",
+  "le",
+  "sa",
+  "eb",
+  "ap"]
+}
