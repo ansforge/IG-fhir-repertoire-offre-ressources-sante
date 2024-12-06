@@ -37,18 +37,15 @@ Usage: #example
   * value = "ZZZ"
 * providedBy = Reference(Organization/5958)
 * type = $TRE-R227-ChampActivite#01 "Médecine, Chirurgie, Obstétrique (MCO)"
-* specialty[operationalActivity]
-    * coding.system = $TRE-R211-ActiviteOperationnelle
-    * code = #183
-    * display = "Traitement neurochirurgical de la douleur"
+* specialty[operationalActivity].coding.system = $TRE-R211-ActiviteOperationnelle
+* specialty[operationalActivity].coding.code = #183
+* specialty[operationalActivity].coding.display = "Traitement neurochirurgical de la douleur"
 * location = Reference(Location/5253)
 * name = "Hospitalisation complète de Neurochirurgie"
-* characteristic[careMode] 
-    * coding.system = $TRE-R213-ModePriseEnCharge
-    * code = #28
-    * display = "Hospitalisation complète (HC)"
-* characteristic[specificAct] 
-    * coding.system = $TRE-R210-ActeSpecifique
-    * code = #0320
-    * display = "Neuromodulation sacrée"
-    * extension[ror-act-type].valueCode = #specificAct
+* characteristic[careMode].coding.system = $TRE-R213-ModePriseEnCharge
+* characteristic[careMode].coding.code = #28
+* characteristic[careMode].coding.display = "Hospitalisation complète (HC)"
+* characteristic[specificAct].coding.system = $TRE-R210-ActeSpecifique
+* characteristic[specificAct].coding.code = #0320
+* characteristic[specificAct].coding.display = "Neuromodulation sacrée"
+* characteristic[specificAct].extension[ror-act-type].valueCode = #specificAct
