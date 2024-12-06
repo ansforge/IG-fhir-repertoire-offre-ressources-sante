@@ -79,6 +79,8 @@ Plus de précision sur la spécification FHIR :
 
 **Requête :**
 
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
+
 ```json
 POST [BASE]/Organization
 {	
@@ -179,6 +181,8 @@ POST [BASE]/Organization
 **Prérequis :** L'entité juridique dont fait partie l'entité géographique à créer existe et son identifiant est connu (1111).
 
 **Requête :**
+
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
 
 ```json
 POST [BASE]/Organization
@@ -352,6 +356,8 @@ POST [BASE]/Organization
 **Prérequis :** L'établissement dont fait partie l'offre opérationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (2424 et 654).
 
 **Requête :**
+
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
 
 ```json
 POST [BASE]/HealthcareService
@@ -739,6 +745,8 @@ POST [BASE]/HealthcareService
 
 **Requête :**
 
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
+
 ```json
 POST [BASE]/Organization
 {	
@@ -795,6 +803,8 @@ POST [BASE]/Organization
 **Prérequis :** L'établissement dont fait partie le service à créer existe et son identifiant est connu (3537).
 
 **Requête :**
+
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
 
 ```json
 POST [BASE]/Organization
@@ -853,6 +863,8 @@ POST [BASE]/Organization
 
 **Requête :**
 
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
+
 ```json
 POST [BASE]/Organization
 {	
@@ -909,6 +921,8 @@ POST [BASE]/Organization
 **Prérequis :** L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (5958 et 5253).
 
 **Requête :**
+
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
 
 ```json
 POST [BASE]/HealthcareService
@@ -1229,6 +1243,8 @@ POST [BASE]/HealthcareService
 
 **Requête :**
 
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
+
 ```json
 POST [BASE]/HealthcareService
 {	
@@ -1513,6 +1529,8 @@ POST [BASE]/HealthcareService
 
 **Requête :**
 
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
+
 ```json
 POST [BASE]/Practitioner
 {	
@@ -1584,6 +1602,8 @@ POST [BASE]/Practitioner
 **Prérequis :** Le professionnel et l'offre opérationnelle liés à la siutation opérationnelle à créer existent et leurs identifiants respectifs sont connus (2524 et 9597).
 
 **Requête :**
+
+N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
 
 ```json
 POST [BASE]/PractitionerRole
