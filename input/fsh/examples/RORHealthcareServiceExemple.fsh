@@ -37,7 +37,7 @@ Usage: #example
   * value = "ZZZ"
 * providedBy = Reference(Organization/5958)
 * type = $TRE-R227-ChampActivite#01 "Médecine, Chirurgie, Obstétrique (MCO)"
-*specialty[operationalActivity]
+* specialty[operationalActivity]
     * coding.system = $TRE-R211-ActiviteOperationnelle
     * code = #183
     * display = "Traitement neurochirurgical de la douleur"
