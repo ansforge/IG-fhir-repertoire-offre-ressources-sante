@@ -1,17 +1,17 @@
 ROR : Validation Results
 =========================================
 
-err = 113, warn = 74, info = 59
+err = 112, warn = 73, info = 59
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
- Build Errors : 71 / 6 / 0
+ Build Errors : 71 / 7 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 6 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 6 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-act-type-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-input-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 1 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 9 / 2 / 3
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 8 / 0 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville : 6 / 2 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple-1 : 4 / 4 / 2
@@ -115,6 +115,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://int
 </table>
 == n/a ==
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/code-region-territorial-division-ror-valueset.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource HealthcareService/ror-healthcareservice-exemple.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/ror-location-exemple-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/output/Questionnaire-ror-questionnaire-offre-de-ville.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 343, column 1887: The link 'StructureDefinition-ror-organization.html#Organization.identifier:idNatSt.value' for "Organization.identifier:idNatSt.value" cannot be resolved (valid targets: 1593 targets)
 ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/output/Questionnaire-ror-questionnaire-offre-de-ville.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 344, column 1835: The link 'StructureDefinition-ror-organization.html#Organization.identifier:finess.value' for "Organization.identifier:finess.value" cannot be resolved (valid targets: 1593 targets)
@@ -223,9 +224,6 @@ ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.charac
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.characteristic[1]: Slicing cannot be evaluated: Error processing path expression for discriminator: Error @1, 1: The token : is not expected here - either a "," or a ")" expected (src = 'extension(https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type)')
 INFORMATION: HealthcareService/ror-healthcareservice-exemple: HealthcareService: HealthcareService.specialty:operationalActivity: Found 0 matches, but unable to check minimum required (HealthcareService.specialty) due to lack of slicing validation (from https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2)
 INFORMATION: HealthcareService/ror-healthcareservice-exemple: HealthcareService: HealthcareService.characteristic:careMode: Found 0 matches, but unable to check minimum required (HealthcareService.characteristic) due to lack of slicing validation (from https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2)
-WARNING: HealthcareService/ror-healthcareservice-exemple: HealthcareService.extension[3].extension[2].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel' could not be found, so the code cannot be validated
-ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.extension[3].extension[2].extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'JDV_J225_CanalCommunication_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR|20220826120000), and a coding from this value set is required) (codes = https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel#2)
-WARNING: HealthcareService/ror-healthcareservice-exemple: HealthcareService.extension[3].extension[2].extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel' could not be found, so the code cannot be validated
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.providedBy: Unable to resolve resource with reference 'Organization/5958'
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.type[0].coding[0].display: Wrong Display Name 'Médecine, Chirurgie, Obstétrique (MCO)' for https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite#01. Valid display is 'Médecine Chirurgie Obstétrique (MCO)' (en) (for the language(s) 'en')
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.type[0]: None of the codings provided are in the value set 'JDV_J20_ChampActivite_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR|20231030120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite#01)
