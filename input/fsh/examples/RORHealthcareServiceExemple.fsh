@@ -33,6 +33,44 @@ Usage: #example
     * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level"
     * valueCodeableConcept = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
 * identifier
+  * system = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/identifier"
+  * value = "ZZZ"
+* providedBy = Reference(Organization/5958)
+* type = $TRE-R227-ChampActivite#01 "Médecine, Chirurgie, Obstétrique (MCO)"
+* specialty = $TRE-R211-ActiviteOperationnelle#183 "Traitement neurochirurgical de la douleur"
+* location = Reference(Location/5253)
+* name = "Hospitalisation complète de Neurochirurgie"
+* characteristic[0].extension
+  * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
+  * valueCodeableConcept = $TRE-R213-ModePriseEnCharge#28 "Hospitalisation complète (HC)"
+* characteristic[+].extension
+  * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
+  * valueCodeableConcept = $TRE-R210-ActeSpecifique#0320 "Neuromodulation sacrée"
+/** meta
+  * lastUpdated = "2023-12-20T10:00:00+01:00"
+  * profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"
+* extension[0]
+  * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"
+  * valueDateTime = "2023-12-09T14:30:00+01:00"
+* extension[+]
+  * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit"
+  * valueBoolean = false
+* extension[+]
+  * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type"
+  * extension
+    * url = "ageRange"
+    * valueRange
+      * low.value = 18
+      * high.value = 90
+* extension[+]
+  * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"
+  * extension[0]
+    * url = "purposeContact"
+    * valueCodeableConcept = $TRE-R287-NatureContact#06 "Standard"
+  * extension[+]
+    * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level"
+    * valueCodeableConcept = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
+* identifier
   * system = "https://example.org/identifier-system"
   * value = "ZZZ"
 * providedBy = Reference(Organization/5958)
@@ -42,10 +80,14 @@ Usage: #example
 * specialty[operationalActivity].coding.display = "Traitement neurochirurgical de la douleur"
 * location = Reference(Location/5253)
 * name = "Hospitalisation complète de Neurochirurgie"
-* characteristic[careMode].coding.system = $TRE-R213-ModePriseEnCharge
-* characteristic[careMode].coding.code = #28
-* characteristic[careMode].coding.display = "Hospitalisation complète (HC)"
-* characteristic[specificAct].coding.system = $TRE-R210-ActeSpecifique
+* characteristic[0].coding.system = $TRE-R213-ModePriseEnCharge
+* characteristic[=].
+* characteristic[=].coding.code = #28
+* characteristic[=].coding.display = "Hospitalisation complète (HC)"
+* characteristic[=].extension.url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
+* characteristic[+].coding.system = $TRE-R210-ActeSpecifique
 * characteristic[specificAct].coding.code = #0320
 * characteristic[specificAct].coding.display = "Neuromodulation sacrée"
+* characteristic[specificAct].extension[ror-act-type].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
 * characteristic[specificAct].extension[ror-act-type].valueCode = #specificAct
+*/
