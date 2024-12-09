@@ -1,7 +1,7 @@
 ROR : Validation Results
 =========================================
 
-err = 110, warn = 70, info = 59
+err = 112, warn = 70, info = 59
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 71 / 6 / 0
@@ -11,7 +11,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://int
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-input-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 1 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 6 / 0 / 3
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 8 / 0 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville : 6 / 2 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple-1 : 4 / 4 / 2
@@ -225,6 +225,9 @@ INFORMATION: HealthcareService/ror-healthcareservice-exemple: HealthcareService:
 INFORMATION: HealthcareService/ror-healthcareservice-exemple: HealthcareService: HealthcareService.characteristic:careMode: Found 0 matches, but unable to check minimum required (HealthcareService.characteristic) due to lack of slicing validation (from https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2)
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.providedBy: Unable to resolve resource with reference 'Organization/5958'
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.location[0]: Unable to resolve resource with reference 'Location/5253'
+ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.characteristic[0].coding[0].code: Unknown code '0320' in the CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge' version '1.4.0'
+ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.characteristic[1]: Error from https://smt.esante.gouv.fr/fhir: Error: [210bd599-9aaf-4da0-bd13-a3fef24a6cf7]: A code/system pair must be provided.
+Information: X-Request-Id: 56350e07-ec9d-41f1-90b7-9e68f7c74823
 == fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville.json ==
 ERROR: HealthcareService/ror-healthcareservice-exemple-ville: HealthcareService.specialty[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile HealthcareService.specialty:operationalActivity - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
 ERROR: HealthcareService/ror-healthcareservice-exemple-ville: HealthcareService.specialty[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile HealthcareService.specialty:operationalActivityFamily - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
