@@ -42,10 +42,10 @@ Usage: #example
 * name = "Hospitalisation complète de Neurochirurgie"
 * characteristic[0].extension
   * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
-  * valueCode = #28
+  * valueCode = #specificAct
 * characteristic[+].extension
   * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
-  * valueCode = #0320
+  * valueCode = #outsideOfficeAct
 /** meta
   * lastUpdated = "2023-12-20T10:00:00+01:00"
   * profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"
