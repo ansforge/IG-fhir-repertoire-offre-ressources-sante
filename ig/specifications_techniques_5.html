@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Signalement d&#39;anomalie - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.4.0-snapshot-1</title>
+    <title>Signalement d&#39;anomalie - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.4.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -51,12 +51,17 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.4.0-snapshot-1 - qa-preview
+            <span style="display:inline-block;">0.4.0 - trial-implementation
 
 
 
@@ -218,7 +223,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.4.0-snapshot-1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.4.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Signalement d&#39;anomalie</h2>
   
 
@@ -326,17 +331,23 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête :</strong></p>
 
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
 </span><span class="err">Requête</span><span class="w"> </span><span class="err">Postman</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">POST</span><span class="w"> </span><span class="err">https://rortest.esante.gouv.fr/anomalies/Task</span><span class="w">
 
 </span><span class="err">Body</span><span class="w"> </span><span class="err">:</span><span class="w">
 </span><span class="p">{</span><span class="w">
     </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Task"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"focus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1910800002"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ror-task-exemple"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generated"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"div"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div xmlns=</span><span class="se">\"</span><span class="s2">http://www.w3.org/1999/xhtml</span><span class="se">\"</span><span class="s2">&gt;&lt;p class=</span><span class="se">\"</span><span class="s2">res-header-id</span><span class="se">\"</span><span class="s2">&gt;&lt;b&gt;Generated Narrative: Task ror-task-exemple&lt;/b&gt;&lt;/p&gt;&lt;a name=</span><span class="se">\"</span><span class="s2">ror-task-exemple</span><span class="se">\"</span><span class="s2">&gt; &lt;/a&gt;&lt;a name=</span><span class="se">\"</span><span class="s2">hcror-task-exemple</span><span class="se">\"</span><span class="s2">&gt; &lt;/a&gt;&lt;a name=</span><span class="se">\"</span><span class="s2">ror-task-exemple-fr-FR</span><span class="se">\"</span><span class="s2">&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: In Progress&lt;/p&gt;&lt;p&gt;&lt;b&gt;businessStatus&lt;/b&gt;: &lt;span title=</span><span class="se">\"</span><span class="s2">Codes:{https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie 02}</span><span class="se">\"</span><span class="s2">&gt;À traiter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=</span><span class="se">\"</span><span class="s2">Codes:{https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie 06}</span><span class="se">\"</span><span class="s2">&gt;Exactitude&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Ici la catégorie d'établissement n'est pas la bonne&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: Identifier: 1910800002&lt;/p&gt;&lt;p&gt;&lt;b&gt;authoredOn&lt;/b&gt;: 2024-01-03&lt;/p&gt;&lt;p&gt;&lt;b&gt;lastModified&lt;/b&gt;: 2024-01-04&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: &lt;span title=</span><span class="se">\"</span><span class="s2">Codes:{https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie COR}</span><span class="se">\"</span><span class="s2">&gt;Correction&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;input&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=</span><span class="se">\"</span><span class="s2">Codes:{https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem systemRequester}</span><span class="se">\"</span><span class="s2">&gt;systemRequester&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: IHM&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;input&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=</span><span class="se">\"</span><span class="s2">Codes:{https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem pathElementError}</span><span class="se">\"</span><span class="s2">&gt;pathElementError&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=</span><span class="se">\"</span><span class="s2">text/fhirpath</span><span class="se">\"</span><span class="s2">&gt;&lt;code&gt;Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"businessStatus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -349,15 +360,6 @@ Plus de précision sur la spécification FHIR :
         </span><span class="p">]</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"intent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"reasonCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"COR"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Correction"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -367,7 +369,36 @@ Plus de précision sur la spécification FHIR :
             </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ici la catégorie d'établissement n'est pas la bonne"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"focus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1910800002"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"authoredOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-03"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lastModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-04"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reasonCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"COR"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Correction"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"input"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"systemRequester"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IHM"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -381,22 +412,8 @@ Plus de précision sur la spécification FHIR :
                 </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/fhirpath"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"expression"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')"</span><span class="w">
             </span><span class="p">}</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem"</span><span class="p">,</span><span class="w">
-                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"systemRequester"</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                </span><span class="p">]</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IHM"</span><span class="w">
         </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w"> 
-    </span><span class="nl">"authoredOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-03"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"lastModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-04"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"La catégorie d'établissement n'est pas la bonne"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
@@ -479,7 +496,7 @@ POST [BASE]/Bundle
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 23, 2024 12:16+0000">2024-05-23</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.4.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 9, 2024 16:21+0000">2024-12-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

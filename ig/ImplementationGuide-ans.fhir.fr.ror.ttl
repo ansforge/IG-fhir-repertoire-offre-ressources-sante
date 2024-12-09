@@ -9,15 +9,15 @@
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "ans.fhir.fr.ror"] ; # 
   fhir:text [
-     fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ROR</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror</pre><div><p>Ressources de conformité basées sur le modèle d'exposition 3.0 du ROR</p>\n</div></div>"
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.ror</b></p><a name=\"ans.fhir.fr.ror\"> </a><a name=\"hcans.fhir.fr.ror\"> </a><a name=\"ans.fhir.fr.ror-fr-FR\"> </a><h2>ROR</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror</pre><div><p>Ressources de conformité basées sur le modèle d'exposition 3.0 du ROR</p>\n</div></div>"
   ] ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.4.0-snapshot-1"] ; # 
+  fhir:version [ fhir:v "0.4.0"] ; # 
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-05-23T12:16:26+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-09T16:21:45+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -48,7 +48,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "5.5.0" ]
+     fhir:version [ fhir:v "6.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -85,14 +85,6 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.bulkdata" ] ;
      fhir:version [ fhir:v "2.0.0" ]
-  ] [
-     fhir:id [ fhir:v "ans_fr_securisation_transport" ] ;
-     fhir:uri [
-       fhir:v "https://interop.esante.gouv.fr/ig/securisation-transport/ImplementationGuide/ans.fr.securisation-transport"^^xsd:anyURI ;
-       fhir:link <https://interop.esante.gouv.fr/ig/securisation-transport/ImplementationGuide/ans.fr.securisation-transport>
-     ] ;
-     fhir:packageId [ fhir:v "ans.fr.securisation-transport" ] ;
-     fhir:version [ fhir:v "1.2.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -110,7 +102,7 @@
          fhir:value [ fhir:v "releaselabel" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "qa-preview" ]
+         fhir:value [ fhir:v "trial-implementation" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -331,7 +323,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.1.0" ]
+       fhir:value [ fhir:v "hl7.fhir.uv.tools.r4#0.3.0" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
@@ -347,7 +339,7 @@
          fhir:value [ fhir:v "releaselabel" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "qa-preview" ]
+         fhir:value [ fhir:v "trial-implementation" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -613,7 +605,7 @@
          fhir:reference [ fhir:v "Questionnaire/ror-questionnaire-offre-de-ville" ]
        ] ;
        fhir:name [ fhir:v "Consignes fiche de saisie Cabinet de ville de médecine générale" ] ;
-       fhir:description [ fhir:v "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM." ] ;
+       fhir:description [ fhir:v "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle." ] ;
        fhir:example [
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire>
@@ -665,6 +657,21 @@
        fhir:name [ fhir:v "ROR-Consommateur" ] ;
        fhir:description [ fhir:v "Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Location" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Location/ror-location-exemple> ;
+         fhir:reference [ fhir:v "Location/ror-location-exemple" ]
+       ] ;
+       fhir:name [ fhir:v "ror-location-exemple" ] ;
+       fhir:description [ fhir:v "Exemple 'fake' pour RORLocation n'ayant pas forcément de cohérence fonctionnelle." ] ;
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1109,6 +1116,21 @@
        fhir:name [ fhir:v "ror-sp-temporary-assignement" ] ;
        fhir:description [ fhir:v "Paramètre de recherche pour récupérer les affectations temporaires" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Task" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Task/ror-task-exemple> ;
+         fhir:reference [ fhir:v "Task/ror-task-exemple" ]
+       ] ;
+       fhir:name [ fhir:v "ror-task-exemple" ] ;
+       fhir:description [ fhir:v "Exemple 'fake' pour RORTask n'ayant pas forcément de cohérence fonctionnelle" ] ;
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1945,10 +1967,10 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "autres_ressources.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Téléchargements et usages" ] ;
+         fhir:name [ fhir:v "autres_ressources.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Autres Ressources" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:extension ( [
@@ -1958,15 +1980,15 @@
            fhir:name [ fhir:v "securite.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "Sécurité" ] ;
            fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Téléchargements et usages" ] ;
+           fhir:generation [ fhir:v "markdown" ]
          ] )
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "autres_ressources.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "autres_ressources.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Autres Ressources" ] ;
-         fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
      fhir:parameter ( [
