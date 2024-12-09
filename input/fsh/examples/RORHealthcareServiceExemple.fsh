@@ -10,7 +10,7 @@ InstanceOf: RORHealthcareService
 Usage: #example
 Description: "Exemple basique pour RORHealthcareService décrivant une offre de ville, mais n'ayant pas forcément de cohérence fonctionnelle"
 
-meta
+* meta
   * lastUpdated = "2023-12-20T10:00:00+01:00"
   * profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"
 * extension[0]
