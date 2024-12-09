@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 114, warn = 72, info = 59
+err = 112, warn = 72, info = 59
 IG Publisher Version: 1.7.5
-Generated Mon Dec 09 16:35:33 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Mon Dec 09 16:52:10 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 71 / 7 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 6 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 6 / 0 / 1
@@ -11,7 +11,7 @@ Generated Mon Dec 09 16:35:33 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-input-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 1 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 10 / 0 / 3
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 8 / 0 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville : 6 / 2 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple-1 : 4 / 4 / 2
@@ -228,8 +228,6 @@ ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.provid
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.type[0].coding[0].display: Wrong Display Name 'Médecine, Chirurgie, Obstétrique (MCO)' for https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite#01. Valid display is 'Médecine Chirurgie Obstétrique (MCO)' (en) (for the language(s) 'en')
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.type[0]: None of the codings provided are in the value set 'JDV_J20_ChampActivite_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR|20231030120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite#01)
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.location[0]: Unable to resolve resource with reference 'Location/5253'
-ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.characteristic[0].extension[0].value.ofType(code): The value provided ('28') was not found in the value set 'Valueset type d'acte' (https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset|0.4.0-snapshot-2), and a code is required from this value set  (error message = The System URI could not be determined for the code '28' in the ValueSet 'https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset|0.4.0-snapshot-2'; The provided code '#28' was not found in the value set 'https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset|0.4.0-snapshot-2')
-ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.characteristic[1].extension[0].value.ofType(code): The value provided ('0320') was not found in the value set 'Valueset type d'acte' (https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset|0.4.0-snapshot-2), and a code is required from this value set  (error message = The System URI could not be determined for the code '0320' in the ValueSet 'https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset|0.4.0-snapshot-2'; The provided code '#0320' was not found in the value set 'https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset|0.4.0-snapshot-2')
 == fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville.json ==
 ERROR: HealthcareService/ror-healthcareservice-exemple-ville: HealthcareService.specialty[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile HealthcareService.specialty:operationalActivity - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
 ERROR: HealthcareService/ror-healthcareservice-exemple-ville: HealthcareService.specialty[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile HealthcareService.specialty:operationalActivityFamily - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
