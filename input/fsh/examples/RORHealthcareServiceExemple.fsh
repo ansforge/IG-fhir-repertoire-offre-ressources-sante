@@ -8,6 +8,8 @@ Alias: $TRE-R210-ActeSpecifique = https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSp
 Instance: ror-healthcareservice-exemple
 InstanceOf: RORHealthcareService
 Usage: #example
+Description: "Exemple basique pour RORHealthcareService décrivant une offre de ville, mais n'ayant pas forcément de cohérence fonctionnelle"
+
 * meta
   * lastUpdated = "2023-12-20T10:00:00+01:00"
   * profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"
@@ -37,7 +39,7 @@ Usage: #example
   * value = "ZZZ"
 * providedBy = Reference(Organization/5958)
 * type = $TRE-R227-ChampActivite#01 "Médecine, Chirurgie, Obstétrique (MCO)"
-* specialty = $TRE-R211-ActiviteOperationnelle#183 "Traitement neurochirurgical de la douleur"
+* specialty = $operational-activity#183 "Traitement neurochirurgical de la douleur"
 * location = Reference(Location/5253)
 * name = "Hospitalisation complète de Neurochirurgie"
 * characteristic[0].extension
