@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HealthcareService xmlns="http://hl7.org/fhir">
+  <id value="ror-healthcareservice-exemple"/>
+  <meta>
+    <lastUpdated value="2023-12-20T10:00:00+01:00"/>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: HealthcareService ror-healthcareservice-exemple</b></p><a name="ror-healthcareservice-exemple"> </a><a name="hcror-healthcareservice-exemple"> </a><a name="ror-healthcareservice-exemple-fr-FR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Last updated: 2023-12-20 10:00:00+0100</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ror-healthcareservice.html">RORHealthcareService</a></p></div><p><b>RORMetaCreationDate</b>: 2023-12-09 14:30:00+0100</p><p><b>RORHealthcareServiceSensitiveUnit</b>: false</p><blockquote><p><b>RORHealthcareServicePatientType</b></p><ul><li>ageRange: 18-90</li></ul></blockquote><blockquote><p><b>RORHealthcareServiceContact</b></p><ul><li>purposeContact: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact 06}">Standard</span></li><li>https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}">Accès libre</span></li></ul></blockquote><p><b>identifier</b>: <code>https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/identifier</code>/ZZZ</p><p><b>providedBy</b>: <a href="https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Organization/5958">??</a></p><p><b>type</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite 01}">Médecine, Chirurgie, Obstétrique (MCO)</span></p><p><b>specialty</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle 183}">Traitement neurochirurgical de la douleur</span></p><p><b>location</b>: <a href="https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Location/5253">??</a></p><p><b>name</b>: Hospitalisation complète de Neurochirurgie</p><p><b>characteristic</b>: <span title="Codes:"></span>, <span title="Codes:"></span></p></div>
+  </text>
+  <extension url="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date">
+    <valueDateTime value="2023-12-09T14:30:00+01:00"/>
+  </extension>
+  <extension url="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type">
+    <extension url="ageRange">
+      <valueRange>
+        <low>
+          <value value="18"/>
+        </low>
+        <high>
+          <value value="90"/>
+        </high>
+      </valueRange>
+    </extension>
+  </extension>
+  <extension url="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact">
+    <extension url="purposeContact">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact"/>
+          <code value="06"/>
+          <display value="Standard"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"/>
+          <code value="1"/>
+          <display value="Accès libre"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <identifier>
+    <system value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/identifier"/>
+    <value value="ZZZ"/>
+  </identifier>
+  <providedBy>
+    <reference value="Organization/5958"/>
+  </providedBy>
+  <type>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite"/>
+      <code value="01"/>
+      <display value="Médecine, Chirurgie, Obstétrique (MCO)"/>
+    </coding>
+  </type>
+  <specialty>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle"/>
+      <code value="183"/>
+      <display value="Traitement neurochirurgical de la douleur"/>
+    </coding>
+  </specialty>
+  <location>
+    <reference value="Location/5253"/>
+  </location>
+  <name value="Hospitalisation complète de Neurochirurgie"/>
+  <characteristic>
+    <extension url="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type">
+      <valueCode value="28"/>
+    </extension>
+  </characteristic>
+  <characteristic>
+    <extension url="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type">
+      <valueCode value="0320"/>
+    </extension>
+  </characteristic>
+</HealthcareService>

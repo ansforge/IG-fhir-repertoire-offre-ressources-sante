@@ -1,0 +1,434 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/Location/ror-location-exemple-1> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ror-location-exemple-1"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-12-05T01:42:39.000+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location>
+     ] ) ;
+     fhir:tag ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "24" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location ror-location-exemple-1</b></p><a name=\"ror-location-exemple-1\"> </a><a name=\"hcror-location-exemple-1\"> </a><a name=\"ror-location-exemple-1-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-12-05 01:42:39+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-location.html\">RORLocation</a></p><p style=\"margin-bottom: 0px\">Tag: Centre-Val de Loire (Details: TRE-R30-RegionOM code 24 = 'Centre-Val de Loire')</p></div><p><b>RORCommuneCog</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM 45234}\">Orléans</span></p><blockquote><p><b>RORLocationSupportedCapacity</b></p><ul><li>nbCapacity: 15</li><li>capacityUpdateDate: 2024-07-08 18:15:39+0000</li><li>capacityStatus: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite 01}\">Installé</span></li><li>capacityType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite 01}\">Lit</span></li><li>temporalityCapacity: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite 01}\">Courant</span></li><li>capacitySourceType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite 01}\">Saisie manuelle</span></li><li>temporaryAssignement: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire 01}\">Aucune</span></li></ul></blockquote><blockquote><p><b>RORLocationSupportedCapacity</b></p><ul><li>additionalBedType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R334-TypeLitSupplementaire/FHIR/TRE-R334-TypeLitSupplementaire 03}\">Mobilisable avec ressources humaines</span></li><li>crisisType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R336-TypeCrise/FHIR/TRE-R336-TypeCrise 02}\">Situation sanitaire Exceptionnelle (SSE) (Plan blanc)</span></li><li>nbCapacity: 0</li><li>capacityUpdateDate: 2024-07-08 18:15:39+0000</li><li>capacityStatus: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite 06}\">Supplémentaire</span></li><li>capacityType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite 01}\">Lit</span></li><li>temporalityCapacity: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite 01}\">Courant</span></li><li>capacitySourceType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite 01}\">Saisie manuelle</span></li><li>temporaryAssignement: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire 01}\">Aucune</span></li></ul></blockquote><blockquote><p><b>RORLocationSupportedCapacity</b></p><ul><li>nbCapacity: 0</li><li>capacityUpdateDate: 2024-07-08 18:15:39+0000</li><li>capacityStatus: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite 02}\">Disponible</span></li><li>capacityType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite 01}\">Lit</span></li><li>temporalityCapacity: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite 01}\">Courant</span></li><li>capacitySourceType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite 01}\">Saisie manuelle</span></li><li>genderCapacityAvailable: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite 02}\">Homme</span></li><li>temporaryAssignement: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire 01}\">Aucune</span></li></ul></blockquote><blockquote><p><b>RORLocationSupportedCapacity</b></p><ul><li>nbCapacity: 0</li><li>capacityUpdateDate: 2024-07-08 18:15:39+0000</li><li>capacityStatus: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite 02}\">Disponible</span></li><li>capacityType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite 01}\">Lit</span></li><li>temporalityCapacity: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite 01}\">Courant</span></li><li>capacitySourceType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite 01}\">Saisie manuelle</span></li><li>genderCapacityAvailable: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite 01}\">Femme</span></li><li>temporaryAssignement: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire 01}\">Aucune</span></li></ul></blockquote><blockquote><p><b>RORLocationSupportedCapacity</b></p><ul><li>nbCapacity: 3</li><li>capacityUpdateDate: 2024-07-08 18:15:39+0000</li><li>capacityStatus: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite 02}\">Disponible</span></li><li>capacityType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite 01}\">Lit</span></li><li>temporalityCapacity: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite 01}\">Courant</span></li><li>capacitySourceType: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite 01}\">Saisie manuelle</span></li><li>genderCapacityAvailable: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite 03}\">Indifférencié</span></li><li>temporaryAssignement: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire 01}\">Aucune</span></li></ul></blockquote><p><b>RORMetaCreationDate</b>: 2024-07-18 11:58:51+0000</p><p><b>identifier</b>: Identifiant du lieu de réalisation de l'offre connu par l'instance ROR/24/1073</p><p><b>status</b>: Active</p><p><b>name</b>: UNITE DE SURVEILLANCE CONTINUE CHIR</p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu 001}\">Hébergement</span></p><p><b>address</b>: 14 AV DE L'HOPITAL 45000 ORLEANS ORLEANS 45000 </p><h3>Positions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Longitude</b></td><td><b>Latitude</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>1.92204</td><td>47.834781</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "45234" ] ;
+         fhir:display [ fhir:v "Orléans" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "nbCapacity"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "15"^^xsd:integer ]
+     ] [
+       fhir:url [ fhir:v "capacityUpdateDate"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2024-07-08T18:15:39Z"^^xsd:dateTime ]
+     ] [
+       fhir:url [ fhir:v "capacityStatus"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Installé" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacityType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Lit" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporalityCapacity"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Courant" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacitySourceType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Saisie manuelle" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporaryAssignement"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Aucune" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "additionalBedType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R334-TypeLitSupplementaire/FHIR/TRE-R334-TypeLitSupplementaire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "03" ] ;
+           fhir:display [ fhir:v "Mobilisable avec ressources humaines" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "crisisType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R336-TypeCrise/FHIR/TRE-R336-TypeCrise"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "02" ] ;
+           fhir:display [ fhir:v "Situation sanitaire Exceptionnelle (SSE) (Plan blanc)" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "nbCapacity"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "0"^^xsd:integer ]
+     ] [
+       fhir:url [ fhir:v "capacityUpdateDate"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2024-07-08T18:15:39Z"^^xsd:dateTime ]
+     ] [
+       fhir:url [ fhir:v "capacityStatus"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "06" ] ;
+           fhir:display [ fhir:v "Supplémentaire" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacityType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Lit" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporalityCapacity"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Courant" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacitySourceType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Saisie manuelle" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporaryAssignement"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Aucune" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "nbCapacity"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "0"^^xsd:integer ]
+     ] [
+       fhir:url [ fhir:v "capacityUpdateDate"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2024-07-08T18:15:39Z"^^xsd:dateTime ]
+     ] [
+       fhir:url [ fhir:v "capacityStatus"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "02" ] ;
+           fhir:display [ fhir:v "Disponible" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacityType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Lit" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporalityCapacity"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Courant" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacitySourceType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Saisie manuelle" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "genderCapacityAvailable"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "02" ] ;
+           fhir:display [ fhir:v "Homme" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporaryAssignement"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Aucune" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "nbCapacity"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "0"^^xsd:integer ]
+     ] [
+       fhir:url [ fhir:v "capacityUpdateDate"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2024-07-08T18:15:39Z"^^xsd:dateTime ]
+     ] [
+       fhir:url [ fhir:v "capacityStatus"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "02" ] ;
+           fhir:display [ fhir:v "Disponible" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacityType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Lit" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporalityCapacity"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Courant" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacitySourceType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Saisie manuelle" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "genderCapacityAvailable"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Femme" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporaryAssignement"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Aucune" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "nbCapacity"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "3"^^xsd:integer ]
+     ] [
+       fhir:url [ fhir:v "capacityUpdateDate"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2024-07-08T18:15:39Z"^^xsd:dateTime ]
+     ] [
+       fhir:url [ fhir:v "capacityStatus"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "02" ] ;
+           fhir:display [ fhir:v "Disponible" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacityType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Lit" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporalityCapacity"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Courant" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "capacitySourceType"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Saisie manuelle" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "genderCapacityAvailable"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "03" ] ;
+           fhir:display [ fhir:v "Indifférencié" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "temporaryAssignement"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Aucune" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"^^xsd:anyURI ]
+  ] [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2024-07-18T11:58:51+00:00"^^xsd:dateTime ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R354-TypeIdentifiantRessourceOperationnelle/FHIR/TRE-R354-TypeIdentifiantRessourceOperationnelle"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "25" ] ;
+         fhir:display [ fhir:v "Identifiant du lieu de réalisation de l'offre connu par l'instance ROR" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "24/1073" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name [ fhir:v "UNITE DE SURVEILLANCE CONTINUE CHIR"] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "Hébergement" ]
+     ] )
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [
+       fhir:v "14 AV DE L'HOPITAL" ;
+       fhir:extension ( [
+         fhir:id [ fhir:v "Location.address.line.extension:houseNumber" ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "14" ]
+       ] [
+         fhir:id [ fhir:v "Location.address.line.extension:streetNameType" ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "AV" ]
+       ] [
+         fhir:id [ fhir:v "Location.address.line.extension:streetNameBase" ] ;
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DE L'HOPITAL" ]
+       ] )
+     ] [ fhir:v "45000 ORLEANS" ] ) ;
+     fhir:city [ fhir:v "ORLEANS" ] ;
+     fhir:postalCode [ fhir:v "45000" ]
+  ] ; # 
+  fhir:position [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-coordinate-reliability"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "true"^^xsd:boolean ]
+     ] ) ;
+     fhir:longitude [ fhir:v "1.92204"^^xsd:decimal ] ;
+     fhir:latitude [ fhir:v "47.834781"^^xsd:decimal ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

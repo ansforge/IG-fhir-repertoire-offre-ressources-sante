@@ -1,0 +1,230 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/HealthcareService/ror-healthcareservice-exemple-ville> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ror-healthcareservice-exemple-ville"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2023-12-20T10:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: HealthcareService ror-healthcareservice-exemple-ville</b></p><a name=\"ror-healthcareservice-exemple-ville\"> </a><a name=\"hcror-healthcareservice-exemple-ville\"> </a><a name=\"ror-healthcareservice-exemple-ville-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-healthcareservice.html\">RORHealthcareService</a></p></div><p><b>RORMetaCreationDate</b>: 2023-12-09 14:30:00+0100</p><p><b>RORHealthcareServiceSensitiveUnit</b>: false</p><blockquote><p><b>RORHealthcareServicePatientType</b></p><ul><li>ageRange: 0-120</li></ul></blockquote><blockquote><p><b>RORHealthcareServiceContact</b></p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/purposeContact\">purposeContact</a></blockquote><p><b>value</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact 02}\">Prise de rendez-vous</span></p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-ror-confidentiality-level.html\">RORConfidentialityLevel</a></blockquote><p><b>value</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}\">Accès libre</span></p><p><b>RORTelecomCommunicationChannel</b>: <span title=\"Codes:{https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel 2}\">Téléphone fixe</span></p><p><b>telecomAddress</b>: 01.01.01.01.01</p><p><b>RORTelecomConfidentialityLevel</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}\">Accès libre</span></p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-ror-healthcareservice-contact-telecom.html\">RORHealthcareServiceContactTelecom</a></blockquote></blockquote><p><b>identifier</b>: ZZZ</p><p><b>providedBy</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Organization/4947\">??</a></p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite 05}\">Ville</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle 437}\">Médecine générale</span></p><p><b>location</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Location/1215\">??</a></p><p><b>name</b>: Cabinet du Dr Julie JOURDIN</p><p><b>characteristic</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge 32}\">Consultation (CS)</span></p><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 07}\">Horaire de consultation sur RDV</span></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 1</p><p><b>availableStartTime</b>: 09:00:00</p><p><b>availableEndTime</b>: 19:00:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 07}\">Horaire de consultation sur RDV</span></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 2</p><p><b>availableStartTime</b>: 09:00:00</p><p><b>availableEndTime</b>: 19:00:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 07}\">Horaire de consultation sur RDV</span></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 3</p><p><b>availableStartTime</b>: 09:00:00</p><p><b>availableEndTime</b>: 19:00:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 07}\">Horaire de consultation sur RDV</span></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 4</p><p><b>availableStartTime</b>: 09:00:00</p><p><b>availableEndTime</b>: 19:00:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 07}\">Horaire de consultation sur RDV</span></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 5</p><p><b>availableStartTime</b>: 14:00:00</p><p><b>availableEndTime</b>: 19:00:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 06}\">Horaire de consultation sans RDV</span></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 5</p><p><b>availableStartTime</b>: 09:00:00</p><p><b>availableEndTime</b>: 12:00:00</p></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2023-12-09T14:30:00+01:00"^^xsd:dateTime ]
+  ] [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "false"^^xsd:boolean ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "ageRange"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Range ;
+         fhir:low [
+           fhir:value [ fhir:v "0"^^xsd:decimal ]
+         ] ;
+         fhir:high [
+           fhir:value [ fhir:v "120"^^xsd:decimal ]
+         ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "purposeContact"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "02" ] ;
+           fhir:display [ fhir:v "Prise de rendez-vous" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1" ] ;
+           fhir:display [ fhir:v "Accès libre" ]
+         ] )
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "2" ] ;
+             fhir:display [ fhir:v "Téléphone fixe" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "telecomAddress"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "01.01.01.01.01" ]
+       ] [
+         fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "1" ] ;
+             fhir:display [ fhir:v "Accès libre" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"^^xsd:anyURI ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "ZZZ" ]
+  ] ) ; # 
+  fhir:providedBy [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Organization/4947> ;
+     fhir:reference [ fhir:v "Organization/4947" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "05" ] ;
+       fhir:display [ fhir:v "Ville" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "437" ] ;
+       fhir:display [ fhir:v "Médecine générale" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Location/1215> ;
+     fhir:reference [ fhir:v "Location/1215" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Cabinet du Dr Julie JOURDIN"] ; # 
+  fhir:characteristic ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "32" ] ;
+       fhir:display [ fhir:v "Consultation (CS)" ]
+     ] )
+  ] ) ; # 
+  fhir:availableTime ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "07" ] ;
+           fhir:display [ fhir:v "Horaire de consultation sur RDV" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "1"^^xsd:integer ]
+     ] ) ;
+     fhir:availableStartTime [ fhir:v "09:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "19:00:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "07" ] ;
+           fhir:display [ fhir:v "Horaire de consultation sur RDV" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2"^^xsd:integer ]
+     ] ) ;
+     fhir:availableStartTime [ fhir:v "09:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "19:00:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "07" ] ;
+           fhir:display [ fhir:v "Horaire de consultation sur RDV" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "3"^^xsd:integer ]
+     ] ) ;
+     fhir:availableStartTime [ fhir:v "09:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "19:00:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "07" ] ;
+           fhir:display [ fhir:v "Horaire de consultation sur RDV" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "4"^^xsd:integer ]
+     ] ) ;
+     fhir:availableStartTime [ fhir:v "09:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "19:00:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "07" ] ;
+           fhir:display [ fhir:v "Horaire de consultation sur RDV" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "5"^^xsd:integer ]
+     ] ) ;
+     fhir:availableStartTime [ fhir:v "14:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "19:00:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "06" ] ;
+           fhir:display [ fhir:v "Horaire de consultation sans RDV" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "5"^^xsd:integer ]
+     ] ) ;
+     fhir:availableStartTime [ fhir:v "09:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "12:00:00"^^xsd:time ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

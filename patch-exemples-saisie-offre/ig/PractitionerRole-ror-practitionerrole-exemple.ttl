@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/PractitionerRole/ror-practitionerrole-exemple> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ror-practitionerrole-exemple"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2023-12-20T10:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ror-practitionerrole-exemple</b></p><a name=\"ror-practitionerrole-exemple\"> </a><a name=\"hcror-practitionerrole-exemple\"> </a><a name=\"ror-practitionerrole-exemple-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-practitionerrole.html\">RORPractitionerRole</a></p></div><p><b>RORMetaCreationDate</b>: 2023-12-09 14:30:00+0100</p><blockquote><p><b>RORPractitionerRoleName</b></p><ul><li>exerciseFirstName: Mylène</li><li>exerciseLastName: Tenor</li></ul></blockquote><p><b>RORPractitionerRoleUnitExerciseMode</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice L}\">Libéral, indépendant, artisan, commerçant</span></p><p><b>identifier</b>: 11102379616</p><p><b>practitioner</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Practitioner/2524\">??</a></p><p><b>code</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 60}\">Infirmier</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire CEX}\">Compétence exclusive</span></p><p><b>healthcareService</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/HealthcareService/9597\">??</a></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2023-12-09T14:30:00+01:00"^^xsd:dateTime ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "exerciseFirstName"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Mylène" ]
+     ] [
+       fhir:url [ fhir:v "exerciseLastName"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Tenor" ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-name"^^xsd:anyURI ]
+  ] [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "L" ] ;
+         fhir:display [ fhir:v "Libéral, indépendant, artisan, commerçant" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "11102379616" ]
+  ] ) ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Practitioner/2524> ;
+     fhir:reference [ fhir:v "Practitioner/2524" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "60" ] ;
+       fhir:display [ fhir:v "Infirmier" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CEX" ] ;
+       fhir:display [ fhir:v "Compétence exclusive" ]
+     ] )
+  ] ) ; # 
+  fhir:healthcareService ( [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/HealthcareService/9597> ;
+     fhir:reference [ fhir:v "HealthcareService/9597" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
