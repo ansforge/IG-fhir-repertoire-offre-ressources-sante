@@ -42,10 +42,10 @@ Usage: #example
 * name = "Hospitalisation complète de Neurochirurgie"
 * characteristic[0].extension
   * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
-  * valueCodeableConcept = $TRE-R213-ModePriseEnCharge#28 "Hospitalisation complète (HC)"
+  * valueCode = #28
 * characteristic[+].extension
   * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
-  * valueCodeableConcept = $TRE-R210-ActeSpecifique#0320 "Neuromodulation sacrée"
+  * valueCode = #0320
 /** meta
   * lastUpdated = "2023-12-20T10:00:00+01:00"
   * profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"
