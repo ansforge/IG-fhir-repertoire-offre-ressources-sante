@@ -39,7 +39,7 @@ Description: "Exemple basique pour RORHealthcareService décrivant une offre de 
   * value = "ZZZ"
 * providedBy = Reference(Organization/5958)
 * type = $TRE-R227-ChampActivite#01 "Médecine, Chirurgie, Obstétrique (MCO)"
-* specialty = $operational-activity#183 "Traitement neurochirurgical de la douleur"
+* specialty = $TRE-R211-ActiviteOperationnelle#183 "Traitement neurochirurgical de la douleur"
 * location = Reference(Location/5253)
 * name = "Hospitalisation complète de Neurochirurgie"
 * characteristic[0].extension
