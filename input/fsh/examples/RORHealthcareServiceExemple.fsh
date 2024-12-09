@@ -44,12 +44,10 @@ Description: "Exemple basique pour RORHealthcareService décrivant une offre de 
 * specialty[operationalActivity].coding.display = "Traitement neurochirurgical de la douleur"
 * location = Reference(Location/5253)
 * name = "Hospitalisation complète de Neurochirurgie"
-* characteristic[0].coding.system = $TRE-R213-ModePriseEnCharge
-* characteristic[=].
-* characteristic[=].coding.code = #28
-* characteristic[=].coding.display = "Hospitalisation complète (HC)"
-* characteristic[=].extension.url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
-* characteristic[+].coding.system = $TRE-R210-ActeSpecifique
+* characteristic[careMode].coding.system = $TRE-R213-ModePriseEnCharge
+* characteristic[careMode].coding.code = #28
+* characteristic[careMode].coding.display = "Hospitalisation complète (HC)"
+* characteristic[specificAct].coding.system = $TRE-R210-ActeSpecifique
 * characteristic[specificAct].coding.code = #0320
 * characteristic[specificAct].coding.display = "Neuromodulation sacrée"
 * characteristic[specificAct].extension[ror-act-type].url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type"
