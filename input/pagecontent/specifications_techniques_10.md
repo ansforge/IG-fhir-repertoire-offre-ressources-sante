@@ -81,6 +81,8 @@ Si la mise à jour échoue, le serveur doit répondre :
 
 -   Création du nouveau lieu de réalisation de l'offre
 
+N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.
+
 ```json
 POST [BASE]/Location 
 {
