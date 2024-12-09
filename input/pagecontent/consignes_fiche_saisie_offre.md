@@ -143,7 +143,7 @@ Exemple de ressource : [Example Questionnaire: Cabinet de ville de médecine gé
 
 **Requête :**
 
-N.B.: exemple de ressource fictif pour illustration. Pour l'implémentation se baser sur les profils.
+N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.
 
 ```json
 POST [BASE]/Questionnaire
