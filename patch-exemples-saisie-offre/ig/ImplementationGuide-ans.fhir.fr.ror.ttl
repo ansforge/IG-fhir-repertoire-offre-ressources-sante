@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-09T16:49:27+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-09T17:27:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -85,6 +85,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.bulkdata" ] ;
      fhir:version [ fhir:v "2.0.0" ]
+  ] [
+     fhir:id [ fhir:v "ans_fr_nos" ] ;
+     fhir:uri [
+       fhir:v "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos>
+     ] ;
+     fhir:packageId [ fhir:v "ans.fr.nos" ] ;
+     fhir:version [ fhir:v "1.4.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -667,6 +675,7 @@
          fhir:reference [ fhir:v "HealthcareService/ror-healthcareservice-exemple" ]
        ] ;
        fhir:name [ fhir:v "ror-healthcareservice-exemple" ] ;
+       fhir:description [ fhir:v "Exemple basique pour RORHealthcareService décrivant une offre de ville, mais n'ayant pas forcément de cohérence fonctionnelle" ] ;
        fhir:example [
          fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"^^xsd:anyURI ;
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice>

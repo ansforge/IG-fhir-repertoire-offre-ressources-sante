@@ -11,7 +11,7 @@
   <name value="ROR"/>
   <title value="Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"/>
   <status value="draft"/>
-  <date value="2024-12-09T16:49:27+00:00"/>
+  <date value="2024-12-09T17:27:37+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -61,6 +61,11 @@
     <uri value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"/>
     <packageId value="hl7.fhir.uv.bulkdata"/>
     <version value="2.0.0"/>
+  </dependsOn>
+  <dependsOn id="ans_fr_nos">
+    <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
+    <packageId value="ans.fr.nos"/>
+    <version value="1.4.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -577,6 +582,7 @@
         <reference value="HealthcareService/ror-healthcareservice-exemple"/>
       </reference>
       <name value="ror-healthcareservice-exemple"/>
+      <description value="Exemple basique pour RORHealthcareService décrivant une offre de ville, mais n'ayant pas forcément de cohérence fonctionnelle"/>
       <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"/>
     </resource>
     <resource>

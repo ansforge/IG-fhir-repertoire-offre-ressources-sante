@@ -10,7 +10,7 @@
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "draft",
-  "date" : "2024-12-09T16:49:27+00:00",
+  "date" : "2024-12-09T17:27:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -67,6 +67,12 @@
     "uri" : "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata",
     "packageId" : "hl7.fhir.uv.bulkdata",
     "version" : "2.0.0"
+  },
+  {
+    "id" : "ans_fr_nos",
+    "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
+    "packageId" : "ans.fr.nos",
+    "version" : "1.4.0"
   }],
   "definition" : {
     "extension" : [{
@@ -749,6 +755,7 @@
         "reference" : "HealthcareService/ror-healthcareservice-exemple"
       },
       "name" : "ror-healthcareservice-exemple",
+      "description" : "Exemple basique pour RORHealthcareService décrivant une offre de ville, mais n'ayant pas forcément de cohérence fonctionnelle",
       "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"
     },
     {
