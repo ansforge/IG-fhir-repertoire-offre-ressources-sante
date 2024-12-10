@@ -113,7 +113,7 @@ Description: "Exemple basique pour RORHealthcareService décrivant une offre de 
       * url = "telecomAddress"
       * valueString = "01.01.01.01.02"
     * extension[+]
-      * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality level"
+      * url = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"
       * valueCodeableConcept = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
 /** meta
   * lastUpdated = "2023-12-20T10:00:00+01:00"
