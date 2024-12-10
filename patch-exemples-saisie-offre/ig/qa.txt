@@ -1,9 +1,9 @@
 ROR : Validation Results
 =========================================
 
-err = 110, warn = 70, info = 59
-IG Publisher Version: 1.7.5
-Generated Mon Dec 09 18:12:11 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+err = 114, warn = 73, info = 59
+IG Publisher Version: 1.8.1
+Generated Tue Dec 10 08:25:47 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0.4.0-snapshot-2 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 71 / 6 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 6 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 6 / 0 / 1
@@ -11,7 +11,7 @@ Generated Mon Dec 09 18:12:11 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-input-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 2 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 1 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 6 / 0 / 3
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple : 10 / 2 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville : 6 / 2 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple-1 : 4 / 4 / 2
@@ -55,7 +55,7 @@ Generated Mon Dec 09 18:12:11 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.ror#0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-temporality-capacity : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-temporary-assignement : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-as-ext-lieu-dit : 2 / 1 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-act-type : 0 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-act-type : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-available-time-effective-opening-closing-date : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-available-time-number-days-of-week : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-available-time-type-of-time : 0 / 0 / 1
@@ -218,11 +218,17 @@ WARNING: CodeSystem/output-task-ror-codesystem: CodeSystem: Published code syste
 WARNING: CodeSystem/ror-include-associated-data-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
 == fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple.json ==
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.specialty[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile HealthcareService.specialty:operationalActivity - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
+ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.specialty[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile HealthcareService.specialty:operationalActivity - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.specialty[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile HealthcareService.specialty:operationalActivityFamily - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
+ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.specialty[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [coding.system] in profile HealthcareService.specialty:operationalActivityFamily - the discriminator https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2 does not have fixed value, binding or existence assertions
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.characteristic[0]: Slicing cannot be evaluated: Error processing path expression for discriminator: Error @1, 1: The token : is not expected here - either a "," or a ")" expected (src = 'extension(https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type)')
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.characteristic[1]: Slicing cannot be evaluated: Error processing path expression for discriminator: Error @1, 1: The token : is not expected here - either a "," or a ")" expected (src = 'extension(https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type)')
 INFORMATION: HealthcareService/ror-healthcareservice-exemple: HealthcareService: HealthcareService.specialty:operationalActivity: Found 0 matches, but unable to check minimum required (HealthcareService.specialty) due to lack of slicing validation (from https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2)
 INFORMATION: HealthcareService/ror-healthcareservice-exemple: HealthcareService: HealthcareService.characteristic:careMode: Found 0 matches, but unable to check minimum required (HealthcareService.characteristic) due to lack of slicing validation (from https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.4.0-snapshot-2)
+WARNING: HealthcareService/ror-healthcareservice-exemple: HealthcareService.extension[3].extension[2].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel' could not be found, so the code cannot be validated
+ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.extension[3].extension[2].extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'JDV_J225-CanalCommunication-ROR' (https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR|1.4.0), and a coding from this value set is required) (codes = https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel#2)
+WARNING: HealthcareService/ror-healthcareservice-exemple: HealthcareService.extension[3].extension[2].extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel' could not be found, so the code cannot be validated
+ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.identifier[0]: if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme), not 'ZZZ'
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.providedBy: Unable to resolve resource with reference 'Organization/5958'
 ERROR: HealthcareService/ror-healthcareservice-exemple: HealthcareService.location[0]: Unable to resolve resource with reference 'Location/5253'
 == fsh-generated/resources/HealthcareService-ror-healthcareservice-exemple-ville.json ==
@@ -264,7 +270,7 @@ ERROR: PractitionerRole/ror-practitionerrole-exemple: PractitionerRole.practitio
 ERROR: PractitionerRole/ror-practitionerrole-exemple: PractitionerRole.healthcareService[0]: Unable to resolve resource with reference 'HealthcareService/9597'
 == fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json ==
 WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire: Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)
-INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+INFORMATION: Resource: The resource Questionnaire/ror-questionnaire-offre-de-ville could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 ERROR: Questionnaire.text.div: Hyperlink 'StructureDefinition-ror-organization.html#Organization.identifier:idNatSt.value' at 'div/table/tr/td/a' for 'Organization.identifier:idNatSt.value' does not resolve
 ERROR: Questionnaire.text.div: Hyperlink 'StructureDefinition-ror-organization.html#Organization.identifier:finess.value' at 'div/table/tr/td/a' for 'Organization.identifier:finess.value' does not resolve
 ERROR: Questionnaire.text.div: Hyperlink 'StructureDefinition-ror-organization.html#Organization.identifier:sirene.value' at 'div/table/tr/td/a' for 'Organization.identifier:sirene.value' does not resolve
@@ -369,6 +375,7 @@ ERROR: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/a
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-lieu-dit'): The Implementation Guide contains no examples for this extension
 ERROR: /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-as-ext-lieu-dit: URL Mismatch https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/as-ext-lieu-dit vs https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-lieu-dit
 == fsh-generated/resources/StructureDefinition-ror-act-type.json ==
+WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-ror-available-time-effective-opening-closing-date.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-ror-available-time-number-days-of-week.json ==
@@ -526,7 +533,7 @@ WARNING: ValueSet/act-type-ror-valueset: ValueSet: Published value sets SHOULD c
 == fsh-generated/resources/ValueSet-code-region-territorial-division-ror-valueset.json ==
 WARNING: ValueSet/code-region-territorial-division-ror-valueset: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 WARNING: ValueSet/code-region-territorial-division-ror-valueset: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.description is mandatory, but it is not present
-WARNING: ValueSet.where(id = 'code-region-territorial-division-ror-valueset'): Unable to expand imported value set https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM (and Error from http://tx.fhir.org/r4: Unable to provide support for code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM)
+WARNING: ValueSet.where(id = 'code-region-territorial-division-ror-valueset'): Unable to expand included value set 'https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune', but no error (and Error from http://tx.fhir.org/r4: Unable to provide support for code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM)
 == fsh-generated/resources/ValueSet-ror-include-associated-data-vs.json ==
 WARNING: ValueSet/ror-include-associated-data-vs: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-ror-usage-context-type-vs.json ==
