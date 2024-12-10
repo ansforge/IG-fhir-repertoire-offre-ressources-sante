@@ -23,8 +23,8 @@ Description: "Exemple basique pour RORHealthcareService décrivant une offre de 
   * system = "urn:ietf:rfc:3986"
   * value = "ZZZ"
 * type = $TRE-R227-ChampActivite#01 "Médecine, Chirurgie, Obstétrique (MCO)"
-* specialty[0] = $TRE-R211-ActiviteOperationnelle#183 "Traitement neurochirurgical de la douleur"
-* specialty[+] = $TRE-R211-ActiviteOperationnelle#440 "Chirurgie intracrânienne"
+* specialty[operationalActivity] = $TRE-R211-ActiviteOperationnelle#183 "Traitement neurochirurgical de la douleur"
+* specialty[operationalActivity].coding.system = $TRE-R211-ActiviteOperationnelle
 * characteristic[0] = $TRE-R213-ModePriseEnCharge#28 "Hospitalisation complète (HC)"
 * characteristic[+] = $TRE-R210-ActeSpecifique#0320 "Neuromodulation sacrée"
 * availableTime[0]
