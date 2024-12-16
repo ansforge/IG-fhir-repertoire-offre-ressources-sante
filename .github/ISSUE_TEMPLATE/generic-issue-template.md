@@ -7,11 +7,9 @@ assignees: ''
 
 ---
 
----
 **Note:** Si votre demande ne concerne pas le guide d'implémentation de l'API FHIR du ROR, vous pouvez contacter directement le support du projet ROR à cette adresse
 ans-ror@esante.gouv.fr
 
----
 
 # Description du problème
 
