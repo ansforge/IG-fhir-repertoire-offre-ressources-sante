@@ -1,11 +1,6 @@
----
-name: Demande de changement
-about: Demande concernant les spécifications de l'API FHIR du ROR
-title: '[CP]'
-labels: ''
-assignees: ''
-
----
+name: "Demande de changement"
+description: "Demande concernant les spécifications de l'API FHIR du ROR"
+title: "[CP]: "
 
 body:
   - type: markdown
