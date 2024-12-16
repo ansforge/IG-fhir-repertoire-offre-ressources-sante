@@ -1,0 +1,39 @@
+name: "Question sur le guide"
+description: "Demande concernant les spécifications de l'API FHIR du ROR"
+title: "[Question]: "
+labels: ["question"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Note 
+        Si votre demande ne concerne pas le guide d'implémentation de l'API FHIR du ROR, vous pouvez contacter directement le support du projet ROR à cette adresse ans-ror@esante.gouv.fr
+
+
+  - type: textarea
+    id: issue_question
+    attributes:
+      label: "Question"
+    validations:
+      required: true
+
+  - type: input
+    id: section_identification
+    attributes:
+      label: "Identification de la section concernée"
+      description: "Identifier la section du guide concernée par votre demande (lien vers la section du guide)"
+      placeholder: "Entrez le lien de la section"
+    validations:
+      required: false
+ 
+  - type: textarea
+    id: complement
+    attributes:
+      label: Eléments complémentaires
+      description: |
+        Liens? References? Tout ce qui peut nous aider à mieux comprendre le problème que vous rencontrez
+
+        Tip: Vous pouvez joindre des images ou des fichiers en cliquant sur cette zone pour la mettre en surbrillance, puis en y faisant glisser les fichiers.
+    validations:
+      required: false
