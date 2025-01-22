@@ -8,15 +8,15 @@ jobs:
   run-gitHubPages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:      
           path: igSource
 
       - uses: ansforge/IG-workflows@v0.4.0
 
         with:      
-          bake: "true"
-          nos: "true"
+          bake: "false"
+          nos: "false"
           validator_cli: "true"     
           generate_plantuml : "true"
           repo_ig: "./igSource"   
