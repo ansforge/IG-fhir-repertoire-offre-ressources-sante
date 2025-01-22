@@ -23,7 +23,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * lastReviewDate = "2023-12-05"
 * purpose = "Dans le ROR, l'offre de soins de ville comprend celle des cabinets et celle des centres de santé. Concernant les soins de médecine générale, le ROR référencera l’offre des médecins généralistes, qu’ils aient ou non une spécialité, dans leur cabinet, individuel ou de groupe, et les centres de santé."
 
-* useContext.valueReference = Reference(HealthcareService/123456)
+* useContext[+].valueReference = Reference(HealthcareService/123456)
 * useContext[catEG][+].code = $TRE-R67-TypeStructure-EJ-EG#EG
 * useContext[catEG][=].valueCodeableConcept = $TRE-R02-SecteurActivite#SA05
 * useContext[catEG][+].code = $TRE-R67-TypeStructure-EJ-EG#EG
