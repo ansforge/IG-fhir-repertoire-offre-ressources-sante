@@ -1,0 +1,46 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "code-region-territorial-division-ror-valueset",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet code-region-territorial-division-ror-valueset</b></p><a name=\"code-region-territorial-division-ror-valueset\"> </a><a name=\"hccode-region-territorial-division-ror-valueset\"> </a><a name=\"code-region-territorial-division-ror-valueset-fr-FR\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J124-Commune\">JDV_J124_Commune</a></li><li>Import all the codes that are contained in <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J248-DepartementOM-ROR\">JDV_J248_DepartementOM_ROR</a></li><li>Import all the codes that are contained in <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J237-RegionOM-ROR\">JDV_J237_RegionOM_ROR</a></li><li>Import all the codes that are contained in <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J249-TerritoireSante-ROR\">JDV_J249_TerritoireSante_ROR</a></li><li>Import all the codes that are contained in <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J247-Pays-ROR\">JDV_J247_Pays_ROR</a></li></ul></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset",
+  "version" : "0.5.0-snapshot-1",
+  "name" : "CodeRegionTerritorialDivisionRORValueSet",
+  "title" : "Fusion des valuesets pour le code de la division territoriale",
+  "status" : "draft",
+  "date" : "2025-01-22T14:59:46+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR"]
+    },
+    {
+      "valueSet" : ["https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR"]
+    }]
+  }
+}
