@@ -13,7 +13,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * experimental = true
 * date = "2023-12-05"
 * publisher = "ANS"
-* description = "Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM."
+* description = "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle. \n Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM."
 * jurisdiction = urn:iso:std:iso:3166#FR "FRANCE"
 * subjectType[0] = #HealthcareService
 * subjectType[+] = #Organization
@@ -33,6 +33,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * useContext[catPS][=].valueCodeableConcept = $TRE-G15-ProfessionSante#10
 * useContext[catSpeOrdinal][+].code = $TRE-R04-TypeSavoirFaire#S
 * useContext[catSpeOrdinal][=].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
+* useContext[catChampAct][+].code = $TRE_R227-ChampActivite#05
 
 * item[0].linkId = "TypeOffreInfoEJ"
 * item[=].prefix = "1"
@@ -290,8 +291,8 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * item[=].item[=].prefix = "3.7"
 * item[=].item[=].type = #choice
 * item[=].item[=].enableWhen.question = "ModalAccueil"
-* item[=].item[=].enableWhen.operator = #= "Visite à domicile"
-* item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].enableWhen.operator = #= 
+* item[=].item[=].enableWhen.answerString = "Visite à domicile"
 * item[=].item[=].enableBehavior = #all
 * item[=].item[=].answerValueSet = "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"
 * item[=].item[=].required = false
