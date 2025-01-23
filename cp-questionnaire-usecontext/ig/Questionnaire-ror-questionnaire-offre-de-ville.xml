@@ -188,12 +188,15 @@
   </useContext>
   <useContext>
     <code>
-      <system value="https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite"/>
-      <code value="05"/>
+      <system value="https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem"/>
+      <code value="champAct"/>
     </code>
-    <valueReference>
-      <reference value="HealthcareService/123456"/>
-    </valueReference>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR"/>
+        <code value="05"/>
+      </coding>
+    </valueCodeableConcept>
   </useContext>
   <jurisdiction>
     <coding>
