@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.5.0-snapshot-1"] ; # 
   fhir:name [ fhir:v "RORMeasure"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-22T16:10:55+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-23T09:02:53+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1338,8 +1338,8 @@
          fhir:expression [ fhir:v "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:xpath [ fhir:v "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Address"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Group"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Group>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -2595,8 +2595,8 @@
          fhir:expression [ fhir:v "expression.exists() or reference.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:expression) or exists(f:reference)" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/PlanDefinition"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PlanDefinition>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Measure"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Measure>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -2875,8 +2875,8 @@
          fhir:expression [ fhir:v "expression.exists() or reference.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:expression) or exists(f:reference)" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/PlanDefinition"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PlanDefinition>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Measure"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Measure>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -3156,8 +3156,8 @@
          fhir:expression [ fhir:v "expression.exists() or reference.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:expression) or exists(f:reference)" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/PlanDefinition"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PlanDefinition>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Measure"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Measure>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -3490,8 +3490,8 @@
          fhir:expression [ fhir:v "expression.exists() or reference.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:expression) or exists(f:reference)" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/PlanDefinition"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PlanDefinition>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Measure"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Measure>
          ]
        ] ) ;
        fhir:mapping ( [
