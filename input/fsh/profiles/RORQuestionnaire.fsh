@@ -59,7 +59,8 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext[catSpeOrdinal].valueCodeableConcept from $JDV-J210-SpecialiteOrdinale-ROR (required)
 * useContext[catSpeOrdinal].valueCodeableConcept ^short = "Catégorie(s) de spécialité ordinale pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
 * useContext[catSpeOrdinal] ^short = "Contexte d'usage de la fiche de consignes de saisie afin de spécifier pour quelle(s) Catégorie(s) de spécialité ordinale elle est applicable"
-* useContext[catChampAct].code from $JDV-J20-ChampActivite-ROR (required)
+* useContext[catChampAct].code = usage-context-ror-codesystem#champAct
+* useContext[catChampAct].valueCodeableConcept from $JDV-J20-ChampActivite-ROR (required)
 * useContext[catChampAct] ^short = "Contexte d'usage de la fiche de consignes de saisie afin de spécifier le domaine (champ d'activité) dans lequel s'inscrit l'offre saisie"
 
 * item ^short = "Structure du champs de la fiche"
@@ -68,7 +69,7 @@ Description: "Fiche de saisie de l'offre de soins"
 * item.prefix MS
 * item.text MS
 * item.text ^short = "Texte pour l'item"
-* item.type ^short = "Ti=ype de l'item group | display | boolean | decimal | integer | date | dateTime ..."
+* item.type ^short = "Type de l'item group | display | boolean | decimal | integer | date | dateTime ..."
 * item.enableWhen MS
 * item.enableWhen ^short = "Item autorisé / disponible que sous condition"
 * item.enableBehavior MS

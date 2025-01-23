@@ -33,8 +33,8 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * useContext[catPS][=].valueCodeableConcept = $TRE-G15-ProfessionSante#10
 * useContext[catSpeOrdinal][+].code = $TRE-R04-TypeSavoirFaire#S
 * useContext[catSpeOrdinal][=].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
-* useContext[catChampAct][+].code = $TRE_R227-ChampActivite#05
-* useContext[catChampAct][=].valueReference = Reference(HealthcareService/123456)
+* useContext[catChampAct][+].code = usage-context-ror-codesystem#champAct
+* useContext[catChampAct][=].valueCodeableConcept = $JDV-J20-ChampActivite-ROR#05
 
 * item[0].linkId = "TypeOffreInfoEJ"
 * item[=].prefix = "1"
