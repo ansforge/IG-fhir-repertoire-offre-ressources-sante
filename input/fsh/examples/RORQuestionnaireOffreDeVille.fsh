@@ -605,7 +605,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * item[=].item[=].required = false
 * item[=].item[=].readOnly = true
 * item[=].item[+].linkId = "competenceExclusive"
-* item[=].item[=].text = "CCompétence Exclusive"
+* item[=].item[=].text = "Compétence Exclusive"
 * item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole#PractitionerRole.specialty:exclusiveCompetence"
 * item[=].item[=].prefix = "3.32"
 * item[=].item[=].type = #choice
