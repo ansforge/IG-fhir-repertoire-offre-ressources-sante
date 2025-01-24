@@ -502,7 +502,7 @@
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#UsageContext#UsageContext.value[x]">valueCodeableConcept</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR&quot;/&gt;
+                <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;05&quot;/&gt;
       &lt;/coding&gt;
     &lt;/valueCodeableConcept&gt;
@@ -910,7 +910,12 @@
       &lt;<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item.enableWhen">enableWhen</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item.enableWhen.question">question</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ModalAccueil&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item.enableWhen.operator">operator</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;=&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item.enableWhen.answer[x]">answerString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Visite à domicile&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item.enableWhen.answer[x]">answerCoding</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;05&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Visite à domicile&quot;/&gt;
+        &lt;/answerCoding&gt;
       &lt;/enableWhen&gt;
       &lt;<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item.enableBehavior">enableBehavior</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;all&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
@@ -2073,7 +2078,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 24, 2025 10:49+0000">2025-01-24</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 24, 2025 11:25+0000">2025-01-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

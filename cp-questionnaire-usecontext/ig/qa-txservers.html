@@ -11,7 +11,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for ROR</h1>
- <p>Generated Fri Jan 24 10:52:26 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.ror#0.5.0-snapshot-1 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>))</p>
+ <p>Generated Fri Jan 24 11:28:34 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.ror#0.5.0-snapshot-1 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -220,7 +220,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:cfe36f6d-ad17-4bd9-b891-10f740eaee6c</td>
+    <td>urn:uuid:584509ec-cbd6-4900-b5c3-b35982b348f4</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4</td>
   </tr>
@@ -234,7 +234,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:22dff891-87f4-46f3-92e2-74037f25bc7a</td>
+    <td>urn:uuid:299ee183-3f43-4440-ad92-d0751793be8f</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4</td>
   </tr>
@@ -358,18 +358,18 @@
     <td>[auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir, auth = , candidates=, auth = https://smt.esante.gouv.fr/fhir, candidates=, auth = https://smt.esante.gouv.fr/fhir, candidates=, auth = https://smt.esante.gouv.fr/fhir, candidates=]</td>
   </tr>
   <tr>
-    <td>System not handled by any servers. Using primary server</td>
-    <td>http://tx.fhir.org/r4</td>
+    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
+    <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR</td>
-    <td>auth = , candidates=</td>
+    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
+    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
-    <td>Fallback: primary server</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR</td>
-    <td>auth = , candidates=</td>
+    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
+    <td>https://smt.esante.gouv.fr/fhir</td>
+    <td>https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR--0|20231030120000</td>
+    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
+    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
@@ -756,10 +756,17 @@
     <td>https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</td>
     <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
+  <tr>
+    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
+    <td>https://smt.esante.gouv.fr/fhir</td>
+    <td>null</td>
+    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
+    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+  </tr>
 </table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
 <a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 32. Code Systems used: </p>
+<p>Use Count: 31. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -810,12 +817,6 @@
     <td>
       <a href="CodeSystem-usage-context-ror-codesystem.html">UsageContextRORCodeSystem</a>
     </td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR</td>
-    <td>0</td>
-    <td>1</td>
-    <td></td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire</td>
@@ -870,7 +871,7 @@
 </ul>
 <h2>Server: https://smt.esante.gouv.fr/fhir</h2>
 <a href="https://smt.esante.gouv.fr/fhir"></a>
-<p>Use Count: 319. Code Systems used: </p>
+<p>Use Count: 322. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -944,6 +945,12 @@
     <td>https://mos.esante.gouv.fr/NOS/TRE_R212-Equipement/FHIR/TRE-R212-Equipement</td>
     <td>1</td>
     <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
+    <td>0</td>
+    <td>3</td>
     <td></td>
   </tr>
   <tr>

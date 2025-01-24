@@ -193,7 +193,7 @@
     </code>
     <valueCodeableConcept>
       <coding>
-        <system value="https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR"/>
+        <system value="https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite"/>
         <code value="05"/>
       </coding>
     </valueCodeableConcept>
@@ -549,7 +549,11 @@
       <enableWhen>
         <question value="ModalAccueil"/>
         <operator value="="/>
-        <answerString value="Visite à domicile"/>
+        <answerCoding>
+          <system value="https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil"/>
+          <code value="05"/>
+          <display value="Visite à domicile"/>
+        </answerCoding>
       </enableWhen>
       <enableBehavior value="all"/>
       <required value="false"/>

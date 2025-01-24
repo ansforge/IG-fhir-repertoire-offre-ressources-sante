@@ -100,7 +100,7 @@
     },
     "valueCodeableConcept" : {
       "coding" : [{
-        "system" : "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR",
+        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite",
         "code" : "05"
       }]
     }
@@ -456,7 +456,11 @@
       "enableWhen" : [{
         "question" : "ModalAccueil",
         "operator" : "=",
-        "answerString" : "Visite à domicile"
+        "answerCoding" : {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil",
+          "code" : "05",
+          "display" : "Visite à domicile"
+        }
       }],
       "enableBehavior" : "all",
       "required" : false,

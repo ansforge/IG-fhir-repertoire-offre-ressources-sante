@@ -107,7 +107,7 @@
      fhir:value [
        a fhir:CodeableConcept ;
        fhir:coding ( [
-         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR"^^xsd:anyURI ] ;
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "05" ]
        ] )
      ]
@@ -451,7 +451,12 @@
        fhir:enableWhen ( [
          fhir:question [ fhir:v "ModalAccueil" ] ;
          fhir:operator [ fhir:v "=" ] ;
-         fhir:answer [ fhir:v "Visite à domicile" ]
+         fhir:answer [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "05" ] ;
+           fhir:display [ fhir:v "Visite à domicile" ]
+         ]
        ] ) ;
        fhir:enableBehavior [ fhir:v "all" ] ;
        fhir:required [ fhir:v "false"^^xsd:boolean ] ;
