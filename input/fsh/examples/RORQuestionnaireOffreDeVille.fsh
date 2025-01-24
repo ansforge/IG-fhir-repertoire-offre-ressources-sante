@@ -5,7 +5,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
 * version = "0.1"
-* name = "FDS-109"
+* name = "FDS109"
 * title = "Consignes fiche de saisie Cabinet de ville de médecine générale"
 * identifier.use = #official
 * identifier.value = "FDS-109"
