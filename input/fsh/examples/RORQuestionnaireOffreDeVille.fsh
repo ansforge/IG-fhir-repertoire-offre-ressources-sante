@@ -44,7 +44,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * item[=].item[0].linkId = "idNatstruct-EJ"
 * item[=].item[=].prefix = "1.1"
 * item[=].item[=].text = "IdNat_Struct (Identification nationale des Entités Juridiques définie dans le CI-SIS)"
-* item[=].item[=].definition = "Organization.identifier:idNatSt.value"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization.identifier:idNatSt.value"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 * item[=].item[=].readOnly = true
