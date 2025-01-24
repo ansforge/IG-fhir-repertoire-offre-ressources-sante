@@ -34,7 +34,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * useContext[catSpeOrdinal][+].code = $TRE-R04-TypeSavoirFaire#S
 * useContext[catSpeOrdinal][=].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
 * useContext[catChampAct][+].code = usage-context-ror-codesystem#champAct
-* useContext[catChampAct][=].valueCodeableConcept = $JDV-J20-ChampActivite-ROR#05
+* useContext[catChampAct][=].valueCodeableConcept = $TRE_R227-ChampActivite#05
 
 * item[0].linkId = "TypeOffreInfoEJ"
 * item[=].prefix = "1"
@@ -293,7 +293,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * item[=].item[=].type = #choice
 * item[=].item[=].enableWhen.question = "ModalAccueil"
 * item[=].item[=].enableWhen.operator = #= 
-* item[=].item[=].enableWhen.answerString = "Visite à domicile"
+* item[=].item[=].enableWhen.answerCoding = $TRE-R338-ModaliteAccueil#05 "Visite à domicile"
 * item[=].item[=].enableBehavior = #all
 * item[=].item[=].answerValueSet = "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"
 * item[=].item[=].required = false
