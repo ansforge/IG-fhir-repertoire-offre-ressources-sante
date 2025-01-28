@@ -93,8 +93,8 @@ inv-0","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Definition.description","n/a",".text"
 "Questionnaire.useContext","Questionnaire.useContext","","","",1,*,"Y","","Y","UsageContext {[]} {[]}
-","Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable ainsi que potentiellemnt la spécialité ordinale et la profession","The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate questionnaire instances.","When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.","Assist in searching for appropriate content.","","","","","","","",,,,,"","pattern:code}
-","Slicing pour définir les différents contextes d'usage de la fiche afin de pouvoir catégoriser ces fiches de consignes par : catégorie d'EG (obligatoire), Spécialité ordinale (optionnel) et profession (optionnel)",,"open","Questionnaire.useContext",0,*,"ele-1
+","Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable ainsi que potentiellemnt la spécialité ordinale, la profession et ou le domaine de l'offre","The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate questionnaire instances.","When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.","Assist in searching for appropriate content.","","","","","","","",,,,,"","pattern:code}
+","Slicing pour définir les différents contextes d'usage de la fiche afin de pouvoir catégoriser ces fiches de consignes par : catégorie d'EG (obligatoire), Spécialité ordinale (optionnel), profession (optionnel) et domaine (optionnel)",,"open","Questionnaire.useContext",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Definition.useContext","n/a","N/A (to add?)"
 "Questionnaire.useContext.id","Questionnaire.useContext.id","","","",0,1,"","","","string {[]} {[]}
@@ -137,7 +137,7 @@ Quantity {[]} {[]}Range {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/f
 ","",,"open","UsageContext.value[x]",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
-"Questionnaire.useContext:catEG.value[x]:valueCodeableConcept","Questionnaire.useContext.value[x]","valueCodeableConcept","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
+"Questionnaire.useContext:catEG.value[x]:valueCodeableConcept","Questionnaire.useContext.value[x]","valueCodeableConcept","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible","A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR","",,,,"UsageContext.value[x]",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
@@ -165,7 +165,7 @@ Quantity {[]} {[]}Range {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/f
 ","",,"open","UsageContext.value[x]",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
-"Questionnaire.useContext:catPS.value[x]:valueCodeableConcept","Questionnaire.useContext.value[x]","valueCodeableConcept","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
+"Questionnaire.useContext:catPS.value[x]:valueCodeableConcept","Questionnaire.useContext.value[x]","valueCodeableConcept","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","Catégorie(s) de profession pour la(es)quelle(s) cette fiche de consigne de saisie est disponible","A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J229-ProfessionSante-ROR/FHIR/JDV-J229-ProfessionSante-ROR","",,,,"UsageContext.value[x]",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
@@ -193,8 +193,36 @@ Quantity {[]} {[]}Range {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/f
 ","",,"open","UsageContext.value[x]",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
-"Questionnaire.useContext:catSpeOrdinal.value[x]:valueCodeableConcept","Questionnaire.useContext.value[x]","valueCodeableConcept","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
+"Questionnaire.useContext:catSpeOrdinal.value[x]:valueCodeableConcept","Questionnaire.useContext.value[x]","valueCodeableConcept","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","Catégorie(s) de spécialité ordinale pour la(es)quelle(s) cette fiche de consigne de saisie est disponible","A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J210-SpecialiteOrdinale-ROR/FHIR/JDV-J210-SpecialiteOrdinale-ROR","",,,,"UsageContext.value[x]",1,1,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","n/a"
+"Questionnaire.useContext:catChampAct","Questionnaire.useContext","catChampAct","","",0,*,"","","Y","UsageContext {[]} {[]}
+","Contexte d'usage de la fiche de consignes de saisie afin de spécifier le domaine (champ d'activité) dans lequel s'inscrit l'offre saisie","The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate questionnaire instances.","When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.","Assist in searching for appropriate content.","","","","","","","",,,,,"",,,,"Questionnaire.useContext",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Definition.useContext","n/a","N/A (to add?)"
+"Questionnaire.useContext:catChampAct.id","Questionnaire.useContext.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Questionnaire.useContext:catChampAct.extension","Questionnaire.useContext.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
+"Questionnaire.useContext:catChampAct.code","Questionnaire.useContext.code","","","",1,1,"","","Y","Coding {[]} {[]}
+","Type of context being specified","A code that identifies the type of context being specified by this usage context.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
+  <system value=""https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem""/>
+  <code value=""champAct""/>
+</valueCoding>","","","",,"extensible","A code that specifies a type of context being specified by a usage context.","http://hl7.org/fhir/ValueSet/usage-context-type","",,,,"UsageContext.code",1,1,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","n/a","CV","CE/CNE/CWE subset one of the sets of component 1-3 or 4-6"
+"Questionnaire.useContext:catChampAct.value[x]","Questionnaire.useContext.value[x]","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
+Quantity {[]} {[]}Range {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/PlanDefinition], CanonicalType[http://hl7.org/fhir/StructureDefinition/ResearchStudy], CanonicalType[http://hl7.org/fhir/StructureDefinition/InsurancePlan], CanonicalType[http://hl7.org/fhir/StructureDefinition/HealthcareService], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group], CanonicalType[http://hl7.org/fhir/StructureDefinition/Location], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}","Value that defines the context","A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.","","","","","","","","","",,"example","A code that defines the specific value for the context being specified.","http://hl7.org/fhir/ValueSet/use-context","","type:$this}
+","",,"open","UsageContext.value[x]",1,1,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","n/a"
+"Questionnaire.useContext:catChampAct.value[x]:valueCodeableConcept","Questionnaire.useContext.value[x]","valueCodeableConcept","","",0,1,"","","Y","CodeableConcept {[]} {[]}
+","Value that defines the context","A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR","",,,,"UsageContext.value[x]",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a"
 "Questionnaire.jurisdiction","Questionnaire.jurisdiction","","","",0,*,"","","Y","CodeableConcept {[]} {[]}
@@ -275,7 +303,7 @@ que-3","ele-1:All FHIR elements must have a @value or children {hasValue() or (c
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a",".text"
 "Questionnaire.item.type","Questionnaire.item.type","","","",1,1,"","","","code {[]} {[]}
-","Ti=ype de l'item group | display | boolean | decimal | integer | date | dateTime ...","The type of questionnaire item this is - whether text for display, a grouping of other items or a particular type of data to be captured (string, integer, coded choice, etc.).","Additional constraints on the type of answer can be conveyed by extensions. The value may come from the ElementDefinition referred to by .definition.","Defines the format in which the user is to be prompted for the answer.","","","","","","","",,"required","Distinguishes groups from questions and display text and indicates data type for questions.","http://hl7.org/fhir/ValueSet/item-type|4.0.1","",,,,"Questionnaire.item.type",1,1,"ele-1
+","Type de l'item group | display | boolean | decimal | integer | date | dateTime ...","The type of questionnaire item this is - whether text for display, a grouping of other items or a particular type of data to be captured (string, integer, coded choice, etc.).","Additional constraints on the type of answer can be conveyed by extensions. The value may come from the ElementDefinition referred to by .definition.","Defines the format in which the user is to be prompted for the answer.","","","","","","","",,"required","Distinguishes groups from questions and display text and indicates data type for questions.","http://hl7.org/fhir/ValueSet/item-type|4.0.1","",,,,"Questionnaire.item.type",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","n/a","N/A - MIF rather than RIM level"
 "Questionnaire.item.enableWhen","Questionnaire.item.enableWhen","","","",0,*,"Y","Y","","BackboneElement {[]} {[]}

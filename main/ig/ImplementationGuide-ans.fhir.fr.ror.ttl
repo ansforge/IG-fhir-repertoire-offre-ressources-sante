@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-22T15:00:55+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-28T15:58:19+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -48,7 +48,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "6.1.0" ]
+     fhir:version [ fhir:v "6.2.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -620,6 +620,7 @@
          fhir:reference [ fhir:v "ValueSet/code-region-territorial-division-ror-valueset" ]
        ] ;
        fhir:name [ fhir:v "Fusion des valuesets pour le code de la division territoriale" ] ;
+       fhir:description [ fhir:v "ValueSet regroupant des valuesets du NOS pour le code de la division territoriale" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1766,6 +1767,18 @@
        ] ;
        fhir:name [ fhir:v "RORTerritorialDivision" ] ;
        fhir:description [ fhir:v "Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. \nCela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem> ;
+         fhir:reference [ fhir:v "CodeSystem/usage-context-ror-codesystem" ]
+       ] ;
+       fhir:name [ fhir:v "UsageContextRORCodeSystem" ] ;
+       fhir:description [ fhir:v "CodeSystem pour définir le type de catégorie du contexte d'usage des instances de questionnaire dans le cadre du ROR" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

@@ -19,7 +19,7 @@
   <version value="0.5.0-snapshot-1"/>
   <name value="RORMeasure"/>
   <status value="draft"/>
-  <date value="2025-01-22T15:00:55+00:00"/>
+  <date value="2025-01-28T15:58:19+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -1266,7 +1266,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Address"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -2433,7 +2433,7 @@
         <human value="An expression or a reference must be provided"/>
         <expression value="expression.exists() or reference.exists()"/>
         <xpath value="exists(f:expression) or exists(f:reference)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/PlanDefinition"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Measure"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -2695,7 +2695,7 @@
         <human value="An expression or a reference must be provided"/>
         <expression value="expression.exists() or reference.exists()"/>
         <xpath value="exists(f:expression) or exists(f:reference)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/PlanDefinition"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Measure"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -2958,7 +2958,7 @@
         <human value="An expression or a reference must be provided"/>
         <expression value="expression.exists() or reference.exists()"/>
         <xpath value="exists(f:expression) or exists(f:reference)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/PlanDefinition"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Measure"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -3270,7 +3270,7 @@
         <human value="An expression or a reference must be provided"/>
         <expression value="expression.exists() or reference.exists()"/>
         <xpath value="exists(f:expression) or exists(f:reference)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/PlanDefinition"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Measure"/>
       </constraint>
       <mapping>
         <identity value="rim"/>

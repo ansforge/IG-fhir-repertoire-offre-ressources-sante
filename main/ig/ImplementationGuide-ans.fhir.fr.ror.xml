@@ -11,7 +11,7 @@
   <name value="ROR"/>
   <title value="Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"/>
   <status value="draft"/>
-  <date value="2025-01-22T15:00:55+00:00"/>
+  <date value="2025-01-28T15:58:19+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -37,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.1.0"/>
+    <version value="6.2.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -534,6 +534,7 @@
         <reference value="ValueSet/code-region-territorial-division-ror-valueset"/>
       </reference>
       <name value="Fusion des valuesets pour le code de la division territoriale"/>
+      <description value="ValueSet regroupant des valuesets du NOS pour le code de la division territoriale"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1579,6 +1580,17 @@
       </reference>
       <name value="RORTerritorialDivision"/>
       <description value="Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. &#xA;Cela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/usage-context-ror-codesystem"/>
+      </reference>
+      <name value="UsageContextRORCodeSystem"/>
+      <description value="CodeSystem pour définir le type de catégorie du contexte d'usage des instances de questionnaire dans le cadre du ROR"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

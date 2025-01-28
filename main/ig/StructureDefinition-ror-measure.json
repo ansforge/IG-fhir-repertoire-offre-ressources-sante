@@ -9,7 +9,7 @@
   "version" : "0.5.0-snapshot-1",
   "name" : "RORMeasure",
   "status" : "draft",
-  "date" : "2025-01-22T15:00:55+00:00",
+  "date" : "2025-01-28T15:58:19+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1298,7 +1298,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Address"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Group"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2508,7 +2508,7 @@
         "human" : "An expression or a reference must be provided",
         "expression" : "expression.exists() or reference.exists()",
         "xpath" : "exists(f:expression) or exists(f:reference)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Measure"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2780,7 +2780,7 @@
         "human" : "An expression or a reference must be provided",
         "expression" : "expression.exists() or reference.exists()",
         "xpath" : "exists(f:expression) or exists(f:reference)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Measure"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3053,7 +3053,7 @@
         "human" : "An expression or a reference must be provided",
         "expression" : "expression.exists() or reference.exists()",
         "xpath" : "exists(f:expression) or exists(f:reference)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Measure"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3377,7 +3377,7 @@
         "human" : "An expression or a reference must be provided",
         "expression" : "expression.exists() or reference.exists()",
         "xpath" : "exists(f:expression) or exists(f:reference)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Measure"
       }],
       "mapping" : [{
         "identity" : "rim",

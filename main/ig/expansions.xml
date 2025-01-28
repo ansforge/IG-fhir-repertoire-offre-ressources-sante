@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="6cd22307-1b47-4fe0-b292-3650c90bb0ad"/>
+  <id value="d142c7e8-2ad7-4153-b9ce-25b5dd35da0e"/>
   <meta>
-    <lastUpdated value="2025-01-22T15:00:55.870+00:00"/>
+    <lastUpdated value="2025-01-28T15:58:19.855+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
     <fullUrl value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -71,7 +74,8 @@
         <name value="ActTypeRORValueSet"/>
         <title value="Valueset type d'acte"/>
         <status value="draft"/>
-        <date value="2025-01-22T15:00:55+00:00"/>
+        <experimental value="true"/>
+        <date value="2025-01-28T15:58:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -80,8 +84,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:890900c1-1ac0-416c-9cc0-20016a7b4ca1"/>
-          <timestamp value="2025-01-22T15:02:32+00:00"/>
+          <identifier value="urn:uuid:93c52c4e-37c4-4341-be89-ba2cf260ac5b"/>
+          <timestamp value="2025-01-28T15:59:59+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -7171,9 +7175,10 @@
         <name value="CodeRegionTerritorialDivisionRORValueSet"/>
         <title value="Fusion des valuesets pour le code de la division territoriale"/>
         <status value="draft"/>
+        <experimental value="true"/>
         <expansion>
-          <identifier value="urn:uuid:f0e68556-55da-4b59-8bdb-30a4faeb1388"/>
-          <timestamp value="2025-01-22T15:02:36+00:00"/>
+          <identifier value="urn:uuid:c419e89c-0fd8-44ae-bb3e-86b66516ce78"/>
+          <timestamp value="2025-01-28T16:00:02+00:00"/>
           <total value="35502"/>
           <offset value="0"/>
           <parameter>
@@ -7226,6 +7231,10 @@
           </parameter>
           <parameter>
             <name value="warning-draft"/>
+            <valueUri value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset|0.5.0-snapshot-1"/>
+          </parameter>
+          <parameter>
+            <name value="warning-experimental"/>
             <valueUri value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset|0.5.0-snapshot-1"/>
           </parameter>
           <parameter>
@@ -13268,6 +13277,9 @@
     <fullUrl value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-include-associated-data-vs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -13351,7 +13363,8 @@
         <name value="RorIncludeAssociatedDataVS"/>
         <title value="Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData"/>
         <status value="draft"/>
-        <date value="2025-01-22T15:00:55+00:00"/>
+        <experimental value="true"/>
+        <date value="2025-01-28T15:58:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -13360,8 +13373,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8acd2215-f8a7-4606-9b97-7efcb1e1a5ac"/>
-          <timestamp value="2025-01-22T15:02:38+00:00"/>
+          <identifier value="urn:uuid:e0d5abb6-fda6-4856-aede-f75ec8716a8f"/>
+          <timestamp value="2025-01-28T16:00:04+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -13407,6 +13420,9 @@
     <fullUrl value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs"/>
     <resource>
       <ValueSet>
+        <meta>
+          <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -13417,14 +13433,17 @@
               <p>Expansion from smt.esante.gouv.fr based on:</p>
               <ul>
                 <li>
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html">codesystem UsageContextType v2.0.1 (CodeSystem)</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html">codesystem UsageContextType v2.0.1 (CodeSystem)</a>
+                </li>
+                <li>
+                  <a href="CodeSystem-usage-context-ror-codesystem.html">codesystem UsageContextRORCodeSystem v0.5.0-snapshot-1 (CodeSystem)</a>
                 </li>
                 <li>system TRE-R04-TypeSavoirFaire version20231215120000</li>
                 <li>system TRE-R288-TypeProfession version20231215120000</li>
                 <li>system TRE-R67-TypeStructure-EJ-EG version20231215120000</li>
               </ul>
             </div>
-            <p>This value set contains 13 concepts</p>
+            <p>This value set contains 14 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -13443,7 +13462,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-gender"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-gender">gender</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-gender">gender</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Gender</td>
@@ -13457,7 +13476,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-age"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-age">age</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-age">age</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Age Range</td>
@@ -13471,7 +13490,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-focus"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-focus">focus</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-focus">focus</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Clinical Focus</td>
@@ -13485,7 +13504,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-user"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-user">user</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-user">user</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>User Type</td>
@@ -13499,7 +13518,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-workflow"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-workflow">workflow</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-workflow">workflow</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Workflow Setting</td>
@@ -13513,7 +13532,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-task"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-task">task</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-task">task</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Workflow Task</td>
@@ -13527,7 +13546,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-venue"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-venue">venue</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-venue">venue</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Clinical Venue</td>
@@ -13541,7 +13560,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-species"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-species">species</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-species">species</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Species</td>
@@ -13555,7 +13574,7 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-program"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-program">program</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-program">program</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Program</td>
@@ -13569,13 +13588,27 @@
               <tr>
                 <td style="white-space:nowrap">
                   <a name="x-http://terminology.hl7.org/CodeSystem/usage-context-type-jurisdiction"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-usage-context-type.html#usage-context-type-jurisdiction">jurisdiction</a>
+                  <a href="http://terminology.hl7.org/6.2.0/CodeSystem-usage-context-type.html#usage-context-type-jurisdiction">jurisdiction</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
                 <td>Jurisdiction</td>
                 <td>
                   <div>
                     <p>A country, state, territory or other geographic or geopolicital area for which this artifact/element is applicable.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem-champAct"> </a>  
+                  <a href="CodeSystem-usage-context-ror-codesystem.html#usage-context-ror-codesystem-champAct">champAct</a>
+                </td>
+                <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem</td>
+                <td>champAct</td>
+                <td>
+                  <div>
+                    <p>Champ d'activité</p>
 
                   </div>
                 </td>
@@ -13612,7 +13645,8 @@
         <name value="RORUsageContextTypeVS"/>
         <title value="Value Set type pour le contexte d'usage de la fiche de saisie"/>
         <status value="draft"/>
-        <date value="2025-01-22T15:00:55+00:00"/>
+        <experimental value="true"/>
+        <date value="2025-01-28T15:58:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -13621,9 +13655,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:f6d2b1e6-81d4-43e4-bb7d-6d53d96d76ce"/>
-          <timestamp value="2025-01-22T15:02:39+00:00"/>
-          <total value="13"/>
+          <identifier value="urn:uuid:1f655c30-fa4c-4106-92bd-ccc500a4fea6"/>
+          <timestamp value="2025-01-28T16:00:04+00:00"/>
+          <total value="14"/>
           <offset value="0"/>
           <parameter>
             <name value="count"/>
@@ -13640,6 +13674,10 @@
           <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://terminology.hl7.org/CodeSystem/usage-context-type|2.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem|0.5.0-snapshot-1"/>
           </parameter>
           <parameter>
             <name value="used-valueset"/>
@@ -13722,6 +13760,11 @@
             <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
             <code value="jurisdiction"/>
             <display value="Jurisdiction"/>
+          </contains>
+          <contains>
+            <system value="https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem"/>
+            <code value="champAct"/>
+            <display value="champAct"/>
           </contains>
           <contains>
             <system value="https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG"/>
