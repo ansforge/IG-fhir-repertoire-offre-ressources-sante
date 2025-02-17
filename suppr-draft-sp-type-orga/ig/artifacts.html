@@ -66,7 +66,7 @@
 
 
 
-  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+  <img alt=" flag" src="assets/images/zwe.svg" height="16" title=""/>
 
 
             </span>
@@ -242,16 +242,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#2">Behavior: Search Parameters</a>
       </li>
       <li>
-         <a href="#3">Terminology: Value Sets</a>
+         <a href="#3">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#4">Terminology: Code Systems</a>
+         <a href="#4">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#5">Example: Example Instances</a>
+         <a href="#5">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#6">Other</a>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -618,139 +621,97 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tbody>
    </table>
    <a name="3"> </a>
-   <h3>Terminology: Value Sets </h3>
-    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-code-region-territorial-division-ror-valueset.html"
-                  title="ValueSet/code-region-territorial-division-ror-valueset">Fusion des valuesets pour le code de la division territoriale</a>
+               <a href="StructureDefinition-ror-healthcareservice.html"
+                  title="StructureDefinition/ror-healthcareservice">RORHealthcareService</a>
             </td>
             <td>
-<p>ValueSet regroupant des valuesets du NOS pour le code de la division territoriale</p>
+<p>Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d’une personne</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-ror-include-associated-data-vs.html"
-                  title="ValueSet/ror-include-associated-data-vs">Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData</a>
+               <a href="StructureDefinition-ror-location.html"
+                  title="StructureDefinition/ror-location">RORLocation</a>
             </td>
             <td>
-<p>Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData</p>
+<p>Profil créé dans le cadre du ROR pour décrire l’espace disposant d’un ensemble de ressources pour réaliser une offre.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-ror-usage-context-type-vs.html"
-                  title="ValueSet/ror-usage-context-type-vs">Value Set type pour le contexte d'usage de la fiche de saisie</a>
+               <a href="StructureDefinition-ror-measure.html"
+                  title="StructureDefinition/ror-measure">RORMeasure</a>
             </td>
             <td>
-<p>Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d’usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession</p>
+<p>Définition de l’indicateur de pilotage du ROR National</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-act-type-ror-valueset.html"
-                  title="ValueSet/act-type-ror-valueset">Valueset type d'acte</a>
+               <a href="StructureDefinition-ror-measurereport.html"
+                  title="StructureDefinition/ror-measurereport">RORMeasureReport</a>
             </td>
             <td>
-<p>Valueset type d’acte</p>
+<p>Valeur pour un indicateur de pilotage du ROR National</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ror-organization.html"
+                  title="StructureDefinition/ror-organization">ROROrganization</a>
+            </td>
+            <td>
+<p>Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ror-practitioner.html"
+                  title="StructureDefinition/ror-practitioner">RORPractitioner</a>
+            </td>
+            <td>
+<p>Profil créée dans le cadre du ROR pour décrire les données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ror-practitionerrole.html"
+                  title="StructureDefinition/ror-practitionerrole">RORPractitionerRole</a>
+            </td>
+            <td>
+<p>Profil créé dans le cadre du ROR pour décrire les modalités d’exercice opérationnelles du profesionnel dans la réalisation de l’offre</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ror-questionnaire.html"
+                  title="StructureDefinition/ror-questionnaire">RORQuestionnaire</a>
+            </td>
+            <td>
+<p>Fiche de saisie de l’offre de soins</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ror-task.html"
+                  title="StructureDefinition/ror-task">RORTask</a>
+            </td>
+            <td>
+<p>Anomalie concerant une donnée dans une ressource du ROR</p>
 </td>
          </tr>
       </tbody>
    </table>
    <a name="4"> </a>
-   <h3>Terminology: Code Systems </h3>
-    <p>These define new code systems used by systems conforming to this implementation guide.</p>
-<table class="grid">
-      <col style="width:20%"/>
-      <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-act-type-ror-codesystem.html"
-                  title="CodeSystem/act-type-ror-codesystem">ActTypeRORCodeSystem</a>
-            </td>
-            <td>
-<p>CodeSystem pour le type d’acte pour les slices de characteristic concernant les actes dans la ressource ROR HealthcareService</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-ror-include-associated-data-code-system.html"
-                  title="CodeSystem/ror-include-associated-data-code-system">Code System (CS) utilisé pour étendre le CS original avec le query parameter includeAssociatedData</a>
-            </td>
-            <td>
-<p>Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l’opération export pour le ROR</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-input-task-ror-codesystem.html"
-                  title="CodeSystem/input-task-ror-codesystem">InputTaskRORCodeSystem</a>
-            </td>
-            <td>
-<p>Code System pour la définition des éléments spécifiques de input dans ressource RORTask</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-output-task-ror-codesystem.html"
-                  title="CodeSystem/output-task-ror-codesystem">OutputTaskRORCodeSystem</a>
-            </td>
-            <td>
-<p>Code System pour la définition des éléments spécifiques de output dans ressource RORTask</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-usage-context-ror-codesystem.html"
-                  title="CodeSystem/usage-context-ror-codesystem">UsageContextRORCodeSystem</a>
-            </td>
-            <td>
-<p>CodeSystem pour définir le type de catégorie du contexte d’usage des instances de questionnaire dans le cadre du ROR</p>
-</td>
-         </tr>
-      </tbody>
-   </table>
-   <a name="5"> </a>
-   <h3>Example: Example Instances </h3>
-    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
-<table class="grid">
-      <col style="width:20%"/>
-      <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Questionnaire-ror-questionnaire-offre-de-ville.html"
-                  title="Questionnaire/ror-questionnaire-offre-de-ville">Consignes fiche de saisie Cabinet de ville de médecine générale</a>
-            </td>
-            <td>
-<p>Exemple ‘fake’ pour RORQuestionnaire n’ayant pas forcément de cohérence fonctionnelle.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Location-ror-location-exemple.html"
-                  title="Location/ror-location-exemple">ror-location-exemple</a>
-            </td>
-            <td>
-<p>Exemple ‘fake’ pour RORLocation n’ayant pas forcément de cohérence fonctionnelle.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Task-ror-task-exemple.html" title="Task/ror-task-exemple">ror-task-exemple</a>
-            </td>
-            <td>
-<p>Exemple ‘fake’ pour RORTask n’ayant pas forcément de cohérence fonctionnelle</p>
-</td>
-         </tr>
-      </tbody>
-   </table>
-   <a name="6"> </a>
-   <h3>Other </h3>
-    <p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
@@ -882,15 +843,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ror-healthcareservice.html"
-                  title="StructureDefinition/ror-healthcareservice">RORHealthcareService</a>
-            </td>
-            <td>
-<p>Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d’une personne</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-ror-healthcareservice-contact.html"
                   title="StructureDefinition/ror-healthcareservice-contact">RORHealthcareServiceContact</a>
             </td>
@@ -945,15 +897,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ror-location.html"
-                  title="StructureDefinition/ror-location">RORLocation</a>
-            </td>
-            <td>
-<p>Profil créé dans le cadre du ROR pour décrire l’espace disposant d’un ensemble de ressources pour réaliser une offre.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-ror-location-equipment.html"
                   title="StructureDefinition/ror-location-equipment">RORLocationEquipment</a>
             </td>
@@ -991,24 +934,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ror-measure.html"
-                  title="StructureDefinition/ror-measure">RORMeasure</a>
-            </td>
-            <td>
-<p>Définition de l’indicateur de pilotage du ROR National</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-ror-measurereport.html"
-                  title="StructureDefinition/ror-measurereport">RORMeasureReport</a>
-            </td>
-            <td>
-<p>Valeur pour un indicateur de pilotage du ROR National</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-ror-meta-comment.html"
                   title="StructureDefinition/ror-meta-comment">RORMetaComment</a>
             </td>
@@ -1023,15 +948,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Extension créée dans le cadre du ROR qui correspond à la date de création (dans le ROR régional) présente dans les métadonnées.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-ror-organization.html"
-                  title="StructureDefinition/ror-organization">ROROrganization</a>
-            </td>
-            <td>
-<p>Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes</p>
 </td>
          </tr>
          <tr>
@@ -1153,24 +1069,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ror-practitioner.html"
-                  title="StructureDefinition/ror-practitioner">RORPractitioner</a>
-            </td>
-            <td>
-<p>Profil créée dans le cadre du ROR pour décrire les données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-ror-practitionerrole.html"
-                  title="StructureDefinition/ror-practitionerrole">RORPractitionerRole</a>
-            </td>
-            <td>
-<p>Profil créé dans le cadre du ROR pour décrire les modalités d’exercice opérationnelles du profesionnel dans la réalisation de l’offre</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-ror-practitionerrole-name.html"
                   title="StructureDefinition/ror-practitionerrole-name">RORPractitionerRoleName</a>
             </td>
@@ -1185,24 +1083,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Extension créée dans le cadre du ROR qui correspond au statut du professionnel lorsqu’il exerce dans le cadre de l’offre décrite.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-ror-questionnaire.html"
-                  title="StructureDefinition/ror-questionnaire">RORQuestionnaire</a>
-            </td>
-            <td>
-<p>Fiche de saisie de l’offre de soins</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-ror-task.html"
-                  title="StructureDefinition/ror-task">RORTask</a>
-            </td>
-            <td>
-<p>Anomalie concerant une donnée dans une ressource du ROR</p>
 </td>
          </tr>
          <tr>
@@ -1240,6 +1120,137 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td>
 <p>Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. 
 Cela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-code-region-territorial-division-ror-valueset.html"
+                  title="ValueSet/code-region-territorial-division-ror-valueset">Fusion des valuesets pour le code de la division territoriale</a>
+            </td>
+            <td>
+<p>ValueSet regroupant des valuesets du NOS pour le code de la division territoriale</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ror-include-associated-data-vs.html"
+                  title="ValueSet/ror-include-associated-data-vs">Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData</a>
+            </td>
+            <td>
+<p>Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ror-usage-context-type-vs.html"
+                  title="ValueSet/ror-usage-context-type-vs">Value Set type pour le contexte d'usage de la fiche de saisie</a>
+            </td>
+            <td>
+<p>Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d’usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-act-type-ror-valueset.html"
+                  title="ValueSet/act-type-ror-valueset">Valueset type d'acte</a>
+            </td>
+            <td>
+<p>Valueset type d’acte</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-act-type-ror-codesystem.html"
+                  title="CodeSystem/act-type-ror-codesystem">ActTypeRORCodeSystem</a>
+            </td>
+            <td>
+<p>CodeSystem pour le type d’acte pour les slices de characteristic concernant les actes dans la ressource ROR HealthcareService</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ror-include-associated-data-code-system.html"
+                  title="CodeSystem/ror-include-associated-data-code-system">Code System (CS) utilisé pour étendre le CS original avec le query parameter includeAssociatedData</a>
+            </td>
+            <td>
+<p>Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l’opération export pour le ROR</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-input-task-ror-codesystem.html"
+                  title="CodeSystem/input-task-ror-codesystem">InputTaskRORCodeSystem</a>
+            </td>
+            <td>
+<p>Code System pour la définition des éléments spécifiques de input dans ressource RORTask</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-output-task-ror-codesystem.html"
+                  title="CodeSystem/output-task-ror-codesystem">OutputTaskRORCodeSystem</a>
+            </td>
+            <td>
+<p>Code System pour la définition des éléments spécifiques de output dans ressource RORTask</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-usage-context-ror-codesystem.html"
+                  title="CodeSystem/usage-context-ror-codesystem">UsageContextRORCodeSystem</a>
+            </td>
+            <td>
+<p>CodeSystem pour définir le type de catégorie du contexte d’usage des instances de questionnaire dans le cadre du ROR</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-ror-questionnaire-offre-de-ville.html"
+                  title="Questionnaire/ror-questionnaire-offre-de-ville">Consignes fiche de saisie Cabinet de ville de médecine générale</a>
+            </td>
+            <td>
+<p>Exemple ‘fake’ pour RORQuestionnaire n’ayant pas forcément de cohérence fonctionnelle.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-ror-location-exemple.html"
+                  title="Location/ror-location-exemple">ror-location-exemple</a>
+            </td>
+            <td>
+<p>Exemple ‘fake’ pour RORLocation n’ayant pas forcément de cohérence fonctionnelle.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-ror-task-exemple.html" title="Task/ror-task-exemple">ror-task-exemple</a>
+            </td>
+            <td>
+<p>Exemple ‘fake’ pour RORTask n’ayant pas forcément de cohérence fonctionnelle</p>
 </td>
          </tr>
       </tbody>
@@ -1284,7 +1295,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 13, 2025 16:53+0000">2025-02-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 17, 2025 10:20+0000">2025-02-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
