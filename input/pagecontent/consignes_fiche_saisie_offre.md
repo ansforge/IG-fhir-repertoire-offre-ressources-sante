@@ -9,7 +9,7 @@
 </td>
 <td width="465">
 <p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p>
-<p>Update<a href="#_ftn2" name="_ftnref2">[2]</a> <code><span style="color: #ff0000;">draft</span></code></p>
+<p>Update<a href="#_ftn2" name="_ftnref2">[2]</a></p>
 </td>
 <td width="465">
 <p>Search<a href="#_ftn3" name="_ftnref3"><sup>[3]</sup></a></p>
@@ -21,7 +21,7 @@
 </td>
 <td width="465">
 <p>POST</p>
-<p>PUT <code><span style="color: #ff0000;">draft</span></code></p>
+<p>PUT</p>
 </td>
 <td width="465">
 <p>GET</p>
@@ -44,7 +44,7 @@
 </td>
 <td width="465">
 <p><code>POST [base]/Questionnaire {?_format=[mime-type]}</code></p>
-<p><code>PUT [base]/Questionnaire/[id]{?&_format=[mime-type]}</code> <code><span style="color: #ff0000;">draft</span></code></p>
+<p><code>PUT [base]/Questionnaire/[id]{?&_format=[mime-type]}</code></p>
 </td>
 <td width="465">
 <p><code>GET [base]/Questionnaire{?[parameters]{&amp;_format=[mime-type]}}</code></p>
@@ -57,11 +57,6 @@
 <p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#update">https://hl7.org/fhir/R4/http.html#update</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 <p><a href="#_ftnref3" name="_ftn3">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 
-<blockquote class="stu-note">
-<p>
-A noter que le PUT (update) n'est pas disponible dans la version 3.2 du ROR National. Son implémentation est programmée pour la version 3.3.
-</p>
-</blockquote>
 
 ### Construction de la réponse de base
 
