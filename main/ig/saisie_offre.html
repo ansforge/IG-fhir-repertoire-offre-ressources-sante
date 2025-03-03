@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"11"}
     h3,h4,h5,h6{--heading-prefix:"11"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -313,16 +314,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
 
 <p>Un body contenant une ressource OperationOutcome qui donne les
-détails sur la raison de l’échec</p>
+détails sur la raison de l'échec</p>
 
-<p>Remarque : l’échec d’une recherche est la non-possibilité d’exécuter la
-requête, ce qui est différent d’aucune correspondance à la recherche.
+<p>Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
+requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
 <a href="https://www.hl7.org/fhir/R4/http.html">https://www.hl7.org/fhir/R4/http.html</a></p>
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="spécifique-serveur-scénario-1-création-de-lentité-juridique-draft">[spécifique serveur] Scénario 1 : Création de l’entité juridique <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-1-création-de-lentité-juridique-draft">[spécifique serveur] Scénario 1 : Création de l'entité juridique <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
@@ -330,7 +331,7 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Organization</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -422,17 +423,17 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-2-création-de-lentité-géographique-draft">[spécifique serveur] Scénario 2 : Création de l’entité géographique <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-2-création-de-lentité-géographique-draft">[spécifique serveur] Scénario 2 : Création de l'entité géographique <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Afin de décrire son offre, un établissement crée son entité géographique.</p>
 
-<p><strong>Prérequis :</strong> L’entité juridique dont fait partie l’entité géographique à créer existe et son identifiant est connu (1111).</p>
+<p><strong>Prérequis :</strong> L'entité juridique dont fait partie l'entité géographique à créer existe et son identifiant est connu (1111).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Organization</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -596,17 +597,17 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-3-création-dune-offre-opérationnelle-directement-rattachée-à-létablissement-draft">[spécifique serveur] Scénario 3 : Création d’une offre opérationnelle directement rattachée à l’établissement <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-3-création-dune-offre-opérationnelle-directement-rattachée-à-létablissement-draft">[spécifique serveur] Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement ajoute une offre opérationnelle couvrant une autre zone d’intervention que les offres opérationnelles précédemment enregistrées.</p>
+<p><strong>Description du scénario :</strong> Un établissement ajoute une offre opérationnelle couvrant une autre zone d'intervention que les offres opérationnelles précédemment enregistrées.</p>
 
-<p><strong>Prérequis :</strong> L’établissement dont fait partie l’offre opérationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (2424 et 654).</p>
+<p><strong>Prérequis :</strong> L'établissement dont fait partie l'offre opérationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (2424 et 654).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/HealthcareService</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -983,17 +984,17 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-4-création-dun-pôle-draft">[spécifique serveur] Scénario 4 : Création d’un pôle <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-4-création-dun-pôle-draft">[spécifique serveur] Scénario 4 : Création d'un pôle <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Afin de décrire son offre, un établissement crée un pôle.</p>
 
-<p><strong>Prérequis :</strong> L’entité géograpghique dont fait partie le pôle à créer existe et son identifiant est connu (3536).</p>
+<p><strong>Prérequis :</strong> L'entité géograpghique dont fait partie le pôle à créer existe et son identifiant est connu (3536).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Organization</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -1041,17 +1042,17 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-5-création-dun-service-draft">[spécifique serveur] Scénario 5 : Création d’un service <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-5-création-dun-service-draft">[spécifique serveur] Scénario 5 : Création d'un service <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Afin de décrire son offre, un établissement crée un service.</p>
 
-<p><strong>Prérequis :</strong> L’établissement dont fait partie le service à créer existe et son identifiant est connu (3537).</p>
+<p><strong>Prérequis :</strong> L'établissement dont fait partie le service à créer existe et son identifiant est connu (3537).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Organization</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -1099,17 +1100,17 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-6-création-dune-unité-fonctionnelle-draft">[spécifique serveur] Scénario 6 : Création d’une unité fonctionnelle <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-6-création-dune-unité-fonctionnelle-draft">[spécifique serveur] Scénario 6 : Création d'une unité fonctionnelle <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Afin de décrire son offre, un établissement crée une unité fonctionnelle.</p>
 
-<p><strong>Prérequis :</strong> L’établissement dont fait partie l’unité fonctionnelle à créer existe et son identifiant est connu (6963).</p>
+<p><strong>Prérequis :</strong> L'établissement dont fait partie l'unité fonctionnelle à créer existe et son identifiant est connu (6963).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Organization</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -1157,17 +1158,17 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-7-création-dune-offre-opérationnelle-dans-une-unité-fonctionnelle-préexistante-draft">[spécifique serveur] Scénario 7 : Création d’une offre opérationnelle dans une unité fonctionnelle préexistante <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-7-création-dune-offre-opérationnelle-dans-une-unité-fonctionnelle-préexistante-draft">[spécifique serveur] Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.</p>
 
-<p><strong>Prérequis :</strong> L’établissement dont fait partie l’offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (5958 et 5253).</p>
+<p><strong>Prérequis :</strong> L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (5958 et 5253).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/HealthcareService</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -1477,17 +1478,17 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-8-création-dune-offre-opérationnelle-de-ville-draft">[spécifique serveur] Scénario 8 : Création d’une offre opérationnelle de ville <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-8-création-dune-offre-opérationnelle-de-ville-draft">[spécifique serveur] Scénario 8 : Création d'une offre opérationnelle de ville <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> A la suite d’un adossement à l’annuaire, le ROR national crée l’offre opérationnelle d’un cabinet de ville.</p>
+<p><strong>Description du scénario :</strong> A la suite d'un adossement à l'annuaire, le ROR national crée l'offre opérationnelle d'un cabinet de ville.</p>
 
-<p><strong>Prérequis :</strong> L’établissement dont fait partie l’offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (4947 et 1215).</p>
+<p><strong>Prérequis :</strong> L'établissement dont fait partie l'offre opéréationnelle à créer et son lieu de réalisation existent et leurs identifiants respectifs sont connus (4947 et 1215).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/HealthcareService</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -1764,7 +1765,7 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-9-création-dun-professionnel-draft">[spécifique serveur] Scénario 9 : Création d’un professionnel <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-9-création-dun-professionnel-draft">[spécifique serveur] Scénario 9 : Création d'un professionnel <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
@@ -1772,7 +1773,7 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Practitioner</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -1835,17 +1836,17 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-10-création-dune-situation-opérationnelle-draft">[spécifique serveur] Scénario 10 : Création d’une situation opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-10-création-dune-situation-opérationnelle-draft">[spécifique serveur] Scénario 10 : Création d'une situation opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
 <p><strong>Description du scénario :</strong> Afin de décrire son offre, un établissement ajoute une situation opérationnelle.</p>
 
-<p><strong>Prérequis :</strong> Le professionnel et l’offre opérationnelle liés à la siutation opérationnelle à créer existent et leurs identifiants respectifs sont connus (2524 et 9597).</p>
+<p><strong>Prérequis :</strong> Le professionnel et l'offre opérationnelle liés à la siutation opérationnelle à créer existent et leurs identifiants respectifs sont connus (2524 et 9597).</p>
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/PractitionerRole</span><span class="w">
 </span><span class="p">{</span><span class="w">	
@@ -1952,7 +1953,7 @@ Plus de précision sur la spécification FHIR :
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 28, 2025 15:58+0000">2025-01-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 10:18+0000">2025-03-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

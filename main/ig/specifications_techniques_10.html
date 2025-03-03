@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"9"}
     h3,h4,h5,h6{--heading-prefix:"9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -311,7 +312,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>Un header ETag contenant le nouvel identifiant de version de la ressource mise à jour.</p>
   </li>
   <li>
-    <p>L’identifiant fonctionnel de la ressource mise à jour.</p>
+    <p>L'identifiant fonctionnel de la ressource mise à jour.</p>
   </li>
 </ul>
 
@@ -326,25 +327,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
   </li>
   <li>
-    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les détails sur la raison de l’échec</p>
+    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les détails sur la raison de l'échec</p>
   </li>
 </ul>
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="spécifique-serveur-scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 1 : Ajout d’un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l'offre de fonction "001 | hébergement", associé à une offre opérationnelle existante dont l’identifiant est XXX, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.</p>
+<p><strong>Description du scénario :</strong> Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l'offre de fonction "001 | hébergement", associé à une offre opérationnelle existante dont l'identifiant est XXX, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.</p>
 
 <p><strong>Requête :</strong></p>
 
 <ul>
-  <li>Création du nouveau lieu de réalisation de l’offre</li>
+  <li>Création du nouveau lieu de réalisation de l'offre</li>
 </ul>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location</span><span class="w"> 
 </span><span class="p">{</span><span class="w">
@@ -418,7 +419,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span></code></pre></div></div>
 
 <ul>
-  <li>Ajout de la référence au nouveau lieu créé (dont l’identifiant est YYY) dans la ressource de l’offre opérationnelle concernée</li>
+  <li>Ajout de la référence au nouveau lieu créé (dont l'identifiant est YYY) dans la ressource de l'offre opérationnelle concernée</li>
 </ul>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/HealthcareService/XXX</span><span class="w">
@@ -455,11 +456,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-2-ajout-dune-capacité-de-prise-en-charge">[spécifique serveur] Scénario 2 : Ajout d’une capacité de prise en charge</h4>
+<h4 id="spécifique-serveur-scénario-2-ajout-dune-capacité-de-prise-en-charge">[spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge</h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement (via bed management, ...) ajoute dans un lieu de réalisation de l'offre existant dont l’identifiant est XXX, des données capacitaires pour une affectation temporaire : une affectation temporaire "Covid +", 2 lits disponibles (sexe indifférencié), à t0.</p>
+<p><strong>Description du scénario :</strong> Un établissement (via bed management, ...) ajoute dans un lieu de réalisation de l'offre existant dont l'identifiant est XXX, des données capacitaires pour une affectation temporaire : une affectation temporaire "Covid +", 2 lits disponibles (sexe indifférencié), à t0.</p>
 
 <p><strong>Requête :</strong></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
@@ -585,11 +586,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-3-suppression-dune-capacité-daccueil-opérationnelle-draft">[spécifique serveur] Scénario 3 : Suppression d’une capacité d’accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-3-suppression-dune-capacité-daccueil-opérationnelle-draft">[spécifique serveur] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement (via bed management, …) supprime dans un lieu de réalisation de l'offre existant dont l’identifiant est XXX tous les enregistrements liés à l'affectation temporaire "Covid-".</p>
+<p><strong>Description du scénario :</strong> Un établissement (via bed management, …) supprime dans un lieu de réalisation de l'offre existant dont l'identifiant est XXX tous les enregistrements liés à l'affectation temporaire "Covid-".</p>
 
 <p><strong>Requête :</strong></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
@@ -617,11 +618,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-4-mise-à-jour-de-ladresse-du-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 4 : Mise à jour de l’adresse du lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-4-mise-à-jour-de-ladresse-du-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement modifie le numéro de voie de l’adresse (nouvelle valeur : YYY) du lieu de réalisation de l’offre dont l’identifiant est XXX.</p>
+<p><strong>Description du scénario :</strong> Un établissement modifie le numéro de voie de l'adresse (nouvelle valeur : YYY) du lieu de réalisation de l'offre dont l'identifiant est XXX.</p>
 
 <p><strong>Requête :</strong></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
@@ -658,11 +659,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-5-ajout-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 5 : Ajout d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-5-ajout-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Ajout d’un équipement spécifique dans un lieu de réalisation de l’offre dont l’identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</p>
+<p><strong>Description du scénario :</strong> Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</p>
 
 <p><strong>Requête :</strong></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
@@ -768,11 +769,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-6-modification-de-la-quantité-déquipements-spécifiques-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 6 : Modification de la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-6-modification-de-la-quantité-déquipements-spécifiques-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Modification de la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre dont l’identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</p>
+<p><strong>Description du scénario :</strong> Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</p>
 
 <p><strong>Requête :</strong></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
@@ -800,11 +801,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-7-suppression-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 7 : Suppression d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-7-suppression-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement indique qu’il ne dispose plus de l’échographe 3D, il modifie le nombre d’équipement en service : 030 | Echographe 3D, nb en service : 0, aucune limite équipement associée.</p>
+<p><strong>Description du scénario :</strong> Un établissement indique qu'il ne dispose plus de l'échographe 3D, il modifie le nombre d'équipement en service : 030 | Echographe 3D, nb en service : 0, aucune limite équipement associée.</p>
 
 <p><strong>Requête :</strong></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
@@ -832,11 +833,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-8-modification-de-la-valeur-limite-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 8 : Modification de la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="spécifique-serveur-scénario-8-modification-de-la-valeur-limite-dun-équipement-spécifique-dans-un-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement modifie la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre dont l’identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 280 kg.</p>
+<p><strong>Description du scénario :</strong> Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 280 kg.</p>
 
 <p><strong>Requête :</strong></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
@@ -1173,7 +1174,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span></code></pre></div></div>
 
 <p><strong>Requête (via identifiant fonctionnel) :</strong>
-<em>Nous déconseillons l’utilisation du PATCH conditionnel en effet sa maturité en FHIR R4 est “trial use”.</em></p>
+<em>Nous déconseillons l'utilisation du PATCH conditionnel en effet sa maturité en FHIR R4 est "trial use".</em></p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location?identifier=YYY</span><span class="w">
 
 </span><span class="p">{</span><span class="w">
@@ -1484,7 +1485,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 28, 2025 15:58+0000">2025-01-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 10:18+0000">2025-03-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

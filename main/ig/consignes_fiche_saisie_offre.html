@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"10"}
     h3,h4,h5,h6{--heading-prefix:"10"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -260,7 +261,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </td>
 <td width="465">
 <p>Create<a href="#_ftn1" name="_ftnref1">[1]</a></p>
-<p>Update<a href="#_ftn2" name="_ftnref2">[2]</a> <code><span style="color: #ff0000;">draft</span></code></p>
+<p>Update<a href="#_ftn2" name="_ftnref2">[2]</a></p>
 </td>
 <td width="465">
 <p>Search<a href="#_ftn3" name="_ftnref3"><sup>[3]</sup></a></p>
@@ -272,7 +273,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </td>
 <td width="465">
 <p>POST</p>
-<p>PUT <code><span style="color: #ff0000;">draft</span></code></p>
+<p>PUT</p>
 </td>
 <td width="465">
 <p>GET</p>
@@ -295,7 +296,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </td>
 <td width="465">
 <p><code>POST [base]/Questionnaire {?_format=[mime-type]}</code></p>
-<p><code>PUT [base]/Questionnaire/[id]{?&amp;_format=[mime-type]}</code> <code><span style="color: #ff0000;">draft</span></code></p>
+<p><code>PUT [base]/Questionnaire/[id]{?&amp;_format=[mime-type]}</code></p>
 </td>
 <td width="465">
 <p><code>GET [base]/Questionnaire{?[parameters]{&amp;_format=[mime-type]}}</code></p>
@@ -307,12 +308,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><a href="#_ftnref1" name="_ftn1">[1]</a> <a href="https://hl7.org/fhir/R4/http.html#create">https://hl7.org/fhir/R4/http.html#create</a> et <a href="https://hl7.org/fhir/R4/http.html#general">https://www.hl7.org/fhir/R4/http.html#general</a></p>
 <p><a href="#_ftnref2" name="_ftn2">[2]</a> <a href="https://hl7.org/fhir/R4/http.html#update">https://hl7.org/fhir/R4/http.html#update</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
 <p><a href="#_ftnref3" name="_ftn3">[3]</a> <a href="https://hl7.org/fhir/R4/http.html#search">https://hl7.org/fhir/R4/http.html#search</a> et <a href="http://hl7.org/fhir/R4/http.html#general">http://hl7.org/fhir/R4/http.html#general</a> &nbsp;</p>
-
-<blockquote class="stu-note">
-<p>
-A noter que le PUT (update) n'est pas disponible dans la version 3.2 du ROR National. Son implémentation est programmée pour la version 3.3.
-</p>
-</blockquote>
 
 <h3 id="construction-de-la-réponse-de-base">Construction de la réponse de base</h3>
 
@@ -339,10 +334,10 @@ A noter que le PUT (update) n'est pas disponible dans la version 3.2 du ROR Nati
 <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
 
 <p>Un body contenant une ressource OperationOutcome qui donne les
-détails sur la raison de l’échec</p>
+détails sur la raison de l'échec</p>
 
-<p>Remarque : l’échec d’une recherche est la non-possibilité d’exécuter la
-requête, ce qui est différent d’aucune correspondance à la recherche.
+<p>Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
+requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
 <a href="https://www.hl7.org/fhir/R4/http.html">https://www.hl7.org/fhir/R4/http.html</a></p>
 
@@ -359,7 +354,7 @@ Plus de précision sur la spécification FHIR :
     <p>Un header avec un code 200 OK HTTP</p>
   </li>
   <li>
-    <p>Un body contenant une ressource <a href="https://www.hl7.org/fhir/R4/bundle.html">Bundle</a> dont le type = searchset.\ Le bundle encapsule 0 à n ressources Measure corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche.\ Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise "total". Dans le cas où il n’y a pas de résultat le service renvoie "total": 0.</p>
+    <p>Un body contenant une ressource <a href="https://www.hl7.org/fhir/R4/bundle.html">Bundle</a> dont le type = searchset.\ Le bundle encapsule 0 à n ressources Measure corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche.\ Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise "total". Dans le cas où il n'y a pas de résultat le service renvoie "total": 0.</p>
   </li>
 </ul>
 
@@ -378,11 +373,11 @@ Plus de précision sur la spécification FHIR :
     <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
   </li>
   <li>
-    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les détails sur la raison de l’échec</p>
+    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les détails sur la raison de l'échec</p>
   </li>
 </ul>
 
-<p>Remarque : l’échec d’une recherche est la non-possibilité d’exécuter la requête, ce qui est différent d’aucune correspondance à la recherche. Plus de précision sur la spécification FHIR : <a href="http://hl7.org/fhir/R4/http.html">http://hl7.org/fhir/R4/http.html</a></p>
+<p>Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requête, ce qui est différent d'aucune correspondance à la recherche. Plus de précision sur la spécification FHIR : <a href="http://hl7.org/fhir/R4/http.html">http://hl7.org/fhir/R4/http.html</a></p>
 
 <h3 id="critères-de-recherche-pour-search">Critères de recherche pour Search</h3>
 
@@ -397,7 +392,7 @@ Plus de précision sur la spécification FHIR :
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="scénario-1-création-dune-fiche-de-consignes-de-saisie">Scénario 1 : Création d’une fiche de consignes de saisie</h4>
+<h4 id="scénario-1-création-dune-fiche-de-consignes-de-saisie">Scénario 1 : Création d'une fiche de consignes de saisie</h4>
 
 <p><strong>Description du scénario :</strong> Un consommateur souhaite créer une nouvelle fiche de consignes de saisie pour un cabinet de ville de médecine générale.</p>
 
@@ -405,7 +400,7 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête :</strong></p>
 
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
+<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Questionnaire</span><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -481,11 +476,11 @@ Plus de précision sur la spécification FHIR :
 </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-<p>Vous pouvez télécharger le json <a href="Questionnaire-ror-questionnaire-offre-de-ville.json">ici</a> et l’importer dans <a href="https://lhcformbuilder.nlm.nih.gov/">https://lhcformbuilder.nlm.nih.gov/</a> pour le tester et le faire évoluer via cet IHM.</p>
+<p>Vous pouvez télécharger le json <a href="Questionnaire-ror-questionnaire-offre-de-ville.json">ici</a> et l'importer dans <a href="https://lhcformbuilder.nlm.nih.gov/">https://lhcformbuilder.nlm.nih.gov/</a> pour le tester et le faire évoluer via cet IHM.</p>
 
-<h4 id="scénario-2-un-consommateur-souhaite-récupérer-lensemble-des-fiches">Scénario 2 : Un consommateur souhaite récupérer l’ensemble des fiches</h4>
+<h4 id="scénario-2-un-consommateur-souhaite-récupérer-lensemble-des-fiches">Scénario 2 : Un consommateur souhaite récupérer l'ensemble des fiches</h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer l’ensemble des fiches.</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer l'ensemble des fiches.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -513,7 +508,7 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-4-un-consommateur-souhaite-récupérer-un-ensemble-de-fiches-de-saisie-sur-un-critère-donné-draft">Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. Par exemple, un Centre de santé.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -527,7 +522,7 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="autres-scénarios">Autres scénarios</h4>
 
-<p>Pour construire d’autres requêtes selon vos besoins :</p>
+<p>Pour construire d'autres requêtes selon vos besoins :</p>
 <ul>
   <li>vous pouvez consulter les spécifications du standard FHIR <a href="https://hl7.org/fhir/R4/http.html">Http - FHIR v4.0.1 (hl7.org)</a></li>
   <li>utiliser les critères de recherche défini au <a href="search_param.html#structuredefinition-ror-questionnaire">paragraphe dédié</a></li>
@@ -574,7 +569,7 @@ Plus de précision sur la spécification FHIR :
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 28, 2025 15:58+0000">2025-01-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 10:18+0000">2025-03-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

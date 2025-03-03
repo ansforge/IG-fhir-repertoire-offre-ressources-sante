@@ -42,7 +42,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"21.103"}
     h3,h4,h5,h6{--heading-prefix:"21.103"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -285,7 +286,7 @@
   },
   "<a href="http://hl7.org/fhir/R4/location.html#Location.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location ror-location-exemple&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ror-location-exemple\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcror-location-exemple\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ror-location-exemple-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Last updated: 2023-12-20 10:00:00+0100&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ror-location.html\&quot;&gt;RORLocation&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;RORCommuneCog&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM 78646}\&quot;&gt;Versailles&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORMetaCreationDate&lt;/b&gt;: 2022-01-01 00:00:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu 001}\&quot;&gt;Hébergement&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 7 rue porte de Buc Versailles 78000 &lt;/p&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Location ror-location-exemple&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;ror-location-exemple\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcror-location-exemple\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;ror-location-exemple-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Last updated: 2023-12-20 10:00:00+0100&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-ror-location.html\&quot;&gt;RORLocation&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;RORCommuneCog&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM 78646}\&quot;&gt;Versailles&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORMetaCreationDate&lt;/b&gt;: 2022-01-01 00:00:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu 001}\&quot;&gt;Hébergement&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 7 rue porte de Buc Versailles 78000 &lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/location.html#Location.extension">extension</a>" : [
     {
@@ -387,7 +388,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 28, 2025 15:58+0000">2025-01-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 10:18+0000">2025-03-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

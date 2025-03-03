@@ -869,8 +869,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "ror-healthcareservice","HealthcareService.characteristic:specificAct.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"ror-healthcareservice","HealthcareService.characteristic:specificAct.extension","HealthcareService.characteristic.extension","","","",1,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+"ror-healthcareservice","HealthcareService.characteristic:specificAct.extension","HealthcareService.characteristic.extension","","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type]]} {[]}
+","Type d'acte","Extension créée dans le cadre du ROR pour discriminer le type d'acte (spécifique ou hors cabinet)","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -905,8 +905,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "ror-healthcareservice","HealthcareService.characteristic:outsideOfficeAct.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"ror-healthcareservice","HealthcareService.characteristic:outsideOfficeAct.extension","HealthcareService.characteristic.extension","","","",1,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+"ror-healthcareservice","HealthcareService.characteristic:outsideOfficeAct.extension","HealthcareService.characteristic.extension","","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type]]} {[]}
+","Type d'acte","Extension créée dans le cadre du ROR pour discriminer le type d'acte (spécifique ou hors cabinet)","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -5213,7 +5213,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Type of context being specified","A code that identifies the type of context being specified by this usage context.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG""/>
   <code value=""EG""/>
-</valueCoding>","","","",,"extensible","A code that specifies a type of context being specified by a usage context.","http://hl7.org/fhir/ValueSet/usage-context-type","",,,,"UsageContext.code",1,1,"ele-1
+</valueCoding>","","","",,"extensible","","https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs","",,,,"UsageContext.code",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ror-questionnaire","Questionnaire.useContext:catEG.value[x]","Questionnaire.useContext.value[x]","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
@@ -5241,7 +5241,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Type of context being specified","A code that identifies the type of context being specified by this usage context.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession""/>
   <code value=""P01""/>
-</valueCoding>","","","",,"extensible","A code that specifies a type of context being specified by a usage context.","http://hl7.org/fhir/ValueSet/usage-context-type","",,,,"UsageContext.code",1,1,"ele-1
+</valueCoding>","","","",,"extensible","","https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs","",,,,"UsageContext.code",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ror-questionnaire","Questionnaire.useContext:catPS.value[x]","Questionnaire.useContext.value[x]","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
@@ -5269,7 +5269,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Type of context being specified","A code that identifies the type of context being specified by this usage context.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire""/>
   <code value=""S""/>
-</valueCoding>","","","",,"extensible","A code that specifies a type of context being specified by a usage context.","http://hl7.org/fhir/ValueSet/usage-context-type","",,,,"UsageContext.code",1,1,"ele-1
+</valueCoding>","","","",,"extensible","","https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs","",,,,"UsageContext.code",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ror-questionnaire","Questionnaire.useContext:catSpeOrdinal.value[x]","Questionnaire.useContext.value[x]","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
@@ -5297,7 +5297,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Type of context being specified","A code that identifies the type of context being specified by this usage context.","Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.","","","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem""/>
   <code value=""champAct""/>
-</valueCoding>","","","",,"extensible","A code that specifies a type of context being specified by a usage context.","http://hl7.org/fhir/ValueSet/usage-context-type","",,,,"UsageContext.code",1,1,"ele-1
+</valueCoding>","","","",,"extensible","","https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs","",,,,"UsageContext.code",1,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ror-questionnaire","Questionnaire.useContext:catChampAct.value[x]","Questionnaire.useContext.value[x]","","","",1,1,"","","Y","CodeableConcept {[]} {[]}

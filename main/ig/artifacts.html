@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"21"}
     h3,h4,h5,h6{--heading-prefix:"21.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -353,7 +354,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-equipment-feature">ror-sp-equipment-feature</a>
             </td>
             <td>
-<p>Paramètre de recherche pour récupérer le type de caractéristique d’un equipement.</p>
+<p>Paramètre de recherche pour récupérer le type de caractéristique d'un equipement.</p>
 </td>
          </tr>
          <tr>
@@ -362,7 +363,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-equipment-type">ror-sp-equipment-type</a>
             </td>
             <td>
-<p>Paramètre de recherche pour récupérer le type d’un équipement.</p>
+<p>Paramètre de recherche pour récupérer le type d'un équipement.</p>
 </td>
          </tr>
          <tr>
@@ -380,7 +381,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-healthcareservice-age-range-high">ror-sp-healthcareservice-age-range-high</a>
             </td>
             <td>
-<p>Paramètre de recherche décrivant l’age maximum de la patientèle</p>
+<p>Paramètre de recherche décrivant l'age maximum de la patientèle</p>
 </td>
          </tr>
          <tr>
@@ -389,7 +390,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-healthcareservice-age-range-low">ror-sp-healthcareservice-age-range-low</a>
             </td>
             <td>
-<p>Paramètre de recherche décrivant l’age minimum de la patientèle</p>
+<p>Paramètre de recherche décrivant l'age minimum de la patientèle</p>
 </td>
          </tr>
          <tr>
@@ -398,7 +399,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-healthcareservice-equipment-type">ror-sp-healthcareservice-equipment-type</a>
             </td>
             <td>
-<p>Paramètre de recherche décrivant le type d’équipement de l’offre opérationnelle</p>
+<p>Paramètre de recherche décrivant le type d'équipement de l'offre opérationnelle</p>
 </td>
          </tr>
          <tr>
@@ -407,7 +408,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-healthcareservice-intervention-zone">ror-sp-healthcareservice-intervention-zone</a>
             </td>
             <td>
-<p>Paramètre de recherche décrivant la zone d’intervention</p>
+<p>Paramètre de recherche décrivant la zone d'intervention</p>
 </td>
          </tr>
          <tr>
@@ -434,7 +435,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-healthcareservice-psychiatric-sector">ror-sp-healthcareservice-psychiatric-sector</a>
             </td>
             <td>
-<p>Paramètre de recherche décrivrant le secteur psychiatrique de l’offre opérationnelle</p>
+<p>Paramètre de recherche décrivrant le secteur psychiatrique de l'offre opérationnelle</p>
 </td>
          </tr>
          <tr>
@@ -443,7 +444,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-limit-value">ror-sp-limit-value</a>
             </td>
             <td>
-<p>Paramètre de recherche pour récupérer la valeur limite (poids, taille, etc..) de l’équipement</p>
+<p>Paramètre de recherche pour récupérer la valeur limite (poids, taille, etc..) de l'équipement</p>
 </td>
          </tr>
          <tr>
@@ -461,7 +462,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-location-near-insee-code">ror-sp-location-near-insee-code</a>
             </td>
             <td>
-<p>Paramètre de recherche similaire au paramètre spécial “near”, à l’exception que celui-ci pointe sur l’adresse et non pas la position géographique</p>
+<p>Paramètre de recherche similaire au paramètre spécial "near", à l'exception que celui-ci pointe sur l'adresse et non pas la position géographique</p>
 </td>
          </tr>
          <tr>
@@ -479,7 +480,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-organization-closing-type">ror-sp-organization-closing-type</a>
             </td>
             <td>
-<p>Paramètre de recherche décrivant le type de fermeture de l’entité géographique, au sens des règles de gestion du SI FINESS</p>
+<p>Paramètre de recherche décrivant le type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS</p>
 </td>
          </tr>
          <tr>
@@ -488,7 +489,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-organization-drop-zone">ror-sp-organization-drop-zone</a>
             </td>
             <td>
-<p>Paramètre de recherche permettant d’indiquer s’il y a une zone poser sur le site concerné</p>
+<p>Paramètre de recherche permettant d'indiquer s'il y a une zone poser sur le site concerné</p>
 </td>
          </tr>
          <tr>
@@ -497,7 +498,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-organization-oi-name">ror-sp-organization-oi-name</a>
             </td>
             <td>
-<p>Paramètre de recherche sur le nom de l’organisation interne</p>
+<p>Paramètre de recherche sur le nom de l'organisation interne</p>
 </td>
          </tr>
          <tr>
@@ -506,7 +507,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-organization-period-end">ror-sp-organization-period-end</a>
             </td>
             <td>
-<p>Paramètre de recherche décrivant la date de fermeture de l’entité géographique</p>
+<p>Paramètre de recherche décrivant la date de fermeture de l'entité géographique</p>
 </td>
          </tr>
          <tr>
@@ -533,7 +534,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-organization-price-residential-type">ror-sp-organization-price-residential-type</a>
             </td>
             <td>
-<p>Paramètre de recherche sur les caractéristiques de l’hébergement</p>
+<p>Paramètre de recherche sur les caractéristiques de l'hébergement</p>
 </td>
          </tr>
          <tr>
@@ -551,7 +552,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-organization-price-unit">ror-sp-organization-price-unit</a>
             </td>
             <td>
-<p>Paramètre de recherche sur l’unité de référence pour évaluer le prix des prestations et services</p>
+<p>Paramètre de recherche sur l'unité de référence pour évaluer le prix des prestations et services</p>
 </td>
          </tr>
          <tr>
@@ -569,7 +570,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-organization-price-welcome-type">ror-sp-organization-price-welcome-type</a>
             </td>
             <td>
-<p>Paramètre de recherche décrivant si le tarif s’applique à un hébergement permanent ou à un hébergement temporaire</p>
+<p>Paramètre de recherche décrivant si le tarif s'applique à un hébergement permanent ou à un hébergement temporaire</p>
 </td>
          </tr>
          <tr>
@@ -587,7 +588,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-residential-number">ror-sp-residential-number</a>
             </td>
             <td>
-<p>Paramètre de recherche pour récupérer le nombre d’habitation</p>
+<p>Paramètre de recherche pour récupérer le nombre d'habitation</p>
 </td>
          </tr>
          <tr>
@@ -596,7 +597,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="SearchParameter/ror-sp-residential-type">ror-sp-residential-type</a>
             </td>
             <td>
-<p>Paramètre de recherche pour récupérer le type d’habitation</p>
+<p>Paramètre de recherche pour récupérer le type d'habitation</p>
 </td>
          </tr>
          <tr>
@@ -631,7 +632,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-healthcareservice">RORHealthcareService</a>
             </td>
             <td>
-<p>Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d’une personne</p>
+<p>Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne</p>
 </td>
          </tr>
          <tr>
@@ -640,7 +641,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-location">RORLocation</a>
             </td>
             <td>
-<p>Profil créé dans le cadre du ROR pour décrire l’espace disposant d’un ensemble de ressources pour réaliser une offre.</p>
+<p>Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre.</p>
 </td>
          </tr>
          <tr>
@@ -649,7 +650,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-measure">RORMeasure</a>
             </td>
             <td>
-<p>Définition de l’indicateur de pilotage du ROR National</p>
+<p>Définition de l'indicateur de pilotage du ROR National</p>
 </td>
          </tr>
          <tr>
@@ -676,7 +677,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-practitioner">RORPractitioner</a>
             </td>
             <td>
-<p>Profil créée dans le cadre du ROR pour décrire les données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel</p>
+<p>Profil créée dans le cadre du ROR pour décrire les données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel</p>
 </td>
          </tr>
          <tr>
@@ -685,7 +686,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-practitionerrole">RORPractitionerRole</a>
             </td>
             <td>
-<p>Profil créé dans le cadre du ROR pour décrire les modalités d’exercice opérationnelles du profesionnel dans la réalisation de l’offre</p>
+<p>Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre</p>
 </td>
          </tr>
          <tr>
@@ -694,7 +695,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-questionnaire">RORQuestionnaire</a>
             </td>
             <td>
-<p>Fiche de saisie de l’offre de soins</p>
+<p>Fiche de saisie de l'offre de soins</p>
 </td>
          </tr>
          <tr>
@@ -729,7 +730,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-act-type">RORActType</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour discriminer le type d’acte (spécifique ou hors cabinet)</p>
+<p>Extension créée dans le cadre du ROR pour discriminer le type d'acte (spécifique ou hors cabinet)</p>
 </td>
          </tr>
          <tr>
@@ -738,7 +739,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-available-time-effective-opening-closing-date">RORAvailableTimeEffectiveOpeningClosingDate</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour décrire le planning d’activité d’un professionnel ou d’une offre.</p>
+<p>Extension créée dans le cadre du ROR pour décrire le planning d'activité d'un professionnel ou d'une offre.</p>
 </td>
          </tr>
          <tr>
@@ -774,7 +775,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-confidence-geolocation">RORConfidenceGeolocation</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR. Il s’agit d’une information supplémentaire pour signaler si la longitude et la latitude sont fiables.</p>
+<p>Extension créée dans le cadre du ROR. Il s'agit d'une information supplémentaire pour signaler si la longitude et la latitude sont fiables.</p>
 </td>
          </tr>
          <tr>
@@ -783,7 +784,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-confidentiality-level">RORConfidentialityLevel</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour définir le niveau de restriction de l’accès aux attributs de la classe Contact.</p>
+<p>Extension créée dans le cadre du ROR pour définir le niveau de restriction de l'accès aux attributs de la classe Contact.</p>
 </td>
          </tr>
          <tr>
@@ -792,7 +793,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-contact-confidentiality-level">RORContactConfidentialityLevel</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l’accès aux attributs de la classe Contact</p>
+<p>Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Contact</p>
 </td>
          </tr>
          <tr>
@@ -810,7 +811,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-contact-function-contact">RORContactFunctionContact</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui indique un titre, une position ou une fonction de la personne assurant le contact au sein de l’organisation (directeur, secrétaire, etc.).</p>
+<p>Extension créée dans le cadre du ROR qui indique un titre, une position ou une fonction de la personne assurant le contact au sein de l'organisation (directeur, secrétaire, etc.).</p>
 </td>
          </tr>
          <tr>
@@ -837,7 +838,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-coordinate-reliability">RORCoordinateReliability</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour signaler si les informations des coordonnées géographiques sont issues d’un mode de production qui assure un certain niveau de fiabilité</p>
+<p>Extension créée dans le cadre du ROR pour signaler si les informations des coordonnées géographiques sont issues d'un mode de production qui assure un certain niveau de fiabilité</p>
 </td>
          </tr>
          <tr>
@@ -846,7 +847,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-healthcareservice-contact">RORHealthcareServiceContact</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour décrire la personne ou le service qui agit comme point de contact de l’offre.</p>
+<p>Extension créée dans le cadre du ROR pour décrire la personne ou le service qui agit comme point de contact de l'offre.</p>
 </td>
          </tr>
          <tr>
@@ -864,7 +865,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-healthcareservice-no-consent-habilitation">RORHealthcareServiceNoConsentHabilitation</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui permet d’identifier les offres pour lesquelles un établissement est autorisé par le directeur général de l’ARS après avis du préfet, à prendre en charge des patients sans leur consentement.</p>
+<p>Extension créée dans le cadre du ROR qui permet d'identifier les offres pour lesquelles un établissement est autorisé par le directeur général de l’ARS après avis du préfet, à prendre en charge des patients sans leur consentement.</p>
 </td>
          </tr>
          <tr>
@@ -891,7 +892,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-healthcareservice-sensitive-unit">RORHealthcareServiceSensitiveUnit</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour signaler que toutes les informations de description d’une offre sont confidentielles car elles présentent un risque d’utilisation à des fins malveillantes.</p>
+<p>Extension créée dans le cadre du ROR pour signaler que toutes les informations de description d'une offre sont confidentielles car elles présentent un risque d'utilisation à des fins malveillantes.</p>
 </td>
          </tr>
          <tr>
@@ -900,8 +901,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-location-equipment">RORLocationEquipment</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour décrire une ressource matérielle discriminante pour la réalisation d’une prestation. Cette extension a été créée, car Device ne correspondait pas à la définition de l’équipement pour le ROR.
- Device représente une instance d’un équipement alors l’équipement pour le ROR correspond juste au nombre d’équipement de même type.</p>
+<p>Extension créée dans le cadre du ROR pour décrire une ressource matérielle discriminante pour la réalisation d'une prestation. Cette extension a été créée, car Device ne correspondait pas à la définition de l'équipement pour le ROR.
+ Device représente une instance d'un équipement alors l'équipement pour le ROR correspond juste au nombre d'équipement de même type.</p>
 </td>
          </tr>
          <tr>
@@ -910,7 +911,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-location-equipment-limit">RORLocationEquipmentLimit</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui précise les limites que peut supporter l’équipement le plus tolérant parmi les équipements spécifiques de même type dans cette organisation.</p>
+<p>Extension créée dans le cadre du ROR qui précise les limites que peut supporter l'équipement le plus tolérant parmi les équipements spécifiques de même type dans cette organisation.</p>
 </td>
          </tr>
          <tr>
@@ -919,7 +920,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-location-residential-capacity">RORLocationResidentialCapacity</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui décrit un type d’habitation adapté à la réalisation d’une offre.</p>
+<p>Extension créée dans le cadre du ROR qui décrit un type d'habitation adapté à la réalisation d'une offre.</p>
 </td>
          </tr>
          <tr>
@@ -928,7 +929,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-location-supported-capacity">RORLocationSupportedCapacity</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui indique une série d’enregistrements indiquant la quantité de lit (ou de place) de l’entité pour un statut et une temporalité donnés.</p>
+<p>Extension créée dans le cadre du ROR qui indique une série d’enregistrements indiquant la quantité de lit (ou de place) de l'entité pour un statut et une temporalité donnés.</p>
 </td>
          </tr>
          <tr>
@@ -964,7 +965,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-accomodation-family">ROROrganizationAccomodationFamily</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour préciser si l’établissement peut héberger les familles des personnes prises en charge.</p>
+<p>Extension créée dans le cadre du ROR pour préciser si l'établissement peut héberger les familles des personnes prises en charge.</p>
 </td>
          </tr>
          <tr>
@@ -973,7 +974,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-additional-name">ROROrganizationAdditionalName</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour nom complémentaire de l’EJ (complementRaisonSociale)  ou nom complémentaire de l’EG (DenominationEG)</p>
+<p>Extension créée dans le cadre du ROR pour nom complémentaire de l'EJ (complementRaisonSociale)  ou nom complémentaire de l'EG (DenominationEG)</p>
 </td>
          </tr>
          <tr>
@@ -982,7 +983,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-closing-type">ROROrganizationClosingType</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour définir le type de fermeture de l’organisation.</p>
+<p>Extension créée dans le cadre du ROR pour définir le type de fermeture de l'organisation.</p>
 </td>
          </tr>
          <tr>
@@ -1000,7 +1001,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-creation-date">ROROrganizationCreationDate</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour définir la date de création de l’entité juridique.</p>
+<p>Extension créée dans le cadre du ROR pour définir la date de création de l'entité juridique.</p>
 </td>
          </tr>
          <tr>
@@ -1018,7 +1019,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-financial-help-type">ROROrganizationFinancialHelpType</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour préciser l’aide financière pour laquelle l’EG dispose d’une habilitation ou conventionnement qui permet aux personnes accueillies d’en bénéficier si elles remplissent les conditions.</p>
+<p>Extension créée dans le cadre du ROR pour préciser l'aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement qui permet aux personnes accueillies d'en bénéficier si elles remplissent les conditions.</p>
 </td>
          </tr>
          <tr>
@@ -1036,7 +1037,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-nb-permanent-social-help-place">ROROrganizationNbPermanentSocialHelpPlace</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour indiquer le nombre de places permanentes dédiées à l’aide sociale dans l’établissement</p>
+<p>Extension créée dans le cadre du ROR pour indiquer le nombre de places permanentes dédiées à l'aide sociale dans l'établissement</p>
 </td>
          </tr>
          <tr>
@@ -1045,7 +1046,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-nb-temporary-social-help-place">ROROrganizationNbTemporarySocialHelpPlace</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour indiquer le nombre de places temporaires dédiées à l’aide sociale dans l’établissement</p>
+<p>Extension créée dans le cadre du ROR pour indiquer le nombre de places temporaires dédiées à l'aide sociale dans l'établissement</p>
 </td>
          </tr>
          <tr>
@@ -1054,7 +1055,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-price">ROROrganizationPrice</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour permettre de définir les tarifs des prestations et services d’une entité géographique.</p>
+<p>Extension créée dans le cadre du ROR pour permettre de définir les tarifs des prestations et services d'une entité géographique.</p>
 </td>
          </tr>
          <tr>
@@ -1063,7 +1064,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-organization-reopening-date">ROROrganizationReopeningDate</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour définir la date prévisionnelle de réouverture de l’organisation interne.</p>
+<p>Extension créée dans le cadre du ROR pour définir la date prévisionnelle de réouverture de l'organisation interne.</p>
 </td>
          </tr>
          <tr>
@@ -1072,7 +1073,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-practitionerrole-name">RORPractitionerRoleName</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR pour définir l’identité d’exercice d’un professionnel</p>
+<p>Extension créée dans le cadre du ROR pour définir l'identité d’exercice d’un professionnel</p>
 </td>
          </tr>
          <tr>
@@ -1081,7 +1082,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-practitionerrole-unit-exercise-mode">RORPractitionerRoleUnitExerciseMode</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui correspond au statut du professionnel lorsqu’il exerce dans le cadre de l’offre décrite.</p>
+<p>Extension créée dans le cadre du ROR qui correspond au statut du professionnel lorsqu'il exerce dans le cadre de l'offre décrite.</p>
 </td>
          </tr>
          <tr>
@@ -1090,7 +1091,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-telecom-communication-channel">RORTelecomCommunicationChannel</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s’établit la communication</p>
+<p>Extension créée dans le cadre du ROR spécifiant le canal ou la manière dont s'établit la communication</p>
 </td>
          </tr>
          <tr>
@@ -1099,7 +1100,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-telecom-confidentiality-level">RORTelecomConfidentialityLevel</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l’accès aux attributs de la classe Télécommunication.</p>
+<p>Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l'accès aux attributs de la classe Télécommunication.</p>
 </td>
          </tr>
          <tr>
@@ -1108,7 +1109,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/ror-telecom-usage">RORTelecomUsage</a>
             </td>
             <td>
-<p>Extension créée dans le cadre du ROR qui précise l’utilisation du canal de communication</p>
+<p>Extension créée dans le cadre du ROR qui précise l'utilisation du canal de communication</p>
 </td>
          </tr>
          <tr>
@@ -1153,7 +1154,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
                   title="ValueSet/ror-usage-context-type-vs">Value Set type pour le contexte d'usage de la fiche de saisie</a>
             </td>
             <td>
-<p>Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d’usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession</p>
+<p>Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession</p>
 </td>
          </tr>
          <tr>
@@ -1162,7 +1163,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
                   title="ValueSet/act-type-ror-valueset">Valueset type d'acte</a>
             </td>
             <td>
-<p>Valueset type d’acte</p>
+<p>Valueset type d'acte</p>
 </td>
          </tr>
       </tbody>
@@ -1179,7 +1180,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
                   title="CodeSystem/act-type-ror-codesystem">ActTypeRORCodeSystem</a>
             </td>
             <td>
-<p>CodeSystem pour le type d’acte pour les slices de characteristic concernant les actes dans la ressource ROR HealthcareService</p>
+<p>CodeSystem pour le type d'acte pour les slices de characteristic concernant les actes dans la ressource ROR HealthcareService</p>
 </td>
          </tr>
          <tr>
@@ -1188,7 +1189,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
                   title="CodeSystem/ror-include-associated-data-code-system">Code System (CS) utilisé pour étendre le CS original avec le query parameter includeAssociatedData</a>
             </td>
             <td>
-<p>Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l’opération export pour le ROR</p>
+<p>Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l'opération export pour le ROR</p>
 </td>
          </tr>
          <tr>
@@ -1215,7 +1216,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
                   title="CodeSystem/usage-context-ror-codesystem">UsageContextRORCodeSystem</a>
             </td>
             <td>
-<p>CodeSystem pour définir le type de catégorie du contexte d’usage des instances de questionnaire dans le cadre du ROR</p>
+<p>CodeSystem pour définir le type de catégorie du contexte d'usage des instances de questionnaire dans le cadre du ROR</p>
 </td>
          </tr>
       </tbody>
@@ -1232,7 +1233,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
                   title="Questionnaire/ror-questionnaire-offre-de-ville">Consignes fiche de saisie Cabinet de ville de médecine générale</a>
             </td>
             <td>
-<p>Exemple ‘fake’ pour RORQuestionnaire n’ayant pas forcément de cohérence fonctionnelle.</p>
+<p>Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle.</p>
 </td>
          </tr>
          <tr>
@@ -1241,7 +1242,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
                   title="Location/ror-location-exemple">ror-location-exemple</a>
             </td>
             <td>
-<p>Exemple ‘fake’ pour RORLocation n’ayant pas forcément de cohérence fonctionnelle.</p>
+<p>Exemple 'fake' pour RORLocation n'ayant pas forcément de cohérence fonctionnelle.</p>
 </td>
          </tr>
          <tr>
@@ -1249,7 +1250,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
                <a href="Task-ror-task-exemple.html" title="Task/ror-task-exemple">ror-task-exemple</a>
             </td>
             <td>
-<p>Exemple ‘fake’ pour RORTask n’ayant pas forcément de cohérence fonctionnelle</p>
+<p>Exemple 'fake' pour RORTask n'ayant pas forcément de cohérence fonctionnelle</p>
 </td>
          </tr>
       </tbody>
@@ -1294,7 +1295,7 @@ Cela inclut notamment les divisions territoriales dans lesquelles les profession
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 28, 2025 15:58+0000">2025-01-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 10:18+0000">2025-03-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

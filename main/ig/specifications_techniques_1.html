@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"3"}
     h3,h4,h5,h6{--heading-prefix:"3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -311,7 +312,7 @@ Le bundle encapsule 0 à n ressources Location corespondant aux
 critères de recherche plus les ressources incluses correspondant aux
 critères de recherche.
 Le service développé renvoie les 200 premiers résultats et indique
-le total trouvé dans une balise <code class="language-plaintext highlighter-rouge">total</code>. Dans le cas où il n’y a
+le total trouvé dans une balise <code class="language-plaintext highlighter-rouge">total</code>. Dans le cas où il n'y a
 pas de résultat le service renvoie <code class="language-plaintext highlighter-rouge">total</code>: 0.</p>
   </li>
 </ul>
@@ -335,12 +336,12 @@ https://www.hl7.org/fhir/R4/http.html</p>
   </li>
   <li>
     <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les
-détails sur la raison de l’échec</p>
+détails sur la raison de l'échec</p>
   </li>
 </ul>
 
-<p>Remarque : l’échec d’une recherche est la non-possibilité d’exécuter la
-requête, ce qui est différent d’aucune correspondance à la recherche.
+<p>Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la
+requête, ce qui est différent d'aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
 <a href="https://www.hl7.org/fhir/R4/http.html">https://www.hl7.org/fhir/R4/http.html</a></p>
 
@@ -448,7 +449,7 @@ Par exemple, récupération des données capacitaires pour la région source « 
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
-<h4 id="scénario-4-données-capacitaires-à-partir-dune-date-de-mise-à-jour">Scénario 4 : Données capacitaires à partir d’une date de mise à jour</h4>
+<h4 id="scénario-4-données-capacitaires-à-partir-dune-date-de-mise-à-jour">Scénario 4 : Données capacitaires à partir d'une date de mise à jour</h4>
 
 <p><strong>Description du scénario :</strong> Un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.</p>
 
@@ -463,11 +464,11 @@ Par exemple, récupération des données capacitaires pour la région source « 
 &amp;_revinclude<span class="o">=</span>HealthcareService:location <span class="c">#inclus les HealthcareService qui référencent les Location</span>
 </code></pre></div></div>
 
-<h4 id="scénario-5-données-capacitaires-dune-offre-opérationnelle">Scénario 5 : Données capacitaires d’une offre opérationnelle</h4>
+<h4 id="scénario-5-données-capacitaires-dune-offre-opérationnelle">Scénario 5 : Données capacitaires d'une offre opérationnelle</h4>
 
 <p><strong>Description du scénario :</strong> Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.</p>
 
-<p><strong>Exemple :</strong> Recherche des informations capacitaires pour les lieux de réalisation de l’offre ayant un identifiant fonctionnel connu par l’instance ROR égale à 11/339772 ou 11/347254.</p>
+<p><strong>Exemple :</strong> Recherche des informations capacitaires pour les lieux de réalisation de l'offre ayant un identifiant fonctionnel connu par l’instance ROR égale à 11/339772 ou 11/347254.</p>
 
 <p><strong>Requête 1 :</strong>
 <code class="language-plaintext highlighter-rouge">GET [BASE]/Location?identifier=11/339772,11/347254&amp;_revinclude=HealthcareService:location</code></p>
@@ -528,7 +529,7 @@ Par exemple, récupération des données capacitaires pour la région source « 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 28, 2025 15:58+0000">2025-01-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 10:18+0000">2025-03-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"7"}
     h3,h4,h5,h6{--heading-prefix:"7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -305,7 +306,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>Un header avec un code 200 OK HTTP</p>
   </li>
   <li>
-    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a> dont le type = searchset.\ Le bundle encapsule 0 à n ressources HealthcareService corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche.\ Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise "total". Dans le cas où il n’y a pas de résultat le service renvoie "total": 0.</p>
+    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a> dont le type = searchset.\ Le bundle encapsule 0 à n ressources HealthcareService corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche.\ Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise "total". Dans le cas où il n'y a pas de résultat le service renvoie "total": 0.</p>
   </li>
 </ul>
 
@@ -324,11 +325,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
   </li>
   <li>
-    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les détails sur la raison de l’échec</p>
+    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les détails sur la raison de l'échec</p>
   </li>
 </ul>
 
-<p>Remarque : l’échec d’une recherche est la non-possibilité d’exécuter la requête, ce qui est différent d’aucune correspondance à la recherche. Plus de précision sur la spécification FHIR : <a href="http://hl7.org/fhir/R4/http.html">http://hl7.org/fhir/R4/http.html</a></p>
+<p>Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requête, ce qui est différent d'aucune correspondance à la recherche. Plus de précision sur la spécification FHIR : <a href="http://hl7.org/fhir/R4/http.html">http://hl7.org/fhir/R4/http.html</a></p>
 
 <h3 id="critères-de-recherche">Critères de recherche</h3>
 
@@ -348,7 +349,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="scénario-1-recherche-sur-critères-tarifaires-1-draft">Scénario 1 : Recherche sur critères tarifaires #1 <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur recherche les offres d’établissements dont le type de tarifs = 02 | forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur à X euros, pour la date de début de validité la plus récente.</p>
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres d'établissements dont le type de tarifs = 02 | forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur à X euros, pour la date de début de validité la plus récente.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -365,7 +366,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="scénario-2-recherche-sur-critères-tarifaires-2-draft">Scénario 2 : Recherche sur critères tarifaires #2 <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur recherche les offres d’établissements dont le type de tarifs = 02 | forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur ou égal à X euros, le type habitation = 03 | F1 (TRE_R242-TypeHabitation), les conditions tarifaires = 03 | tarif agréé ASH
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres d'établissements dont le type de tarifs = 02 | forfait socle hébergement (TRE_R246-TypeTarif), le montant est inférieur ou égal à X euros, le type habitation = 03 | F1 (TRE_R242-TypeHabitation), les conditions tarifaires = 03 | tarif agréé ASH
 (TRE_R250-ConditionTarifaire).</p>
 
 <p><strong>Requête :</strong></p>
@@ -384,7 +385,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="scénario-3-recherche-sur-critères-tarifaires-3-draft">Scénario 3 : Recherche sur critères tarifaires #3 <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur recherche les offres d’établissements dont type de tarifs = 03 | dépendance (TRE_R246-TypeTarif), le montant est inférieur à X euros, le niveau de dépendance = 02 | GIR 3-4 (TRE_R237-GroupeTarifaireDependance), la temporalité d'accueil (au niveau du tarif, pas de l'offre opérationnelle) = 02 | permanent (TRE-R240-TemporaliteAccueil).</p>
+<p><strong>Description du scénario :</strong> Un consommateur recherche les offres d'établissements dont type de tarifs = 03 | dépendance (TRE_R246-TypeTarif), le montant est inférieur à X euros, le niveau de dépendance = 02 | GIR 3-4 (TRE_R237-GroupeTarifaireDependance), la temporalité d'accueil (au niveau du tarif, pas de l'offre opérationnelle) = 02 | permanent (TRE-R240-TemporaliteAccueil).</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -440,7 +441,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 28, 2025 15:58+0000">2025-01-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 10:18+0000">2025-03-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
