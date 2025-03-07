@@ -4614,7 +4614,7 @@ Critères de recherches applicables à la ressource Practitioner.
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS.<code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
@@ -4941,7 +4941,7 @@ Critères de recherches applicables à la ressource PractionerRole.
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant de la situation opérationnelle, unique et persistant au niveau national. <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant de la situation opérationnelle, unique et persistant au niveau national.</span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
 </table>

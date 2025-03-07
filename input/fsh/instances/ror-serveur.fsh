@@ -433,12 +433,12 @@ Usage: #definition
 //* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
 //* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
-/*
+
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permet la recherche sur l'idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS"
-
+/*
 * rest.resource[=].searchParam[+].name = "_filter"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
@@ -473,12 +473,12 @@ Usage: #definition
 //* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
 //* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
-/*
+
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permet la recherche sur l'identifiant de la situation opérationnelle, unique et persistant au niveau national"
-
+/*
 * rest.resource[=].searchParam[+].name = "_filter"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-filter"
 * rest.resource[=].searchParam[=].type = #special
