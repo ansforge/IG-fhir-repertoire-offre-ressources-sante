@@ -313,7 +313,7 @@ Le bundle encapsule 0 à n ressources HealthcareService corespondant
 aux critères de recherche plus les ressources incluses correspondant
 aux critères de recherche.<br/>
 Le service développé renvoie les 200 premiers résultats et indique
-le total trouvé dans une balise <code class="language-plaintext highlighter-rouge">total</code>. Dans le cas où il n'y a
+le total trouvé dans une balise <code class="language-plaintext highlighter-rouge">total</code>. Dans le cas où il n’y a
 pas de résultat le service renvoie <code class="language-plaintext highlighter-rouge">total</code>:&nbsp;0.</p>
   </li>
 </ul>
@@ -337,12 +337,12 @@ https://www.hl7.org/fhir/R4/http.html</p>
   </li>
   <li>
     <p>Un body contenant une ressource <a href="https://www.hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les
-détails sur la raison de l'échec</p>
+détails sur la raison de l’échec</p>
   </li>
 </ul>
 
-<p>Remarque&nbsp;: l'échec d'une recherche est la non-possibilité d'exécuter la
-requête, ce qui est différent d'aucune correspondance à la recherche.
+<p>Remarque&nbsp;: l’échec d’une recherche est la non-possibilité d’exécuter la
+requête, ce qui est différent d’aucune correspondance à la recherche.
 Plus de précision sur la spécification FHIR :
 <a href="https://www.hl7.org/fhir/R4/http.html">https://www.hl7.org/fhir/R4/http.html</a></p>
 
@@ -387,13 +387,13 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-1bis--extraction-complète-asynchrone-draft">Scénario 1&nbsp;bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre nationale.
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre nationale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html</p>
 
 <p><strong>Requête :</strong>
 **N.B.: Dans le Header il est nécessaire de préciser: **
 <code class="language-plaintext highlighter-rouge">--header 'Prefer: respond-async'</code>
-Plus d'information ici : <a href="http://hl7.org/fhir/R4/async.html">http://hl7.org/fhir/R4/async.html</a></p>
+Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html">http://hl7.org/fhir/R4/async.html</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/$export?_outputFormat=application/fhir+ndjson&amp;_type=HealthcareService&amp;includeAssociatedData=_myCompleteExtract
 
@@ -411,17 +411,17 @@ Plus d'information ici : <a href="http://hl7.org/fhir/R4/async.html">http://hl7.
 <p>En réponse, dans le header, le lien sera disponible dans Content-Location
 Exemple :
 <code class="language-plaintext highlighter-rouge">[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc</code>
-Plus d'information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">http://hl7.org/fhir/R4/async.html#3.1.6.4</a></p>
+Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">http://hl7.org/fhir/R4/async.html#3.1.6.4</a></p>
 
 <h4 id="scénario-1ter--extraction-complète-asynchrone-par-région-draft">Scénario 1&nbsp;ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre régionale.
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre régionale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html</p>
 
 <p><strong>Requête :</strong>
 **N.B.: Dans le Header il est nécessaire de préciser: **
 <code class="language-plaintext highlighter-rouge">--header 'Prefer: respond-async'</code>
-Plus d'information ici : <a href="http://hl7.org/fhir/R4/async.html">http://hl7.org/fhir/R4/async.html</a></p>
+Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html">http://hl7.org/fhir/R4/async.html</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/$export?_outputFormat=application/fhir+ndjson&amp;_type=HealthcareService&amp;_typeFilter=HealthcareService%3F_tag%3Dhttps%3A%2F%2Fmos.esante.gouv.fr%2FNOS%2FTRE_R30-RegionOM%2FFHIR%2FTRE-R30-RegionOM%7C11&amp;includeAssociatedData=_myCompleteExtract
 </code></pre></div></div>
@@ -438,11 +438,11 @@ Plus d'information ici : <a href="http://hl7.org/fhir/R4/async.html">http://hl7.
 <p>En réponse, dans le header, le lien sera disponible dans Content-Location
 Exemple :
 <code class="language-plaintext highlighter-rouge">[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc</code>
-Plus d'information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">http://hl7.org/fhir/R4/async.html#3.1.6.4</a></p>
+Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">http://hl7.org/fhir/R4/async.html#3.1.6.4</a></p>
 
 <h4 id="scénario-2-extraction-de-lensemble-des-offres-de-santé-dun-établissement-draft">Scénario 2&nbsp;: Extraction de l’ensemble des offres de santé d’un établissement <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite rechercher l'offre de santé proposée\ par un établissement dont l'identifiant est = XX .</p>
+<p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite rechercher l'offre de santé proposée\ par un établissement dont l’identifiant est = XX .</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -460,7 +460,7 @@ Plus d'information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">htt
 
 </code></pre></div></div>
 
-<h4 id="scénario-3-extraction-dune-offre-de-santé-identifiée-draft">Scénario 3&nbsp;: Extraction d'une offre de santé identifiée <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-3-extraction-dune-offre-de-santé-identifiée-draft">Scénario 3&nbsp;: Extraction d’une offre de santé identifiée <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite
 rechercher une offre de santé<br/>
@@ -480,7 +480,7 @@ rechercher une offre de santé<br/>
 &amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
-<h4 id="scénario-4-extraction-complète-à-partir-dune-date-de-mise-à-jour-de-loffre-opérationnelle-draft">Scénario 4&nbsp;: Extraction complète à partir d'une date de mise à jour de l'offre opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-4-extraction-complète-à-partir-dune-date-de-mise-à-jour-de-loffre-opérationnelle-draft">Scénario 4&nbsp;: Extraction complète à partir d’une date de mise à jour de l’offre opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre
 à jour toute l'offre<br/>
@@ -504,7 +504,7 @@ mise à jour depuis une certaine date &gt;= (06/11/2022)</p>
 
 <h4 id="scénario-5-extraction-complète-à-partir-dune-date-de-mise-à-jour-de-lentité-géographique-draft">Scénario 5&nbsp;: Extraction complète à partir d’une date de mise à jour de l’entité géographique <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite mettre à jour toute l'offre dont l'l’entité géographique est mise à jour depuis une certaine date &gt;= (06/11/2022).</p>
+<p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite mettre à jour toute l'offre dont l’l’entité géographique est mise à jour depuis une certaine date &gt;= (06/11/2022).</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -521,9 +521,9 @@ mise à jour depuis une certaine date &gt;= (06/11/2022)</p>
 &amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
-<h4 id="scénario-6-extraction-complète-à-partir-dune-date-de-mise-à-jour-dun-des-éléments-de-loffre-draft">Scénario 6&nbsp;: Extraction complète à partir d'une date de mise à jour d'un des éléments de l'offre <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-6-extraction-complète-à-partir-dune-date-de-mise-à-jour-dun-des-éléments-de-loffre-draft">Scénario 6&nbsp;: Extraction complète à partir d’une date de mise à jour d’un des éléments de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite par exemple mettre à jour toute l'offre mise à jour depuis une certaine date &gt;=(06/11/2022) ou dont l'organisation est mise à jour depuis une certaine date &gt;= (06/11/2022)</p>
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite par exemple mettre à jour toute l'offre mise à jour depuis une certaine date &gt;=(06/11/2022) ou dont l’organisation est mise à jour depuis une certaine date &gt;= (06/11/2022)</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -541,7 +541,7 @@ mise à jour depuis une certaine date &gt;= (06/11/2022)</p>
 </code></pre></div></div>
 <h4 id="scénario-7-extraction-partielle-de-loffre-sur-un-périmètre-limité-draft">Scénario 7&nbsp;: Extraction partielle de l’offre sur un périmètre limité <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite mettre à jour toute l'offre de santé d'une région source = XX. Comme il n'utilise qu'un sous-ensemble des informations de l'offre, il souhaite ne recevoir que ces informations.</p>
+<p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite mettre à jour toute l'offre de santé d'une région source = XX. Comme il n'utilise qu’un sous-ensemble des informations de l'offre, il souhaite ne recevoir que ces informations.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -619,7 +619,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 17:11+0000">2025-03-03</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 7, 2025 13:29+0000">2025-03-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

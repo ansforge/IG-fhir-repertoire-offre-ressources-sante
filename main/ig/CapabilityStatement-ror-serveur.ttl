@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "RORServeur"] ; # 
   fhir:title [ fhir:v "ROR-Serveur"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:experimental [ fhir:v true] ; # 
   fhir:date [ fhir:v "2024-03-12T11:35:00+01:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
@@ -62,7 +62,7 @@
      fhir:mode [ fhir:v "server" ] ;
      fhir:documentation [ fhir:v "Recherche et consultation des lieux de réalisation de l'offre  \n  \n Note : Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch." ] ;
      fhir:security [
-       fhir:cors [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:cors [ fhir:v false ] ;
        fhir:service ( [
          fhir:coding ( [
            fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/restful-security-service"^^xsd:anyURI ] ;

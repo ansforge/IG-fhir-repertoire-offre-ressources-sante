@@ -309,7 +309,7 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
     <p>Un header avec un code 200 OK HTTP</p>
   </li>
   <li>
-    <p>Un body contenant une ressource Bundle[^27] dont le type = searchset.\ Le bundle encapsule 0 à n ressources Measure corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche.\ Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise "total". Dans le cas où il n'y a pas de résultat le service renvoie "total": 0.</p>
+    <p>Un body contenant une ressource Bundle[^27] dont le type = searchset.\ Le bundle encapsule 0 à n ressources Measure corespondant aux critères de recherche plus les ressources incluses correspondant aux critères de recherche.\ Le service développé renvoie les 200 premiers résultats et indique le total trouvé dans une balise "total". Dans le cas où il n’y a pas de résultat le service renvoie "total": 0.</p>
   </li>
 </ul>
 
@@ -328,11 +328,11 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
     <p>Un header avec un un code erreur HTTP 4XX ou 5XX</p>
   </li>
   <li>
-    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les détails sur la raison de l'échec</p>
+    <p>Un body contenant une ressource <a href="http://hl7.org/fhir/R4/operationoutcome.html">OperationOutcome</a> qui donne les détails sur la raison de l’échec</p>
   </li>
 </ul>
 
-<p>Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requête, ce qui est différent d'aucune correspondance à la recherche. Plus de précision sur la spécification FHIR : <a href="http://hl7.org/fhir/R4/http.html">http://hl7.org/fhir/R4/http.html</a></p>
+<p>Remarque : l’échec d’une recherche est la non-possibilité d’exécuter la requête, ce qui est différent d’aucune correspondance à la recherche. Plus de précision sur la spécification FHIR : <a href="http://hl7.org/fhir/R4/http.html">http://hl7.org/fhir/R4/http.html</a></p>
 
 <h3 id="critères-de-recherche">Critères de recherche</h3>
 
@@ -351,9 +351,9 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
-<h4 id="scénario-1-intégration-dun-indicateur-dans-un-système-externe-draft">Scénario 1 : Intégration d'un indicateur dans un système externe <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-1-intégration-dun-indicateur-dans-un-système-externe-draft">Scénario 1 : Intégration d’un indicateur dans un système externe <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur souhaite intégrer un indicateur de pilotage du ROR national, dont l'identifiant est XXX, dans un système externe.</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite intégrer un indicateur de pilotage du ROR national, dont l’identifiant est XXX, dans un système externe.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -365,9 +365,9 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 &amp;_revinclude<span class="o">=</span>MeasureReport:measure <span class="c">#inclus les MeasureReport qui référencent les Measure</span>
 </code></pre></div></div>
 
-<h4 id="scénario-2-intégration-dindicateurs-dans-un-système-externe-draft">Scénario 2 : Intégration d'indicateurs dans un système externe <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-2-intégration-dindicateurs-dans-un-système-externe-draft">Scénario 2 : Intégration d’indicateurs dans un système externe <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario :</strong> Un consommateur souhaite intégrer des indicateurs de pilotage du ROR national dans un système externe, à partir d'une date de mesure (06/10 2023).</p>
+<p><strong>Description du scénario :</strong> Un consommateur souhaite intégrer des indicateurs de pilotage du ROR national dans un système externe, à partir d’une date de mesure (06/10 2023).</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -419,7 +419,7 @@ Cette partie de la spécification est en cours de construction et n'est pas impl
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 17:11+0000">2025-03-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 7, 2025 13:29+0000">2025-03-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

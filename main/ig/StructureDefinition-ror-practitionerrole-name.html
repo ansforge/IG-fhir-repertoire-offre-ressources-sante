@@ -306,7 +306,7 @@
         
           Draft
           
-            as of 2025-03-03
+            as of 2025-03-07
           
         
       </td>
@@ -321,20 +321,16 @@
 
   </table>
 
-<p>Extension créée dans le cadre du ROR pour définir l'identité d’exercice d’un professionnel</p>
+<p>Extension créée dans le cadre du ROR pour définir l’identité d’exercice d’un professionnel</p>
 
 
 
   <p><b>Context of Use</b></p>
+  <p>This extension may be used on the following  element(s):</p>
   <ul>
-  <p>This extension may be used on the following element(s):</p>
-<ul>
-  <li>
-Element ID:     <code>
-<a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>    </code>
-  </li>
-</ul>
-
+    
+    <li>Element ID PractitionerRole</li>
+    
   </ul>
 
   <!-- insert intro if present -->
@@ -358,6 +354,9 @@ Element ID:     <code>
   <div id="tabs">
     <ul>
       <li>
+        <a href="#tabs-summ">Text Summary</a>
+      </li>
+      <li>
         <a href="#tabs-diff">Differential Table</a>
       </li>
       <li>
@@ -379,12 +378,27 @@ Element ID:     <code>
       </li>-->
 
       <li>
-        <a href="#tabs-summ">Statistics/References</a>
-      </li>
-      <li>
         <a href="#tabs-all">All</a>
       </li>
     </ul>
+    <a name="tabs-summ"> </a>
+    <div id="tabs-summ">
+      <div id="tbl-summ">
+        <p>This structure is derived from <a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a>
+        </p>
+        <div id="tbl-summ-inner">
+          <a name="summary"> </a>
+          <a name="s-summary"> </a>
+<p><b>
+Résumé
+</b></p>
+<p>Complex Extension: Extension créée dans le cadre du ROR pour définir l'identité d’exercice d’un professionnel</p><ul><li>exerciseTitle: base64Binary, boolean, canonical, code, date, dateTime, decimal, id, instant, integer, markdown, oid, positiveInt, string, time, unsignedInt, uri, url, uuid, Address, Age, Annotation, Attachment, CodeableConcept, Coding, ContactPoint, Count, Distance, Duration, HumanName, Identifier, Money, Period, Quantity, Range, Ratio, Reference, SampledData, Signature, Timing, ContactDetail, Contributor, DataRequirement, Expression, ParameterDefinition, RelatedArtifact, TriggerDefinition, UsageContext, Dosage, Meta: An Extension</li>
+<li>exerciseLastName: string: An Extension</li>
+<li>exerciseFirstName: string: An Extension</li>
+</ul>
+        </div>
+      </div>
+    </div>
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
@@ -1034,14 +1048,13 @@ Element ID:     <code>
       </div>
     </div>-->
 
-    <a name="tabs-summ"> </a>
-    <div id="tabs-summ">
-      <div id="tbl-summ">
+    <a name="tabs-all"> </a>
+    <div id="tabs-all">
+      <div id="all-summ">
         <p>This structure is derived from <a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a>
         </p>
-        <div id="tbl-summ-inner">
-          <a name="summary"> </a>
-          <a name="s-summary"> </a>
+        <div id="all-summ-inner">
+          <a name="a-summary"> </a>
 <p><b>
 Résumé
 </b></p>
@@ -1051,9 +1064,6 @@ Résumé
 </ul>
         </div>
       </div>
-    </div>
-    <a name="tabs-all"> </a>
-    <div id="tabs-all">
       <div id="all-tbl-diff">
         <p>
           <b>Differential View</b>
@@ -1703,20 +1713,6 @@ Résumé
         </div>
       </div>-->
 
-      <div id="all-summ">
-        <p>This structure is derived from <a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a>
-        </p>
-        <div id="all-summ-inner">
-          <a name="a-summary"> </a>
-<p><b>
-Résumé
-</b></p>
-<p>Complex Extension: Extension créée dans le cadre du ROR pour définir l'identité d’exercice d’un professionnel</p><ul><li>exerciseTitle: base64Binary, boolean, canonical, code, date, dateTime, decimal, id, instant, integer, markdown, oid, positiveInt, string, time, unsignedInt, uri, url, uuid, Address, Age, Annotation, Attachment, CodeableConcept, Coding, ContactPoint, Count, Distance, Duration, HumanName, Identifier, Money, Period, Quantity, Range, Ratio, Reference, SampledData, Signature, Timing, ContactDetail, Contributor, DataRequirement, Expression, ParameterDefinition, RelatedArtifact, TriggerDefinition, UsageContext, Dosage, Meta: An Extension</li>
-<li>exerciseLastName: string: An Extension</li>
-<li>exerciseFirstName: string: An Extension</li>
-</ul>
-        </div>
-      </div>
     </div>
   </div>
   <p>&#160;</p>
@@ -1791,7 +1787,7 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 17:11+0000">2025-03-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 7, 2025 13:29+0000">2025-03-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

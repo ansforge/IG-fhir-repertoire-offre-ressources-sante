@@ -255,7 +255,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2025-03-03
+            as of 2025-03-07
           
         
       </td>
@@ -281,8 +281,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#informations-sur-ce-guide-dimplémentation" id="markdown-toc-informations-sur-ce-guide-dimplémentation">Informations sur ce guide d'implémentation</a></li>
-  <li><a href="#description-fonctionnelle-de-lapi" id="markdown-toc-description-fonctionnelle-de-lapi">Description fonctionnelle de l'API</a></li>
+  <li><a href="#informations-sur-ce-guide-dimplémentation" id="markdown-toc-informations-sur-ce-guide-dimplémentation">Informations sur ce guide d’implémentation</a></li>
+  <li><a href="#description-fonctionnelle-de-lapi" id="markdown-toc-description-fonctionnelle-de-lapi">Description fonctionnelle de l’API</a></li>
 </ul>
 
 </div>
@@ -306,43 +306,43 @@ The aim of this implementation guide is to define the specifications of the ROR 
     <img src="ror-logo.png" alt="ROR" title="Logo du ROR" style="width:100%;" />
 </div>
 
-<h3 id="informations-sur-ce-guide-dimplémentation">Informations sur ce guide d'implémentation</h3>
+<h3 id="informations-sur-ce-guide-dimplémentation">Informations sur ce guide d’implémentation</h3>
 
-<p><b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.0 du ROR.
+<p><b>Ce Guide d’Implémentation FHIR du ROR se référence au modèle d`exposition 3.0 du ROR.
 <br />
 Cette version du guide d’implementation cible l’implémentation de l’API FHIR dans la solution du ROR National version 3.3.</b></p>
 
-<p>Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la manière suivante :</p>
+<p>Dans ce guide vous pourrez retrouver des indicateurs afin d’identifier la maturité de certains éléments ou certaines sections de la manière suivante :</p>
 
 <ul>
   <li><code><span style="color: #E67E22;">deprecated</span></code> =&gt; correspond à ce qui ne sera bientôt plus disponible dans la solution ROR National</li>
-  <li><code><span style="color: #ff0000;">draft</span></code> =&gt; correspond à ce qui est en cours d'implémentation dans la solution ROR National et donc pas encore validé et disponible. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est en cours d'implémentation dans la solution ROR National.</li>
-  <li><code><span style="color: #8E44AD;">under consideration</span></code> =&gt; correspond à ce qui est en cours de réflexion dans la solution ROR National. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est à l'étude pour les prochaines versions du ROR National.</li>
+  <li><code><span style="color: #ff0000;">draft</span></code> =&gt; correspond à ce qui est en cours d’implémentation dans la solution ROR National et donc pas encore validé et disponible. L’objectif de cet indicateur est de donner de la visibilité sur ce qui est en cours d’implémentation dans la solution ROR National.</li>
+  <li><code><span style="color: #8E44AD;">under consideration</span></code> =&gt; correspond à ce qui est en cours de réflexion dans la solution ROR National. L’objectif de cet indicateur est de donner de la visibilité sur ce qui est à l’étude pour les prochaines versions du ROR National.</li>
 </ul>
 
-<p>Les autres éléments ou section qui n'ont pas ces mentions doivent être implémentés et disponibles dans la version courante de la solution du ROR National.</p>
+<p>Les autres éléments ou section qui n’ont pas ces mentions doivent être implémentés et disponibles dans la version courante de la solution du ROR National.</p>
 
-<p>Pour plus d'information sur les versions de l'Implementation Guide n'hésitez pas à consulter <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">l'Historique</a>
+<p>Pour plus d’information sur les versions de l’Implementation Guide n’hésitez pas à consulter <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">l’Historique</a>
 Si vous avez des questions ou des suggestions concernant ce guide vous pouvez nous les adresser <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose">ici</a>.</p>
 
-<h3 id="description-fonctionnelle-de-lapi">Description fonctionnelle de l'API</h3>
+<h3 id="description-fonctionnelle-de-lapi">Description fonctionnelle de l’API</h3>
 
-<h4 id="le-ror-référentiel-de-données-de-description-de-loffre-de-santé">Le ROR, référentiel de données de description de l'offre de santé</h4>
+<h4 id="le-ror-référentiel-de-données-de-description-de-loffre-de-santé">Le ROR, référentiel de données de description de l’offre de santé</h4>
 
 <h5 id="le-référentiel-ror">Le référentiel ROR</h5>
 
-<p>Le Répertoire de l'Offre et des Ressources en santé et accompagnement
+<p>Le Répertoire de l’Offre et des Ressources en santé et accompagnement
 médico-social (<a href="https://esante.gouv.fr/produits-services/repertoire-ror">ROR</a>) est le référentiel (au sens gisement de données) de
-description de l'offre de santé des établissements sanitaires, des
+description de l’offre de santé des établissements sanitaires, des
 établissements et services du médico-social et des structures de ville.</p>
 
-<p>Les acteurs de santé ont convergé sur une vision commune de l'offre de
-santé. L'offre de santé est définie par une ou plusieurs activités
-opérationnelles, réalisée(s) dans le cadre d'un mode de prise en charge
+<p>Les acteurs de santé ont convergé sur une vision commune de l’offre de
+santé. L’offre de santé est définie par une ou plusieurs activités
+opérationnelles, réalisée(s) dans le cadre d’un mode de prise en charge
 et pour une patientèle, et par les ressources qui permettent la
 réalisation de ces activités opérationnelles sur un lieu donné. Ces
 ressources concernent principalement les équipements spécifiques, les
-capacités d'accueil et les compétences que l'on souhaite identifier pour
+capacités d’accueil et les compétences que l’on souhaite identifier pour
 cette offre.</p>
 <table align="center">
     <tr>
@@ -359,7 +359,7 @@ cette offre.</p>
     </tr>
 </table>
 
-<p>Le ROR, en tant que référentiel de description de l'offre de santé (au
+<p>Le ROR, en tant que référentiel de description de l’offre de santé (au
 sens gisement de données), a une couverture nationale. Il doit permettre
 à toute application autorisée de rechercher une offre de santé.</p>
 
@@ -368,26 +368,26 @@ sens gisement de données), a une couverture nationale. Il doit permettre
 <p>Dans les faits, chaque région met en œuvre, alimente et exploite une
 partie du référentiel limité à une couverture régionale, sans
 intersection de périmètre entre les régions. Chaque région est maîtresse
-de la solution technique qu'elle met en œuvre.</p>
+de la solution technique qu’elle met en œuvre.</p>
 
 <p>Les solutions techniques sont qualifiées de « solution ROR ». Deux
 solutions ROR sont déployées sur le territoire : ROR IR et ROR IeSS.</p>
 
-<p>L'instance régionale de la solution ROR mise en œuvre dans une région,
-et alimentée de la description de l'offre de santé de la région est
+<p>L’instance régionale de la solution ROR mise en œuvre dans une région,
+et alimentée de la description de l’offre de santé de la région est
 appelée « ROR régional ».</p>
 
 <p>Chaque ROR régional propose à ses utilisateurs un écran de recherche de
-l'offre régionale, et permet une recherche d'offre dans les autres
-régions. Historiquement, cette recherche d'une offre au-delà de la
-région s'appuie sur des services proposés par chaque ROR régional, et
+l’offre régionale, et permet une recherche d’offre dans les autres
+régions. Historiquement, cette recherche d’une offre au-delà de la
+région s’appuie sur des services proposés par chaque ROR régional, et
 nécessite que chaque instance régionale soit interconnectée avec les
 instances des 17 autres régions.</p>
 
 <h5 id="instance-du-ror-national">Instance du ROR national</h5>
 
 <p>Dans un contexte de sollicitation croissante des ROR régionaux, la
-nécessité d'améliorer la qualité du service rendu aux utilisateurs et le
+nécessité d’améliorer la qualité du service rendu aux utilisateurs et le
 vieillissement technologique des solutions logicielles ROR rendent
 indispensable une évolution des logiciels et de leur architecture. Pour
 répondre à ce besoin, il a été décidé collectivement en 2020 de
@@ -402,55 +402,55 @@ premières étapes, le ROR national est alimenté par les ROR régionaux.</p>
 permet de centraliser la recherche auprès du ROR national en
 remplacement des différentes instances régionales.</p>
 
-<p>Ce service peut ainsi permettre à une instance régionale de s'appuyer
+<p>Ce service peut ainsi permettre à une instance régionale de s’appuyer
 sur le ROR national pour réaliser l’équivalent d’une « recherche interROR », et permet
 également aux autres systèmes consommateurs des données du ROR de
-disposer d'un service pour lancer une recherche et obtenir en résultat
+disposer d’un service pour lancer une recherche et obtenir en résultat
 la description des offres de santé recherchées.</p>
 
-<p>Ce webservice, basée sur le modèle d'exposition V3 au format FHIR,
+<p>Ce webservice, basée sur le modèle d’exposition V3 au format FHIR,
 permet aux systèmes consommateurs de réaliser une recherche sur les
 informations capacitaires en lits/places, sous réserve de disposer des
-droits d'accès adaptés.</p>
+droits d’accès adaptés.</p>
 
 <h4 id="modélisation">Modélisation</h4>
 
 <h5 id="données-utilisées-pour-la-modélisation-uml">Données utilisées pour la modélisation UML</h5>
 
-<p>Les attributs de description de l'offre, fournis en résultat d'une
-recherche, sont décrits dans le document ROR-modèle d'exposition. Ces attributs sont décrits en utilisant la norme UML et en
+<p>Les attributs de description de l’offre, fournis en résultat d’une
+recherche, sont décrits dans le document ROR-modèle d’exposition. Ces attributs sont décrits en utilisant la norme UML et en
 cohérence avec le Modèle des Objets de Santé (MOS) et les nomenclatures
-associées (NOS) gérés par l'ANS.</p>
+associées (NOS) gérés par l’ANS.</p>
 
 <p>Ces attributs sont associés à des règles de gestion communes qui sont
-également présentées dans le document ROR-modèle d'exposition
+également présentées dans le document ROR-modèle d’exposition
 <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf">[Ref_01]</a>.</p>
 
 <h5 id="nomenclatures">Nomenclatures</h5>
 
-<p>La capacité à échanger de l'information entre les ROR et les systèmes
-consommateurs repose sur l'interopérabilité sémantique et syntaxique des
+<p>La capacité à échanger de l’information entre les ROR et les systèmes
+consommateurs repose sur l’interopérabilité sémantique et syntaxique des
 deux systèmes. On entend par « sémantique » à la fois la signification
 des mots et le rapport entre le sens des mots (homonymie, synonymie,
-etc.). Assurer l'interopérabilité des échanges nécessite donc que chacun
-de ces systèmes puisse interpréter la signification de l'information
+etc.). Assurer l’interopérabilité des échanges nécessite donc que chacun
+de ces systèmes puisse interpréter la signification de l’information
 reçue et utiliser cette information en correspondance sémantique avec
 ses données locales.</p>
 
 <p>Cet objectif conduit à mettre en œuvre des nomenclatures (terminologies
 de référence et jeux de valeurs) qui permettent de renseigner les
-concepts du modèle d'exposition et qui font le lien avec les concepts
-des modèles des ROR régionaux. Ces nomenclatures d'échange sont
-précisées dans le document de référence ROR-modèle d'exposition
+concepts du modèle d’exposition et qui font le lien avec les concepts
+des modèles des ROR régionaux. Ces nomenclatures d’échange sont
+précisées dans le document de référence ROR-modèle d’exposition
 <a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf">[Ref_01]</a>.</p>
 
 <p>Chaque nomenclature des outils interopérables doit trouver son
 équivalence dans la nomenclature du concept associé dans le modèle
-d'exposition.</p>
+d’exposition.</p>
 
 <p>Les systèmes consommateurs du web service du ROR national doivent
 pouvoir intégrer les évolutions régulières des nomenclatures (ajout de
-code, modification de libellé, mise en obsolescence d'un code,
+code, modification de libellé, mise en obsolescence d’un code,
 réactivation de code).</p>
 
 <h5 id="ressources-profilées">Ressources profilées</h5>
@@ -793,7 +793,7 @@ réactivation de code).</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 3, 2025 17:11+0000">2025-03-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.5.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 7, 2025 13:29+0000">2025-03-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
