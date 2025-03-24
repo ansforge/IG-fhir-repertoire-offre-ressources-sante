@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "90533fa1-6261-4a7d-848d-d166394e9420-150",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/90533fa1-6261-4a7d-848d-d166394e9420-150",
+  "id" : "4d138136-3751-427d-8ba7-bf88e3ba8f76-147",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/4d138136-3751-427d-8ba7-bf88e3ba8f76-147",
   "name" : "IntersectionROROrganizationAndROROrganization",
   "title" : "Intersection of null And null",
   "status" : "draft",
-  "date" : "2025-03-24T13:53:28+00:00",
+  "date" : "2025-03-24T16:55:57+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -1384,11 +1384,6 @@
       "requirements" : "Human contact for the organization.",
       "min" : 0,
       "max" : "*",
-      "type" : [{
-        "code" : "ContactPoint",
-        "profile" : ["http://interopsante.org/fhir/StructureDefinition/FrContactPoint",
-        "#sd-fr-contact-point-fr-contact-point"]
-      }],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -1747,11 +1742,6 @@
       "requirements" : "May need to keep track of the organization's addresses for contacting, billing or reporting requirements.",
       "min" : 0,
       "max" : "1",
-      "type" : [{
-        "code" : "Address",
-        "profile" : ["http://interopsante.org/fhir/StructureDefinition/FrAddress",
-        "#sd-fr-address-fr-address"]
-      }],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -2471,15 +2461,6 @@
       "requirements" : "Need to be able to track the hierarchy of organizations within an organization.",
       "min" : 0,
       "max" : "1",
-      "type" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
-          "valueBoolean" : true
-        }],
-        "code" : "Reference",
-        "targetProfile" : ["http://interopsante.org/fhir/StructureDefinition/FrOrganization",
-        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"]
-      }],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -3000,11 +2981,6 @@
       "requirements" : "People have (primary) ways to contact them in some way such as phone, email.",
       "min" : 0,
       "max" : "*",
-      "type" : [{
-        "code" : "ContactPoint",
-        "profile" : ["http://interopsante.org/fhir/StructureDefinition/FrContactPoint",
-        "#sd-fr-contact-point-fr-contact-point"]
-      }],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
@@ -3348,11 +3324,6 @@
       "requirements" : "May need to keep track of a contact party's address for contacting, billing or reporting requirements.",
       "min" : 0,
       "max" : "1",
-      "type" : [{
-        "code" : "Address",
-        "profile" : ["http://interopsante.org/fhir/StructureDefinition/FrAddress",
-        "#sd-fr-address-fr-address"]
-      }],
       "constraint" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",

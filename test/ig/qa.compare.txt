@@ -1,7 +1,7 @@
 ROR : Validation Results
 =========================================
 
-err = 81, warn = 112, info = 61
+err = 83, warn = 116, info = 61
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 71 / 3 / 0
@@ -13,8 +13,8 @@ Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://int
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-usage-context-ror-codesystem : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 0 / 0 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple : 0 / 0 / 2
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville : 62 / 0 / 2
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple : 0 / 4 / 2
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville : 64 / 0 / 2
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-capacity-status : 0 / 0 / 1
@@ -211,8 +211,14 @@ WARNING: CodeSystem/output-task-ror-codesystem: CodeSystem: Published code syste
 WARNING: CodeSystem/usage-context-ror-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.title is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror.json ==
 == fsh-generated/resources/Location-ror-location-exemple.json ==
+WARNING: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated
+WARNING: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20250228120000' because the code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM was not found
+WARNING: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept): A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20250228120000' because the code system https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM was not found
+WARNING: Location/ror-location-exemple: Location.extension[0].value.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM' could not be found, so the code cannot be validated
 INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): Reference to retired CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie|20231215120000
 == fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json ==
+ERROR: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[5].value.ofType(CodeableConcept).coding[0]: Error from http://tx.fhir.org/r4: Error html { color-scheme: light dark; } body { width: 35em; margin: 0 auto; font-family: Tahoma, Verdana, Arial, sans-serif; } An error occurred. Sorry, the page you are looking for is currently unavailable. Please try again later. If you are the system administrator of this resource then you should check the error log for details. Faithfully yours, nginx.
+ERROR: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.useContext[5].value.ofType(CodeableConcept): None of the codings provided are in the value set 'JDV_J20_ChampActivite_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR|20231030120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite#05)
 INFORMATION: Resource: The resource Questionnaire/ror-questionnaire-offre-de-ville could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 ERROR: Questionnaire.text.div: Hyperlink 'StructureDefinition-ror-organization.html#Organization.identifier:idNatSt.value' at 'div/table/tr/td/a' for 'Organization.identifier:idNatSt.value' does not resolve
 ERROR: Questionnaire.text.div: Hyperlink 'StructureDefinition-ror-organization.html#Organization.identifier:finess.value' at 'div/table/tr/td/a' for 'Organization.identifier:finess.value' does not resolve
