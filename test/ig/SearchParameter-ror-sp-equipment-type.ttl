@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-type> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ror-sp-equipment-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter ror-sp-equipment-type</b></p><a name=\"ror-sp-equipment-type\"> </a><a name=\"hcror-sp-equipment-type\"> </a><a name=\"ror-sp-equipment-type-fr-FR\"> </a><h2>RORSPEquipmentType</h2><p>Paramètre <code>equipment-type</code>:<code>token</code></p><div><p>Paramètre de recherche pour récupérer le type d'un équipement.</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/location.html\">Location</a></td></tr><tr><td>Expression</td><td><code>Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment').extension.where(url='equipmentType').value.as(CodeableConcept)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.6.0"] ; # 
+  fhir:name [ fhir:v "RORSPEquipmentType"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-03-24T11:24:43+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Paramètre de recherche pour récupérer le type d'un équipement."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:code [ fhir:v "equipment-type"] ; # 
+  fhir:base ( [ fhir:v "Location"] ) ; # 
+  fhir:type [ fhir:v "token"] ; # 
+  fhir:expression [ fhir:v "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment').extension.where(url='equipmentType').value.as(CodeableConcept)"] . # 
+
+# -------------------------------------------------------------------------------------
+
