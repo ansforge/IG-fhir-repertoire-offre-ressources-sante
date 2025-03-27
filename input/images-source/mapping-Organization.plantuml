@@ -139,7 +139,8 @@ map "**OrganisationInterne : Organization**" as OI #back:LightGoldenRodYellow;he
     datePrevisionnelleReouverture => <&plus> ROROrganizationReopeningDate
     typeFermeture => <&plus> ROROrganizationClosingType
     <&plus> organization-period *--> period
-    boiteLettreMSS => telecom 
+    contact => contact
+    boiteLettreMSS => telecom
 }
 
 EJ::metadonnee --> meta
@@ -147,6 +148,7 @@ EG::metadonnee --> meta
 OI::metadonnee --> meta
 contact <-- EJ::contact
 contact <-- EG::contact
+contact <-- OI::contact
 contact::telecommunication -> telecom
 telecom <-- OI::boiteLettreMSS
 address <-- EJ::adresse
