@@ -1,4 +1,4 @@
-[![Workflow Init](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/actions/workflows/fhir-worklows.yml/badge.svg)](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/actions/workflows/fhir-worklows.yml)
+[![Workflow Init](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/actions/workflows/a_tests_githubPages.yml/badge.svg)](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/actions/a_tests_githubPages.yml)
 
 ![ror-logo](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/assets/117643165/732ffe22-fbb8-470f-92a1-c6f7252be914)
 
