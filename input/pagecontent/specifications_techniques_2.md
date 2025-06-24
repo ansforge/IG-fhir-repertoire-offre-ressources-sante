@@ -106,7 +106,9 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
 
-**Avertissement:** Ce scénario est déprécié et ne doit pas être utilisé car il ne retournera pas l'intégralité de l'extraction.
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Avertissement:</b> Ce scénario est déprécié et ne doit pas être utilisé car il ne retournera pas l'intégralité de l'extraction.
+</p>
 
 **Requête :**
 
@@ -127,10 +129,12 @@ GET [BASE]/HealthcareService?
 
 #### Scénario 1 bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
 
-**Note importante:** Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car dans l'implémentation :
-- le paramètre *_outputFormat* ne supporte pas *application/fhir+ndjson*, les valeurs possibles sont *application/fhir+json* ou *application/json*
-- le header *'Prefer: respond-async'* n'est pas obligatoire
-- que le paramètre *includeAssociatedData=_myCompleteExtract* soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car dans l'implémentation :<br>
+- le paramètre <i>_outputFormat</i> ne supporte pas <i>application/fhir+ndjson</i>, les valeurs possibles sont <i>application/fhir+json</i> ou <i>application/json</i><br>
+- le header <i>'Prefer: respond-async'</i> n'est pas obligatoire<br>
+- que le paramètre <i>includeAssociatedData=_myCompleteExtract</i> soit présent ou non, l'export retourne toujours l'ensemble complet des ressources FHIR en lien avec la ressource HealthcareService
+</p>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre nationale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
@@ -165,10 +169,12 @@ Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 
 #### Scénario 1 ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
 
-**Note importante:** Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car dans l'implémentation :
-- le paramètre *_outputFormat* ne supporte pas *application/fhir+ndjson*, les valeurs possibles sont *application/fhir+json* ou *application/json*
-- le header *'Prefer: respond-async'* n'est pas obligatoire
-- que le paramètre *includeAssociatedData=_myCompleteExtract* soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car dans l'implémentation :<br>
+- le paramètre <i>_outputFormat</i> ne supporte pas <i>application/fhir+ndjson</i>, les valeurs possibles sont <i>application/fhir+json</i> ou <i>application/json</i><br>
+- le header <i>'Prefer: respond-async'</i> n'est pas obligatoire<br>
+- que le paramètre <i>includeAssociatedData=_myCompleteExtract</i> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
+</p>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre régionale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
