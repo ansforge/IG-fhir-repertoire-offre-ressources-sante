@@ -370,7 +370,9 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.</p>
 
-<p><strong>Avertissement:</strong> Ce scénario est déprécié et ne doit pas être utilisé car il ne retournera pas l’intégralité de l’extraction.</p>
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Avertissement:</b> Ce scénario est déprécié et ne doit pas être utilisé car il ne retournera pas l'intégralité de l'extraction.
+</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -389,12 +391,12 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-1bis--extraction-complète-asynchrone-draft">Scénario 1&nbsp;bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Note importante:</strong> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l’état draft car dans l’implémentation :</p>
-<ul>
-  <li>le paramètre <em>_outputFormat</em> ne supporte pas <em>application/fhir+ndjson</em>, les valeurs possibles sont <em>application/fhir+json</em> ou <em>application/json</em></li>
-  <li>le header <em>‘Prefer: respond-async’</em> n’est pas obligatoire</li>
-  <li>que le paramètre <em>includeAssociatedData=_myCompleteExtract</em> soit présent ou non, l’export retourne toujours l’ensemble prédéfini des ressources FHIR définies</li>
-</ul>
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car dans l'implémentation :<br/>
+- le paramètre <i>_outputFormat</i> ne supporte pas <i>application/fhir+ndjson</i>, les valeurs possibles sont <i>application/fhir+json</i> ou <i>application/json</i><br/>
+- le header <i>'Prefer: respond-async'</i> n'est pas obligatoire<br/>
+- que le paramètre <i>includeAssociatedData=_myCompleteExtract</i> soit présent ou non, l'export retourne toujours l'ensemble complet des ressources FHIR en lien avec la ressource HealthcareService
+</p>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre nationale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html</p>
@@ -425,12 +427,12 @@ Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">h
 
 <h4 id="scénario-1ter--extraction-complète-asynchrone-par-région-draft">Scénario 1&nbsp;ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Note importante:</strong> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l’état draft car dans l’implémentation :</p>
-<ul>
-  <li>le paramètre <em>_outputFormat</em> ne supporte pas <em>application/fhir+ndjson</em>, les valeurs possibles sont <em>application/fhir+json</em> ou <em>application/json</em></li>
-  <li>le header <em>‘Prefer: respond-async’</em> n’est pas obligatoire</li>
-  <li>que le paramètre <em>includeAssociatedData=_myCompleteExtract</em> soit présent ou non, l’export retourne toujours l’ensemble prédéfini des ressources FHIR définies</li>
-</ul>
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car dans l'implémentation :<br/>
+- le paramètre <i>_outputFormat</i> ne supporte pas <i>application/fhir+ndjson</i>, les valeurs possibles sont <i>application/fhir+json</i> ou <i>application/json</i><br/>
+- le header <i>'Prefer: respond-async'</i> n'est pas obligatoire<br/>
+- que le paramètre <i>includeAssociatedData=_myCompleteExtract</i> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
+</p>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre régionale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html</p>
@@ -636,7 +638,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 23, 2025 16:44+0000">2025-06-23</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jun 24, 2025 14:46+0000">2025-06-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
