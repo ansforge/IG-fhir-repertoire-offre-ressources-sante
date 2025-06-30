@@ -192,148 +192,139 @@ PATCH [BASE]/HealthcareService/XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 2 : Ajout d'une capacité de prise en charge
+#### [BED MANAGEMENT]  Scénario 2 : Ajout d'une capacité de prise en charge
 
-*Cette requête ne pourra être exécutée que par le serveur.*
+*Ce scenario cible les éditeurs de solutions de bedmanagement.*
 
-**Description du scénario :** Un établissement (via bed management, \...) ajoute dans un lieu de réalisation de l\'offre existant dont l'identifiant est XXX, des données capacitaires pour une affectation temporaire : une affectation temporaire \"Covid +\", 2 lits disponibles (sexe indifférencié), à t0.
+**Description du scénario :** Un établissement (via bed management, \...) ajoute dans un lieu de réalisation de l\'offre déjà existant, dont l'identifier:idExterneSynchro est XXX, des données capacitaires pour une affectation non temporaire, 2 places disponibles (sexe indifférencié), à t0.
 
 **Requête :**
 ```json
-PATCH [BASE]/Location/XXX
+PATCH [BASE]/Location?identifier=XXX
 {
-    "resourceType": "Parameters",
-    "parameter": [ 
+    "parameter": [
         {
             "name": "operation",
-            "part": [ 
+            "part": [
                 {
                     "name": "type",
                     "valueString": "add"
-                }, 
+                },
                 {
                     "name": "path",
-                    "valueString": "Location"
-                }, 
+                    "valueString": "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity')"
+                },
                 {
-                    "name": "extension",
-                    "part": [ 
+                    "name": "value",
+                    "part": [
                         {
-                            "name": "url",
-                            "valueUri": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-supported-capacity"
-                        },
-                        {
-                            "name": "extension",
-                            "part": [
+                            "extension": [
                                 {
-									"name": "url",
-									"valueString": "temporaryAssignement"
-								},
-                                {
-									"name": "value",
-                                    "valueCodeableConcept": {
-										"coding": [
-											{
-												"system": "https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/",
-												"code": "02",
-												"display": "Covid+"
-											}
-										]
-									}
-                                },
-                                {
-									"name": "url",
-									"valueString": "capacityType"
-								},
-								{
-									"name": "value",
-									"valueCodeableConcept": {
-										"coding": [
-											{
-												"system": "https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/",
-												"code": "01",
-												"display": "Lit"
-											}
-										]
-									}
-								},
-                                {
-									"name": "url",
-									"valueString": "capacityStatus"
-								},
-								{
-									"name": "value",
-									"valueCodeableConcept": {
-										"coding": [
-											{
-												"system": "https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/",
-												"code": "02",
-												"display": "Disponible"
-											}
-										]
-									}
-								},
-                                {
-									"name": "url",
-									"valueString": "temporalityCapacity"
-								},
-								{
-									"name": "value",
-									"valueCodeableConcept": {
-										"coding": [
-											{
-												"system": "https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/",
-												"code": "01",
-												"display": "Courant"
-											}
-										]
-									}
-								},
-								{
-									"name": "url",
-									"valueString": "nbCapacity"
-								},
-								{
-									"name": "value",
-									"valueInt": "2"
-								},
-								{
-									"name": "url",
-									"valueString": "genderCapacityAvailable"
-								},
-								{
-									"name": "value",
-									"valueCodeableConcept": {
-										"coding": [
-											{
-												"system": "https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/",
-												"code": "02",
-												"display": "Indifférencié"
-											}
-										]
-									}
-								}
-                            ]	
-						}		
-					]
-				}
-			]
-		}
-	]
+                                    "extension": [
+                                        {
+                                            "url": "nbCapacity",
+                                            "valueInteger": 25
+                                        },
+                                        {
+                                            "url": "capacityUpdateDate",
+                                            "valueDateTime": "2025-02-26T15:17:33Z"
+                                        },
+                                        {
+                                            "url": "capacityStatus",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "02",
+                                                        "display": "Disponible",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "capacityType",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "02",
+                                                        "display": "Place",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "temporalityCapacity",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "01",
+                                                        "display": "Courant",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "capacitySourceType",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "02",
+                                                        "display": "Bed management",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "genderCapacityAvailable",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "03",
+                                                        "display": "Indifférencié",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "temporaryAssignement",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "01",
+                                                        "display": "Aucune",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "resourceType": "Parameters"
 }
 ```
 
-#### [spécifique serveur] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code>
+#### [BED MANAGEMENT] Scénario 2 BIS : Mise à jour d'une capacité de prise en charge
 
-*Cette requête ne pourra être exécutée que par le serveur.*
+*Ce scenario cible les éditeurs de solutions de bedmanagement.*
 
-**Description du scénario :** Un établissement (via bed management, ...) supprime dans un lieu de réalisation de l\'offre existant dont l'identifiant est XXX tous les enregistrements liés à l\'affectation temporaire \"Covid-\".
+**Description du scénario :** Un établissement (via bed management, \...) met à jour dans un lieu de réalisation de l\'offre déjà existant, dont l'identifier:idExterneSynchro est XXX, des données capacitaires pour une affectation non temporaire, 12 places disponibles (sexe indifférencié), à t0.
 
 **Requête :**
 ```json
-PATCH [BASE]/Location/XXX
+PATCH [BASE]/Location?identifier=XXX
 {
-    "resourceType": "Parameters",
     "parameter": [
         {
             "name": "operation",
@@ -344,11 +335,131 @@ PATCH [BASE]/Location/XXX
                 },
                 {
                     "name": "path",
-                    "valueString": "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity' and extension.where(url='temporaryAssignement' and valueCodeableConcept.coding[0].code='02')).extension.where(url='nbCapacity')"
+                    "valueString": "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').where(extension.where(url = 'capacityStatus' and valueCodeableConcept.coding.code = '02') and extension.where(url = 'temporalityCapacity' and valueCodeableConcept.coding.code = '01')  and extension.where(url = 'genderCapacityAvailable' and valueCodeableConcept.coding.code = '03') and extension.where(url = 'temporaryAssignement' and valueCodeableConcept.coding.code = '01'))"
                 },
                 {
-                    "name": "valueInteger",
-                    "value": 0
+                    "name": "value",
+                    "part": [
+                        {
+                            "extension": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "nbCapacity",
+                                            "valueInteger": 12
+                                        },
+                                        {
+                                            "url": "capacityUpdateDate",
+                                            "valueDateTime": "2025-02-26T15:17:33Z"
+                                        },
+                                        {
+                                            "url": "capacityStatus",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "02",
+                                                        "display": "Disponible",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "capacityType",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "02",
+                                                        "display": "Place",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "temporalityCapacity",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "01",
+                                                        "display": "Courant",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "capacitySourceType",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "02",
+                                                        "display": "Bed management",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "genderCapacityAvailable",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "03",
+                                                        "display": "Indifférencié",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "url": "temporaryAssignement",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "code": "01",
+                                                        "display": "Aucune",
+                                                        "system": "https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "resourceType": "Parameters"
+}
+```
+
+#### [BED MANAGEMENT] Scénario 3 : Suppression d'une capacité d'accueil opérationnelle 
+
+*Ce scenario cible les éditeurs de solutions de bedmanagement.*
+
+**Description du scénario :** Un établissement (via bed management, \...) supprime dans un lieu de réalisation de l\'offre, dont l'identifier:idExterneSynchro est XXX, les données capacitaires d'une affectation non temporaire, portant sur les places indifférenciées, à t0.
+
+**Requête :**
+```json
+PATCH [BASE]/Location?identifier=XXX
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name": "type",
+                    "valueString": "remove"
+                },
+                {
+                    "name": "path",
+                    "valueString": "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').where(extension.where(url = 'capacityStatus' and valueCodeableConcept.coding.code = '02') and extension.where(url = 'temporalityCapacity' and valueCodeableConcept.coding.code = '01')  and extension.where(url = 'genderCapacityAvailable' and valueCodeableConcept.coding.code = '03') and extension.where(url = 'temporaryAssignement' and valueCodeableConcept.coding.code = '01'))"
                 }
             ]
         }
@@ -614,11 +725,17 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### [Bed Management] Scénario 9 : Remplacement de toutes les données capacitaires <code><span style="color: #ff0000;">draft</span></code>
+#### [Bed Management] Scénario 9 : Remplacement de toutes les données capacitaires <code><span style="color: #E67E22;">deprecated</span></code>
 
 *Ce scenario cible les éditeurs de solutions de bedmanagement.*
 
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Avertissement:</b> Ce scénario est déprécié et ne doit pas être utilisé car il est préférable de mettre à jour les données capacitaires unitairement comme présenté dans les scénarios 2 et 2bis.
+</p>
+
 **Description du scénario :** Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).
+
+
 
 **Exemple :**
 
