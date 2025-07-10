@@ -219,10 +219,10 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-healthcareservice)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-//* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
-//* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #update
 * rest.resource[=].searchInclude = "HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner"
 * rest.resource[=].searchRevInclude = "PractitionerRole:service, Task:focus"
 
@@ -327,8 +327,9 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-organization)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-//* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 
 * rest.resource[=].searchParam[+].name = "_id"
@@ -430,8 +431,9 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-practitioner)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-//* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[+].code = #update
 //* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 
 * rest.resource[=].searchParam[+].name = "identifier"
@@ -470,8 +472,9 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-practitionerrole)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-//* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #create
 //* rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[+].code = #update
 //* rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 
 * rest.resource[=].searchParam[+].name = "identifier"
