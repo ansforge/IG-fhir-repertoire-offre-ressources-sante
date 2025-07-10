@@ -1,12 +1,12 @@
 ROR : Validation Results
 =========================================
 
-err = 88, warn = 129, info = 62
+err = 86, warn = 129, info = 62
 IG Publisher Version: 2.0.8
-Generated Thu Jul 10 12:55:41 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.ror#0.6.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+Generated Thu Jul 10 13:02:20 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.ror#0.6.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 75 / 3 / 0
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 6 / 0 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 6 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 5 / 0 / 1
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 5 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-act-type-ror-codesystem : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-input-task-ror-codesystem : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-output-task-ror-codesystem : 0 / 1 / 1
@@ -194,16 +194,14 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].resource[0].searchParam[1].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has'
 ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].resource[1].searchParam[3].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has'
 ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].searchParam[0].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count'
-ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].searchParam[2].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements'
-ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].searchParam[3].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include'
-ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].searchParam[4].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude'
+ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].searchParam[2].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include'
+ERROR: CapabilityStatement/ror-consommateur: CapabilityStatement.rest[0].searchParam[3].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude'
 == fsh-generated/resources/CapabilityStatement-ror-serveur.json ==
 ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].resource[0].searchParam[1].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has'
 ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].resource[1].searchParam[3].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-has'
 ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].searchParam[0].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-count'
-ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].searchParam[2].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-elements'
-ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].searchParam[3].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include'
-ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].searchParam[4].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude'
+ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].searchParam[2].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-include'
+ERROR: CapabilityStatement/ror-serveur: CapabilityStatement.rest[0].searchParam[3].definition: A definition could not be found for Canonical URL 'http://hl7.org/fhir/SearchParameter/Resource-revinclude'
 == fsh-generated/resources/CodeSystem-act-type-ror-codesystem.json ==
 WARNING: CodeSystem/act-type-ror-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.title is mandatory, but it is not present
 == fsh-generated/resources/CodeSystem-input-task-ror-codesystem.json ==
@@ -221,7 +219,7 @@ WARNING: ImplementationGuide/ans.fhir.fr.ror: ImplementationGuide.dependsOn[3]: 
 ERROR: ImplementationGuide/ans.fhir.fr.ror: ImplementationGuide.dependsOn[3]: The packageId hl7.fhir.fr.core points to the canonical https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core which is inconsistent with the stated canonical of http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core
 == fsh-generated/resources/Location-ror-location-exemple.json ==
 ERROR: Location/ror-location-exemple: Location.type[0].coding[0]: Error from https://smt.esante.gouv.fr/fhir: Error: NullPointerException
-Information: X-Request-Id: bc9bf622-3b27-4072-afe5-a14375ffdf6a
+Information: X-Request-Id: c3526f8f-341a-4aac-8446-c7edff785ef2
 ERROR: Location/ror-location-exemple: Location.type[0]: None of the codings provided are in the value set 'JDV_J198_FonctionLieu_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J198-FonctionLieu-ROR/FHIR/JDV-J198-FonctionLieu-ROR|20250620120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu#001)
 INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): Reference to retired CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie|20231215120000
 INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): The code 'RUE' is valid but is not active
