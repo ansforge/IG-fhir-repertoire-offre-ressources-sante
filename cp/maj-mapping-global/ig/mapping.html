@@ -265,7 +265,7 @@ Le fichier définissant le mapping FHIR pour le modèle d’exposition 3.0 du RO
 <div style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 <b>Notes:</b>
     <ol>
-        <li>Dans l'implémentation actuelle du ROR, une <i>organisation interne (OI)</i> ne peut être rattachée qu'à une <i>entité géographique (EG)</i>, par exemple un pôle ne peut être rattaché qu'à une EG;</li>
+        <li>Dans l'implémentation actuelle du ROR, une <i>organisation interne (OI)</i> ne peut être rattachée qu'à une <i>entité géographique (EG)</i>, par exemple un pôle ne peut être rattaché qu'à une EG. Concernant les pôles multi-sites, une copie du pôle est créée pour chaque EG. Ce point est en cours d'étude pour améliorer ce fonctionnement dans une version prochaine du ROR;</li>
         <li><code>PractitionerRole</code> contient l'<i>exercice professionnel</i> et la <i>situation opérationnelle</i>. Dans le cas ou l'<i>exercice professionnel</i> est rattaché à plusieurs <i>situations opérationnelles</i>, alors il aura autant d'instance <code>PractitionerRole</code> qu'il y a de <i>situations opérationnelles</i> (les attributs de l'<i>exercice professionnel</i> sont dupliqués dans chacune de ces ressources);</li>
         <li>La cardinalité implémentée d'une instance de <code>Location</code> référencée dans une instance <code>HealthcareService</code> est 0..* au lieu de 1..*. Cela est dû à la temporalité de la création d'une instance <code>HealthcareService</code>, créée avant que les lieux de réalisation de l'offre (les instances <code>Location</code>) rattachés à l'offre ne soient connus.</li>
     </ol>
@@ -328,7 +328,7 @@ Le fichier définissant le mapping FHIR pour le modèle d’exposition 3.0 du RO
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 2, 2025 12:54+0000">2025-07-02</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 10, 2025 13:46+0000">2025-07-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

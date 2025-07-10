@@ -1,7 +1,7 @@
 ROR : Validation Results
 =========================================
 
-err = 88, warn = 129, info = 61
+err = 88, warn = 129, info = 62
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 75 / 3 / 0
@@ -13,7 +13,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://int
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-ror-include-associated-data-code-system : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-usage-context-ror-codesystem : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror : 1 / 4 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple : 2 / 0 / 2
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Location-ror-location-exemple : 2 / 0 / 3
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville : 66 / 3 / 2
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-additional-bed-type : 0 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/SearchParameter-ror-sp-capacity-closing-type : 0 / 0 / 1
@@ -220,10 +220,11 @@ WARNING: ImplementationGuide/ans.fhir.fr.ror: ImplementationGuide.dependsOn[2]: 
 WARNING: ImplementationGuide/ans.fhir.fr.ror: ImplementationGuide.dependsOn[3]: The canonical URL http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core doesn't point to an actual ImplementationGuide resource
 ERROR: ImplementationGuide/ans.fhir.fr.ror: ImplementationGuide.dependsOn[3]: The packageId hl7.fhir.fr.core points to the canonical https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core which is inconsistent with the stated canonical of http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core
 == fsh-generated/resources/Location-ror-location-exemple.json ==
-ERROR: Location/ror-location-exemple: Location.type[0].coding[0]: Error from https://smt.esante.gouv.fr/fhir: Error: Cannot invoke "String.toLowerCase(java.util.Locale)" because "tag" is null
-Information: X-Request-Id: 99fce13d-fa78-4f03-8e57-e3eb4335296d
+ERROR: Location/ror-location-exemple: Location.type[0].coding[0]: Error from https://smt.esante.gouv.fr/fhir: Error: NullPointerException
+Information: X-Request-Id: e77f0b03-2450-4a76-9320-d26774ec1a0e
 ERROR: Location/ror-location-exemple: Location.type[0]: None of the codings provided are in the value set 'JDV_J198_FonctionLieu_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J198-FonctionLieu-ROR/FHIR/JDV-J198-FonctionLieu-ROR|20250620120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu#001)
 INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): Reference to retired CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie|20231215120000
+INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): The code 'RUE' is valid but is not active
 == fsh-generated/resources/Questionnaire-ror-questionnaire-offre-de-ville.json ==
 WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.item[2].item[23].definition: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/RORPractitionerRoleName#Extension.extension:exerciseTitle.value[x]:valueCodeableConcept'
 WARNING: Questionnaire/ror-questionnaire-offre-de-ville: Questionnaire.item[2].item[24].definition: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/RORPractitionerRoleName#Extension.extension:exerciseLastName'
