@@ -130,7 +130,7 @@ GET [BASE]/HealthcareService?
 #### Scénario 1 bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car dans l'implémentation :<br>
+<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car il ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a> : <br>
 - le paramètre <i>_outputFormat</i> ne supporte pas <i>application/fhir+ndjson</i>, les valeurs possibles sont <i>application/fhir+json</i> ou <i>application/json</i><br>
 - le header <i>'Prefer: respond-async'</i> n'est pas obligatoire<br>
 - que le paramètre <i>includeAssociatedData=_myCompleteExtract</i> soit présent ou non, l'export retourne toujours l'ensemble complet des ressources FHIR en lien avec la ressource HealthcareService
@@ -170,7 +170,7 @@ Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 #### Scénario 1 ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car dans l'implémentation :<br>
+<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car il ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a><br>
 - le paramètre <i>_outputFormat</i> ne supporte pas <i>application/fhir+ndjson</i>, les valeurs possibles sont <i>application/fhir+json</i> ou <i>application/json</i><br>
 - le header <i>'Prefer: respond-async'</i> n'est pas obligatoire<br>
 - que le paramètre <i>includeAssociatedData=_myCompleteExtract</i> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
