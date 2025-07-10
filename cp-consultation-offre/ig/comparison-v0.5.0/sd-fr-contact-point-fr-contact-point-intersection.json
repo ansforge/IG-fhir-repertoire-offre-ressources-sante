@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "4ddf4e15-a872-4441-96b7-d2b508197d37-153",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/4ddf4e15-a872-4441-96b7-d2b508197d37-153",
+  "id" : "58360cf2-bc37-4194-81d4-0ceade5676f0-153",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/58360cf2-bc37-4194-81d4-0ceade5676f0-153",
   "name" : "IntersectionFrContactPointAndFrContactPoint",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2025-06-24T14:47:31+00:00",
+  "date" : "2025-07-10T12:51:30+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "ContactPoint",
@@ -33,7 +33,7 @@
         "severity" : "error",
         "human" : "A system is required if a value is provided.",
         "expression" : "value.empty() or system.exists()",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Organization"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Location"
       }],
       "mustSupport" : false,
       "isModifier" : false,
@@ -109,7 +109,7 @@
         "severity" : "error",
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mustSupport" : false,
       "isModifier" : false,

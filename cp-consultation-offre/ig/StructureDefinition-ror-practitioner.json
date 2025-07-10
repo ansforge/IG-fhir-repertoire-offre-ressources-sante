@@ -9,7 +9,7 @@
   "version" : "0.6.0",
   "name" : "RORPractitioner",
   "status" : "draft",
-  "date" : "2025-06-24T14:45:36+00:00",
+  "date" : "2025-07-10T12:49:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1261,7 +1261,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Group"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -1321,7 +1321,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/GuidanceResponse"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -1837,7 +1837,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Group"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2331,7 +2331,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Group"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -2543,7 +2543,7 @@
         "human" : "If the Attachment has data, it SHALL have a contentType",
         "expression" : "data.empty() or contentType.exists()",
         "xpath" : "not(exists(f:data)) or exists(f:contentType)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+        "source" : "http://hl7.org/fhir/StructureDefinition/ProdCharacteristic"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2878,7 +2878,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Group"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2934,7 +2934,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/GuidanceResponse"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
       }],
       "mapping" : [{
         "identity" : "rim",
