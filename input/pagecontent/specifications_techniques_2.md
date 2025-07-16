@@ -180,6 +180,7 @@ Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
 
 **Requête :**
+
 **N.B.: Dans le Header il est nécessaire de préciser:**
 `--header 'Prefer: respond-async'`\
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
