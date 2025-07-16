@@ -33,7 +33,7 @@ Cette version prend en compte les retours sur la version 0.4.0 snapshot-1.
 * correction de l'exemple de ressouce dans le [scénario 1 "Création du nouveau lieu de réalisation de l’offre"](specifications_techniques_10.html#spécifique-serveur-scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft) [384](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/384)
 * [RC]Correction de l'expression dans le SP ror-sp-healthcareservice-notavailable-closing-reopeningdate [388](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/388)
 
-Verion qui inclut également les modifications réalisées pour la [version 0.4.0 snapshot-1](change-log.html#version-040-snapshot-1).
+Version qui inclut également les modifications réalisées pour la [version 0.4.0 snapshot-1](change-log.html#version-040-snapshot-1).
 
 ### version 0.4.0-snapshot-1
 
