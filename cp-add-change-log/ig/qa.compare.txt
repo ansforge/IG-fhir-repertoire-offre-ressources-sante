@@ -4,7 +4,7 @@ ROR : Validation Results
 err = 88, warn = 127, info = 63
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
- Build Errors : 76 / 3 / 0
+ Build Errors : 75 / 3 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 6 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 6 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CodeSystem-act-type-ror-codesystem : 0 / 1 / 1
@@ -178,7 +178,6 @@ ERROR: Questionnaire-ror-questionnaire-offre-de-ville.html#/html/body/div/div/di
 ERROR: Questionnaire-ror-questionnaire-offre-de-ville.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 435, column 1711: The link 'StructureDefinition-ror-location-equipment.html#Extension.extension:nbInService.value[x]' for "Extension.extension:nbInService.value[x]" cannot be resolved (valid targets: 138 targets)
 ERROR: Questionnaire-ror-questionnaire-offre-de-ville.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 436, column 1741: The link 'StructureDefinition-ror-location-equipment-limit.html#Extension.extension:equipmentFeature.value[x]' for "Extension.extension:equipmentFeature.value[x]" cannot be resolved (valid targets: 133 targets)
 ERROR: Questionnaire-ror-questionnaire-offre-de-ville.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 437, column 1702: The link 'StructureDefinition-ror-location-equipment-limit.html#Extension.extension:limitValue.value[x]' for "Extension.extension:limitValue.value[x]" cannot be resolved (valid targets: 133 targets)
-ERROR: change-log.html#/html/body/div/div/div/div/div/p/a at Line 301, column 68: The link 'https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0-snapshot-1/' for "version 0.4.0 snapshot-1" cannot be resolved
 ERROR: miseAjour_offre.html#/html/body/div/div/div/div/div/p/a at Line 1034, column 37: The link 'saisie_offre.html#spécifique-serveur-scénario-10-création-dune-situation-opérationnelle' for "scénario 10 du cas d’usage saisie de l’offre" cannot be resolved (valid targets: 50 targets)
 ERROR: miseAjour_offre.html#/html/body/div/div/div/div/div/p/a at Line 1492, column 37: The link 'specifications_techniques_10.html#scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft' for "scénario 1 du cas d’usage création et mise à jour du lieu de réalisation de l’offre" cannot be resolved (valid targets: 50 targets)
 ERROR: specifications_fonctionnelles.html#/html/body/div/div/div/div/div/p/a at Line 754, column 137: The link 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location.html' for "voir description du lieu de réalisation de l’offre" cannot be resolved
@@ -222,7 +221,7 @@ WARNING: ImplementationGuide/ans.fhir.fr.ror: ImplementationGuide.dependsOn[3]: 
 ERROR: ImplementationGuide/ans.fhir.fr.ror: ImplementationGuide.dependsOn[3]: The packageId hl7.fhir.fr.core points to the canonical https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core which is inconsistent with the stated canonical of http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core
 == fsh-generated/resources/Location-ror-location-exemple.json ==
 ERROR: Location/ror-location-exemple: Location.type[0].coding[0]: Error from https://smt.esante.gouv.fr/fhir: Error: NullPointerException
-Information: X-Request-Id: 024e52e9-7b91-4226-b331-d888dfe0f8c6
+Information: X-Request-Id: 930643ed-1c79-4249-9cf7-91fdc8b3ca66
 ERROR: Location/ror-location-exemple: Location.type[0]: None of the codings provided are in the value set 'JDV_J198_FonctionLieu_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J198-FonctionLieu-ROR/FHIR/JDV-J198-FonctionLieu-ROR|20250620120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu#001)
 INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): Reference to retired CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie|20231215120000
 INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): The code 'RUE' is valid but is not active
