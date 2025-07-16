@@ -393,9 +393,9 @@ Plus de précision sur la spécification FHIR :
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 <b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car il ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a> : <br/>
-- le paramètre <i>_outputFormat</i> ne supporte pas <i>application/fhir+ndjson</i>, les valeurs possibles sont <i>application/fhir+json</i> ou <i>application/json</i><br/>
-- le header <i>'Prefer: respond-async'</i> n'est pas obligatoire<br/>
-- que le paramètre <i>includeAssociatedData=_myCompleteExtract</i> soit présent ou non, l'export retourne toujours l'ensemble complet des ressources FHIR en lien avec la ressource HealthcareService
+- le paramètre <code>_outputFormat</code> ne supporte pas <code>application/fhir+ndjson</code>, les valeurs possibles sont <code>application/fhir+json</code> ou <code>application/json</code><br/>
+- le header <code>'Prefer: respond-async'</code> n'est pas obligatoire<br/>
+- que le paramètre <code>includeAssociatedData=_myCompleteExtract</code> soit présent ou non, l'export retourne toujours l'ensemble complet des ressources FHIR en lien avec la ressource HealthcareService
 </p>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre nationale.
@@ -429,9 +429,9 @@ Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">h
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
 <b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car il ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a><br/>
-- le paramètre <i>_outputFormat</i> ne supporte pas <i>application/fhir+ndjson</i>, les valeurs possibles sont <i>application/fhir+json</i> ou <i>application/json</i><br/>
-- le header <i>'Prefer: respond-async'</i> n'est pas obligatoire<br/>
-- que le paramètre <i>includeAssociatedData=_myCompleteExtract</i> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
+- le paramètre <code>_outputFormat</code> ne supporte pas <code>application/fhir+ndjson</code>, les valeurs possibles sont <code>application/fhir+json</code> ou <code>application/json</code><br/>
+- le header <code>'Prefer: respond-async'</code> n'est pas obligatoire<br/>
+- que le paramètre <code>includeAssociatedData=_myCompleteExtract</code> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
 </p>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre régionale.
@@ -600,6 +600,7 @@ Cette partie de la spécification est en cours de construction.
 
 
 
+
 </div>
         </div>    <!-- /inner-wrapper -->
       </div>    <!-- /row -->
@@ -638,7 +639,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 10, 2025 12:56+0000">2025-07-10</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 16, 2025 12:57+0000">2025-07-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
