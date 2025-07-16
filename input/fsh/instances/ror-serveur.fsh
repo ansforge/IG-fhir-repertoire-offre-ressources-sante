@@ -39,6 +39,7 @@ Usage: #definition
 * rest.searchParam[=].type = #token
 * rest.searchParam[=].documentation = "Permet de choisir dans quel ordre renvoyer les résultats"
 
+//Implémentation probable en V5
 //* rest.searchParam[+].name = "_elements"
 //* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-elements"
 //* rest.searchParam[=].type = #string
