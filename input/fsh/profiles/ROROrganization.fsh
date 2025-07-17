@@ -206,7 +206,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-reopening-date] ^short = "datePrevisionnelleReouverture (OI) : Date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
 * extension[ror-organization-creation-date] ^short = "dateCreation (EJ) : Date de création de l'entité juridique"
 * extension[ror-organization-closing-type] ^short = "typeFermeture (EJ + EG + OI) : Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture."
-* extension[organization-period] ^short = "dateOuverture (EJ + OI) + dateFermeture (EJ + EG + OI)"
+* extension[organization-period] ^short = "dateOuverture (EG + OI) + dateFermeture (EJ + EG + OI)"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
