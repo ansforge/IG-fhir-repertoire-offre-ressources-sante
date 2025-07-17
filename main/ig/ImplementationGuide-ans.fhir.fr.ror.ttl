@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-07-17T13:53:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-07-17T14:29:52+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -3036,6 +3036,20 @@
            fhir:v "mapping.html"^^xsd:anyURI
          ] ;
          fhir:title [ fhir:v "Mapping FHIR du modèle de données du ROR" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "change-log.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "change-log.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Historique des versions" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
