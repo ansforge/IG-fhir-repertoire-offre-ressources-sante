@@ -170,7 +170,7 @@ Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 #### Scénario 1 ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car il ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a><br>
+<b>Note importante:</b> Cette fonctionnalité est implémentée dans la version actuelle du ROR mais nous le maintenons à l'état draft car elle ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a><br>
 - le paramètre <code>_outputFormat</code> ne supporte pas <code>application/fhir+ndjson</code>, les valeurs possibles sont <code>application/fhir+json</code> ou <code>application/json</code><br>
 - le header <code>'Prefer: respond-async'</code> n'est pas obligatoire<br>
 - que le paramètre <code>includeAssociatedData=_myCompleteExtract</code> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
