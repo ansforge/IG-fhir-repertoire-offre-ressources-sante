@@ -204,7 +204,7 @@ Exemple :
 `[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc`
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 
-#### Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement
+#### Scénario 2 : Extraction de l’ensemble des offres de santé d’un établissement <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** un consommateur souhaite rechercher l\'offre de santé proposée\ par un établissement dont l'identifiant est = XX .
 
