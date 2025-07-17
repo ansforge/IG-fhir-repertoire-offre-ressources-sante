@@ -106,6 +106,10 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.
 
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Avertissement:</b> Ce scénario est déprécié et ne doit pas être utilisé car il ne retournera pas l'intégralité de l'extraction.
+</p>
+
 **Requête :**
 
 ```
@@ -125,12 +129,20 @@ GET [BASE]/HealthcareService?
 
 #### Scénario 1 bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code>
 
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Note importante:</b> Cette fonctionnalité est implémentée dans la version actuelle du ROR mais nous le maintenons à l'état draft car elle ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a> : <br>
+- le paramètre <code>_outputFormat</code> ne supporte pas <code>application/fhir+ndjson</code>, les valeurs possibles sont <code>application/fhir+json</code> ou <code>application/json</code><br>
+- le header <code>'Prefer: respond-async'</code> n'est pas obligatoire<br>
+- que le paramètre <code>includeAssociatedData=_myCompleteExtract</code> soit présent ou non, l'export retourne toujours l'ensemble complet des ressources FHIR en lien avec la ressource HealthcareService
+</p>
+
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre nationale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
 
 **Requête :**
-**N.B.: Dans le Header il est nécessaire de préciser: **
-`--header 'Prefer: respond-async'`
+
+**N.B.: Dans le Header il est nécessaire de préciser**
+`--header 'Prefer: respond-async'`\
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
 
 ```
@@ -153,14 +165,24 @@ Exemple :
 `[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc`
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html#3.1.6.4>
 
+
+
 #### Scénario 1 ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code>
+
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Note importante:</b> Cette fonctionnalité est implémentée dans la version actuelle du ROR mais nous le maintenons à l'état draft car elle ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a><br>
+- le paramètre <code>_outputFormat</code> ne supporte pas <code>application/fhir+ndjson</code>, les valeurs possibles sont <code>application/fhir+json</code> ou <code>application/json</code><br>
+- le header <code>'Prefer: respond-async'</code> n'est pas obligatoire<br>
+- que le paramètre <code>includeAssociatedData=_myCompleteExtract</code> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
+</p>
 
 **Description du scénario :** Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l'offre régionale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html
 
 **Requête :**
-**N.B.: Dans le Header il est nécessaire de préciser: **
-`--header 'Prefer: respond-async'`
+
+**N.B.: Dans le Header il est nécessaire de préciser:**
+`--header 'Prefer: respond-async'`\
 Plus d'information ici : <http://hl7.org/fhir/R4/async.html>
 
 ```
@@ -204,7 +226,7 @@ GET [BASE]/HealthcareService?organization.identifier:above=XX #critère de reche
 
 ```
 
-#### Scénario 3 : Extraction d'une offre de santé identifiée <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 3 : Extraction d'une offre de santé identifiée
 
 **Description du scénario :** un consommateur souhaite
 rechercher une offre de santé\
@@ -226,7 +248,7 @@ GET [BASE]/HealthcareService?identifier=XXX #critère de recherche de l’identi
 &_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
 &_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
-#### Scénario 4 : Extraction complète à partir d'une date de mise à jour de l'offre opérationnelle <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 4 : Extraction complète à partir d'une date de mise à jour de l'offre opérationnelle
 
 **Description du scénario :** Un consommateur souhaite mettre
 à jour toute l\'offre\
@@ -315,7 +337,7 @@ GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionO
 Cette partie de la spécification est en cours de construction.
 </p>
 
-**Description du scénario :**un consommateur souhaite rechercher une offre de santé à partir de son identifiant = XXX et consulter les anomalies associées si elles existent.
+**Description du scénario :** un consommateur souhaite rechercher une offre de santé à partir de son identifiant = XXX et consulter les anomalies associées si elles existent.
 
 **Requête :**
 

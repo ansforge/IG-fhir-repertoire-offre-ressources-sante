@@ -39,10 +39,11 @@ Usage: #definition
 * rest.searchParam[=].type = #token
 * rest.searchParam[=].documentation = "Permet de choisir dans quel ordre renvoyer les résultats"
 
-* rest.searchParam[+].name = "_elements"
-* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-elements"
-* rest.searchParam[=].type = #string
-* rest.searchParam[=].documentation = "Permet au consommateur de demander les éléments à retourner de la ressource recherchée"
+//Implémentation probable en V5
+//* rest.searchParam[+].name = "_elements"
+//* rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-elements"
+//* rest.searchParam[=].type = #string
+//* rest.searchParam[=].documentation = "Permet au consommateur de demander les éléments à retourner de la ressource recherchée"
 
 * rest.searchParam[+].name = "_include"
 * rest.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-include"
