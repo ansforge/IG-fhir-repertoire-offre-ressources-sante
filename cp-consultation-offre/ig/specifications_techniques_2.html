@@ -428,7 +428,7 @@ Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">h
 <h4 id="scénario-1ter--extraction-complète-asynchrone-par-région-draft">Scénario 1&nbsp;ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
-<b>Note importante:</b> Ce scénario est implémenté dans la version actuelle du ROR mais nous le maintenons à l'état draft car il ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a><br/>
+<b>Note importante:</b> Cette fonctionnalité est implémentée dans la version actuelle du ROR mais nous le maintenons à l'état draft car elle ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a><br/>
 - le paramètre <code>_outputFormat</code> ne supporte pas <code>application/fhir+ndjson</code>, les valeurs possibles sont <code>application/fhir+json</code> ou <code>application/json</code><br/>
 - le header <code>'Prefer: respond-async'</code> n'est pas obligatoire<br/>
 - que le paramètre <code>includeAssociatedData=_myCompleteExtract</code> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
@@ -460,7 +460,7 @@ Exemple :
 <code class="language-plaintext highlighter-rouge">[BASE]/$export-poll-status?_jobId=990789c0-f170-400f-97dd-ed2ac6fd22dc</code>
 Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">http://hl7.org/fhir/R4/async.html#3.1.6.4</a></p>
 
-<h4 id="scénario-2-extraction-de-lensemble-des-offres-de-santé-dun-établissement">Scénario 2&nbsp;: Extraction de l’ensemble des offres de santé d’un établissement</h4>
+<h4 id="scénario-2-extraction-de-lensemble-des-offres-de-santé-dun-établissement-draft">Scénario 2&nbsp;: Extraction de l’ensemble des offres de santé d’un établissement <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite rechercher l'offre de santé proposée\ par un établissement dont l’identifiant est = XX .</p>
 
@@ -640,7 +640,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 17, 2025 09:23+0000">2025-07-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 17, 2025 09:24+0000">2025-07-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
