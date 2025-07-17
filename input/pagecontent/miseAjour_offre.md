@@ -34,7 +34,7 @@
 <p>Organization, HealthcareService, Practitioner, PractitionerRole</p>
 </td>
 <td width="465">
-<p>HealthcareService</p>
+<p>Organization, HealthcareService, Practitioner, PractitionerRole</p>
 </td>
 </tr>
 <tr>
