@@ -2,12 +2,16 @@
 
 **Release 0.6.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implémentation 4.2 du ROR National.**
 
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0>
+
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/10?closed=1) :
 !!! Ajouter la release-notes une fois la release prête à être publiée !!!
 
 ### version 0.5.0
 
 **Release 0.5.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implémentation 3.3 du ROR National.**
+
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.5.0>
 
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/9?closed=1) :
 
@@ -22,6 +26,8 @@
 
 **Release 0.4.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 3.2 du ROR National.**
 
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0>
+
 Cette version prend en compte les retours sur la version 0.4.0 snapshot-1.
 
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/8?closed=1) :
@@ -31,7 +37,7 @@ Cette version prend en compte les retours sur la version 0.4.0 snapshot-1.
 * [narratif] Correction de l'exemple de requête (code inactivation) dans le [scénario 2 : Inactivation d’une anomalie](specifications_techniques_6.html#scénario-2-inactivation-dune-anomalie) [360](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/360), [361](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/361)
 * [narratif] Ajout de la description du cas d'usage "Consignes  fiche de saisie de l'offre" dans la page [Spécifications fonctionnelles](specifications_fonctionnelles.html#consignes-fiche-de-saisie-de-loffre) [365](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/365)
 * correction de l'exemple de ressouce dans le [scénario 1 "Création du nouveau lieu de réalisation de l’offre"](specifications_techniques_10.html#spécifique-serveur-scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft) [384](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/384)
-* [RC]Correction de l'expression dans le SP ror-sp-healthcareservice-notavailable-closing-reopeningdate [388](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/388)
+* [RC] Correction de l'expression dans le SP ror-sp-healthcareservice-notavailable-closing-reopeningdate [388](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/388)
 
 Version qui inclut également les modifications réalisées pour la [version 0.4.0 snapshot-1](change-log.html#version-040-snapshot-1).
 
@@ -40,6 +46,8 @@ Version qui inclut également les modifications réalisées pour la [version 0.4
 **Pre-release 0.4.0-snapshot-1 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 3.2 du ROR National.**
 
 **Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'apporter de l'information aux consommateurs concernant les nouveautés en cours d'implémentation.**
+
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0-snapshot-1>
 
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/5?closed=1) :
 
@@ -56,6 +64,8 @@ Version qui inclut également les modifications réalisées pour la [version 0.4
 ### version 0.3.0
 
 **Release 0.3.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 3.1 du ROR National.**
+
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.3.0>
 
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/6?closed=1) :
 
@@ -79,6 +89,8 @@ Version qui inclut également les modifications réalisées pour la [version 0.4
 ### version 0.2.0
 
 **Release 0.2.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 2.3 du ROR National.**
+
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.2.0>
 
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/2?closed=1) :
 
@@ -139,6 +151,8 @@ Version qui inclut également les modifications réalisées pour la [version 0.4
 
 **Release 0.1.1 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 2.2 du ROR National.**
 
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.1.1>
+
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/2?closed=1) :
 
 * [RC] Correction d'erreurs de syntaxe dans la définition du contexte des extensions : [26](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/26) et [33](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/33)
@@ -158,3 +172,5 @@ Version qui inclut également les modifications réalisées pour la [version 0.4
 ### version 0.1.0
 
 **Première version de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 2.1 du ROR National.**
+
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.1.0>
