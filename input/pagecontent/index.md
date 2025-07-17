@@ -179,6 +179,10 @@ La liste ci-dessous expose la liste des profils génériques profilés.
 
 {% include dependency-table.xhtml %}
 
+#### Propriété intellectuelle
+
+{% include ip-statements.xhtml %}
+
 #### Documents de référence
 
 <table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" align="left" width="100%" style="border-collapse:collapse;mso-table-layout-alt:fixed;
