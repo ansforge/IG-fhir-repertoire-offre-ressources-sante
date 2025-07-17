@@ -373,6 +373,10 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.</p>
 
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Avertissement:</b> Ce scénario est déprécié et ne doit pas être utilisé car il ne retournera pas l'intégralité de l'extraction.
+</p>
+
 <p><strong>Requête :</strong></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
@@ -390,12 +394,20 @@ Plus de précision sur la spécification FHIR :
 
 <h4 id="scénario-1bis--extraction-complète-asynchrone-draft">Scénario 1&nbsp;bis : Extraction complète asynchrone <code><span style="color: #ff0000;">draft</span></code></h4>
 
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Note importante:</b> Cette fonctionnalité est implémentée dans la version actuelle du ROR mais nous le maintenons à l'état draft car elle ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a> : <br/>
+- le paramètre <code>_outputFormat</code> ne supporte pas <code>application/fhir+ndjson</code>, les valeurs possibles sont <code>application/fhir+json</code> ou <code>application/json</code><br/>
+- le header <code>'Prefer: respond-async'</code> n'est pas obligatoire<br/>
+- que le paramètre <code>includeAssociatedData=_myCompleteExtract</code> soit présent ou non, l'export retourne toujours l'ensemble complet des ressources FHIR en lien avec la ressource HealthcareService
+</p>
+
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre nationale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html</p>
 
-<p><strong>Requête :</strong>
-**N.B.: Dans le Header il est nécessaire de préciser: **
-<code class="language-plaintext highlighter-rouge">--header 'Prefer: respond-async'</code>
+<p><strong>Requête :</strong></p>
+
+<p><strong>N.B.: Dans le Header il est nécessaire de préciser</strong>
+<code class="language-plaintext highlighter-rouge">--header 'Prefer: respond-async'</code><br/>
 Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html">http://hl7.org/fhir/R4/async.html</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/$export?_outputFormat=application/fhir+ndjson&amp;_type=HealthcareService&amp;includeAssociatedData=_myCompleteExtract
@@ -418,12 +430,20 @@ Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">h
 
 <h4 id="scénario-1ter--extraction-complète-asynchrone-par-région-draft">Scénario 1&nbsp;ter : Extraction complète asynchrone par région <code><span style="color: #ff0000;">draft</span></code></h4>
 
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Note importante:</b> Cette fonctionnalité est implémentée dans la version actuelle du ROR mais nous le maintenons à l'état draft car elle ne respecte pas les points suivants de la spécification du bulkdata <a>https://hl7.org/fhir/uv/bulkdata/export.html</a><br/>
+- le paramètre <code>_outputFormat</code> ne supporte pas <code>application/fhir+ndjson</code>, les valeurs possibles sont <code>application/fhir+json</code> ou <code>application/json</code><br/>
+- le header <code>'Prefer: respond-async'</code> n'est pas obligatoire<br/>
+- que le paramètre <code>includeAssociatedData=_myCompleteExtract</code> soit présent ou non, l'export retourne toujours l'ensemble prédéfini des ressources FHIR définies
+</p>
+
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre régionale.
 Pour réaliser cette opération nous utilisons http://hl7.org/fhir/uv/bulkdata/STU2/export.html</p>
 
-<p><strong>Requête :</strong>
-**N.B.: Dans le Header il est nécessaire de préciser: **
-<code class="language-plaintext highlighter-rouge">--header 'Prefer: respond-async'</code>
+<p><strong>Requête :</strong></p>
+
+<p><strong>N.B.: Dans le Header il est nécessaire de préciser:</strong>
+<code class="language-plaintext highlighter-rouge">--header 'Prefer: respond-async'</code><br/>
 Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html">http://hl7.org/fhir/R4/async.html</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/$export?_outputFormat=application/fhir+ndjson&amp;_type=HealthcareService&amp;_typeFilter=HealthcareService%3F_tag%3Dhttps%3A%2F%2Fmos.esante.gouv.fr%2FNOS%2FTRE_R30-RegionOM%2FFHIR%2FTRE-R30-RegionOM%7C11&amp;includeAssociatedData=_myCompleteExtract
@@ -463,7 +483,7 @@ Plus d’information ici : <a href="http://hl7.org/fhir/R4/async.html#3.1.6.4">h
 
 </code></pre></div></div>
 
-<h4 id="scénario-3-extraction-dune-offre-de-santé-identifiée-draft">Scénario 3&nbsp;: Extraction d’une offre de santé identifiée <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-3-extraction-dune-offre-de-santé-identifiée">Scénario 3&nbsp;: Extraction d’une offre de santé identifiée</h4>
 
 <p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite
 rechercher une offre de santé<br/>
@@ -483,7 +503,7 @@ rechercher une offre de santé<br/>
 &amp;_revinclude<span class="o">=</span>PractitionerRole:service <span class="c">#inclus les PractitionerRole qui référencent le HealthcareService</span>
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 </code></pre></div></div>
-<h4 id="scénario-4-extraction-complète-à-partir-dune-date-de-mise-à-jour-de-loffre-opérationnelle-draft">Scénario 4&nbsp;: Extraction complète à partir d’une date de mise à jour de l’offre opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-4-extraction-complète-à-partir-dune-date-de-mise-à-jour-de-loffre-opérationnelle">Scénario 4&nbsp;: Extraction complète à partir d’une date de mise à jour de l’offre opérationnelle</h4>
 
 <p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite mettre
 à jour toute l'offre<br/>
@@ -564,7 +584,7 @@ mise à jour depuis une certaine date &gt;= (06/11/2022)</p>
 Cette partie de la spécification est en cours de construction.
 </p>
 
-<p><strong>Description du scénario&nbsp;:</strong>un consommateur souhaite rechercher une offre de santé à partir de son identifiant = XXX et consulter les anomalies associées si elles existent.</p>
+<p><strong>Description du scénario&nbsp;:</strong> un consommateur souhaite rechercher une offre de santé à partir de son identifiant = XXX et consulter les anomalies associées si elles existent.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -581,6 +601,7 @@ Cette partie de la spécification est en cours de construction.
 &amp;_include<span class="o">=</span>PractitionerRole:practitioner <span class="c">#inclus les Practitioner référencés par PractitionerRole</span>
 &amp;_revinclude<span class="o">=</span>Task:focus <span class="c">#inclus les anomalies qui référencent HealthcareService</span>
 </code></pre></div></div>
+
 
 
 
@@ -622,7 +643,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 17, 2025 15:28+0000">2025-07-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 17, 2025 15:33+0000">2025-07-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
