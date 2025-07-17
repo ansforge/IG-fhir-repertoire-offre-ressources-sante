@@ -1,6 +1,6 @@
 ### version 0.6.0
 
-**Release 0.6.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implementation 4.2 du ROR National.**
+**Release 0.6.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implémentation 4.2 du ROR National.**
 
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/10?closed=1) :
 !!! Ajouter la release-notes une fois la release prête à être publiée !!!
