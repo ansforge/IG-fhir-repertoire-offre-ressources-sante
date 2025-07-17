@@ -1,8 +1,9 @@
 <html><body><pre>java.lang.StackOverflowError
-	at org.hl7.fhir.r5.model.ElementDefinition.copyValues(ElementDefinition.java:12864)
-	at org.hl7.fhir.r5.model.ElementDefinition.copy(ElementDefinition.java:12859)
-	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareElements(StructureDefinitionComparer.java:263)
-	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareChildren(StructureDefinitionComparer.java:384)
+	at org.hl7.fhir.r5.model.PrimitiveType.isEmpty(PrimitiveType.java:133)
+	at org.hl7.fhir.r5.model.ElementDefinition.hasContentReference(ElementDefinition.java:7068)
+	at org.hl7.fhir.r5.utils.DefinitionNavigator.loadChildren(DefinitionNavigator.java:178)
+	at org.hl7.fhir.r5.utils.DefinitionNavigator.children(DefinitionNavigator.java:166)
+	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareChildren(StructureDefinitionComparer.java:364)
 	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareElements(StructureDefinitionComparer.java:297)
 	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareChildren(StructureDefinitionComparer.java:384)
 	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareElements(StructureDefinitionComparer.java:297)
@@ -1022,5 +1023,4 @@
 	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareElements(StructureDefinitionComparer.java:297)
 	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareChildren(StructureDefinitionComparer.java:384)
 	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareElements(StructureDefinitionComparer.java:297)
-	at org.hl7.fhir.r5.comparison.StructureDefinitionComparer.compareChildren(StructureDefinitionComparer.java:384)
 </pre></body></html>
