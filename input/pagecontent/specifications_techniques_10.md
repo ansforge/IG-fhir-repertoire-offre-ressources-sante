@@ -71,6 +71,13 @@ Si la mise à jour échoue, le serveur doit répondre :
 
 ### Exemple de requêtes
 
+<blockquote class="stu-note">
+<p>
+N.B.: Les exemples de ressources utilisés dans ces exemples de requêtes sont fictifs.
+<br>Ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation il faut se baser sur les profils.
+</p>
+</blockquote>
+
 #### [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
 
 *Cette requête ne pourra être exécutée que par le serveur.*
@@ -80,8 +87,6 @@ Si la mise à jour échoue, le serveur doit répondre :
 **Requête :**
 
 -   Création du nouveau lieu de réalisation de l'offre
-
-N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation se baser sur les profils.
 
 ```json
 POST [BASE]/Location 
