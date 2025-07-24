@@ -24,7 +24,7 @@
   <version value="0.6.0"/>
   <name value="RORHealthcareServicePatientType"/>
   <status value="draft"/>
-  <date value="2025-06-30T16:30:10+00:00"/>
+  <date value="2025-07-24T10:13:48+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -587,7 +587,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present"/>
         <expression value="code.empty() or system.exists()"/>
         <xpath value="not(exists(f:code)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"/>
       </constraint>
       <constraint>
         <key value="sqty-1"/>
@@ -595,7 +595,7 @@
         <human value="The comparator is not used on a SimpleQuantity"/>
         <expression value="comparator.empty()"/>
         <xpath value="not(exists(f:comparator))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
@@ -656,7 +656,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present"/>
         <expression value="code.empty() or system.exists()"/>
         <xpath value="not(exists(f:code)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"/>
       </constraint>
       <constraint>
         <key value="sqty-1"/>
@@ -664,7 +664,7 @@
         <human value="The comparator is not used on a SimpleQuantity"/>
         <expression value="comparator.empty()"/>
         <xpath value="not(exists(f:comparator))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"/>
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>

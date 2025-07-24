@@ -68,7 +68,7 @@
   <version value="0.6.0"/>
   <name value="RORQuestionnaire"/>
   <status value="draft"/>
-  <date value="2025-06-30T16:30:10+00:00"/>
+  <date value="2025-07-24T10:13:48+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -2639,7 +2639,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Group"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Contract"/>
       </constraint>
       <mustSupport value="true"/>
       <isSummary value="true"/>

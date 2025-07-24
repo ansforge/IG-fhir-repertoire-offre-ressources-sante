@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "a29a5d0c-9829-4f01-a667-4073f44968fc-153",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/a29a5d0c-9829-4f01-a667-4073f44968fc-153",
+  "id" : "f14ebb93-9bc2-4fee-8cd7-e2c32e21b141-153",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f14ebb93-9bc2-4fee-8cd7-e2c32e21b141-153",
   "name" : "IntersectionFrContactPointAndFrContactPoint",
   "title" : "Intersection of null And null",
   "status" : "active",
-  "date" : "2025-06-30T16:32:28+00:00",
+  "date" : "2025-07-24T10:15:48+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "ContactPoint",
@@ -33,7 +33,7 @@
         "severity" : "error",
         "human" : "A system is required if a value is provided.",
         "expression" : "value.empty() or system.exists()",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Location"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Patient"
       }],
       "mustSupport" : false,
       "isModifier" : false,
@@ -321,7 +321,7 @@
         "severity" : "error",
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Identifier"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Patient"
       }],
       "mustSupport" : false,
       "isModifier" : false,
