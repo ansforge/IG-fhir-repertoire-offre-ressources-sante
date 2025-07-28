@@ -199,7 +199,7 @@ PATCH [BASE]/HealthcareService/XXX
 
 #### [BED MANAGEMENT]  Scénario 2 : Ajout d'une capacité de prise en charge
 
-*Ce scenario cible les éditeurs de solutions de bedmanagement.*
+*Ce scénario cible les éditeurs de solutions de bedmanagement.*
 
 **Description du scénario :** Un établissement (via bed management, \...) ajoute dans un lieu de réalisation de l\'offre déjà existant, dont l'identifier:idExterneSynchro est XXX, des données capacitaires pour une affectation non temporaire, 2 places disponibles (sexe indifférencié), à t0.
 
