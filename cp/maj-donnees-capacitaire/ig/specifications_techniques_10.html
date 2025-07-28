@@ -337,6 +337,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>
 N.B.: Les exemples de ressources utilisés dans ces exemples de requêtes sont fictifs.
 <br />Ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation il faut se baser sur les profils.
+<br /><br />
+Pour les requêtes PATCH, il est conseillé de bien prendre connaissance de la documentation FHIR avant de les implémenter (<a href="https://hl7.org/fhir/R4/http.html#patch">https://hl7.org/fhir/R4/http.html#patch</a> et <a href="https://hl7.org/fhir/R4/fhirpatch.html">https://hl7.org/fhir/R4/fhirpatch.html</a>)
+<br /><br />
+Piste pour une implémentation future dans le ROR: La gestion des accès concurrentiels pourrait être améliorée en utilisant la combinaison de ETag et If-Match (<a href="https://hl7.org/fhir/R4/http.html#concurrency">https://hl7.org/fhir/R4/http.html#concurrency</a>)
 </p>
 </blockquote>
 
@@ -1566,6 +1570,7 @@ N.B.: Les exemples de ressources utilisés dans ces exemples de requêtes sont f
 
 
 
+
 </div>
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
@@ -1604,7 +1609,7 @@ N.B.: Les exemples de ressources utilisés dans ces exemples de requêtes sont f
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 08:53+0000">2025-07-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 15:41+0000">2025-07-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
