@@ -1,6 +1,5 @@
 Profile: RORHealthcareService
 Parent: HealthcareService
-Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id: ror-healthcareservice
 Description: "Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne"
 
@@ -189,6 +188,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 
 Mapping:  ConceptMetier_RORHealthcareService
 Source:   RORHealthcareService
+Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-RORHealthcareService
 Title:    "HealthcareService du Modèle exposition ROR V3"
 * -> "OffreOperationnelle"
