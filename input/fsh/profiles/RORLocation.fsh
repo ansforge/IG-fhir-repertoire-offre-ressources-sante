@@ -120,6 +120,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 
 Mapping:  ConceptMetier_RORLocation
 Source:   RORLocation
+Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-RORLocation
 Title:    "Location du Modèle exposition ROR V3"
 * -> "LieuRealisationOffre"
