@@ -78,8 +78,7 @@ N.B.: Les exemples de ressources utilisés dans ces exemples de requêtes sont f
 <br><br>
 Pour les requêtes PATCH, il est conseillé de bien prendre connaissance de la documentation FHIR avant de les implémenter (<a href="https://hl7.org/fhir/R4/http.html#patch">https://hl7.org/fhir/R4/http.html#patch</a> et <a href="https://hl7.org/fhir/R4/fhirpatch.html">https://hl7.org/fhir/R4/fhirpatch.html</a>)
 <br><br>
-Piste pour une implémentation future dans le ROR: La gestion des accès concurrentiels pourrait être améliorée en utilisant la combinaison de ETag et If-Match (https://hl7.org/fhir/R4/http.html#concurrency)
-https://hl7.org/fhir/R4/fhirpatch.html 
+Piste pour une implémentation future dans le ROR: La gestion des accès concurrentiels pourrait être améliorée en utilisant la combinaison de ETag et If-Match (<a href="https://hl7.org/fhir/R4/http.html#concurrency">https://hl7.org/fhir/R4/http.html#concurrency</a>)
 </p>
 </blockquote>
 
