@@ -1,5 +1,6 @@
 Profile: RORPractitioner
 Parent: Practitioner
+Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id: ror-practitioner
 Description: "Profil créée dans le cadre du ROR pour décrire les données d'identification pérennes d’une personne physique, qui travaille en tant que professionnel"
 
