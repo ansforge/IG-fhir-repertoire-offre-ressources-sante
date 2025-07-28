@@ -1,6 +1,5 @@
 Profile: RORPractitionerRole
 Parent: PractitionerRole
-Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id: ror-practitionerrole
 Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre"
 
@@ -125,6 +124,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les modalités d'
 
 Mapping:  ConceptMetier_RORPractitionerRole_ExercicePro
 Source:   RORPractitionerRole
+Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-RORPractitionerRole-exercicePro
 Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
 * -> "ExerciceProfessionnel"
