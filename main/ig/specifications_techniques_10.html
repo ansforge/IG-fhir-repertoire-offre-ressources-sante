@@ -62,7 +62,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.6.0 - ci-build
+            <span style="display:inline-block;">0.6.0 - trial-implementation
 
 
 
@@ -336,6 +336,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="exemple-de-requêtes">Exemple de requêtes</h3>
 
+<blockquote class="stu-note">
+<p>
+Les exemples de ressources utilisés dans ces exemples de requêtes sont fictifs.
+<br />Ces ressources ne sont pas validées par le guide d'implémentation et sont donc sujettes aux erreurs. Pour l'implémentation il faut se baser sur les profils.
+<br /><br />
+Pour les requêtes PATCH, il est conseillé de bien prendre connaissance de la documentation FHIR avant de les implémenter (<a href="https://hl7.org/fhir/R4/http.html#patch">https://hl7.org/fhir/R4/http.html#patch</a> et <a href="https://hl7.org/fhir/R4/fhirpatch.html">https://hl7.org/fhir/R4/fhirpatch.html</a>)
+<br /><br />
+Piste pour une implémentation future dans le ROR: la gestion des accès concurrentiels pourrait être améliorée en utilisant la combinaison de ETag et If-Match (<a href="https://hl7.org/fhir/R4/http.html#concurrency">https://hl7.org/fhir/R4/http.html#concurrency</a>)
+</p>
+</blockquote>
+
 <h4 id="spécifique-serveur-scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft">[spécifique serveur] Scénario 1 : Ajout d’un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code></h4>
 
 <p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
@@ -347,8 +358,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>Création du nouveau lieu de réalisation de l’offre</li>
 </ul>
-
-<p>N.B.: Exemple de ressource fictif pour illustration, ces ressources ne sont pas validées par le guide d’implémentation et sont donc sujettes aux erreurs. Pour l’implémentation se baser sur les profils.</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location</span><span class="w"> 
 </span><span class="p">{</span><span class="w">
@@ -459,146 +468,137 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-2-ajout-dune-capacité-de-prise-en-charge">[spécifique serveur] Scénario 2 : Ajout d’une capacité de prise en charge</h4>
+<h4 id="bed-management--scénario-2-ajout-dune-capacité-de-prise-en-charge">[BED MANAGEMENT]  Scénario 2 : Ajout d’une capacité de prise en charge</h4>
 
-<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
+<p><em>Ce scénario cible les éditeurs de solutions de bedmanagement.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement (via bed management, ...) ajoute dans un lieu de réalisation de l'offre existant dont l’identifiant est XXX, des données capacitaires pour une affectation temporaire : une affectation temporaire "Covid +", 2 lits disponibles (sexe indifférencié), à t0.</p>
+<p><strong>Description du scénario :</strong> Un établissement (via bed management, ...) ajoute dans un lieu de réalisation de l'offre déjà existant, dont l’identifier:idExterneSynchro est XXX, des données capacitaires pour une affectation non temporaire, 2 places disponibles (sexe indifférencié), à t0.</p>
 
 <p><strong>Requête :</strong></p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location?identifier=XXX</span><span class="w">
 </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> 
+    </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"operation"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> 
+            </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"type"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"add"</span><span class="w">
-                </span><span class="p">},</span><span class="w"> 
+                </span><span class="p">},</span><span class="w">
                 </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location"</span><span class="w">
-                </span><span class="p">},</span><span class="w"> 
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity')"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
                 </span><span class="p">{</span><span class="w">
-                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extension"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> 
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                         </span><span class="p">{</span><span class="w">
-                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-                            </span><span class="nl">"valueUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location-supported-capacity"</span><span class="w">
-                        </span><span class="p">},</span><span class="w">
-                        </span><span class="p">{</span><span class="w">
-                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"extension"</span><span class="p">,</span><span class="w">
-                            </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                                 </span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporaryAssignement"</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-                                </span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
-                                    </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-											</span><span class="p">{</span><span class="w">
-												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J195-AffectationTemporaire-ROR/FHIR/JDV-J195-AffectationTemporaire-ROR/"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Covid+"</span><span class="w">
-											</span><span class="p">}</span><span class="w">
-										</span><span class="p">]</span><span class="w">
-									</span><span class="p">}</span><span class="w">
-                                </span><span class="p">},</span><span class="w">
-                                </span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityType"</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-								</span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-											</span><span class="p">{</span><span class="w">
-												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J187-NatureCapacite-ROR/FHIR/JDV-J187-NatureCapacite-ROR/"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lit"</span><span class="w">
-											</span><span class="p">}</span><span class="w">
-										</span><span class="p">]</span><span class="w">
-									</span><span class="p">}</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-                                </span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityStatus"</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-								</span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-											</span><span class="p">{</span><span class="w">
-												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J188-TypeStatutCapacite-ROR/FHIR/JDV-J188-TypeStatutCapacite-ROR/"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Disponible"</span><span class="w">
-											</span><span class="p">}</span><span class="w">
-										</span><span class="p">]</span><span class="w">
-									</span><span class="p">}</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-                                </span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporalityCapacity"</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-								</span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-											</span><span class="p">{</span><span class="w">
-												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J189-TemporaliteCapacite-ROR/FHIR/JDV-J189-TemporaliteCapacite-ROR/"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Courant"</span><span class="w">
-											</span><span class="p">}</span><span class="w">
-										</span><span class="p">]</span><span class="w">
-									</span><span class="p">}</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-								</span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nbCapacity"</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-								</span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueInt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-								</span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"genderCapacityAvailable"</span><span class="w">
-								</span><span class="p">},</span><span class="w">
-								</span><span class="p">{</span><span class="w">
-									</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
-									</span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-										</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-											</span><span class="p">{</span><span class="w">
-												</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/JDV_J190-GenreCapacite-ROR/FHIR/JDV-J190-GenreCapacite-ROR/"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
-												</span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indifférencié"</span><span class="w">
-											</span><span class="p">}</span><span class="w">
-										</span><span class="p">]</span><span class="w">
-									</span><span class="p">}</span><span class="w">
-								</span><span class="p">}</span><span class="w">
-                            </span><span class="p">]</span><span class="w">	
-						</span><span class="p">}</span><span class="w">		
-					</span><span class="p">]</span><span class="w">
-				</span><span class="p">}</span><span class="w">
-			</span><span class="p">]</span><span class="w">
-		</span><span class="p">}</span><span class="w">
-	</span><span class="p">]</span><span class="w">
+                                    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nbCapacity"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueInteger"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityUpdateDate"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-02-26T15:17:33Z"</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityStatus"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Disponible"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityType"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporalityCapacity"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Courant"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacitySourceType"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bed management"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"genderCapacityAvailable"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indifférencié"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporaryAssignement"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aucune"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">}</span><span class="w">
+                                    </span><span class="p">],</span><span class="w">
+                                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"</span><span class="w">
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="spécifique-serveur-scénario-3-suppression-dune-capacité-daccueil-opérationnelle-draft">[spécifique serveur] Scénario 3 : Suppression d’une capacité d’accueil opérationnelle <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="bed-management-scénario-2-bis-mise-à-jour-dune-capacité-de-prise-en-charge">[BED MANAGEMENT] Scénario 2 BIS : Mise à jour d’une capacité de prise en charge</h4>
 
-<p><em>Cette requête ne pourra être exécutée que par le serveur.</em></p>
+<p><em>Ce scenario cible les éditeurs de solutions de bedmanagement.</em></p>
 
-<p><strong>Description du scénario :</strong> Un établissement (via bed management, …) supprime dans un lieu de réalisation de l'offre existant dont l’identifiant est XXX tous les enregistrements liés à l'affectation temporaire "Covid-".</p>
+<p><strong>Description du scénario :</strong> Un établissement (via bed management, ...) met à jour dans un lieu de réalisation de l'offre déjà existant, dont l’identifier:idExterneSynchro est XXX, des données capacitaires pour une affectation non temporaire, 12 places disponibles (sexe indifférencié), à t0.</p>
 
 <p><strong>Requête :</strong></p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location/XXX</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location?identifier=XXX</span><span class="w">
 </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"operation"</span><span class="p">,</span><span class="w">
@@ -609,11 +609,130 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 </span><span class="p">},</span><span class="w">
                 </span><span class="p">{</span><span class="w">
                     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity' and extension.where(url='temporaryAssignement' and valueCodeableConcept.coding[0].code='02')).extension.where(url='nbCapacity')"</span><span class="w">
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').where(extension.where(url = 'capacityStatus' and valueCodeableConcept.coding.code = '02') and extension.where(url = 'temporalityCapacity' and valueCodeableConcept.coding.code = '01')  and extension.where(url = 'genderCapacityAvailable' and valueCodeableConcept.coding.code = '03') and extension.where(url = 'temporaryAssignement' and valueCodeableConcept.coding.code = '01'))"</span><span class="w">
                 </span><span class="p">},</span><span class="w">
                 </span><span class="p">{</span><span class="w">
-                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valueInteger"</span><span class="p">,</span><span class="w">
-                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="p">{</span><span class="w">
+                                    </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nbCapacity"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueInteger"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityUpdateDate"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-02-26T15:17:33Z"</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityStatus"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Disponible"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R330-TypeStatutCapacite/FHIR/TRE-R330-TypeStatutCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacityType"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R329-NatureCapacite/FHIR/TRE-R329-NatureCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporalityCapacity"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Courant"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R331-TemporaliteCapacite/FHIR/TRE-R331-TemporaliteCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"capacitySourceType"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bed management"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R335-TypeSourceCapacite/FHIR/TRE-R335-TypeSourceCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"genderCapacityAvailable"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indifférencié"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R332-GenreCapacite/FHIR/TRE-R332-GenreCapacite"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="p">{</span><span class="w">
+                                            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"temporaryAssignement"</span><span class="p">,</span><span class="w">
+                                            </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                                    </span><span class="p">{</span><span class="w">
+                                                        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aucune"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R337-AffectationTemporaire/FHIR/TRE-R337-AffectationTemporaire"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">]</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">}</span><span class="w">
+                                    </span><span class="p">],</span><span class="w">
+                                    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"</span><span class="w">
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="bed-management-scénario-3-suppression-dune-capacité-daccueil-opérationnelle">[BED MANAGEMENT] Scénario 3 : Suppression d’une capacité d’accueil opérationnelle</h4>
+
+<p><em>Ce scenario cible les éditeurs de solutions de bedmanagement.</em></p>
+
+<p><strong>Description du scénario :</strong> Un établissement (via bed management, ...) supprime dans un lieu de réalisation de l'offre, dont l’identifier:idExterneSynchro est XXX, les données capacitaires d’une affectation non temporaire, portant sur les places indifférenciées, à t0.</p>
+
+<p><strong>Requête :</strong></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">BASE</span><span class="p">]</span><span class="err">/Location?identifier=XXX</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"operation"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"type"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remove"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').where(extension.where(url = 'capacityStatus' and valueCodeableConcept.coding.code = '02') and extension.where(url = 'temporalityCapacity' and valueCodeableConcept.coding.code = '01')  and extension.where(url = 'genderCapacityAvailable' and valueCodeableConcept.coding.code = '03') and extension.where(url = 'temporaryAssignement' and valueCodeableConcept.coding.code = '01'))"</span><span class="w">
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
@@ -874,9 +993,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="bed-management-scénario-9-remplacement-de-toutes-les-données-capacitaires-draft">[Bed Management] Scénario 9 : Remplacement de toutes les données capacitaires <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="bed-management-scénario-9-remplacement-de-toutes-les-données-capacitaires-deprecated">[Bed Management] Scénario 9 : Remplacement de toutes les données capacitaires <code><span style="color: #E67E22;">deprecated</span></code></h4>
 
 <p><em>Ce scenario cible les éditeurs de solutions de bedmanagement.</em></p>
+
+<p style="background-color: #ffcccc; border:1px solid grey; padding: 5px; max-width: 790px;">
+<b>Avertissement:</b> Ce scénario est déprécié et ne doit pas être utilisé car il est préférable de mettre à jour les données capacitaires unitairement comme présenté dans les scénarios 2 et 2bis.
+</p>
 
 <p><strong>Description du scénario :</strong> Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).</p>
 
@@ -1450,6 +1573,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
+
 </div>
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
@@ -1488,7 +1612,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 16:38+0000">2025-07-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 29, 2025 14:47+0000">2025-07-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
