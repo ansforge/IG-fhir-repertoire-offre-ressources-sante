@@ -5,11 +5,12 @@ Version snapshot à destination des Implémenteurs du ROR National et des recett
 </p>
 </blockquote>
  -->
-<blockquote class="stu-note">
+<!--<blockquote class="stu-note">
 <p>
 [WIP]Version ci-build du Guide d'Implémentation de l'API FHIR du ROR (en cours de construction)
 </p>
 </blockquote>
+-->
 
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br>
@@ -24,7 +25,7 @@ The aim of this implementation guide is to define the specifications of the ROR 
 
 <b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.0 du ROR.
 <br>
-Cette version du guide d’implementation cible l’implémentation de l’API FHIR dans la solution du ROR National version 4.1.</b>
+Cette version du guide d’implementation cible l’implémentation de l’API FHIR dans la solution du ROR National version 4.2.</b>
 
 Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la manière suivante :
 

@@ -5,7 +5,26 @@
 URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0>
 
 [Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/10?closed=1) :
-!!! Ajouter la release-notes une fois la release prête à être publiée !!!
+
+* [narratif] Modification du diagramme [mapping-organization](https://interop.esante.gouv.fr/ig/fhir/ror/mapping.html#mapping-organization) afin d'ajouter la liaison avec les contacts pour les Organisation Internes [405](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/405)
+* [RC] Resource Profile Organization, la dateOuverture ne concerne pas l'Entité Juridique, elle concerne l'Entité Géographique et l'Organisation Interne [427](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/427)
+* [narratif] Mise à jour de la page "Consultation de l'offre" dans l'onglet "Spécifications techniques" [414](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/414):
+  * Scénario 1: ajout d'un avertissement
+  * Scénarios 1bis et 1ter: ajout d'une note importante
+  * Scénarios 2, 3 et 4: suppression du label "draft"
+* [RC] Le modifier_elements n'est pas implémenté: mise à jour des CS Server et Client ainsi que de la page "Paramètres et modificateurs de requêtes FHIR" dans l'onglet "Spécifications techniques" [414](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/414)
+* [narratif] Mise à jour de la page "Création et Mise à jour du lieu de réalisation de l'offre" dans l'onglet "Spécifications techniques" [419](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/419):
+  * Modification du scénario 2 add location-supported-capacity (supprimer draft / modification de l'exemple)
+  * Ajout d'un scénario 2 BIS replace location-supported-capacity
+  * Modification du scénario 3 remove location-supported-capacity (supprimer draft / modification de l'exemple)
+  * Modification du scénario 9, passage en déprécié et mise à jour de l'exemple
+* [narratif] Mise à jour de la page "Saisie de l'offre" dans l'onglet "Spécifications techniques", suppression de la mention "draft" pour les scénarios 1,2,3,4,5,6,7,8,9,10 [421](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421)
+* [narratif] Mise à jour de la page "Mise à jour de l'offre" dans l'onglet "Spécifications techniques", dans le tableau [construction de la requête de base](https://interop.esante.gouv.fr/ig/fhir/ror/miseAjour_offre.html#construction-de-la-requ%C3%AAte-de-base), ajout des resource profiles Organization, Practitioner, PractitionerRole pour la méthode PUT [421](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421)
+* [RC] Pour le CS Server: ajoute de C et U pour Organization, Practitioner, PractitionerRole [421](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421)
+* [narratif] Dans "Mapping FHIR du modèle de données du ROR", ajout d'une note contenant :
+  * Dans l'implémentation actuelle du ROR, une organisation interne ne peut être rattachée qu'à une entité géographique, par exemple un pôle ne peut être rattaché qu'à une EG;
+  * PractitionerRole contient l'exercice professionnel et la situation opérationnelle. Dans le cas ou l'exercice professionnel est rattaché à plusieurs situations opérationnelles, alors il aura autant de ressources PractitionerRole qu'il y a de situations opérationnelles (les attributs de l'exercice professionnel sont dupliqués dans chacune de ces ressources); [417](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/417)
+  * La cardinalité implémentée d'une Location d'un HealthcareService est 0..* au lieu de 1..*. Cela est dû à la temporalité de la création d'un HealthcareService, celui-ci est créé avant d'en connaitre les locations rattachées. [412](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/412)
 
 ### version 0.5.0
 
