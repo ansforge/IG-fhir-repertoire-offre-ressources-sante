@@ -62,7 +62,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.6.0 - ci-build
+            <span style="display:inline-block;">0.6.0 - trial-implementation
 
 
 
@@ -267,7 +267,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><a name="l485">​</a>[narratif] Modification du diagramme <a href="https://interop.esante.gouv.fr/ig/fhir/ror/mapping.html#mapping-organization">mapping-organization</a> afin d’ajouter la liaison avec les contacts pour les Organisation Internes <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/405">405</a></li>
   <li>[RC] Resource Profile Organization, la dateOuverture ne concerne pas l’Entité Juridique, elle concerne l’Entité Géographique et l’Organisation Interne <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/427">427</a></li>
-  <li>[RC] Mise à jour de la page “Consultation de l’offre” dans l’onglet “Spécifications techniques” <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/414">414</a>:
+  <li>[narratif] Mise à jour de la page “Consultation de l’offre” dans l’onglet “Spécifications techniques” <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/414">414</a>:
     <ul>
       <li>Scénario 1: ajout d’un avertissement</li>
       <li>Scénarios 1bis et 1ter: ajout d’une note importante</li>
@@ -275,7 +275,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </ul>
   </li>
   <li>[RC] Le modifier_elements n’est pas implémenté: mise à jour des CS Server et Client ainsi que de la page “Paramètres et modificateurs de requêtes FHIR” dans l’onglet “Spécifications techniques” <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/414">414</a></li>
-  <li>[RC] Mise à jour de la page “Création et Mise à jour du lieu de réalisation de l’offre” dans l’onglet “Spécifications techniques” <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/419">419</a>:
+  <li>[narratif] Mise à jour de la page “Création et Mise à jour du lieu de réalisation de l’offre” dans l’onglet “Spécifications techniques” <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/419">419</a>:
     <ul>
       <li>Modification du scénario 2 add location-supported-capacity (supprimer draft / modification de l’exemple)</li>
       <li>Ajout d’un scénario 2 BIS replace location-supported-capacity</li>
@@ -283,8 +283,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>Modification du scénario 9, passage en déprécié et mise à jour de l’exemple</li>
     </ul>
   </li>
-  <li>[RC] Mise à jour de la page “Saisie de l’offre” dans l’onglet “Spécifications techniques”, suppression de la mention “draft” pour les scénarios 1,2,3,4,5,6,7,8,9,10 <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
-  <li><a name="l547">​</a>[RC] Mise à jour de la page “Mise à jour de l’offre” dans l’onglet “Spécifications techniques”, dans le tableau <a href="https://interop.esante.gouv.fr/ig/fhir/ror/miseAjour_offre.html#construction-de-la-requ%C3%AAte-de-base">construction de la requête de base</a>, ajout des resource profiles Organization, Practitioner, PractitionerRole pour la méthode PUT <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
+  <li>[narratif] Mise à jour de la page “Saisie de l’offre” dans l’onglet “Spécifications techniques”, suppression de la mention “draft” pour les scénarios 1,2,3,4,5,6,7,8,9,10 <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
+  <li><a name="l547">​</a>[narratif] Mise à jour de la page “Mise à jour de l’offre” dans l’onglet “Spécifications techniques”, dans le tableau <a href="https://interop.esante.gouv.fr/ig/fhir/ror/miseAjour_offre.html#construction-de-la-requ%C3%AAte-de-base">construction de la requête de base</a>, ajout des resource profiles Organization, Practitioner, PractitionerRole pour la méthode PUT <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
   <li>[RC] Pour le CS Server: ajoute de C et U pour Organization, Practitioner, PractitionerRole <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
   <li>[narratif] Dans “Mapping FHIR du modèle de données du ROR”, ajout d’une note contenant :
     <ul>
@@ -518,7 +518,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 28, 2025 17:35+0000">2025-07-28</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 29, 2025 12:50+0000">2025-07-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
