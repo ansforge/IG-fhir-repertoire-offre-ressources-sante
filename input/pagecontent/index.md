@@ -5,11 +5,12 @@ Version snapshot à destination des Implémenteurs du ROR National et des recett
 </p>
 </blockquote>
  -->
-<blockquote class="stu-note">
+<!--<blockquote class="stu-note">
 <p>
 [WIP]Version ci-build du Guide d'Implémentation de l'API FHIR du ROR (en cours de construction)
 </p>
 </blockquote>
+-->
 
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br>
