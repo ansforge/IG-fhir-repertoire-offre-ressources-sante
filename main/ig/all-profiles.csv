@@ -869,8 +869,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "ror-healthcareservice","HealthcareService.characteristic:specificAct.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"ror-healthcareservice","HealthcareService.characteristic:specificAct.extension","HealthcareService.characteristic.extension","","","",1,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+"ror-healthcareservice","HealthcareService.characteristic:specificAct.extension","HealthcareService.characteristic.extension","","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type]]} {[]}
+","Type d'acte","Extension créée dans le cadre du ROR pour discriminer le type d'acte (spécifique ou hors cabinet)","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -905,8 +905,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "ror-healthcareservice","HealthcareService.characteristic:outsideOfficeAct.id","HealthcareService.characteristic.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"ror-healthcareservice","HealthcareService.characteristic:outsideOfficeAct.extension","HealthcareService.characteristic.extension","","","",1,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+"ror-healthcareservice","HealthcareService.characteristic:outsideOfficeAct.extension","HealthcareService.characteristic.extension","","","",1,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type]]} {[]}
+","Type d'acte","Extension créée dans le cadre du ROR pour discriminer le type d'acte (spécifique ou hors cabinet)","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
