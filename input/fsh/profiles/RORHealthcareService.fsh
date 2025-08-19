@@ -18,8 +18,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * identifier 1..1 MS
 * identifier ^short = "identifiantOffre (OffreOperationnelle) : Identifiant de l'offre, unique et persistant au niveau national"
 * name ^short = "nomOffre (OffreOpérationnelle) : Dénomination sous laquelle l'offre est identifiée par le porteur d'offre"
-* name MS
-* providedBy MS
+* name 1..1 MS
+* providedBy 1..1 MS
 * providedBy only Reference(fr-organization or ROROrganization)
 * location MS
 * category 0..1 MS

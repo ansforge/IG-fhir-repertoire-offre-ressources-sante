@@ -107,7 +107,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * contact.extension contains
     RORContactFunctionContact named ror-contact-function-contact 0..1 MS and
     RORContactDescription named ror-contact-description 0..1 MS and
-    RORContactConfidentialityLevel named ror-contact-confidentiality-level 0..1 MS
+    RORContactConfidentialityLevel named ror-contact-confidentiality-level 1..1 MS
 * contact.extension[ror-contact-function-contact] ^short = "fonctionContact (Contact) : Un titre, une position ou une fonction de la personne assurant le contact au sein de l'organisation"
 * contact.extension[ror-contact-description] ^short = "description (Contact) : Une description du contact"
 * contact.extension[ror-contact-confidentiality-level] ^short = "niveauConfidentialite (Contact) : Niveau de restriction de l'accès aux attributs de la classe Contact"
