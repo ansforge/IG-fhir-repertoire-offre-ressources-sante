@@ -155,7 +155,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne"
 * specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
 
-* notAvailable MS
+* notAvailable 0..1 MS
 * notAvailable ^slicing.discriminator.type = #value 
 * notAvailable ^slicing.discriminator.path = "id" 
 * notAvailable ^slicing.rules = #open

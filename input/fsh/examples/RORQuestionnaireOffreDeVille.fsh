@@ -398,13 +398,13 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * item[=].item[=].answerValueSet = $JDV-J185-TypeFermeture-ROR
 * item[=].item[+].linkId = "dateFermeture"
 * item[=].item[=].text = "Date de fermeture"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.notAvailable:closingRepoeningDate.during.start"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.notAvailable:closingReopeningDate.during.start"
 * item[=].item[=].prefix = "3.14"
 * item[=].item[=].type = #date
 * item[=].item[=].required = false
 * item[=].item[+].linkId = "DatePrevisionnelleReouverture"
 * item[=].item[=].text = "Date prévisionnelle réouverture"
-* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.notAvailable:closingRepoeningDate.during.end"
+* item[=].item[=].definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice#HealthcareService.notAvailable:closingReopeningDate.during.end"
 * item[=].item[=].prefix = "3.15"
 * item[=].item[=].type = #date
 * item[=].item[=].required = false
