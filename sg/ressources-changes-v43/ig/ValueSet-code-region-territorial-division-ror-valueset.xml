@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="code-region-territorial-division-ror-valueset"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet code-region-territorial-division-ror-valueset</b></p><a name="code-region-territorial-division-ror-valueset"> </a><a name="hccode-region-territorial-division-ror-valueset"> </a><a name="code-region-territorial-division-ror-valueset-fr-FR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a></p></div><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Importe tous les codes contenu dans <a href="https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J124-Commune">JDV_J124_Commune</a></li><li>Importe tous les codes contenu dans <a href="https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J248-DepartementOM-ROR">JDV_J248_DepartementOM_ROR</a></li><li>Importe tous les codes contenu dans <a href="https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J237-RegionOM-ROR">JDV_J237_RegionOM_ROR</a></li><li>Importe tous les codes contenu dans <a href="https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J249-TerritoireSante-ROR">JDV_J249_TerritoireSante_ROR</a></li><li>Importe tous les codes contenu dans <a href="https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J247-Pays-ROR">JDV_J247_Pays_ROR</a></li></ul></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"/>
+  <version value="0.6.0"/>
+  <name value="CodeRegionTerritorialDivisionRORValueSet"/>
+  <title value="Fusion des valuesets pour le code de la division territoriale"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-10-02T13:26:27+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet regroupant des valuesets du NOS pour le code de la division territoriale"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune"/>
+    </include>
+    <include>
+      <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR"/>
+    </include>
+    <include>
+      <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR"/>
+    </include>
+    <include>
+      <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR"/>
+    </include>
+    <include>
+      <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR"/>
+    </include>
+  </compose>
+</ValueSet>
