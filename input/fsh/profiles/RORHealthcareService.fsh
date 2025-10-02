@@ -152,7 +152,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     operationalActivityFamily 0..1 MS
 * specialty[operationalActivity] ^short = "activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
 * specialty[operationalActivity] from $JDV-J17-ActiviteOperationnelle-ROR
-* specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : regroupement cohérent d’activités délivrées dans le cadre d'une prestation, répondant à un besoin de la personne"
+* specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : Uniquement dans le secteur médico-social, une autre catégorisation des activités peut être renseignée en plus de l'activiteOperationnelle"
 * specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
 
 * notAvailable MS
