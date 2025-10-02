@@ -160,7 +160,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 
 * telecom MS
-* telecom ^short = "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
+* telecom ^short = "boiteLettreMSS (OrganisationInterne) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
 * telecom.value 1..1 MS
 * telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
 * telecom.extension ^slicing.discriminator.type = #value
