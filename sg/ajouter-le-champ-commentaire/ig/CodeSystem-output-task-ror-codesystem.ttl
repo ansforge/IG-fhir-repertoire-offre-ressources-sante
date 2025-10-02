@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "output-task-ror-codesystem"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem output-task-ror-codesystem</b></p><a name=\"output-task-ror-codesystem\"> </a><a name=\"hcoutput-task-ror-codesystem\"> </a><a name=\"output-task-ror-codesystem-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\">newValue<a name=\"output-task-ror-codesystem-newValue\"> </a></td><td>Nouvelle valeur renseignée</td></tr><tr><td style=\"white-space:nowrap\">identifierAnalyst<a name=\"output-task-ror-codesystem-identifierAnalyst\"> </a></td><td>identifiant du destinataire du traitement de la demande</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.6.0"] ; # 
+  fhir:name [ fhir:v "OutputTaskRORCodeSystem"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-10-02T08:49:17+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code System pour la définition des éléments spécifiques de output dans ressource RORTask"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:compositional [ fhir:v false] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "newValue" ] ;
+     fhir:display [ fhir:v "newValue" ] ;
+     fhir:definition [ fhir:v "Nouvelle valeur renseignée" ]
+  ] [
+     fhir:code [ fhir:v "identifierAnalyst" ] ;
+     fhir:display [ fhir:v "identifierAnalyst" ] ;
+     fhir:definition [ fhir:v "identifiant du destinataire du traitement de la demande" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
