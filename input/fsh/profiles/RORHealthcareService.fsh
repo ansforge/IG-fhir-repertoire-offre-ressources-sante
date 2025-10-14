@@ -18,7 +18,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * identifier 1..1 MS
 * identifier ^short = "identifiantOffre (OffreOperationnelle) : Identifiant de l'offre, unique et persistant au niveau national"
 * name ^short = "nomOffre (OffreOpérationnelle) : Dénomination sous laquelle l'offre est identifiée par le porteur d'offre"
-* name 1..1 MS
+* name 0..1 MS
 * providedBy 1..1 MS
 * providedBy only Reference(fr-organization or ROROrganization)
 * location MS
@@ -152,7 +152,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     operationalActivityFamily 0..1 MS
 * specialty[operationalActivity] ^short = "activiteOperationnelle (ActiviteOperationnelle) : ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne"
 * specialty[operationalActivity] from $JDV-J17-ActiviteOperationnelle-ROR
-* specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : Uniquement dans le secteur médico-social, une autre catégorisation des activités peut être renseignée en plus de l'activiteOperationnelle"
+* specialty[operationalActivityFamily] ^short = "familleActiviteOperationnelle (ActiviteOperationnelle) : dans le secteur médico-social, la famille d’activité correspond au niveau 4 des prestations de la nomenclature SERAFIN"
 * specialty[operationalActivityFamily] from $JDV-J51-FamilleActiviteOperationnelle-ROR
 
 * notAvailable 0..1 MS
