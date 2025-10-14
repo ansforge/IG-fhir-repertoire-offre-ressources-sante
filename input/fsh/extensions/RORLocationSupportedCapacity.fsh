@@ -17,7 +17,8 @@ Description: "Extension créée dans le cadre du ROR qui indique une série d’
     capacityClosingType 0..1 and
     additionalBedType 0..1 and
     crisisType 0..1 and
-    temporaryAssignement 1..1
+    temporaryAssignement 1..1 and
+    comment 0..1
 * extension[capacityType].value[x] only CodeableConcept
 * extension[capacityType].valueCodeableConcept from $JDV-J187-NatureCapacite-ROR (required)
 * extension[capacityStatus].value[x] only CodeableConcept
@@ -38,7 +39,7 @@ Description: "Extension créée dans le cadre du ROR qui indique une série d’
 * extension[crisisType].valueCodeableConcept from $JDV-J194-TypeCrise-ROR (required)
 * extension[temporaryAssignement].value[x] only CodeableConcept
 * extension[temporaryAssignement].valueCodeableConcept from $JDV-J195-AffectationTemporaire-ROR (required)
-
+* extension[comment].value[x] only string
 
 Mapping:  ConceptMetier_RORLocationSupportedCapacity
 Source:   RORLocationSupportedCapacity
@@ -85,3 +86,6 @@ Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
 Profil 2 (sauf si uniteSensible = Oui),
 Profil 3 (sauf si uniteSensible = Oui),
 Profil 0, si affectation temporaire = aucune (sauf si uniteSensible = Oui)"
+* extension[comment].valueString -> "Commentaire" "Profil 1,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui)"

@@ -42,6 +42,7 @@ map "CapacitePriseCharge (CPC) + CapaciteAccueilOperationnelle (CAO) : \n <&plus
     CAO.typeLitsSupplementaire => additionalBedType
     CAO.typeCrise => crisisType
     CPC.affectationTemporaire => temporaryAssignement
+    CPC.commentaire => comment
 }
 
 map "telecommunication : telecom" as telecom #back:LavenderBlush;header:Violet {
@@ -95,6 +96,7 @@ map "**LieuRealisationOffre : Location**" as L #back:LavenderBlush;header:Violet
     coordonneeGeographique => position
     telecommunication => telecom
     adresse => address
+    commentaire => comment
 }
 
 meta <-- L::metadonnee
