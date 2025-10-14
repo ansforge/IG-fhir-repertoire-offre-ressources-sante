@@ -2,8 +2,8 @@ ROR : Validation Results
 =========================================
 
 err = 81, warn = 111, info = 62
-IG Publisher Version: 1.8.22 Out of date - current version is 2.0.18
-Generated Thu Oct 02 15:52:20 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.ror#0.6.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
+IG Publisher Version: 1.8.22 Out of date - current version is 2.0.21
+Generated Tue Oct 14 13:03:24 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.ror#0.6.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 80 / 2 / 0
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-consommateur : 5 / 0 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/CapabilityStatement-ror-serveur : 5 / 0 / 1
@@ -217,8 +217,8 @@ WARNING: CodeSystem/output-task-ror-codesystem: CodeSystem: Published code syste
 WARNING: CodeSystem/usage-context-ror-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.title is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.ror.json ==
 == fsh-generated/resources/Location-ror-location-exemple.json ==
-ERROR: Location/ror-location-exemple: Location.type[0].coding[0]: Error from https://smt.esante.gouv.fr/fhir: Error: NullPointerException
-Information: X-Request-Id: a1b64fc8-0fb6-4c65-b5c1-8ca4f3415e9e
+ERROR: Location/ror-location-exemple: Location.type[0].coding[0]: Error from https://smt.esante.gouv.fr/fhir: Error: Cannot invoke "String.toLowerCase(java.util.Locale)" because "tag" is null
+Information: X-Request-Id: ca61ab7d-0f26-42bc-bd8e-eee1ca3e036d
 ERROR: Location/ror-location-exemple: Location.type[0]: None of the codings provided are in the value set 'JDV_J198_FonctionLieu_ROR' (https://mos.esante.gouv.fr/NOS/JDV_J198-FonctionLieu-ROR/FHIR/JDV-J198-FonctionLieu-ROR|20250620120000), and a coding from this value set is required) (codes = https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu#001)
 INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): Reference to retired CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie|20231215120000
 INFORMATION: Location/ror-location-exemple: Location.address.line[0].extension[1].value.ofType(string): The code 'RUE' is valid but is not active
