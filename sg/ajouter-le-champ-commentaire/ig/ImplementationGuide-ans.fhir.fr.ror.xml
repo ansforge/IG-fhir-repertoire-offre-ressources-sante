@@ -11,7 +11,7 @@
   <name value="ROR"/>
   <title value="Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"/>
   <status value="draft"/>
-  <date value="2025-10-14T14:38:25+00:00"/>
+  <date value="2025-10-15T15:37:16+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -1045,6 +1045,17 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/ror-comment"/>
+      </reference>
+      <name value="RORComment"/>
+      <description value="Extension créée dans le cadre du ROR pour décrire le commentaire qui permet à la structure de donner des informations complémentaires"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/ror-commune-cog"/>
       </reference>
       <name value="RORCommuneCog"/>
@@ -1225,17 +1236,6 @@
       </reference>
       <name value="RORLocation"/>
       <description value="Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/ror-location-comment"/>
-      </reference>
-      <name value="RORLocationComment"/>
-      <description value="Extension créée dans le cadre du ROR pour décrire le commentaire qui permet à la structure de donner des informations complémentaires"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

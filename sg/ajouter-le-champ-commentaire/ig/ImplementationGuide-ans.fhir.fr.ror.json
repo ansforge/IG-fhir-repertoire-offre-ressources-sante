@@ -10,7 +10,7 @@
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "draft",
-  "date" : "2025-10-14T14:38:25+00:00",
+  "date" : "2025-10-15T15:37:16+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -1259,6 +1259,18 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/ror-comment"
+      },
+      "name" : "RORComment",
+      "description" : "Extension créée dans le cadre du ROR pour décrire le commentaire qui permet à la structure de donner des informations complémentaires",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/ror-commune-cog"
       },
       "name" : "RORCommuneCog",
@@ -1455,18 +1467,6 @@
       },
       "name" : "RORLocation",
       "description" : "Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/ror-location-comment"
-      },
-      "name" : "RORLocationComment",
-      "description" : "Extension créée dans le cadre du ROR pour décrire le commentaire qui permet à la structure de donner des informations complémentaires",
       "exampleBoolean" : false
     },
     {

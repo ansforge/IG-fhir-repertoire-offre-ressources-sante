@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-10-14T14:38:25+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-15T15:37:16+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1804,6 +1804,24 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-comment> ;
+         fhir:reference [ fhir:v "StructureDefinition/ror-comment" ]
+       ] ;
+       fhir:name [ fhir:v "RORComment" ] ;
+       fhir:description [ fhir:v "Extension créée dans le cadre du ROR pour décrire le commentaire qui permet à la structure de donner des informations complémentaires" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog> ;
          fhir:reference [ fhir:v "StructureDefinition/ror-commune-cog" ]
        ] ;
@@ -2097,24 +2115,6 @@
        ] ;
        fhir:name [ fhir:v "RORLocation" ] ;
        fhir:description [ fhir:v "Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-comment> ;
-         fhir:reference [ fhir:v "StructureDefinition/ror-location-comment" ]
-       ] ;
-       fhir:name [ fhir:v "RORLocationComment" ] ;
-       fhir:description [ fhir:v "Extension créée dans le cadre du ROR pour décrire le commentaire qui permet à la structure de donner des informations complémentaires" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>RORLocationComment - Testing - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.6.0</title>
+    <title>RORComment - Mappings - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.6.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -46,8 +46,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"22.68"}
-    h3,h4,h5,h6{--heading-prefix:"22.68"}</style>
+    <style type="text/css">h2{--heading-prefix:"22.53"}
+    h3,h4,h5,h6{--heading-prefix:"22.53"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -201,15 +201,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>RORLocationComment</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>RORComment</b></li>
 
           <span style="float:right;">
 
-            <a href="StructureDefinition-ror-location-comment-mappings.html">&lt;prev</a> | 
+            <a href="StructureDefinition-ror-comment-definitions.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-ror-location-comment.profile.xml.html">next&gt;</a>
+          | <a href="StructureDefinition-ror-comment-testing.html">next&gt;</a>
 
           </span>
 
@@ -223,7 +223,7 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 6" class="col-12">
+<div style="counter-reset: section 5" class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.6.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
@@ -240,20 +240,20 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="StructureDefinition-ror-location-comment.html">Content</a>
+    <a href="StructureDefinition-ror-comment.html">Content</a>
   </li>
 
 
 
   <li>
-    <a href="StructureDefinition-ror-location-comment-definitions.html">Detailed Descriptions</a>
+    <a href="StructureDefinition-ror-comment-definitions.html">Detailed Descriptions</a>
   </li>
 
 
 
   
-    <li>
-      <a href="StructureDefinition-ror-location-comment-mappings.html">Mappings</a>
+    <li class="active">
+      <a href="#">Mappings</a>
     </li>
   
 
@@ -265,21 +265,21 @@
 
   
     <li>
-      <a href="StructureDefinition-ror-location-comment.profile.xml.html">XML</a>
+      <a href="StructureDefinition-ror-comment.profile.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="StructureDefinition-ror-location-comment.profile.json.html">JSON</a>
+      <a href="StructureDefinition-ror-comment.profile.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="StructureDefinition-ror-location-comment.profile.ttl.html">TTL</a>
+      <a href="StructureDefinition-ror-comment.profile.ttl.html">TTL</a>
     </li>
   
 
@@ -287,8 +287,8 @@
 </ul>
 
 
-  <a name="root"> </a>
-  <h2 id="root">Extension: RORLocationComment - Testing</h2>
+<a name="root"> </a>
+<h2 id="root">Extension: RORComment - Mappings</h2>
 
   <table class="colsd">
     <tr>
@@ -297,7 +297,7 @@
         
           Draft
           
-            as of 2025-10-14
+            as of 2025-10-15
           
         
       </td>
@@ -306,25 +306,29 @@
   </table>
 
 
+<p>Mappings for the ror-comment extension.</p>
+
+  <!-- insert intro if present -->
+  
 
 
-<!-- insert intro if present -->
+
+  <a name="specmetier-to-RORComment"> </a><h3>Mappings for Spécification métier vers l'extension ROR Comment ()</h3><table class="grid">
+ <tr><td colspan="3"><b>RORComment</b></td></tr>
+ <tr><td>Extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>commentaire</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>RORComment</b></td></tr>
+ <tr><td>Extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>n/a, N/A</td> </tr>
+</table>
 
 
-
-
-<h3>Test Plans</h3>
-
-  <p><b>No test plans are currently available for the  Profile.</b></p>
-
-
-<h3>Test Scripts</h3>
-
-  <p><b>No test scripts are currently available for the  Profile.</b></p>
-
-
-<!-- insert notes if present -->
-
+  <!-- insert notes if present -->
+  
 
 
 
@@ -351,7 +355,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="StructureDefinition-ror-location-comment-mappings.html">&lt;prev</a>
+                <a href="StructureDefinition-ror-comment-definitions.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -359,7 +363,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="StructureDefinition-ror-location-comment.profile.xml.html">next&gt;</a>
+                <a href="StructureDefinition-ror-comment-testing.html">next&gt;</a>
 
               </td>
             </tr>
@@ -369,7 +373,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 14, 2025 14:39+0000">2025-10-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 15, 2025 15:38+0000">2025-10-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
