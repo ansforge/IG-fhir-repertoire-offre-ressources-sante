@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-07-30T09:38:37+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-16T15:18:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -54,21 +54,6 @@
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
      fhir:version [ fhir:v "6.5.0" ]
   ] [
-     fhir:id [ fhir:v "hl7ext" ] ;
-     fhir:extension ( [
-       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
-       fhir:value [
-         a fhir:markdown ;
-         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
-       ]
-     ] ) ;
-     fhir:uri [
-       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
-       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
-     ] ;
-     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
-     fhir:version [ fhir:v "5.2.0" ]
-  ] [
      fhir:id [ fhir:v "ans_annuaire_fhir_r4" ] ;
      fhir:uri [
        fhir:v "http://fhir.org/packages/ans.annuaire.fhir.r4/ImplementationGuide/ans.annuaire.fhir.r4"^^xsd:anyURI ;
@@ -92,6 +77,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.bulkdata" ] ;
      fhir:version [ fhir:v "2.0.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_extensions_r4" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "5.2.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -1798,6 +1791,24 @@
        ] ;
        fhir:name [ fhir:v "RORAvailableTimeTypeOfTime" ] ;
        fhir:description [ fhir:v "Extension créée dans le cadre du ROR pour apporter un contexte à la plage horaire définie par la suite. Un planning peut être constitué de plusieurs plages horaires du même type ou de type différent." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-comment> ;
+         fhir:reference [ fhir:v "StructureDefinition/ror-comment" ]
+       ] ;
+       fhir:name [ fhir:v "RORComment" ] ;
+       fhir:description [ fhir:v "Extension créée dans le cadre du ROR pour décrire le commentaire qui permet à la structure de donner des informations complémentaires" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
