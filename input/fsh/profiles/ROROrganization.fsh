@@ -107,7 +107,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * contact.extension contains
     RORContactFunctionContact named ror-contact-function-contact 0..1 MS and
     RORContactDescription named ror-contact-description 0..1 MS and
-    RORContactConfidentialityLevel named ror-contact-confidentiality-level 0..1 MS
+    RORContactConfidentialityLevel named ror-contact-confidentiality-level 1..1 MS
 * contact.extension[ror-contact-function-contact] ^short = "fonctionContact (Contact) : Un titre, une position ou une fonction de la personne assurant le contact au sein de l'organisation"
 * contact.extension[ror-contact-description] ^short = "description (Contact) : Une description du contact"
 * contact.extension[ror-contact-confidentiality-level] ^short = "niveauConfidentialite (Contact) : Niveau de restriction de l'accès aux attributs de la classe Contact"
@@ -160,7 +160,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 
 * telecom MS
-* telecom ^short = "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
+* telecom ^short = "boiteLettreMSS (OrganisationInterne) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
 * telecom.value 1..1 MS
 * telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
 * telecom.extension ^slicing.discriminator.type = #value
