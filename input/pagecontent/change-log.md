@@ -1,3 +1,22 @@
+### version 0.7.0-snapshot-1
+
+**Pre-release 0.7.0-snapshot-1 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 4.3 du ROR National.**
+
+**Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'apporter de l'information aux consommateurs concernant les nouveautés en cours d'implémentation.**
+
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.7.0-snapshot-1>
+
+[Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/12?closed=1) :
+
+* [RC] Modification de la cardinatlité de Organization.contact.extension:ror-contact-confidentiality-level 0..1 devient 1..1 [433](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/433)
+* [RC] Modification de la cardinalité de HealthcareService.providedBy : 0..1 devient 1..1 [433](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/433)
+* [RC] Modification de la cardinalité de HealthcareService.name : 0..1 devient 1..1 [433](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/433)
+* [Narratif] Modification de la description de HealthcareService.operationalActivityFamily [435](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/435)
+* [RC] Modification de la cardinalité de HealthcareService.notAvailable : 0..* devient 0..1 [437](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/437)
+* [Narratif] Correction d'une erreur de typo "closingRepoeningDate" dans l'exemple RORQuestionnaireOffreDeVille [437](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/437)
+* [RC] Ajout de l'extension "comment" sur le profil Location [408](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/408)
+* [RC] Ajout du champ "comment" sur l'extension LocationSupportedCapacity [408](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/408)
+
 ### version 0.6.0
 
 **Release 0.6.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0 du ROR et ayant pour cible l'implémentation 4.2 du ROR National.**
