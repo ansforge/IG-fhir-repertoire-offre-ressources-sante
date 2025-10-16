@@ -109,14 +109,14 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     RORLocationEquipment named ror-location-equipment 0..* MS and
     RORLocationResidentialCapacity named ror-location-residential-capacity 0..* MS and
     RORLocationSupportedCapacity named ror-location-supported-capacity 0..* MS and
-    RORMetaCreationDate named ror-meta-creation-date 1..1 MS
-
+    RORMetaCreationDate named ror-meta-creation-date 1..1 MS and
+    RORComment named ror-comment 0..1 MS
 * extension[ror-commune-cog] ^short = "communeCog (LieuRealisationOffre) : Code officiel géographique (COG) de la commune dans laquelle le lieu est situé"
 * extension[ror-location-equipment] ^short = "EquipementSpecifique : Ressource matérielle discriminante pour la réalisation d'une prestation"
 * extension[ror-location-residential-capacity] ^short = "CapaciteHabitation : type d'habitation adapté à la réalisation d'une offre"
 * extension[ror-location-supported-capacity] ^short = "CapacitePriseCharge :  + CapaciteAccueilOperationnelle"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
-
+* extension[ror-comment] ^short = "commentaire (LieuRealisationOffre) : Commentaire qui permet à la structure de donner des informations complémentaires"
 
 Mapping:  ConceptMetier_RORLocation
 Source:   RORLocation
