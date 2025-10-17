@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Historique des versions - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.6.0</title>
+    <title>Historique des versions - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.7.0-snapshot-1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -62,7 +62,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
             <br/>
-            <span style="display:inline-block;">0.6.0 - trial-implementation
+            <span style="display:inline-block;">0.7.0-snapshot-1 - preview
 
 
 
@@ -227,7 +227,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.6.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.7.0-snapshot-1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Historique des versions</h2>
   
 
@@ -245,6 +245,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>  <!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#version-070-snapshot-1" id="markdown-toc-version-070-snapshot-1">version 0.7.0-snapshot-1</a></li>
   <li><a href="#version-060" id="markdown-toc-version-060">version 0.6.0</a></li>
   <li><a href="#version-050" id="markdown-toc-version-050">version 0.5.0</a></li>
   <li><a href="#version-040" id="markdown-toc-version-040">version 0.4.0</a></li>
@@ -256,16 +257,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
+<h3 id="version-070-snapshot-1">version 0.7.0-snapshot-1</h3>
+
+<p><strong>Pre-release 0.7.0-snapshot-1 de l’Implementation Guide FHIR du ROR compatible avec le modèle d’exposition 3.1 du ROR et ayant pour cible l’implementation 4.3 du ROR National.</strong></p>
+
+<p><strong>Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d’apporter de l’information aux consommateurs concernant les nouveautés en cours d’implémentation.</strong></p>
+
+<p><a name="l481">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.7.0-snapshot-1">https://interop.esante.gouv.fr/ig/fhir/ror/0.7.0-snapshot-1</a></p>
+
+<p><a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/12?closed=1">Modifications apportées dans cette release</a> :</p>
+
+<ul>
+  <li>[RC] Modification de la cardinatlité de Organization.contact.extension:ror-contact-confidentiality-level 0..1 devient 1..1 <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/433">433</a></li>
+  <li>[RC] Modification de la cardinalité de HealthcareService.providedBy : 0..1 devient 1..1 <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/433">433</a></li>
+  <li>[RC] Modification de la cardinalité de HealthcareService.name : 0..1 devient 1..1 <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/433">433</a></li>
+  <li>[Narratif] Modification de la description de HealthcareService.operationalActivityFamily <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/435">435</a></li>
+  <li>[RC] Modification de la cardinalité de HealthcareService.notAvailable : 0..* devient 0..1 <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/437">437</a></li>
+  <li>[Narratif] Correction d’une erreur de typo “closingRepoeningDate” dans l’exemple RORQuestionnaireOffreDeVille <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/437">437</a></li>
+  <li>[RC] Ajout de l’extension “comment” sur le profil Location <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/408">408</a></li>
+  <li>[RC] Ajout du champ “comment” sur l’extension LocationSupportedCapacity <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/408">408</a></li>
+</ul>
+
 <h3 id="version-060">version 0.6.0</h3>
 
 <p><strong>Release 0.6.0 de l’Implementation Guide FHIR du ROR compatible avec le modèle d’exposition 3.0 du ROR et ayant pour cible l’implémentation 4.2 du ROR National.</strong></p>
 
-<p><a name="l473">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0</a></p>
+<p><a name="l541">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0</a></p>
 
 <p><a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/10?closed=1">Modifications apportées dans cette release</a> :</p>
 
 <ul>
-  <li><a name="l485">​</a>[narratif] Modification du diagramme <a href="https://interop.esante.gouv.fr/ig/fhir/ror/mapping.html#mapping-organization">mapping-organization</a> afin d’ajouter la liaison avec les contacts pour les Organisation Internes <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/405">405</a></li>
+  <li><a name="l553">​</a>[narratif] Modification du diagramme <a href="https://interop.esante.gouv.fr/ig/fhir/ror/mapping.html#mapping-organization">mapping-organization</a> afin d’ajouter la liaison avec les contacts pour les Organisation Internes <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/405">405</a></li>
   <li>[RC] Resource Profile Organization, la dateOuverture ne concerne pas l’Entité Juridique, elle concerne l’Entité Géographique et l’Organisation Interne <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/427">427</a></li>
   <li>[narratif] Mise à jour de la page “Consultation de l’offre” dans l’onglet “Spécifications techniques” <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/414">414</a>:
     <ul>
@@ -284,7 +306,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </ul>
   </li>
   <li>[narratif] Mise à jour de la page “Saisie de l’offre” dans l’onglet “Spécifications techniques”, suppression de la mention “draft” pour les scénarios 1,2,3,4,5,6,7,8,9,10 <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
-  <li><a name="l547">​</a>[narratif] Mise à jour de la page “Mise à jour de l’offre” dans l’onglet “Spécifications techniques”, dans le tableau <a href="https://interop.esante.gouv.fr/ig/fhir/ror/miseAjour_offre.html#construction-de-la-requ%C3%AAte-de-base">construction de la requête de base</a>, ajout des resource profiles Organization, Practitioner, PractitionerRole pour la méthode PUT <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
+  <li><a name="l615">​</a>[narratif] Mise à jour de la page “Mise à jour de l’offre” dans l’onglet “Spécifications techniques”, dans le tableau <a href="https://interop.esante.gouv.fr/ig/fhir/ror/miseAjour_offre.html#construction-de-la-requ%C3%AAte-de-base">construction de la requête de base</a>, ajout des resource profiles Organization, Practitioner, PractitionerRole pour la méthode PUT <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
   <li>[RC] Pour le CS Server: ajoute de C et U pour Organization, Practitioner, PractitionerRole <a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/421">421</a></li>
   <li>[narratif] Dans “Mapping FHIR du modèle de données du ROR”, ajout d’une note contenant :
     <ul>
@@ -299,7 +321,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Release 0.5.0 de l’Implementation Guide FHIR du ROR compatible avec le modèle d’exposition 3.0 du ROR et ayant pour cible l’implémentation 3.3 du ROR National.</strong></p>
 
-<p><a name="l587">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.5.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.5.0</a></p>
+<p><a name="l655">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.5.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.5.0</a></p>
 
 <p><a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/9?closed=1">Modifications apportées dans cette release</a> :</p>
 
@@ -319,7 +341,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Release 0.4.0 de l’Implementation Guide FHIR du ROR compatible avec le modèle d’exposition 3.0 du ROR et ayant pour cible l’implementation 3.2 du ROR National.</strong></p>
 
-<p><a name="l644">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0</a></p>
+<p><a name="l712">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0</a></p>
 
 <p>Cette version prend en compte les retours sur la version 0.4.0 snapshot-1.</p>
 
@@ -342,7 +364,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d’apporter de l’information aux consommateurs concernant les nouveautés en cours d’implémentation.</strong></p>
 
-<p><a name="l731">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0-snapshot-1">https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0-snapshot-1</a></p>
+<p><a name="l799">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0-snapshot-1">https://interop.esante.gouv.fr/ig/fhir/ror/0.4.0-snapshot-1</a></p>
 
 <p><a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/5?closed=1">Modifications apportées dans cette release</a> :</p>
 
@@ -362,7 +384,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Release 0.3.0 de l’Implementation Guide FHIR du ROR compatible avec le modèle d’exposition 3.0 du ROR et ayant pour cible l’implementation 3.1 du ROR National.</strong></p>
 
-<p><a name="l799">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.3.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.3.0</a></p>
+<p><a name="l867">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.3.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.3.0</a></p>
 
 <p><a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/6?closed=1">Modifications apportées dans cette release</a> :</p>
 
@@ -389,7 +411,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Release 0.2.0 de l’Implementation Guide FHIR du ROR compatible avec le modèle d’exposition 3.0 du ROR et ayant pour cible l’implementation 2.3 du ROR National.</strong></p>
 
-<p><a name="l905">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.2.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.2.0</a></p>
+<p><a name="l973">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.2.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.2.0</a></p>
 
 <p><a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/2?closed=1">Modifications apportées dans cette release</a> :</p>
 
@@ -452,7 +474,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Release 0.1.1 de l’Implementation Guide FHIR du ROR compatible avec le modèle d’exposition 3.0 du ROR et ayant pour cible l’implementation 2.2 du ROR National.</strong></p>
 
-<p><a name="l1185">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.1.1">https://interop.esante.gouv.fr/ig/fhir/ror/0.1.1</a></p>
+<p><a name="l1253">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.1.1">https://interop.esante.gouv.fr/ig/fhir/ror/0.1.1</a></p>
 
 <p><a href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/2?closed=1">Modifications apportées dans cette release</a> :</p>
 
@@ -476,7 +498,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>Première version de l’Implementation Guide FHIR du ROR compatible avec le modèle d’exposition 3.0 du ROR et ayant pour cible l’implementation 2.1 du ROR National.</strong></p>
 
-<p><a name="l1276">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.1.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.1.0</a></p>
+<p><a name="l1344">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/ror/0.1.0">https://interop.esante.gouv.fr/ig/fhir/ror/0.1.0</a></p>
 
 
 
@@ -518,7 +540,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.6.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 16, 2025 15:19+0000">2025-10-16</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 17, 2025 13:18+0000">2025-10-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
