@@ -9,7 +9,7 @@
   "version" : "0.7.0-snapshot-1",
   "name" : "RORHealthcareServicePatientType",
   "status" : "draft",
-  "date" : "2025-10-17T13:18:06+00:00",
+  "date" : "2025-10-17T13:49:18+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -148,7 +148,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -182,7 +182,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -248,7 +248,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -351,7 +351,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -417,7 +417,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }]
     },
     {
@@ -554,7 +554,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -597,7 +597,7 @@
         "human" : "If a code for the unit is present, the system SHALL also be present",
         "expression" : "code.empty() or system.exists()",
         "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ChargeItem"
+        "source" : "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
       },
       {
         "key" : "sqty-1",
@@ -605,7 +605,7 @@
         "human" : "The comparator is not used on a SimpleQuantity",
         "expression" : "comparator.empty()",
         "xpath" : "not(exists(f:comparator))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
       }],
       "isModifier" : false,
       "isSummary" : true,
@@ -667,7 +667,7 @@
         "human" : "If a code for the unit is present, the system SHALL also be present",
         "expression" : "code.empty() or system.exists()",
         "xpath" : "not(exists(f:code)) or exists(f:system)",
-        "source" : "http://hl7.org/fhir/StructureDefinition/ChargeItem"
+        "source" : "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
       },
       {
         "key" : "sqty-1",
@@ -675,7 +675,7 @@
         "human" : "The comparator is not used on a SimpleQuantity",
         "expression" : "comparator.empty()",
         "xpath" : "not(exists(f:comparator))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
       }],
       "isModifier" : false,
       "isSummary" : true,
