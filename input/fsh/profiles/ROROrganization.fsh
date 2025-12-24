@@ -262,7 +262,7 @@ Profil 0 si niveaux de confidentialité du contact et du contact.telecommunicati
 * address.line.extension[lieuDit].valueString -> "lieuDit" "idem à Metadonnee.identifiant"
 * address.line.extension[postalBox].valueString -> "mentionDistribution" "idem à Metadonnee.identifiant"
 
-* extension[ROROrganizationCreationDate -> "dateCreation" "idem à Metadonnee.identifiant"
+* extension[ROROrganizationCreationDate] -> "dateCreation" "idem à Metadonnee.identifiant"
 * extension[OrgPeriod] -> "dateFermeture (uniquement)" "idem à Metadonnee.identifiant"
 * extension[ROROrganizationClosingType] -> "typeFermeture" "idem à Metadonnee.identifiant"
 
