@@ -176,22 +176,12 @@ Title:    "SituationOperationnelle du Modèle exposition ROR V3"
 * availableTime.extension[RORAvailableTimeEffectiveOpeningClosingDate] -> "debutDateEffective/finDateEffective" "idem à Metadonnee.identifiant"
 * availableTime.extension[RORAvailableTimeNumberDaysofWeek] -> "jourSemaine" "idem à Metadonnee.identifiant"
 
-* telecom -> "telecommunication" "Si très restreint, accès uniquement Profil1
-Sinon 
-Accès : 
-  - Profil 1, Profil 4
-  - Profil 2 si uniteSensible = Non ,  
-  - Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non, 
-  - Profil5 si uniteSensible = Non
-  - Profil 0 uniquement si champs d'activité de l'offre ""Ville"""
-* telecom.value -> "adresseTelecom" "Si très restreint, accès uniquement Profil1
-Sinon 
-Accès : 
-  - Profil 1, Profil 4
-  - Profil 2 si uniteSensible = Non ,  
-  - Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non, 
-  - Profil5 si uniteSensible = Non
-  - Profil 0 uniquement si champs d'activité de l'offre 'Ville'"
+* telecom -> "telecommunication" "Profil 1,
+Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non
+Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non
+Profil 4 si niveau de confidentialité  de la telecommunication = 'public'
+Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non"
+* telecom.value -> "adresseTelecom" "cf telecommunication"
 
 * extension[contracted].valueCodeableConcept -> "secteurConventionnement" "idem à Metadonnee.identifiant"
 * extension[optionCAS].valueBoolean -> "optionContratAccèsAuxSoins" "idem à Metadonnee.identifiant"

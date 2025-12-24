@@ -264,7 +264,7 @@ Profil 0 si niveaux de confidentialité du contact et du contact.telecommunicati
 
 * extension[ROROrganizationCreationDate -> "dateCreation" "idem à Metadonnee.identifiant"
 * extension[OrgPeriod] -> "dateFermeture (uniquement)" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationClosingType]-> "dateCreation" "idem à Metadonnee.identifiant"
+* extension[ROROrganizationClosingType] -> "typeFermeture" "idem à Metadonnee.identifiant"
 
 Mapping:  ConceptMetier_ROROrganization_EG
 Source:   ROROrganization
@@ -315,6 +315,7 @@ Profil 0 si niveaux de confidentialité du contact et du contact.telecommunicati
 * extension[ROROrganizationDropZone] -> "zonePoser" "Profil 1, Profil 4"
 * extension[ROROrganizationComment] -> "commentaire" "idem à Metadonnee.identifiant"
 * extension[OrgPeriod] -> "dateOuverture et dateFermeture" "idem à Metadonnee.identifiant"
+* extension[ROROrganizationClosingType] -> "typeFermeture" "idem à Metadonnee.identifiant"
 * extension[ROROrganizationPrice] -> "tarif" "idem à Metadonnee.identifiant"
 * extension[RORTerritorialDivision] -> "territoireSante" "idem à Metadonnee.identifiant"
 

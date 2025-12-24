@@ -65,7 +65,7 @@ Profil 0 uniquement si champs d'activité de l'offre 'Ville'"
 * meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
 
 * identifier -> "idNat_PS" "idem à Metadonnee.identifiant"
-* name.prefix -> "PersonnePhysique.civilite""idem à Metadonnee.identifiant"
+* name.prefix -> "PersonnePhysique.civilite" "idem à Metadonnee.identifiant"
 
 * telecom -> "boiteLettreMSS.adresseMSS" "idem à Metadonnee.identifiant"
 * telecom.value -> "adresseTelecom" "Cf. boiteLettreMSS"
