@@ -246,10 +246,8 @@ Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'tr�
 Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint' et si uniteSensible = non sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public' 
 Profil 4 si niveau de confidentialité  du contact= 'public'
 Profil 0 si niveau de confidentialité  du contact= 'public' et si uniteSensible = non"
-* extension[RORHealthcareServiceContact].telecom -> "contact" "Profil 1,
+* extension[RORHealthcareServiceContact.telecom]-> "contact" "Profil 1,
 Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' et si uniteSensible = non
 Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' et si uniteSensible = non, sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public' 
 Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'
 Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public' et si uniteSensible = non"
-* extension[RORAvailableTimeTypeOfTime] -> "horaire" "Tous  si uniteSensible = Non
-Uniquement Profil 1 et Profil 4 si uniteSensible = Oui"
