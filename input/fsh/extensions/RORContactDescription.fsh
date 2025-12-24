@@ -9,8 +9,4 @@ Mapping:  ConceptMetier_RORContactDescription
 Source:   RORContactDescription
 Id:       specmetier-to-RORContactDescription
 Title:    "Spécification métier vers l'extension RORContactDescription"
-* valueString -> "description" "Profil 1,
-Profil 2 si niveau de confidentialité du contact = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
-Profil 0 si niveau de confidentialité  du contact= public"
+* valueString -> "description"

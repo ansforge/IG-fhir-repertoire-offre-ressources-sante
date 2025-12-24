@@ -11,17 +11,5 @@ Mapping:  ConceptMetier_RORAvailableTimeEffectiveOpeningClosingDate
 Source:   RORAvailableTimeEffectiveOpeningClosingDate
 Id:       specmetier-to-RORAvailableTimeEffectiveOpeningClosingDate
 Title:    "Spécification métier vers l'extension ROR AvailableTimeEffectiveOpeningClosingDate"
-* valuePeriod.start -> "debutDateEffective" "RORPractitionerRole : Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui) / RORHealthcareService : Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* valuePeriod.end -> "finDateEffective" "RORPractitionerRole : Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui) / RORHealthcareService : Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* valuePeriod.start -> "heureDebut" 
+* valuePeriod.end -> "heureFin" 

@@ -18,12 +18,6 @@ Mapping:  ConceptMetier_RORLocationEquipmentLimit
 Source:   RORLocationEquipmentLimit
 Id:       specmetier-to-RORLocationEquipmentLimit
 Title:    "Spécification métier vers l'extension ROR LocationEquipmentLimit"
-* -> "LimiteCaracteristiqueEquipement" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
-* extension[equipmentFeature].valueCodeableConcept -> "typeCaracteristique" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
-* extension[limitValue].valueQuantity -> "valeurLimite" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* -> "LimiteCaracteristiqueEquipement"
+* extension[equipmentFeature].valueCodeableConcept -> "typeCaracteristique"
+* extension[limitValue].valueQuantity -> "valeurLimite"

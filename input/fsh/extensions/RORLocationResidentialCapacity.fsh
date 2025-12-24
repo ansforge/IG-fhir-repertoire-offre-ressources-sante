@@ -18,15 +18,6 @@ Mapping:  ConceptMetier_RORResidentialLocationCapacity
 Source:   RORLocationResidentialCapacity
 Id:       specmetier-to-RORResidentialLocationCapacity
 Title:    "Spécification métier vers l'extension ROR LocationResidentialCapacity"
-* -> "CapaciteHabitation" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* extension[residentialType].valueCodeableConcept -> "typeHabitation" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* extension[residentialNumber].valueInteger -> "nbHabitation" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* -> "CapaciteHabitation"
+* extension[residentialType].valueCodeableConcept -> "typeHabitation"
+* extension[residentialNumber].valueInteger -> "nbHabitation"

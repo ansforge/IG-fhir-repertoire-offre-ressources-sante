@@ -55,67 +55,19 @@ Source:   ROROrganizationPrice
 Id:       specmetier-to-ROROrganizationPrice
 Title:    "Spécification métier vers l'extension ROR OrganizationPrice"
 * -> "Tarif"
-* extension[priceType].valueCodeableConcept -> "typeTarif" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[priceUnit].valueCodeableConcept -> "unitePrix" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[amount].valueMoney -> "montantTarif" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[startDate].valueDateTime -> "dateDebutValiditeTarif" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[under60].valueBoolean -> "ForfaitSocleHebergement.tarifMoins60Ans" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[deliveryIncluded].valueCodeableConcept -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[othersDeliveryIncluded].valueString -> "ForfaitSocleHebergement.autresPrestationsNonObligatoiresIncluses" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[residentialType].valueCodeableConcept -> "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[specialPrice].valueCodeableConcept -> "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[welcomeType].valueCodeableConcept -> "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[mealDeliveryName].valueString -> "TarifPortageRepas.nomTarifPortageRepas" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[dependencyLevel].valueCodeableConcept -> "TarifDependance.groupeTarifaireDependance" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[humanHelpPriceName].valueString -> "TarifAidesHumaines.nomTarifAidesHumaines" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[managementType].valueCodeableConcept -> "TarifAidesHumaines.modeGestion" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[otherAdditionalServiceName].valueString -> "TarifPrestationSupplementaire.nomAutrePrestationSupp" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[additionalServiceName].valueCodeableConcept -> "TarifPrestationSupplementaire.nomPrestationSupp" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* extension[priceType].valueCodeableConcept -> "typeTarif"
+* extension[priceUnit].valueCodeableConcept -> "unitePrix"
+* extension[amount].valueMoney -> "montantTarif"
+* extension[startDate].valueDateTime -> "dateDebutValiditeTarif"
+* extension[under60].valueBoolean -> "ForfaitSocleHebergement.tarifMoins60Ans"
+* extension[deliveryIncluded].valueCodeableConcept -> "ForfaitSocleHebergement.prestationsNonObligatoiresIncluses"
+* extension[othersDeliveryIncluded].valueString -> "ForfaitSocleHebergement.autresPrestationsNonObligatoiresIncluses"
+* extension[residentialType].valueCodeableConcept -> "ForfaitSocleHebergement.typeHabitation + SupplementTarifHebergement.typeHabitation"
+* extension[specialPrice].valueCodeableConcept -> "TarifAccueilDeJour+TarifAidesHumaines.conditionTarifaire + ForfaitSocleHebergement.conditionTarifaire + TarifPortageRepas.conditionTarifaire"
+* extension[welcomeType].valueCodeableConcept -> "ForfaitSocleHebergement.temporaliteAccueil + TarifDependance.temporaliteAccueil"
+* extension[mealDeliveryName].valueString -> "TarifPortageRepas.nomTarifPortageRepas"
+* extension[dependencyLevel].valueCodeableConcept -> "TarifDependance.groupeTarifaireDependance"
+* extension[humanHelpPriceName].valueString -> "TarifAidesHumaines.nomTarifAidesHumaines"
+* extension[managementType].valueCodeableConcept -> "TarifAidesHumaines.modeGestion"
+* extension[otherAdditionalServiceName].valueString -> "TarifPrestationSupplementaire.nomAutrePrestationSupp"
+* extension[additionalServiceName].valueCodeableConcept -> "TarifPrestationSupplementaire.nomPrestationSupp"

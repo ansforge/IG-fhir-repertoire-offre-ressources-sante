@@ -54,13 +54,19 @@ Id:       specmetier-to-RORPractitioner
 Title:    "Practitioner du Modèle exposition ROR V3"
 * -> "Professionnel"
 
-* id -> "metadonnee.identifiant"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* id -> "metadonnee.identifiant" "Profil 1, 
+Profil 2 si uniteSensible = Non ,  
+Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non, 
+Profil4 
+Profil5 si uniteSensible = Non
+Profil 0 uniquement si champs d'activité de l'offre 'Ville'"
+* meta -> "metadonnee" "idem à Metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
 
-* identifier -> "idNat_PS"
-* name.prefix -> "PersonnePhysique.civilite"
+* identifier -> "idNat_PS" "idem à Metadonnee.identifiant"
+* name.prefix -> "PersonnePhysique.civilite""idem à Metadonnee.identifiant"
 
-* telecom -> "boiteLettreMSS.adresseMSS"
-* telecom.value -> "adresseTelecom"
+* telecom -> "boiteLettreMSS.adresseMSS" "idem à Metadonnee.identifiant"
+* telecom.value -> "adresseTelecom" "Cf. boiteLettreMSS"
+
