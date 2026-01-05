@@ -1,7 +1,7 @@
 ROR : Validation Results
 =========================================
 
-err = 79, warn = 118, info = 62
+err = 79, warn = 120, info = 62
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/ror)
  Build Errors : 81 / 2 / 0
@@ -96,7 +96,7 @@ Generated $--. FHIR version $-- for ans.fhir.fr.ror#$-- (canonical = https://int
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-organization-nb-temporary-social-help-place : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-organization-price : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-organization-reopening-date : 0 / 1 / 1
- /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitioner : 0 / 1 / 5
+ /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitioner : 0 / 3 / 5
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitionerrole : 1 / 1 / 4
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitionerrole-name : 0 / 1 / 1
  /home/runner/work/IG-fhir-repertoire-offre-ressources-sante/IG-fhir-repertoire-offre-ressources-sante/igSource/fsh-generated/resources/StructureDefinition-ror-practitionerrole-unit-exercise-mode : 0 / 1 / 1
@@ -491,10 +491,12 @@ WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir
 == fsh-generated/resources/StructureDefinition-ror-organization-reopening-date.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-reopening-date'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-ror-practitioner.json ==
+WARNING: StructureDefinition/ror-practitioner: StructureDefinition.snapshot.element[1].mapping[0].comment: value should not start or finish with whitespace 'Profil 1,   \nProfil 2 si uniteSensible = Non,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  '
 INFORMATION: StructureDefinition/ror-practitioner: StructureDefinition.snapshot.element[26].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/ror-practitioner: StructureDefinition.snapshot.element[38].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/ror-practitioner: StructureDefinition.snapshot.element[49].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/ror-practitioner: StructureDefinition.snapshot.element[60].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+WARNING: StructureDefinition/ror-practitioner: StructureDefinition.differential.element[1].mapping[0].comment: value should not start or finish with whitespace 'Profil 1,   \nProfil 2 si uniteSensible = Non,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  '
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-ror-practitionerrole.json ==
 INFORMATION: StructureDefinition/ror-practitionerrole: StructureDefinition.snapshot.element[39].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
