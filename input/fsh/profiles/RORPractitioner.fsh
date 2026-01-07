@@ -68,5 +68,5 @@ Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "
 * name.prefix -> "PersonnePhysique.civilite" "idem à Metadonnee.identifiant"
 
 * telecom -> "boiteLettreMSS.adresseMSS" "idem à Metadonnee.identifiant"
-* telecom.value -> "adresseTelecom" "Cf. boiteLettreMSS"
+* telecom.value -> "adresseTelecom" "cf. boiteLettreMSS"
 

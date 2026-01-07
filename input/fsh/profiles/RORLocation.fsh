@@ -147,11 +147,11 @@ Profil 0 (sauf si uniteSensible = Oui)"
 
 * operationalStatus -> "Statut" "idem à Metadonnee.identifiant"
 
-* telecom -> "telecommunication" "Profil 1,
-Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non
-Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non
-Profil 4 si niveau de confidentialité  de la telecommunication = 'public'
-Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non"
+* telecom -> "telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
+Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
+Profil 4 si niveau de confidentialité  de la telecommunication = 'public'  
+Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
 * telecom.value -> "telecommunication.adresseTelecom" "cf telecommunication"
 
 * address -> "adresse" "idem à Metadonnee.identifiant"
@@ -176,7 +176,8 @@ Profil 2 (sauf si uniteSensible = Oui),
 Profil 3 si champ activité = MS (sauf si uniteSensible = Oui),
 Profil 5 (sauf si uniteSensible = Oui),"                                 
 * extension[RORLocationResidentialCapacity] -> "CapaciteHabitation" "idem à Metadonnee.identifiant"                         
-* extension[RORLocationSupportedCapacity] -> "CapacitePriseCharge" "Profil 1, Profil4,
-Profil 2 hors capacités supplémentaires (sauf si uniteSensible = Oui),
-Profil 3 si champ activité = MS, hors capacités supplémentaires (sauf si uniteSensible = Oui),
-Profil 5  uniquement pour les lits installés (sauf si uniteSensible = Oui)"
+* extension[RORLocationSupportedCapacity] -> "CapacitePriseCharge" "Profil 1,  
+Profil4,  
+Profil 2 hors capacités supplémentaires (sauf si uniteSensible = Oui),  
+Profil 3 si champ activité = MS, hors capacités supplémentaires (sauf si uniteSensible = Oui),  
+Profil 5  uniquement pour les lits installés (sauf si uniteSensible = Oui)  "

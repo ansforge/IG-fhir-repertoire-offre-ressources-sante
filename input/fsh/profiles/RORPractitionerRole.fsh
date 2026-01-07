@@ -131,12 +131,12 @@ Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
 
 * practitioner -> "Professionnel"
 
-* id -> "metadonnee.identifiant" "Profil 1, 
+* id -> "metadonnee.identifiant" "Profil 1,  
 Profil 2 si uniteSensible = Non ,  
-Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non, 
-Profil4 
-Profil5 si uniteSensible = Non
-Profil 0 uniquement si champs d'activité de l'offre 'Ville'"
+Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  
+Profil4,  
+Profil5 si uniteSensible = Non,  
+Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "
 * meta -> "metadonnee" "idem à Metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
 * meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
@@ -163,10 +163,15 @@ Title:    "SituationOperationnelle du Modèle exposition ROR V3"
 
 * healthcareService -> "OffreOperationnelle"
 
-* id -> "metadonnee.identifiant"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* id -> "metadonnee.identifiant" "Profil 1,  
+Profil 2 si uniteSensible = Non ,  
+Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  
+Profil4,  
+Profil5 si uniteSensible = Non,  
+Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "
+* meta -> "metadonnee" "idem à Metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
 
 * identifier -> "identifiantSituationOperationnelle" "idem à Metadonnee.identifiant"
 * availableTime -> "horaire" "idem à Metadonnee.identifiant"
@@ -176,11 +181,11 @@ Title:    "SituationOperationnelle du Modèle exposition ROR V3"
 * availableTime.extension[RORAvailableTimeEffectiveOpeningClosingDate] -> "debutDateEffective/finDateEffective" "idem à Metadonnee.identifiant"
 * availableTime.extension[RORAvailableTimeNumberDaysofWeek] -> "jourSemaine" "idem à Metadonnee.identifiant"
 
-* telecom -> "telecommunication" "Profil 1,
-Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non
-Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non
-Profil 4 si niveau de confidentialité  de la telecommunication = 'public'
-Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non"
+* telecom -> "telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
+Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
+Profil 4 si niveau de confidentialité  de la telecommunication = 'public'  
+Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
 * telecom.value -> "adresseTelecom" "cf telecommunication"
 
 * extension[contracted].valueCodeableConcept -> "secteurConventionnement" "idem à Metadonnee.identifiant"

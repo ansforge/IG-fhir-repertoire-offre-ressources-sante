@@ -200,8 +200,8 @@ Title:    "HealthcareService du Modèle exposition ROR V3"
 * providedBy -> "OrganisationInterne"
 * location -> "LieuRealisationOffre"
 
-* id -> "metadonnee.identifiant" "Tous les profils si uniteSensible = Non
-Uniquement Profil 1 et Profil 4 si uniteSensible = Oui"
+* id -> "metadonnee.identifiant" "Tous les profils si uniteSensible = Non  
+Uniquement Profil 1 et Profil 4 si uniteSensible = Oui"  
 * comment -> "metadonnee.commentaire" "idem à Metadonnee.identifiant"
 * meta -> "metadonnee" "idem à Metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
@@ -217,9 +217,11 @@ Uniquement Profil 1 et Profil 4 si uniteSensible = Oui"
 * characteristic[careMode] -> "modePriseEnCharge"  "idem à Metadonnee.identifiant"
 * characteristic[receptionModality] -> "modaliteAccueil"  "idem à Metadonnee.identifiant"
 * characteristic[managementType] -> "modeGestion"  "idem à Metadonnee.identifiant"
-* characteristic[specificAct] -> "acteSpecifique"  "Profil 1, Profil 4, Profil 5,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+* characteristic[specificAct] -> "acteSpecifique"  "Profil 1,  
+Profil 4,  
+Profil 5,  
+Profil 2 (sauf si uniteSensible = Oui),  
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)  "
 * characteristic[outsideOfficeAct] -> "acteRealiseHorsCabinet"  "idem à acteSpecifique"
 * characteristic[takingCareSpeciality] -> "specialisationPriseEnCharge"  "idem à acteSpecifique"
 * characteristic[annualOpening] -> "ouvertureAnnuelle"  "idem à Metadonnee.identifiant"
@@ -241,13 +243,13 @@ Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
 * extension[RORHealthcareServiceNoConsentHabilitation] -> "habilitationAuxSoinsSansConsentement" "idem à Metadonnee.identifiant" 
 * extension[RORHealthcareServicePsychiatricSector] -> "secteurPsychiatrique" "idem à Metadonnee.identifiant" 
 * extension[RORHealthcareServicePatientType] -> "publicPrisEnCharge" "idem à Metadonnee.identifiant" 
-* extension[RORHealthcareServiceContact] -> "contact" "Profil 1,
-Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint' et si uniteSensible = non
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint' et si uniteSensible = non sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public' 
-Profil 4 si niveau de confidentialité  du contact= 'public'
-Profil 0 si niveau de confidentialité  du contact= 'public' et si uniteSensible = non"
-* extension[RORHealthcareServiceContact].extension[RORHealthcareServiceContactTelecom] -> "contact.telecommunication" "Profil 1,
-Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' et si uniteSensible = non
-Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' et si uniteSensible = non, sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public' 
-Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'
-Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public' et si uniteSensible = non"
+* extension[RORHealthcareServiceContact] -> "contact" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint' et si uniteSensible = non  
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint' et si uniteSensible = non sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveau de confidentialité  du contact= 'public'  
+Profil 0 si niveau de confidentialité  du contact= 'public' et si uniteSensible = non  "
+* extension[RORHealthcareServiceContact].extension[RORHealthcareServiceContactTelecom] -> "contact.telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' et si uniteSensible = non  
+Profil 3 si champ d'activité MS et si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' et si uniteSensible = non, sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  
+Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public' et si uniteSensible = non  "

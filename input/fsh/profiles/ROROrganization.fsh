@@ -236,18 +236,18 @@ Title:    "EntiteJuridique du Modèle exposition ROR V3"
 * type[statutJuridiqueINSEE] -> "statutJuridique" "idem à Metadonnee.identifiant"
 * type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique" "idem à Metadonnee.identifiant"
 
-* contact -> "contact" "Profil 1,
-Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public' 
-Profil 4 si niveau de confidentialité  du contact= 'public'
-Profil 0 si niveau de confidentialité  du contact= 'public'"
+* contact -> "contact" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'  
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveau de confidentialité  du contact= 'public'  
+Profil 0 si niveau de confidentialité  du contact= 'public'  "
 * contact.name -> "nom" "cf contact"
 * contact.purpose -> "natureContact" "cf contact"
-* contact.telecom -> "telecommunication" "Profil 1,
-Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' 
-Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' , sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public' 
-Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'
-Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'"
+* contact.telecom -> "telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint'  
+Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint', sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  
+Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  "
 * contact.telecom.value -> "adresseTelecom" "cf contact.telecom"
 
 * address -> "adresseEJ" "idem à Metadonnee.identifiant"
@@ -292,18 +292,18 @@ Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * type[categorieEtablissement] -> "categorieEG" "idem à Metadonnee.identifiant"
 * type[sphParticipation] -> "modaliteParticipationSPH" "idem à Metadonnee.identifiant"
 
-* contact -> "contact" "Profil 1,
-Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public' 
-Profil 4 si niveau de confidentialité  du contact= 'public'
-Profil 0 si niveau de confidentialité  du contact= 'public' "
+* contact -> "contact" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'  
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité,  uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveau de confidentialité  du contact= 'public'  
+Profil 0 si niveau de confidentialité  du contact= 'public'  "
 * contact.name -> "nom" "cf contact"
 * contact.purpose -> "natureContact" "cf contact"
-* contact.telecom -> "telecommunication" "Profil 1,
-Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' 
-Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' , sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public' 
-Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'
-Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'"
+* contact.telecom -> "telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint'  
+Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint',  sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  
+Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  "
 * contact.telecom.value -> "adresseTelecom" "cd contact.telecomunication"
 
 * extension[ROROrganizationFinancialHelpType] -> "aideFinanciere" "idem à Metadonnee.identifiant"
@@ -326,7 +326,7 @@ Id:       specmetier-to-ROROrganization-oi
 Title:    "OrganisationInterne du Modèle exposition ROR V3"
 * -> "OrganisationInterne"
 
-* id -> "metadonnee.identifiant" "idem à Metadonnee.identifiant"
+* id -> "metadonnee.identifiant" "Tous les profils"
 * meta -> "metadonnee" "idem à Metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
 * meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
