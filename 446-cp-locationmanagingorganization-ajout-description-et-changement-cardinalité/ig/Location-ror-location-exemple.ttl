@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/Location/ror-location-exemple> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ror-location-exemple"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2023-12-20T10:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Location ror-location-exemple</b></p><a name=\"ror-location-exemple\"> </a><a name=\"hcror-location-exemple\"> </a><a name=\"ror-location-exemple-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-ror-location.html\">RORLocation</a></p></div><p><b>RORCommuneCog</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM 78646}\">Versailles</span></p><p><b>RORMetaCreationDate</b>: 2022-01-01 00:00:00+0000</p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu 001}\">Hébergement</span></p><p><b>address</b>: 7 rue porte de Buc Versailles 78000 </p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "78646" ] ;
+         fhir:display [ fhir:v "Versailles" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:dateTime ;
+       fhir:v "2022-01-01T00:00:00Z"^^xsd:dateTime
+     ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "Hébergement" ]
+     ] )
+  ] ) ; # 
+  fhir:address [
+     fhir:line ( [
+       fhir:v "7 rue porte de Buc" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "7"
+         ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "RUE"
+         ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "porte de Buc"
+         ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Versailles" ] ;
+     fhir:postalCode [ fhir:v "78000" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
