@@ -24,6 +24,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * type from $JDV-J198-FonctionLieu-ROR (required)
 * managingOrganization MS
 * managingOrganization only Reference(fr-organization or ROROrganization)
+* managingOrganization ^short = "Hors périmètre du modèle d'exposition du ROR, ce champ est utilisé dans le cas suivant : le Lieu de Réalisation (Location) n'est rattaché à aucune Offre Opérationnelle (HealthcareService), la Location ne pourra alors être rattaché qu'à un ou des HealthcareServices ayant comme parent cette Organization qui doit obligatoirement être une EG"
 * operationalStatus MS
 * operationalStatus ^short = "statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
 * operationalStatus from $JDV-J224-StatutLieu-ROR (required)
