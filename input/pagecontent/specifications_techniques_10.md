@@ -464,7 +464,7 @@ PATCH [BASE]/Location?identifier=XXX
             "part": [
                 {
                     "name": "type",
-                    "valueString": "remove"
+                    "valueString": "delete"
                 },
                 {
                     "name": "path",
