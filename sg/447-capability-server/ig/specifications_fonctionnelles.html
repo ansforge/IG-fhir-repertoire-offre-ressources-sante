@@ -1,0 +1,1383 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Specifications Fonctionnelles - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.7.0-snapshot-1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <a no-external="true" id="hl7-search-lnk" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+  </div>
+  <div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
+    <a no-external="true" id="hl7-logo" href="https://esante.gouv.fr/"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
+    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+  </div>
+
+  <div id="ig-search">
+ </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social</span>
+            <br/>
+            <span style="display:inline-block;">0.7.0-snapshot-1 - preview
+
+
+
+  <span title="null">FR</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications techniques
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="specifications_techniques_1.html">Consultation des données capacitaires</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_2.html">Consultation de l'offre (extraction)</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_3.html">Recherche d'offre sur critères principaux</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_4.html">Recherche d'offre avec données capacitaires</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_8.html">Recherche d'offre sur la base d'informations tarifaires</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_9.html">Recherche d'offre via une technique « Full text »</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_10.html">Création et Mise à jour du lieu de réalisation de l'offre</a>
+      </li>
+      <li>
+        <a href="consignes_fiche_saisie_offre.html">Consignes fiche de saisie de l'offre</a>
+      </li>
+      <li>
+        <a href="saisie_offre.html">Saisie de l'offre</a>
+      </li>
+      <li>
+        <a href="miseAjour_offre.html">Mise à jour  de l'offre</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_5.html">Signalement d'anomalie</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_6.html">Mise à jour d'anomalie</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_7.html">Consultation d'anomalie</a>
+      </li>
+      <li>
+        <a href="specifications_techniques_11.html">Consultation d'indicateurs de pilotage</a>
+      </li>
+      <li>
+        <a href="search_param.html">Critères de recherche</a>
+      </li>
+      <li>
+        <a href="modifiers.html">Paramètres et modificateurs de requêtes FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="mapping.html">Mapping FHIR du modèle de données</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li>
+    <a href="change-log.html">Historique des versions</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="securite.html">Sécurité</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usage</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a href="https://esante.gouv.fr/" target="_blank">Site de l'ANS </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://interop.esante.gouv.fr/ig/documentation/" target="_blank">Documentation</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Specifications Fonctionnelles</b></li>
+
+          <span style="float:right;">
+
+            <a href="index.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="specifications_techniques_1.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.7.0-snapshot-1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Specifications Fonctionnelles</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#consultation-des-données-capacitaires" id="markdown-toc-consultation-des-données-capacitaires">Consultation des données capacitaires</a></li>
+  <li><a href="#consultation-de-loffre-extraction" id="markdown-toc-consultation-de-loffre-extraction">Consultation de l’offre (Extraction)</a></li>
+  <li><a href="#recherche-doffre-sur-critères-principaux" id="markdown-toc-recherche-doffre-sur-critères-principaux">Recherche d’offre sur critères principaux</a></li>
+  <li><a href="#recherche-doffre-avec-données-capacitaires" id="markdown-toc-recherche-doffre-avec-données-capacitaires">Recherche d’offre avec données capacitaires</a></li>
+  <li><a href="#recherche-doffre-sur-la-base-dinformations-tarifaires" id="markdown-toc-recherche-doffre-sur-la-base-dinformations-tarifaires">Recherche d’offre sur la base d’informations tarifaires</a></li>
+  <li><a href="#recherche-doffre-via-une-technique-full-text" id="markdown-toc-recherche-doffre-via-une-technique-full-text">Recherche d’offre via une technique «&nbsp;Full text&nbsp;»</a></li>
+  <li><a href="#création-et-mise-à-jour-du-lieu-de-réalisation-de-loffre" id="markdown-toc-création-et-mise-à-jour-du-lieu-de-réalisation-de-loffre">Création et Mise à jour du lieu de réalisation de l’offre</a></li>
+  <li><a href="#consignes-fiche-de-saisie-de-loffre" id="markdown-toc-consignes-fiche-de-saisie-de-loffre">Consignes fiche de saisie de l’offre</a></li>
+  <li><a href="#saisie-de-loffre" id="markdown-toc-saisie-de-loffre">Saisie de l’offre</a></li>
+  <li><a href="#mise-à-jour-de-loffre" id="markdown-toc-mise-à-jour-de-loffre">Mise à jour de l’offre</a></li>
+  <li><a href="#signalement-danomalie" id="markdown-toc-signalement-danomalie">Signalement d’anomalie</a></li>
+  <li><a href="#mise-à-jour-danomalie" id="markdown-toc-mise-à-jour-danomalie">Mise à jour d’anomalie</a></li>
+  <li><a href="#consultation-danomalie" id="markdown-toc-consultation-danomalie">Consultation d’anomalie</a></li>
+  <li><a href="#consultation-dindicateurs-de-pilotage" id="markdown-toc-consultation-dindicateurs-de-pilotage">Consultation d’indicateurs de pilotage</a></li>
+</ul>
+
+</div>
+  <!-- Page specs fonctionnelles -->
+<p>A ce jour, le guide d’implémentation de l’API FHIR du ROR a pour vocation à répondre aux cas d’usage suivants&nbsp;:</p>
+<ul>
+  <li>Consultation des données capacitaires en lits et places</li>
+  <li>Consultation de l’offre (extraction)</li>
+  <li>Recherche d’offre sur critères principaux</li>
+  <li>Recherche d’offre avec données capacitaires</li>
+  <li>Recherche d’offre sur la base d’informations tarifaires</li>
+  <li>Recherche d’offre via une technique « Full text »</li>
+  <li>Création et Mise à jour du lieu de réalisation de l’offre</li>
+  <li>Saisie de l’offre</li>
+  <li>Mise à jour de l’offre</li>
+  <li>Signalement d’anomalie</li>
+  <li>Mise à jour d’anomalie</li>
+  <li>Consultation d’anomalie</li>
+  <li>Consultation d’indicateurs de pilotage</li>
+</ul>
+
+<p><strong>La maturité d’implémentation (cf <a href="index.html#informations-sur-ce-guide-dimplémentation">guide de lecture du guide</a>) pour répondre à ces cas d’usage est indiqué dans les spécifications techniques.</strong></p>
+
+<blockquote class="stu-note">
+<p>
+  <b>Définition d’une Anomalie dans le ROR:</b>
+  <br/>
+ Une anomalie est une irrégularité sur une description d’offre de santé. (exemple adresse, numéro de téléphone, numéro FINESS, RPPS, spécialité etc…).
+  <br/>
+Il existe différents types d’anomalies dans le contexte ROR national:
+  <ul>
+    <li>Le non-respect d’une exigence qualité :&nbsp;toute offre ne respectant pas une exigence qualité sera être indiquée en écart par rapport à cette règle.&nbsp;
+    Exemple d’exigence : Les établissements sont peuplés selon les critères de peuplement définis par l'ANS → cet écart sera remonté au responsable d'établissement</li>
+    <li>L’utilisation d’une nomenclature obsolète.</li>
+    <li>Une anomalie déclarée sur une offre :&nbsp;&nbsp;un utilisateur peut en effet identifier qu’une information n’est pas correcte sur la description d’une offre.</li>
+  </ul>
+Toute suspicion d’anomalie peut être jugée infondée par le responsable de l’offre ou un responsable qualité régional ou de l’établissement concerné.
+</p>
+</blockquote>
+
+<p>Pour les cas d’usage couverts par ce guide d’implémentation&nbsp;:</p>
+<ul>
+  <li>Les préconditions sont&nbsp;:
+    <ul>
+      <li>Le système consommateur dispose des points d’accès et des moyens d’authentification (authentification mTLS avec des certificats IGC-Santé) pour accéder aux             données du ROR National.</li>
+      <li>Le système consommateur peut uniquement effectuer les recherches autorisées par son profil d’accès aux données. Plus d’information <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ANS-ROR_Doctrine-Urbanisation_annexe_Politique%20d%27acc%C3%A8s%20V2.5%20cible.pdf">ici</a> .</li>
+    </ul>
+  </li>
+  <li>Les postconditions&nbsp;sont&nbsp;:
+    <ul>
+      <li>L’exécution des transactions ne provoquera aucune modification sur les données sources extraites.</li>
+    </ul>
+  </li>
+  <li>La mention “serveur” désigne le serveur ROR national.</li>
+</ul>
+
+<h3 id="consultation-des-données-capacitaires">Consultation des données capacitaires</h3>
+
+<h4 id="description-du-cas-dusage">Description du cas d’usage</h4>
+
+<p>Un consommateur cherche les capacités des lieux de réalisation de l’offre à partir de critères de recherche.</p>
+
+<p>Le consommateur renseigne son (ses) critère(s) de recherche parmi les critères disponibles.</p>
+
+<p>Le ROR National répond au consommateur les lieux de réalisation de l’offre correspondant aux critères de recherche et les identifiants des offres opérationnelles liées.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 585 270" zoomAndPan="magnify" preserveAspectRatio="none" width="585px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:585px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="536" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="536"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="489" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="536.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M536.5,21.5 L536.5,48.5 M523.5,29.5 L549.5,29.5 M536.5,48.5 L523.5,63.5 M536.5,48.5 L549.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="489" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="536.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M536.5,221.625 L536.5,248.625 M523.5,229.625 L549.5,229.625 M536.5,248.625 L523.5,263.625 M536.5,248.625 L549.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="524.5,123.5625,534.5,127.5625,524.5,131.5625,528.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="530.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="137" y="107.3638" font-family="sans-serif" fill="#000000">Recherche_Capacités</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="442" y="122.4966" font-family="sans-serif" fill="#000000">(capacités des lieux de réalisation de l'offre via critères de recherche)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="535.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="447" y="166.7622" font-family="sans-serif" fill="#000000">(lieu de réalisation de l'offre et identifiants offres opérationnelles liées)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Recherche capacité (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios">Scénarios</h4>
+
+<ul>
+  <li>Scénario 1&nbsp;: Données capacitaires sur le périmètre national
+    <ul>
+      <li>Un consommateur souhaite mettre à jour toutes les données capacitaires sur le périmètre national.</li>
+    </ul>
+  </li>
+  <li>Scénario 1&nbsp;bis : Données capacitaires sur une région
+    <ul>
+      <li>Un consommateur souhaite mettre à jour toutes les données capacitaires sur une région.</li>
+    </ul>
+  </li>
+  <li>Scénario 1 ter : Données capacitaires sur une région source
+    <ul>
+      <li>Un consommateur souhaite récupérer l'ensemble des données capacitaires sur une région source afin de mettre à jour son système.</li>
+    </ul>
+  </li>
+  <li>Scénario 2&nbsp;: Données capacitaires sur un lieu de prise en charge identifié
+    <ul>
+      <li>Un consommateur souhaite mettre à jour dans son système les données de capacité sur un lieu de prise en charge identifié.</li>
+    </ul>
+  </li>
+  <li>Scénario 3&nbsp;: Données capacitaires sur plusieurs lieux de prise en charge identifiés
+    <ul>
+      <li>Un consommateur souhaite mettre à jour dans son système les données de capacité en lits/places de certains lieux de prise en charge (il connait les identifiants et demande à lire la liste de ces données capacitaires).</li>
+    </ul>
+  </li>
+  <li>Scénario 4&nbsp;: Données capacitaires à partir d’une date de mise à jour
+    <ul>
+      <li>Un consommateur souhaite mettre à jour dans son système les données capacitaires mises à jour dans le ROR national depuis une date qu’il précise.</li>
+    </ul>
+  </li>
+  <li>Scénario 5&nbsp;: Données capacitaires d’une offre opérationnelle
+    <ul>
+      <li>Un consommateur, ayant recherché au préalable une offre de santé correspondant à ses critères, souhaite connaitre la situation des capacités pour ces offres. Le service de recherche lui ayant renvoyé les identifiants de ces offres, il les passe en paramètre de la recherche.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_1.html">ici</a></strong></p>
+
+<h3 id="consultation-de-loffre-extraction">Consultation de l’offre (Extraction)</h3>
+
+<h4 id="description-du-cas-dusage-1">Description du cas d’usage</h4>
+
+<p>Un consommateur souhaite :</p>
+
+<ul>
+  <li>
+    <p>Faire une extraction complète asynchrone sans critère</p>
+  </li>
+  <li>
+    <p>Faire une extraction complète sur une région</p>
+  </li>
+  <li>
+    <p>Consulter une offre à partir de son identifiant</p>
+  </li>
+  <li>
+    <p>Consulter une offre à partir de l'identifiant de son établissement</p>
+  </li>
+  <li>
+    <p>Faire une extraction complète des offres (modèle complet) modifiées depuis une date</p>
+  </li>
+</ul>
+
+<p>Il y a deux cas possibles&nbsp;:</p>
+
+<ul>
+  <li>
+    <p>Extraction totale&nbsp;: Le consommateur renseigne si besoin son (ses) critère(s) de recherche parmi les critères disponibles. Le ROR National répond au consommateur les offres opérationnelles correspondant aux critères de recherche et toutes les classes liées à l’offre opérationnelle.</p>
+  </li>
+  <li>
+    <p>Extraction partielle&nbsp;: Le consommateur renseigne si besoin son (ses) critère(s) de recherche parmi les critères disponibles et sélectionne les attributs de l’offre opérationnelle qu’il souhaite recevoir. Le ROR National répond au consommateur les attributs demandés des offres opérationnelles correspondant aux critères de recherche et les organisations liées à ces offres opérationnelles.</p>
+  </li>
+</ul>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 415 285" zoomAndPan="magnify" preserveAspectRatio="none" width="415px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:415px;height:285px;background:#FFFFFF;" version="1.1" height="285px"><defs></defs><g><line y1="81.2969" x1="61" y2="204.9609" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="366" y2="204.9609" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="366"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="216.9561" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="228.7578" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,236.7578 L61.5,263.7578 M48.5,244.7578 L74.5,244.7578 M61.5,263.7578 L48.5,278.7578 M61.5,263.7578 L74.5,278.7578 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="319" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="366.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M366.5,21.5 L366.5,48.5 M353.5,29.5 L379.5,29.5 M366.5,48.5 L353.5,63.5 M366.5,48.5 L379.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="319" font-size="14" textLength="89" y="216.9561" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="366.5" cy="228.7578" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M366.5,236.7578 L366.5,263.7578 M353.5,244.7578 L379.5,244.7578 M366.5,263.7578 L353.5,278.7578 M366.5,263.7578 L379.5,278.7578 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="354.5,123.5625,364.5,127.5625,354.5,131.5625,358.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="360.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="109" y="107.3638" font-family="sans-serif" fill="#000000">Extraction_Offres</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="168" y="122.4966" font-family="sans-serif" fill="#000000">(via critères de recherche)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,182.9609,62.5,186.9609,72.5,190.9609,68.5,186.9609"></polygon><line y1="186.9609" x1="66.5" y2="186.9609" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="365.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="227" y="166.7622" font-family="sans-serif" fill="#000000">(offres opérationnelles et toutes les</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="277" y="181.895" font-family="sans-serif" fill="#000000">classes liées = tout le modèle d'exposition)</text></g></svg></div>
+        </td>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 403 285" zoomAndPan="magnify" preserveAspectRatio="none" width="403px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:403px;height:285px;background:#FFFFFF;" version="1.1" height="285px"><defs></defs><g><line y1="81.2969" x1="61" y2="204.9609" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="354" y2="204.9609" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="354"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="216.9561" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="228.7578" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,236.7578 L61.5,263.7578 M48.5,244.7578 L74.5,244.7578 M61.5,263.7578 L48.5,278.7578 M61.5,263.7578 L74.5,278.7578 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="307" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="354.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M354.5,21.5 L354.5,48.5 M341.5,29.5 L367.5,29.5 M354.5,48.5 L341.5,63.5 M354.5,48.5 L367.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="307" font-size="14" textLength="89" y="216.9561" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="354.5" cy="228.7578" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M354.5,236.7578 L354.5,263.7578 M341.5,244.7578 L367.5,244.7578 M354.5,263.7578 L341.5,278.7578 M354.5,263.7578 L367.5,278.7578 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="342.5,123.5625,352.5,127.5625,342.5,131.5625,346.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="348.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="109" y="107.3638" font-family="sans-serif" fill="#000000">Extraction_Offres</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="168" y="122.4966" font-family="sans-serif" fill="#000000">(via critères de recherche)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,182.9609,62.5,186.9609,72.5,190.9609,68.5,186.9609"></polygon><line y1="186.9609" x1="66.5" y2="186.9609" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="353.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="198" y="166.7622" font-family="sans-serif" fill="#000000">(attributs demandés des offres</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="265" y="181.895" font-family="sans-serif" fill="#000000">opérationnelles et les organisations liées)</text></g></svg></div>
+        </td>        
+    </tr>
+    <tr>
+        <td align="center">
+            <b> Extraction complète de l'offre</b>
+        </td>
+        <td align="center">
+            <b>Extraction partielle de l'offre</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios-1">Scénarios</h4>
+
+<ul>
+  <li>Scénario 1 : Extraction complète synchrone
+    <ul>
+      <li>Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national.</li>
+    </ul>
+  </li>
+  <li>Scénario 1 bis&nbsp;: Extraction complète asynchrone
+    <ul>
+      <li>Un consommateur souhaite mettre à jour toutes les offres de santé sur le périmètre national de manière asynchrone (pour une question de performance et de volumétrie).</li>
+    </ul>
+  </li>
+  <li>Scénario 1 ter&nbsp;: Extraction complète asynchrone par région
+    <ul>
+      <li>Un consommateur souhaite mettre à jour toutes les offres de santé sur un périmètre régional de manière asynchrone (pour une question de performance et de volumétrie). Il réalise donc une extraction complète de l’offre régionale.</li>
+    </ul>
+  </li>
+  <li>Scénario 2&nbsp;: Extraction de l’ensemble des offres de santé d’un établissement
+    <ul>
+      <li>Un consommateur souhaite rechercher l'offre de santé proposée par un établissement.</li>
+    </ul>
+  </li>
+  <li>Scénario 3&nbsp;: Extraction d’une offre de santé identifiée
+    <ul>
+      <li>Un consommateur souhaite rechercher une offre de santé à partir de son identifiant.</li>
+    </ul>
+  </li>
+  <li>Scénario 4&nbsp;: Extraction à partir d’une date de mise à jour de l’offre opérationnelle
+    <ul>
+      <li>Un consommateur souhaite mettre à jour toute l'offre mise à jour depuis une certaine date précisée par le consommateur.</li>
+    </ul>
+  </li>
+  <li>Scénario 5&nbsp;: Extraction à partir d’une date de mise à jour de l’entité géographique
+    <ul>
+      <li>Un consommateur souhaite mettre à jour toute l'offre dont l’entité géographique est mise à jour depuis une certaine date.</li>
+    </ul>
+  </li>
+  <li>Scénario 6&nbsp;: Extraction à partir d’une date de mise à jour d’un des éléments de l’offre
+    <ul>
+      <li>Un consommateur souhaite par exemple mettre à jour dans son système toute l’offre mise à jour depuis une certaine date ou dont l’organisation est mise à jour depuis une certaine date.</li>
+    </ul>
+  </li>
+  <li>Scénario 7&nbsp;: Extraction de l’offre sur un périmètre limité
+    <ul>
+      <li>Un consommateur souhaite mettre à jour toute l'offre de santé d'une région. Comme il n'utilise qu’un sous-ensemble des informations de l'offre, il souhaite ne recevoir que ces informations.</li>
+    </ul>
+  </li>
+  <li>Scénario 8 : Extraction d’une offre de santé identifiée avec anomalie
+    <ul>
+      <li>Un consommateur souhaite rechercher une offre de santé à partir de son identifiant et consulter les anomalies associées si elle sont existantes.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_2.html">ici</a></strong></p>
+
+<h3 id="recherche-doffre-sur-critères-principaux">Recherche d’offre sur critères principaux</h3>
+
+<h4 id="description-du-cas-dusage-2">Description du cas d’usage</h4>
+
+<p>Un consommateur cherche des offres opérationnelles à partir de critère(s) de recherche.</p>
+
+<p>Le consommateur renseigne son (ses) critère(s) de recherche parmi les critères disponibles.</p>
+
+<p>Le ROR National répond au consommateur les offres opérationnelles correspondant aux critères de recherche et toutes les classes liées à l’offre opérationnelle.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 646 270" zoomAndPan="magnify" preserveAspectRatio="none" width="646px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:646px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="597" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="597"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="550" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="597.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M597.5,21.5 L597.5,48.5 M584.5,29.5 L610.5,29.5 M597.5,48.5 L584.5,63.5 M597.5,48.5 L610.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="550" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="597.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M597.5,221.625 L597.5,248.625 M584.5,229.625 L610.5,229.625 M597.5,248.625 L584.5,263.625 M597.5,248.625 L610.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="585.5,123.5625,595.5,127.5625,585.5,131.5625,589.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="591.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="112" y="107.3638" font-family="sans-serif" fill="#000000">Recherche_Offres</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="168" y="122.4966" font-family="sans-serif" fill="#000000">(via critères de recherche)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="596.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="508" y="166.7622" font-family="sans-serif" fill="#000000">(offres opérationnelles et toutes les classes liées = tout le modèle d'exposition)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Recherche offre</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios-2">Scénarios</h4>
+
+<ul>
+  <li>Scenario 1 : Recherche sur un critère en saisissant une valeur
+    <ul>
+      <li>Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’unique valeur recherchée par le consommateur.</li>
+    </ul>
+  </li>
+  <li>Scenario 2 : Recherche sur un critère en saisissant une liste de valeurs
+    <ul>
+      <li>Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l’une des valeurs recherchées par le consommateur.</li>
+    </ul>
+  </li>
+  <li>Scenario 3 : Recherche multicritères #1 – ET
+    <ul>
+      <li>Un consommateur cherche les offres ayant un type d’offre <strong>ET</strong> une modalité d’accueil qu’il indique.</li>
+    </ul>
+  </li>
+  <li>Scenario 4 : Recherche multicritères #2 – OU
+    <ul>
+      <li>Un consommateur cherche les offres ayant un type d’offre <strong>OU</strong> une activité opérationnelle qu’il indique pour un patient d’âge donné.</li>
+    </ul>
+  </li>
+  <li>Scenario 5&nbsp;: Recherche multicritères #3 – ET/OU
+    <ul>
+      <li>Un consommateur recherche les offres ayant (une catégorie d’établissement <strong>OU</strong> un type d’offre) <strong>ET</strong> un acte spécifique qu’il indique.</li>
+    </ul>
+  </li>
+  <li>Scenario 6 : Recherche à proximité géographique
+    <ul>
+      <li>Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d’un patient.</li>
+    </ul>
+  </li>
+  <li>Scenario 7 : Recherche sur une zone d’intervention
+    <ul>
+      <li>Un consommateur cherche les offres ayant un type d’offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d’une zone d’intervention.</li>
+    </ul>
+  </li>
+  <li>Scenario 8 : Recherche sur un département
+    <ul>
+      <li>Un consommateur recherche les offres ayant une catégorie d’organisation, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).</li>
+    </ul>
+  </li>
+  <li>Scenario 9 : Recherche sur une ville #1 – Code Postal
+    <ul>
+      <li>Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).</li>
+    </ul>
+  </li>
+  <li>Scenario 10 : Recherche sur une ville #2 – Code commune
+    <ul>
+      <li>Un consommateur recherche les offres proposant une activité opérationnelle particulière et un mode de prise en charge particulier, sur une ville, ou un ensemble de villes (code commune).</li>
+    </ul>
+  </li>
+  <li>Scenario 11 : Recherche sur un critère du modèle d’exposition 3.0
+    <ul>
+      <li>Un consommateur recherche les offres proposant une compétence spécifique.</li>
+    </ul>
+  </li>
+  <li>Scenario 12 : Recherche d’offre en anomalie
+    <ul>
+      <li>Un responsable qualité recherche les offres en anomalie de sa région.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_3.html">ici</a></strong></p>
+
+<h3 id="recherche-doffre-avec-données-capacitaires">Recherche d’offre avec données capacitaires</h3>
+
+<h4 id="description-du-cas-dusage-3">Description du cas d’usage</h4>
+
+<p>Un consommateur cherche les capacités des lieux de réalisation de l’offre à partir de critère(s) de recherche.</p>
+
+<p>Le consommateur renseigne son (ses) critère(s) de recherche parmi les critères disponibles.</p>
+
+<p>Le ROR National répond au consommateur les offres opérationnelles correspondant aux critères de recherche et les lieux de réalisation de l’offre liés.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 580 270" zoomAndPan="magnify" preserveAspectRatio="none" width="580px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:580px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="531" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="531"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="484" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="531.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M531.5,21.5 L531.5,48.5 M518.5,29.5 L544.5,29.5 M531.5,48.5 L518.5,63.5 M531.5,48.5 L544.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="484" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="531.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M531.5,221.625 L531.5,248.625 M518.5,229.625 L544.5,229.625 M531.5,248.625 L518.5,263.625 M531.5,248.625 L544.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="519.5,123.5625,529.5,127.5625,519.5,131.5625,523.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="525.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="112" y="107.3638" font-family="sans-serif" fill="#000000">Recherche_Offres</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="442" y="122.4966" font-family="sans-serif" fill="#000000">(capacités des lieux de réalisation de l'offre via critères de recherche)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="530.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="426" y="166.7622" font-family="sans-serif" fill="#000000">(offres opérationnelles et tous les lieux de réalisation de l'offre liés)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Recherche offre avec données capacitaires</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios-3">Scénarios</h4>
+
+<ul>
+  <li>Scenario 1 : Recherche sur un critère capacitaire #1
+    <ul>
+      <li>Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.</li>
+    </ul>
+  </li>
+  <li>Scenario 2 : Recherche sur un critère capacitaire #2
+    <ul>
+      <li>Un consommateur cherche les offres pour une activité opérationnelle donnée, et un capacitaire respectant certaines caractéristiques.</li>
+    </ul>
+  </li>
+  <li>Scenario 3 : Recherche sur un critère de l’équipement
+    <ul>
+      <li>Un consommateur cherche une offre pour une activité opérationnelle donnée, et disposant d’équipement respectant certaines caractéristiques.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_4.html">ici</a></strong></p>
+
+<h3 id="recherche-doffre-sur-la-base-dinformations-tarifaires">Recherche d’offre sur la base d’informations tarifaires</h3>
+
+<h4 id="description-du-cas-dusage-4">Description du cas d’usage</h4>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 510 270" zoomAndPan="magnify" preserveAspectRatio="none" width="510px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:510px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="461" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="461"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="414" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="461.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M461.5,21.5 L461.5,48.5 M448.5,29.5 L474.5,29.5 M461.5,48.5 L448.5,63.5 M461.5,48.5 L474.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="414" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="461.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M461.5,221.625 L461.5,248.625 M448.5,229.625 L474.5,229.625 M461.5,248.625 L448.5,263.625 M461.5,248.625 L474.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="449.5,123.5625,459.5,127.5625,449.5,131.5625,453.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="455.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="112" y="107.3638" font-family="sans-serif" fill="#000000">Recherche_Offres</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="312" y="122.4966" font-family="sans-serif" fill="#000000">(informations tarifaires via critères de recherche)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="460.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="372" y="166.7622" font-family="sans-serif" fill="#000000">(offres opérationnelles et lieux de réalisation de l'offre liés)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Recherche d'offre sur la base d'informations tarifaires (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<p>Le consommateur renseigne si besoin son (ses) critère(s) de recherche parmi les critères disponibles.</p>
+
+<p>Le ROR National répond au consommateur les offres opérationnelles correspondant aux critères de recherche et les lieux de réalisation de l’offre liés.</p>
+
+<h4 id="scénarios-4">Scénarios</h4>
+
+<ul>
+  <li>Scénario 1&nbsp;: Recherche sur critères tarifaires #1
+    <ul>
+      <li>Un consommateur recherche les offres d’établissements dont
+ le type de tarifs = 02 | forfait socle hébergement, le montant est inférieur à X euros, pour la date de début de validité la plus récente.</li>
+    </ul>
+  </li>
+  <li>Scénario 2&nbsp;: Recherche sur critères tarifaires #2
+    <ul>
+      <li>Un consommateur recherche les offres d’établissements dont le type de tarif = 02 | forfait socle hébergement, le montant est inférieur ou égal à X euros, le type habitation = 03 | F1, les conditions tarifaires = 03 | tarif agréé ASH.</li>
+    </ul>
+  </li>
+  <li>Scénario 3&nbsp;: Recherche sur critères tarifaires #3
+    <ul>
+      <li>Un consommateur recherche les offres d’établissements dont le type de tarifs = 03 | dépendance, le montant est inférieur à X euros, le niveau de dépendance = 02 | GIR 3-4, la temporalité d'accueil (au niveau du tarif, pas de l'offre opérationnelle) = 02 | permanent.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_8.html">ici</a></strong></p>
+
+<h3 id="recherche-doffre-via-une-technique-full-text">Recherche d’offre via une technique «&nbsp;Full text&nbsp;»</h3>
+
+<h4 id="description-du-cas-dusage-5">Description du cas d’usage</h4>
+
+<p>Un consommateur recherche une chaine de caractères libre dans le contenu textuel des offres opérationnelles ou des classes liées.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 454 270" zoomAndPan="magnify" preserveAspectRatio="none" width="454px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:454px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="405" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="405"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="358" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="405.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M405.5,21.5 L405.5,48.5 M392.5,29.5 L418.5,29.5 M405.5,48.5 L392.5,63.5 M405.5,48.5 L418.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="358" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="405.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M405.5,221.625 L405.5,248.625 M392.5,229.625 L418.5,229.625 M405.5,248.625 L392.5,263.625 M405.5,248.625 L418.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="393.5,123.5625,403.5,127.5625,393.5,131.5625,397.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="399.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="122" y="107.3638" font-family="sans-serif" fill="#000000">Recherche_FullText</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="236" y="122.4966" font-family="sans-serif" fill="#000000">(via le critère de recherche _content)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="404.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="316" y="166.7622" font-family="sans-serif" fill="#000000">(offres opérationnelles et toutes les classes liées)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Recherche «&nbsp;Full text&nbsp;» (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<p>Le consommateur renseigne la chaine de caractères qu’il recherche.</p>
+
+<p>Le ROR National répond au consommateur les offres opérationnelles correspondant à la recherche et toutes les classes liées à l’offre opérationnelle.</p>
+
+<h4 id="scénarios-5">Scénarios</h4>
+
+<ul>
+  <li>Scénario 1&nbsp;: Recherche des offres opérationnelles référençant le texte "cardio"
+    <ul>
+      <li>Un consommateur recherche les offres opérationnelles contenant une chaine de caractères libre («&nbsp;cardio&nbsp;» par exemple).</li>
+    </ul>
+  </li>
+  <li>Scénario 2&nbsp;: Recherche des offres opérationnelles ou des lieux de réalisation de l’offre référençant le texte "cardio"
+    <ul>
+      <li>Un consommateur recherche les offres opérationnelles ou les lieux de réalisation de l’offre liés contenant une chaine de caractères libre («&nbsp;cardio&nbsp;» par exemple).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_9.html">ici</a></strong></p>
+
+<h3 id="création-et-mise-à-jour-du-lieu-de-réalisation-de-loffre">Création et Mise à jour du lieu de réalisation de l’offre</h3>
+
+<h4 id="description-du-cas-dusage-création-du-lieu-de-réalisation-de-loffre">Description du cas d’usage&nbsp;: création du lieu de réalisation de l’offre</h4>
+
+<p>Un établissement souhaite créer un lieu de réalisation de l’offre (dont les données capacitaires).</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 333 270" zoomAndPan="magnify" preserveAspectRatio="none" width="333px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:333px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="57" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="57"></line><line y1="81.2969" x1="284.5" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="284.5"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="98" y="77.9951" font-family="sans-serif" fill="#000000">Etablissement</text><ellipse cx="57" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M57,21.5 L57,48.5 M44,29.5 L70,29.5 M57,48.5 L44,63.5 M57,48.5 L70,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="98" y="201.8232" font-family="sans-serif" fill="#000000">Etablissement</text><ellipse cx="57" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M57,221.625 L57,248.625 M44,229.625 L70,229.625 M57,248.625 L44,263.625 M57,248.625 L70,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="237.5" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="285" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M285,21.5 L285,48.5 M272,29.5 L298,29.5 M285,48.5 L272,63.5 M285,48.5 L298,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="237.5" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="285" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M285,221.625 L285,248.625 M272,229.625 L298,229.625 M285,248.625 L272,263.625 M285,248.625 L298,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="273,123.5625,283,127.5625,273,131.5625,277,127.5625"></polygon><line y1="127.5625" x1="57" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="279"></line><text lengthAdjust="spacing" x="64" font-size="13" textLength="187" y="107.3638" font-family="sans-serif" fill="#000000">Creation_LieuRealisationOffre</text><text lengthAdjust="spacing" x="68" font-size="13" textLength="141" y="122.4966" font-family="sans-serif" fill="#000000">(données de création)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="68,167.8281,58,171.8281,68,175.8281,64,171.8281"></polygon><line y1="171.8281" x1="62" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="284"></line><text lengthAdjust="spacing" x="74" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="78" font-size="13" textLength="200" y="166.7622" font-family="sans-serif" fill="#000000">(contenu + id + métadonnées)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Création du lieu de réalisation de l'offre (modèle expo
+V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<p>L’établissement renseigne les informations nécessaires à l’initialisation du lieu de réalisation de l’offre.</p>
+
+<p>Le ROR National répond à l’établissement toutes les informations saisie, l’identifiant technique et les métadonnées.</p>
+
+<p>Remarque&nbsp;: Après la création du lieu de réalisation de l’offre, il est nécessaire de mettre à jour l’offre pour la rattacher à ce nouveau lieu.</p>
+
+<h4 id="description-du-cas-dusage-mise-à-jour-du-lieu-de-réalisation-de-loffre">Description du cas d’usage&nbsp;: mise à jour du lieu de réalisation de l’offre</h4>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 455 270" zoomAndPan="magnify" preserveAspectRatio="none" width="455px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:455px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="57" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="57"></line><line y1="81.2969" x1="406.5" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="406.5"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="98" y="77.9951" font-family="sans-serif" fill="#000000">Etablissement</text><ellipse cx="57" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M57,21.5 L57,48.5 M44,29.5 L70,29.5 M57,48.5 L44,63.5 M57,48.5 L70,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="98" y="201.8232" font-family="sans-serif" fill="#000000">Etablissement</text><ellipse cx="57" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M57,221.625 L57,248.625 M44,229.625 L70,229.625 M57,248.625 L44,263.625 M57,248.625 L70,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="359.5" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="407" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M407,21.5 L407,48.5 M394,29.5 L420,29.5 M407,48.5 L394,63.5 M407,48.5 L420,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="359.5" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="407" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M407,221.625 L407,248.625 M394,229.625 L420,229.625 M407,248.625 L394,263.625 M407,248.625 L420,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="395,123.5625,405,127.5625,395,131.5625,399,127.5625"></polygon><line y1="127.5625" x1="57" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="401"></line><text lengthAdjust="spacing" x="64" font-size="13" textLength="195" y="107.3638" font-family="sans-serif" fill="#000000">MiseAJour_LieuRealisationOffre</text><text lengthAdjust="spacing" x="68" font-size="13" textLength="210" y="122.4966" font-family="sans-serif" fill="#000000">(via id + informations à modifier)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="68,167.8281,58,171.8281,68,175.8281,64,171.8281"></polygon><line y1="171.8281" x1="62" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="406"></line><text lengthAdjust="spacing" x="74" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="78" font-size="13" textLength="322" y="166.7622" font-family="sans-serif" fill="#000000">(id, identifiant fonctionnel et métadonnées du lieu)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Mise à jour du lieu de réalisation de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<p><a name="l1654">​</a>L’établissement renseigne l’identifiant technique du lieu de réalisation de l’offre à mettre à jour et les informations à modifier (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition-ror-location.html">voir description du lieu de réalisation de l’offre</a>).</p>
+
+<p>Le ROR National répond à l’établissement, au moins, l’identifiant technique, les métadonnées et l’identifiant fonctionnel du lieu de réalisation de l’offre mis à jour.</p>
+
+<h4 id="scénarios-6">Scénarios</h4>
+
+<ul>
+  <li>[spécifique serveur] Scénario 1&nbsp;: Ajout d’un lieu de réalisation de l’offre
+    <ul>
+      <li>Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l'offre de fonction "001 | hébergement", associé à une offre opérationnelle existante, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 2&nbsp;: Ajout d’une capacité de prise en charge
+    <ul>
+      <li>Un établissement (via bed management, ...) ajoute dans un lieu de réalisation de l'offre existant, des données capacitaires pour&nbsp;: une affectation temporaire "Covid +", 2 lits disponibles (sexe indifférencié), à t0.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 3&nbsp;: Suppression d’une capacité d’accueil opérationnelle
+    <ul>
+      <li>Un établissement (via bed management, …) supprime dans un lieu de réalisation de l'offre existant tous les enregistrements liés à l'affectation temporaire "Covid-".</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 4&nbsp;: Mise à jour de l’adresse du lieu de réalisation de l’offre
+    <ul>
+      <li>Un établissement modifie le numéro de voie de l’adresse du lieu de réalisation de l’offre.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 5&nbsp;: Ajout d’un équipement spécifique dans un lieu de réalisation de l’offre
+    <ul>
+      <li>Un établissement ajout un équipement spécifique dans un lieu de réalisation de l’offre&nbsp;: 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 6&nbsp;: Modification de la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre
+    <ul>
+      <li>Un établissement modifie la quantité d’équipements spécifiques dans un lieu de réalisation de l’offre&nbsp;: 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 | poids maximum, valeur limite = 300 kg.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 7&nbsp;: Suppression d’un équipement spécifique dans un lieu de réalisation de l’offre
+    <ul>
+      <li>Un établissement indique qu’il ne dispose plus de l’échographe 3D, il modifie la quantité d’équipement en service&nbsp;: 030 | Echographe 3D, nb en service : 0, aucune limite équipement associée.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 8&nbsp;: Modification de la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre
+    <ul>
+      <li>Un établissement modifie la valeur limite d’un équipement spécifique dans un lieu de réalisation de l’offre : 089 | lit d'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 | poids maximum, valeur limite = 280 kg.</li>
+    </ul>
+  </li>
+  <li>[solutions BedManagement] Scénario 9 : Remplacement de toutes les données capacitaires
+    <ul>
+      <li>Un établissement remplace toutes les données capacitaires (les anciennes données sont écrasées par les nouvelles).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_10.html">ici</a></strong></p>
+
+<h3 id="consignes-fiche-de-saisie-de-loffre">Consignes fiche de saisie de l’offre</h3>
+
+<h4 id="description-du-cas-dusage-création-des-consignes-de-fiche-de-saisie-de-loffre">Description du cas d’usage&nbsp;: création des consignes de fiche de saisie de l’offre</h4>
+
+<p>Un serveur souhaite créer les consignes de fiche de saisie de l’offre.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 316 270" zoomAndPan="magnify" preserveAspectRatio="none" width="316px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:316px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="34" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="34"></line><line y1="81.2969" x1="267" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="267"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="53" y="77.9951" font-family="sans-serif" fill="#000000">Serveur</text><ellipse cx="34.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M34.5,21.5 L34.5,48.5 M21.5,29.5 L47.5,29.5 M34.5,48.5 L21.5,63.5 M34.5,48.5 L47.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="53" y="201.8232" font-family="sans-serif" fill="#000000">Serveur</text><ellipse cx="34.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M34.5,221.625 L34.5,248.625 M21.5,229.625 L47.5,229.625 M34.5,248.625 L21.5,263.625 M34.5,248.625 L47.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="220" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="267.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M267.5,21.5 L267.5,48.5 M254.5,29.5 L280.5,29.5 M267.5,48.5 L254.5,63.5 M267.5,48.5 L280.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="220" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="267.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M267.5,221.625 L267.5,248.625 M254.5,229.625 L280.5,229.625 M267.5,248.625 L254.5,263.625 M267.5,248.625 L280.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="255.5,123.5625,265.5,127.5625,255.5,131.5625,259.5,127.5625"></polygon><line y1="127.5625" x1="34.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="261.5"></line><text lengthAdjust="spacing" x="41.5" font-size="13" textLength="205" y="107.3638" font-family="sans-serif" fill="#000000">Creation_consignes_fiche_saisie</text><text lengthAdjust="spacing" x="45.5" font-size="13" textLength="141" y="122.4966" font-family="sans-serif" fill="#000000">(données de création)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="45.5,167.8281,35.5,171.8281,45.5,175.8281,41.5,171.8281"></polygon><line y1="171.8281" x1="39.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="266.5"></line><text lengthAdjust="spacing" x="51.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="55.5" font-size="13" textLength="200" y="166.7622" font-family="sans-serif" fill="#000000">(contenu + id + métadonnées)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Création des consignes fiche de saisie de l'offre (modèle expo
+V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="description-du-cas-dusage-récupération-des-fiches-de-saisie-de-loffre">Description du cas d’usage&nbsp;: récupération des fiches de saisie de l’offre</h4>
+
+<p>Un consommateur souhaite rechercher et récupérer les consignes de fiche de saisie de l’offre.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 394 270" zoomAndPan="magnify" preserveAspectRatio="none" width="394px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:394px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="345" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="345"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="298" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="345.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M345.5,21.5 L345.5,48.5 M332.5,29.5 L358.5,29.5 M345.5,48.5 L332.5,63.5 M345.5,48.5 L358.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="298" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="345.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M345.5,221.625 L345.5,248.625 M332.5,229.625 L358.5,229.625 M345.5,248.625 L332.5,263.625 M345.5,248.625 L358.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="333.5,123.5625,343.5,127.5625,333.5,131.5625,337.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="339.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="218" y="107.3638" font-family="sans-serif" fill="#000000">Recherche_consignes_fiche_saisie</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="256" y="122.4966" font-family="sans-serif" fill="#000000">(Recherche consignes fiche(s) de saisie)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="344.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="188" y="166.7622" font-family="sans-serif" fill="#000000">(Fiche(s) consignes de saisie)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Recherche fiche de saisie de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios-7">Scénarios</h4>
+
+<ul>
+  <li>[spécifique serveur] Scénario 1 : Création d’une fiche de consignes de saisie
+    <ul>
+      <li>Un consommateur souhaite créer une nouvelle fiche de consignes de saisie pour un cabinet de ville de médecine générale.</li>
+    </ul>
+  </li>
+  <li>Scénario 2&nbsp;: Un consommateur souhaite récupérer l’ensemble des fiches
+    <ul>
+      <li>Un consommateur souhaite récupérer l’ensemble des fiches.</li>
+    </ul>
+  </li>
+  <li>Scénario 3 : Un consommateur souhaite récupérer une fiche
+    <ul>
+      <li>Un consommateur souhaite récupérer une fiche.</li>
+    </ul>
+  </li>
+  <li>Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
+    <ul>
+      <li>Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ces cas d’usage sont accessibles <a href="consignes_fiche_saisie_offre.html">ici</a></strong></p>
+
+<h3 id="saisie-de-loffre">Saisie de l’offre</h3>
+
+<h4 id="description-du-cas-dusage-saisie-de-loffre">Description du cas d’usage&nbsp;: Saisie de l’offre</h4>
+
+<p>Un serveur souhaite créer une offre.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 311 270" zoomAndPan="magnify" preserveAspectRatio="none" width="311px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:311px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="34" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="34"></line><line y1="81.2969" x1="262" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="262"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="53" y="77.9951" font-family="sans-serif" fill="#000000">Serveur</text><ellipse cx="34.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M34.5,21.5 L34.5,48.5 M21.5,29.5 L47.5,29.5 M34.5,48.5 L21.5,63.5 M34.5,48.5 L47.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="53" y="201.8232" font-family="sans-serif" fill="#000000">Serveur</text><ellipse cx="34.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M34.5,221.625 L34.5,248.625 M21.5,229.625 L47.5,229.625 M34.5,248.625 L21.5,263.625 M34.5,248.625 L47.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="215" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="262.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M262.5,21.5 L262.5,48.5 M249.5,29.5 L275.5,29.5 M262.5,48.5 L249.5,63.5 M262.5,48.5 L275.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="215" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="262.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M262.5,221.625 L262.5,248.625 M249.5,229.625 L275.5,229.625 M262.5,248.625 L249.5,263.625 M262.5,248.625 L275.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="250.5,123.5625,260.5,127.5625,250.5,131.5625,254.5,127.5625"></polygon><line y1="127.5625" x1="34.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="256.5"></line><text lengthAdjust="spacing" x="41.5" font-size="13" textLength="92" y="107.3638" font-family="sans-serif" fill="#000000">Creation_Offre</text><text lengthAdjust="spacing" x="45.5" font-size="13" textLength="141" y="122.4966" font-family="sans-serif" fill="#000000">(données de création)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="45.5,167.8281,35.5,171.8281,45.5,175.8281,41.5,171.8281"></polygon><line y1="171.8281" x1="39.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="261.5"></line><text lengthAdjust="spacing" x="51.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="55.5" font-size="13" textLength="200" y="166.7622" font-family="sans-serif" fill="#000000">(contenu + id + métadonnées)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Saisie de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<p>Le serveur renseigne les informations nécessaires à l’initialisation de l’offre.</p>
+
+<p>Le ROR National répond à l’établissement toutes les informations saisie, l’identifiant technique et les métadonnées.</p>
+
+<h4 id="scénarios-8">Scénarios</h4>
+
+<ul>
+  <li>[spécifique serveur] Scénario 1&nbsp;: Création de l’entité juridique d’un établissement
+    <ul>
+      <li>Afin de décrire son offre, un établissement crée son entité juridique.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 2&nbsp;: Création de l’entité géographique d’un établissement
+    <ul>
+      <li>Afin de décrire son offre, un établissement crée son entité géographique.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 3&nbsp;: Création d’une offre opérationnelle directement rattachée à l’établissement
+    <ul>
+      <li>Un établissement ajoute une offre opérationnelle couvrant une autre zone d’intervention que les offres opérationnelles précédemment enregistrées.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 4&nbsp;: Création d’un pôle
+    <ul>
+      <li>Afin de décrire son offre, un établissement crée un pôle.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 5&nbsp;: Création d’un service
+    <ul>
+      <li>Afin de décrire son offre, un établissement crée un service.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 6&nbsp;: Création d’une unité fonctionnelle
+    <ul>
+      <li>Afin de décrire son offre, un établissement crée une unité fonctionnelle.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 7&nbsp;: Création d’une offre opérationnelle dans une unité fonctionnelle préexistante
+    <ul>
+      <li>Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 8&nbsp;: Création d’une offre opérationnelle de ville
+    <ul>
+      <li>A la suite d’un adossement à l’annuaire, le ROR national crée l’offre opérationnelle d’un cabinet de ville.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 9&nbsp;: Création d’un professionnel
+    <ul>
+      <li>Afin de décrire son offre, un établissement ajoute un professionnel.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 10&nbsp;: Création d’une situation opérationnelle
+    <ul>
+      <li>Afin de décrire son offre, un établissement ajoute une situation opérationnelle.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="saisie_offre.html">ici</a></strong></p>
+
+<h3 id="mise-à-jour-de-loffre">Mise à jour de l’offre</h3>
+
+<h4 id="description-du-cas-dusage-mise-à-jour-de-loffre">Description du cas d’usage&nbsp;: Mise à jour de l’offre</h4>
+
+<p>Un serveur ou un consommateur souhaite mettre à jour une offre.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 452 270" zoomAndPan="magnify" preserveAspectRatio="none" width="452px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:452px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="100" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="100"></line><line y1="81.2969" x1="403.5" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="403.5"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="184" y="77.9951" font-family="sans-serif" fill="#000000">Serveur ou consommateur</text><ellipse cx="100" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M100,21.5 L100,48.5 M87,29.5 L113,29.5 M100,48.5 L87,63.5 M100,48.5 L113,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="184" y="201.8232" font-family="sans-serif" fill="#000000">Serveur ou consommateur</text><ellipse cx="100" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M100,221.625 L100,248.625 M87,229.625 L113,229.625 M100,248.625 L87,263.625 M100,248.625 L113,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="356.5" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="404" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M404,21.5 L404,48.5 M391,29.5 L417,29.5 M404,48.5 L391,63.5 M404,48.5 L417,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="356.5" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="404" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M404,221.625 L404,248.625 M391,229.625 L417,229.625 M404,248.625 L391,263.625 M404,248.625 L417,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="392,123.5625,402,127.5625,392,131.5625,396,127.5625"></polygon><line y1="127.5625" x1="100" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="398"></line><text lengthAdjust="spacing" x="107" font-size="13" textLength="100" y="107.3638" font-family="sans-serif" fill="#000000">MiseAJour_Offre</text><text lengthAdjust="spacing" x="111" font-size="13" textLength="210" y="122.4966" font-family="sans-serif" fill="#000000">(via id + informations à modifier)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="111,167.8281,101,171.8281,111,175.8281,107,171.8281"></polygon><line y1="171.8281" x1="105" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="403"></line><text lengthAdjust="spacing" x="117" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="121" font-size="13" textLength="276" y="166.7622" font-family="sans-serif" fill="#000000">(id, identifiant fonctionnel et métadonnées)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Mise à jour de l'offre (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<p>Le serveur ou le consommateur renseigne l’identifiant technique de l’offre à mettre à jour et les informations à modifier.</p>
+
+<p>Le ROR National répond à l’établissement, au moins, l’identifiant technique, les métadonnées et l’identifiant fonctionnel de l’offre mise à jour.</p>
+
+<h4 id="scénarios-9">Scénarios</h4>
+
+<ul>
+  <li>[spécifique serveur] Scénario 1&nbsp;: Modification d’une entité juridique
+    <ul>
+      <li>Une entité juridique enregistre un changement d’adresse.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 2&nbsp;: Modification d’une entité géographique
+    <ul>
+      <li>Une entité géographique enregistre un changement de numéro de téléphone et ajoute un contact.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 3&nbsp;: Modification d’une organisation interne
+    <ul>
+      <li>Un établissement sanitaire modifie le nom d’un service.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 4&nbsp;: Modification d’informations sur un professionnel
+    <ul>
+      <li>L’annuaire modifie les informations concernant un professionnel, l’adossement ROR national modifie les informations du professionnel.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 5&nbsp;: Modification d’informations sur une situation opérationnelle
+    <ul>
+      <li>L’annuaire enrichit le savoir faire d’un professionnel de santé, l’adossement du ROR national modifie les informations de la situation opérationnelle.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 6&nbsp;: Modification d’une offre opérationnelle (Ajout d’un acte spécifique)
+    <ul>
+      <li>Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 7&nbsp;: Modification d’une offre opérationnelle (Retrait d’une activité opérationnelle)
+    <ul>
+      <li>Un établissement retire une activité opérationnelle au sein d’une offre opérationnelle déjà décrite au sein d’une structure.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 8&nbsp;: Modification d’une offre opérationnelle (Précision sur l’offre opérationnelle d’un cabinet de ville)
+    <ul>
+      <li>Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d’activité opérationnelle et d’acte spécifique.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 9&nbsp;: Modification d’une offre opérationnelle (Rattachement d’un professionnel de santé)
+    <ul>
+      <li>Pour enregistrer le rattachement d’un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.</li>
+    </ul>
+  </li>
+  <li>[spécifique serveur] Scénario 10&nbsp;: Modification de multiples informations sur une offre
+    <ul>
+      <li>Un utilisateur ajoute une activité opérationnelle, un acte spécifique, un contact avec son numéro et modifie ses horaires.</li>
+    </ul>
+  </li>
+  <li>Scénario 11&nbsp;: Ajout d’un lieu de réalisation de l’offre
+    <ul>
+      <li>Un utilisateur ajoute un lieu de réalisation de l’offre dans une offre opérationnelle existante.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="miseAjour_offre.html">ici</a></strong></p>
+
+<h3 id="signalement-danomalie">Signalement d’anomalie</h3>
+
+<h4 id="description-du-cas-dusage-6">Description du cas d’usage</h4>
+
+<p>Un consommateur souhaite signaler une ou plusieurs anomalies qualité sur un élément du modèle d’exposition du ROR.</p>
+
+<p>Le consommateur renseigne les informations de l’anomalie à signaler, en précisant à minima les éléments obligatoires. (voir description de la <a href="StructureDefinition-ror-task.html">ressource</a>).
+Le ROR National répond au consommateur l’identifiant technique, les métadonnées et l’identifiant fonctionnel de l’anomalie créée.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 605 270" zoomAndPan="magnify" preserveAspectRatio="none" width="605px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:605px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="556" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="556"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="509" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="556.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M556.5,21.5 L556.5,48.5 M543.5,29.5 L569.5,29.5 M556.5,48.5 L543.5,63.5 M556.5,48.5 L569.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="509" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="556.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M556.5,221.625 L556.5,248.625 M543.5,229.625 L569.5,229.625 M556.5,248.625 L543.5,263.625 M556.5,248.625 L569.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="544.5,123.5625,554.5,127.5625,544.5,131.5625,548.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="550.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="148" y="107.3638" font-family="sans-serif" fill="#000000">Signalement_Anomalie</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="175" y="122.4966" font-family="sans-serif" fill="#000000">(via informations anomalie)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="555.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="467" y="166.7622" font-family="sans-serif" fill="#000000">(identifiant logique, identifiant fonctionnel et métadonnées de l'anomalie)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Signalement d'anomalie</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios-10">Scénarios</h4>
+
+<ul>
+  <li>Scenario 1 : Signalement d’une anomalie
+    <ul>
+      <li>Un responsable qualité souhaite signaler une anomalie sur un élément.</li>
+    </ul>
+  </li>
+</ul>
+
+  <!-- -
+suppression scenario à la demande du ROR cf issue https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/207 
+-	Scenario 2 : Signalement de plusieurs anomalies
+    -	Un consommateur d'un système tiers souhaite signaler plusieurs anomalies.
+- -->
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_5.html">ici</a></strong></p>
+
+<h3 id="mise-à-jour-danomalie">Mise à jour d’anomalie</h3>
+
+<h4 id="description-du-cas-dusage-7">Description du cas d’usage</h4>
+
+<p>Un service numérique souhaite mettre à jour une ou plusieurs anomalies qualité.</p>
+
+<p>Le service numérique renseigne l’identifiant technique de l’anomalie à mettre à jour et les informations à modifier (voir description de la <a href="StructureDefinition-ror-task.html">ressource</a>).
+Le ROR National retourne au service numérique l’identifiant technique, les métadonnées et l’identifiant fonctionnel a minima de l’anomalie créée.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 616 270" zoomAndPan="magnify" preserveAspectRatio="none" width="616px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:616px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="72" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="72"></line><line y1="81.2969" x1="567" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="567"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="129" y="77.9951" font-family="sans-serif" fill="#000000">Service numérique</text><ellipse cx="72.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M72.5,21.5 L72.5,48.5 M59.5,29.5 L85.5,29.5 M72.5,48.5 L59.5,63.5 M72.5,48.5 L85.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="129" y="201.8232" font-family="sans-serif" fill="#000000">Service numérique</text><ellipse cx="72.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M72.5,221.625 L72.5,248.625 M59.5,229.625 L85.5,229.625 M72.5,248.625 L59.5,263.625 M72.5,248.625 L85.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="520" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="567.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M567.5,21.5 L567.5,48.5 M554.5,29.5 L580.5,29.5 M567.5,48.5 L554.5,63.5 M567.5,48.5 L580.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="520" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="567.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M567.5,221.625 L567.5,248.625 M554.5,229.625 L580.5,229.625 M567.5,248.625 L554.5,263.625 M567.5,248.625 L580.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="555.5,123.5625,565.5,127.5625,555.5,131.5625,559.5,127.5625"></polygon><line y1="127.5625" x1="72.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="561.5"></line><text lengthAdjust="spacing" x="79.5" font-size="13" textLength="129" y="107.3638" font-family="sans-serif" fill="#000000">MiseAjour_Anomalie</text><text lengthAdjust="spacing" x="83.5" font-size="13" textLength="262" y="122.4966" font-family="sans-serif" fill="#000000">(via identifiant + informations à modifier)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="83.5,167.8281,73.5,171.8281,83.5,175.8281,79.5,171.8281"></polygon><line y1="171.8281" x1="77.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="566.5"></line><text lengthAdjust="spacing" x="89.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="93.5" font-size="13" textLength="467" y="166.7622" font-family="sans-serif" fill="#000000">(identifiant logique, identifiant fonctionnel et métadonnées de l'anomalie)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Mise à jour d'anomalie</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios-11">Scénarios</h4>
+
+<ul>
+  <li>Scenario 1 : Mise à jour du statut d’une anomalie
+    <ul>
+      <li>Le responsable de la donnée en anomalie corrige l’anomalie, le responsable qualité ou un système numérique met à jour le statut de l’anomalie.</li>
+    </ul>
+  </li>
+  <li>Scenario 2 : Inactivation d’une anomalie
+    <ul>
+      <li>Un responsable qualité ou un système numérique décide d’inactiver une anomalie (elle a été saisie par erreur par exemple).</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_6.html">ici</a></strong></p>
+
+<h3 id="consultation-danomalie">Consultation d’anomalie</h3>
+
+<h4 id="description-du-cas-dusage-8">Description du cas d’usage</h4>
+
+<p>Un consommateur souhaite consulter une ou plusieurs anomalies qualité.</p>
+
+<p>Le consommateur renseigne si besoin son (ses) critère(s) de recherche parmi les critères disponibles.
+Le ROR National répond au consommateur la ou les anomalies correspondantes aux critères de recherche.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 306 270" zoomAndPan="magnify" preserveAspectRatio="none" width="306px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:306px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="257" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="257"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="210" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="257.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M257.5,21.5 L257.5,48.5 M244.5,29.5 L270.5,29.5 M257.5,48.5 L244.5,63.5 M257.5,48.5 L270.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="210" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="257.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M257.5,221.625 L257.5,248.625 M244.5,229.625 L270.5,229.625 M257.5,248.625 L244.5,263.625 M257.5,248.625 L270.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="245.5,123.5625,255.5,127.5625,245.5,131.5625,249.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="251.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="147" y="107.3638" font-family="sans-serif" fill="#000000">Consultation_Anomalie</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="168" y="122.4966" font-family="sans-serif" fill="#000000">(via critères de recherche)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="256.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="133" y="166.7622" font-family="sans-serif" fill="#000000">(la ou les anomalies)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Consultation d'anomalie</b>
+        </td>
+    </tr>
+</table>
+
+<h4 id="scénarios-12">Scénarios</h4>
+
+<ul>
+  <li>Scenario 1 : Consultation du statut d’une anomalie
+    <ul>
+      <li>Un responsable qualité ou un système numérique consommateur souhaite consulter le statut d’une anomalie.</li>
+    </ul>
+  </li>
+  <li>Scenario 2 : Consultation de la liste des anomalies
+    <ul>
+      <li>Un responsable qualité ou le moteur de règle souhaite consulter la liste des anomalies d’un élément.</li>
+    </ul>
+  </li>
+  <li>Scénario 3 : Consultation de la liste des anomalies sur un périmètre
+    <ul>
+      <li>Un responsable qualité souhaite consulter la liste des anomalies sur son périmètre (région, établissement, département).</li>
+    </ul>
+  </li>
+  <li>Scénario 4 : Consommation de toutes les anomalies
+    <ul>
+      <li>Le BI consomme toutes les anomalies pour faire des tableaux de suivi.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_7.html">ici</a></strong></p>
+
+<h3 id="consultation-dindicateurs-de-pilotage">Consultation d’indicateurs de pilotage</h3>
+
+<h4 id="description-du-cas-dusage-9">Description du cas d’usage</h4>
+
+<p>Un consommateur souhaite consulter des indicateurs de pilotage.</p>
+
+<table align="center">
+    <tr>
+        <td align="center">
+            <div style="text-inlin:center;">  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 346 270" zoomAndPan="magnify" preserveAspectRatio="none" width="346px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:346px;height:270px;background:#FFFFFF;" version="1.1" height="270px"><defs></defs><g><line y1="81.2969" x1="61" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="61"></line><line y1="81.2969" x1="297" y2="189.8281" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="297"></line><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="77.9951" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,21.5 L61.5,48.5 M48.5,29.5 L74.5,29.5 M61.5,48.5 L48.5,63.5 M61.5,48.5 L74.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="5" font-size="14" textLength="107" y="201.8232" font-family="sans-serif" fill="#000000">Consommateur</text><ellipse cx="61.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M61.5,221.625 L61.5,248.625 M48.5,229.625 L74.5,229.625 M61.5,248.625 L48.5,263.625 M61.5,248.625 L74.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="250" font-size="14" textLength="89" y="77.9951" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="297.5" cy="13.5" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M297.5,21.5 L297.5,48.5 M284.5,29.5 L310.5,29.5 M297.5,48.5 L284.5,63.5 M297.5,48.5 L310.5,63.5 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><text lengthAdjust="spacing" x="250" font-size="14" textLength="89" y="201.8232" font-family="sans-serif" fill="#000000">ROR national</text><ellipse cx="297.5" cy="213.625" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0"></ellipse><path d="M297.5,221.625 L297.5,248.625 M284.5,229.625 L310.5,229.625 M297.5,248.625 L284.5,263.625 M297.5,248.625 L310.5,263.625 " style="stroke:#181818;stroke-width:0.5;" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="285.5,123.5625,295.5,127.5625,285.5,131.5625,289.5,127.5625"></polygon><line y1="127.5625" x1="61.5" y2="127.5625" style="stroke:#181818;stroke-width:1.0;" x2="291.5"></line><text lengthAdjust="spacing" x="68.5" font-size="13" textLength="208" y="107.3638" font-family="sans-serif" fill="#000000">Consultation_IndicateursPilotage</text><text lengthAdjust="spacing" x="72.5" font-size="13" textLength="168" y="122.4966" font-family="sans-serif" fill="#000000">(via critères de recherche)</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="72.5,167.8281,62.5,171.8281,72.5,175.8281,68.5,171.8281"></polygon><line y1="171.8281" x1="66.5" y2="171.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="296.5"></line><text lengthAdjust="spacing" x="78.5" font-size="13" textLength="55" y="151.6294" font-family="sans-serif" fill="#000000">Réponse</text><text lengthAdjust="spacing" x="82.5" font-size="13" textLength="137" y="166.7622" font-family="sans-serif" fill="#000000">(le ou les indicateurs)</text></g></svg></div>
+        </td>    
+    </tr>
+    <tr>
+        <td align="center">
+            <b>Consultation d'indicateurs de pilotage (modèle expo V3.0)</b>
+        </td>
+    </tr>
+</table>
+
+<p>Le consommateur renseigne si besoin son (ses) critère(s) de recherche parmi les critères disponibles.</p>
+
+<p>Le ROR National répond au consommateur les indicateurs correspondants aux critères de recherche.</p>
+
+<h4 id="scénarios-13">Scénarios</h4>
+
+<ul>
+  <li>Scénario 1&nbsp;: Intégration d’un indicateur dans un système externe
+    <ul>
+      <li>Un consommateur souhaite intégrer un indicateur de pilotage du ROR national dans un système externe.</li>
+    </ul>
+  </li>
+  <li>Scénario 2&nbsp;: Intégration d’indicateurs dans un système externe
+    <ul>
+      <li>Un consommateur souhaite intégrer des indicateurs de pilotage du ROR national dans un système externe à partir d’une date de mesure.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Les spécifications techniques pour répondre à ce cas d’usage sont accessibles <a href="specifications_techniques_11.html">ici</a></strong></p>
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&nbsp;
+
+                <a href="index.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&nbsp;
+
+                <a href="specifications_techniques_1.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 9, 2026 14:07+0000">2026-01-09</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html" target="_blank">Historique des versions </a>
+ | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose" target="_blank">New Issue</a>
+
+          
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+
+    <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+    <!-- Fin ajout ANS -->
+
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  
+
+    <!-- Analytics Below
+  ================================================== -->
+
+
+    <!-- AJOUT ANS -->
+
+<footer role="contentinfo" class="footer footer-principal">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a rel="nofollow" href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" loading="lazy" height="77"/>
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a rel="nofollow" href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" loading="lazy" height="74"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+            <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg aria-hidden="true" focusable="false" class="svg-icon svg-angle-right"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+                <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li> -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+      <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
