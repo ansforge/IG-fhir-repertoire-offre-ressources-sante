@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "code-region-territorial-division-ror-valueset"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet code-region-territorial-division-ror-valueset</b></p><a name=\"code-region-territorial-division-ror-valueset\"> </a><a name=\"hccode-region-territorial-division-ror-valueset\"> </a><a name=\"code-region-territorial-division-ror-valueset-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Importe tous les codes contenu dans <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J124-Commune\">JDV_J124_Commune</a></li><li>Importe tous les codes contenu dans <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J248-DepartementOM-ROR\">JDV_J248_DepartementOM_ROR</a></li><li>Importe tous les codes contenu dans <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J237-RegionOM-ROR\">JDV_J237_RegionOM_ROR</a></li><li>Importe tous les codes contenu dans <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J249-TerritoireSante-ROR\">JDV_J249_TerritoireSante_ROR</a></li><li>Importe tous les codes contenu dans <a href=\"https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J247-Pays-ROR\">JDV_J247_Pays_ROR</a></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.7.0-snapshot-1"] ; # 
+  fhir:name [ fhir:v "CodeRegionTerritorialDivisionRORValueSet"] ; # 
+  fhir:title [ fhir:v "Fusion des valuesets pour le code de la division territoriale"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-01-09T09:28:27+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ValueSet regroupant des valuesets du NOS pour le code de la division territoriale"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:valueSet ( [
+         fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune"^^xsd:anyURI ;
+         fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune>
+       ] )
+     ] [
+       fhir:valueSet ( [
+         fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR"^^xsd:anyURI ;
+         fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J248-DepartementOM-ROR/FHIR/JDV-J248-DepartementOM-ROR>
+       ] )
+     ] [
+       fhir:valueSet ( [
+         fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR"^^xsd:anyURI ;
+         fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR>
+       ] )
+     ] [
+       fhir:valueSet ( [
+         fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR"^^xsd:anyURI ;
+         fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J249-TerritoireSante-ROR/FHIR/JDV-J249-TerritoireSante-ROR>
+       ] )
+     ] [
+       fhir:valueSet ( [
+         fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR"^^xsd:anyURI ;
+         fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J247-Pays-ROR/FHIR/JDV-J247-Pays-ROR>
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
