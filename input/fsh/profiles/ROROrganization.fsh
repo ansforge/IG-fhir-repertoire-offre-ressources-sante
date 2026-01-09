@@ -196,8 +196,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationComment named ror-organization-comment 0..1 MS
 * extension[ror-organization-price] ^short = "Tarif"
 * extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique.  
-RG_EXP_030 : L’attribut territoire santé DOIT être une division territoriale de type « Territoire de Santé ».  
-(code 4 - Territoire de Santé du JDV-J223-TypeDivisionTerritoriale-ROR)"
+RG_EXP_030 : L’attribut territoire santé DOIT être une division territoriale de type « Territoire de Santé » (code 4 - Territoire de Santé du JDV-J223-TypeDivisionTerritoriale-ROR)."
 * extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
 * extension[ror-organization-accomodation-family] ^short = "hebergementFamille (EG) : Indique si l'établissement peut héberger les familles des personnes prises en charge"
 * extension[ror-organization-nb-permanent-social-help-place] ^short = "nbPlaceAideSocialTemporaire (EG) : nombre de places temporaires dédiées à l'aide sociale dans l'établissement"
