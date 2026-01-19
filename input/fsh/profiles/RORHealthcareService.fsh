@@ -179,8 +179,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORHealthcareServiceContact named ror-healthcareservice-contact 0..* MS and
     RORMetaCreationDate named ror-meta-creation-date 1..1 MS
 * extension[ror-territorial-division] ^short = "zoneIntervention (OffreOperationnelle) : Périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite.  
-Cela inclus notamment les divisions territoriales dans lesquelles les professionnels se déplacent.  
-RG_EXP_009 : Chaque instance de la zone d’intervention DOIT être composée par des instances de DivisionTerritoriale de type Commune (code 3 - Commune du JDV-J223-TypeDivisionTerritoriale-ROR)."
+Cela inclus notamment les divisions territoriales dans lesquelles les professionnels se déplacent."
+* extension[ror-territorial-division].extension[typeTerritorialDivision].valueCodeableConcept = https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale#3
 * extension[ror-healthcareservice-sensitive-unit] ^short = "uniteSensible (OffreOperationnelle) : Permet de signaler que toutes les informations de description d'une offre sont confidentielles"
 * extension[ror-healthcareservice-no-consent-habilitation] ^short = "habilitationAuxSoinsSansConsentement (OffreOperationnelle) : permet d'identifier les offres pour lesquelles un établissement est autorisé à prendre en charge des patients sans leur consentement"
 * extension[ror-healthcareservice-psychiatric-sector] ^short = "secteurPsychiatrique (OffreOperationnelle) : aire géographique à laquelle sont rattachées des structures de relais et de soins qui prennent en charge des patients résidants sur ce secteur"
