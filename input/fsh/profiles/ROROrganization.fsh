@@ -195,7 +195,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     RORMetaCreationDate named ror-meta-creation-date 1..1 MS and 
     ROROrganizationComment named ror-organization-comment 0..1 MS
 * extension[ror-organization-price] ^short = "Tarif"
-* extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique"
+* extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique."
+* extension[ror-territorial-division].extension[typeTerritorialDivision].valueCodeableConcept = https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale#4
 * extension[ror-organization-financial-help-type] ^short = "aideFinanciere (EG) : Aide financière pour laquelle l'EG dispose d'une habilitation ou conventionnement"
 * extension[ror-organization-accomodation-family] ^short = "hebergementFamille (EG) : Indique si l'établissement peut héberger les familles des personnes prises en charge"
 * extension[ror-organization-nb-permanent-social-help-place] ^short = "nbPlaceAideSocialTemporaire (EG) : nombre de places temporaires dédiées à l'aide sociale dans l'établissement"
