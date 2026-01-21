@@ -89,7 +89,7 @@ Plus de précision sur la spécification FHIR :
 -    [StructureDefinition-ror-healthcareservice](search_param.html#structuredefinition-ror-healthcareservice)
 -    [Structuredefinition-ror-organization](search_param.html#structuredefinition-ror-organization) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `organization.[NOM CRITERE]`)
 -    [StructureDefinition-ror-location](search_param.html#structuredefinition-ror-location) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `location.[NOM CRITERE]`)
--    [StructureDefinition-ror-practioner](search_param.html#structuredefinition-ror-practioner) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]`)
+-    [StructureDefinition-ror-practioner](search_param.html#structuredefinition-ror-practioner) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:PractitionerRole:service:practitioner.[NOM CRITERE]`)
 -    [StructureDefinition-ror-practionerrole](search_param.html#structuredefinition-ror-practionerrole) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:PractitionerRole:service:[NOM CRITERE]`)
 -    [StructureDefinition-ror-task](search_param.html#structuredefinition-ror-task) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`)
 
@@ -493,13 +493,13 @@ GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionO
 **Requête :**
 
 ```
-GET [BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier=XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
+GET [BASE]/HealthcareService?_has:PractitionerRole:service:practitioner.identifier=XXX&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
 ```
 
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier=XXX #critère de recherche sur l'identifiant fonctionnel du professionnel (chainage)
+GET [BASE]/HealthcareService?_has:PractitionerRole:service:practitioner.identifier=XXX #critère de recherche sur l'identifiant fonctionnel du professionnel (chainage)
 &_include=HealthcareService:organization #inclus les Organization référencées par HealthcareService 
 &_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService
 &_include=HealthcareService:location #inclus les Location référencées par HealthcareService
