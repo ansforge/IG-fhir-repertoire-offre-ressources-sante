@@ -345,7 +345,7 @@ Plus de précision sur la spécification FHIR :
   <li><a href="search_param.html#structuredefinition-ror-healthcareservice">StructureDefinition-ror-healthcareservice</a></li>
   <li><a href="search_param.html#structuredefinition-ror-organization">Structuredefinition-ror-organization</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxesuivante&nbsp;: <code class="language-plaintext highlighter-rouge">organization.[NOM CRITERE]</code>)</li>
   <li><a href="search_param.html#structuredefinition-ror-location">StructureDefinition-ror-location</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#chaining">chainage</a>. Pour cela utiliser la syntaxesuivante&nbsp;: <code class="language-plaintext highlighter-rouge">location.[NOM CRITERE]</code>)</li>
-  <li><a name="l637">​</a><a href="search_param.html#structuredefinition-ror-practioner">StructureDefinition-ror-practioner</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:_has:PractitionerRole:practitioner:[NOM CRITERE]</code>)</li>
+  <li><a name="l637">​</a><a href="search_param.html#structuredefinition-ror-practioner">StructureDefinition-ror-practioner</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:practitioner.[NOM CRITERE]</code>)</li>
   <li><a name="l648">​</a><a href="search_param.html#structuredefinition-ror-practionerrole">StructureDefinition-ror-practionerrole</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage</a>. Pour cela utiliser la syntaxe suivante&nbsp;: <code class="language-plaintext highlighter-rouge">_has:PractitionerRole:service:[NOM CRITERE]</code>)</li>
   <li><a href="search_param.html#structuredefinition-ror-task">StructureDefinition-ror-task</a> (critères de recherche applicables à la ressource HealthcareService, grâce au <a href="https://www.hl7.org/fhir/R4/search.html#has">chainage inversé</a>. Pour cela utiliser la syntaxe suivante : <code class="language-plaintext highlighter-rouge">_has:HealthcareService:focus:[NOM CRITERE]</code>)</li>
 </ul>
@@ -714,12 +714,12 @@ Cette partie de la spécification est en cours de construction.
 
 <p><strong>Requête :</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier=XXX&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [BASE]/HealthcareService?_has:PractitionerRole:service:practitioner.identifier=XXX&amp;_include=HealthcareService:organization&amp;_include:iterate=Organization:partof&amp;_include=HealthcareService:location&amp;_revinclude=PractitionerRole:service&amp;_include=PractitionerRole:practitioner
 </code></pre></div></div>
 
 <p><strong>Requête expliquée&nbsp;:</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_has:PractitionerRole:service:_has:PractitionerRole:practitioner:identifier<span class="o">=</span>XXX <span class="c">#critère de recherche sur l'identifiant fonctionnel du professionnel (chainage)</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/HealthcareService?_has:PractitionerRole:service:practitioner.identifier<span class="o">=</span>XXX <span class="c">#critère de recherche sur l'identifiant fonctionnel du professionnel (chainage)</span>
 &amp;_include<span class="o">=</span>HealthcareService:organization <span class="c">#inclus les Organization référencées par HealthcareService </span>
 &amp;_include:iterate<span class="o">=</span>Organization:partof <span class="c">#inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService</span>
 &amp;_include<span class="o">=</span>HealthcareService:location <span class="c">#inclus les Location référencées par HealthcareService</span>
@@ -768,7 +768,7 @@ Cette partie de la spécification est en cours de construction.
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 20, 2026 13:11+0000">2026-01-20</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 21, 2026 15:55+0000">2026-01-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
