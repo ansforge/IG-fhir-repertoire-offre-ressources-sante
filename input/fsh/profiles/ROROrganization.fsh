@@ -217,24 +217,24 @@ Source:   ROROrganization
 Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-ROROrganization-ej
 Title:    "EntiteJuridique du Modèle exposition ROR V3"
-* -> "EntiteJuridique"
+* -> "EntiteJuridique" "Profils ayant Accès"
 
 * id -> "metadonnee.identifiant" "Tous les profils"
-* meta -> "metadonnee" "idem à Metadonnee.identifiant"
-* meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
-* meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier[idNatSt] -> "idNatstruct" "idem à Metadonnee.identifiant"
-* identifier[finess] -> "numFINESS" "idem à Metadonnee.identifiant"
-* identifier[sirene] -> "numSIREN" "idem à Metadonnee.identifiant"
-* identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang" "idem à Metadonnee.identifiant"
-* identifier[adeliRang] -> "numEJ_RPPS_ADELI_Rang" "idem à Metadonnee.identifiant"
+* identifier[idNatSt] -> "idNatstruct" "Similaire aux accès de metadonnee.identifiant"
+* identifier[finess] -> "numFINESS" "Similaire aux accès de metadonnee.identifiant"
+* identifier[sirene] -> "numSIREN" "Similaire aux accès de metadonnee.identifiant"
+* identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
+* identifier[adeliRang] -> "numEJ_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
 
-* name -> "raisonSociale" "idem à Metadonnee.identifiant"
-* name.extension[ror-organization-additional-name] -> "complementRaisonSociale" "idem à Metadonnee.identifiant"
+* name -> "raisonSociale" "Similaire aux accès de metadonnee.identifiant"
+* name.extension[ror-organization-additional-name] -> "complementRaisonSociale" "Similaire aux accès de metadonnee.identifiant"
 
-* type[statutJuridiqueINSEE] -> "statutJuridique" "idem à Metadonnee.identifiant"
-* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique" "idem à Metadonnee.identifiant"
+* type[statutJuridiqueINSEE] -> "statutJuridique" "Similaire aux accès de metadonnee.identifiant"
+* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique" "Similaire aux accès de metadonnee.identifiant"
 
 * contact -> "contact" "Profil 1,  
 Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'  
@@ -250,47 +250,47 @@ Profil 4 si niveaux de confidentialité du contact et du contact.telecommunicati
 Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  "
 * contact.telecom.value -> "adresseTelecom" "cf contact.telecom"
 
-* address -> "adresseEJ" "idem à Metadonnee.identifiant"
-* address.city -> "localite" "idem à Metadonnee.identifiant"
-* address.postalCode -> "codePostal" "idem à Metadonnee.identifiant"
-* address.line.extension[careOf] -> "pointRemise" "idem à Metadonnee.identifiant"
-* address.line.extension[additionalLocator] -> "complementPointGeographique" "idem à Metadonnee.identifiant"
-* address.line.extension[houseNumber] -> "numeroVoie" "idem à Metadonnee.identifiant"
-* address.line.extension[buildingNumberSuffix].valueString -> "extension" "idem à Metadonnee.identifiant"
-* address.line.extension[streetNameType].valueString -> "typeVoie" "idem à Metadonnee.identifiant"
-* address.line.extension[streetNameBase].valueString -> "libelleVoie" "idem à Metadonnee.identifiant"
-* address.line.extension[lieuDit].valueString -> "lieuDit" "idem à Metadonnee.identifiant"
-* address.line.extension[postalBox].valueString -> "mentionDistribution" "idem à Metadonnee.identifiant"
+* address -> "adresseEJ" "Similaire aux accès de metadonnee.identifiant"
+* address.city -> "localite" "Similaire aux accès de metadonnee.identifiant"
+* address.postalCode -> "codePostal" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[careOf] -> "pointRemise" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[additionalLocator] -> "complementPointGeographique" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[houseNumber] -> "numeroVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[buildingNumberSuffix].valueString -> "extension" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[streetNameType].valueString -> "typeVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[streetNameBase].valueString -> "libelleVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[lieuDit].valueString -> "lieuDit" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[postalBox].valueString -> "mentionDistribution" "Similaire aux accès de metadonnee.identifiant"
 
-* extension[ROROrganizationCreationDate] -> "dateCreation" "idem à Metadonnee.identifiant"
-* extension[OrgPeriod] -> "dateFermeture (uniquement)" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationClosingType] -> "typeFermeture" "idem à Metadonnee.identifiant"
+* extension[ROROrganizationCreationDate] -> "dateCreation" "Similaire aux accès de metadonnee.identifiant"
+* extension[OrgPeriod] -> "dateFermeture (uniquement)" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationClosingType] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"
 
 Mapping:  ConceptMetier_ROROrganization_EG
 Source:   ROROrganization
 Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-ROROrganization-eg
 Title:    "EntiteGeographique du Modèle exposition ROR V3"
-* -> "EntiteGeographique"
+* -> "EntiteGeographique" "Profils ayant Accès"
 
 * id -> "metadonnee.identifiant" "Tous les profils"
-* meta -> "metadonnee" "idem à Metadonnee.identifiant"
-* meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
-* meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier[idNatSt] -> "idNatstruct" "idem à Metadonnee.identifiant"
-* identifier[finess] -> "numFINESS" "idem à Metadonnee.identifiant"
-* identifier[sirene] -> "numSIREN" "idem à Metadonnee.identifiant"
-* identifier[numSIRET] -> "numSIRET" "idem à Metadonnee.identifiant"
-* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang" "idem à Metadonnee.identifiant"
-* identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang" "idem à Metadonnee.identifiant"
+* identifier[idNatSt] -> "idNatstruct" "Similaire aux accès de metadonnee.identifiant"
+* identifier[finess] -> "numFINESS" "Similaire aux accès de metadonnee.identifiant"
+* identifier[sirene] -> "numSIREN" "Similaire aux accès de metadonnee.identifiant"
+* identifier[numSIRET] -> "numSIRET" "Similaire aux accès de metadonnee.identifiant"
+* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
+* identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
 
-* alias -> "nomOpérationnel" "idem à Metadonnee.identifiant"
-* name -> "denominationEG" "idem à Metadonnee.identifiant"
-* name.extension[ror-organization-additional-name] -> "complementDenominationEG" "idem à Metadonnee.identifiant"
+* alias -> "nomOpérationnel" "Similaire aux accès de metadonnee.identifiant"
+* name -> "denominationEG" "Similaire aux accès de metadonnee.identifiant"
+* name.extension[ror-organization-additional-name] -> "complementDenominationEG" "Similaire aux accès de metadonnee.identifiant"
 
-* type[categorieEtablissement] -> "categorieEG" "idem à Metadonnee.identifiant"
-* type[sphParticipation] -> "modaliteParticipationSPH" "idem à Metadonnee.identifiant"
+* type[categorieEtablissement] -> "categorieEG" "Similaire aux accès de metadonnee.identifiant"
+* type[sphParticipation] -> "modaliteParticipationSPH" "Similaire aux accès de metadonnee.identifiant"
 
 * contact -> "contact" "Profil 1,  
 Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'  
@@ -306,40 +306,40 @@ Profil 4 si niveaux de confidentialité du contact et du contact.telecommunicati
 Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  "
 * contact.telecom.value -> "adresseTelecom" "cd contact.telecomunication"
 
-* extension[ROROrganizationFinancialHelpType] -> "aideFinanciere" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationAccomodationFamily] -> "hebergementFamille" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationNbPermanentSocialHelpPlace] -> "nbPlaceAideSocialPermanent" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationNbTemporarySocialHelpPlace] -> "nbPlaceAideSocialTemporaire" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationAccessibilityLocation] -> "accessibiliteLieu" "idem à Metadonnee.identifiant"
+* extension[ROROrganizationFinancialHelpType] -> "aideFinanciere" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationAccomodationFamily] -> "hebergementFamille" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationNbPermanentSocialHelpPlace] -> "nbPlaceAideSocialPermanent" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationNbTemporarySocialHelpPlace] -> "nbPlaceAideSocialTemporaire" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationAccessibilityLocation] -> "accessibiliteLieu" "Similaire aux accès de metadonnee.identifiant"
 * extension[ROROrganizationLevelRecourseORSAN] -> "niveauRecoursORSAN" "Profil 1, Profil 4"
 * extension[ROROrganizationDropZone] -> "zonePoser" "Profil 1, Profil 4"
-* extension[ROROrganizationComment] -> "commentaire" "idem à Metadonnee.identifiant"
-* extension[OrgPeriod] -> "dateOuverture et dateFermeture" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationClosingType] -> "typeFermeture" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationPrice] -> "tarif" "idem à Metadonnee.identifiant"
-* extension[RORTerritorialDivision] -> "territoireSante" "idem à Metadonnee.identifiant"
+* extension[ROROrganizationComment] -> "commentaire" "Similaire aux accès de metadonnee.identifiant"
+* extension[OrgPeriod] -> "dateOuverture et dateFermeture" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationClosingType] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationPrice] -> "tarif" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORTerritorialDivision] -> "territoireSante" "Similaire aux accès de metadonnee.identifiant"
 
 Mapping:  ConceptMetier_ROROrganization_OI
 Source:   ROROrganization
 Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-ROROrganization-oi
 Title:    "OrganisationInterne du Modèle exposition ROR V3"
-* -> "OrganisationInterne"
+* -> "OrganisationInterne" "Profils ayant Accès"
 
 * id -> "metadonnee.identifiant" "Tous les profils"
-* meta -> "metadonnee" "idem à Metadonnee.identifiant"
-* meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
-* meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier[identifierOI] -> "identifiantOI" "idem à Metadonnee.identifiant"
+* identifier[identifierOI] -> "identifiantOI" "Similaire aux accès de metadonnee.identifiant"
 
-* name -> "nomOI" "idem à Metadonnee.identifiant"
+* name -> "nomOI" "Similaire aux accès de metadonnee.identifiant"
 
-* type[OIType] -> "typeOI" "idem à Metadonnee.identifiant"
+* type[OIType] -> "typeOI" "Similaire aux accès de metadonnee.identifiant"
 
-* telecom -> "boiteLettreMSS" "idem à Metadonnee.identifiant"
+* telecom -> "boiteLettreMSS" "Similaire aux accès de metadonnee.identifiant"
 * telecom.value -> "adresseTelecom" "cf boiteLettreMSS"
 
-* extension[ROROrganizationReopeningDate] -> "datePrevisionnelleReouverture" "idem à Metadonnee.identifiant"
-* extension[OrgPeriod].valuePeriod.end -> "dateOuverture" "idem à Metadonnee.identifiant"
-* extension[ROROrganizationClosingType] -> "typeFermeture" "idem à Metadonnee.identifiant"
+* extension[ROROrganizationReopeningDate] -> "datePrevisionnelleReouverture" "Similaire aux accès de metadonnee.identifiant"
+* extension[OrgPeriod].valuePeriod.end -> "dateOuverture" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationClosingType] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"

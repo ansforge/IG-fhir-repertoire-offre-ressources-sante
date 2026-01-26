@@ -124,28 +124,28 @@ Source:   RORLocation
 Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-RORLocation
 Title:    "Location du Modèle exposition ROR V3"
-* -> "LieuRealisationOffre"
+* -> "LieuRealisationOffre" "Profils ayant Accès"
 
 * id -> "metadonnee.identifiant" "Profil 1, Profil4,
 Profil 2 (sauf si uniteSensible = Oui),
 Profil 3 (sauf si uniteSensible = Oui),
 Profil 5 (sauf si uniteSensible = Oui),
 Profil 0 (sauf si uniteSensible = Oui)"
-* meta -> "metadonnee" "idem à Metadonnee.identifiant"
-* meta.lastUpdated -> "dateMiseJour" "idem à Metadonnee.identifiant"
-* meta.tag[codeRegion] -> "regionSource" "idem à Metadonnee.identifiant"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* name -> "nom" "idem à Metadonnee.identifiant"
-* description -> "description" "idem à Metadonnee.identifiant"
-* type -> "fonctionLieu" "idem à Metadonnee.identifiant"
+* name -> "nom" "Similaire aux accès de metadonnee.identifiant"
+* description -> "description" "Similaire aux accès de metadonnee.identifiant"
+* type -> "fonctionLieu" "Similaire aux accès de metadonnee.identifiant"
 * status -> "Pas d'équivalent"
 
-* identifier[idExterneSynchro] -> "idExterneSynchro" "idem à Metadonnee.identifiant"
-* identifier[idLocation] -> "identifiant" "idem à Metadonnee.identifiant"
+* identifier[idExterneSynchro] -> "idExterneSynchro" "Similaire aux accès de metadonnee.identifiant"
+* identifier[idLocation] -> "identifiant" "Similaire aux accès de metadonnee.identifiant"
 
-* alias[nomExterneSynchro] -> "nomExterneSynchro" "idem à Metadonnee.identifiant"
+* alias[nomExterneSynchro] -> "nomExterneSynchro" "Similaire aux accès de metadonnee.identifiant"
 
-* operationalStatus -> "Statut" "idem à Metadonnee.identifiant"
+* operationalStatus -> "Statut" "Similaire aux accès de metadonnee.identifiant"
 
 * telecom -> "telecommunication" "Profil 1,  
 Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
@@ -154,28 +154,28 @@ Profil 4 si niveau de confidentialité  de la telecommunication = 'public'
 Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
 * telecom.value -> "telecommunication.adresseTelecom" "cf telecommunication"
 
-* address -> "adresse" "idem à Metadonnee.identifiant"
-* address.city -> "localite" "idem à Metadonnee.identifiant"
-* address.postalCode -> "codePostal" "idem à Metadonnee.identifiant"
-* address.line.extension[careOf] -> "pointRemise" "idem à Metadonnee.identifiant"
-* address.line.extension[additionalLocator] -> "complementPointGeographique" "idem à Metadonnee.identifiant"
-* address.line.extension[houseNumber] -> "numeroVoie" "idem à Metadonnee.identifiant"
-* address.line.extension[buildingNumberSuffix] -> "extension" "idem à Metadonnee.identifiant"
-* address.line.extension[streetNameType] -> "typeVoie" "idem à Metadonnee.identifiant"
-* address.line.extension[streetNameBase] -> "libelleVoie" "idem à Metadonnee.identifiant"
-* address.line.extension[postalBox] -> "mentionDistribution" "idem à Metadonnee.identifiant"
-* address.line.extension[lieuDit] -> "lieuDit" "idem à Metadonnee.identifiant"
+* address -> "adresse" "Similaire aux accès de metadonnee.identifiant"
+* address.city -> "localite" "Similaire aux accès de metadonnee.identifiant"
+* address.postalCode -> "codePostal" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[careOf] -> "pointRemise" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[additionalLocator] -> "complementPointGeographique" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[houseNumber] -> "numeroVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[buildingNumberSuffix] -> "extension" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[streetNameType] -> "typeVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[streetNameBase] -> "libelleVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[postalBox] -> "mentionDistribution" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[lieuDit] -> "lieuDit" "Similaire aux accès de metadonnee.identifiant"
 
-* position -> "coordonneeGeographique" "idem à Metadonnee.identifiant"
-* position.longitude -> "longitude" "idem à Metadonnee.identifiant"
-* position.latitude -> "latitude" "idem à Metadonnee.identifiant"
+* position -> "coordonneeGeographique" "Similaire aux accès de metadonnee.identifiant"
+* position.longitude -> "longitude" "Similaire aux accès de metadonnee.identifiant"
+* position.latitude -> "latitude" "Similaire aux accès de metadonnee.identifiant"
 
-* extension[RORCommuneCog] -> "CommuneCog" "idem à Metadonnee.identifiant"
+* extension[RORCommuneCog] -> "CommuneCog" "Similaire aux accès de metadonnee.identifiant"
 * extension[RORLocationEquipment] -> "EquipementSpecifique" "Profil 1, Profil4,
 Profil 2 (sauf si uniteSensible = Oui),
 Profil 3 si champ activité = MS (sauf si uniteSensible = Oui),
 Profil 5 (sauf si uniteSensible = Oui),"                                 
-* extension[RORLocationResidentialCapacity] -> "CapaciteHabitation" "idem à Metadonnee.identifiant"                         
+* extension[RORLocationResidentialCapacity] -> "CapaciteHabitation" "Similaire aux accès de metadonnee.identifiant"                         
 * extension[RORLocationSupportedCapacity] -> "CapacitePriseCharge" "Profil 1,  
 Profil4,  
 Profil 2 hors capacités supplémentaires (sauf si uniteSensible = Oui),  
