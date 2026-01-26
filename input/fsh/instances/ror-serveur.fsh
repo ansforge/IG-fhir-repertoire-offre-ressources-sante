@@ -60,7 +60,7 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(ror-location)
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-//* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #create
 * rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 * rest.resource[=].searchRevInclude = "HealthcareService:location"
@@ -221,7 +221,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #create
-//* rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].searchInclude = "HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner"
@@ -329,7 +329,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #create
-//* rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[+].code = #patch
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[=].documentation = "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch."
 
