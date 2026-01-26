@@ -77,7 +77,7 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ### Exemple de requêtes
 
-#### [spécifique serveur] Scénario 1 : Modification d'une entité juridique <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 1 : Modification d'une entité juridique 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -142,7 +142,7 @@ PATCH [BASE]/Organization/1234
 }
 ```
 
-#### [spécifique serveur] Scénario 2 : Modification d'une entité géographique <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 2 : Modification d'une entité géographique 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -277,7 +277,7 @@ PATCH [BASE]/Organization/4569
 }
 ```
 
-#### [spécifique serveur] Scénario 3 : Modification d'une organisation interne <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 3 : Modification d'une organisation interne 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -317,7 +317,7 @@ PATCH [BASE]/Organization/789
 }
 ```
 
-#### [spécifique serveur] Scénario 4 : Modification d'informations sur un professionnel <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 4 : Modification d'informations sur un professionnel 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -487,7 +487,7 @@ PATCH [BASE]/PractitionerRole/753
 }
 ```
 
-#### [spécifique serveur] Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique) <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique) 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -533,7 +533,7 @@ PATCH [BASE]/HealthcareService/741
 }
 ```
 
-#### [spécifique serveur] Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle) <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle) 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -579,7 +579,7 @@ PATCH [BASE]/HealthcareService/852
 }
 ```
 
-#### [spécifique serveur] Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville) <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville) 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -776,7 +776,7 @@ PATCH [BASE]/HealthcareService/963
 }
 ```
 
-#### [spécifique serveur] Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé) <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé) 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
@@ -1237,7 +1237,7 @@ PUT [BASE]/HealthcareService/964
 }
 ```
 
-#### Scénario 11 : Ajout d’un lieu de réalisation de l’offre <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 11 : Ajout d’un lieu de réalisation de l’offre 
 
 **Description du scénario :** Un utilisateur ajoute un lieu de réalisation de l'offre dans une offre opérationnelle existante.
 
