@@ -297,7 +297,7 @@
         
           Draft
           
-            as of 2026-01-07
+            as of 2026-01-26
           
         
       </td>
@@ -315,26 +315,27 @@
 
   <a name="specmetier-to-RORHealthcareService"> </a><h3>Mappings for HealthcareService du Modèle exposition ROR V3 (https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf)</h3><table class="grid">
  <tr><td colspan="3"><b>RORHealthcareService</b></td></tr>
- <tr><td>HealthcareService</td><td>OffreOperationnelle</td><td></td> </tr>
+ <tr><td>HealthcareService</td><td>OffreOperationnelle</td><td><p>Profils ayant Accès</p>
+</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>metadonnee.identifiant</td><td><p>Tous les profils si uniteSensible = Non<br />
 Uniquement Profil 1 et Profil 4 si uniteSensible = Oui</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td>metadonnee</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastUpdated</td><td>dateMiseJour</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tag (codeRegion)</td><td>regionSource</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-territorial-division)</td><td>zoneIntervention</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-territorial-division)</td><td>zoneIntervention</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-sensitive-unit)</td><td>uniteSensible</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-sensitive-unit)</td><td>uniteSensible</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-no-consent-habilitation)</td><td>habilitationAuxSoinsSansConsentement</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-no-consent-habilitation)</td><td>habilitationAuxSoinsSansConsentement</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-psychiatric-sector)</td><td>secteurPsychiatrique</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-psychiatric-sector)</td><td>secteurPsychiatrique</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-patient-type)</td><td>publicPrisEnCharge</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-patient-type)</td><td>publicPrisEnCharge</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension (ror-healthcareservice-contact)</td><td>contact</td><td><p>Profil 1,<br />
 Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint' et si uniteSensible = non<br />
@@ -348,32 +349,32 @@ Profil 3 si champ d'activité MS et si niveaux de confidentialité du contact et
 Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'<br />
 Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public' et si uniteSensible = non</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>identifiantOffre</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>identifiantOffre</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>Pas d'équivalent</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;providedBy</td><td>EntiteJuridique, EntiteGeographique, OrganisationInterne</td><td>, , </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>typeOffre</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>typeOffre</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>champActivite</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>champActivite</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivity)</td><td>ActiviteOperationnelle.activiteOperationnelle</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivity)</td><td>ActiviteOperationnelle.activiteOperationnelle</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivityFamily)</td><td>ActiviteOperationnelle.familleActiviteOperationnelle</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;specialty (operationalActivityFamily)</td><td>ActiviteOperationnelle.familleActiviteOperationnelle</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>LieuRealisationOffre</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>nomOffre</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>nomOffre</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>metadonnee.commentaire</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>metadonnee.commentaire</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>boiteLettreMSS.adresseMSS</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>boiteLettreMSS.adresseMSS</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionType)</td><td>temporaliteAccueil</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionType)</td><td>temporaliteAccueil</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (careMode)</td><td>modePriseEnCharge</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (careMode)</td><td>modePriseEnCharge</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionModality)</td><td>modaliteAccueil</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (receptionModality)</td><td>modaliteAccueil</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (managementType)</td><td>modeGestion</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (managementType)</td><td>modeGestion</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificAct)</td><td>acteSpecifique</td><td><p>Profil 1,<br />
 Profil 4,<br />
@@ -381,33 +382,33 @@ Profil 5,<br />
 Profil 2 (sauf si uniteSensible = Oui),<br />
 Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (outsideOfficeAct)</td><td>acteRealiseHorsCabinet</td><td><p>idem à acteSpecifique</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (outsideOfficeAct)</td><td>acteRealiseHorsCabinet</td><td><p>Similaire aux accès de acteSpecifique</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (takingCareSpeciality)</td><td>specialisationPriseEnCharge</td><td><p>idem à acteSpecifique</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (takingCareSpeciality)</td><td>specialisationPriseEnCharge</td><td><p>Similaire aux accès de acteSpecifique</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (annualOpening)</td><td>ouvertureAnnuelle</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (annualOpening)</td><td>ouvertureAnnuelle</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (ressourceProfession)</td><td>professionRessource</td><td><p>idem à acteSpecifique</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (ressourceProfession)</td><td>professionRessource</td><td><p>Similaire aux accès de acteSpecifique</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificCompetence)</td><td>competenceSpecifique</td><td><p>idem à acteSpecifique</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (specificCompetence)</td><td>competenceSpecifique</td><td><p>Similaire aux accès de acteSpecifique</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (expertiseLevel)</td><td>niveauExpertise</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (expertiseLevel)</td><td>niveauExpertise</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;characteristic (temporalityStopService)</td><td>typeFermeture</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;characteristic (temporalityStopService)</td><td>typeFermeture</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;availableTime</td><td>horaire</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;availableTime</td><td>horaire</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableStartTime</td><td>heureDebut</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableStartTime</td><td>heureDebut</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableEndTime</td><td>heureFin</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;availableEndTime</td><td>heureFin</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;notAvailable</td><td></td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;notAvailable (closingReopeningDate)</td><td></td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during</td><td></td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>dateFermeture</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>dateFermeture</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>datePrevisionnelleReouverture</td><td><p>idem à Metadonnee.identifiant</p>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>datePrevisionnelleReouverture</td><td><p>Similaire aux accès de metadonnee.identifiant</p>
 </td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
@@ -640,7 +641,7 @@ Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 7, 2026 09:11+0000">2026-01-07</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 26, 2026 13:53+0000">2026-01-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
