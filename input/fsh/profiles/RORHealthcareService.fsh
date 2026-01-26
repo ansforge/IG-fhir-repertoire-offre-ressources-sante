@@ -181,7 +181,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * extension[ror-territorial-division] ^short = "zoneIntervention (OffreOperationnelle) : Périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite.  
 Cela inclus notamment les divisions territoriales dans lesquelles les professionnels se déplacent."
 * extension[ror-territorial-division].extension[typeTerritorialDivision].valueCodeableConcept = https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale#3
-* extension[ror-healthcareservice-sensitive-unit] ^short = "uniteSensible (OffreOperationnelle) : Permet de signaler que toutes les informations de description d'une offre sont confidentielles ou que le porteur d'offre ne souhaite pas diffuser"
+* extension[ror-healthcareservice-sensitive-unit] ^short = "uniteSensible (OffreOperationnelle) : Permet de signaler que toutes les informations de description d'une offre sont confidentielles"
 * extension[ror-healthcareservice-no-consent-habilitation] ^short = "habilitationAuxSoinsSansConsentement (OffreOperationnelle) : permet d'identifier les offres pour lesquelles un établissement est autorisé à prendre en charge des patients sans leur consentement"
 * extension[ror-healthcareservice-psychiatric-sector] ^short = "secteurPsychiatrique (OffreOperationnelle) : aire géographique à laquelle sont rattachées des structures de relais et de soins qui prennent en charge des patients résidants sur ce secteur"
 * extension[ror-healthcareservice-patient-type] ^short = "publicPrisEnCharge (Patientele) : Ensemble de personnes qui présentent des caractéristiques psychologiques, intellectuelles, physiques, psycho-motrices, comportementales leur permettant de bénéficier de la prestation décrite"
@@ -193,125 +193,63 @@ Source:   RORHealthcareService
 Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-RORHealthcareService
 Title:    "HealthcareService du Modèle exposition ROR V3"
-* -> "OffreOperationnelle"
+* -> "OffreOperationnelle" "Profils ayant Accès"
 
 * providedBy -> "EntiteJuridique"
 * providedBy -> "EntiteGeographique"
 * providedBy -> "OrganisationInterne"
 * location -> "LieuRealisationOffre"
 
-* id -> "metadonnee.identifiant" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* comment -> "metadonnee.commentaire"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* id -> "metadonnee.identifiant" "Tous les profils si uniteSensible = Non  
+Uniquement Profil 1 et Profil 4 si uniteSensible = Oui"  
+* comment -> "metadonnee.commentaire" "Similaire aux accès de metadonnee.identifiant"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier -> "identifiantOffre" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* name -> "nomOffre" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* category -> "typeOffre" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* type -> "champActivite" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* identifier -> "identifiantOffre"  "Similaire aux accès de metadonnee.identifiant"
+* name -> "nomOffre"  "Similaire aux accès de metadonnee.identifiant"
+* category -> "typeOffre"  "Similaire aux accès de metadonnee.identifiant"
+* type -> "champActivite"  "Similaire aux accès de metadonnee.identifiant"
 * active -> "Pas d'équivalent"
 
-* characteristic[receptionType] -> "temporaliteAccueil" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* characteristic[careMode] -> "modePriseEnCharge" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* characteristic[receptionModality] -> "modaliteAccueil" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* characteristic[managementType] -> "modeGestion" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* characteristic[specificAct] -> "acteSpecifique" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
-* characteristic[outsideOfficeAct] -> "acteRealiseHorsCabinet" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
-* characteristic[takingCareSpeciality] -> "specialisationPriseEnCharge" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
-* characteristic[annualOpening] -> "ouvertureAnnuelle" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* characteristic[ressourceProfession] -> "professionRessource" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
-* characteristic[specificCompetence] -> "competenceSpecifique" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
-* characteristic[expertiseLevel] -> "niveauExpertise" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* characteristic[temporalityStopService] -> "typeFermeture" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* characteristic[receptionType] -> "temporaliteAccueil"  "Similaire aux accès de metadonnee.identifiant"
+* characteristic[careMode] -> "modePriseEnCharge"  "Similaire aux accès de metadonnee.identifiant"
+* characteristic[receptionModality] -> "modaliteAccueil"  "Similaire aux accès de metadonnee.identifiant"
+* characteristic[managementType] -> "modeGestion"  "Similaire aux accès de metadonnee.identifiant"
+* characteristic[specificAct] -> "acteSpecifique"  "Profil 1,  
+Profil 4,  
+Profil 5,  
+Profil 2 (sauf si uniteSensible = Oui),  
+Profil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)  "
+* characteristic[outsideOfficeAct] -> "acteRealiseHorsCabinet"  "Similaire aux accès de acteSpecifique"
+* characteristic[takingCareSpeciality] -> "specialisationPriseEnCharge"  "Similaire aux accès de acteSpecifique"
+* characteristic[annualOpening] -> "ouvertureAnnuelle"  "Similaire aux accès de metadonnee.identifiant"
+* characteristic[ressourceProfession] -> "professionRessource"  "Similaire aux accès de acteSpecifique"
+* characteristic[specificCompetence] -> "competenceSpecifique" "Similaire aux accès de acteSpecifique"
+* characteristic[expertiseLevel] -> "niveauExpertise" "Similaire aux accès de metadonnee.identifiant"
+* characteristic[temporalityStopService] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"
+* specialty[operationalActivity] -> "ActiviteOperationnelle.activiteOperationnelle" "Similaire aux accès de metadonnee.identifiant"
+* specialty[operationalActivityFamily] -> "ActiviteOperationnelle.familleActiviteOperationnelle" "Similaire aux accès de metadonnee.identifiant"
+* notAvailable[closingReopeningDate].during.start -> "dateFermeture" "Similaire aux accès de metadonnee.identifiant"
+* notAvailable[closingReopeningDate].during.end -> "datePrevisionnelleReouverture" "Similaire aux accès de metadonnee.identifiant"
+* availableTime -> "horaire" "Similaire aux accès de metadonnee.identifiant"
+* availableTime.availableStartTime -> "heureDebut" "Similaire aux accès de metadonnee.identifiant"
+* availableTime.availableEndTime -> "heureFin" "Similaire aux accès de metadonnee.identifiant"
+* telecom -> "boiteLettreMSS.adresseMSS" "Similaire aux accès de metadonnee.identifiant"
 
-* specialty[operationalActivity] -> "ActiviteOperationnelle.activiteOperationnelle" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* specialty[operationalActivityFamily] -> "ActiviteOperationnelle.familleActiviteOperationnelle" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-
-* notAvailable[closingReopeningDate].during.start -> "dateFermeture" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* notAvailable[closingReopeningDate].during.end -> "datePrevisionnelleReouverture" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-
-* availableTime -> "horaire" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* availableTime.availableStartTime -> "heureDebut" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* availableTime.availableEndTime -> "heureFin" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-
-* telecom -> "boiteLettreMSS.adresseMSS" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* telecom.value -> "adresseTelecom" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-
-* extension[ror-territorial-division] -> "zoneIntervention" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* extension[RORTerritorialDivision] -> "zoneIntervention" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORHealthcareServiceSensitiveUnit] -> "uniteSensible" "Similaire aux accès de metadonnee.identifiant" 
+* extension[RORHealthcareServiceNoConsentHabilitation] -> "habilitationAuxSoinsSansConsentement" "Similaire aux accès de metadonnee.identifiant" 
+* extension[RORHealthcareServicePsychiatricSector] -> "secteurPsychiatrique" "Similaire aux accès de metadonnee.identifiant" 
+* extension[RORHealthcareServicePatientType] -> "publicPrisEnCharge" "Similaire aux accès de metadonnee.identifiant" 
+* extension[RORHealthcareServiceContact] -> "contact" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint' et si uniteSensible = non  
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint' et si uniteSensible = non sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveau de confidentialité  du contact= 'public'  
+Profil 0 si niveau de confidentialité  du contact= 'public' et si uniteSensible = non  "
+* extension[RORHealthcareServiceContact].extension[RORHealthcareServiceContactTelecom] -> "contact.telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' et si uniteSensible = non  
+Profil 3 si champ d'activité MS et si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint' et si uniteSensible = non, sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  
+Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public' et si uniteSensible = non  "

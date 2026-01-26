@@ -9,7 +9,4 @@ Mapping:  ConceptMetier_RORHealthcareServiceNoConsentHabilitation
 Source:   RORHealthcareServiceNoConsentHabilitation
 Id:       specmetier-to-RORHealthcareServiceNoConsentHabilitation
 Title:    "Spécification métier vers l'extension ROR HealthcareServiceNoConsentHabilitation"
-* valueBoolean -> "habilitationAuxSoinsSansConsentement" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* valueBoolean -> "habilitationAuxSoinsSansConsentement"
