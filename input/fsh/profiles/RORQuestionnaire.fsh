@@ -62,6 +62,9 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext[catChampAct].code = usage-context-ror-codesystem#champAct
 * useContext[catChampAct].valueCodeableConcept from $JDV-J20-ChampActivite-ROR (required)
 * useContext[catChampAct] ^short = "Contexte d'usage de la fiche de consignes de saisie afin de spécifier le domaine (champ d'activité) dans lequel s'inscrit l'offre saisie"
+* useContext[fonctionLieu].code = usage-context-ror-codesystem#fonctionLieu
+* useContext[fonctionLieu].valueCodeableConcept from $JDV-J198-FonctionLieu-ROR (required)
+* useContext[fonctionLieu] ^short = "Contexte précisant la fonction (fonctionLieu) du lieu (LieuRealisationOffre)"
 
 * item ^short = "Structure du champs de la fiche"
 * item MS
