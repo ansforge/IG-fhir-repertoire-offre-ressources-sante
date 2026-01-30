@@ -49,22 +49,24 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext.code from ror-usage-context-type-vs (extensible)
 * useContext[catEG].code = $TRE-R67-TypeStructure-EJ-EG#EG // fixé 
 * useContext[catEG].valueCodeableConcept from $JDV-J55-CategorieEG-ROR (required)
-* useContext[catEG].valueCodeableConcept ^short = "Catégorie(s) d'EG pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
-* useContext[catEG] ^short = "Contexte d'usage de la fiche de consignes de saisie afin de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable"
-* useContext[catPS].code = $TRE-R288-TypeProfession#P01 // fixé 
-* useContext[catPS].valueCodeableConcept from $JDV-J229-ProfessionSante-ROR (required)
-* useContext[catPS].valueCodeableConcept ^short = "Catégorie(s) de profession pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
-* useContext[catPS] ^short = "Contexte d'usage de la fiche de consignes de saisie afin de spécifier pour quelle(s) Catégorie(s) de profession elle est applicable"
-* useContext[catSpeOrdinal].code = $TRE-R04-TypeSavoirFaire#S // fixé 
-* useContext[catSpeOrdinal].valueCodeableConcept from $JDV-J210-SpecialiteOrdinale-ROR (required)
-* useContext[catSpeOrdinal].valueCodeableConcept ^short = "Catégorie(s) de spécialité ordinale pour la(es)quelle(s) cette fiche de consigne de saisie est disponible"
-* useContext[catSpeOrdinal] ^short = "Contexte d'usage de la fiche de consignes de saisie afin de spécifier pour quelle(s) Catégorie(s) de spécialité ordinale elle est applicable"
-* useContext[catChampAct].code = usage-context-ror-codesystem#champAct
-* useContext[catChampAct].valueCodeableConcept from $JDV-J20-ChampActivite-ROR (required)
-* useContext[catChampAct] ^short = "Contexte d'usage de la fiche de consignes de saisie afin de spécifier le domaine (champ d'activité) dans lequel s'inscrit l'offre saisie"
+* useContext[catEG].valueCodeableConcept ^short = "Catégories d'EG"
+* useContext[catEG] ^short = "Contexte précisant les catégories d'EG pour lesquelles ce questionnaire est disponible"
+* useContext[typePS].code = $TRE-R288-TypeProfession#P01 // fixé 
+* useContext[typePS].valueCodeableConcept from $JDV-J229-ProfessionSante-ROR (required)
+* useContext[typePS].valueCodeableConcept ^short = "Types de profession de santé"
+* useContext[typePS] ^short = "Contexte précisant les types de profession de Santé pour lesquels ce questionnaire est disponible"
+* useContext[speOrdinal].code = $TRE-R04-TypeSavoirFaire#S // fixé 
+* useContext[speOrdinal].valueCodeableConcept from $JDV-J210-SpecialiteOrdinale-ROR (required)
+* useContext[speOrdinal].valueCodeableConcept ^short = "Spécialités ordinales"
+* useContext[speOrdinal] ^short = "Contexte précisant les spécialités ordinales pour lesquelles ce questionnaire est disponible"
+* useContext[champAct].code = usage-context-ror-codesystem#champAct
+* useContext[champAct].valueCodeableConcept from $JDV-J20-ChampActivite-ROR (required)
+* useContext[champAct].valueCodeableConcept ^short = "Domaines (champs d'activité) de l' offre (OffreOperationnelle)"
+* useContext[champAct] ^short = "Contexte précisant les domaines (champs d'activité) de l' offre (OffreOperationnelle) pour lesquels ce questionnaire est disponible"
 * useContext[fonctionLieu].code = usage-context-ror-codesystem#fonctionLieu
 * useContext[fonctionLieu].valueCodeableConcept from $JDV-J198-FonctionLieu-ROR (required)
-* useContext[fonctionLieu] ^short = "Contexte précisant la fonction (fonctionLieu) du lieu (LieuRealisationOffre)"
+* useContext[fonctionLieu].valueCodeableConcept ^short = "Fonctions (fonctionLieu) du lieu (LieuRealisationOffre)"
+* useContext[fonctionLieu] ^short = "Contexte précisant les fonctions (fonctionLieu) du lieu (LieuRealisationOffre) pour lesquelles ce questionnaire est disponible"
 
 * item ^short = "Structure du champs de la fiche"
 * item MS
