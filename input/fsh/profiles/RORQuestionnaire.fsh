@@ -43,9 +43,9 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext ^slicing.ordered = false
 * useContext contains
     catEG 1..* and
-    catPS 0..* and
-    catSpeOrdinal 0..* and
-    catChampAct 0..*
+    typePS 0..* and
+    speOrdinal 0..* and
+    champAct 0..*
 * useContext.code from ror-usage-context-type-vs (extensible)
 * useContext[catEG].code = $TRE-R67-TypeStructure-EJ-EG#EG // fixé 
 * useContext[catEG].valueCodeableConcept from $JDV-J55-CategorieEG-ROR (required)
