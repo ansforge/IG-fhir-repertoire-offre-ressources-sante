@@ -9,7 +9,7 @@
   "version" : "0.7.0-snapshot-1",
   "name" : "RORHealthcareServicePatientType",
   "status" : "draft",
-  "date" : "2026-01-21T15:54:27+00:00",
+  "date" : "2026-01-30T10:12:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -81,8 +81,7 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "Patientele",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "map" : "Patientele"
       }]
     },
     {
@@ -307,11 +306,6 @@
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "publicPrisEnCharge",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
-      },
-      {
         "identity" : "rim",
         "map" : "n/a"
       },
@@ -610,11 +604,6 @@
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "ageMin",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
-      },
-      {
         "identity" : "rim",
         "map" : "n/a"
       },
@@ -680,11 +669,6 @@
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "ageMax",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
-      },
-      {
         "identity" : "rim",
         "map" : "n/a"
       },
@@ -920,8 +904,7 @@
       "definition" : "Extension créée dans le cadre du ROR pour décrire un ensemble de personnes qui répondent à des critères leur permettant de  bénéficier de la prestation décrite",
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "Patientele",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "map" : "Patientele"
       }]
     },
     {
@@ -955,12 +938,7 @@
       "binding" : {
         "strength" : "required",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR"
-      },
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "publicPrisEnCharge",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
-      }]
+      }
     },
     {
       "id" : "Extension.extension:ageRange",
@@ -989,22 +967,12 @@
     {
       "id" : "Extension.extension:ageRange.value[x].low",
       "path" : "Extension.extension.value[x].low",
-      "min" : 1,
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "ageMin",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
-      }]
+      "min" : 1
     },
     {
       "id" : "Extension.extension:ageRange.value[x].high",
       "path" : "Extension.extension.value[x].high",
-      "min" : 1,
-      "mapping" : [{
-        "identity" : "specmetier-to-RORHealthcareServicePatientType",
-        "map" : "ageMax",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
-      }]
+      "min" : 1
     },
     {
       "id" : "Extension.url",

@@ -9,7 +9,7 @@
   "version" : "0.7.0-snapshot-1",
   "name" : "RORPractitioner",
   "status" : "draft",
-  "date" : "2026-01-21T15:54:27+00:00",
+  "date" : "2026-01-30T10:12:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -124,7 +124,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "Professionnel"
+        "map" : "Professionnel",
+        "comment" : "Profils ayant Accès"
       },
       {
         "identity" : "rim",
@@ -166,7 +167,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,   \nProfil 2 si uniteSensible = Non,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
       }]
     },
     {
@@ -196,7 +198,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "metadonnee"
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -352,7 +355,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "dateMiseJour"
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -569,7 +573,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "regionSource"
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -903,7 +908,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "idNat_PS"
+        "map" : "idNat_PS",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -1747,7 +1753,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "PersonnePhysique.civilite"
+        "map" : "PersonnePhysique.civilite",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -1904,7 +1911,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "boiteLettreMSS.adresseMSS"
+        "map" : "boiteLettreMSS.adresseMSS",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2192,7 +2200,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "adresseTelecom"
+        "map" : "adresseTelecom",
+        "comment" : "cf. boiteLettreMSS"
       },
       {
         "identity" : "rim",
@@ -3025,7 +3034,8 @@
       "path" : "Practitioner",
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "Professionnel"
+        "map" : "Professionnel",
+        "comment" : "Profils ayant Accès"
       }]
     },
     {
@@ -3033,7 +3043,8 @@
       "path" : "Practitioner.id",
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,   \nProfil 2 si uniteSensible = Non,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
       }]
     },
     {
@@ -3041,7 +3052,8 @@
       "path" : "Practitioner.meta",
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "metadonnee"
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -3051,7 +3063,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "dateMiseJour"
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -3080,7 +3093,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "regionSource"
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -3110,7 +3124,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "idNat_PS"
+        "map" : "idNat_PS",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -3130,7 +3145,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "PersonnePhysique.civilite"
+        "map" : "PersonnePhysique.civilite",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -3140,7 +3156,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "boiteLettreMSS.adresseMSS"
+        "map" : "boiteLettreMSS.adresseMSS",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -3195,7 +3212,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
-        "map" : "adresseTelecom"
+        "map" : "adresseTelecom",
+        "comment" : "cf. boiteLettreMSS"
       }]
     },
     {

@@ -9,7 +9,7 @@
   "version" : "0.7.0-snapshot-1",
   "name" : "RORAvailableTimeEffectiveOpeningClosingDate",
   "status" : "draft",
-  "date" : "2026-01-21T15:54:27+00:00",
+  "date" : "2026-01-30T10:12:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -324,8 +324,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORAvailableTimeEffectiveOpeningClosingDate",
-        "map" : "debutDateEffective",
-        "comment" : "RORPractitionerRole : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui) / RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "map" : "heureDebut"
       },
       {
         "identity" : "rim",
@@ -370,8 +369,7 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORAvailableTimeEffectiveOpeningClosingDate",
-        "map" : "finDateEffective",
-        "comment" : "RORPractitionerRole : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui) / RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "map" : "heureFin"
       },
       {
         "identity" : "rim",
@@ -415,8 +413,7 @@
       "path" : "Extension.value[x].start",
       "mapping" : [{
         "identity" : "specmetier-to-RORAvailableTimeEffectiveOpeningClosingDate",
-        "map" : "debutDateEffective",
-        "comment" : "RORPractitionerRole : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui) / RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "map" : "heureDebut"
       }]
     },
     {
@@ -424,8 +421,7 @@
       "path" : "Extension.value[x].end",
       "mapping" : [{
         "identity" : "specmetier-to-RORAvailableTimeEffectiveOpeningClosingDate",
-        "map" : "finDateEffective",
-        "comment" : "RORPractitionerRole : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui) / RORHealthcareService : Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "map" : "heureFin"
       }]
     }]
   }

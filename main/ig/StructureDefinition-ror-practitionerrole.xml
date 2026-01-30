@@ -59,7 +59,7 @@
   <version value="0.7.0-snapshot-1"/>
   <name value="RORPractitionerRole"/>
   <status value="draft"/>
-  <date value="2026-01-21T15:54:27+00:00"/>
+  <date value="2026-01-30T10:12:59+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -175,10 +175,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="ExerciceProfessionnel"/>
+        <comment value="Profils ayant Accès"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="SituationOperationnelle"/>
+        <comment value="Profils ayant Accès"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -219,10 +221,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="metadonnee.identifiant"/>
+        <comment value="Profil 1,  &#xA;Profil 2 si uniteSensible = Non ,  &#xA;Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  &#xA;Profil4,  &#xA;Profil5 si uniteSensible = Non,  &#xA;Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="metadonnee.identifiant"/>
+        <comment value="Profil 1,  &#xA;Profil 2 si uniteSensible = Non ,  &#xA;Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  &#xA;Profil4,  &#xA;Profil5 si uniteSensible = Non,  &#xA;Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "/>
       </mapping>
     </element>
     <element id="PractitionerRole.meta">
@@ -252,10 +256,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="metadonnee"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="metadonnee"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -405,10 +411,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="dateMiseJour"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="dateMiseJour"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -619,10 +627,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="regionSource"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="regionSource"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -858,7 +868,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="modeExerciceOffre"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name">
@@ -896,7 +906,9 @@
       </constraint>
       <mustSupport value="true"/>
       <mapping>
-        <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
+        <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
+        <map value="ExerciceProfessionnel (civiliteExercice,nomExercice,prenomExercice)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:contracted">
@@ -1061,7 +1073,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="secteurConventionnement"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -1246,7 +1258,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="optionContratAccèsAuxSoins"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -1431,7 +1443,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="carteVitaleAcceptee"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -1601,7 +1613,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="identifiantSituationOperationnelle"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -1878,7 +1890,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="profession"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2013,7 +2025,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.typeSavoirFaire"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2078,7 +2090,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.specialite"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2143,7 +2155,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.competence"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2208,7 +2220,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.competenceExclusive"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2273,7 +2285,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.orientationParticuliere"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2338,7 +2350,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.capacite"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2403,7 +2415,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.qualificationPAC"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2468,7 +2480,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.DESCNonQualifiant"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2533,7 +2545,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.droitExerciceComplémentaire"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2598,7 +2610,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="competenceSpecifique"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -2778,7 +2790,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="telecommunication"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Profil 1,  &#xA;Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  &#xA;Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  &#xA;Profil 4 si niveau de confidentialité  de la telecommunication = 'public'  &#xA;Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -3050,7 +3062,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="adresseTelecom"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="cf telecommunication"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -3242,7 +3254,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="horaire"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -3367,6 +3379,11 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
+        <map value="typePlageHoraire"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
+      </mapping>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date">
       <path value="PractitionerRole.availableTime.extension"/>
@@ -3402,6 +3419,11 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
+        <map value="debutDateEffective/finDateEffective"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
+      </mapping>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-number-days-of-week">
       <path value="PractitionerRole.availableTime.extension"/>
@@ -3437,6 +3459,11 @@
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
+        <map value="jourSemaine"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
+      </mapping>
     </element>
     <element id="PractitionerRole.availableTime.modifierExtension">
       <path value="PractitionerRole.availableTime.modifierExtension"/>
@@ -3587,7 +3614,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="heureDebut"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -3626,7 +3653,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="heureFin"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="rim"/>
@@ -3958,10 +3985,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="ExerciceProfessionnel"/>
+        <comment value="Profils ayant Accès"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="SituationOperationnelle"/>
+        <comment value="Profils ayant Accès"/>
       </mapping>
     </element>
     <element id="PractitionerRole.id">
@@ -3969,10 +3998,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="metadonnee.identifiant"/>
+        <comment value="Profil 1,  &#xA;Profil 2 si uniteSensible = Non ,  &#xA;Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  &#xA;Profil4,  &#xA;Profil5 si uniteSensible = Non,  &#xA;Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="metadonnee.identifiant"/>
+        <comment value="Profil 1,  &#xA;Profil 2 si uniteSensible = Non ,  &#xA;Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  &#xA;Profil4,  &#xA;Profil5 si uniteSensible = Non,  &#xA;Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "/>
       </mapping>
     </element>
     <element id="PractitionerRole.meta">
@@ -3980,10 +4011,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="metadonnee"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="metadonnee"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.meta.lastUpdated">
@@ -3993,10 +4026,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="dateMiseJour"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="dateMiseJour"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.meta.tag">
@@ -4024,10 +4059,12 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="regionSource"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="regionSource"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension">
@@ -4048,7 +4085,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="modeExerciceOffre"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:ror-practitionerrole-name">
@@ -4063,7 +4100,9 @@
       </type>
       <mustSupport value="true"/>
       <mapping>
-        <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
+        <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
+        <map value="ExerciceProfessionnel (civiliteExercice,nomExercice,prenomExercice)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:contracted">
@@ -4092,7 +4131,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="secteurConventionnement"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:optionCAS">
@@ -4112,7 +4151,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="optionContratAccèsAuxSoins"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:vitalAccepted">
@@ -4132,7 +4171,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="carteVitaleAcceptee"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.extension:ror-meta-creation-date">
@@ -4167,7 +4206,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="identifiantSituationOperationnelle"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.practitioner">
@@ -4205,7 +4244,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="profession"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty">
@@ -4234,7 +4273,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.typeSavoirFaire"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specialty">
@@ -4251,7 +4290,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.specialite"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:competence">
@@ -4268,7 +4307,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.competence"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:exclusiveCompetence">
@@ -4285,7 +4324,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.competenceExclusive"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specificOrientation">
@@ -4302,7 +4341,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.orientationParticuliere"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:expertiseCapacity">
@@ -4319,7 +4358,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.capacite"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:qualificationPAC">
@@ -4336,7 +4375,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.qualificationPAC"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:nonQualifyingDESC">
@@ -4353,7 +4392,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.DESCNonQualifiant"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:supplementaryExerciseRight">
@@ -4370,7 +4409,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="SavoirFaire.droitExerciceComplémentaire"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.specialty:specificCompetence">
@@ -4387,7 +4426,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-exercicePro"/>
         <map value="competenceSpecifique"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.location">
@@ -4421,7 +4460,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="telecommunication"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Profil 1,  &#xA;Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  &#xA;Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  &#xA;Profil 4 si niveau de confidentialité  de la telecommunication = 'public'  &#xA;Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "/>
       </mapping>
     </element>
     <element id="PractitionerRole.telecom.extension">
@@ -4472,7 +4511,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="adresseTelecom"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="cf telecommunication"/>
       </mapping>
     </element>
     <element id="PractitionerRole.availableTime">
@@ -4483,7 +4522,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="horaire"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-type-of-time">
@@ -4497,6 +4536,11 @@
         <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"/>
       </type>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
+        <map value="typePlageHoraire"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
+      </mapping>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date">
       <path value="PractitionerRole.availableTime.extension"/>
@@ -4509,6 +4553,11 @@
         <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"/>
       </type>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
+        <map value="debutDateEffective/finDateEffective"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
+      </mapping>
     </element>
     <element id="PractitionerRole.availableTime.extension:ror-available-time-number-days-of-week">
       <path value="PractitionerRole.availableTime.extension"/>
@@ -4521,6 +4570,11 @@
         <profile value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"/>
       </type>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
+        <map value="jourSemaine"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
+      </mapping>
     </element>
     <element id="PractitionerRole.availableTime.availableStartTime">
       <path value="PractitionerRole.availableTime.availableStartTime"/>
@@ -4529,7 +4583,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="heureDebut"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
     <element id="PractitionerRole.availableTime.availableEndTime">
@@ -4539,7 +4593,7 @@
       <mapping>
         <identity value="specmetier-to-RORPractitionerRole-situationOp"/>
         <map value="heureFin"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)&#xA;Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"/>
+        <comment value="Similaire aux accès de metadonnee.identifiant"/>
       </mapping>
     </element>
   </differential>

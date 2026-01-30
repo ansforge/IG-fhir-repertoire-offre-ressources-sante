@@ -24,7 +24,7 @@
   <version value="0.7.0-snapshot-1"/>
   <name value="RORHealthcareServicePatientType"/>
   <status value="draft"/>
-  <date value="2026-01-21T15:54:27+00:00"/>
+  <date value="2026-01-30T10:12:59+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -95,7 +95,6 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareServicePatientType"/>
         <map value="Patientele"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.id">
@@ -309,11 +308,6 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR"/>
       </binding>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="publicPrisEnCharge"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
-      </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
@@ -600,11 +594,6 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="ageMin"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
-      </mapping>
-      <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
       </mapping>
@@ -668,11 +657,6 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="ageMax"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
-      </mapping>
       <mapping>
         <identity value="rim"/>
         <map value="n/a"/>
@@ -906,7 +890,6 @@
       <mapping>
         <identity value="specmetier-to-RORHealthcareServicePatientType"/>
         <map value="Patientele"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
       </mapping>
     </element>
     <element id="Extension.extension">
@@ -936,11 +919,6 @@
         <strength value="required"/>
         <valueSet value="https://mos.esante.gouv.fr/NOS/JDV_J29-PublicPrisEnCharge-ROR/FHIR/JDV-J29-PublicPrisEnCharge-ROR"/>
       </binding>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="publicPrisEnCharge"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ageRange">
       <path value="Extension.extension"/>
@@ -965,20 +943,10 @@
     <element id="Extension.extension:ageRange.value[x].low">
       <path value="Extension.extension.value[x].low"/>
       <min value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="ageMin"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
-      </mapping>
     </element>
     <element id="Extension.extension:ageRange.value[x].high">
       <path value="Extension.extension.value[x].high"/>
       <min value="1"/>
-      <mapping>
-        <identity value="specmetier-to-RORHealthcareServicePatientType"/>
-        <map value="ageMax"/>
-        <comment value="Profil 1,&#xA;Profil 2 (sauf si uniteSensible = Oui),&#xA;Profil 3 (sauf si uniteSensible = Oui),&#xA;Profil 0 (sauf si uniteSensible = Oui)"/>
-      </mapping>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

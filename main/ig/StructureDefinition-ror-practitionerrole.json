@@ -9,7 +9,7 @@
   "version" : "0.7.0-snapshot-1",
   "name" : "RORPractitionerRole",
   "status" : "draft",
-  "date" : "2026-01-21T15:54:27+00:00",
+  "date" : "2026-01-30T10:12:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -128,11 +128,13 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "ExerciceProfessionnel"
+        "map" : "ExerciceProfessionnel",
+        "comment" : "Profils ayant Accès"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "SituationOperationnelle"
+        "map" : "SituationOperationnelle",
+        "comment" : "Profils ayant Accès"
       },
       {
         "identity" : "rim",
@@ -174,11 +176,13 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,  \nProfil 2 si uniteSensible = Non ,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,  \nProfil 2 si uniteSensible = Non ,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
       }]
     },
     {
@@ -208,11 +212,13 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "metadonnee"
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "metadonnee"
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -368,11 +374,13 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "dateMiseJour"
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "dateMiseJour"
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -589,11 +597,13 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "regionSource"
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "regionSource"
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -837,7 +847,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "modeExerciceOffre",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -876,7 +886,9 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRole-exercicePro"
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "ExerciceProfessionnel (civiliteExercice,nomExercice,prenomExercice)",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -1048,7 +1060,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "secteurConventionnement",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -1242,7 +1254,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "optionContratAccèsAuxSoins",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -1436,7 +1448,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "carteVitaleAcceptee",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -1612,7 +1624,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "identifiantSituationOperationnelle",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -1894,7 +1906,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "profession",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2032,7 +2044,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.typeSavoirFaire",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2098,7 +2110,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.specialite",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2164,7 +2176,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.competence",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2230,7 +2242,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.competenceExclusive",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2296,7 +2308,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.orientationParticuliere",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2362,7 +2374,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.capacite",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2428,7 +2440,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.qualificationPAC",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2494,7 +2506,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.DESCNonQualifiant",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2560,7 +2572,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.droitExerciceComplémentaire",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2626,7 +2638,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "competenceSpecifique",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2809,7 +2821,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "telecommunication",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Profil 1,  \nProfil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 4 si niveau de confidentialité  de la telecommunication = 'public'  \nProfil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
       },
       {
         "identity" : "rim",
@@ -3090,7 +3102,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "adresseTelecom",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "cf telecommunication"
       },
       {
         "identity" : "rim",
@@ -3287,7 +3299,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "horaire",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -3417,7 +3429,12 @@
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "typePlageHoraire",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date",
@@ -3453,7 +3470,12 @@
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "debutDateEffective/finDateEffective",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "PractitionerRole.availableTime.extension:ror-available-time-number-days-of-week",
@@ -3489,7 +3511,12 @@
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "jourSemaine",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "PractitionerRole.availableTime.modifierExtension",
@@ -3645,7 +3672,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "heureDebut",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -3685,7 +3712,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "heureFin",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4028,11 +4055,13 @@
       "path" : "PractitionerRole",
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "ExerciceProfessionnel"
+        "map" : "ExerciceProfessionnel",
+        "comment" : "Profils ayant Accès"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "SituationOperationnelle"
+        "map" : "SituationOperationnelle",
+        "comment" : "Profils ayant Accès"
       }]
     },
     {
@@ -4040,11 +4069,13 @@
       "path" : "PractitionerRole.id",
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,  \nProfil 2 si uniteSensible = Non ,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,  \nProfil 2 si uniteSensible = Non ,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
       }]
     },
     {
@@ -4052,11 +4083,13 @@
       "path" : "PractitionerRole.meta",
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "metadonnee"
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "metadonnee"
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4066,11 +4099,13 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "dateMiseJour"
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "dateMiseJour"
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4099,11 +4134,13 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
-        "map" : "regionSource"
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
-        "map" : "regionSource"
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4126,7 +4163,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "modeExerciceOffre",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4142,7 +4179,9 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRole-exercicePro"
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "ExerciceProfessionnel (civiliteExercice,nomExercice,prenomExercice)",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4174,7 +4213,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "secteurConventionnement",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4196,7 +4235,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "optionContratAccèsAuxSoins",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4218,7 +4257,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "carteVitaleAcceptee",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4256,7 +4295,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "identifiantSituationOperationnelle",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4297,7 +4336,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "profession",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4328,7 +4367,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.typeSavoirFaire",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4346,7 +4385,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.specialite",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4364,7 +4403,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.competence",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4382,7 +4421,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.competenceExclusive",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4400,7 +4439,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.orientationParticuliere",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4418,7 +4457,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.capacite",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4436,7 +4475,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.qualificationPAC",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4454,7 +4493,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.DESCNonQualifiant",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4472,7 +4511,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "SavoirFaire.droitExerciceComplémentaire",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4490,7 +4529,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
         "map" : "competenceSpecifique",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4527,7 +4566,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "telecommunication",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Profil 1,  \nProfil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 4 si niveau de confidentialité  de la telecommunication = 'public'  \nProfil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
       }]
     },
     {
@@ -4583,7 +4622,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "adresseTelecom",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "cf telecommunication"
       }]
     },
     {
@@ -4595,7 +4634,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "horaire",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4609,7 +4648,12 @@
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"]
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "typePlageHoraire",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date",
@@ -4622,7 +4666,12 @@
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"]
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "debutDateEffective/finDateEffective",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "PractitionerRole.availableTime.extension:ror-available-time-number-days-of-week",
@@ -4635,7 +4684,12 @@
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"]
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "jourSemaine",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "PractitionerRole.availableTime.availableStartTime",
@@ -4645,7 +4699,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "heureDebut",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4656,7 +4710,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "heureFin",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)\nProfil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     }]
   }

@@ -75,7 +75,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PractitionerRole.extension:ror-practitionerrole-name","PractitionerRole.extension","ror-practitionerrole-name","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-name]]} {[]}
 ","civiliteExercie + nomExercice + prenomExercice (ExerciceProfessionnel)","Extension créée dans le cadre du ROR pour définir l'identité d’exercice d’un professionnel","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}",""
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ExerciceProfessionnel (civiliteExercice,nomExercice,prenomExercice)"
 "PractitionerRole.extension:contracted","PractitionerRole.extension","contracted","","",0,1,"Y","","","Extension {[CanonicalType[https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted]]} {[]}
 ","secteurConventionnement (SituationOperationnelle) : Secteur de conventionnement du professionnel libéral auquel il a adhéré auprès de l'Assurance Maladie","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -284,15 +284,15 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "PractitionerRole.availableTime.extension:ror-available-time-type-of-time","PractitionerRole.availableTime.extension","ror-available-time-type-of-time","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time]]} {[]}
 ","typePlageHoraire (Horaire) : Apporte un contexte à la plage horaire définie par la suite","Extension créée dans le cadre du ROR pour apporter un contexte à la plage horaire définie par la suite. Un planning peut être constitué de plusieurs plages horaires du même type ou de type différent.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","typePlageHoraire"
 "PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date","PractitionerRole.availableTime.extension","ror-available-time-effective-opening-closing-date","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date]]} {[]}
 ","debutDateEffective + finDateEffective (Horaire)","Extension créée dans le cadre du ROR pour décrire le planning d'activité d'un professionnel ou d'une offre.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","debutDateEffective/finDateEffective"
 "PractitionerRole.availableTime.extension:ror-available-time-number-days-of-week","PractitionerRole.availableTime.extension","ror-available-time-number-days-of-week","","",0,1,"Y","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week]]} {[]}
 ","jourSemaine (Horaire) : Numéro du jour dans la semaine","Extension créée dans le cadre du ROR pour indiquer le numéro du jour dans la semaine.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","jourSemaine"
 "PractitionerRole.availableTime.modifierExtension","PractitionerRole.availableTime.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.

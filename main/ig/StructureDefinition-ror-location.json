@@ -9,7 +9,7 @@
   "version" : "0.7.0-snapshot-1",
   "name" : "RORLocation",
   "status" : "draft",
-  "date" : "2026-01-21T15:54:27+00:00",
+  "date" : "2026-01-30T10:12:59+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -114,7 +114,8 @@
       }],
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "LieuRealisationOffre"
+        "map" : "LieuRealisationOffre",
+        "comment" : "Profils ayant Accès"
       },
       {
         "identity" : "rim",
@@ -148,7 +149,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1, Profil4,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 5 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -178,7 +180,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "metadonnee"
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -334,7 +337,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "dateMiseJour"
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -551,7 +555,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "regionSource"
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -791,7 +796,12 @@
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "CommuneCog",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "Location.extension:ror-location-equipment",
@@ -829,9 +839,13 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORLocationEquipment",
+        "identity" : "specmetier-to-RORLocation",
         "map" : "EquipementSpecifique",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS (sauf si uniteSensible = Oui)"
+        "comment" : "Profil 1, Profil4,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ activité = MS (sauf si uniteSensible = Oui),\nProfil 5 (sauf si uniteSensible = Oui),"
+      },
+      {
+        "identity" : "specmetier-to-RORLocationEquipment",
+        "map" : "EquipementSpecifique"
       }]
     },
     {
@@ -870,9 +884,13 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORResidentialLocationCapacity",
+        "identity" : "specmetier-to-RORLocation",
         "map" : "CapaciteHabitation",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      },
+      {
+        "identity" : "specmetier-to-RORResidentialLocationCapacity",
+        "map" : "CapaciteHabitation"
       }]
     },
     {
@@ -911,6 +929,11 @@
       }],
       "mustSupport" : true,
       "mapping" : [{
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "CapacitePriseCharge",
+        "comment" : "Profil 1,  \nProfil4,  \nProfil 2 hors capacités supplémentaires (sauf si uniteSensible = Oui),  \nProfil 3 si champ activité = MS, hors capacités supplémentaires (sauf si uniteSensible = Oui),  \nProfil 5  uniquement pour les lits installés (sauf si uniteSensible = Oui)  "
+      },
+      {
         "identity" : "specmetier-to-RORLocationSupportedCapacity",
         "map" : "CapacitePriseCharge + CapaciteAccueilOperationnelle"
       }]
@@ -1140,7 +1163,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "idExterneSynchro",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -2104,7 +2127,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "identifiant",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -3125,7 +3148,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "Statut",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -3178,7 +3201,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "nom",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -3262,7 +3285,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "nomExterneSynchro"
+        "map" : "nomExterneSynchro",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -3304,7 +3328,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "description",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -3398,7 +3422,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "fonctionLieu",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -3461,7 +3485,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "telecommunication",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)"
+        "comment" : "Profil 1,  \nProfil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 4 si niveau de confidentialité  de la telecommunication = 'public'  \nProfil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
       },
       {
         "identity" : "rim",
@@ -3741,8 +3765,8 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "adresseTelecom",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)"
+        "map" : "telecommunication.adresseTelecom",
+        "comment" : "cf telecommunication"
       },
       {
         "identity" : "rim",
@@ -3939,7 +3963,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "adresse",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4385,7 +4409,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "pointRemise",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4430,7 +4454,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "complementPointGeographique",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4475,7 +4499,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "numeroVoie",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4520,7 +4544,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "extension",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4565,7 +4589,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "typeVoie",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4741,7 +4765,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "libelleVoie",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4786,7 +4810,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "mentionDistribution",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -4831,7 +4855,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "lieuDit",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -4894,7 +4918,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "localite",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -5044,7 +5068,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "codePostal",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -5270,7 +5294,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "coordonneeGeographique",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -5479,7 +5503,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "longitude",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -5518,7 +5542,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "latitude",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       },
       {
         "identity" : "rim",
@@ -6059,7 +6083,8 @@
       "path" : "Location",
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "LieuRealisationOffre"
+        "map" : "LieuRealisationOffre",
+        "comment" : "Profils ayant Accès"
       }]
     },
     {
@@ -6067,7 +6092,8 @@
       "path" : "Location.id",
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "metadonnee.identifiant"
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1, Profil4,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 5 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
       }]
     },
     {
@@ -6075,7 +6101,8 @@
       "path" : "Location.meta",
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "metadonnee"
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6085,7 +6112,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "dateMiseJour"
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6114,7 +6142,8 @@
       },
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "regionSource"
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6133,7 +6162,12 @@
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog"]
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "CommuneCog",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "Location.extension:ror-location-equipment",
@@ -6146,7 +6180,12 @@
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment"]
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "EquipementSpecifique",
+        "comment" : "Profil 1, Profil4,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ activité = MS (sauf si uniteSensible = Oui),\nProfil 5 (sauf si uniteSensible = Oui),"
+      }]
     },
     {
       "id" : "Location.extension:ror-location-residential-capacity",
@@ -6159,7 +6198,12 @@
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-residential-capacity"]
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "CapaciteHabitation",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "Location.extension:ror-location-supported-capacity",
@@ -6172,7 +6216,12 @@
         "code" : "Extension",
         "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity"]
       }],
-      "mustSupport" : true
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORLocation",
+        "map" : "CapacitePriseCharge",
+        "comment" : "Profil 1,  \nProfil4,  \nProfil 2 hors capacités supplémentaires (sauf si uniteSensible = Oui),  \nProfil 3 si champ activité = MS, hors capacités supplémentaires (sauf si uniteSensible = Oui),  \nProfil 5  uniquement pour les lits installés (sauf si uniteSensible = Oui)  "
+      }]
     },
     {
       "id" : "Location.extension:ror-meta-creation-date",
@@ -6223,7 +6272,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "idExterneSynchro",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6249,7 +6298,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "identifiant",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6284,7 +6333,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "Statut",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6295,7 +6344,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "nom",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6319,7 +6368,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "nomExterneSynchro"
+        "map" : "nomExterneSynchro",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6330,7 +6380,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "description",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6346,7 +6396,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "fonctionLieu",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6357,7 +6407,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "telecommunication",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)"
+        "comment" : "Profil 1,  \nProfil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 4 si niveau de confidentialité  de la telecommunication = 'public'  \nProfil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
       }]
     },
     {
@@ -6412,8 +6462,8 @@
       "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
-        "map" : "adresseTelecom",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),\nProfil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)"
+        "map" : "telecommunication.adresseTelecom",
+        "comment" : "cf telecommunication"
       }]
     },
     {
@@ -6423,7 +6473,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "adresse",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6441,7 +6491,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "pointRemise",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6459,7 +6509,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "complementPointGeographique",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6477,7 +6527,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "numeroVoie",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6495,7 +6545,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "extension",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6513,7 +6563,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "typeVoie",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6539,7 +6589,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "libelleVoie",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6557,7 +6607,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "mentionDistribution",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6575,7 +6625,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "lieuDit",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6585,7 +6635,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "localite",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6595,7 +6645,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "codePostal",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6605,7 +6655,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "coordonneeGeographique",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6628,7 +6678,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "longitude",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
@@ -6638,7 +6688,7 @@
       "mapping" : [{
         "identity" : "specmetier-to-RORLocation",
         "map" : "latitude",
-        "comment" : "Profil 1,\nProfil 2 (sauf si uniteSensible = Oui),\nProfil 3 (sauf si uniteSensible = Oui),\nProfil 0 (sauf si uniteSensible = Oui)"
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
     },
     {
