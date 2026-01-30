@@ -124,106 +124,60 @@ Source:   RORLocation
 Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-RORLocation
 Title:    "Location du Modèle exposition ROR V3"
-* -> "LieuRealisationOffre"
+* -> "LieuRealisationOffre" "Profils ayant Accès"
 
-* id -> "metadonnee.identifiant"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* id -> "metadonnee.identifiant" "Profil 1, Profil4,
+Profil 2 (sauf si uniteSensible = Oui),
+Profil 3 (sauf si uniteSensible = Oui),
+Profil 5 (sauf si uniteSensible = Oui),
+Profil 0 (sauf si uniteSensible = Oui)"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* name -> "nom" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* description -> "description" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* type -> "fonctionLieu" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* name -> "nom" "Similaire aux accès de metadonnee.identifiant"
+* description -> "description" "Similaire aux accès de metadonnee.identifiant"
+* type -> "fonctionLieu" "Similaire aux accès de metadonnee.identifiant"
 * status -> "Pas d'équivalent"
 
-* identifier[idExterneSynchro] -> "idExterneSynchro" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* identifier[idLocation] -> "identifiant" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* identifier[idExterneSynchro] -> "idExterneSynchro" "Similaire aux accès de metadonnee.identifiant"
+* identifier[idLocation] -> "identifiant" "Similaire aux accès de metadonnee.identifiant"
 
-* alias[nomExterneSynchro] -> "nomExterneSynchro"
+* alias[nomExterneSynchro] -> "nomExterneSynchro" "Similaire aux accès de metadonnee.identifiant"
 
-* operationalStatus -> "Statut" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* operationalStatus -> "Statut" "Similaire aux accès de metadonnee.identifiant"
 
-* telecom -> "telecommunication" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),
-Profil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)"
-* telecom.value -> "adresseTelecom" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou AMBULATOIRE (sauf si uniteSensible = Oui),
-Profil 0  si champ d'activité = AMBULATOIRE (sauf si uniteSensible = Oui)"
+* telecom -> "telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
+Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
+Profil 4 si niveau de confidentialité  de la telecommunication = 'public'  
+Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
+* telecom.value -> "telecommunication.adresseTelecom" "cf telecommunication"
 
-* address -> "adresse" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.city -> "localite" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.postalCode -> "codePostal" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.line.extension[careOf] -> "pointRemise" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.line.extension[additionalLocator] -> "complementPointGeographique" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.line.extension[houseNumber] -> "numeroVoie" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.line.extension[buildingNumberSuffix] -> "extension" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.line.extension[streetNameType] -> "typeVoie" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.line.extension[streetNameBase] -> "libelleVoie" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.line.extension[postalBox] -> "mentionDistribution" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* address.line.extension[lieuDit] -> "lieuDit" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* address -> "adresse" "Similaire aux accès de metadonnee.identifiant"
+* address.city -> "localite" "Similaire aux accès de metadonnee.identifiant"
+* address.postalCode -> "codePostal" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[careOf] -> "pointRemise" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[additionalLocator] -> "complementPointGeographique" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[houseNumber] -> "numeroVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[buildingNumberSuffix] -> "extension" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[streetNameType] -> "typeVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[streetNameBase] -> "libelleVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[postalBox] -> "mentionDistribution" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[lieuDit] -> "lieuDit" "Similaire aux accès de metadonnee.identifiant"
 
-* position -> "coordonneeGeographique" "Profil 1,
+* position -> "coordonneeGeographique" "Similaire aux accès de metadonnee.identifiant"
+* position.longitude -> "longitude" "Similaire aux accès de metadonnee.identifiant"
+* position.latitude -> "latitude" "Similaire aux accès de metadonnee.identifiant"
+
+* extension[RORCommuneCog] -> "CommuneCog" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORLocationEquipment] -> "EquipementSpecifique" "Profil 1, Profil4,
 Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* position.longitude -> "longitude" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* position.latitude -> "latitude" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+Profil 3 si champ activité = MS (sauf si uniteSensible = Oui),
+Profil 5 (sauf si uniteSensible = Oui),"                                 
+* extension[RORLocationResidentialCapacity] -> "CapaciteHabitation" "Similaire aux accès de metadonnee.identifiant"                         
+* extension[RORLocationSupportedCapacity] -> "CapacitePriseCharge" "Profil 1,  
+Profil4,  
+Profil 2 hors capacités supplémentaires (sauf si uniteSensible = Oui),  
+Profil 3 si champ activité = MS, hors capacités supplémentaires (sauf si uniteSensible = Oui),  
+Profil 5  uniquement pour les lits installés (sauf si uniteSensible = Oui)  "

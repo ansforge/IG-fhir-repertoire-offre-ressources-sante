@@ -10,7 +10,4 @@ Mapping:  ConceptMetier_ROROrganizationFinancialHelpType
 Source:   ROROrganizationFinancialHelpType
 Id:       specmetier-to-ROROrganizationFinancialHelpType
 Title:    "Spécification métier vers l'extension ROR FinancialHelpType"
-* valueCodeableConcept -> "aideFinanciere" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* valueCodeableConcept -> "aideFinanciere"

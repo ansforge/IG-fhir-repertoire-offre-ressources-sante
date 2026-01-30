@@ -10,7 +10,4 @@ Mapping:  ConceptMetier_RORPractitionerRoleUnitExerciseMode
 Source:   RORPractitionerRoleUnitExerciseMode
 Id:       specmetier-to-RORPractitionerRoleUnitExerciseMode
 Title:    "Spécification métier vers l'extension ROR RORPractitionerRoleUnitExerciseMode"
-* valueCodeableConcept -> "modeExerciceOffre" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* valueCodeableConcept -> "modeExerciceOffre"

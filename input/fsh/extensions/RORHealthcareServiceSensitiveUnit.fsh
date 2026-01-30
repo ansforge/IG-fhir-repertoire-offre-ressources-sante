@@ -9,4 +9,4 @@ Mapping:  ConceptMetier_RORHealthcareServiceSensitiveUnit
 Source:   RORHealthcareServiceSensitiveUnit
 Id:       specmetier-to-RORHealthcareServiceSensitiveUnit
 Title:    "Spécification métier vers l'extension ROR HealthcareServiceSensitiveUnit"
-* valueBoolean -> "uniteSensible" "Profil 1"
+* valueBoolean -> "uniteSensible"

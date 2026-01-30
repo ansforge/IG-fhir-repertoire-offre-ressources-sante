@@ -9,7 +9,4 @@ Mapping:  ConceptMetier_RORHealthcareServicePsychiatricSector
 Source:   RORHealthcareServicePsychiatricSector
 Id:       specmetier-to-RORHealthcareServicePsychiatricSector
 Title:    "Spécification métier vers l'extension ROR HealthcareServicePsychiatricSector"
-* valueString -> "secteurPsychiatrique" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* valueString -> "secteurPsychiatrique"

@@ -20,19 +20,4 @@ Mapping:  ConceptMetier_RORHealthcareServicePatientType
 Source:   RORHealthcareServicePatientType
 Id:       specmetier-to-RORHealthcareServicePatientType
 Title:    "Spécification métier vers l'extension ROR HealthcareServicePatientType"
-* -> "Patientele" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* extension[supportedPatientInfo].valueCodeableConcept -> "publicPrisEnCharge" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* extension[ageRange].valueRange.low -> "ageMin" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
-* extension[ageRange].valueRange.high -> "ageMax" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* -> "Patientele"

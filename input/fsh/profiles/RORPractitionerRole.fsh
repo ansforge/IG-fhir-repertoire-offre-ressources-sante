@@ -127,116 +127,69 @@ Source:   RORPractitionerRole
 Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-RORPractitionerRole-exercicePro
 Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
-* -> "ExerciceProfessionnel"
+* -> "ExerciceProfessionnel" "Profils ayant Accès"
 
 * practitioner -> "Professionnel"
 
-* id -> "metadonnee.identifiant"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* id -> "metadonnee.identifiant" "Profil 1,  
+Profil 2 si uniteSensible = Non ,  
+Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  
+Profil4,  
+Profil5 si uniteSensible = Non,  
+Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* code -> "profession" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* code -> "profession" "Similaire aux accès de metadonnee.identifiant"
 
-* specialty[specificCompetence] -> "competenceSpecifique" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[expertiseType] -> "SavoirFaire.typeSavoirFaire" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[specialty] -> "SavoirFaire.specialite" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[competence] -> "SavoirFaire.competence" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[exclusiveCompetence] -> "SavoirFaire.competenceExclusive" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[specificOrientation] -> "SavoirFaire.orientationParticuliere" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[expertiseCapacity] -> "SavoirFaire.capacite" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[qualificationPAC] -> "SavoirFaire.qualificationPAC" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[nonQualifyingDESC] -> "SavoirFaire.DESCNonQualifiant" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* specialty[supplementaryExerciseRight] -> "SavoirFaire.droitExerciceComplémentaire" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* specialty[specificCompetence] -> "competenceSpecifique" "Similaire aux accès de metadonnee.identifiant"
+* specialty[expertiseType] -> "SavoirFaire.typeSavoirFaire" "Similaire aux accès de metadonnee.identifiant"
+* specialty[specialty] -> "SavoirFaire.specialite" "Similaire aux accès de metadonnee.identifiant"
+* specialty[competence] -> "SavoirFaire.competence" "Similaire aux accès de metadonnee.identifiant"
+* specialty[exclusiveCompetence] -> "SavoirFaire.competenceExclusive" "Similaire aux accès de metadonnee.identifiant"
+* specialty[specificOrientation] -> "SavoirFaire.orientationParticuliere" "Similaire aux accès de metadonnee.identifiant"
+* specialty[expertiseCapacity] -> "SavoirFaire.capacite" "Similaire aux accès de metadonnee.identifiant"
+* specialty[qualificationPAC] -> "SavoirFaire.qualificationPAC" "Similaire aux accès de metadonnee.identifiant"
+* specialty[nonQualifyingDESC] -> "SavoirFaire.DESCNonQualifiant" "Similaire aux accès de metadonnee.identifiant"
+* specialty[supplementaryExerciseRight] -> "SavoirFaire.droitExerciceComplémentaire" "Similaire aux accès de metadonnee.identifiant"
 
-* extension[ror-practitionerrole-name] -> ""
 
 Mapping:  ConceptMetier_RORPractitionerRole_SituationOp
 Source:   RORPractitionerRole
 Id:       specmetier-to-RORPractitionerRole-situationOp
 Title:    "SituationOperationnelle du Modèle exposition ROR V3"
-* -> "SituationOperationnelle"
+* -> "SituationOperationnelle" "Profils ayant Accès"
 
 * healthcareService -> "OffreOperationnelle"
 
-* id -> "metadonnee.identifiant"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* id -> "metadonnee.identifiant" "Profil 1,  
+Profil 2 si uniteSensible = Non ,  
+Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  
+Profil4,  
+Profil5 si uniteSensible = Non,  
+Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier -> "identifiantSituationOperationnelle" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* identifier -> "identifiantSituationOperationnelle" "Similaire aux accès de metadonnee.identifiant"
+* availableTime -> "horaire" "Similaire aux accès de metadonnee.identifiant"
+* availableTime.availableStartTime -> "heureDebut" "Similaire aux accès de metadonnee.identifiant"
+* availableTime.availableEndTime -> "heureFin" "Similaire aux accès de metadonnee.identifiant"
+* availableTime.extension[RORAvailableTimeTypeOfTime] -> "typePlageHoraire" "Similaire aux accès de metadonnee.identifiant"
+* availableTime.extension[RORAvailableTimeEffectiveOpeningClosingDate] -> "debutDateEffective/finDateEffective" "Similaire aux accès de metadonnee.identifiant"
+* availableTime.extension[RORAvailableTimeNumberDaysofWeek] -> "jourSemaine" "Similaire aux accès de metadonnee.identifiant"
 
-* availableTime -> "horaire" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* availableTime.availableStartTime -> "heureDebut" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* availableTime.availableEndTime -> "heureFin" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* telecom -> "telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
+Profil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  
+Profil 4 si niveau de confidentialité  de la telecommunication = 'public'  
+Profil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
+* telecom.value -> "adresseTelecom" "cf telecommunication"
 
-* telecom -> "telecommunication" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* telecom.value -> "adresseTelecom" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-
-* extension[contracted].valueCodeableConcept -> "secteurConventionnement" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* extension[optionCAS].valueBoolean -> "optionContratAccèsAuxSoins" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* extension[vitalAccepted].valueBoolean -> "carteVitaleAcceptee" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
-* extension[ror-practitionerrole-unit-exercise-mode] -> "modeExerciceOffre" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 si champ d'activité = MS ou Ambulatoire (sauf si uniteSensible = Oui)
-Profil 0 si champ d'activité = Ambulatoire (sauf si uniteSensible = Oui)"
+* extension[contracted].valueCodeableConcept -> "secteurConventionnement" "Similaire aux accès de metadonnee.identifiant"
+* extension[optionCAS].valueBoolean -> "optionContratAccèsAuxSoins" "Similaire aux accès de metadonnee.identifiant"
+* extension[vitalAccepted].valueBoolean -> "carteVitaleAcceptee" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORPractitionerRoleUnitExerciseMode] -> "modeExerciceOffre" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORPractitionerRoleName] -> "ExerciceProfessionnel (civiliteExercice,nomExercice,prenomExercice)" "Similaire aux accès de metadonnee.identifiant"

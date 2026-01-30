@@ -211,276 +211,135 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
-/*
+
 Mapping:  ConceptMetier_ROROrganization_EJ
 Source:   ROROrganization
+Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-ROROrganization-ej
 Title:    "EntiteJuridique du Modèle exposition ROR V3"
-* -> "EntiteJuridique"
+* -> "EntiteJuridique" "Profils ayant Accès"
 
-* id -> "metadonnee.identifiant" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* id -> "metadonnee.identifiant" "Tous les profils"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier[idNatSt] -> "idNatstruct" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[finess] -> "numFINESS" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[sirene] -> "numSIREN" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[adeliRang] -> "numEJ_RPPS_ADELI_Rang"
+* identifier[idNatSt] -> "idNatstruct" "Similaire aux accès de metadonnee.identifiant"
+* identifier[finess] -> "numFINESS" "Similaire aux accès de metadonnee.identifiant"
+* identifier[sirene] -> "numSIREN" "Similaire aux accès de metadonnee.identifiant"
+* identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
+* identifier[adeliRang] -> "numEJ_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
 
-* name -> "raisonSociale" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* name.extension[ror-organization-additional-name] -> "complementRaisonSociale"
+* name -> "raisonSociale" "Similaire aux accès de metadonnee.identifiant"
+* name.extension[ror-organization-additional-name] -> "complementRaisonSociale" "Similaire aux accès de metadonnee.identifiant"
 
-* type[statutJuridiqueINSEE] -> "statutJuridique" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* type[statutJuridiqueINSEE] -> "statutJuridique" "Similaire aux accès de metadonnee.identifiant"
+* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique" "Similaire aux accès de metadonnee.identifiant"
 
-* contact -> "contact" "Profil 1,
-Profil 2 si niveau de confidentialité du contact = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
-Profil 0 si niveau de confidentialité  du contact= public"
-* contact.name -> "nom" "Profil 1,
-Profil 2 si niveau de confidentialité du contact = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
-Profil 0 si niveau de confidentialité  du contact= public"
-* contact.purpose -> "natureContact" "Profil 1,
-Profil 2 si niveau de confidentialité du contact = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
-Profil 0 si niveau de confidentialité  du contact= public"
-* contact.telecom -> "telecommunication" "Profil 1,
-Profil 2 si niveau de confidentialité du telecom = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
-Profil 0 si niveau de confidentialité du telecom = public"
-* contact.telecom.value -> "adresseTelecom" "Profil 1,
-Profil 2 si niveau de confidentialité du telecom = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
-Profil 0 si niveau de confidentialité du telecom = public"
+* contact -> "contact" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'  
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveau de confidentialité  du contact= 'public'  
+Profil 0 si niveau de confidentialité  du contact= 'public'  "
+* contact.name -> "nom" "cf contact"
+* contact.purpose -> "natureContact" "cf contact"
+* contact.telecom -> "telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint'  
+Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint', sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  
+Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  "
+* contact.telecom.value -> "adresseTelecom" "cf contact.telecom"
 
-* address -> "adresseEJ" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.city -> "localite" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.postalCode -> "codePostal" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.line.extension[careOf].valueString -> "pointRemise" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.line.extension[additionalLocator].valueString -> "complementPointGeographique" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.line.extension[houseNumber].valueString -> "numeroVoie" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.line.extension[buildingNumberSuffix].valueString -> "extension" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.line.extension[streetNameType].valueString -> "typeVoie" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.line.extension[streetNameBase].valueString -> "libelleVoie" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.line.extension[precinct].valueString -> "lieuDit" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* address.line.extension[postalBox].valueString -> "mentionDistribution" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* address -> "adresseEJ" "Similaire aux accès de metadonnee.identifiant"
+* address.city -> "localite" "Similaire aux accès de metadonnee.identifiant"
+* address.postalCode -> "codePostal" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[careOf] -> "pointRemise" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[additionalLocator] -> "complementPointGeographique" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[houseNumber] -> "numeroVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[buildingNumberSuffix].valueString -> "extension" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[streetNameType].valueString -> "typeVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[streetNameBase].valueString -> "libelleVoie" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[lieuDit].valueString -> "lieuDit" "Similaire aux accès de metadonnee.identifiant"
+* address.line.extension[postalBox].valueString -> "mentionDistribution" "Similaire aux accès de metadonnee.identifiant"
 
-* extension[ror-organization-creation-date] -> "dateCreation"
-
-* extension[organization-period].valuePeriod.end -> "dateFermeture"
+* extension[ROROrganizationCreationDate] -> "dateCreation" "Similaire aux accès de metadonnee.identifiant"
+* extension[OrgPeriod] -> "dateFermeture (uniquement)" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationClosingType] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"
 
 Mapping:  ConceptMetier_ROROrganization_EG
 Source:   ROROrganization
+Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-ROROrganization-eg
 Title:    "EntiteGeographique du Modèle exposition ROR V3"
-* -> "EntiteGeographique"
+* -> "EntiteGeographique" "Profils ayant Accès"
 
-* id -> "metadonnee.identifiant" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* id -> "metadonnee.identifiant" "Tous les profils"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier[idNatSt] -> "idNatstruct" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[finess] -> "numFINESS" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[sirene] -> "numSIREN" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[numSIRET] -> "numSIRET" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang"
+* identifier[idNatSt] -> "idNatstruct" "Similaire aux accès de metadonnee.identifiant"
+* identifier[finess] -> "numFINESS" "Similaire aux accès de metadonnee.identifiant"
+* identifier[sirene] -> "numSIREN" "Similaire aux accès de metadonnee.identifiant"
+* identifier[numSIRET] -> "numSIRET" "Similaire aux accès de metadonnee.identifiant"
+* identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
+* identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
 
-* alias -> "nomOpérationnel"
-* name -> "denominationEG"
-* name.extension[ror-organization-additional-name] -> "complementDenominationEG"
+* alias -> "nomOpérationnel" "Similaire aux accès de metadonnee.identifiant"
+* name -> "denominationEG" "Similaire aux accès de metadonnee.identifiant"
+* name.extension[ror-organization-additional-name] -> "complementDenominationEG" "Similaire aux accès de metadonnee.identifiant"
 
-* type[categorieEtablissement] -> "categorieEG" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* type[sphParticipation] -> "modaliteParticipationSPH" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* type[categorieEtablissement] -> "categorieEG" "Similaire aux accès de metadonnee.identifiant"
+* type[sphParticipation] -> "modaliteParticipationSPH" "Similaire aux accès de metadonnee.identifiant"
 
-* contact -> "contact" "Profil 1,
-Profil 2 si niveau de confidentialité du contact = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
-Profil 0 si niveau de confidentialité  du contact= public"
-* contact.name -> "nom" "Profil 1,
-Profil 2 si niveau de confidentialité du contact = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
-Profil 0 si niveau de confidentialité  du contact= public"
-* contact.purpose -> "natureContact" "Profil 1,
-Profil 2 si niveau de confidentialité du contact = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité  du contact = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact = public ou restreint
-Profil 0 si niveau de confidentialité  du contact= public"
-* contact.telecom -> "telecommunication" "Profil 1,
-Profil 2 si niveau de confidentialité du telecom = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
-Profil 0 si niveau de confidentialité du telecom = public"
-* contact.telecom.value -> "adresseTelecom" "Profil 1,
-Profil 2 si niveau de confidentialité du telecom = public ou restreint,
-Profil 3 si champ d'activité MCO, PSY, SSR ou AMBULATOIRE et si niveau de confidentialité du telecom = public 
-Profil 3 si champ d'activité MS et si niveau de confidentialité du telecom = public ou restreint
-Profil 0 si niveau de confidentialité du telecom = public"
+* contact -> "contact" "Profil 1,  
+Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'  
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité,  uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveau de confidentialité  du contact= 'public'  
+Profil 0 si niveau de confidentialité  du contact= 'public'  "
+* contact.name -> "nom" "cf contact"
+* contact.purpose -> "natureContact" "cf contact"
+* contact.telecom -> "telecommunication" "Profil 1,  
+Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint'  
+Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint',  sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
+Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  
+Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  "
+* contact.telecom.value -> "adresseTelecom" "cd contact.telecomunication"
 
-* extension[ror-organization-financial-help-type] -> "aideFinanciere" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[ror-organization-accomodation-family] -> "hebergementFamille" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[ror-organization-nb-permanent-social-help-place] -> "nbPlaceAideSocialPermanent" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[ror-organization-nb-temporary-social-help-place] -> "nbPlaceAideSocialTemporaire" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[ror-organization-accessibility-location] -> "accessibiliteLieu" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* extension[ror-organization-level-recourse-orsan] -> "niveauRecoursORSAN" "Profil 1"
-* extension[ror-organization-drop-zone] -> "zonePoser" "Profil 1"
-* extension[ror-organization-comment] -> "commentaire"
-
-* extension[organization-period].valuePeriod.start -> "dateOuverture"
-* extension[organization-period].valuePeriod.end -> "dateFermeture"
-
-* extension[ror-territorial-division] -> "territoireSante" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* extension[ROROrganizationFinancialHelpType] -> "aideFinanciere" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationAccomodationFamily] -> "hebergementFamille" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationNbPermanentSocialHelpPlace] -> "nbPlaceAideSocialPermanent" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationNbTemporarySocialHelpPlace] -> "nbPlaceAideSocialTemporaire" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationAccessibilityLocation] -> "accessibiliteLieu" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationLevelRecourseORSAN] -> "niveauRecoursORSAN" "Profil 1, Profil 4"
+* extension[ROROrganizationDropZone] -> "zonePoser" "Profil 1, Profil 4"
+* extension[ROROrganizationComment] -> "commentaire" "Similaire aux accès de metadonnee.identifiant"
+* extension[OrgPeriod] -> "dateOuverture et dateFermeture" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationClosingType] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationPrice] -> "tarif" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORTerritorialDivision] -> "territoireSante" "Similaire aux accès de metadonnee.identifiant"
 
 Mapping:  ConceptMetier_ROROrganization_OI
 Source:   ROROrganization
+Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-ROROrganization-oi
 Title:    "OrganisationInterne du Modèle exposition ROR V3"
-* -> "OrganisationInterne"
+* -> "OrganisationInterne" "Profils ayant Accès"
 
-* id -> "metadonnee.identifiant" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* id -> "metadonnee.identifiant" "Tous les profils"
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier[identifierOI] -> "identifiantOI" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* identifier[identifierOI] -> "identifiantOI" "Similaire aux accès de metadonnee.identifiant"
 
-* name -> "nomOI"
+* name -> "nomOI" "Similaire aux accès de metadonnee.identifiant"
 
-* type[OIType] -> "typeOI" "Profil 1,
-Profil 2,
-Profil 3,
-Profil 0"
+* type[OIType] -> "typeOI" "Similaire aux accès de metadonnee.identifiant"
 
-* telecom -> "boiteLettreMSS"
-* telecom.value -> "adresseTelecom"
+* telecom -> "boiteLettreMSS" "Similaire aux accès de metadonnee.identifiant"
+* telecom.value -> "adresseTelecom" "cf boiteLettreMSS"
 
-* extension[ror-organization-reopening-date] -> "datePrevisionnelleReouverture"
-
-* extension[organization-period].valuePeriod.end -> "dateOuverture"
-* extension[organization-period].valuePeriod.end -> "dateFermeture"
-*/
+* extension[ROROrganizationReopeningDate] -> "datePrevisionnelleReouverture" "Similaire aux accès de metadonnee.identifiant"
+* extension[OrgPeriod].valuePeriod.end -> "dateOuverture" "Similaire aux accès de metadonnee.identifiant"
+* extension[ROROrganizationClosingType] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"

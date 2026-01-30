@@ -13,7 +13,4 @@ Mapping:  ConceptMetier_RORCoordinateReliability
 Source:   RORCoordinateReliability
 Id:       specmetier-to-RORCoordinateReliability
 Title:    "Spécification métier vers l'extension ROR CoordinateReliability"
-* valueBoolean -> "coordonneesFiables" "Profil 1,
-Profil 2 (sauf si uniteSensible = Oui),
-Profil 3 (sauf si uniteSensible = Oui),
-Profil 0 (sauf si uniteSensible = Oui)"
+* valueBoolean -> "coordonneesFiables"

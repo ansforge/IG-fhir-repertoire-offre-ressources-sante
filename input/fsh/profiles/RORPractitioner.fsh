@@ -52,15 +52,21 @@ Source:   RORPractitioner
 Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
 Id:       specmetier-to-RORPractitioner
 Title:    "Practitioner du Modèle exposition ROR V3"
-* -> "Professionnel"
+* -> "Professionnel" "Profils ayant Accès"
 
-* id -> "metadonnee.identifiant"
-* meta -> "metadonnee"
-* meta.lastUpdated -> "dateMiseJour"
-* meta.tag[codeRegion] -> "regionSource"
+* id -> "metadonnee.identifiant" "Profil 1,   
+Profil 2 si uniteSensible = Non,  
+Profil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  
+Profil4,  
+Profil5 si uniteSensible = Non,  
+Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "
+* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
+* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
+* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
 
-* identifier -> "idNat_PS"
-* name.prefix -> "PersonnePhysique.civilite"
+* identifier -> "idNat_PS" "Similaire aux accès de metadonnee.identifiant"
+* name.prefix -> "PersonnePhysique.civilite" "Similaire aux accès de metadonnee.identifiant"
 
-* telecom -> "boiteLettreMSS.adresseMSS"
-* telecom.value -> "adresseTelecom"
+* telecom -> "boiteLettreMSS.adresseMSS" "Similaire aux accès de metadonnee.identifiant"
+* telecom.value -> "adresseTelecom" "cf. boiteLettreMSS"
+

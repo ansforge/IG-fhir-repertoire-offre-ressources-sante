@@ -9,4 +9,4 @@ Mapping:  ConceptMetier_ROROrganizationDropZone
 Source:   ROROrganizationDropZone
 Id:       specmetier-to-ROROrganizationDropZone
 Title:    "Spécification métier vers l'extension ROR DropZone"
-* valueBoolean -> "zonePoser" "Profil 1"
+* valueBoolean -> "zonePoser"
