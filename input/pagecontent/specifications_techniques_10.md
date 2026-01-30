@@ -82,7 +82,7 @@ Piste pour une implémentation future dans le ROR: la gestion des accès concurr
 </p>
 </blockquote>
 
-#### [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
+#### [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre 
 
 *Cette requête ne pourra être exécutée que par le serveur.*
 
