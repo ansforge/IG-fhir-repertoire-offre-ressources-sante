@@ -1,9 +1,9 @@
 Instance: ror-questionnaire-offre-de-ville
-InstanceOf: RORQuestionnaire
+InstanceOf: RORQuestionnaireHealthcareService
 Usage: #example
 Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle."
 
-* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"
+* meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice"
 * version = "0.1"
 * name = "FDS109"
 * title = "Consignes fiche de saisie Cabinet de ville de médecine générale"
@@ -14,6 +14,7 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * date = "2023-12-05"
 * publisher = "ANS"
 * description = "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle. \n Dans le ROR, les cabinets de ville et les centres de santé prennent la forme d'une Entité Juridique, et d’un Établissement Géographique (EG), puis d’une unité élémentaire par professionnel. Ce document propose la description type d’un cabinet de ville de médecine générale.\n Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM."
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/FDS-109"
 * jurisdiction = urn:iso:std:iso:3166#FR "FRANCE"
 * subjectType[0] = #HealthcareService
 * subjectType[+] = #Organization
@@ -29,12 +30,12 @@ Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de coh
 * useContext[catEG][=].valueCodeableConcept = $TRE-R02-SecteurActivite#SA07
 * useContext[catEG][+].code = $TRE-R67-TypeStructure-EJ-EG#EG
 * useContext[catEG][=].valueCodeableConcept = $TRE-R02-SecteurActivite#SA08
-* useContext[catPS][+].code = $TRE-R288-TypeProfession#P01
-* useContext[catPS][=].valueCodeableConcept = $TRE-G15-ProfessionSante#10
-* useContext[catSpeOrdinal][+].code = $TRE-R04-TypeSavoirFaire#S
-* useContext[catSpeOrdinal][=].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
-* useContext[catChampAct][+].code = usage-context-ror-codesystem#champAct
-* useContext[catChampAct][=].valueCodeableConcept = $TRE_R227-ChampActivite#05
+* useContext[typePS][+].code = $TRE-R288-TypeProfession#P01
+* useContext[typePS][=].valueCodeableConcept = $TRE-G15-ProfessionSante#10
+* useContext[speOrdinal][+].code = $TRE-R04-TypeSavoirFaire#S
+* useContext[speOrdinal][=].valueCodeableConcept = $TRE-R38-SpecialiteOrdinale#SM54
+* useContext[champAct][+].code = usage-context-ror-codesystem#champAct
+* useContext[champAct][=].valueCodeableConcept = $TRE_R227-ChampActivite#05
 
 * item[0].linkId = "TypeOffreInfoEJ"
 * item[=].prefix = "1"

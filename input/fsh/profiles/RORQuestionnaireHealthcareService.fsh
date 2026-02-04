@@ -1,45 +1,45 @@
-Profile: RORQuestionnaire
-Parent: Questionnaire
-Id: ror-questionnaire
-Description: "Fiche de saisie de l'offre de soins"
+Profile: RORQuestionnaireHealthcareService
+Parent: SDCBaseQuestionnaire
+Id: ror-questionnaire-healthcareservice
+Description: "Modèle de saisie des Offres Opérationnelles"
 * ^status = #draft
 
 /* Données fonctionnelles */
 * identifier 0..1 MS
-* identifier ^short = "Identifiant de la fiche de saisie. Exemple FDS-092"
-* version ^short = "version de la fiche de saisie"
+* identifier ^short = "Identifiant du modèle de saisie. Exemple FDS-092"
+* version ^short = "version du modèle de saisie"
 * version MS
-* status ^short = "Statut de la fiche"
+* status ^short = "Statut du modèle"
 * name 1..1 MS
-* name ^short = "Nom utilisé par les systèmes pour référencer la fiche exemple FDS-092"
+* name ^short = "Nom utilisé par les systèmes pour référencer le modèle Exemple FDS-092"
 * title 1..1 MS
-* title ^short = "Titre de la fiche. Exemple Unité d'accueil de jour, Equipe spécialisée Alzheimer (ESA), Unité d'Hébergement « traditionnelle » , en EHPAD Petite unité de vie (PUV)"
+* title ^short = "Titre du modèle. Exemple Unité d'accueil de jour, Equipe spécialisée Alzheimer (ESA), Unité d'Hébergement « traditionnelle » , en EHPAD Petite unité de vie (PUV)"
 * subjectType 1..* MS
-* subjectType ^short = "Types de Ressources qui seront alimentées lors de la saisie de cette fiche : HealthcareService, Organization, Practioner, PractionerRole, Location"
+* subjectType ^short = "Types de Ressources qui seront alimentées par ce modèle : HealthcareService, Organization, Location"
 * date ^short = "Date du dernier changement"
 * date MS
-* publisher ^short = "Nom de l'éditeur del a fiche: Etablissement ou personne" 
+* publisher ^short = "Nom de l'éditeur du modèle: Etablissement ou personne" 
 * publisher MS
 * description ^short = "Description de l'objet de la feuille de saisie" 
 * description MS
-* derivedFrom ^short = "Fiche(s) de saisie parente(s)"
+* derivedFrom ^short = "Modèles de saisie parents"
 * derivedFrom MS
 * purpose MS
-* purpose ^short = "Pourquoi cette fiche est-il défini"
+* purpose ^short = "Pourquoi ce modèle est-il défini"
 * approvalDate 0..1 MS
-* approvalDate ^short = "Date de validation de la fiche de saisie"
+* approvalDate ^short = "Date de validation du modèle de saisie"
 * lastReviewDate 0..1 MS
-* lastReviewDate ^short = "Date de dernière revue de la fiche"
-* effectivePeriod ^short = "Periode de validité de la fiche" 
+* lastReviewDate ^short = "Date de dernière revue du modèle"
+* effectivePeriod ^short = "Periode de validité du modèle" 
 * effectivePeriod MS
 * code 0..0 //hors cas d'usage du ROR ? http://hl7.org/fhir/R4/valueset-questionnaire-questions.html
 * useContext 1..*
 * useContext MS
-* useContext ^short = "Contexte d'usage de la fiche de consignes de saisie de spécifier pour quelle(s) Catégorie(s) d'EG elle est applicable ainsi que potentiellemnt la spécialité ordinale, la profession et ou le domaine de l'offre"
+* useContext ^short = "Contexte d'usage du modèle de saisie spécifiant pour quelles catégories d'EG ainsi que potentiellemnt la spécialité ordinale, la profession et ou le domaine de l'offre pour lesquels ce modèle est applicable"
 * useContext ^slicing.discriminator.type = #pattern
 * useContext ^slicing.discriminator.path = "code"
 * useContext ^slicing.rules = #open
-* useContext ^slicing.description = "Slicing pour définir les différents contextes d'usage de la fiche afin de pouvoir catégoriser ces fiches de consignes par : catégorie d'EG (obligatoire), Spécialité ordinale (optionnel), profession (optionnel) et domaine (optionnel)"
+* useContext ^slicing.description = "Slicing pour définir les différents contextes d'usage du modèle afin de pouvoir catégoriser ces modèles de saisie par : catégorie d'EG (obligatoire), Spécialité ordinale (optionnel), profession (optionnel) et domaine (optionnel)"
 * useContext ^slicing.ordered = false
 * useContext contains
     catEG 1..* and
@@ -63,14 +63,10 @@ Description: "Fiche de saisie de l'offre de soins"
 * useContext[champAct].valueCodeableConcept from $JDV-J20-ChampActivite-ROR (required)
 * useContext[champAct].valueCodeableConcept ^short = "Domaines (champs d'activité) de l' offre (OffreOperationnelle)"
 * useContext[champAct] ^short = "Contexte précisant les domaines (champs d'activité) de l' offre (OffreOperationnelle) pour lesquels ce questionnaire est disponible"
-* useContext[fonctionLieu].code = usage-context-ror-codesystem#fonctionLieu
-* useContext[fonctionLieu].valueCodeableConcept from $JDV-J198-FonctionLieu-ROR (required)
-* useContext[fonctionLieu].valueCodeableConcept ^short = "Fonctions (fonctionLieu) du lieu (LieuRealisationOffre)"
-* useContext[fonctionLieu] ^short = "Contexte précisant les fonctions (fonctionLieu) du lieu (LieuRealisationOffre) pour lesquelles ce questionnaire est disponible"
 
-* item ^short = "Structure du champs de la fiche"
+* item ^short = "Structure du champs du modèle"
 * item MS
-* item.linkId ^short = "Unique id pour l'item de la fiche"
+* item.linkId ^short = "Unique id pour l'item du modèle"
 * item.prefix MS
 * item.text MS
 * item.text ^short = "Texte pour l'item"

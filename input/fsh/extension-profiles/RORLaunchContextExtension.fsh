@@ -1,0 +1,16 @@
+Profile: RORLaunchContextExtension
+Parent: LaunchContextExtension
+Id: ror-launchcontext
+Title: "Profil de LaunchContextExtension créée dans le cadre du ROR afin d'ajouter le name 'structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'"
+Description: "Profil de l'extension http://hl7.org/fhir/uv/sdc/StructureDefinition-sdc-questionnaire-launchContext.html créé dans le cadre du ROR afin d'ajouter le name 'structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'"
+
+//https://github.com/HL7/sdc/blob/master/input/fsh/extensions/LaunchContextExtension.fsh
+* obeys ror-inv-1
+* extension[name] only Extension
+  * value[x] from RORLaunchContextVS (extensible)
+
+Invariant: ror-inv-1
+Description: "Types must be from the specified value set of resource types based on name: patient: Patient; user: Patient, Practitioner, PractitionerRole, Organization, RelatedPerson, Device; encounter: Encounter; location: Location; study: ResearchStudy; clinical: Any allowed clinical resource"
+Severity: #error
+Expression: "(extension('name').value.where(code='patient' and system='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext').exists() implies extension('type').all(value = 'Patient')) and (extension('name').value.where(code='user' and system='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext').exists() implies extension('type').all(value='Patient' or value='Practitioner' or value='PractitionerRole' or value='RelatedPerson' or value='Organization' or value='Device')) and (extension('name').value.where(code='encounter' and system='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext').exists() implies extension('type').all(value = 'Encounter')) and (extension('name').value.where(code='location' and system='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext').exists() implies extension('type').all(value = 'Location')) and (extension('name').value.where(code='study' and system='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext').exists() implies extension('type').all(value = 'ResearchStudy'))"
+XPath: "(not(f:extension[@url='name' and f:valueCoding[f:code/@value='patient' and f:system/@value='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext']]) or not(f:extension[@url='type' and f:valueCode/@value!='Patient'])) and (not(f:extension[@url='name' and f:valueCoding[f:code/@value='user' and f:system/@value='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext']]) or not(f:extension[@url='type' and f:valueCode/@value!=('Patient','Practitioner','PractitionerRole','RelatedPerson', 'Organization', 'Device')])) and (not(f:extension[@url='name' and f:valueCoding[f:code/@value='encounter' and f:system/@value='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext']]) or not(f:extension[@url='type' and f:valueCode/@value!='Encounter']))) and (not(f:extension[@url='name' and f:valueCoding[f:code/@value='study' and f:system/@value='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext']]) or f:extension[@url='type' and not(f:valueCode/@value!='ResearchStudy'])) and (not(f:extension[@url='name' and f:valueCoding[f:code/@value='location' and f:system/@value='http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext']]) or not(f:extension[@url='type' and f:valueCode/@value!='Location']))"

@@ -5,9 +5,11 @@ Alias: $practitionerRole-contracted = https://apifhir.annuaire.sante.fr/ws-sync/
 Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted
 Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS
 Alias: $geolocation = http://hl7.org/fhir/StructureDefinition/geolocation
+Alias: $sdc-launch-context = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext
 
 //TRE / Codesystem 
 Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
+Alias: $launch-context = http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html 
 Alias: $TRE-R02-SecteurActivite = https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite
 Alias: $TRE-R04-TypeSavoirFaire = https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire
 Alias: $TRE-G07-TypeIdentifiantStructure = https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure
