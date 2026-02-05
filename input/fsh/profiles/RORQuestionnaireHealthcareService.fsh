@@ -105,8 +105,11 @@ A sample questionnaire using context-based population and extraction
 * launchContext only RORLaunchContextExtension
 */
 
+/*
 * extension[launchContext].extension[name].value[x] from RORLaunchContextVS (extensible)
+*/
 
+* extension[launchContext] only RORLaunchContextExtension
 
 /*
 * extension contains
