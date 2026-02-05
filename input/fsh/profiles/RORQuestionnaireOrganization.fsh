@@ -1,5 +1,5 @@
 Profile: RORQuestionnaireOrganization
-Parent: SDCBaseQuestionnaire
+Parent: SDCQuestionnairePopulateExpression
 Id: ror-questionnaire-organization
 Description: "Modèle de saisie des Lieux de Réalisation"
 * ^status = #draft

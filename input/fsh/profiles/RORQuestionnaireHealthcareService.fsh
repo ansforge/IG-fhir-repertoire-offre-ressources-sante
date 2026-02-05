@@ -1,8 +1,17 @@
 Profile: RORQuestionnaireHealthcareService
-Parent: SDCBaseQuestionnaire
+Parent: SDCQuestionnairePopulateExpression
 Id: ror-questionnaire-healthcareservice
 Description: "Modèle de saisie des Offres Opérationnelles"
 * ^status = #draft
+
+/*
+SDCQuestionnairePopulateExpression : http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp
+SDCQuestionnaireExtractDefinition : http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn
+
+ex avec populate et extract:
+https://build.fhir.org/ig/HL7/sdc/en/Questionnaire-demographics.json.html
+A sample questionnaire using context-based population and extraction
+*/
 
 /* Données fonctionnelles */
 * identifier 0..1 MS
@@ -91,3 +100,15 @@ Description: "Modèle de saisie des Offres Opérationnelles"
 * item.definition MS
 * item.initial MS
 * item.initial ^short = "Valeur(s) initiale(s)"
+
+/*
+* launchContext only RORLaunchContextExtension
+*/
+
+* extension[launchContext].extension[name].value[x] from RORLaunchContextVS (extensible)
+
+
+/*
+* extension contains
+    RORLaunchContextExtension named launchContext 1..* MS
+*/
