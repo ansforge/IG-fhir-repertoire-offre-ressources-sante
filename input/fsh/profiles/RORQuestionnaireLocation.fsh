@@ -76,3 +76,6 @@ Description: "Modèle de saisie des Lieux de Réalisation"
 * item.definition MS
 * item.initial MS
 * item.initial ^short = "Valeur(s) initiale(s)"
+
+* extension[launchContext] 1..1 MS
+* extension[launchContext] only RORLaunchContextExtension

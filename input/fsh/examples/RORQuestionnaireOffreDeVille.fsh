@@ -3,7 +3,14 @@ InstanceOf: RORQuestionnaireHealthcareService
 Usage: #example
 Description: "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle."
 
+//* ^meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp"
+//* ^meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn"
+
 * meta.profile = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice"
+* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn"
+* extension[launchContext]
+  * extension[name].valueCoding = https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext#ror-structure
+  * extension[type].valueCode = #HealthcareService
 * version = "0.1"
 * name = "FDS109"
 * title = "Consignes fiche de saisie Cabinet de ville de médecine générale"
