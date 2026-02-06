@@ -11,7 +11,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for ROR</h1>
- <p>Generated Thu Feb 05 18:21:23 UTC 2026, FHIR version 4.0.1 for ans.fhir.fr.ror#0.7.0-snapshot-1 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>))</p>
+ <p>Generated Fri Feb 06 16:49:43 UTC 2026, FHIR version 4.0.1 for ans.fhir.fr.ror#0.7.0-snapshot-1 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -231,7 +231,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:358447f2-d46e-4a25-a4a8-af8b5cf44f34</td>
+    <td>urn:uuid:c13951c2-286c-4af2-8a45-508725a9d75a</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4</td>
   </tr>
@@ -245,7 +245,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:3e6e4d3b-ee62-4329-8f70-d31777033fd2</td>
+    <td>urn:uuid:8974c9ff-235f-45ac-84a8-67cf3f7225a0</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4</td>
   </tr>
@@ -255,6 +255,20 @@
     <td>http://hl7.org/fhir/ValueSet/mimetypes|4.0.1</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4</td>
+  </tr>
+  <tr>
+    <td>Systems handled by multiple servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/uv/sdc/ValueSet/launchContext|4.0.0-ballot</td>
+    <td>[http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext, https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext]</td>
+    <td>[auth = http://tx.fhir.org/r4, candidates=, auth = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>Systems handled by multiple servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs|0.7.0-snapshot-1</td>
+    <td>[https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem, https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext, http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html]</td>
+    <td>[auth = , candidates=, auth = , candidates=, auth = http://tx.fhir.org/r4, candidates=]</td>
   </tr>
   <tr>
     <td>Systems handled by multiple servers. Using primary server</td>
@@ -819,7 +833,7 @@
 </table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
 <a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 35. Code Systems used: </p>
+<p>Use Count: 37. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -844,8 +858,16 @@
   <tr>
     <td>http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html</td>
     <td>2</td>
-    <td>0</td>
+    <td>1</td>
     <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="http://hl7.org/fhir/uv/sdc/2025Jan/CodeSystem-launchContext.html">Launch Context</a>
+    </td>
   </tr>
   <tr>
     <td>http://loinc.org</td>
@@ -872,10 +894,16 @@
   <tr>
     <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem</td>
     <td>1</td>
-    <td>0</td>
+    <td>1</td>
     <td>
       <a href="CodeSystem-ror-launch-context-codesystem.html">Code System définissant le contexte standard du lancement d'un questionnaire dans le cadre du ROR</a>
     </td>
+  </tr>
+  <tr>
+    <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext</td>
+    <td>0</td>
+    <td>2</td>
+    <td></td>
   </tr>
   <tr>
     <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem</td>
