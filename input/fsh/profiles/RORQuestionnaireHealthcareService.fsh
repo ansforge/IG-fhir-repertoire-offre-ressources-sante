@@ -4,11 +4,6 @@ Id: ror-questionnaire-healthcareservice
 Description: "Modèle de saisie des Offres Opérationnelles"
 * ^status = #draft
 
-* extension
-  * url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
-  * valueCanonical = "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation"
-
-
 /*
 SDCQuestionnairePopulateExpression : http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp
 SDCQuestionnaireExtractDefinition : http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn
@@ -18,6 +13,12 @@ https://build.fhir.org/ig/HL7/sdc/en/Questionnaire-demographics.json.html
 https://github.com/HL7/sdc/blob/master/input/fsh/examples/demographics.fsh
 A sample questionnaire using context-based population and extraction
 */
+
+//ex: https://github.com/hl7ch/ch-lab-report/blob/master/input/fsh/profiles/ChLabPatient.fsh
+* extension[$imposeProfile].valueCanonical = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn"
+
+* extension[launchContext] 1..1 MS
+* extension[launchContext] only RORLaunchContextExtension
 
 /* Données fonctionnelles */
 * identifier 0..1 MS
@@ -107,5 +108,3 @@ A sample questionnaire using context-based population and extraction
 * item.initial MS
 * item.initial ^short = "Valeur(s) initiale(s)"
 
-* extension[launchContext] 1..1 MS
-* extension[launchContext] only RORLaunchContextExtension

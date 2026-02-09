@@ -6,6 +6,7 @@ Alias: $practitionerRole-vitaleAccepted = https://apifhir.annuaire.sante.fr/ws-s
 Alias: $practitionerRole-hasCAS = https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS
 Alias: $geolocation = http://hl7.org/fhir/StructureDefinition/geolocation
 Alias: $sdc-launch-context = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext
+Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 
 //TRE / Codesystem 
 Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
