@@ -4,6 +4,11 @@ Id: ror-questionnaire-healthcareservice
 Description: "Modèle de saisie des Offres Opérationnelles"
 * ^status = #draft
 
+* extension
+  * url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+  * valueCanonical = "http://hl7.org/fhir/uv/ipa/StructureDefinition/ipa-observation"
+
+
 /*
 SDCQuestionnairePopulateExpression : http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp
 SDCQuestionnaireExtractDefinition : http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn
