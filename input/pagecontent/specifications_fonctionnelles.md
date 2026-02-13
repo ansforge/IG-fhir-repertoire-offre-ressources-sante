@@ -409,11 +409,11 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
-### Consignes fiche de saisie de l'offre
+### Modèle de saisie de saisie de l'offre
 
-#### Description du cas d'usage : création des consignes de fiche de saisie de l'offre
+#### Description du cas d'usage : création des modèles de saisie de l'offre
 
-Un serveur souhaite créer les consignes de fiche de saisie de l'offre.
+Un serveur souhaite créer les modèles de saisie de l'offre.
 
 <table align="center">
     <tr>
@@ -423,16 +423,15 @@ Un serveur souhaite créer les consignes de fiche de saisie de l'offre.
     </tr>
     <tr>
         <td align ="center">
-            <b>Création des consignes fiche de saisie de l'offre (modèle expo
-V3.0)</b>
+            <b>Création des modèles de saisie de saisie de l'offre (modèle expo V3.0)</b>
         </td>
     </tr>
 </table>
 
 
-#### Description du cas d'usage : récupération des fiches de saisie de l'offre
+#### Description du cas d'usage : récupération des modèles de saisie de l'offre
 
-Un consommateur souhaite rechercher et récupérer les consignes de fiche de saisie de l'offre.
+Un consommateur souhaite rechercher et récupérer les modèles de saisie de l'offre.
 
 <table align="center">
     <tr>
@@ -442,7 +441,7 @@ Un consommateur souhaite rechercher et récupérer les consignes de fiche de sai
     </tr>
     <tr>
         <td align ="center">
-            <b>Recherche fiche de saisie de l'offre (modèle expo V3.0)</b>
+            <b>Recherche modèle de saisie de l'offre (modèle expo V3.0)</b>
         </td>
     </tr>
 </table>
@@ -450,17 +449,17 @@ Un consommateur souhaite rechercher et récupérer les consignes de fiche de sai
 
 #### Scénarios
 
--   [spécifique serveur] Scénario 1 : Création d’une fiche de consignes de saisie
-    -   Un consommateur souhaite créer une nouvelle fiche de consignes de saisie pour un cabinet de ville de médecine générale.
+-   [spécifique serveur] Scénario 1 : Création d’un modèle de saisie
+    -   Un consommateur souhaite créer un nouvelle modèle de saisie pour un cabinet de ville de médecine générale.
 
--   Scénario 2 : Un consommateur souhaite récupérer l’ensemble des fiches
-    -   Un consommateur souhaite récupérer l’ensemble des fiches.
+-   [spécifique serveur] Scénario 2 : Un consommateur souhaite récupérer l’ensemble des modèles
+    -   Un consommateur souhaite récupérer l’ensemble des modèles.
 
--   Scénario 3 : Un consommateur souhaite récupérer une fiche
-    -   Un consommateur souhaite récupérer une fiche.
+-   [spécifique serveur] Scénario 3 : Un consommateur souhaite récupérer un modèle
+    -   Un consommateur souhaite récupérer un modèle.
 
--   Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné
-    -   Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.
+-   [spécifique serveur] Scénario 4 : Un consommateur souhaite récupérer un ensemble de modèles de saisie sur un critère donné
+    -   Un consommateur souhaite récupérer un ensemble de modèles de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.
   
 
 **Les spécifications techniques pour répondre à ces cas d'usage sont accessibles [ici](modeles_saisie_offre.html)**
