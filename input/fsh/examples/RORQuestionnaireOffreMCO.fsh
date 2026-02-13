@@ -444,7 +444,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '09')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleconsultation.telecom.adresse-1"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Lien vers l'outil de téléconsultation"
                 * type = #string
                 * required = false
@@ -457,7 +457,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '09')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleconsultation.telecom.adresse-2"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Lien vers l'outil de téléconsultation"
                 * type = #string
                 * required = false
@@ -470,7 +470,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '09')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleconsultation.telecom.adresse-3"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Lien vers l'outil de téléconsultation"
                 * type = #string
                 * required = false
@@ -483,7 +483,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '09')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleconsultation.telecom.adresse-4"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Lien vers l'outil de téléconsultation"
                 * type = #string
                 * required = false
@@ -496,7 +496,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '09')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleconsultation.telecom.adresse-5"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Lien vers l'outil de téléconsultation"
                 * type = #string
                 * required = false
@@ -530,7 +530,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '15')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleexpertise.teleexpertise-1.coordonnee"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Coordonnée de téléexpertise"
                 * type = #choice
                 * required = false
@@ -565,7 +565,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '15')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleexpertise.teleexpertise-2.coordonnee"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Coordonnée de téléexpertise"
                 * type = #choice
                 * required = false
@@ -600,7 +600,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '15')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleexpertise.teleexpertise-3.coordonnee"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Coordonnée de téléexpertise"
                 * type = #choice
                 * required = false
@@ -635,7 +635,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                     * language = #text/fhirpath
                     * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '15')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                 * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleexpertise.teleexpertise-4.coordonnee"
-                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                 * text = "Coordonnée de téléexpertise"
                 * type = #choice
                 * required = false
@@ -670,7 +670,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                       * language = #text/fhirpath
                       * expression = "%ror-structure.extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact' and extension.where(url = 'purposeContact' and value.coding.code = '15')).extension.where(url = 'https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom').extension.where(url = 'telecomAddress').value"
                   * linkId = "cvid#Hs1.accueilEtPriseEnCharge.teleexpertise.teleexpertise-5.coordonnee"
-                  * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"
+                  * definition = "https://interop.esante.gouv.fr/ig/fhir/ror/0.6.0/StructureDefinition-ror-healthcareservice-contact-telecom#telecomAddress"
                   * text = "Coordonnée de téléexpertise"
                   * type = #choice
                   * required = false
