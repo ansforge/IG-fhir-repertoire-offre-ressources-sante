@@ -21,15 +21,8 @@
       <sch:assert test="count(f:name) &gt;= 1">name: minimum cardinality of 'name' is 1</sch:assert>
       <sch:assert test="count(f:title) &gt;= 1">title: minimum cardinality of 'title' is 1</sch:assert>
       <sch:assert test="count(f:subjectType) &gt;= 1">subjectType: minimum cardinality of 'subjectType' is 1</sch:assert>
+      <sch:assert test="count(f:subjectType) &lt;= 1">subjectType: maximum cardinality of 'subjectType' is 1</sch:assert>
       <sch:assert test="count(f:code) &lt;= 0">code: maximum cardinality of 'code' is 0</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>f:Questionnaire/f:extension</sch:title>
-    <sch:rule context="f:Questionnaire/f:extension">
-      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:url) &gt;= 1">url: minimum cardinality of 'url' is 1</sch:assert>
-      <sch:assert test="count(f:url) &lt;= 1">url: maximum cardinality of 'url' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

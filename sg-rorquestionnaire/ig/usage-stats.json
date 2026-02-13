@@ -1027,14 +1027,6 @@
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice",
         "title": "RORQuestionnaireHealthcareService"
-      },
-      {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-location",
-        "title": "RORQuestionnaireLocation"
-      },
-      {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-organization",
-        "title": "RORQuestionnaireOrganization"
       }
     ],
     "Task": [
@@ -1111,7 +1103,11 @@
       "Organization"
     ],
     "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden": [
-      "Questionnaire.item"
+      "Questionnaire.item",
+      "Questionnaire.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item.item.item"
     ],
     "http://hl7.org/fhir/StructureDefinition/questionnaire-unit": [
       "Questionnaire.item"
@@ -1125,6 +1121,9 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
       "StructureDefinition.differential.element.type",
       "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile": [
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
       "StructureDefinition.snapshot.element"
@@ -1162,13 +1161,30 @@
     "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-choiceColumn": [
       "Questionnaire.item"
     ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-collapsible": [
+      "Questionnaire.item.item",
+      "Questionnaire.item.item.item",
+      "Questionnaire.item.item.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item.item.item"
+    ],
     "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-contextExpression": [
       "Questionnaire.item"
     ],
     "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression": [
-      "Questionnaire.item"
+      "Questionnaire.item",
+      "Questionnaire.item.item.item",
+      "Questionnaire.item.item.item.item",
+      "Questionnaire.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item.item.item.item",
+      "Questionnaire.item.item.item.item.item.item.item.item.item.item"
     ],
     "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-isSubject": [
+      "Questionnaire.item"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext": [
       "Questionnaire.item"
     ],
     "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext": [

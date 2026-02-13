@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ROR"] ; # 
   fhir:title [ fhir:v "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-09T14:48:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-13T15:04:48+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -953,25 +953,6 @@
        fhir:example [
          a fhir:boolean ;
          fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "Questionnaire"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-offre-de-ville> ;
-         fhir:reference [ fhir:v "Questionnaire/ror-questionnaire-offre-de-ville" ]
-       ] ;
-       fhir:name [ fhir:v "Consignes fiche de saisie Cabinet de ville de médecine générale" ] ;
-       fhir:description [ fhir:v "Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle." ] ;
-       fhir:example [
-         a fhir:canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice>
        ]
      ] [
        fhir:extension ( [
@@ -2644,43 +2625,7 @@
          fhir:reference [ fhir:v "StructureDefinition/ror-questionnaire-healthcareservice" ]
        ] ;
        fhir:name [ fhir:v "RORQuestionnaireHealthcareService" ] ;
-       fhir:description [ fhir:v "Modèle de saisie des Offres Opérationnelles" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-location> ;
-         fhir:reference [ fhir:v "StructureDefinition/ror-questionnaire-location" ]
-       ] ;
-       fhir:name [ fhir:v "RORQuestionnaireLocation" ] ;
-       fhir:description [ fhir:v "Modèle de saisie des Lieux de Réalisation" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-organization> ;
-         fhir:reference [ fhir:v "StructureDefinition/ror-questionnaire-organization" ]
-       ] ;
-       fhir:name [ fhir:v "RORQuestionnaireOrganization" ] ;
-       fhir:description [ fhir:v "Modèle de saisie des Lieux de Réalisation" ] ;
+       fhir:description [ fhir:v "Modèle de saisie des Offres Opérationnelles.  \nLes questionnaires crées à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -2774,6 +2719,25 @@
        fhir:example [
          a fhir:boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-offre-mco> ;
+         fhir:reference [ fhir:v "Questionnaire/ror-questionnaire-offre-mco" ]
+       ] ;
+       fhir:name [ fhir:v "Unité hospitalière de gynécologie" ] ;
+       fhir:description [ fhir:v "Extrait du questionnaire (modèle de saisie) permettant de renseigner l'Offre Opérationnelle d'une unité hospitalière de gynécologie" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice>
        ]
      ] [
        fhir:extension ( [
@@ -3011,14 +2975,14 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:url ;
-             fhir:v "consignes_fiche_saisie_offre.html"^^xsd:anyURI
+             fhir:v "modeles_de_saisie_offre.html"^^xsd:anyURI
            ]
          ] ) ;
          fhir:name [
            a fhir:url ;
-           fhir:v "consignes_fiche_saisie_offre.html"^^xsd:anyURI
+           fhir:v "modeles_de_saisie_offre.html"^^xsd:anyURI
          ] ;
-         fhir:title [ fhir:v "Consignes fiche de saisie de l'offre" ] ;
+         fhir:title [ fhir:v "Modèles de saisie de l'offre" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

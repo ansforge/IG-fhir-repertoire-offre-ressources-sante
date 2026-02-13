@@ -11,7 +11,7 @@
   <name value="ROR"/>
   <title value="Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"/>
   <status value="draft"/>
-  <date value="2026-02-09T14:48:50+00:00"/>
+  <date value="2026-02-13T15:04:48+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -527,17 +527,6 @@
       <name value="Code System définissant le contexte standard du lancement d'un questionnaire dans le cadre du ROR"/>
       <description value="Code System pour étendre http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html afin de l'adapter au contexte de lancement des questionnaires dans le cadre du ROR"/>
       <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Questionnaire"/>
-      </extension>
-      <reference>
-        <reference value="Questionnaire/ror-questionnaire-offre-de-ville"/>
-      </reference>
-      <name value="Consignes fiche de saisie Cabinet de ville de médecine générale"/>
-      <description value="Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle."/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1559,29 +1548,7 @@
         <reference value="StructureDefinition/ror-questionnaire-healthcareservice"/>
       </reference>
       <name value="RORQuestionnaireHealthcareService"/>
-      <description value="Modèle de saisie des Offres Opérationnelles"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/ror-questionnaire-location"/>
-      </reference>
-      <name value="RORQuestionnaireLocation"/>
-      <description value="Modèle de saisie des Lieux de Réalisation"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/ror-questionnaire-organization"/>
-      </reference>
-      <name value="RORQuestionnaireOrganization"/>
-      <description value="Modèle de saisie des Lieux de Réalisation"/>
+      <description value="Modèle de saisie des Offres Opérationnelles.  &#xA;Les questionnaires crées à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1638,6 +1605,17 @@
       <name value="RORTerritorialDivision"/>
       <description value="Extension créée dans le cadre du ROR qui correspond au périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite. &#xA;Cela inclut notamment les divisions territoriales dans lesquelles les professionnels se déplacent."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ror-questionnaire-offre-mco"/>
+      </reference>
+      <name value="Unité hospitalière de gynécologie"/>
+      <description value="Extrait du questionnaire (modèle de saisie) permettant de renseigner l'Offre Opérationnelle d'une unité hospitalière de gynécologie"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1775,10 +1753,10 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="consignes_fiche_saisie_offre.html"/>
+          <valueUrl value="modeles_de_saisie_offre.html"/>
         </extension>
-        <nameUrl value="consignes_fiche_saisie_offre.html"/>
-        <title value="Consignes fiche de saisie de l'offre"/>
+        <nameUrl value="modeles_de_saisie_offre.html"/>
+        <title value="Modèles de saisie de l'offre"/>
         <generation value="markdown"/>
       </page>
       <page>
