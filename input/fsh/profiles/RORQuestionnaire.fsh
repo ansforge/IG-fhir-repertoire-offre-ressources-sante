@@ -1,7 +1,8 @@
 Profile: RORQuestionnaireHealthcareService
 Parent: SDCQuestionnairePopulateExpression
 Id: ror-questionnaire-healthcareservice
-Description: "Modèle de saisie des Offres Opérationnelles"
+Description: "Modèle de saisie des Offres Opérationnelles.  
+Les questionnaires crées à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles."
 * ^status = #draft
 
 /*
@@ -11,35 +12,35 @@ SDCQuestionnaireExtractDefinition : http://hl7.org/fhir/uv/sdc/StructureDefiniti
 ex avec populate et extract:
 https://build.fhir.org/ig/HL7/sdc/en/Questionnaire-demographics.json.html
 https://github.com/HL7/sdc/blob/master/input/fsh/examples/demographics.fsh
-A sample questionnaire using context-based population and extraction
+https://build.fhir.org/ig/HL7/sdc/en/examples.html#using-itempopulationcontext-and-itemextractioncontext
 */
 
 //ex: https://github.com/hl7ch/ch-lab-report/blob/master/input/fsh/profiles/ChLabPatient.fsh
-* extension[$imposeProfile].valueCanonical = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn"
+* ^extension[$imposeProfile].valueCanonical = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn"
 
 * extension[launchContext] 1..1 MS
 * extension[launchContext] only RORLaunchContextExtension
 
 /* Données fonctionnelles */
 * identifier 0..1 MS
-* identifier ^short = "Identifiant du modèle de saisie. Exemple FDS-092"
+* identifier ^short = "Identifiant du modèle de saisie. Exemple MS-141"
 * version ^short = "version du modèle de saisie"
 * version MS
 * status ^short = "Statut du modèle"
 * name 1..1 MS
-* name ^short = "Nom utilisé par les systèmes pour référencer le modèle Exemple FDS-092"
+* name ^short = "Nom utilisé par les systèmes pour référencer le modèle Exemple MS-141"
 * title 1..1 MS
 * title ^short = "Titre du modèle. Exemple Unité d'accueil de jour, Equipe spécialisée Alzheimer (ESA), Unité d'Hébergement « traditionnelle » , en EHPAD Petite unité de vie (PUV)"
-* subjectType 1..* MS
-* subjectType ^short = "Types de Ressources qui seront alimentées par ce modèle : HealthcareService, Organization, Location"
+* subjectType 1..1 MS
+* subjectType ^short = "Type de la ressource qui alimente ce modèle : HealthcareService ou Organization ou Location"
 * date ^short = "Date du dernier changement"
 * date MS
 * publisher ^short = "Nom de l'éditeur du modèle: Etablissement ou personne" 
 * publisher MS
-* description ^short = "Description de l'objet de la feuille de saisie" 
+* description ^short = "Description du modèle de saisie" 
 * description MS
-* derivedFrom ^short = "Modèles de saisie parents"
-* derivedFrom MS
+//* derivedFrom ^short = "Modèles de saisie parents"
+//* derivedFrom MS
 * purpose MS
 * purpose ^short = "Pourquoi ce modèle est-il défini"
 * approvalDate 0..1 MS
@@ -61,7 +62,8 @@ A sample questionnaire using context-based population and extraction
     catEG 1..* and
     typePS 0..* and
     speOrdinal 0..* and
-    champAct 0..*
+    champAct 0..* //and
+//    fonctionLieu 0..1
 * useContext.code from ror-usage-context-type-vs (extensible)
 * useContext[catEG].code = $TRE-R67-TypeStructure-EJ-EG#EG // fixé 
 * useContext[catEG].valueCodeableConcept from $JDV-J55-CategorieEG-ROR (required)
@@ -79,6 +81,10 @@ A sample questionnaire using context-based population and extraction
 * useContext[champAct].valueCodeableConcept from $JDV-J20-ChampActivite-ROR (required)
 * useContext[champAct].valueCodeableConcept ^short = "Domaines (champs d'activité) de l' offre (OffreOperationnelle)"
 * useContext[champAct] ^short = "Contexte précisant les domaines (champs d'activité) de l' offre (OffreOperationnelle) pour lesquels ce questionnaire est disponible"
+// * useContext[fonctionLieu].code = usage-context-ror-codesystem#fonctionLieu
+// * useContext[fonctionLieu].valueCodeableConcept from $JDV-J198-FonctionLieu-ROR (required)
+// * useContext[fonctionLieu].valueCodeableConcept ^short = "Fonctions (fonctionLieu) du lieu (LieuRealisationOffre)"
+// * useContext[fonctionLieu] ^short = "Contexte précisant les fonctions (fonctionLieu) du lieu (LieuRealisationOffre) pour lesquelles ce questionnaire est disponible"
 
 * item ^short = "Structure du champs du modèle"
 * item MS

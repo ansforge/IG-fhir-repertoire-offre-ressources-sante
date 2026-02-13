@@ -618,7 +618,7 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "context"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-context"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche selon la catégorie de la fiche. Voir [scenario exemple](consignes_fiche_saisie_offre.html#sc%C3%A9nario-4-un-consommateur-souhaite-r%C3%A9cup%C3%A9rer-un-ensemble-de-fiches-de-saisie-sur-un-crit%C3%A8re-donn%C3%A9)"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche selon la catégorie de la fiche. Voir [scenario exemple](modeles_saisie_offre.html#sc%C3%A9nario-4-un-consommateur-souhaite-r%C3%A9cup%C3%A9rer-un-ensemble-de-fiches-de-saisie-sur-un-crit%C3%A8re-donn%C3%A9)"
 
 * rest.resource[=].searchParam[+].name = "name"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-name"

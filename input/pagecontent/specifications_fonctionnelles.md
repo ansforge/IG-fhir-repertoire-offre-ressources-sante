@@ -463,7 +463,7 @@ Un consommateur souhaite rechercher et récupérer les consignes de fiche de sai
     -   Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.
   
 
-**Les spécifications techniques pour répondre à ces cas d'usage sont accessibles [ici](consignes_fiche_saisie_offre.html)**
+**Les spécifications techniques pour répondre à ces cas d'usage sont accessibles [ici](modeles_saisie_offre.html)**
 
 ### Saisie de l'offre
 
