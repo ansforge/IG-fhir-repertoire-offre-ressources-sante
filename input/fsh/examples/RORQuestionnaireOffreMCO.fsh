@@ -1,5 +1,5 @@
 Instance: ror-questionnaire-offre-mco
-InstanceOf: RORQuestionnaireHealthcareService
+InstanceOf: RORQuestionnaire
 Usage: #example
 Description: "Extrait du questionnaire (modèle de saisie) permettant de renseigner l'Offre Opérationnelle d'une unité hospitalière de gynécologie"
 

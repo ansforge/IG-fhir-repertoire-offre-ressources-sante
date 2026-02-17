@@ -1,4 +1,4 @@
-Profile: RORQuestionnaireHealthcareService
+Profile: RORQuestionnaire
 Parent: SDCQuestionnairePopulateExpression
 Id: ror-questionnaire-healthcareservice
 Description: "Modèle de saisie des Offres Opérationnelles.  
