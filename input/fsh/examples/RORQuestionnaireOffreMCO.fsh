@@ -19,7 +19,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
 * date = "2026-02-13"
 * publisher = "ANS"
 * description = "L’unité hospitalière de gynécologique assure la réalisation d’actes de gynécologie. Les valeurs proposées sont celles identifiées par le Conseil national professionnel (CNP) de gynécologie-obstétrique et de gynécologie médicale."
-* url = "https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/FDS-109"
+* url = "https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141"
 * jurisdiction = urn:iso:std:iso:3166#FR "FRANCE"
 
 * subjectType[0] = #HealthcareService
