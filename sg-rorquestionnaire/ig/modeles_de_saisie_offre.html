@@ -125,8 +125,8 @@
       <li>
         <a href="specifications_techniques_10.html">Création et Mise à jour du lieu de réalisation de l'offre</a>
       </li>
-      <li><a name="l224">​</a>
-        <a href="modeles_saisie_offre.html">Modèles de saisie de l'offre</a>
+      <li>
+        <a href="modeles_de_saisie_offre.html">Modèles de saisie de l'offre</a>
       </li>
       <li>
         <a href="saisie_offre.html">Saisie de l'offre</a>
@@ -253,7 +253,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-  <!-- ## Consignes de fiche de saisie -->
+  <!-- ## Modèle de saisie -->
 <h3 id="construction-de-la-requête-de-base">Construction de la requête de base</h3>
 
 <table>
@@ -702,9 +702,9 @@ Plus de précision sur la spécification FHIR :
 </span></code></pre></div></div>
 <p><a name="l3111">​</a>Vous pouvez télécharger le json <a href="Questionnaire-ror-questionnaire-offre-de-ville.json">ici</a> et l’importer dans <a href="https://lhcformbuilder.nlm.nih.gov/">https://lhcformbuilder.nlm.nih.gov/</a> pour le tester et le faire évoluer via cet IHM.</p>
 
-<h4 id="scénario-2-un-consommateur-souhaite-récupérer-lensemble-des-fiches">Scénario 2&nbsp;: Un consommateur souhaite récupérer l’ensemble des fiches</h4>
+<h4 id="scénario-2-un-consommateur-souhaite-récupérer-lensemble-des-modèles">Scénario 2&nbsp;: Un consommateur souhaite récupérer l’ensemble des modèles</h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite récupérer l’ensemble des fiches.</p>
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite récupérer l’ensemble des modèles.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -712,13 +712,13 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête expliquée&nbsp;:</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire <span class="c">#recherche sans critère pour récupérer toutes les fiches</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire <span class="c">#recherche sans critère pour récupérer tous les modèles</span>
 
 </code></pre></div></div>
 
-<h4 id="scénario-3-un-consommateur-souhaite-récupérer-une-fiche-draft">Scénario 3&nbsp;: Un consommateur souhaite récupérer une fiche <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-3-un-consommateur-souhaite-récupérer-un-modèle-draft">Scénario 3&nbsp;: Un consommateur souhaite récupérer un modèle <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite récupérer une fiche</p>
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite récupérer un modèle</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -726,13 +726,13 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête expliquée&nbsp;:</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?identifier<span class="o">=</span>XXX <span class="c">#critère de recherche sur l’identifiant de la fiche</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?identifier<span class="o">=</span>XXX <span class="c">#critère de recherche sur l’identifiant du modèle</span>
 
 </code></pre></div></div>
 
-<h4 id="scénario-4-un-consommateur-souhaite-récupérer-un-ensemble-de-fiches-de-saisie-sur-un-critère-donné-draft">Scénario 4&nbsp;: Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné <code><span style="color: #ff0000;">draft</span></code></h4>
+<h4 id="scénario-4-un-consommateur-souhaite-récupérer-un-ensemble-de-modèles-de-saisie-sur-un-critère-donné-draft">Scénario 4&nbsp;: Un consommateur souhaite récupérer un ensemble de modèles de saisie sur un critère donné <code><span style="color: #ff0000;">draft</span></code></h4>
 
-<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.</p>
+<p><strong>Description du scénario&nbsp;:</strong> Un consommateur souhaite récupérer un ensemble de modèles de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.</p>
 
 <p><strong>Requête :</strong></p>
 
@@ -740,7 +740,7 @@ Plus de précision sur la spécification FHIR :
 
 <p><strong>Requête expliquée&nbsp;:</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?context<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 <span class="c"># critère permettant de rechercher les fiches utilisée pour la catégorie d'EG 'Centre de santé' (voir binding)</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET <span class="o">[</span>BASE]/Questionnaire?context<span class="o">=</span>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 <span class="c"># critère permettant de rechercher les modèles utilisée pour la catégorie d'EG 'Centre de santé' (voir binding)</span>
 
 </code></pre></div></div>
 
@@ -793,7 +793,7 @@ Plus de précision sur la spécification FHIR :
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 17, 2026 13:17+0000">2026-02-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0-snapshot-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 18, 2026 14:13+0000">2026-02-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
