@@ -594,47 +594,47 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-identifier"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur l'identifiant de la fiche de consignes"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur l'identifiant du modèle de saisie"
 
 * rest.resource[=].searchParam[+].name = "status"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-status"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le statut de la fiche de consignes"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le statut du modèle de saisie"
 
 * rest.resource[=].searchParam[+].name = "context"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-context"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche selon la catégorie de la fiche. Voir [scenario exemple](modeles_saisie_offre.html#sc%C3%A9nario-4-un-consommateur-souhaite-r%C3%A9cup%C3%A9rer-un-ensemble-de-fiches-de-saisie-sur-un-crit%C3%A8re-donn%C3%A9)"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche selon la catégorie du modèle. Voir [scenario exemple](modeles_saisie_offre.html#sc%C3%A9nario-4-un-consommateur-souhaite-r%C3%A9cup%C3%A9rer-un-ensemble-de-modèles-de-saisie-sur-un-crit%C3%A8re-donn%C3%A9)"
 
 * rest.resource[=].searchParam[+].name = "name"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-name"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le nom de la fiche de consignes"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le nom du modèle de saisie"
 
 * rest.resource[=].searchParam[+].name = "title"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-title"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le titre de la fiche de consignes"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur le titre du modèle de saisie"
 
 * rest.resource[=].searchParam[+].name = "description"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-description"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche dans la description de la fiche de consignes"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche dans la description du modèle de saisie"
 
 * rest.resource[=].searchParam[+].name = "version"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-version"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la version de la fiche de consignes"
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la version du modèle de saisie"
 
 * rest.resource[=].searchParam[+].name = "date"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-date"
 * rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la date de publication de la fiche de consignes"*/
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la date de publication du modèle de saisie"*/
 
 /** rest.resource[=].searchParam[+].name = "effective"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-effective"
 * rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la période pendant laquelle la fiche est effective"*/
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la période pendant laquelle le modèle est effectif"*/
 
 // bulk data export from hl7.fhir.uv.bulkdata: 2.0.0
 * rest.operation[+].name = "export"

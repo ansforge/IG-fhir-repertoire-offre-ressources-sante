@@ -409,7 +409,7 @@ Le ROR National répond à l'établissement, au moins, l'identifiant technique, 
 
 **Les spécifications techniques pour répondre à ce cas d'usage sont accessibles [ici](specifications_techniques_10.html)**
 
-### Modèle de saisie de saisie de l'offre
+### Modèle de saisie de l'offre
 
 #### Description du cas d'usage : création des modèles de saisie de l'offre
 
@@ -418,7 +418,7 @@ Un serveur souhaite créer les modèles de saisie de l'offre.
 <table align="center">
     <tr>
         <td align ="center">
-            <div style="text-inlin:center;">{%include creation_consignes_fiche-saisie.svg%}</div>
+            <div style="text-inlin:center;">{%include creation_modele_saisie.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -436,7 +436,7 @@ Un consommateur souhaite rechercher et récupérer les modèles de saisie de l'o
 <table align="center">
     <tr>
         <td align ="center">
-            <div style="text-inlin:center;">{%include recherche_consignes_fiche_saisie.svg%}</div>
+            <div style="text-inlin:center;">{%include recherche_modele_saisie.svg%}</div>
         </td>    
     </tr>
     <tr>
@@ -450,14 +450,11 @@ Un consommateur souhaite rechercher et récupérer les modèles de saisie de l'o
 #### Scénarios
 
 -   [spécifique serveur] Scénario 1 : Création d’un modèle de saisie
-    -   Un consommateur souhaite créer un nouvelle modèle de saisie pour un cabinet de ville de médecine générale.
-
+    -   Un consommateur souhaite créer un nouveau modèle de saisie pour l'Offre Opérationnelle d'une unité hospitalière de gynécologie
 -   [spécifique serveur] Scénario 2 : Un consommateur souhaite récupérer l’ensemble des modèles
     -   Un consommateur souhaite récupérer l’ensemble des modèles.
-
 -   [spécifique serveur] Scénario 3 : Un consommateur souhaite récupérer un modèle
     -   Un consommateur souhaite récupérer un modèle.
-
 -   [spécifique serveur] Scénario 4 : Un consommateur souhaite récupérer un ensemble de modèles de saisie sur un critère donné
     -   Un consommateur souhaite récupérer un ensemble de modèles de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.
   

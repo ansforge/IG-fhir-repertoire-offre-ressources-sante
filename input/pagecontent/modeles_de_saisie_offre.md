@@ -1,4 +1,4 @@
-<!-- ## Consignes de fiche de saisie -->
+<!-- ## Modèle de saisie -->
 ###  Construction de la requête de base
 
 <table>
@@ -439,9 +439,9 @@ POST [BASE]/Questionnaire
  Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.
 
 
-#### Scénario 2 : Un consommateur souhaite récupérer l'ensemble des fiches
+#### Scénario 2 : Un consommateur souhaite récupérer l'ensemble des modèles
 
-**Description du scénario :** Un consommateur souhaite récupérer l'ensemble des fiches.
+**Description du scénario :** Un consommateur souhaite récupérer l'ensemble des modèles.
 
 
 **Requête :**
@@ -451,13 +451,13 @@ POST [BASE]/Questionnaire
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Questionnaire #recherche sans critère pour récupérer toutes les fiches
+GET [BASE]/Questionnaire #recherche sans critère pour récupérer tous les modèles
 
 ```
 
-#### Scénario 3 : Un consommateur souhaite récupérer une fiche <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 3 : Un consommateur souhaite récupérer un modèle <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** Un consommateur souhaite récupérer une fiche
+**Description du scénario :** Un consommateur souhaite récupérer un modèle
 
 
 **Requête :**
@@ -467,14 +467,14 @@ GET [BASE]/Questionnaire #recherche sans critère pour récupérer toutes les fi
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifiant de la fiche
+GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifiant du modèle
 
 ```
 
 
-#### Scénario 4 : Un consommateur souhaite récupérer un ensemble de fiches de saisie sur un critère donné <code><span style="color: #ff0000;">draft</span></code>
+#### Scénario 4 : Un consommateur souhaite récupérer un ensemble de modèles de saisie sur un critère donné <code><span style="color: #ff0000;">draft</span></code>
 
-**Description du scénario :** Un consommateur souhaite récupérer un ensemble de fiches de saisie pour une catégorie d'EG donnée. Par exemple, un Centre de santé.
+**Description du scénario :** Un consommateur souhaite récupérer un ensemble de modèles de saisie pour une catégorie d'EG donnée. Par exemple, un Centre de santé.
 
 
 **Requête :**
@@ -484,7 +484,7 @@ GET [BASE]/Questionnaire?identifier=XXX #critère de recherche sur l’identifia
 **Requête expliquée :**
 
 ```sh
-GET [BASE]/Questionnaire?context=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 # critère permettant de rechercher les fiches utilisée pour la catégorie d'EG 'Centre de santé' (voir binding)
+GET [BASE]/Questionnaire?context=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement|124 # critère permettant de rechercher les modèles utilisée pour la catégorie d'EG 'Centre de santé' (voir binding)
 
 ```
 
