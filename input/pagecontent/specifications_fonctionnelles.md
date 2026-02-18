@@ -423,7 +423,7 @@ Un serveur souhaite créer les modèles de saisie de l'offre.
     </tr>
     <tr>
         <td align ="center">
-            <b>Création des modèles de saisie de saisie de l'offre (modèle expo V3.0)</b>
+            <b>Création des modèles de saisie de l'offre (modèle expo V3.0)</b>
         </td>
     </tr>
 </table>
@@ -459,7 +459,7 @@ Un consommateur souhaite rechercher et récupérer les modèles de saisie de l'o
     -   Un consommateur souhaite récupérer un ensemble de modèles de saisie pour une catégorie d’EG donnée. Par exemple, un Centre de santé.
   
 
-**Les spécifications techniques pour répondre à ces cas d'usage sont accessibles [ici](modeles_saisie_offre.html)**
+**Les spécifications techniques pour répondre à ces cas d'usage sont accessibles [ici](modeles_de_saisie_offre.html)**
 
 ### Saisie de l'offre
 

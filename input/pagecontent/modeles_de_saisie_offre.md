@@ -130,7 +130,7 @@ Les paramètres et modificateurs de requêtes sont décrits [ici](modifiers.html
 
 ### Exemple de requêtes
 
-#### Scénario 1 : Création d'un modèle de saisie
+#### Scénario 1 : Création d'un modèle de saisie <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur (ex: établissement) souhaite créer une nouvelle offre opération.
 
@@ -436,10 +436,10 @@ POST [BASE]/Questionnaire
                 },
                 ...
 ```
- Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-de-ville.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.
+ Vous pouvez télécharger le json [ici](Questionnaire-ror-questionnaire-offre-mco.json) et l'importer dans [https://lhcformbuilder.nlm.nih.gov/](https://lhcformbuilder.nlm.nih.gov/) pour le tester et le faire évoluer via cet IHM.
 
 
-#### Scénario 2 : Un consommateur souhaite récupérer l'ensemble des modèles
+#### Scénario 2 : Un consommateur souhaite récupérer l'ensemble des modèles <code><span style="color: #ff0000;">draft</span></code>
 
 **Description du scénario :** Un consommateur souhaite récupérer l'ensemble des modèles.
 
