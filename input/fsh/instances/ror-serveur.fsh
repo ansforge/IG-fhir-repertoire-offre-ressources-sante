@@ -648,7 +648,7 @@ Usage: #definition
 /** rest.resource[=].searchParam[+].name = "effective"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Questionnaire-effective"
 * rest.resource[=].searchParam[=].type = #date
-* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la période pendant laquelle le modèle est effectifr"*/
+* rest.resource[=].searchParam[=].documentation = "Permet la recherche sur la période pendant laquelle le modèle est effectif"*/
 
 // bulk data export from hl7.fhir.uv.bulkdata: 2.0.0
 * rest.operation[+].name = "export"
