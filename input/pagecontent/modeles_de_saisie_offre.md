@@ -352,7 +352,7 @@ POST [BASE]/Questionnaire
     "HealthcareService"
   ],
   "lastReviewDate": "2023-12-05",
-  "purpose": "Les questionnaires crées à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles.",
+  "purpose": "Les questionnaires créés à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles.",
   "item": [
     {
       "extension": [

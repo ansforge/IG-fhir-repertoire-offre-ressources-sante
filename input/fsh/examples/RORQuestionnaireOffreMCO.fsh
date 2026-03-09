@@ -24,7 +24,7 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
 
 * subjectType[0] = #HealthcareService
 * lastReviewDate = "2023-12-05"
-* purpose = "Les questionnaires crées à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles."
+* purpose = "Les questionnaires créés à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles."
 
 * useContext[catEG][+]
   * code = $TRE-R67-TypeStructure-EJ-EG#EG
