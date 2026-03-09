@@ -1,7 +1,7 @@
 Profile: RORLaunchContextExtension
 Parent: LaunchContextExtension
 Id: ror-launchcontext
-Title: "Profil de LaunchContextExtension créée dans le cadre du ROR afin d'ajouter le name 'ror-structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'"
+Title: "Profil de LaunchContextExtension créé dans le cadre du ROR afin d'ajouter le name 'ror-structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'"
 Description: "Profil de l'extension http://hl7.org/fhir/uv/sdc/StructureDefinition-sdc-questionnaire-launchContext.html créé dans le cadre du ROR afin d'ajouter le name 'structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'"
 
 //https://github.com/HL7/sdc/blob/master/input/fsh/extensions/LaunchContextExtension.fsh
