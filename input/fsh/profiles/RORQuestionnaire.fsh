@@ -2,7 +2,7 @@ Profile: RORQuestionnaire
 Parent: SDCQuestionnairePopulateExpression
 Id: ror-questionnaire-healthcareservice
 Description: "Modèle de saisie des Offres Opérationnelles.  
-Les questionnaires crées à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles."
+Les questionnaires créés à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles."
 * ^status = #draft
 
 /*
