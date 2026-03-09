@@ -10,7 +10,7 @@ SDCQuestionnairePopulateExpression : http://hl7.org/fhir/uv/sdc/StructureDefinit
 SDCQuestionnaireExtractDefinition : http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-defn
 
 ex avec populate et extract:
-https://build.fhir.org/ig/HL7/sdc/en/Questionnaire-demographics.json.html
+https://hl7.org/fhir/uv/sdc/Questionnaire-demographics.json.html
 https://github.com/HL7/sdc/blob/master/input/fsh/examples/demographics.fsh
 https://build.fhir.org/ig/HL7/sdc/en/examples.html#using-itempopulationcontext-and-itemextractioncontext
 */
