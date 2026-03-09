@@ -12,7 +12,7 @@ SDCQuestionnaireExtractDefinition : http://hl7.org/fhir/uv/sdc/StructureDefiniti
 ex avec populate et extract:
 https://hl7.org/fhir/uv/sdc/Questionnaire-demographics.json.html
 https://github.com/HL7/sdc/blob/master/input/fsh/examples/demographics.fsh
-https://build.fhir.org/ig/HL7/sdc/en/examples.html#using-itempopulationcontext-and-itemextractioncontext
+https://hl7.org/fhir/uv/sdc/examples.html#using-itempopulationcontext-and-itemextractioncontext
 */
 
 //ex: https://github.com/hl7ch/ch-lab-report/blob/master/input/fsh/profiles/ChLabPatient.fsh
