@@ -5999,7 +5999,7 @@ Critères de recherches applicables à la ressource Questionnaire.
   border-right:none;mso-border-top-alt:solid #4472C4 .5pt;mso-border-left-alt:
   solid #4472C4 .5pt;mso-border-bottom-alt:solid #4472C4 .5pt;background:#4472C4;
   padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Attributs Fiche<o:p></o:p></span></b></p>
+  <p class="MsoNormal" align="center" style="text-align:center;mso-yfti-cnfc:1"><b><span style="font-size:8.0pt;line-height:115%;color:white">Attributs Modèle<o:p></o:p></span></b></p>
   </td>
   <td width="17%" valign="top" style="width:17.94%;border-top:solid #4472C4 1.0pt;
   border-left:none;border-bottom:solid #4472C4 1.0pt;border-right:none;
@@ -6128,7 +6128,7 @@ Critères de recherches applicables à la ressource Questionnaire.
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Identifiant
-de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+du modèle. <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
@@ -6162,14 +6162,14 @@ de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Critère pour récupérer un ensemble de fiches de saisie par catégorie(s) d'EG définie(s) ainsi que potentiellemnt la spécialité ordinale et la profession <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
+  8.0pt;line-height:115%">Critère pour récupérer un ensemble de modèles de saisie par catégorie(s) d'EG définie(s) ainsi que potentiellemnt la spécialité ordinale et la profession <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:0">
   <td width="17%" valign="top" style="width:17.9%;border:solid #8EAADB 1.0pt;
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
   background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><b><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Statut de la fiche
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><b><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Statut du modèle
   </span></b><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
   <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
@@ -6195,7 +6195,7 @@ de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Statut courant de la fiche <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Statut courant du modèle <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:
   115%"><o:p></o:p></span></p>
   </td>
  </tr>
@@ -6230,7 +6230,7 @@ de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Date de publication de la fiche. <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
+  8.0pt;line-height:115%">Date de publication du modèle. <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:2">
@@ -6264,7 +6264,7 @@ de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Version de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
+  <p class="MsoNormal" align="left" style="text-align:left;mso-yfti-cnfc:64"><span style="font-size:8.0pt;line-height:115%;color:black;mso-color-alt:windowtext">Version du modèle. <code><span style="color: #ff0000;">draft</span></code></span><span style="font-size:8.0pt;line-height:115%"><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
@@ -6298,7 +6298,7 @@ de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Critère pour rechercher dans le titre de la fiche de saisie <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
+  8.0pt;line-height:115%">Critère pour rechercher dans le titre du modèle de saisie <code><span style="color: #ff0000;">draft</span></code><o:p></o:p></span></p>
   </td>
  </tr>
   <tr style="mso-yfti-irow:2">
@@ -6340,7 +6340,7 @@ de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span
   border-top:none;mso-border-top-alt:solid #8EAADB .5pt;mso-border-alt:solid #8EAADB .5pt;
   padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Nom technique de la fiche<o:p></o:p></span></p>
+  8.0pt;line-height:115%">Nom technique du modèle<o:p></o:p></span></p>
   </td>
   <td width="17%" valign="top" style="width:17.94%;border-top:none;border-left:
   none;border-bottom:solid #8EAADB 1.0pt;border-right:solid #8EAADB 1.0pt;
@@ -6366,7 +6366,7 @@ de la fiche. <code><span style="color: #ff0000;">draft</span></code></span><span
   mso-border-top-alt:solid #8EAADB .5pt;mso-border-left-alt:solid #8EAADB .5pt;
   mso-border-alt:solid #8EAADB .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" align="left" style="text-align:left"><span style="font-size:
-  8.0pt;line-height:115%">Nom technique de la fiche de saisie <code><span style="color: #ff0000;">draft</span></code> <o:p></o:p></span></p>
+  8.0pt;line-height:115%">Nom technique du modèle de saisie <code><span style="color: #ff0000;">draft</span></code> <o:p></o:p></span></p>
   </td>
  </tr>
 </tbody></table>

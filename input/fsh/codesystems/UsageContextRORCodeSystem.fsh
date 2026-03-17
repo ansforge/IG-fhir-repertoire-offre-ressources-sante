@@ -6,4 +6,5 @@ Description: "CodeSystem pour définir le type de catégorie du contexte d'usage
 * ^caseSensitive = true 
 * ^compositional = false
 * ^content = #complete
-* #champAct "champAct" "Champ d'activité"
+* #champAct "champAct" "champActivite de l'OffreOperationnelle "
+* #fonctionLieu "fonctionLieu" "fonctionLieu de LieuRealisationOffre "
