@@ -11,7 +11,7 @@
   <name value="ROR"/>
   <title value="Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social"/>
   <status value="draft"/>
-  <date value="2026-03-09T13:22:43+00:00"/>
+  <date value="2026-03-17T11:12:47+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -37,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.0.1"/>
+    <version value="7.1.0"/>
   </dependsOn>
   <dependsOn id="ans_annuaire_fhir_r4">
     <uri value="http://fhir.org/packages/ans.annuaire.fhir.r4/ImplementationGuide/ans.annuaire.fhir.r4"/>
@@ -58,6 +58,11 @@
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_sdc">
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
+    <packageId value="hl7.fhir.uv.sdc"/>
+    <version value="3.0.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -514,14 +519,14 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Questionnaire"/>
+        <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="Questionnaire/ror-questionnaire-offre-de-ville"/>
+        <reference value="CodeSystem/ror-launch-context-codesystem"/>
       </reference>
-      <name value="Consignes fiche de saisie Cabinet de ville de médecine générale"/>
-      <description value="Exemple 'fake' pour RORQuestionnaire n'ayant pas forcément de cohérence fonctionnelle."/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire"/>
+      <name value="Code System définissant le contexte standard du lancement d'un questionnaire dans le cadre du ROR"/>
+      <description value="Code System pour étendre http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html afin de l'adapter au contexte de lancement des questionnaires dans le cadre du ROR"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -554,6 +559,17 @@
       </reference>
       <name value="OutputTaskRORCodeSystem"/>
       <description value="Code System pour la définition des éléments spécifiques de output dans ressource RORTask"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ror-launchcontext"/>
+      </reference>
+      <name value="Profil de LaunchContextExtension créé dans le cadre du ROR afin d'ajouter le name 'ror-structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'"/>
+      <description value="Profil de l'extension http://hl7.org/fhir/uv/sdc/StructureDefinition-sdc-questionnaire-launchContext.html créé dans le cadre du ROR afin d'ajouter le name 'structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1529,10 +1545,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ror-questionnaire"/>
+        <reference value="StructureDefinition/ror-questionnaire-healthcareservice"/>
       </reference>
       <name value="RORQuestionnaire"/>
-      <description value="Fiche de saisie de l'offre de soins"/>
+      <description value="Modèle de saisie des Offres Opérationnelles.  &#xA;Les questionnaires créés à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1592,6 +1608,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/ror-questionnaire-offre-mco"/>
+      </reference>
+      <name value="Unité hospitalière de gynécologie"/>
+      <description value="Extrait du questionnaire (modèle de saisie) permettant de renseigner l'Offre Opérationnelle d'une unité hospitalière de gynécologie"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-questionnaire-healthcareservice"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -1617,10 +1644,21 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/ror-launch-context-vs"/>
+      </reference>
+      <name value="Value Set pour le contexte standard du lancement d'un questionnaire dans le cadre du ROR"/>
+      <description value="Extension du Value Set https://hl7.org/fhir/uv/sdc/ValueSet-launchContext.html afin de l'adapter au contexte de lancement des questionnaires dans le cadre du ROR"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/ror-usage-context-type-vs"/>
       </reference>
-      <name value="Value Set type pour le contexte d'usage de la fiche de saisie"/>
-      <description value="Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage de la fiche de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession"/>
+      <name value="Value Set type pour le contexte d'usage du modèle de saisie"/>
+      <description value="Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d'usage du modèle de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1715,10 +1753,10 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="consignes_fiche_saisie_offre.html"/>
+          <valueUrl value="modeles_de_saisie_offre.html"/>
         </extension>
-        <nameUrl value="consignes_fiche_saisie_offre.html"/>
-        <title value="Consignes fiche de saisie de l'offre"/>
+        <nameUrl value="modeles_de_saisie_offre.html"/>
+        <title value="Modèles de saisie de l'offre"/>
         <generation value="markdown"/>
       </page>
       <page>
