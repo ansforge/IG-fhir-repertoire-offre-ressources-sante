@@ -1,3 +1,25 @@
+### version 0.7.0-snapshot-2
+
+**Pre-release 0.7.0-snapshot-2 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 4.3 du ROR National.**
+
+**Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'apporter de l'information aux consommateurs concernant les nouveautés en cours d'implémentation.**
+
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.7.0-snapshot-2>
+
+[Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/13?closed=1) :
+
+* [RC] Ajout du CodeSystem RORLaunchContextCodeSystem, du ValueSet RORLaunchContextVS et de l'extension RORLaunchContextExtension pour le contexte de lancement des questionnaires ROR [460](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/460)
+* [RC] Mise à jour du profil RORQuestionnaire (héritage SDCQuestionnairePopulateExpression) et remplacement de l'exemple RORQuestionnaireOffreDeVille par RORQuestionnaireHealthcareService [460](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/460)
+* [Narratif] Renommage des "fiches de saisie" en "modèle de saisie" dans l'ensemble du guide d'implémentation [460](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/460)
+* [RC] Capability Statement Serveur : ajout des méthodes POST (create) pour le profil Location et PATCH (patch) pour les profils Organization et HealthcareService [459](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/459)
+* [Narratif] Mise à jour du fichier de mapping FHIR/ROR et des onglets "mappings" pour se conformer à la politique d'accès aux données du ROR [453](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/453)
+* [Narratif] Suppression de la mention "Draft" sur la page de mapping FHIR et de la mention de l'approche multi-site à l'étude [453](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/453)
+* [RC] Modification du SearchParameter du scénario 13 pour la recherche des offres rattachées à un professionnel [455](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/455)
+* [Narratif] Modification de la description de l'élément sensitiveUnit du profil HealthcareService [364](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/364)
+* [RC] DivisionTerritoriale : précision des types attendus pour les offres (HealthcareService) et les EG (Organization) [458](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/458)
+* [Narratif] Correction de l'exemple du scénario 3 "Suppression d'une capacité d'accueil opérationnelle" : remplacement du type d'opération PATCH de "remove" par "delete" [456](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/456)
+* [Narratif] Ajout de la description du champ managingOrganization du profil Location [457](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/457)
+
 ### version 0.7.0-snapshot-1
 
 **Pre-release 0.7.0-snapshot-1 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 4.3 du ROR National.**
