@@ -25,7 +25,7 @@ The aim of this implementation guide is to define the specifications of the ROR 
 
 <b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.1 du ROR.
 <br>
-Cette version du guide d’implementation cible l’implémentation de l’API FHIR dans la solution du ROR National version 4.3.</b>
+Cette version du guide d’implementation cible l’implémentation de l’API FHIR dans la solution du ROR National version 5.1.</b>
 
 Dans ce guide vous pourrez retrouver des indicateurs afin d'identifier la maturité de certains éléments ou certaines sections de la manière suivante :
 

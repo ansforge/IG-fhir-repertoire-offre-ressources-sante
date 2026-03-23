@@ -1,6 +1,6 @@
 ### version 0.7.0-snapshot-2
 
-**Pre-release 0.7.0-snapshot-2 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 4.3 du ROR National.**
+**Pre-release 0.7.0-snapshot-2 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 5.1 du ROR national. A noter: la version 0.7.0-snapshot-1 sera finalement implémenté avec la V5.1 du ROR national.**
 
 **Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'apporter de l'information aux consommateurs concernant les nouveautés en cours d'implémentation.**
 
@@ -17,7 +17,7 @@ URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.7.0-snapshot-2>
 * [RC] Modification du SearchParameter du scénario 13 pour la recherche des offres rattachées à un professionnel [455](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/455)
 * [Narratif] Modification de la description de l'élément sensitiveUnit du profil HealthcareService [364](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/364)
 * [RC] DivisionTerritoriale : précision des types attendus pour les offres (HealthcareService) et les EG (Organization) [458](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/458)
-* [Narratif] Correction de l'exemple du scénario 3 "Suppression d'une capacité d'accueil opérationnelle" : remplacement du type d'opération PATCH de "remove" par "delete" [456](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/456)
+* [Narratif] Correction de l'exemple du scénario 3 "Suppression d'une capacité d'accueil opérationnelle" : remplacement du type d'opération PATCH "remove" par "delete" [456](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/456)
 * [Narratif] Ajout de la description du champ managingOrganization du profil Location [457](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/457)
 
 ### version 0.7.0-snapshot-1
