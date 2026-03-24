@@ -1,0 +1,243 @@
+name: Préparer une branche snapshot
+
+on:
+  workflow_dispatch:
+    inputs:
+      milestone:
+        description: "Numéro du milestone GitHub associé à ce snapshot (ex: 13) — son titre doit être au format X.Y.Z-snapshot-N"
+        required: true
+
+jobs:
+  prepare-snapshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ── 1. Déduire la nouvelle version depuis le titre du milestone ─────────
+      - name: Calculer la nouvelle version snapshot
+        id: version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          MILESTONE: ${{ github.event.inputs.milestone }}
+        run: |
+          # Récupérer le titre du milestone via l'API GitHub
+          MILESTONE_JSON=$(curl -s \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${REPO}/milestones/${MILESTONE}")
+
+          NEW_VERSION=$(echo "$MILESTONE_JSON" | jq -r '.title')
+
+          if [ -z "$NEW_VERSION" ] || [ "$NEW_VERSION" = "null" ]; then
+            echo "::error::Impossible de récupérer le titre du milestone #${MILESTONE}. Vérifiez que le numéro est correct."
+            exit 1
+          fi
+
+          if [[ "$NEW_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+-snapshot-[0-9]+$ ]]; then
+            RELEASE_TYPE="snapshot"
+          elif [[ "$NEW_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            RELEASE_TYPE="trial-implementation"
+          else
+            echo "::error::Le titre du milestone ($NEW_VERSION) n'est pas au format X.Y.Z-snapshot-N (snapshot) ou X.Y.Z (trial-implementation)."
+            exit 1
+          fi
+
+          PREV_VERSION=$(jq -r '.version' publication-request.json)
+          BRANCH="${NEW_VERSION}"
+          ANCHOR="version-$(echo "$NEW_VERSION" | tr '.' '-')"
+
+          echo "new_version=$NEW_VERSION"         >> "$GITHUB_OUTPUT"
+          echo "prev_version=$PREV_VERSION"       >> "$GITHUB_OUTPUT"
+          echo "branch=$BRANCH"                   >> "$GITHUB_OUTPUT"
+          echo "anchor=$ANCHOR"                   >> "$GITHUB_OUTPUT"
+          echo "release_type=$RELEASE_TYPE"       >> "$GITHUB_OUTPUT"
+          echo "::notice::✅ Version déduite du milestone #${MILESTONE} : $NEW_VERSION — type : $RELEASE_TYPE (précédente : $PREV_VERSION)"
+
+      # ── 2. Créer la branche ──────────────────────────────────────────────────
+      - name: Créer la branche ${{ steps.version.outputs.branch }}
+        run: |
+          git checkout -b "${{ steps.version.outputs.branch }}"
+          echo "::notice::✅ Branche créée : ${{ steps.version.outputs.branch }}"
+
+      # ── 3. Trouver les PRs fusionnées depuis le dernier snapshot ─────────────
+      - name: Récupérer les PRs fusionnées depuis ${{ steps.version.outputs.prev_version }}
+        id: prs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PREV_VERSION: ${{ steps.version.outputs.prev_version }}
+        run: |
+          # Trouver le SHA du dernier commit de préparation de la version précédente
+          # Le message peut contenir "snapshot" ou "release" selon le type de la version précédente
+          PREV_SHA=$(git log --all \
+            --extended-regexp --grep="snapshot|release" \
+            --format="%H %s" \
+            | grep "$PREV_VERSION" \
+            | head -1 \
+            | awk '{print $1}')
+
+          if [ -z "$PREV_SHA" ]; then
+            echo "::error::Impossible de trouver le commit de préparation de la version précédente ($PREV_VERSION). Vérifiez que la branche correspondante existe et contient un commit de préparation mentionnant 'snapshot' ou 'release'."
+            exit 1
+          fi
+
+          SINCE=$(git show -s --format="%cI" "$PREV_SHA")
+
+          echo "Récupération des PRs fusionnées depuis : $SINCE"
+
+          # Appel API GitHub — liste des PRs fermées
+          PRS_JSON=$(curl -s \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${REPO}/pulls?state=closed&sort=updated&direction=desc&per_page=100")
+
+          # Extraire les numéros des PRs fusionnées après SINCE
+          PR_NUMBERS=$(echo "$PRS_JSON" | jq -r \
+            --arg since "$SINCE" \
+            '.[] | select(.merged_at != null and .merged_at >= $since) | .number')
+
+          if [ -z "$PR_NUMBERS" ]; then
+            echo "::error::Aucune PR fusionnée détectée depuis le snapshot précédent" > /tmp/pr_entries.txt
+            exit 1
+          else
+            > /tmp/pr_entries.txt  # vider le fichier
+
+            for PR_NUM in $PR_NUMBERS; do
+              echo "Traitement de la PR #${PR_NUM}..."
+
+              # Appel individuel pour récupérer le détail de la PR
+              PR_DETAIL=$(curl -s \
+                -H "Authorization: Bearer $GH_TOKEN" \
+                -H "Accept: application/vnd.github+json" \
+                "https://api.github.com/repos/${REPO}/pulls/${PR_NUM}")
+
+              PR_TITLE=$(echo "$PR_DETAIL" | jq -r '.title')
+              PR_BODY=$(echo "$PR_DETAIL"  | jq -r '.body // ""')
+
+              # Extraire la section "## Description des changements" si elle existe
+              DESCRIPTION=$(echo "$PR_BODY" \
+                | awk '/^## Description des changements/{found=1; next} found && /^##/{exit} found{print}' \
+                | sed '/^[[:space:]]*$/d' \
+                | sed '/^> *(empty)/d')
+
+              if [ -n "$DESCRIPTION" ]; then
+                # Réécrire chaque ligne bullet en ajoutant le lien vers la PR
+                echo "$DESCRIPTION" \
+                  | sed "s|^\* \(.*\)$|* \1 [${PR_NUM}](https://github.com/${REPO}/pull/${PR_NUM})|" \
+                  >> /tmp/pr_entries.txt
+              else
+                # Fallback sur le titre si pas de section description
+                echo "* ${PR_TITLE} [${PR_NUM}](https://github.com/${REPO}/pull/${PR_NUM})" \
+                  >> /tmp/pr_entries.txt
+              fi
+            done
+          fi
+
+          PR_COUNT=$(wc -l < /tmp/pr_entries.txt)
+          echo "::notice::✅ ${PR_COUNT} entrée(s) de change-log générée(s) depuis le snapshot précédent ($SINCE)"
+          echo "Entrées générées :"
+          cat /tmp/pr_entries.txt
+
+      # ── 4. Mettre à jour publication-request.json ────────────────────────────
+      - name: Mettre à jour publication-request.json
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.new_version }}
+          ANCHOR: ${{ steps.version.outputs.anchor }}
+        run: |
+          jq \
+            --arg v  "$NEW_VERSION" \
+            --arg p  "https://interop.esante.gouv.fr/ig/fhir/ror/$NEW_VERSION" \
+            --arg d  "Pre-release $NEW_VERSION de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 5.1 du ROR National." \
+            --arg c  "change-log.html#$ANCHOR" \
+            '.version = $v | .path = $p | .desc = $d | .changes = $c | .mode = "working" | .status = "preview" | .sequence = "trial-use"' \
+            publication-request.json > /tmp/pub.json
+          mv /tmp/pub.json publication-request.json
+          echo "::notice::✅ publication-request.json mis à jour"
+          cat publication-request.json
+
+      # ── 4b. Mettre à jour sushi-config.yaml ─────────────────────────────────
+      - name: Mettre à jour sushi-config.yaml
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.new_version }}
+          PREV_VERSION: ${{ steps.version.outputs.prev_version }}
+          RELEASE_TYPE: ${{ steps.version.outputs.release_type }}
+        run: |
+          sed -i "s/^version: ${PREV_VERSION}$/version: ${NEW_VERSION}/" sushi-config.yaml
+
+          if [ "$RELEASE_TYPE" = "trial-implementation" ]; then
+            sed -i "s/^releaseLabel: .*/releaseLabel: trial-implementation/" sushi-config.yaml
+          else
+            sed -i "s/^releaseLabel: .*/releaseLabel: preview/" sushi-config.yaml
+          fi
+
+          echo "::notice::✅ sushi-config.yaml mis à jour"
+          grep -E "^version:|^releaseLabel:" sushi-config.yaml
+
+      # ── 5. Injecter la nouvelle section dans change-log.md ──────────────────
+      - name: Mettre à jour change-log.md
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.new_version }}
+          MILESTONE: ${{ github.event.inputs.milestone }}
+          REPO: ${{ github.repository }}
+        run: |
+          ENTRIES=$(cat /tmp/pr_entries.txt)
+
+          if [ -n "$MILESTONE" ]; then
+            MILESTONE_LINK="[Modifications apportées dans cette release](https://github.com/${REPO}/milestone/${MILESTONE}?closed=1) :"
+          else
+            MILESTONE_LINK="Modifications apportées dans cette release :"
+          fi
+
+          # Écrire la nouvelle section dans un fichier temporaire via printf
+          printf '### version %s\n\n' "$NEW_VERSION"                                                                                                             > /tmp/new_section.md
+          printf '**Pre-release %s de l'\''Implementation Guide FHIR du ROR compatible avec le modèle d'\''exposition 3.1 du ROR et ayant pour cible l'\''implementation 5.1 du ROR National.**\n\n' "$NEW_VERSION" >> /tmp/new_section.md
+          printf '**Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'\''apporter de l'\''information aux consommateurs concernant les nouveautés en cours d'\''implémentation.**\n\n' >> /tmp/new_section.md
+          printf 'URL : <https://interop.esante.gouv.fr/ig/fhir/ror/%s>\n\n' "$NEW_VERSION"                                                                     >> /tmp/new_section.md
+          printf '%s\n\n' "$MILESTONE_LINK"                                                                                                                      >> /tmp/new_section.md
+          cat /tmp/pr_entries.txt                                                                                                                                 >> /tmp/new_section.md
+          printf '\n'                                                                                                                                             >> /tmp/new_section.md
+
+          # Préfixer le fichier existant avec la nouvelle section
+          cat /tmp/new_section.md input/pagecontent/change-log.md > /tmp/cl.md
+          mv /tmp/cl.md input/pagecontent/change-log.md
+          echo "::notice::✅ change-log.md mis à jour"
+          echo "Début du change-log :"
+          head -30 input/pagecontent/change-log.md
+
+      # ── 6. Commit et push ────────────────────────────────────────────────────
+      - name: Commit et push
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.new_version }}
+          BRANCH: ${{ steps.version.outputs.branch }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add publication-request.json sushi-config.yaml input/pagecontent/change-log.md
+          git commit -m "Préparation snapshot ${NEW_VERSION}"
+          git push origin "$BRANCH"
+          echo "::notice::✅ Branche poussée : $BRANCH"
+          PR_URL="https://github.com/${{ github.repository }}/compare/$BRANCH"
+          echo "::notice::➡️ Ouvrir la PR : $PR_URL"
+
+          # ── Résumé affiché dans l'onglet Summary du run ──────────────────────
+          cat >> "$GITHUB_STEP_SUMMARY" << EOF
+          ## Préparation snapshot \`${NEW_VERSION}\` terminée ✅
+
+          | Étape | Résultat |
+          |-------|----------|
+          | 1. Version déduite du milestone #${{ github.event.inputs.milestone }} | \`${NEW_VERSION}\` |
+          | 2. Branche créée | \`${BRANCH}\` |
+          | 3. PRs intégrées au change-log | voir log de l'étape 3 |
+          | 4. \`publication-request.json\` | mis à jour |
+          | 4b. \`sushi-config.yaml\` | mis à jour |
+          | 5. \`change-log.md\` | mis à jour |
+          | 6. Commit & push | ✅ |
+
+          **➡️ [Ouvrir la Pull Request](${PR_URL})**
+          EOF
