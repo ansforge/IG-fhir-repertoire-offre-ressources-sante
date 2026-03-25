@@ -26,7 +26,8 @@ https://hl7.org/fhir/uv/sdc/examples.html#using-itempopulationcontext-and-itemex
 * identifier ^short = "Identifiant du modèle de saisie. Exemple MS-141"
 * version ^short = "version du modèle de saisie"
 * version MS
-* status ^short = "Statut du modèle"
+* status from RORQuestionnaireStatusVS (required)
+* status ^short = "Statut du modèle (draft | active | retired)"
 * name 1..1 MS
 * name ^short = "Nom utilisé par les systèmes pour référencer le modèle Exemple MS-141"
 * title 1..1 MS
