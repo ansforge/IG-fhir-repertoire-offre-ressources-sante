@@ -214,7 +214,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 
 Mapping:  ConceptMetier_ROROrganization_EJ
 Source:   ROROrganization
-Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
+Target:   "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf"
 Id:       specmetier-to-ROROrganization-ej
 Title:    "EntiteJuridique du Modèle exposition ROR V3"
 * -> "EntiteJuridique" "Profils ayant Accès"
@@ -268,7 +268,7 @@ Profil 0 si niveaux de confidentialité du contact et du contact.telecommunicati
 
 Mapping:  ConceptMetier_ROROrganization_EG
 Source:   ROROrganization
-Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
+Target:   "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf"
 Id:       specmetier-to-ROROrganization-eg
 Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * -> "EntiteGeographique" "Profils ayant Accès"
@@ -321,7 +321,7 @@ Profil 0 si niveaux de confidentialité du contact et du contact.telecommunicati
 
 Mapping:  ConceptMetier_ROROrganization_OI
 Source:   ROROrganization
-Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
+Target:   "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf"
 Id:       specmetier-to-ROROrganization-oi
 Title:    "OrganisationInterne du Modèle exposition ROR V3"
 * -> "OrganisationInterne" "Profils ayant Accès"
