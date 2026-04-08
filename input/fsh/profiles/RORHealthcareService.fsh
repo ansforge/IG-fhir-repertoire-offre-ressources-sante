@@ -13,6 +13,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * meta.tag contains
     codeRegion 0..1 MS
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
+* extension contains RORMetaQuestionnaireUsedAsATemplate named meta-questionnaire-used-as-a-template 0..1 MS
 
 /* Données fonctionnelles */
 * identifier 1..1 MS
@@ -206,6 +207,7 @@ Uniquement Profil 1 et Profil 4 si uniteSensible = Oui"
 * meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
 * meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
+* extension[meta-questionnaire-used-as-a-template].valueCanonical -> "metadonnee.nomQuestionnaire"
 
 * identifier -> "identifiantOffre"  "Similaire aux accès de metadonnee.identifiant"
 * name -> "nomOffre"  "Similaire aux accès de metadonnee.identifiant"

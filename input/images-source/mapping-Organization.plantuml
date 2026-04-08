@@ -82,6 +82,7 @@ map "**EntiteJuridique : Organization**" as EJ #back:LightGoldenRodYellow;header
     metadonnee.identifiant => id
     metadonnee.commentaire => <&plus> RORMetaComment
     metadonnee.dateCreation => <&plus> RORMetaCreationDate
+    metadonnee.modeleSaisie => <&plus> RORMetaQuestionnaireUsedAsATemplate
     idNatstruct => <&layers> identifier[idNatSt]
     numFINESS => <&layers> identifier[finess]
     numSIREN => <&layers> identifier[sirene]
@@ -102,6 +103,7 @@ map "**EntiteGeographique : Organization**" as EG #back:LightGoldenRodYellow;hea
     metadonnee.identifiant => id
     metadonnee.commentaire => comment
     metadonnee.dateCreation => <&plus> RORMetaCreationDate
+    metadonnee.modeleSaisie => <&plus> RORMetaQuestionnaireUsedAsATemplate
     idNatstruct => <&layers> identifier[idNatSt]
     numFINESS => <&layers> identifier[finess]
     numSIREN => <&layers> identifier[sirene]
@@ -133,6 +135,7 @@ map "**OrganisationInterne : Organization**" as OI #back:LightGoldenRodYellow;he
     metadonnee.identifiant => id
     metadonnee.commentaire => comment
     metadonnee.dateCreation => <&plus> RORMetaCreationDate
+    metadonnee.modeleSaisie => <&plus> RORMetaQuestionnaireUsedAsATemplate
     identifiantOI => identifier[identifierOI]
     nomOI => name
     typeOI => <&layers> type[OIType]
