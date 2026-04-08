@@ -11,7 +11,7 @@ Description: "Extension créée dans le cadre du ROR qui correspond au questionn
 * value[x] only canonical(Questionnaire)
 * valueCanonical obeys ror-questionnaire-version-required
 * valueCanonical ^short = "URL canonique du questionnaire avec sa version"
-* valueCanonical ^definition = "Référence canonique vers le questionnaire utilisé comme modèle de saisie, incluant obligatoirement la version sous la forme url|version. Exemple : http://example.org/fhir/Questionnaire/mon-questionnaire|1.2.0"
+* valueCanonical ^definition = "Référence canonique vers le questionnaire utilisé comme modèle de saisie, incluant obligatoirement la version sous la forme url|version. Exemple : https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-2042|1"
 
 Mapping:  ConceptMetier_RORMetaQuestionnaireUsedAsATemplate
 Source:   RORMetaQuestionnaireUsedAsATemplate
