@@ -17,7 +17,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * meta.tag contains
     codeRegion 0..1 MS
 * meta.tag[codeRegion] from $JDV-J237-RegionOM-ROR (required)
-* extension contains RORMetaQuestionnaireUsedAsATemplate named meta-questionnaire-used-as-a-template 0..1 MS
 
 /* Données fonctionnelles */
 * name MS
@@ -193,7 +192,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationClosingType named ror-organization-closing-type 0..1 MS and
     organization-period named organization-period 0..1 MS and
     RORMetaComment named ror-meta-comment 0..1 MS and
-    RORMetaCreationDate named ror-meta-creation-date 1..1 MS and 
+    RORMetaCreationDate named ror-meta-creation-date 1..1 MS and
+    RORMetaQuestionnaireUsedAsATemplate named ror-meta-questionnaire-used-as-a-template 0..1 MS and
     ROROrganizationComment named ror-organization-comment 0..1 MS
 * extension[ror-organization-price] ^short = "Tarif"
 * extension[ror-territorial-division] ^short = "territoireSante (EG) : Territoire(s) de santé où est située l'entité géographique."
@@ -211,6 +211,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[organization-period] ^short = "dateOuverture (EG + OI) + dateFermeture (EJ + EG + OI)"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+* extension[ror-meta-questionnaire-used-as-a-template] ^short = "modeleSaisie (Metadonnee) : Référence canonique vers le questionnaire utilisé comme modèle de saisie, incluant obligatoirement la version sous la forme url|version. Exemple : https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-2042|1"
 * extension[ror-organization-comment] ^short = "commentaire (EG) : Commentaire qui permet à la structure de donner des informations complémentaires"
 
 Mapping:  ConceptMetier_ROROrganization_EJ
@@ -224,7 +225,9 @@ Title:    "EntiteJuridique du Modèle exposition ROR V3"
 * meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
 * meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
-* extension[meta-questionnaire-used-as-a-template].valueCanonical -> "metadonnee.nomQuestionnaire"
+
+* extension[RORMetaCreationDate] -> "metadonnee.dateCreation" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORMetaQuestionnaireUsedAsATemplate] -> "metadonnee.modeleSaisie" "Similaire aux accès de metadonnee.identifiant"
 
 * identifier[idNatSt] -> "idNatstruct" "Similaire aux accès de metadonnee.identifiant"
 * identifier[finess] -> "numFINESS" "Similaire aux accès de metadonnee.identifiant"
@@ -279,7 +282,9 @@ Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
 * meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
-* extension[meta-questionnaire-used-as-a-template].valueCanonical -> "metadonnee.nomQuestionnaire"
+
+* extension[RORMetaCreationDate] -> "metadonnee.dateCreation" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORMetaQuestionnaireUsedAsATemplate] -> "metadonnee.modeleSaisie" "Similaire aux accès de metadonnee.identifiant"
 
 * identifier[idNatSt] -> "idNatstruct" "Similaire aux accès de metadonnee.identifiant"
 * identifier[finess] -> "numFINESS" "Similaire aux accès de metadonnee.identifiant"
@@ -333,7 +338,9 @@ Title:    "OrganisationInterne du Modèle exposition ROR V3"
 * meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
 * meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
-* extension[meta-questionnaire-used-as-a-template].valueCanonical -> "metadonnee.nomQuestionnaire"
+
+* extension[RORMetaCreationDate] -> "metadonnee.dateCreation" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORMetaQuestionnaireUsedAsATemplate] -> "metadonnee.modeleSaisie" "Similaire aux accès de metadonnee.identifiant"
 
 * identifier[identifierOI] -> "identifiantOI" "Similaire aux accès de metadonnee.identifiant"
 

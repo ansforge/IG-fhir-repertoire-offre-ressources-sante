@@ -4,7 +4,7 @@ Severity: #error
 Expression: "value.toString().contains('|')"
 
 Extension: RORMetaQuestionnaireUsedAsATemplate
-Id: meta-questionnaire-used-as-a-template
+Id: ror-meta-questionnaire-used-as-a-template
 Description: "Extension créée dans le cadre du ROR qui correspond au questionnaire de saisie utilisé comme modèle associé à la ressource."
 * ^context.type = #element
 * ^context.expression = "DomainResource"
