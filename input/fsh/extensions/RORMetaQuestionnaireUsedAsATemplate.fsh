@@ -8,8 +8,7 @@ Id: ror-meta-questionnaire-used-as-a-template
 Description: "Extension créée dans le cadre du ROR qui correspond au questionnaire de saisie utilisé comme modèle associé à la ressource."
 * ^context.type = #element
 * ^context.expression = "DomainResource"
-* value[x] only canonical
-* value[x] ^type[0].targetProfile[0] = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+* value[x] only Canonical(RORQuestionnaire)
 * valueCanonical obeys ror-questionnaire-version-required
 * valueCanonical ^short = "Référence canonique vers le questionnaire utilisé comme modèle de saisie, incluant obligatoirement la version sous la forme url|version. Exemple : https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-2042|1"
 
