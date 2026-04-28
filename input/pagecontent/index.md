@@ -23,7 +23,7 @@ The aim of this implementation guide is to define the specifications of the ROR 
 
 ### Informations sur ce guide d'implémentation
 
-<b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.1 du ROR.
+<b>Ce Guide d'Implémentation FHIR du ROR se référence au modèle d`exposition 3.0.1 du ROR.
 <br>
 Cette version du guide d’implementation cible l’implémentation de l’API FHIR dans la solution du ROR National version 5.1.</b>
 
@@ -137,7 +137,7 @@ associées (NOS) gérés par l'ANS.
 
 Ces attributs sont associés à des règles de gestion communes qui sont
 également présentées dans le document ROR-modèle d'exposition
-<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf">[Ref_01]</a>.
+<a href="https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf">[Ref_01]</a>.
 
 ##### Nomenclatures
 
@@ -155,7 +155,7 @@ de référence et jeux de valeurs) qui permettent de renseigner les
 concepts du modèle d'exposition et qui font le lien avec les concepts
 des modèles des ROR régionaux. Ces nomenclatures d'échange sont
 précisées dans le document de référence ROR-modèle d'exposition
-<a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf">[Ref_01]</a>.
+<a href="https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf">[Ref_01]</a>.
 
 Chaque nomenclature des outils interopérables doit trouver son
 équivalence dans la nomenclature du concept associé dans le modèle
@@ -262,7 +262,7 @@ La liste ci-dessous expose la liste des profils génériques profilés.
   mso-height-rule:exactly"><span style="font-size:10.0pt;mso-ascii-font-family:
   Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Arial;
   mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
-  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">3.0<o:p></o:p></span></p>
+  Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:FR">3.0.1<o:p></o:p></span></p>
   </td>
   <td width="55%" style="width:55.56%;border:solid #5B9BD5 1.0pt;border-left:
   none;mso-border-left-alt:solid #5B9BD5 .5pt;mso-border-alt:solid #5B9BD5 .5pt;
@@ -271,7 +271,7 @@ La liste ci-dessous expose la liste des profils génériques profilés.
   mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
   margin;mso-element-top:3.65pt;mso-height-rule:exactly"><span style="mso-bidi-font-size:10.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
   mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
-  minor-latin"><a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif">Description des données communes aux échanges entre les ROR et
+  minor-latin"><a href="https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif">Description des données communes aux échanges entre les ROR et
   les SI externes.</span></a><o:p></o:p></span></p>
   </td>
  </tr>

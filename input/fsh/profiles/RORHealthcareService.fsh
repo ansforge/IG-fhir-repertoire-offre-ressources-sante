@@ -190,7 +190,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
 
 Mapping:  ConceptMetier_RORHealthcareService
 Source:   RORHealthcareService
-Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
+Target:   "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf"
 Id:       specmetier-to-RORHealthcareService
 Title:    "HealthcareService du Modèle exposition ROR V3"
 * -> "OffreOperationnelle" "Profils ayant Accès"

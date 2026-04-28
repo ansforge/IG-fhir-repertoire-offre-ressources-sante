@@ -1,6 +1,6 @@
 ### version 0.7.0-snapshot-2
 
-**Pre-release 0.7.0-snapshot-2 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 5.1 du ROR national. A noter: la version 0.7.0-snapshot-1 sera finalement implémentée avec la V5.1 du ROR national.**
+**Pre-release 0.7.0-snapshot-2 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0.1 du ROR et ayant pour cible l'implementation 5.1 du ROR national. A noter: la version 0.7.0-snapshot-1 sera finalement implémentée avec la V5.1 du ROR national.**
 
 **Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'apporter de l'information aux consommateurs concernant les nouveautés en cours d'implémentation.**
 
@@ -22,7 +22,7 @@ URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.7.0-snapshot-2>
 
 ### version 0.7.0-snapshot-1
 
-**Pre-release 0.7.0-snapshot-1 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 4.3 du ROR National.**
+**Pre-release 0.7.0-snapshot-1 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0.1 du ROR et ayant pour cible l'implementation 5.1 du ROR National.**
 
 **Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'apporter de l'information aux consommateurs concernant les nouveautés en cours d'implémentation.**
 

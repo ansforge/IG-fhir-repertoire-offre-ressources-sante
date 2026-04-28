@@ -49,7 +49,7 @@ Description: "Profil créée dans le cadre du ROR pour décrire les données d'i
 
 Mapping:  ConceptMetier_RORPractitioner
 Source:   RORPractitioner
-Target:   "https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0_ModeleExposition_VFD2.1_20231031.pdf"
+Target:   "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf"
 Id:       specmetier-to-RORPractitioner
 Title:    "Practitioner du Modèle exposition ROR V3"
 * -> "Professionnel" "Profils ayant Accès"
