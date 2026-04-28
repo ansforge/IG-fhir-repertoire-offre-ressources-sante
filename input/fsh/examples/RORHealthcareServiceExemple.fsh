@@ -31,7 +31,7 @@ Description: "Exemple de HealthcareService ROR - Unité hospitalière de gynéco
 * extension[ror-healthcareservice-contact].extension[ror-confidentiality-level].valueCodeableConcept = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
 * extension[ror-healthcareservice-contact].extension[ror-healthcareservice-contact-telecom].extension[ror-telecom-communication-channel].valueCodeableConcept = $TRE-R200-CanalCommunication#2 "Téléphone fixe"
 * extension[ror-healthcareservice-contact].extension[ror-healthcareservice-contact-telecom].extension[ror-telecom-confidentiality-level].valueCodeableConcept = $TRE-R283-NiveauConfidentialite#1 "Accès libre"
-* extension[ror-healthcareservice-contact].extension[ror-healthcareservice-contact-telecom].extension[telecomAddress].valueString = "0123456789"
+* extension[ror-healthcareservice-contact].extension[ror-healthcareservice-contact-telecom].extension[telecomAddress].valueString = "0199999999"
 
 * identifier.type = $TRE-R355-TypeIdentifiantOffre#35 "Identifiant fonctionnel de l'offre connu par l'instance ROR"
 * identifier.value = "06/0099999"
