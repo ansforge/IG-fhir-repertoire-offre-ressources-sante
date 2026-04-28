@@ -63,8 +63,8 @@ https://hl7.org/fhir/uv/sdc/examples.html#using-itempopulationcontext-and-itemex
     catEG 1..* and
     typePS 0..* and
     speOrdinal 0..* and
-    champAct 0..* //and
-//    fonctionLieu 0..1
+    champAct 0..* and
+    fonctionLieu 0..*
 * useContext.code from ror-usage-context-type-vs (extensible)
 * useContext[catEG].code = $TRE-R67-TypeStructure-EJ-EG#EG // fixé 
 * useContext[catEG].valueCodeableConcept from $JDV-J55-CategorieEG-ROR (required)
@@ -82,10 +82,10 @@ https://hl7.org/fhir/uv/sdc/examples.html#using-itempopulationcontext-and-itemex
 * useContext[champAct].valueCodeableConcept from $JDV-J20-ChampActivite-ROR (required)
 * useContext[champAct].valueCodeableConcept ^short = "Domaines (champs d'activité) de l' offre (OffreOperationnelle)"
 * useContext[champAct] ^short = "Contexte précisant les domaines (champs d'activité) de l' offre (OffreOperationnelle) pour lesquels ce questionnaire est disponible"
-// * useContext[fonctionLieu].code = usage-context-ror-codesystem#fonctionLieu
-// * useContext[fonctionLieu].valueCodeableConcept from $JDV-J198-FonctionLieu-ROR (required)
-// * useContext[fonctionLieu].valueCodeableConcept ^short = "Fonctions (fonctionLieu) du lieu (LieuRealisationOffre)"
-// * useContext[fonctionLieu] ^short = "Contexte précisant les fonctions (fonctionLieu) du lieu (LieuRealisationOffre) pour lesquelles ce questionnaire est disponible"
+* useContext[fonctionLieu].code = usage-context-ror-codesystem#fonctionLieu
+* useContext[fonctionLieu].valueCodeableConcept from $JDV-J198-FonctionLieu-ROR (required)
+* useContext[fonctionLieu].valueCodeableConcept ^short = "Fonctions (fonctionLieu) du lieu (LieuRealisationOffre)"
+* useContext[fonctionLieu] ^short = "Contexte précisant les fonctions (fonctionLieu) du lieu (LieuRealisationOffre) pour lesquelles ce questionnaire est disponible"
 
 * item ^short = "Structure du champs du modèle"
 * item MS
