@@ -1,0 +1,362 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/HealthcareService/1234564> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "1234564"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-04-08T13:05:27.000+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice>
+     ] ) ;
+     fhir:tag ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "06" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: HealthcareService 1234564</b></p><a name=\"1234564\"> </a><a name=\"hc1234564\"> </a><a name=\"1234564-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2025-04-08 13:05:27+0000</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-ror-healthcareservice.html\">RORHealthcareService</a></p><p style=\"margin-bottom: 0px\">Tag: Mayotte (Details: TRE-R30-RegionOM code 06 = 'Mayotte')</p></div><p><b>RORHealthcareServiceSensitiveUnit</b>: false</p><blockquote><p><b>RORHealthcareServicePatientType</b></p><ul><li>ageRange: 15-150</li></ul></blockquote><p><b>RORMetaCreationDate</b>: 2017-11-27 17:12:28+0000</p><p><b>RORMetaQuestionnaireUsedAsATemplate</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1\">https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1</a></p><blockquote><p><b>RORHealthcareServiceContact</b></p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/purposeContact\">purposeContact</a></blockquote><p><b>value</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact 06}\">Standard</span></p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-ror-confidentiality-level.html\">RORConfidentialityLevel</a></blockquote><p><b>value</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}\">Accès libre</span></p><p><b>RORTelecomCommunicationChannel</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication 2}\">Téléphone fixe</span></p><p><b>RORTelecomConfidentialityLevel</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}\">Accès libre</span></p><p><b>telecomAddress</b>: 0199999999</p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-ror-healthcareservice-contact-telecom.html\">RORHealthcareServiceContactTelecom</a></blockquote></blockquote><p><b>identifier</b>: Identifiant fonctionnel de l'offre connu par l'instance ROR/06/0099999</p><p><b>providedBy</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Organization/999999\">Organization/999999</a></p><p><b>category</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation 157}\">Unité hospitalière de gynécologie</span></p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite 01}\">Médecine, Chirurgie, Obstétrique (MCO)</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle 022}\">Chirurgie gynécologique</span></p><p><b>location</b>: <a href=\"https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Location/888888\">Location/888888</a></p><p><b>name</b>: 5812  Chirurgie gynécologique - HOSPITALISATION COMPLETE</p><p><b>characteristic</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite 04}\">Maternité de type 3</span>, <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle 02}\">Semaine et week-end (de 211 à 364 jours par an)</span></p><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 1</p><p><b>RORAvailableTimeEffectiveOpeningClosingDate</b>: 2025-04-08 --&gt; (ongoing)</p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\">Horaire d'ouverture</span></p><p><b>daysOfWeek</b>: Monday</p><p><b>availableStartTime</b>: 00:00:00</p><p><b>availableEndTime</b>: 23:59:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 2</p><p><b>RORAvailableTimeEffectiveOpeningClosingDate</b>: 2025-04-08 --&gt; (ongoing)</p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\">Horaire d'ouverture</span></p><p><b>daysOfWeek</b>: Tuesday</p><p><b>availableStartTime</b>: 00:00:00</p><p><b>availableEndTime</b>: 23:59:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 3</p><p><b>RORAvailableTimeEffectiveOpeningClosingDate</b>: 2025-04-08 --&gt; (ongoing)</p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\">Horaire d'ouverture</span></p><p><b>daysOfWeek</b>: Wednesday</p><p><b>availableStartTime</b>: 00:00:00</p><p><b>availableEndTime</b>: 23:59:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 4</p><p><b>RORAvailableTimeEffectiveOpeningClosingDate</b>: 2025-04-08 --&gt; (ongoing)</p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\">Horaire d'ouverture</span></p><p><b>daysOfWeek</b>: Thursday</p><p><b>availableStartTime</b>: 00:00:00</p><p><b>availableEndTime</b>: 23:59:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 5</p><p><b>RORAvailableTimeEffectiveOpeningClosingDate</b>: 2025-04-08 --&gt; (ongoing)</p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\">Horaire d'ouverture</span></p><p><b>daysOfWeek</b>: Friday</p><p><b>availableStartTime</b>: 00:00:00</p><p><b>availableEndTime</b>: 23:59:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 6</p><p><b>RORAvailableTimeEffectiveOpeningClosingDate</b>: 2025-04-08 --&gt; (ongoing)</p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\">Horaire d'ouverture</span></p><p><b>daysOfWeek</b>: Saturday</p><p><b>availableStartTime</b>: 00:00:00</p><p><b>availableEndTime</b>: 23:59:00</p></blockquote><blockquote><p><b>availableTime</b></p><p><b>RORAvailableTimeNumberDaysofWeek</b>: 7</p><p><b>RORAvailableTimeEffectiveOpeningClosingDate</b>: 2025-04-08 --&gt; (ongoing)</p><p><b>RORAvailableTimeTypeOfTime</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\">Horaire d'ouverture</span></p><p><b>daysOfWeek</b>: Sunday</p><p><b>availableStartTime</b>: 00:00:00</p><p><b>availableEndTime</b>: 23:59:00</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "ageRange"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Range ;
+         fhir:low [
+           fhir:value [ fhir:v "15"^^xsd:decimal ] ;
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "a" ]
+         ] ;
+         fhir:high [
+           fhir:value [ fhir:v "150"^^xsd:decimal ] ;
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "a" ]
+         ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type"^^xsd:anyURI ]
+  ] [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:dateTime ;
+       fhir:v "2017-11-27T17:12:28+00:00"^^xsd:dateTime
+     ]
+  ] [
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-questionnaire-used-as-a-template"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:canonical ;
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "purposeContact"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "06" ] ;
+           fhir:display [ fhir:v "Standard" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1" ] ;
+           fhir:display [ fhir:v "Accès libre" ]
+         ] )
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "2" ] ;
+             fhir:display [ fhir:v "Téléphone fixe" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "1" ] ;
+             fhir:display [ fhir:v "Accès libre" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "telecomAddress"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "0199999999"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom"^^xsd:anyURI ]
+     ] ) ;
+     fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "35" ] ;
+         fhir:display [ fhir:v "Identifiant fonctionnel de l'offre connu par l'instance ROR" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "06/0099999" ]
+  ] ) ; # 
+  fhir:providedBy [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Organization/999999> ;
+     fhir:reference [ fhir:v "Organization/999999" ]
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "157" ] ;
+       fhir:display [ fhir:v "Unité hospitalière de gynécologie" ]
+     ] )
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "01" ] ;
+       fhir:display [ fhir:v "Médecine, Chirurgie, Obstétrique (MCO)" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "022" ] ;
+       fhir:display [ fhir:v "Chirurgie gynécologique" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/Location/888888> ;
+     fhir:reference [ fhir:v "Location/888888" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "5812  Chirurgie gynécologique - HOSPITALISATION COMPLETE"] ; # 
+  fhir:characteristic ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "04" ] ;
+       fhir:display [ fhir:v "Maternité de type 3" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "02" ] ;
+       fhir:display [ fhir:v "Semaine et week-end (de 211 à 364 jours par an)" ]
+     ] )
+  ] ) ; # 
+  fhir:availableTime ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:integer ;
+         fhir:v 1
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2025-04-08"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Horaire d'ouverture" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:daysOfWeek ( [ fhir:v "mon" ] ) ;
+     fhir:availableStartTime [ fhir:v "00:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "23:59:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:integer ;
+         fhir:v 2
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2025-04-08"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Horaire d'ouverture" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:daysOfWeek ( [ fhir:v "tue" ] ) ;
+     fhir:availableStartTime [ fhir:v "00:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "23:59:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:integer ;
+         fhir:v 3
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2025-04-08"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Horaire d'ouverture" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:daysOfWeek ( [ fhir:v "wed" ] ) ;
+     fhir:availableStartTime [ fhir:v "00:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "23:59:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:integer ;
+         fhir:v 4
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2025-04-08"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Horaire d'ouverture" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:daysOfWeek ( [ fhir:v "thu" ] ) ;
+     fhir:availableStartTime [ fhir:v "00:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "23:59:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:integer ;
+         fhir:v 5
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2025-04-08"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Horaire d'ouverture" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:daysOfWeek ( [ fhir:v "fri" ] ) ;
+     fhir:availableStartTime [ fhir:v "00:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "23:59:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:integer ;
+         fhir:v 6
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2025-04-08"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Horaire d'ouverture" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:daysOfWeek ( [ fhir:v "sat" ] ) ;
+     fhir:availableStartTime [ fhir:v "00:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "23:59:00"^^xsd:time ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:integer ;
+         fhir:v 7
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2025-04-08"^^xsd:date ]
+       ]
+     ] [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01" ] ;
+           fhir:display [ fhir:v "Horaire d'ouverture" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:daysOfWeek ( [ fhir:v "sun" ] ) ;
+     fhir:availableStartTime [ fhir:v "00:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "23:59:00"^^xsd:time ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

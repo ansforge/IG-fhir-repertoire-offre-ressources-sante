@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ror-questionnaire-status-vs"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet ror-questionnaire-status-vs</b></p><a name="ror-questionnaire-status-vs"> </a><a name="hcror-questionnaire-status-vs"> </a><a name="ror-questionnaire-status-vs-fr-FR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a></p></div><ul><li>Include ces codes sont définis dans <a href="http://hl7.org/fhir/R4/codesystem-publication-status.html"><code>http://hl7.org/fhir/publication-status</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-draft">draft</a></td><td style="color: #cccccc">Draft</td><td>This resource is still under development and is not yet considered to be ready for normal use.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-active">active</a></td><td style="color: #cccccc">Active</td><td>This resource is ready for normal use.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-retired">retired</a></td><td style="color: #cccccc">Retired</td><td>This resource has been withdrawn or superseded and should no longer be used.</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-questionnaire-status-vs"/>
+  <version value="0.7.0"/>
+  <name value="RORQuestionnaireStatusVS"/>
+  <title value="Statuts autorisés pour les Questionnaires ROR"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-04-29T15:20:04+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Restriction des statuts de publication FHIR aux valeurs applicables aux modèles de saisie ROR. La valeur 'unknown' est exclue."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/publication-status"/>
+      <concept>
+        <code value="draft"/>
+      </concept>
+      <concept>
+        <code value="active"/>
+      </concept>
+      <concept>
+        <code value="retired"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
