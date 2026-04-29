@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-questionnaire-status-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ror-questionnaire-status-vs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ror-questionnaire-status-vs</b></p><a name=\"ror-questionnaire-status-vs\"> </a><a name=\"hcror-questionnaire-status-vs\"> </a><a name=\"ror-questionnaire-status-vs-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include ces codes sont définis dans <a href=\"http://hl7.org/fhir/R4/codesystem-publication-status.html\"><code>http://hl7.org/fhir/publication-status</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-draft\">draft</a></td><td style=\"color: #cccccc\">Draft</td><td>This resource is still under development and is not yet considered to be ready for normal use.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-active\">active</a></td><td style=\"color: #cccccc\">Active</td><td>This resource is ready for normal use.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-publication-status.html#publication-status-retired\">retired</a></td><td style=\"color: #cccccc\">Retired</td><td>This resource has been withdrawn or superseded and should no longer be used.</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-questionnaire-status-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.7.0"] ; # 
+  fhir:name [ fhir:v "RORQuestionnaireStatusVS"] ; # 
+  fhir:title [ fhir:v "Statuts autorisés pour les Questionnaires ROR"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-04-29T14:22:35+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Restriction des statuts de publication FHIR aux valeurs applicables aux modèles de saisie ROR. La valeur 'unknown' est exclue."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "France (la)" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/publication-status"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "draft" ]
+       ] [
+         fhir:code [ fhir:v "active" ]
+       ] [
+         fhir:code [ fhir:v "retired" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
