@@ -76,21 +76,25 @@ jobs:
           REPO: ${{ github.repository }}
           PREV_VERSION: ${{ steps.version.outputs.prev_version }}
         run: |
-          # Trouver le SHA du dernier commit de préparation de la version précédente
-          # Le message peut contenir "snapshot" ou "release" selon le type de la version précédente
-          PREV_SHA=$(git log --all \
-            --extended-regexp --grep="snapshot|release" \
-            --format="%H %s" \
+          # Trouver la branche distante correspondant à la version précédente (le nom peut contenir d'autres caractères)
+          PREV_BRANCH=$(git ls-remote --heads origin \
+            | awk '{print $2}' \
+            | sed 's|refs/heads/||' \
             | grep "$PREV_VERSION" \
-            | head -1 \
-            | awk '{print $1}')
+            | head -1)
 
-          if [ -z "$PREV_SHA" ]; then
-            echo "::error::Impossible de trouver le commit de préparation de la version précédente ($PREV_VERSION). Vérifiez que la branche correspondante existe et contient un commit de préparation mentionnant 'snapshot' ou 'release'."
+          if [ -z "$PREV_BRANCH" ]; then
+            echo "::error::Impossible de trouver une branche contenant '$PREV_VERSION' sur origin. Vérifiez que la branche de la version précédente existe bien."
             exit 1
           fi
 
-          SINCE=$(git show -s --format="%cI" "$PREV_SHA")
+          echo "Branche précédente trouvée : $PREV_BRANCH"
+
+          # Récupérer uniquement le tip de cette branche (évite un fetch-depth: 0 coûteux)
+          git fetch --depth=1 origin "$PREV_BRANCH"
+          PREV_SHA=$(git rev-parse FETCH_HEAD)
+
+          SINCE=$(git show -s --format="%cI" FETCH_HEAD)
 
           echo "Récupération des PRs fusionnées depuis : $SINCE"
 
