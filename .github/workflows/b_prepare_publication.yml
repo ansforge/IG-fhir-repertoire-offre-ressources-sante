@@ -194,11 +194,13 @@ jobs:
           NEW_VERSION: ${{ steps.version.outputs.new_version }}
           MILESTONE: ${{ github.event.inputs.milestone }}
           REPO: ${{ github.repository }}
+          DESCRIPTION: ${{ github.event.inputs.description }}
         run: |
           # Supprimer les éventuels retours chariot (\r) issus de l'API GitHub
           sed -i 's/\r//' /tmp/pr_entries.txt
 
           ENTRIES=$(cat /tmp/pr_entries.txt)
+          DESCRIPTION="${DESCRIPTION//\{VERSION\}/$NEW_VERSION}"
 
           if [ -n "$MILESTONE" ]; then
             MILESTONE_LINK="[Modifications apportées dans cette release](https://github.com/${REPO}/milestone/${MILESTONE}?closed=1) :"
@@ -208,8 +210,7 @@ jobs:
 
           # Écrire la nouvelle section dans un fichier temporaire via printf
           printf '### version %s\n\n' "$NEW_VERSION"                                                                                                             > /tmp/new_section.md
-          printf '**Pre-release %s de l'\''Implementation Guide FHIR du ROR compatible avec le modèle d'\''exposition 3.1 du ROR et ayant pour cible l'\''implementation 5.1 du ROR National.**\n\n' "$NEW_VERSION" >> /tmp/new_section.md
-          printf '**Cette version est à destination des développeurs de la solution ROR National et des recetteurs. Elle permet aussi d'\''apporter de l'\''information aux consommateurs concernant les nouveautés en cours d'\''implémentation.**\n\n' >> /tmp/new_section.md
+          printf '**%s**\n\n' "$DESCRIPTION"                                                                                                                    >> /tmp/new_section.md
           printf 'URL : <https://interop.esante.gouv.fr/ig/fhir/ror/%s>\n\n' "$NEW_VERSION"                                                                     >> /tmp/new_section.md
           printf '%s\n\n' "$MILESTONE_LINK"                                                                                                                      >> /tmp/new_section.md
           cat /tmp/pr_entries.txt                                                                                                                                 >> /tmp/new_section.md
