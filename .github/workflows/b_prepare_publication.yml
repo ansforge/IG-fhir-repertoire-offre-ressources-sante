@@ -1,22 +1,25 @@
-name: Préparer une branche snapshot
+name: Préparer la publication d'un snapshot ou d'une trail-implementation
 
 on:
   workflow_dispatch:
     inputs:
       milestone:
-        description: "Numéro du milestone GitHub associé à ce snapshot (ex: 13) — son titre doit être au format X.Y.Z-snapshot-N"
+        description: "Numéro du milestone GitHub associé à cette version (ex: 13) — son titre doit être au format X.Y.Z-snapshot-N ou X.Y.Z"
+        required: true
+      description:
+        description: "Description de la version — utiliser {VERSION} comme placeholder (ex: Pre-release {VERSION} de l'Implementation Guide FHIR du ROR...)"
         required: true
 
 jobs:
-  prepare-snapshot:
+  prepare-publication:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      #  with:
+      #    fetch-depth: 0
 
       # ── 1. Déduire la nouvelle version depuis le titre du milestone ─────────
       - name: Calculer la nouvelle version snapshot
@@ -149,11 +152,13 @@ jobs:
         env:
           NEW_VERSION: ${{ steps.version.outputs.new_version }}
           ANCHOR: ${{ steps.version.outputs.anchor }}
+          DESCRIPTION: ${{ github.event.inputs.description }}
         run: |
+          DESCRIPTION="${DESCRIPTION//\{VERSION\}/$NEW_VERSION}"
           jq \
             --arg v  "$NEW_VERSION" \
             --arg p  "https://interop.esante.gouv.fr/ig/fhir/ror/$NEW_VERSION" \
-            --arg d  "Pre-release $NEW_VERSION de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.1 du ROR et ayant pour cible l'implementation 5.1 du ROR National." \
+            --arg d  "$DESCRIPTION" \
             --arg c  "change-log.html#$ANCHOR" \
             '.version = $v | .path = $p | .desc = $d | .changes = $c | .mode = "working" | .status = "preview" | .sequence = "trial-use"' \
             publication-request.json > /tmp/pub.json
@@ -186,6 +191,9 @@ jobs:
           MILESTONE: ${{ github.event.inputs.milestone }}
           REPO: ${{ github.repository }}
         run: |
+          # Supprimer les éventuels retours chariot (\r) issus de l'API GitHub
+          sed -i 's/\r//' /tmp/pr_entries.txt
+
           ENTRIES=$(cat /tmp/pr_entries.txt)
 
           if [ -n "$MILESTONE" ]; then
@@ -219,7 +227,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add publication-request.json sushi-config.yaml input/pagecontent/change-log.md
-          git commit -m "Préparation snapshot ${NEW_VERSION}"
+          git commit -m "Préparation ${NEW_VERSION}"
           git push origin "$BRANCH"
           echo "::notice::✅ Branche poussée : $BRANCH"
           PR_URL="https://github.com/${{ github.repository }}/compare/$BRANCH"
@@ -227,7 +235,7 @@ jobs:
 
           # ── Résumé affiché dans l'onglet Summary du run ──────────────────────
           cat >> "$GITHUB_STEP_SUMMARY" << EOF
-          ## Préparation snapshot \`${NEW_VERSION}\` terminée ✅
+          ## Préparation \`${NEW_VERSION}\` terminée ✅
 
           | Étape | Résultat |
           |-------|----------|
