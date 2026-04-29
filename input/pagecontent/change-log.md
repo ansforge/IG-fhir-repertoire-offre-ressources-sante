@@ -1,3 +1,18 @@
+### version 0.7.0
+
+**Release 0.7.0 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0.1 du ROR et ayant pour cible l'implementation 5.1 du ROR national.**
+**En plus du périmètre ci-dessous, cette version contient le périmètre des versions 0.7.0-snapshot-1 et 0.7.0-snapshot-2**
+
+URL : <https://interop.esante.gouv.fr/ig/fhir/ror/0.7.0>
+
+[Modifications apportées dans cette release](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/milestone/15?closed=1) :
+
+* Nouvelle extension RORMetaQuestionnaireUsedAsATemplate correspondant à l'attribut meta.modeleSaisie du Modèle d'Exposition V3.0.1 ajoutée aux ressources HealthcareService, Location et Organization [468](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/468)
+* Ajout du slice fonctionLieu dans useContext du profil Questionnaire pour permettre la distinction des modèles de saisie des lieux de réalisation d'offre (LieuRealisationOffre) selon leur type (JDV-J198-FonctionLieu-ROR). [466](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/466)
+* Ajout du ValueSet RORQuestionnaireStatusVS restreignant les statuts de publication FHIR aux valeurs applicables aux modèles de saisie ROR : draft, active et retired. La valeur unknown est exclue. [465](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/465)
+* RORQuestionnaire : ajout d'un binding required sur status vers RORQuestionnaireStatusVS [465](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/465)
+* Mise à jour des réferences au modèle d'exposition suite  à la publication de la V3.0.1 [467](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/pull/467)
+
 ### version 0.7.0-snapshot-2
 
 **Pre-release 0.7.0-snapshot-2 de l'Implementation Guide FHIR du ROR compatible avec le modèle d'exposition 3.0.1 du ROR et ayant pour cible l'implementation 5.1 du ROR national. A noter: la version 0.7.0-snapshot-1 sera finalement implémentée avec la V5.1 du ROR national.**
