@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset",
-      "version" : "0.7.0-snapshot-2",
+      "version" : "0.7.0",
       "status" : "draft",
       "name" : "ActTypeRORValueSet",
       "title" : "Valueset type d'acte",
@@ -16,7 +16,7 @@
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset",
-      "version" : "0.7.0-snapshot-2",
+      "version" : "0.7.0",
       "status" : "draft",
       "name" : "CodeRegionTerritorialDivisionRORValueSet",
       "title" : "Fusion des valuesets pour le code de la division territoriale",
@@ -35,7 +35,7 @@
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-include-associated-data-vs",
-      "version" : "0.7.0-snapshot-2",
+      "version" : "0.7.0",
       "status" : "draft",
       "name" : "RorIncludeAssociatedDataVS",
       "title" : "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData",
@@ -47,7 +47,7 @@
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs",
-      "version" : "0.7.0-snapshot-2",
+      "version" : "0.7.0",
       "status" : "draft",
       "name" : "RORLaunchContextVS",
       "title" : "Value Set pour le contexte standard du lancement d'un questionnaire dans le cadre du ROR",
@@ -62,7 +62,7 @@
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-questionnaire-status-vs",
-      "version" : "0.7.0-snapshot-2",
+      "version" : "0.7.0",
       "status" : "draft",
       "name" : "RORQuestionnaireStatusVS",
       "title" : "Statuts autorisés pour les Questionnaires ROR",
@@ -74,7 +74,7 @@
     },
     {
       "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs",
-      "version" : "0.7.0-snapshot-2",
+      "version" : "0.7.0",
       "status" : "draft",
       "name" : "RORUsageContextTypeVS",
       "title" : "Value Set type pour le contexte d'usage du modèle de saisie",
@@ -105,8 +105,8 @@
       "sources" : ["1.2.250.1.213.3.4.9"],
       "uses" : {
       },
-      "StructureDefinition-ror-commune-cog.html" : "RORCommuneCog",
       "ValueSet-code-region-territorial-division-ror-valueset.html" : "Fusion des valuesets pour le code de la division territoriale",
+      "StructureDefinition-ror-commune-cog.html" : "RORCommuneCog",
       "StructureDefinition-ror-organization.html" : "ROROrganization"
     },
     {
@@ -368,8 +368,8 @@
       "sources" : ["1.2.250.1.213.3.4.30"],
       "uses" : {
       },
-      "StructureDefinition-ror-location.html" : "RORLocation",
-      "StructureDefinition-ror-questionnaire-healthcareservice.html" : "RORQuestionnaire"
+      "StructureDefinition-ror-questionnaire-healthcareservice.html" : "RORQuestionnaire",
+      "StructureDefinition-ror-location.html" : "RORLocation"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J199-StatutJuridique-ROR/FHIR/JDV-J199-StatutJuridique-ROR",
@@ -579,8 +579,8 @@
       "sources" : ["1.2.250.1.213.3.4.42"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
-      "StructureDefinition-ror-questionnaire-healthcareservice.html" : "RORQuestionnaire"
+      "StructureDefinition-ror-questionnaire-healthcareservice.html" : "RORQuestionnaire",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J211-CompetenceExclusive-ROR/FHIR/JDV-J211-CompetenceExclusive-ROR",
@@ -757,8 +757,8 @@
       "sources" : ["1.2.250.1.213.3.4.53"],
       "uses" : {
       },
-      "StructureDefinition-ror-organization.html" : "ROROrganization",
-      "StructureDefinition-ror-healthcareservice-contact.html" : "RORHealthcareServiceContact"
+      "StructureDefinition-ror-healthcareservice-contact.html" : "RORHealthcareServiceContact",
+      "StructureDefinition-ror-organization.html" : "ROROrganization"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR",
@@ -774,10 +774,10 @@
       "sources" : ["1.2.250.1.213.3.4.54"],
       "uses" : {
       },
-      "StructureDefinition-ror-contact-telecom-confidentiality-level.html" : "RORContactTelecomConfidentialityLevel",
-      "StructureDefinition-ror-contact-confidentiality-level.html" : "RORContactConfidentialityLevel",
+      "StructureDefinition-ror-telecom-confidentiality-level.html" : "RORTelecomConfidentialityLevel",
       "StructureDefinition-ror-confidentiality-level.html" : "RORConfidentialityLevel",
-      "StructureDefinition-ror-telecom-confidentiality-level.html" : "RORTelecomConfidentialityLevel"
+      "StructureDefinition-ror-contact-confidentiality-level.html" : "RORContactConfidentialityLevel",
+      "StructureDefinition-ror-contact-telecom-confidentiality-level.html" : "RORContactTelecomConfidentialityLevel"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J223-TypeDivisionTerritoriale-ROR/FHIR/JDV-J223-TypeDivisionTerritoriale-ROR",
@@ -893,8 +893,8 @@
       "sources" : ["1.2.250.1.213.3.4.61"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
-      "StructureDefinition-ror-questionnaire-healthcareservice.html" : "RORQuestionnaire"
+      "StructureDefinition-ror-questionnaire-healthcareservice.html" : "RORQuestionnaire",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J232-Competence-ROR/FHIR/JDV-J232-Competence-ROR",
@@ -926,10 +926,10 @@
       "sources" : ["1.2.250.1.213.3.4.64"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
       "Questionnaire-ror-questionnaire-offre-mco.html" : "Unité hospitalière de gynécologie",
-      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
       "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
+      "StructureDefinition-ror-practitioner.html" : "RORPractitioner",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
       "ValueSet-code-region-territorial-division-ror-valueset.html" : "Fusion des valuesets pour le code de la division territoriale",
       "StructureDefinition-ror-location.html" : "RORLocation",
       "StructureDefinition-ror-organization.html" : "ROROrganization"
@@ -1061,9 +1061,9 @@
       "sources" : ["1.2.250.1.213.3.3.24"],
       "uses" : {
       },
-      "StructureDefinition-ror-organization-price.html" : "ROROrganizationPrice",
       "Questionnaire-ror-questionnaire-offre-mco.html" : "Unité hospitalière de gynécologie",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
+      "StructureDefinition-ror-organization-price.html" : "ROROrganizationPrice"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J27-GroupeTarifaireDependance-ROR/FHIR/JDV-J27-GroupeTarifaireDependance-ROR",
@@ -1111,8 +1111,8 @@
       "sources" : ["1.2.250.1.213.3.3.30"],
       "uses" : {
       },
-      "StructureDefinition-ror-healthcareservice-patient-type.html" : "RORHealthcareServicePatientType",
-      "Questionnaire-ror-questionnaire-offre-mco.html" : "Unité hospitalière de gynécologie"
+      "Questionnaire-ror-questionnaire-offre-mco.html" : "Unité hospitalière de gynécologie",
+      "StructureDefinition-ror-healthcareservice-patient-type.html" : "RORHealthcareServicePatientType"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J30-TemporaliteAccueil-ROR/FHIR/JDV-J30-TemporaliteAccueil-ROR",
@@ -1128,8 +1128,8 @@
       "sources" : ["1.2.250.1.213.3.3.32"],
       "uses" : {
       },
-      "StructureDefinition-ror-organization-price.html" : "ROROrganizationPrice",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
+      "StructureDefinition-ror-organization-price.html" : "ROROrganizationPrice"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J31-AideFinanciere-ROR/FHIR/JDV-J31-AideFinanciere-ROR",
@@ -1161,8 +1161,8 @@
       "sources" : ["1.2.250.1.213.3.3.36"],
       "uses" : {
       },
-      "StructureDefinition-ror-organization-price.html" : "ROROrganizationPrice",
-      "StructureDefinition-ror-location-residential-capacity.html" : "RORLocationResidentialCapacity"
+      "StructureDefinition-ror-location-residential-capacity.html" : "RORLocationResidentialCapacity",
+      "StructureDefinition-ror-organization-price.html" : "ROROrganizationPrice"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR",
@@ -1178,8 +1178,8 @@
       "sources" : ["1.2.250.1.213.3.3.38"],
       "uses" : {
       },
-      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole",
-      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService"
+      "StructureDefinition-ror-healthcareservice.html" : "RORHealthcareService",
+      "StructureDefinition-ror-practitionerrole.html" : "RORPractitionerRole"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J35-SpecialisationDePriseEnCharge-ROR/FHIR/JDV-J35-SpecialisationDePriseEnCharge-ROR",
@@ -1307,8 +1307,8 @@
       "sources" : ["1.2.250.1.213.3.3.65"],
       "uses" : {
       },
-      "StructureDefinition-ror-organization.html" : "ROROrganization",
-      "StructureDefinition-ror-questionnaire-healthcareservice.html" : "RORQuestionnaire"
+      "StructureDefinition-ror-questionnaire-healthcareservice.html" : "RORQuestionnaire",
+      "StructureDefinition-ror-organization.html" : "ROROrganization"
     }
   ]
 }
