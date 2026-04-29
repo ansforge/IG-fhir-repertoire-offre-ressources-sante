@@ -1,4 +1,4 @@
-name: Préparer la publication d'un snapshot ou d'une trail-implementation
+name: Préparer la publication d'un snapshot ou d'une release
 
 on:
   workflow_dispatch:
@@ -46,9 +46,9 @@ jobs:
           if [[ "$NEW_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+-snapshot-[0-9]+$ ]]; then
             RELEASE_TYPE="snapshot"
           elif [[ "$NEW_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            RELEASE_TYPE="trial-implementation"
+            RELEASE_TYPE="release"
           else
-            echo "::error::Le titre du milestone ($NEW_VERSION) n'est pas au format X.Y.Z-snapshot-N (snapshot) ou X.Y.Z (trial-implementation)."
+            echo "::error::Le titre du milestone ($NEW_VERSION) n'est pas au format X.Y.Z-snapshot-N (snapshot) ou X.Y.Z (release)."
             exit 1
           fi
 
@@ -158,14 +158,25 @@ jobs:
           NEW_VERSION: ${{ steps.version.outputs.new_version }}
           ANCHOR: ${{ steps.version.outputs.anchor }}
           DESCRIPTION: ${{ github.event.inputs.description }}
+          RELEASE_TYPE: ${{ steps.version.outputs.release_type }}
         run: |
           DESCRIPTION="${DESCRIPTION//\{VERSION\}/$NEW_VERSION}"
+
+          if [ "$RELEASE_TYPE" = "snapshot" ]; then
+            MODE="working"; STATUS="preview"; SEQUENCE="trial-use"
+          else
+            MODE="milestone"; STATUS="trial-use"; SEQUENCE="STU1"
+          fi
+
           jq \
             --arg v  "$NEW_VERSION" \
             --arg p  "https://interop.esante.gouv.fr/ig/fhir/ror/$NEW_VERSION" \
             --arg d  "$DESCRIPTION" \
             --arg c  "change-log.html#$ANCHOR" \
-            '.version = $v | .path = $p | .desc = $d | .changes = $c | .mode = "working" | .status = "preview" | .sequence = "trial-use"' \
+            --arg m  "$MODE" \
+            --arg s  "$STATUS" \
+            --arg sq "$SEQUENCE" \
+            '.version = $v | .path = $p | .desc = $d | .changes = $c | .mode = $m | .status = $s | .sequence = $sq' \
             publication-request.json > /tmp/pub.json
           mv /tmp/pub.json publication-request.json
           echo "::notice::✅ publication-request.json mis à jour"
@@ -180,10 +191,10 @@ jobs:
         run: |
           sed -i "s/^version: ${PREV_VERSION}$/version: ${NEW_VERSION}/" sushi-config.yaml
 
-          if [ "$RELEASE_TYPE" = "trial-implementation" ]; then
-            sed -i "s/^releaseLabel: .*/releaseLabel: trial-implementation/" sushi-config.yaml
-          else
+          if [ "$RELEASE_TYPE" = "snapshot" ]; then
             sed -i "s/^releaseLabel: .*/releaseLabel: preview/" sushi-config.yaml
+          else
+            sed -i "s/^releaseLabel: .*/releaseLabel: trial-implementation/" sushi-config.yaml
           fi
 
           echo "::notice::✅ sushi-config.yaml mis à jour"
@@ -244,7 +255,7 @@ jobs:
           NEW_VERSION: ${{ steps.version.outputs.new_version }}
           BRANCH: ${{ steps.version.outputs.branch }}
         run: |
-          printf '## Description des changements\npréparation %s\n\n## Preview\n\nhttps://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/%s/ig pour prévisualiser l'\''IG d'\''une branche\n' "$BRANCH" "$BRANCH" > /tmp/pr_body.md
+          printf '## Description des changements\npréparation %s\n\n## Preview\n\nhttps://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/%s/ig pour prévisualiser l'\''IG d'\''une branche\n\nUne fois la relecture terminée, lancer le Github Action **"Workflow Release to IG-website-release"**\n' "$BRANCH" "$BRANCH" > /tmp/pr_body.md
 
           PR_URL=$(gh pr create \
             --title "$BRANCH" \
