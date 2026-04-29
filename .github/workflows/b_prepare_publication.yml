@@ -52,7 +52,7 @@ jobs:
           fi
 
           PREV_VERSION=$(jq -r '.version' publication-request.json)
-          BRANCH="${NEW_VERSION}"
+          BRANCH="prep-${RELEASE_TYPE}-${NEW_VERSION}"
           ANCHOR="version-$(echo "$NEW_VERSION" | tr '.' '-')"
 
           echo "new_version=$NEW_VERSION"         >> "$GITHUB_OUTPUT"
@@ -235,8 +235,23 @@ jobs:
           git commit -m "Préparation ${NEW_VERSION}"
           git push origin "$BRANCH"
           echo "::notice::✅ Branche poussée : $BRANCH"
-          PR_URL="https://github.com/${{ github.repository }}/compare/$BRANCH"
-          echo "::notice::➡️ Ouvrir la PR : $PR_URL"
+
+      # ── 7. Créer la Pull Request ─────────────────────────────────────────────
+      - name: Créer la Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEW_VERSION: ${{ steps.version.outputs.new_version }}
+          BRANCH: ${{ steps.version.outputs.branch }}
+        run: |
+          printf '## Description des changements\npréparation %s\n\n## Preview\n\nhttps://ansforge.github.io/IG-fhir-repertoire-offre-ressources-sante/%s/ig pour prévisualiser l'\''IG d'\''une branche\n' "$BRANCH" "$BRANCH" > /tmp/pr_body.md
+
+          PR_URL=$(gh pr create \
+            --title "$BRANCH" \
+            --body-file /tmp/pr_body.md \
+            --head "$BRANCH" \
+            --base main)
+
+          echo "::notice::✅ Pull Request créée : $PR_URL"
 
           # ── Résumé affiché dans l'onglet Summary du run ──────────────────────
           cat >> "$GITHUB_STEP_SUMMARY" << EOF
@@ -251,6 +266,7 @@ jobs:
           | 4b. \`sushi-config.yaml\` | mis à jour |
           | 5. \`change-log.md\` | mis à jour |
           | 6. Commit & push | ✅ |
+          | 7. Pull Request créée | ✅ |
 
           **➡️ [Ouvrir la Pull Request](${PR_URL})**
           EOF
