@@ -111,12 +111,14 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
     RORLocationResidentialCapacity named ror-location-residential-capacity 0..* MS and
     RORLocationSupportedCapacity named ror-location-supported-capacity 0..* MS and
     RORMetaCreationDate named ror-meta-creation-date 1..1 MS and
-    RORComment named ror-comment 0..1 MS
+    RORMetaQuestionnaireUsedAsATemplate named ror-meta-questionnaire-used-as-a-template 0..1 MS and
+    RORComment named ror-comment 0..1 MS 
 * extension[ror-commune-cog] ^short = "communeCog (LieuRealisationOffre) : Code officiel géographique (COG) de la commune dans laquelle le lieu est situé"
 * extension[ror-location-equipment] ^short = "EquipementSpecifique : Ressource matérielle discriminante pour la réalisation d'une prestation"
 * extension[ror-location-residential-capacity] ^short = "CapaciteHabitation : type d'habitation adapté à la réalisation d'une offre"
 * extension[ror-location-supported-capacity] ^short = "CapacitePriseCharge :  + CapaciteAccueilOperationnelle"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+* extension[ror-meta-questionnaire-used-as-a-template] ^short = "modeleSaisie (Metadonnee) : Référence canonique vers le questionnaire utilisé comme modèle de saisie, incluant obligatoirement la version sous la forme url|version. Exemple : https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-2042|1"
 * extension[ror-comment] ^short = "commentaire (LieuRealisationOffre) : Commentaire qui permet à la structure de donner des informations complémentaires"
 
 Mapping:  ConceptMetier_RORLocation
@@ -134,6 +136,9 @@ Profil 0 (sauf si uniteSensible = Oui)"
 * meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
 * meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
+
+* extension[RORMetaCreationDate] -> "metadonnee.dateCreation" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORMetaQuestionnaireUsedAsATemplate] -> "metadonnee.modeleSaisie" "Similaire aux accès de metadonnee.identifiant"
 
 * name -> "nom" "Similaire aux accès de metadonnee.identifiant"
 * description -> "description" "Similaire aux accès de metadonnee.identifiant"

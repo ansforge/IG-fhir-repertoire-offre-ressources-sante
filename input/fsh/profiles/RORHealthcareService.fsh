@@ -177,7 +177,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
     RORHealthcareServicePsychiatricSector named ror-healthcareservice-psychiatric-sector 0..* MS and
     RORHealthcareServicePatientType named ror-healthcareservice-patient-type 1..1 MS and
     RORHealthcareServiceContact named ror-healthcareservice-contact 0..* MS and
-    RORMetaCreationDate named ror-meta-creation-date 1..1 MS
+    RORMetaCreationDate named ror-meta-creation-date 1..1 MS and
+    RORMetaQuestionnaireUsedAsATemplate named ror-meta-questionnaire-used-as-a-template 0..1 MS
 * extension[ror-territorial-division] ^short = "zoneIntervention (OffreOperationnelle) : Périmètre géographique dans lequel habitent les personnes pouvant être prises en charge pour la prestation décrite.  
 Cela inclus notamment les divisions territoriales dans lesquelles les professionnels se déplacent."
 * extension[ror-territorial-division].extension[typeTerritorialDivision].valueCodeableConcept = https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale#3
@@ -187,6 +188,8 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
 * extension[ror-healthcareservice-patient-type] ^short = "publicPrisEnCharge (Patientele) : Ensemble de personnes qui présentent des caractéristiques psychologiques, intellectuelles, physiques, psycho-motrices, comportementales leur permettant de bénéficier de la prestation décrite"
 * extension[ror-healthcareservice-contact] ^short = "contact (OffreOperationnelle) : Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
+* extension[ror-meta-questionnaire-used-as-a-template] ^short = "modeleSaisie (Metadonnee) : Référence canonique vers le questionnaire utilisé comme modèle de saisie, incluant obligatoirement la version sous la forme url|version. Exemple : https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-2042|1"
+
 
 Mapping:  ConceptMetier_RORHealthcareService
 Source:   RORHealthcareService
@@ -206,6 +209,9 @@ Uniquement Profil 1 et Profil 4 si uniteSensible = Oui"
 * meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
 * meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
 * meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
+
+* extension[RORMetaCreationDate] -> "metadonnee.dateCreation" "Similaire aux accès de metadonnee.identifiant"
+* extension[RORMetaQuestionnaireUsedAsATemplate] -> "metadonnee.modeleSaisie" "Similaire aux accès de metadonnee.identifiant"
 
 * identifier -> "identifiantOffre"  "Similaire aux accès de metadonnee.identifiant"
 * name -> "nomOffre"  "Similaire aux accès de metadonnee.identifiant"
