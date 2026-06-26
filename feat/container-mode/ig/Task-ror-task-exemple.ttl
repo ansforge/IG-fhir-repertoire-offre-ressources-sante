@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/Task/ror-task-exemple> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ror-task-exemple"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task" ;
+       fhir:index 0 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Task ror-task-exemple</b></p><a name=\"ror-task-exemple\"> </a><a name=\"hcror-task-exemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-ror-task.html\">RORTask</a></p></div><p><b>status</b>: In Progress</p><p><b>businessStatus</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie 02}\">À traiter</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie 06}\">Exactitude</span></p><p><b>description</b>: Ici la catégorie d'établissement n'est pas la bonne</p><p><b>focus</b>: Identifier: 1910800002</p><p><b>authoredOn</b>: 2024-01-03</p><p><b>lastModified</b>: 2024-01-04</p><p><b>reasonCode</b>: <span title=\"Codes :{https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie COR}\">Correction</span></p><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes :{https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem systemRequester}\">systemRequester</span></p><p><b>value</b>: IHM</p></blockquote><blockquote><p><b>input</b></p><p><b>type</b>: <span title=\"Codes :{https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem pathElementError}\">pathElementError</span></p><p><b>value</b>: <span title=\"text/fhirpath\"><code>Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')</code></span></p></blockquote></div>"
+  ] ;
+  fhir:Task.status [ fhir:value "in-progress"] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie" ] ;
+       fhir:Coding.code [ fhir:value "02" ] ;
+       fhir:Coding.display [ fhir:value "À traiter" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie" ] ;
+       fhir:Coding.code [ fhir:value "06" ] ;
+       fhir:Coding.display [ fhir:value "Exactitude" ]
+     ]
+  ] ;
+  fhir:Task.description [ fhir:value "Ici la catégorie d'établissement n'est pas la bonne"] ;
+  fhir:Task.focus [
+     fhir:Reference.type [ fhir:value "Organization" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.value [ fhir:value "1910800002" ]
+     ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2024-01-03"^^xsd:date] ;
+  fhir:Task.lastModified [ fhir:value "2024-01-04"^^xsd:date] ;
+  fhir:Task.reasonCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie" ] ;
+       fhir:Coding.code [ fhir:value "COR" ] ;
+       fhir:Coding.display [ fhir:value "Correction" ]
+     ]
+  ] ;
+  fhir:Task.input [
+     fhir:index 0 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem" ] ;
+         fhir:Coding.code [ fhir:value "systemRequester" ]
+       ]
+     ] ;
+     fhir:Task.input.valueString [ fhir:value "IHM" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/input-task-ror-codesystem" ] ;
+         fhir:Coding.code [ fhir:value "pathElementError" ]
+       ]
+     ] ;
+     fhir:Task.input.valueExpression [
+       fhir:Expression.language [ fhir:value "text/fhirpath" ] ;
+       fhir:Expression.expression [ fhir:value "Organization.type.coding.where(system='https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement')" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/Task/ror-task-exemple.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,939 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/CapabilityStatement/ror-consommateur> a fhir:CapabilityStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ror-consommateur"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CapabilityStatement ror-consommateur</b></p><a name=\"ror-consommateur\"> </a><a name=\"hcror-consommateur\"> </a><h2 id=\"title\">ROR-Consommateur</h2><ul><li>Version du guide d'implémentation : 0.7.0 </li><li>Version de FHIR : 4.0.1 </li><li>Formats supportés : <code>application/fhir+json</code>, <code>application/fhir+ndjson</code></li><li>Formats Patch supportés : <code>application/fhir+json</code></li><li>Publié sur : 2024-03-12 11:35:00+0100 </li><li>Publié par : ANS </li></ul><blockquote class=\"impl-note\"><p><strong>Note aux implémenteurs : capacités FHIR</strong></p><p>Toute capacité FHIR peut être 'autorisée' par le système sauf si elle est explicitement marquée comme 'SHALL NOT'. Quelques éléments sont marqués comme MAY dans le guide d'implémentation pour souligner leur pertinence potentielle pour le cas d'usage.</p></blockquote><p>This CapabilityStatement instantiates the CapabilityStatement <a href=\"http://hl7.org/fhir/uv/bulkdata/STU2/CapabilityStatement-bulk-data.html\">FHIR Bulk Data Access Implementation Guide</a></p><h3 id=\"shallIGs\">DOIT prendre en charge les guides d’implémentation suivants.</h3><ul><li><a href=\"index.html\">https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror</a></li><li><a href=\"http://hl7.org/fhir/uv/bulkdata/STU2/ImplementationGuide-hl7.fhir.uv.bulkdata.html\">http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata</a></li></ul><h2 id=\"rest\">Capacités RESTful FHIR</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>client</code></h3></div><div class=\"panel-body\"><div><p>Recherche d'offres de soins de santé et de leurs capacités</p>\n</div><div class=\"lead\"><em>Security</em></div><div class=\"row\"><div class=\"col-lg-6\">Activer CORS : non</div><div class=\"col-lg-6\">Security services supported: <code>OAuth</code></div></div><blockquote><div><p>L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)</p>\n</div></blockquote><div class=\"row\"><div class=\"col-12\"><span class=\"lead\">Résumé des opérations au niveau du système</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Opération</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHOULD</b></td><td><a href=\"http://hl7.org/fhir/uv/bulkdata/STU2/OperationDefinition-export.html\">$export</a></td><td><div><p>Utilisation de https://hl7.org/fhir/uv/bulkdata/export.html avec ajout de la valeur _myCompleteExtract pour utiliser le query parameter includeAssociatedData.</p>\n</div></td></tr></tbody></table></div></div></div></div><h3 id=\"resourcesCap1\">Capacités par ressource/profil</h3><h4 id=\"resourcesSummary1\">Résumé</h4><p>Le tableau récapitulatif liste les ressources faisant partie de cette configuration, et pour chaque ressource, il liste :</p><ul><li>Les profils pertinents (le cas échéant)</li><li>Les interactions supportées par chaque ressource (<b><span class=\"bg-info\">R</span></b>ead, <b><span class=\"bg-info\">S</span></b>earch, <b><span class=\"bg-info\">U</span></b>pdate, and <b><span class=\"bg-info\">C</span></b>reate, are always shown, while <b><span class=\"bg-info\">VR</span></b>ead, <b><span class=\"bg-info\">P</span></b>atch, <b><span class=\"bg-info\">D</span></b>elete, <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">I</span></b>nstance, or <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">T</span></b>les types sont seulement présents si au moins une des ressources les prend en charge.</li><li><span>Les paramètres de recherche (SearchParameters) requis, recommandés, optionnels (le cas échéant). </span></li><li>Les ressources liées activées pour <code>_include</code></li><li>Les autres ressources activées pour <code>_revinclude</code></li><li>Les opérations sur la ressource (le cas échéant)</li></ul><div class=\"table-responsive\"><table class=\"table table-condensed table-hover\"><thead><tr><th><b>Type de Ressource</b></th><th><b>Profil</b></th><th class=\"text-center\"><b title=\"GET d'une ressource (interaction read)\">R</b></th><th class=\"text-center\"><b title=\"GET de l'ensemble des ressources du type (interaction search)\">S</b></th><th class=\"text-center\"><b title=\"PUT d'une nouvelle version de ressource (interaction update)\">U</b></th><th class=\"text-center\"><b title=\"PATCH d'une nouvelle version de ressource (interaction patch)\">P</b></th><th class=\"text-center\"><b title=\"POST d'une nouvelle ressource (interaction create)\">C</b></th><th><b title=\"Paramètres de recherche requis et recommandés\">Recherches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Opérations</b></th></tr></thead><tbody><tr><td><a href=\"#Location1-1\">Location</a></td><td><a href=\"StructureDefinition-ror-location.html\">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td>_filter, _has, _id, _lastUpdated, _tag, type, identifier, near, status, operational-status, address-postalcode, address-city, capacity-status, nb-capacity, additional-bed-type, capacity-closing-type, capacity-type, capacity-update-date, crisis-type, equipment-type, equipment-feature, gender-capacity-available, limit-value, commune-cog, near-insee-code, residential-number, residential-type, temporality-capacity, temporary-assignement</td><td/><td><code>HealthcareService:location</code></td><td/></tr><tr><td><a href=\"#HealthcareService1-2\">HealthcareService</a></td><td><a href=\"StructureDefinition-ror-healthcareservice.html\">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, _tag, _has, _filter, identifier, name, service-category, service-type, characteristic, specialty, age-range-high, age-range-low, intervention-zone, patient-type, psychiatric-sector, notavailable-closing-reopeningdate</td><td><code>HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner</code></td><td><code>PractitionerRole:service, Task:focus</code></td><td/></tr><tr><td><a href=\"#Organization1-3\">Organization</a></td><td><a href=\"StructureDefinition-ror-organization.html\">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _lastUpdated, _tag, _content, identifier, name, type, closing-type, drop-zone, period-end, price-amount-value, price-dependency-level, price-residential-type, price-type, price-unit, price-validity-start-date, price-welcome-type, special-price</td><td/><td/><td/></tr><tr><td><a href=\"#Practitioner1-4\">Practitioner</a></td><td><a href=\"StructureDefinition-ror-practitioner.html\">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>identifier, _id, _lastUpdated, _tag</td><td/><td/><td/></tr><tr><td><a href=\"#PractitionerRole1-5\">PractitionerRole</a></td><td><a href=\"StructureDefinition-ror-practitionerrole.html\">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td>identifier, _id, _lastUpdated, _tag</td><td/><td/><td/></tr><tr><td><a href=\"#Task1-6\">Task</a></td><td><a href=\"StructureDefinition-ror-task.html\">https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td>_id, _content, _id</td><td/><td/><td/></tr></tbody></table></div><hr/><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Location1-1\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>Location</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"StructureDefinition-ror-location.html\">RORLocation</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <code>search-type</code>, <code>read</code><br/><code>patch</code><div><p>Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch.</p>\n</div></li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_filter</td><td><code>special</code></td><td><div><p>Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la <a href=\"https://hl7.org/fhir/search_filter.html\">documentation</a> pour plus de détails</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td>_has</td><td><code>special</code></td><td><div><p>Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div><p>Identifiant logique de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date de la dernière mise a jour de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_tag</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le code de la région de la source de la donnée</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur sur la destination d'usage du lieu</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant logique du lieu de réalisation de l'offre. Il correspond à l'identifiant externe de synchronisation est l'identifiant défini par le porteur d'offre pour la zone d'hébergement des lits.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">near</a></td><td><code>special</code></td><td><div><p>Permet la recherche positionnelle (coordonnées géographique): lieux proches du lieu de réalisation de l'offre</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">status</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le statut de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">operational-status</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le statut opérationnel du lieu, fermé temporairement ou fermé définitivement.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">address-postalcode</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur le code Postal ou code postal spécifique CEDEX</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">address-city</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur la localité ou Libellé du bureau distributeur CEDEX</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-capacity-status.html\">capacity-status</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le statut de la capacité</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-nb-capacity.html\">nb-capacity</a></td><td><code>number</code></td><td><div><p>Permet la recherche sur la quantité de lits ou places de la capacité exprimée</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-additional-bed-type.html\">additional-bed-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type des lits disponibles</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-capacity-closing-type.html\">capacity-closing-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de la fermeture de la capacité</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-capacity-type.html\">capacity-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la nature de la capacité</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-capacity-update-date.html\">capacity-update-date</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date à laquelle la capacité d'accueil a été mise à jour dans la source.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-crisis-type.html\">crisis-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de la crise qui permet de mobiliser le nombre de lits supplémentaires décrits.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-equipment-type.html\">equipment-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type d'un equipement. Les équipements spécifiques décrits sont des ressources propres de la structure ou mises à disposition dans le cadre d'une convention à la condition qu'elles soient utilisées sur site.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-equipment-feature.html\">equipment-feature</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'élément qui indique la caractéristique de l'équipement pour laquelle une valeur limite est précisée.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-gender-capacity-available.html\">gender-capacity-available</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le genre disponible de la capacité</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-limit-value.html\">limit-value</a></td><td><code>quantity</code></td><td><div><p>Permet la recherche sur la valeur limite : correspond à la valeur extrême associée à une caractéristique de l'équipement.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-location-commune-cog.html\">commune-cog</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le code officiel géographique (cog) de la commune dans laquelle le lieu est situé</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-location-near-insee-code.html\">near-insee-code</a></td><td><code>special</code></td><td><div><p>Permet la recherche positionnelle (code INSEE commune) : lieux proches du lieu de réalisation de l'offre via le code COG INSEE</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-residential-number.html\">residential-number</a></td><td><code>number</code></td><td><div><p>Permet la recherche sur le nombre d'habitation du même type.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-residential-type.html\">residential-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type d'habitation.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-temporality-capacity.html\">temporality-capacity</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la capacité des affectations temporaires. Indique le moment où cette capacité sera effective. Il est ainsi possible de décrire la situation immédiate, ou de fournir des informations prospectives de capacités, prenant notamment en compte les entrées et sorties déjà identifiés de patients.</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-temporary-assignement.html\">temporary-assignement</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur les affectations temporaires. L'affectation temporaire permet de réserver tout ou partie des lits d'une zone d'hébergement pour des patients selon qu'ils soient -ou non- concernés par une pathologie (Covid+, Covid-, ...) ou un évènement (catastrophe naturelle, attentat, ...).</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"HealthcareService1-2\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>HealthcareService</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"StructureDefinition-ror-healthcareservice.html\">RORHealthcareService</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <code>search-type</code><br/><code>read</code><div><p>Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch.</p>\n</div></li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant logique de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Date de la dernière mise a jour</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_tag</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le code de la région de la source de la donnée</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td>_has</td><td><code>special</code></td><td><div><p>Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td>_filter</td><td><code>special</code></td><td><div><p>Fournit une syntaxe pour filtrer de manière plus complexe</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant métier de l’offre</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">name</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur la dénomination sous laquelle l'offre est identifiée</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">service-category</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type d'offre</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">service-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le domaine dans lequel s'inscrit l'offre</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">characteristic</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur les caractéristiques de l'offre</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">specialty</a></td><td><code>token</code></td><td><div><p>Ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-healthcareservice-age-range-high.html\">age-range-high</a></td><td><code>quantity</code></td><td><div><p>Permet la recherche sur l'age maximum de la patientèle</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-healthcareservice-age-range-low.html\">age-range-low</a></td><td><code>quantity</code></td><td><div><p>Permet la recherche sur l'age minimum de la patientèle</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-healthcareservice-intervention-zone.html\">intervention-zone</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la zone d'intervention</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-healthcareservice-patient-type.html\">patient-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de public pris en charge</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-healthcareservice-psychiatric-sector.html\">psychiatric-sector</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur le secteur psychiatrique de l'offre opérationnelle</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-healthcareservice-notavailable-closing-reopeningdate.html\">notavailable-closing-reopeningdate</a></td><td><code>date</code></td><td><div><p>Permet la recherche de date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end)</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Organization1-3\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>Organization</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"StructureDefinition-ror-organization.html\">ROROrganization</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <code>search-type</code>, <code>read</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant logique de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date de la dernière mise a jour</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_tag</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le code de la région de la source de la donnée</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_content</a></td><td><code>string</code></td><td><div><p>Recherche dans le contenu textuel de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/organization.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identification nationale de l'Entité Géographique définie dans le CI-SIS</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/organization.html#search\">name</a></td><td><code>string</code></td><td><div><p>Permet la recherche sur le nom de l'organisation interne</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/organization.html#search\">type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-closing-type.html\">closing-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-drop-zone.html\">drop-zone</a></td><td><code>token</code></td><td><div><p>Indique s'il y a une zone poser sur le site concerné</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-period-end.html\">period-end</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la date de fermeture de l'entité géographique</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-price-amount-value.html\">price-amount-value</a></td><td><code>number</code></td><td><div><p>Permet la recherche sur la valeur du tarif des prestations et services</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-price-dependency-level.html\">price-dependency-level</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le niveau de dépendance de la personne âgée accueillie</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-price-residential-type.html\">price-residential-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur les caractéristiques tarifaires de l'hébergement</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-price-type.html\">price-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le type de tarif</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-price-unit.html\">price-unit</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'unité de référence pour évaluer le prix des prestations et services</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-price-validity-start-date.html\">price-validity-start-date</a></td><td><code>date</code></td><td><div><p>Permet la recherche sur la dernière date de début de validité du tarif indiqué</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-price-welcome-type.html\">price-welcome-type</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur le tarif applicable à un hébergement permanent ou à un hébergement temporaire</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ror-sp-organization-special-price.html\">special-price</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur la condition tarifaire</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Practitioner1-4\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>Practitioner</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"StructureDefinition-ror-practitioner.html\">RORPractitioner</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <code>search-type</code>, <code>read</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div><p>Identifiant logique de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Date de la dernière mise a jour</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_tag</a></td><td><code>token</code></td><td><div><p>Code de la région de la source de la donnée</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"PractitionerRole1-5\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>PractitionerRole</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"StructureDefinition-ror-practitionerrole.html\">RORPractitionerRole</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <code>search-type</code>, <code>read</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitionerrole.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Permet la recherche sur l'identifiant de la situation opérationnelle, unique et persistant au niveau national</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div><p>Identifiant logique de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Date de la dernière mise a jour</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_tag</a></td><td><code>token</code></td><td><div><p>Code de la région de la source de la donnée</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Task1-6\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>Task</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"StructureDefinition-ror-task.html\">RORTask</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <code>search-type</code>, <code>read</code>, <code>create</code><br/><code>patch</code><div><p>Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch.</p>\n</div></li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div><p>Identifiant logique de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_content</a></td><td><code>string</code></td><td><div><p>Recherche dans le contenu textuel de la ressource</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div><p>Identifiant logique de la ressource</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\"> </div></div></div></div></div></div>"
+  ] ;
+  fhir:CapabilityStatement.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/CapabilityStatement/ror-consommateur"] ;
+  fhir:CapabilityStatement.version [ fhir:value "0.7.0"] ;
+  fhir:CapabilityStatement.name [ fhir:value "RORConsommateur"] ;
+  fhir:CapabilityStatement.title [ fhir:value "ROR-Consommateur"] ;
+  fhir:CapabilityStatement.status [ fhir:value "draft"] ;
+  fhir:CapabilityStatement.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CapabilityStatement.date [ fhir:value "2024-03-12T11:35:00+01:00"^^xsd:dateTime] ;
+  fhir:CapabilityStatement.publisher [ fhir:value "ANS"] ;
+  fhir:CapabilityStatement.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "ANS" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:CapabilityStatement.description [ fhir:value "Capability Statement pour les systèmes qui sont autorisés à consommer les données du ROR. Le Répertoire Opérationnel des Ressources (ROR) est le gisement de données qui décrit les offres de santé au niveau national."] ;
+  fhir:CapabilityStatement.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"] ;
+  fhir:CapabilityStatement.instantiates [
+     fhir:value "http://hl7.org/fhir/uv/bulkdata/CapabilityStatement/bulk-data" ;
+     fhir:index 0 ;
+     fhir:link <http://hl7.org/fhir/uv/bulkdata/CapabilityStatement/bulk-data> ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+       fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+     ]
+  ] ;
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:CapabilityStatement.format [
+     fhir:value "application/fhir+json" ;
+     fhir:index 0
+  ], [
+     fhir:value "application/fhir+ndjson" ;
+     fhir:index 1
+  ] ;
+  fhir:CapabilityStatement.patchFormat [
+     fhir:value "application/fhir+json" ;
+     fhir:index 0
+  ] ;
+  fhir:CapabilityStatement.implementationGuide [
+     fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror" ;
+     fhir:index 0 ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror>
+  ], [
+     fhir:value "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata" ;
+     fhir:index 1 ;
+     fhir:link <http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata>
+  ] ;
+  fhir:CapabilityStatement.rest [
+     fhir:index 0 ;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "client" ] ;
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "Recherche d'offres de soins de santé et de leurs capacités" ] ;
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.cors [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:CapabilityStatement.rest.security.service [
+         fhir:index 0 ;
+         fhir:CodeableConcept.coding [
+           fhir:index 0 ;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/restful-security-service" ] ;
+           fhir:Coding.code [ fhir:value "OAuth" ]
+         ]
+       ] ;
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)" ]
+     ] ;
+     fhir:CapabilityStatement.rest.resource [
+       fhir:index 0 ;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Location" ] ;
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 2 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ] ;
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch." ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchRevInclude [
+         fhir:value "HealthcareService:location" ;
+         fhir:index 0
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_filter" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-filter" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-filter>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "special" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la [documentation](https://hl7.org/fhir/search_filter.html) pour plus de détails" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_has" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-has" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-has>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "special" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)" ]
+       ], [
+         fhir:index 2 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Identifiant logique de la ressource" ]
+       ], [
+         fhir:index 3 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_lastUpdated" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la date de la dernière mise a jour de la ressource" ]
+       ], [
+         fhir:index 4 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_tag" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-tag" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-tag>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le code de la région de la source de la donnée" ]
+       ], [
+         fhir:index 5 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Location-type" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur sur la destination d'usage du lieu" ]
+       ], [
+         fhir:index 6 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Location-identifier" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-identifier>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'identifiant logique du lieu de réalisation de l'offre. Il correspond à l'identifiant externe de synchronisation est l'identifiant défini par le porteur d'offre pour la zone d'hébergement des lits." ]
+       ], [
+         fhir:index 7 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "near" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Location-near" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-near>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "special" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche positionnelle (coordonnées géographique): lieux proches du lieu de réalisation de l'offre" ]
+       ], [
+         fhir:index 8 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "status" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Location-status" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-status>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le statut de la ressource" ]
+       ], [
+         fhir:index 9 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "operational-status" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Location-operational-status" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-operational-status>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le statut opérationnel du lieu, fermé temporairement ou fermé définitivement." ]
+       ], [
+         fhir:index 10 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "address-postalcode" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Location-address-postalcode" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-address-postalcode>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le code Postal ou code postal spécifique CEDEX" ]
+       ], [
+         fhir:index 11 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "address-city" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Location-address-city" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-address-city>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la localité ou Libellé du bureau distributeur CEDEX" ]
+       ], [
+         fhir:index 12 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "capacity-status" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-status" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-status>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le statut de la capacité" ]
+       ], [
+         fhir:index 13 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "nb-capacity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-nb-capacity" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-nb-capacity>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "number" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la quantité de lits ou places de la capacité exprimée" ]
+       ], [
+         fhir:index 14 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "additional-bed-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-additional-bed-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-additional-bed-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type des lits disponibles" ]
+       ], [
+         fhir:index 15 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "capacity-closing-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-closing-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-closing-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type de la fermeture de la capacité" ]
+       ], [
+         fhir:index 16 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "capacity-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la nature de la capacité" ]
+       ], [
+         fhir:index 17 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "capacity-update-date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-update-date" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-update-date>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la date à laquelle la capacité d'accueil a été mise à jour dans la source." ]
+       ], [
+         fhir:index 18 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "crisis-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-crisis-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-crisis-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type de la crise qui permet de mobiliser le nombre de lits supplémentaires décrits." ]
+       ], [
+         fhir:index 19 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "equipment-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type d'un equipement. Les équipements spécifiques décrits sont des ressources propres de la structure ou mises à disposition dans le cadre d'une convention à la condition qu'elles soient utilisées sur site." ]
+       ], [
+         fhir:index 20 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "equipment-feature" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-feature" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-feature>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'élément qui indique la caractéristique de l'équipement pour laquelle une valeur limite est précisée." ]
+       ], [
+         fhir:index 21 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "gender-capacity-available" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-gender-capacity-available" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-gender-capacity-available>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le genre disponible de la capacité" ]
+       ], [
+         fhir:index 22 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "limit-value" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-limit-value" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-limit-value>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "quantity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la valeur limite : correspond à la valeur extrême associée à une caractéristique de l'équipement." ]
+       ], [
+         fhir:index 23 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "commune-cog" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-commune-cog" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-commune-cog>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le code officiel géographique (cog) de la commune dans laquelle le lieu est situé" ]
+       ], [
+         fhir:index 24 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "near-insee-code" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-near-insee-code" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-near-insee-code>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "special" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche positionnelle (code INSEE commune) : lieux proches du lieu de réalisation de l'offre via le code COG INSEE" ]
+       ], [
+         fhir:index 25 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "residential-number" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-residential-number" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-residential-number>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "number" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le nombre d'habitation du même type." ]
+       ], [
+         fhir:index 26 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "residential-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-residential-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-residential-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type d'habitation." ]
+       ], [
+         fhir:index 27 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "temporality-capacity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-temporality-capacity" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-temporality-capacity>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la capacité des affectations temporaires. Indique le moment où cette capacité sera effective. Il est ainsi possible de décrire la situation immédiate, ou de fournir des informations prospectives de capacités, prenant notamment en compte les entrées et sorties déjà identifiés de patients." ]
+       ], [
+         fhir:index 28 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "temporary-assignement" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-temporary-assignement" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-temporary-assignement>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur les affectations temporaires. L'affectation temporaire permet de réserver tout ou partie des lits d'une zone d'hébergement pour des patients selon qu'ils soient -ou non- concernés par une pathologie (Covid+, Covid-, ...) ou un évènement (catastrophe naturelle, attentat, ...)." ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "HealthcareService" ] ;
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ] ;
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch." ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "HealthcareService:organization, HealthcareService:location, Organization:partof, PractitionerRole:practitioner" ;
+         fhir:index 0
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchRevInclude [
+         fhir:value "PractitionerRole:service, Task:focus" ;
+         fhir:index 0
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'identifiant logique de la ressource" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_lastUpdated" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Date de la dernière mise a jour" ]
+       ], [
+         fhir:index 2 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_tag" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-tag" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-tag>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le code de la région de la source de la donnée" ]
+       ], [
+         fhir:index 3 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_has" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-has" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-has>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "special" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la sélection des ressources en fonction des propriétés des ressources qui y font référence (reverse chaining)" ]
+       ], [
+         fhir:index 4 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_filter" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-filter" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-filter>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "special" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Fournit une syntaxe pour filtrer de manière plus complexe" ]
+       ], [
+         fhir:index 5 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-identifier>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'identifiant métier de l’offre" ]
+       ], [
+         fhir:index 6 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "name" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/HealthcareService-name" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-name>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la dénomination sous laquelle l'offre est identifiée" ]
+       ], [
+         fhir:index 7 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "service-category" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/HealthcareService-service-category" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-service-category>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type d'offre" ]
+       ], [
+         fhir:index 8 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "service-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-service-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le domaine dans lequel s'inscrit l'offre" ]
+       ], [
+         fhir:index 9 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "characteristic" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur les caractéristiques de l'offre" ]
+       ], [
+         fhir:index 10 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "specialty" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/HealthcareService-specialty" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-specialty>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Ensemble cohérent d’actions et de pratiques mises en œuvre pour répondre aux besoins en Santé de la personne" ]
+       ], [
+         fhir:index 11 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "age-range-high" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-age-range-high" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-age-range-high>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "quantity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'age maximum de la patientèle" ]
+       ], [
+         fhir:index 12 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "age-range-low" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-age-range-low" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-age-range-low>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "quantity" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'age minimum de la patientèle" ]
+       ], [
+         fhir:index 13 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "intervention-zone" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-intervention-zone" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-intervention-zone>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la zone d'intervention" ]
+       ], [
+         fhir:index 14 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-patient-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-patient-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type de public pris en charge" ]
+       ], [
+         fhir:index 15 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "psychiatric-sector" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-psychiatric-sector" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-psychiatric-sector>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le secteur psychiatrique de l'offre opérationnelle" ]
+       ], [
+         fhir:index 16 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "notavailable-closing-reopeningdate" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche de date dans la période de fermeture (during.start) et de réouverture prévisionnelle (during.end)" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Organization" ] ;
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'identifiant logique de la ressource" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_lastUpdated" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la date de la dernière mise a jour" ]
+       ], [
+         fhir:index 2 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_tag" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-tag" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-tag>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le code de la région de la source de la donnée" ]
+       ], [
+         fhir:index 3 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_content" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-content" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-content>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Recherche dans le contenu textuel de la ressource" ]
+       ], [
+         fhir:index 4 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Organization-identifier" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Organization-identifier>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'identification nationale de l'Entité Géographique définie dans le CI-SIS" ]
+       ], [
+         fhir:index 5 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "name" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Organization-name" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Organization-name>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le nom de l'organisation interne" ]
+       ], [
+         fhir:index 6 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Organization-type" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Organization-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique" ]
+       ], [
+         fhir:index 7 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "closing-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-closing-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-closing-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS" ]
+       ], [
+         fhir:index 8 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "drop-zone" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-drop-zone" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-drop-zone>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Indique s'il y a une zone poser sur le site concerné" ]
+       ], [
+         fhir:index 9 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "period-end" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-period-end" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-period-end>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la date de fermeture de l'entité géographique" ]
+       ], [
+         fhir:index 10 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "price-amount-value" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-amount-value" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-amount-value>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "number" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la valeur du tarif des prestations et services" ]
+       ], [
+         fhir:index 11 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "price-dependency-level" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-dependency-level" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-dependency-level>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le niveau de dépendance de la personne âgée accueillie" ]
+       ], [
+         fhir:index 12 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "price-residential-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-residential-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-residential-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur les caractéristiques tarifaires de l'hébergement" ]
+       ], [
+         fhir:index 13 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "price-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur le type de tarif" ]
+       ], [
+         fhir:index 14 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "price-unit" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-unit" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-unit>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'unité de référence pour évaluer le prix des prestations et services" ]
+       ], [
+         fhir:index 15 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "price-validity-start-date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-validity-start-date" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-validity-start-date>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la dernière date de début de validité du tarif indiqué" ]
+       ], [
+         fhir:index 16 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "price-welcome-type" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-welcome-type" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-welcome-type>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value " Permet la recherche sur le tarif applicable à un hébergement permanent ou à un hébergement temporaire" ]
+       ], [
+         fhir:index 17 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "special-price" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-special-price" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-special-price>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur la condition tarifaire" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Practitioner" ] ;
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Practitioner-identifier" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Practitioner-identifier>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Identifiant logique de la ressource" ]
+       ], [
+         fhir:index 2 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_lastUpdated" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Date de la dernière mise a jour" ]
+       ], [
+         fhir:index 3 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_tag" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-tag" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-tag>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Code de la région de la source de la donnée" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "PractitionerRole" ] ;
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "identifier" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet la recherche sur l'identifiant de la situation opérationnelle, unique et persistant au niveau national" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Identifiant logique de la ressource" ]
+       ], [
+         fhir:index 2 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_lastUpdated" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-lastUpdated>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Date de la dernière mise a jour" ]
+       ], [
+         fhir:index 3 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_tag" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-tag" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-tag>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Code de la région de la source de la donnée" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Task" ] ;
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task" ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-task>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 2 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "create" ]
+       ], [
+         fhir:index 3 ;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ] ;
+         fhir:CapabilityStatement.rest.resource.interaction.documentation [ fhir:value "Seuls les attributs de 'premier niveau' peuvent être mis à jour avec l'interaction patch." ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Identifiant logique de la ressource" ]
+       ], [
+         fhir:index 1 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_content" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-content" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-content>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Recherche dans le contenu textuel de la ressource" ]
+       ], [
+         fhir:index 2 ;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/SearchParameter/Resource-id" ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Resource-id>
+         ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+         fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Identifiant logique de la ressource" ]
+       ]
+     ] ;
+     fhir:CapabilityStatement.rest.searchParam [
+       fhir:index 0 ;
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_count" ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-count" ;
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-count>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "number" ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet de choisir le nombre de résultat par page (Par défaut la recherche retourne 200 résultats maximum par page.)" ]
+     ], [
+       fhir:index 1 ;
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_sort" ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-source" ;
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-source>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet de choisir dans quel ordre renvoyer les résultats" ]
+     ], [
+       fhir:index 2 ;
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_include" ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-include" ;
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-include>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet d'inclure des ressources référencées par la ressource recherchée dans le résultat" ]
+     ], [
+       fhir:index 3 ;
+       fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_revinclude" ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.definition [
+         fhir:value "http://hl7.org/fhir/SearchParameter/Resource-revinclude" ;
+         fhir:link <http://hl7.org/fhir/SearchParameter/Resource-revinclude>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ] ;
+       fhir:CapabilityStatement.rest.resource.searchParam.documentation [ fhir:value "Permet d'inclure les ressources qui font référence à la ressource recherchée dans le résultat" ]
+     ] ;
+     fhir:CapabilityStatement.rest.operation [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ] ;
+       fhir:CapabilityStatement.rest.resource.operation.name [ fhir:value "export" ] ;
+       fhir:CapabilityStatement.rest.resource.operation.definition [
+         fhir:value "http://hl7.org/fhir/uv/bulkdata/OperationDefinition/export" ;
+         fhir:link <http://hl7.org/fhir/uv/bulkdata/OperationDefinition/export>
+       ] ;
+       fhir:CapabilityStatement.rest.resource.operation.documentation [ fhir:value "Utilisation de https://hl7.org/fhir/uv/bulkdata/export.html avec ajout de la valeur _myCompleteExtract pour utiliser le query parameter includeAssociatedData." ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/CapabilityStatement/ror-consommateur.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
