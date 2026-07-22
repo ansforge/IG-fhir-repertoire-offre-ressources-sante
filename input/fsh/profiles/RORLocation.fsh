@@ -1,7 +1,7 @@
 Profile: RORLocation
-Parent: Location
+Parent: FRCoreLocationProfile
 Id: ror-location
-Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre." 
+Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre. Hérite techniquement de FRCoreLocationProfile (au lieu de la ressource Location nue) uniquement pour rester une cible de référence valide pour FRCoreHealthcareServiceProfile.location et AsPractitionerRoleProfile.location ; les compléments FR Core relatifs à la description d'une chambre (typeChambre, positionLit), qui répondent à un besoin différent de celui du ROR, restent 0..0/non utilisés."
 
 /* Données techniques */
 * meta.lastUpdated 1..1 MS
@@ -23,7 +23,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'espace disposan
 * type ^short = "fonctionLieu (LieuRealisationOffre) : La fonction correspond à la destination d'usage du lieu"
 * type from $JDV-J198-FonctionLieu-ROR (required)
 * managingOrganization MS
-* managingOrganization only Reference(fr-organization or ROROrganization)
+* managingOrganization only Reference(fr-core-organization or ROROrganization)
 * managingOrganization ^short = "Hors périmètre du modèle d'exposition du ROR, ce champ est utilisé dans le cas suivant : le Lieu de Réalisation (Location) n'est rattaché à aucune Offre Opérationnelle (HealthcareService), la Location ne pourra alors être rattachée qu'à un ou des HealthcareServices ayant comme parent cette Organization qui doit obligatoirement être une EG"
 * operationalStatus MS
 * operationalStatus ^short = "statut (LieuRealisationOffre) : Indique si le lieu est opérationnel, fermé temporairement ou fermé définitivement"
