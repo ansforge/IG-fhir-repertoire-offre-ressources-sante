@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer le nombre de la capacité.
   "version" : "0.7.0",
   "name" : "RORSPNbCapacity",
   "status" : "active",
-  "date" : "2026-07-23T08:00:07+00:00",
+  "date" : "2026-07-23T08:13:15+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

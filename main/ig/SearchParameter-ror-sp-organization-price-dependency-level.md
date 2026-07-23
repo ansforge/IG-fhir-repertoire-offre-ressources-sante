@@ -26,7 +26,7 @@ Paramètre de recherche sur le niveau de dépendance de la personne âgée accue
   "version" : "0.7.0",
   "name" : "RORSPOrganizationPriceDependecyLevel",
   "status" : "active",
-  "date" : "2026-07-23T08:00:07+00:00",
+  "date" : "2026-07-23T08:13:15+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

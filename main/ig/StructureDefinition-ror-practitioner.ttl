@@ -16,7 +16,7 @@
   fhir:StructureDefinition.version [ fhir:value "0.7.0"] ;
   fhir:StructureDefinition.name [ fhir:value "RORPractitioner"] ;
   fhir:StructureDefinition.status [ fhir:value "draft"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-07-23T08:00:07+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-07-23T08:13:15+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "ANS"] ;
   fhir:StructureDefinition.contact [
      fhir:index 0 ;
@@ -1606,8 +1606,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/AuditEvent" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/AuditEvent>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MeasureReport" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MeasureReport>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -1682,8 +1682,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/AuditEvent" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/AuditEvent>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MeasureReport" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MeasureReport>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -2323,8 +2323,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/AuditEvent" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/AuditEvent>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MeasureReport" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MeasureReport>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -2395,8 +2395,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "value.empty() or system.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:value)) or exists(f:system)" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Location" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Location>
          ]
        ] ;
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
@@ -2952,8 +2952,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/AuditEvent" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/AuditEvent>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MeasureReport" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MeasureReport>
          ]
        ] ;
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
@@ -3207,8 +3207,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "data.empty() or contentType.exists()" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:data)) or exists(f:contentType)" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/DiagnosticReport" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DiagnosticReport>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/BodyStructure" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/BodyStructure>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -3629,8 +3629,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/AuditEvent" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/AuditEvent>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MeasureReport" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MeasureReport>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
@@ -3704,8 +3704,8 @@
          fhir:ElementDefinition.constraint.expression [ fhir:value "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:ElementDefinition.constraint.xpath [ fhir:value "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/AuditEvent" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/AuditEvent>
+           fhir:value "http://hl7.org/fhir/StructureDefinition/MeasureReport" ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/MeasureReport>
          ]
        ] ;
        fhir:ElementDefinition.mapping [
