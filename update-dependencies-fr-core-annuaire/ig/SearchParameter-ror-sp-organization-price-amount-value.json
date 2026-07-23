@@ -1,0 +1,33 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "ror-sp-organization-price-amount-value",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche ror-sp-organization-price-amount-value</b></p><a name=\"ror-sp-organization-price-amount-value\"> </a><a name=\"hcror-sp-organization-price-amount-value\"> </a><h2>RORSPOrganizationPriceAmountValue</h2><p>Paramètre <code>amount-value</code>:<code>number</code></p><div><p>Paramètre de recherche sur la valeur du tarif des prestations et services</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/organization.html\">Organization</a></td></tr><tr><td>Expression</td><td><code>Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-price').extension.where(url='amount').value.as(Money).value</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-amount-value",
+  "version" : "0.7.0",
+  "name" : "RORSPOrganizationPriceAmountValue",
+  "status" : "active",
+  "date" : "2026-07-23T08:09:55+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Paramètre de recherche sur la valeur du tarif des prestations et services",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "code" : "amount-value",
+  "base" : ["Organization"],
+  "type" : "number",
+  "expression" : "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-price').extension.where(url='amount').value.as(Money).value"
+}

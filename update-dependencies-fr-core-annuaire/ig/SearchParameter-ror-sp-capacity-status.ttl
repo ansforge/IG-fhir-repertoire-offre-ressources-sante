@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-status> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ror-sp-capacity-status"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche ror-sp-capacity-status</b></p><a name=\"ror-sp-capacity-status\"> </a><a name=\"hcror-sp-capacity-status\"> </a><h2>RORSPCapacityStatus</h2><p>Paramètre <code>capacity-status</code>:<code>token</code></p><div><p>Paramètre de recherche pour récupérer le statut de la capacité.</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/location.html\">Location</a></td></tr><tr><td>Expression</td><td><code>Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='capacityStatus').value.as(code)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:SearchParameter.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-status"] ;
+  fhir:SearchParameter.version [ fhir:value "0.7.0"] ;
+  fhir:SearchParameter.name [ fhir:value "RORSPCapacityStatus"] ;
+  fhir:SearchParameter.status [ fhir:value "active"] ;
+  fhir:SearchParameter.date [ fhir:value "2026-07-23T08:09:55+00:00"^^xsd:dateTime] ;
+  fhir:SearchParameter.publisher [ fhir:value "ANS"] ;
+  fhir:SearchParameter.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "ANS" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:SearchParameter.description [ fhir:value "Paramètre de recherche pour récupérer le statut de la capacité."] ;
+  fhir:SearchParameter.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:SearchParameter.code [ fhir:value "capacity-status"] ;
+  fhir:SearchParameter.base [
+     fhir:value "Location" ;
+     fhir:index 0
+  ] ;
+  fhir:SearchParameter.type [ fhir:value "token"] ;
+  fhir:SearchParameter.expression [ fhir:value "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='capacityStatus').value.as(code)"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-status.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

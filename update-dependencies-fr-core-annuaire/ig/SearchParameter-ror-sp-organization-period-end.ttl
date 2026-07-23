@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-period-end> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ror-sp-organization-period-end"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche ror-sp-organization-period-end</b></p><a name=\"ror-sp-organization-period-end\"> </a><a name=\"hcror-sp-organization-period-end\"> </a><h2>ROROrganizationPeriodEnd</h2><p>Paramètre <code>period-end</code>:<code>date</code></p><div><p>Paramètre de recherche décrivant la date de fermeture de l'entité géographique</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/organization.html\">Organization</a></td></tr><tr><td>Expression</td><td><code>Organization.extension.where(url='http://hl7.org/fhir/StructureDefinition/organization-period').value.as(Period).end</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:SearchParameter.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-period-end"] ;
+  fhir:SearchParameter.version [ fhir:value "0.7.0"] ;
+  fhir:SearchParameter.name [ fhir:value "ROROrganizationPeriodEnd"] ;
+  fhir:SearchParameter.status [ fhir:value "active"] ;
+  fhir:SearchParameter.date [ fhir:value "2026-07-23T08:09:55+00:00"^^xsd:dateTime] ;
+  fhir:SearchParameter.publisher [ fhir:value "ANS"] ;
+  fhir:SearchParameter.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "ANS" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:SearchParameter.description [ fhir:value "Paramètre de recherche décrivant la date de fermeture de l'entité géographique"] ;
+  fhir:SearchParameter.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:SearchParameter.code [ fhir:value "period-end"] ;
+  fhir:SearchParameter.base [
+     fhir:value "Organization" ;
+     fhir:index 0
+  ] ;
+  fhir:SearchParameter.type [ fhir:value "date"] ;
+  fhir:SearchParameter.expression [ fhir:value "Organization.extension.where(url='http://hl7.org/fhir/StructureDefinition/organization-period').value.as(Period).end"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-period-end.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
