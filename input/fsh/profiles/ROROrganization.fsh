@@ -1,10 +1,10 @@
 Profile: ROROrganization
-Parent: fr-organization
+Parent: AsOrganizationProfile
 Id: ror-organization
-Description: "Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes"
+Description: "Profil créé dans le cadre du ROR pour décrire les entités juridiques (EJ) et entités géographiques (EG) du domaine sanitaire, médico-social et social immatriculées dans le FINESS"
 
 /* Références*/
-* partOf only Reference(fr-organization or ROROrganization)
+* partOf only Reference(fr-core-organization or AsOrganizationProfile or ROROrganization)
 * partOf MS
 
 /* Données techniques */
@@ -21,7 +21,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 /* Données fonctionnelles */
 * name MS
 * name 0..1
-* name ^short = "raisonSociale (EJ) ou denominationEG (EG) ou nomOI (OI) - Remarque : Décalage provisoire de la cardinalité par rapport au modèle d'exposition (1..1)"
+* name ^short = "raisonSociale (EJ) ou denominationEG (EG) - Remarque : Décalage provisoire de la cardinalité par rapport au modèle d'exposition (1..1)"
 * name.extension ^slicing.discriminator.type = #value
 * name.extension ^slicing.discriminator.path = "url"
 * name.extension ^slicing.rules = #open
@@ -32,72 +32,44 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * alias 0..1
 * alias ^short = "nomOperationnel (EG) : l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique"
 
+// idNatSt, finess, siren, siret et rppsRang sont déjà slicés et fixés (identifier.type) par AsOrganizationProfile
 * identifier MS
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier[idNatSt] MS
+* identifier[idNatSt] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
+
+* identifier[finess] MS
+* identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
+
+* identifier[siren] MS
+* identifier[siren] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
+
+* identifier[siret] MS
+* identifier[siret] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
+* identifier[siret] ^comment = "https://mos.esante.gouv.fr/6.html#_4d544200-4d26-4cc5-8294-c862458f60d8"
+
+* identifier[rppsRang] MS
+* identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
+
 * identifier ^slicing.rules = #open
 * identifier contains
-    idNatSt 0..1 MS and
-    finess 0..1 MS and
-    sirene 0..1 MS and
-    rppsRang 0..1 MS and
-    numSIRET 0..1 MS and 
-    identifierOI 0..1 MS and
     adeliRang 0..1 MS
-* identifier[idNatSt] ^short = "idNatstruct (EJ + EG) : Identification nationale définie dans le CI-SIS"
-* identifier[idNatSt].type 1..1 MS
-* identifier[idNatSt].type = $TRE-G07-TypeIdentifiantStructure#40 
-* identifier[idNatSt].system = "urn:oid:1.2.250.1.71.4.2.2"
-
-* identifier[finess] ^short = "numFINESS (EJ + EG) : Numéro FINESS"
-* identifier[finess].type 1..1 MS
-* identifier[finess].type = $TRE-G07-TypeIdentifiantStructure#1 
-* identifier[finess].system = "https://finess.esante.gouv.fr"
-
-* identifier[sirene] ^short = "numSIREN (EJ) : numéro unique d'identification attribué à chaque entreprise par l'INSEE"
-* identifier[sirene].type 1..1 MS
-* identifier[sirene].type = $TRE-G07-TypeIdentifiantStructure#2 
-* identifier[sirene].system = "https://sirene.fr"
-
-* identifier[rppsRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
-* identifier[rppsRang].type 1..1 MS
-* identifier[rppsRang].type = $TRE-G07-TypeIdentifiantStructure#4
-* identifier[rppsRang].system = "https://rppsrang.esante.gouv.fr"
-
-* identifier[numSIRET] ^short = "numSIRET (EG) : numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique"
-* identifier[numSIRET].type 1..1 MS
-* identifier[numSIRET].type = $TRE-G07-TypeIdentifiantStructure#3
-* identifier[numSIRET].system = "https://sirene.fr"
-* identifier[numSIRET].system ^short = "https://mos.esante.gouv.fr/6.html#_4d544200-4d26-4cc5-8294-c862458f60d8"
-
-* identifier[identifierOI] ^short = "identifiantOI (OI) : Identifiant de l'organisation interne, unique et persistant au niveau national"
-* identifier[identifierOI].type 1..1 MS
-* identifier[identifierOI].type = $TRE-R345-TypeIdentifiantAutre#42
-* identifier[identifierOI].system = "https://oi.esante.gouv.fr"
-
 * identifier[adeliRang] ^short = "numEJ_RPPS_ADELI_Rang ou numEG_RPPS_ADELI_Rang"
 * identifier[adeliRang].type 1..1 MS
 * identifier[adeliRang].type = $TRE-G07-TypeIdentifiantStructure#0
 * identifier[adeliRang].system = "https://adelirang.esante.gouv.fr"
 
-// Slice déjà définie dans FrOrganization
+// statutJuridiqueINSEE et sphParticipation sont déjà slicés par AsOrganizationProfile (via l'extension as-ext-organization-types)
 * type MS
 * type contains
-    statutJuridiqueINSEE 0..1 MS and
-    sousEnsembleAgregatStatutJuridique 0..1 MS and
-    categorieEtablissement 0..1 MS and
-    sphParticipation 0..1 MS and
-    OIType 0..1 MS
+    categorieEtablissement 0..1 MS
+* type[statutJuridiqueINSEE] MS
 * type[statutJuridiqueINSEE] ^short = "statutJuridique (EJ) : Situation juridique de l’établissement"
 * type[statutJuridiqueINSEE] from $JDV-J199-StatutJuridique-ROR (required)
-* type[sousEnsembleAgregatStatutJuridique] ^short = "sousEnsembleAgregatStatutJuridique (EJ) : Deuxième niveau dans l’arborescence des statuts juridiques"
-* type[sousEnsembleAgregatStatutJuridique] from $JDV-J200-SousEnsembleAgregatStatutJuridique-ROR (required)
 * type[categorieEtablissement] ^short = "categorieEG (EG) : Cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique"
 * type[categorieEtablissement] from $JDV-J55-CategorieEG-ROR (required)
+* type[sphParticipation] MS
 * type[sphParticipation] ^short = "modaliteParticipationSPH (EG) : Modalités de participation au service public hospitalier"
 * type[sphParticipation] from $JDV-J202-ESPIC-ROR (required)
-* type[OIType] ^short = "typeOI (OI) : Type d'organisation interne"
-* type[OIType] from $JDV-J203-TypeOrganisationInterne-ROR (required)
 
 * contact.name MS
 * contact.name ^short  = "Nom (Contact) : Un nom de la personne ou du service à contacter"
@@ -139,15 +111,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.extension[ror-organization-geolocation] ^short = "extension pour définir les données de géolocalisation de l'EG"
 * address.extension[ror-organization-geolocation].extension contains
     RORConfidenceGeolocation named ror-confidence-geolocation 0..1 MS
+// careOf, additionalLocator, houseNumber, buildingNumberSuffix, streetNameType, streetNameBase, lieuDit
+// sont déjà slicés par AsOrganizationProfile (via FRCoreOrganizationEtablissementProfile) ; postalBox est ajouté par le ROR
 * address.line.extension contains
-    iso21090-ADXP-careOf named careOf 0..1 MS and
-    iso21090-ADXP-additionalLocator named additionalLocator 0..1 MS and
-    iso21090-ADXP-houseNumber named houseNumber 0..1 MS and
-    iso21090-ADXP-buildingNumberSuffix named buildingNumberSuffix 0..1 MS and
-    iso21090-ADXP-streetNameType named streetNameType 0..1 MS and
-    iso21090-ADXP-postBox named postalBox 0..1 MS and
-    iso21090-ADXP-streetNameBase named streetNameBase 0..1 MS and
-    as-ext-lieu-dit named lieuDit 0..1 MS
+    iso21090-ADXP-postBox named postalBox 0..1 MS
 * address.line.extension[careOf] ^short = "pointRemise (Adresse)"
 * address.line.extension[additionalLocator] ^short = "complementPointGeographique (Adresse)"
 * address.line.extension[houseNumber] ^short = "numeroVoie(Adresse)"
@@ -157,22 +124,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * address.line.extension[postalBox] ^short = "mentionDistribution (Adresse)"
 * address.line.extension[streetNameBase] ^short = "libelleVoie (Adresse)"
 * address.line.extension[lieuDit] ^short = "lieuDit (Adresse)"
-
-
-* telecom MS
-* telecom ^short = "boiteLettreMSS (OrganisationInterne) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
-* telecom.value 1..1 MS
-* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
-* telecom.extension ^slicing.discriminator.type = #value
-* telecom.extension ^slicing.discriminator.path = "url"
-* telecom.extension ^slicing.rules = #open
-* telecom.extension contains 
-    RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1 MS and
-    RORTelecomUsage named ror-telecom-usage 0..1 MS and
-    RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 MS
-* telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
-* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
-* telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -187,7 +138,6 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
     ROROrganizationAccessibilityLocation named ror-organization-accessibility-location 0..1 MS and
     ROROrganizationLevelRecourseORSAN named ror-organization-level-recourse-orsan 0..1 MS and
     ROROrganizationDropZone named ror-organization-drop-zone 0..1 MS and
-    ROROrganizationReopeningDate named ror-organization-reopening-date 0..1 MS and
     ROROrganizationCreationDate named ror-organization-creation-date 0..1 MS and
     ROROrganizationClosingType named ror-organization-closing-type 0..1 MS and
     organization-period named organization-period 0..1 MS and
@@ -205,10 +155,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organismes du
 * extension[ror-organization-accessibility-location] ^short = "accessibiliteLieu (EG) : Précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public"
 * extension[ror-organization-level-recourse-orsan] ^short = "niveauRecoursORSAN (EG) : Hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU"
 * extension[ror-organization-drop-zone] ^short = "zonePoser (EG) : Précise l’existence d’une zone de poser pour hélicoptère sur le site concerné"
-* extension[ror-organization-reopening-date] ^short = "datePrevisionnelleReouverture (OI) : Date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée"
 * extension[ror-organization-creation-date] ^short = "dateCreation (EJ) : Date de création de l'entité juridique"
-* extension[ror-organization-closing-type] ^short = "typeFermeture (EJ + EG + OI) : Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture."
-* extension[organization-period] ^short = "dateOuverture (EG + OI) + dateFermeture (EJ + EG + OI)"
+* extension[ror-organization-closing-type] ^short = "typeFermeture (EJ + EG) : Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture."
+* extension[organization-period] ^short = "dateOuverture (EG) + dateFermeture (EJ + EG)"
 * extension[ror-meta-comment] ^short = "commentaire (Metadonnee)"
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 * extension[ror-meta-questionnaire-used-as-a-template] ^short = "modeleSaisie (Metadonnee) : Référence canonique vers le questionnaire utilisé comme modèle de saisie, incluant obligatoirement la version sous la forme url|version. Exemple : https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/ror-questionnaire-2042|1"
@@ -231,7 +180,7 @@ Title:    "EntiteJuridique du Modèle exposition ROR V3"
 
 * identifier[idNatSt] -> "idNatstruct" "Similaire aux accès de metadonnee.identifiant"
 * identifier[finess] -> "numFINESS" "Similaire aux accès de metadonnee.identifiant"
-* identifier[sirene] -> "numSIREN" "Similaire aux accès de metadonnee.identifiant"
+* identifier[siren] -> "numSIREN" "Similaire aux accès de metadonnee.identifiant"
 * identifier[rppsRang] -> "numEJ_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
 * identifier[adeliRang] -> "numEJ_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
 
@@ -239,19 +188,18 @@ Title:    "EntiteJuridique du Modèle exposition ROR V3"
 * name.extension[ror-organization-additional-name] -> "complementRaisonSociale" "Similaire aux accès de metadonnee.identifiant"
 
 * type[statutJuridiqueINSEE] -> "statutJuridique" "Similaire aux accès de metadonnee.identifiant"
-* type[sousEnsembleAgregatStatutJuridique] -> "sousEnsembleAgregatStatutJuridique" "Similaire aux accès de metadonnee.identifiant"
 
-* contact -> "contact" "Profil 1,  
-Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'  
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
-Profil 4 si niveau de confidentialité  du contact= 'public'  
+* contact -> "contact" "Profil 1,
+Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'
+Profil 4 si niveau de confidentialité  du contact= 'public'
 Profil 0 si niveau de confidentialité  du contact= 'public'  "
 * contact.name -> "nom" "cf contact"
 * contact.purpose -> "natureContact" "cf contact"
-* contact.telecom -> "telecommunication" "Profil 1,  
-Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint'  
-Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint', sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
-Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  
+* contact.telecom -> "telecommunication" "Profil 1,
+Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint'
+Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint', sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'
+Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'
 Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  "
 * contact.telecom.value -> "adresseTelecom" "cf contact.telecom"
 
@@ -288,8 +236,8 @@ Title:    "EntiteGeographique du Modèle exposition ROR V3"
 
 * identifier[idNatSt] -> "idNatstruct" "Similaire aux accès de metadonnee.identifiant"
 * identifier[finess] -> "numFINESS" "Similaire aux accès de metadonnee.identifiant"
-* identifier[sirene] -> "numSIREN" "Similaire aux accès de metadonnee.identifiant"
-* identifier[numSIRET] -> "numSIRET" "Similaire aux accès de metadonnee.identifiant"
+* identifier[siren] -> "numSIREN" "Similaire aux accès de metadonnee.identifiant"
+* identifier[siret] -> "numSIRET" "Similaire aux accès de metadonnee.identifiant"
 * identifier[rppsRang] -> "numEG_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
 * identifier[adeliRang] -> "numEG_RPPS_ADELI_Rang" "Similaire aux accès de metadonnee.identifiant"
 
@@ -300,17 +248,17 @@ Title:    "EntiteGeographique du Modèle exposition ROR V3"
 * type[categorieEtablissement] -> "categorieEG" "Similaire aux accès de metadonnee.identifiant"
 * type[sphParticipation] -> "modaliteParticipationSPH" "Similaire aux accès de metadonnee.identifiant"
 
-* contact -> "contact" "Profil 1,  
-Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'  
-Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité,  uniquement accès si niveau de confidentialité  du contact= 'public'  
-Profil 4 si niveau de confidentialité  du contact= 'public'  
+* contact -> "contact" "Profil 1,
+Profil 2 et Profil 5 si niveau de confidentialité du contact différent de 'très restreint'
+Profil 3 si champ d'activité MS et si niveau de confidentialité  du contact différent de 'très restreint', pour les autres champs d'activité,  uniquement accès si niveau de confidentialité  du contact= 'public'
+Profil 4 si niveau de confidentialité  du contact= 'public'
 Profil 0 si niveau de confidentialité  du contact= 'public'  "
 * contact.name -> "nom" "cf contact"
 * contact.purpose -> "natureContact" "cf contact"
-* contact.telecom -> "telecommunication" "Profil 1,  
-Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint'  
-Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint',  sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'  
-Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  
+* contact.telecom -> "telecommunication" "Profil 1,
+Profil 2 et Profil 5 si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint'
+Profil 3 si champ d'activité MS et  si niveaux de confidentialité du contact et du contact.telecommunication différents de 'très restreint',  sinon, pour les autres champs d'activité, uniquement accès si niveau de confidentialité  du contact= 'public'
+Profil 4 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'
 Profil 0 si niveaux de confidentialité du contact et du contact.telecommunication = 'public'  "
 * contact.telecom.value -> "adresseTelecom" "cd contact.telecomunication"
 
@@ -326,31 +274,3 @@ Profil 0 si niveaux de confidentialité du contact et du contact.telecommunicati
 * extension[ROROrganizationClosingType] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"
 * extension[ROROrganizationPrice] -> "tarif" "Similaire aux accès de metadonnee.identifiant"
 * extension[RORTerritorialDivision] -> "territoireSante" "Similaire aux accès de metadonnee.identifiant"
-
-Mapping:  ConceptMetier_ROROrganization_OI
-Source:   ROROrganization
-Target:   "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf"
-Id:       specmetier-to-ROROrganization-oi
-Title:    "OrganisationInterne du Modèle exposition ROR V3"
-* -> "OrganisationInterne" "Profils ayant Accès"
-
-* id -> "metadonnee.identifiant" "Tous les profils"
-* meta -> "metadonnee" "Similaire aux accès de metadonnee.identifiant"
-* meta.lastUpdated -> "dateMiseJour" "Similaire aux accès de metadonnee.identifiant"
-* meta.tag[codeRegion] -> "regionSource" "Similaire aux accès de metadonnee.identifiant"
-
-* extension[RORMetaCreationDate] -> "metadonnee.dateCreation" "Similaire aux accès de metadonnee.identifiant"
-* extension[RORMetaQuestionnaireUsedAsATemplate] -> "metadonnee.modeleSaisie" "Similaire aux accès de metadonnee.identifiant"
-
-* identifier[identifierOI] -> "identifiantOI" "Similaire aux accès de metadonnee.identifiant"
-
-* name -> "nomOI" "Similaire aux accès de metadonnee.identifiant"
-
-* type[OIType] -> "typeOI" "Similaire aux accès de metadonnee.identifiant"
-
-* telecom -> "boiteLettreMSS" "Similaire aux accès de metadonnee.identifiant"
-* telecom.value -> "adresseTelecom" "cf boiteLettreMSS"
-
-* extension[ROROrganizationReopeningDate] -> "datePrevisionnelleReouverture" "Similaire aux accès de metadonnee.identifiant"
-* extension[OrgPeriod].valuePeriod.end -> "dateOuverture" "Similaire aux accès de metadonnee.identifiant"
-* extension[ROROrganizationClosingType] -> "typeFermeture" "Similaire aux accès de metadonnee.identifiant"
