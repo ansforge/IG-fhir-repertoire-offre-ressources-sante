@@ -3,6 +3,7 @@
 <head>
   <title>ROR : Terminology Server Report</title>
   <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
     span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
@@ -11,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for ROR</h1>
- <p>Generated Wed Apr 29 15:25:09 UTC 2026, FHIR version 4.0.1 for ans.fhir.fr.ror#0.7.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>))</p>
+ <p>Generated Thu Jul 23 07:59:34 UTC 2026, FHIR version 4.0.1 for ans.fhir.fr.ror#0.7.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/ror">https://interop.esante.gouv.fr/ig/fhir/ror</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -20,11 +21,11 @@
 :     <code>dc8fd4bc-091a-424a-8a3b-6198ef146891</code>
   </li>
   <li>
-    <b>displayLanguage</b>
+    <b>defaultDisplayLanguage</b>
 :     <code>fr-FR</code>
   </li>
 </ul>
-<h2>Tx Manager report for 'http://tx.fhir.org/tx-reg'</h2>
+<h2>Tx Manager report for 'https://tx.fhir.org/tx-reg'</h2>
 <p>
   <b>Decisions</b>
 </p>
@@ -51,796 +52,296 @@
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td></td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td></td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td></td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td></td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td></td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R282-CNAMAmeliSecteurConventionnement/FHIR/TRE-R282-CNAMAmeliSecteurConventionnement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R282-CNAMAmeliSecteurConventionnement/FHIR/TRE-R282-CNAMAmeliSecteurConventionnement]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction--0|4.0.1</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Found authoritative server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>null</td>
-    <td>http://hl7.org/fhir/fhir-types</td>
-    <td>auth = http://tx.fhir.org/r4, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7chile.cl/r4, auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4, auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4]</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html</td>
+    <td>[http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html]: authoritative = http://tx.fhir.org/r4, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J101-SecteurActivite-RASS/FHIR/JDV-J101-SecteurActivite-RASS</td>
-    <td>http://loinc.org</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:e8e90f75-98a0-42ce-8a8a-c40971533f4f</td>
+    <td>Use primary server for urn:ietf:bcp:13</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>urn:uuid:6db2cd23-9e02-4ec0-b2bb-109c21d536b3|1</td>
     <td>urn:ietf:bcp:13</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4</td>
+    <td>[urn:ietf:bcp:13]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
+    <td>Use primary server for urn:ietf:bcp:13</td>
+    <td>https://tx.fhir.org/r4</td>
     <td>http://hl7.org/fhir/ValueSet/mimetypes|4.0.1</td>
     <td>urn:ietf:bcp:13</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4</td>
+    <td>[urn:ietf:bcp:13]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:b0b9e69f-e2ce-4d42-88d7-f403ac22df05</td>
+    <td>Use primary server for urn:ietf:bcp:13</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>urn:uuid:6db2cd23-9e02-4ec0-b2bb-109c21d536b3|1</td>
     <td>urn:ietf:bcp:13</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4</td>
+    <td>[urn:ietf:bcp:13]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
+    <td>Use primary server for urn:ietf:bcp:13</td>
+    <td>https://tx.fhir.org/r4</td>
     <td>http://hl7.org/fhir/ValueSet/mimetypes|4.0.1</td>
     <td>urn:ietf:bcp:13</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4</td>
+    <td>[urn:ietf:bcp:13]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Systems handled by multiple servers. Using primary server</td>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext</td>
+    <td>[https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext</td>
+    <td>[https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found most authoritative server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>http://hl7.org/fhir/uv/sdc/ValueSet/launchContext|3.0.0</td>
     <td>[http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext, https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext]</td>
-    <td>[auth = http://tx.fhir.org/r4, candidates=, auth = , candidates=]</td>
+    <td>[[http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext]: authoritative = http://tx.fhir.org/r4, candidates=https://tx.hl7chile.cl/r4, [https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext]: authoritative = , candidates=]</td>
   </tr>
   <tr>
-    <td>Systems handled by multiple servers. Using primary server</td>
+    <td>Found most authoritative server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs|0.7.0</td>
     <td>[https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem, https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext, http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html]</td>
-    <td>[auth = , candidates=, auth = , candidates=, auth = http://tx.fhir.org/r4, candidates=]</td>
-  </tr>
-  <tr>
-    <td>Systems handled by multiple servers. Using primary server</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.org/fhir/ValueSet/usage-context-type|4.0.1</td>
-    <td>[http://terminology.hl7.org/CodeSystem/usage-context-type, https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG]</td>
-    <td>[auth = http://tx.fhir.org/r4, candidates=https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir, auth = https://smt.esante.gouv.fr/fhir, candidates=]</td>
+    <td>[[https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem]: authoritative = , candidates=, [https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext]: authoritative = , candidates=, [http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html]: authoritative = http://tx.fhir.org/r4, candidates=]</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Systems handled by multiple servers. Using primary server</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs|0.7.0</td>
-    <td>[http://terminology.hl7.org/CodeSystem/usage-context-type, https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem, https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire, https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession, https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG]</td>
-    <td>[auth = http://tx.fhir.org/r4, candidates=https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir, auth = , candidates=, auth = https://smt.esante.gouv.fr/fhir, candidates=, auth = https://smt.esante.gouv.fr/fhir, candidates=, auth = https://smt.esante.gouv.fr/fhir, candidates=]</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J20-ChampActivite-ROR/FHIR/JDV-J20-ChampActivite-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J221-NatureContact-ROR/FHIR/JDV-J221-NatureContact-ROR--0|20241213120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J222-NiveauConfidentialite-ROR/FHIR/JDV-J222-NiveauConfidentialite-ROR--0|20220826120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J225-CanalCommunication-ROR/FHIR/JDV-J225-CanalCommunication-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J238-TypeOffre-ROR/FHIR/JDV-J238-TypeOffre-ROR--0|20260330120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR--0|20241025120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J124-Commune/FHIR/JDV-J124-Commune|20260330120000</td>
-    <td>[https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM, https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire]</td>
-    <td>[auth = https://smt.esante.gouv.fr/fhir, candidates=, auth = https://smt.esante.gouv.fr/fhir, candidates=]</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J198-FonctionLieu-ROR/FHIR/JDV-J198-FonctionLieu-ROR--0|20251222120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J219-TypeVoie-ROR/FHIR/JDV-J219-TypeVoie-ROR|20220826120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J244-StatutMetierAnomalie-ROR/FHIR/JDV-J244-StatutMetierAnomalie-ROR--0|20230922120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J241-ThematiqueAnomalie-ROR/FHIR/JDV-J241-ThematiqueAnomalie-ROR--0|20240126120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td>null</td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>https://mos.esante.gouv.fr/NOS/JDV_J242-ActionAnomalie-ROR/FHIR/JDV-J242-ActionAnomalie-ROR--0|20230331120000</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td></td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R236-ModeGestion/FHIR/TRE-R236-ModeGestion</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R236-ModeGestion/FHIR/TRE-R236-ModeGestion]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td></td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R239-PublicPrisEnCharge/FHIR/TRE-R239-PublicPrisEnCharge</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R239-PublicPrisEnCharge/FHIR/TRE-R239-PublicPrisEnCharge]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r4</td>
     <td></td>
     <td>http://unitsofmeasure.org</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
     <td></td>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=</td>
   </tr>
   <tr>
     <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
     <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R88-TerritoireSante/FHIR/TRE-R88-TerritoireSante</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R20-Pays</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/code-region-territorial-division-ror-valueset|0.7.0</td>
+    <td>[https://mos.esante.gouv.fr/NOS/TRE_R88-TerritoireSante/FHIR/TRE-R88-TerritoireSante, https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R20-Pays, https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM, https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM, https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM, https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire]</td>
+    <td>[[https://mos.esante.gouv.fr/NOS/TRE_R88-TerritoireSante/FHIR/TRE-R88-TerritoireSante]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=, [https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R20-Pays]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=, [https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=, [https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=, [https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=, [https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire]: authoritative = https://smt.esante.gouv.fr/fhir, candidates=]</td>
   </tr>
   <tr>
     <td>Found authoritative server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td></td>
     <td>http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html</td>
-    <td>auth = http://tx.fhir.org/r4, candidates=</td>
+    <td>[http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html]: authoritative = http://tx.fhir.org/r4, candidates=</td>
   </tr>
   <tr>
-    <td>Systems handled by multiple servers. Using primary server</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs|0.7.0</td>
-    <td>[https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem, http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html]</td>
-    <td>[auth = , candidates=, auth = http://tx.fhir.org/r4, candidates=]</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td></td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7chile.cl/r4, auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4, auth = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4]</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
     <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server https://smt.esante.gouv.fr/fhir</td>
-    <td>https://smt.esante.gouv.fr/fhir</td>
-    <td>null</td>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
-    <td>auth = https://smt.esante.gouv.fr/fhir, candidates=</td>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction--0|4.0.1</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
 </table>
-<h2>Primary Server: http://tx.fhir.org/r4</h2>
-<a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 34. Code Systems used: </p>
+<p>
+  <b>Errors</b>
+</p>
+<table class="grid">
+  <tr>
+    <td>
+      <b>URL</b>
+    </td>
+    <td>
+      <b>Message</b>
+    </td>
+  </tr>
+  <tr>
+    <td>http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td style="background-color: #ffe3e3">
+      <span title="https://tx.fhir.org/r4/CodeSystem?_format=json&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm">Error resolving CodeSystem http://unstats.un.org/unsd/methods/m49/m49.htm: Error parsing response message from https://tx.fhir.org/r4: JsonNull</span>
+    </td>
+  </tr>
+  <tr>
+    <td>urn:ietf:bcp:13</td>
+    <td style="background-color: #ffe3e3">
+      <span title="https://tx.fhir.org/r4/CodeSystem?_format=json&amp;url=urn%3Aietf%3Abcp%3A13">Error resolving CodeSystem urn:ietf:bcp:13: Error parsing response message from https://tx.fhir.org/r4: JsonNull</span>
+    </td>
+  </tr>
+</table>
+<h2>Primary Server: https://tx.fhir.org/r4</h2>
+<a href="https://tx.fhir.org/r4"></a>
+<p>Use Count: 33. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -857,15 +358,9 @@
     </th>
   </tr>
   <tr>
-    <td>http://hl7.org/fhir/fhir-types</td>
-    <td>0</td>
-    <td>1</td>
-    <td></td>
-  </tr>
-  <tr>
     <td>http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html</td>
-    <td>2</td>
     <td>1</td>
+    <td>2</td>
     <td></td>
   </tr>
   <tr>
@@ -877,34 +372,8 @@
     </td>
   </tr>
   <tr>
-    <td>http://loinc.org</td>
-    <td>0</td>
-    <td>1</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>http://terminology.hl7.org/CodeSystem/usage-context-type</td>
-    <td>0</td>
-    <td>2</td>
-    <td>
-      <a href="http://terminology.hl7.org/7.1.0/CodeSystem-usage-context-type.html">UsageContextType</a>
-    </td>
-  </tr>
-  <tr>
-    <td>http://unitsofmeasure.org</td>
-    <td>1</td>
-    <td>0</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>http://unstats.un.org/unsd/methods/m49/m49.htm</td>
-    <td>0</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
     <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem</td>
-    <td>1</td>
+    <td>0</td>
     <td>1</td>
     <td>
       <a href="CodeSystem-ror-launch-context-codesystem.html">Code System définissant le contexte standard du lancement d'un questionnaire dans le cadre du ROR</a>
@@ -913,62 +382,45 @@
   <tr>
     <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launchcontext</td>
     <td>0</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem</td>
-    <td>0</td>
-    <td>1</td>
-    <td>
-      <a href="CodeSystem-usage-context-ror-codesystem.html">UsageContextRORCodeSystem</a>
-    </td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire</td>
-    <td>0</td>
-    <td>1</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession</td>
-    <td>0</td>
-    <td>1</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG</td>
-    <td>0</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>urn:ietf:bcp:13</td>
-    <td>0</td>
-    <td>4</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>urn:iso:std:iso:3166</td>
-    <td>0</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>urn:iso:std:iso:3166:-2</td>
-    <td>0</td>
-    <td>2</td>
+    <td>3</td>
     <td></td>
   </tr>
 </table>
 <p>ValueSets fetched:</p>
 <ul>
+  <li>http://fhir.org/packages/ans.annuaire.fhir.r4/ImplementationGuide/ans.annuaire.fhir.r4</li>
+  <li>http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core</li>
+  <li>http://hl7.org/fhir/SearchParameter/Resource-count</li>
+  <li>http://hl7.org/fhir/SearchParameter/Resource-has</li>
+  <li>http://hl7.org/fhir/SearchParameter/Resource-include</li>
+  <li>http://hl7.org/fhir/SearchParameter/Resource-revinclude</li>
   <li>http://hl7.org/fhir/ValueSet/usps-state</li>
-  <li>http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html|null</li>
+  <li>http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html</li>
+  <li>http://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre</li>
+  <li>https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1</li>
 </ul>
+<h2>Server: https://tx.fhir.org/r4</h2>
+<a href="https://tx.fhir.org/r4"></a>
+<p>Use Count: 13. Code Systems used: </p>
+<table class="grid">
+  <tr>
+    <th>
+      <b>System</b>
+    </th>
+    <th>
+      <b>#Exp.</b>
+    </th>
+    <th>
+      <b>#Val.</b>
+    </th>
+    <th>
+      <b>Details</b>
+    </th>
+  </tr>
+</table>
 <h2>Server: https://smt.esante.gouv.fr/fhir</h2>
 <a href="https://smt.esante.gouv.fr/fhir"></a>
-<p>Use Count: 389. Code Systems used: </p>
+<p>Use Count: 325. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -985,28 +437,18 @@
     </th>
   </tr>
   <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure</td>
-    <td>0</td>
-    <td>6</td>
-    <td></td>
-  </tr>
-  <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM</td>
     <td>1</td>
     <td>0</td>
     <td></td>
   </tr>
   <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire</td>
-    <td>2</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM</td>
     <td>4</td>
-    <td>2</td>
-    <td></td>
+    <td>1</td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R13-CommuneOM">TRE_R13_CommuneOM</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R20-Pays</td>
@@ -1016,38 +458,24 @@
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication</td>
+    <td>0</td>
     <td>1</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R201-TypeDivisionTerritoriale/FHIR/TRE-R201-TypeDivisionTerritoriale</td>
-    <td>1</td>
-    <td>2</td>
-    <td></td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R200-CanalCommunication">TRE_R200_CanalCommunication</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle</td>
     <td>0</td>
     <td>1</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite</td>
-    <td>0</td>
-    <td>4</td>
-    <td></td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R211-ActiviteOperationnelle">TRE_R211_ActiviteOperationnelle</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R236-ModeGestion/FHIR/TRE-R236-ModeGestion</td>
     <td>1</td>
     <td>0</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle</td>
-    <td>0</td>
-    <td>1</td>
     <td></td>
   </tr>
   <tr>
@@ -1059,20 +487,24 @@
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation</td>
     <td>0</td>
-    <td>2</td>
+    <td>1</td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R244-CategorieOrganisation">TRE_R244_CategorieOrganisation</a>
+    </td>
+  </tr>
+  <tr>
+    <td>https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure</td>
+    <td>0</td>
+    <td>1</td>
     <td></td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire</td>
     <td>0</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite</td>
-    <td>0</td>
     <td>1</td>
-    <td></td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R252-TypeHoraire">TRE_R252_TypeHoraire</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R282-CNAMAmeliSecteurConventionnement/FHIR/TRE-R282-CNAMAmeliSecteurConventionnement</td>
@@ -1083,38 +515,34 @@
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite</td>
     <td>0</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact</td>
-    <td>0</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession</td>
-    <td>2</td>
-    <td>2</td>
-    <td></td>
+    <td>1</td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R283-NiveauConfidentialite">TRE_R283_NiveauConfidentialite</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM</td>
-    <td>2</td>
-    <td>2</td>
-    <td></td>
+    <td>1</td>
+    <td>0</td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R30-RegionOM">TRE_R30_RegionOM</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R302-ContexteCodeComplementaire/FHIR/TRE-R302-ContexteCodeComplementaire</td>
-    <td>1</td>
-    <td>1</td>
-    <td></td>
+    <td>2</td>
+    <td>0</td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R302-ContexteCodeComplementaire">TRE_R302_ContexteCodeComplementaire</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu</td>
     <td>0</td>
-    <td>2</td>
-    <td></td>
+    <td>1</td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R343-FonctionLieu">TRE_R343_FonctionLieu</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R345-TypeIdentifiantAutre/FHIR/TRE_R345-TypeIdentifiantAutre</td>
@@ -1125,44 +553,34 @@
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R349-ActionAnomalie/FHIR/TRE-R349-ActionAnomalie</td>
     <td>0</td>
-    <td>2</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R35-TypeVoie/FHIR/TRE-R35-TypeVoie</td>
-    <td>0</td>
     <td>1</td>
-    <td></td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R349-ActionAnomalie">TRE_R349_ActionAnomalie</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R350-ThematiqueAnomalie/FHIR/TRE-R350-ThematiqueAnomalie</td>
     <td>0</td>
-    <td>2</td>
-    <td></td>
+    <td>1</td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R350-ThematiqueAnomalie">TRE_R350_ThematiqueAnomalie</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R352-StatutMetierAnomalie/FHIR/TRE-R352-StatutMetierAnomalie</td>
     <td>0</td>
-    <td>2</td>
-    <td></td>
+    <td>1</td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R352-StatutMetierAnomalie">TRE_R352_StatutMetierAnomalie</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre</td>
     <td>0</td>
     <td>1</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement</td>
-    <td>0</td>
-    <td>30</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG</td>
-    <td>2</td>
-    <td>2</td>
-    <td></td>
+    <td>
+      <a href="https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R355-TypeIdentifiantOffre">TRE_R355_TypeIdentifiantOffre</a>
+    </td>
   </tr>
   <tr>
     <td>https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite</td>
@@ -1410,10 +828,13 @@
   <li>
     <a href="https://smt.esante.gouv.fr/fhir/ValueSet/JDV-J55-CategorieEG-ROR">https://mos.esante.gouv.fr/NOS/JDV_J55-CategorieEG-ROR/FHIR/JDV-J55-CategorieEG-ROR</a>
   </li>
-  <li>https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire|null</li>
-  <li>https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession|null</li>
   <li>https://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre</li>
-  <li>https://mos.esante.gouv.fr/NOS/TRE_R67-TypeStructure-EJ-EG/FHIR/TRE-R67-TypeStructure-EJ-EG|null</li>
+</ul>
+<h2>Server: https://tx.hl7chile.cl/r4</h2>
+<a href="https://tx.hl7chile.cl/r4"></a>
+<p>Use Count: 2. Code Systems used: </p>
+<ul>
+  <li>(None)</li>
 </ul>
 </body>
 </html>

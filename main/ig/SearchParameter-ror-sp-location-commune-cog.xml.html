@@ -222,7 +222,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.7.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - version de développement local (intégration continue v0.7.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/ror/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
 
 
 
@@ -277,7 +277,7 @@
         
           Active
           
-            as of 2026-04-29
+            as of 2026-07-23
           
         
       </td>
@@ -293,28 +293,28 @@
 
 
 
-  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
 &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter">SearchParameter</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ror-sp-location-commune-cog&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.text">text</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/resource.html#SearchParameter.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ror-sp-location-commune-cog&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#SearchParameter.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: SearchParameter ror-sp-location-commune-cog&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ror-sp-location-commune-cog&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcror-sp-location-commune-cog&quot;&gt; &lt;/a&gt;&lt;a name=&quot;ror-sp-location-commune-cog-fr-FR&quot;&gt; &lt;/a&gt;&lt;h2&gt;RORSPLocationCommuneCOG&lt;/h2&gt;&lt;p&gt;Paramètre &lt;code&gt;commune-cog&lt;/code&gt;:&lt;code&gt;token&lt;/code&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;Paramètre de recherche sur le code officiel géographique (cog) de la commune dans laquelle le lieu est situé&lt;/p&gt;
-&lt;/div&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;Ressource&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/location.html&quot;&gt;Location&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Expression&lt;/td&gt;&lt;td&gt;&lt;code&gt;Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog').value.as(CodeableConcept)&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Multiples&lt;/td&gt;&lt;td&gt;&lt;ul&gt;&lt;li&gt;multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true&lt;/li&gt;&lt;li&gt;multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
-  &lt;/text&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : ParamètreRecherche ror-sp-location-commune-cog&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ror-sp-location-commune-cog&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcror-sp-location-commune-cog&quot;&gt; &lt;/a&gt;&lt;h2&gt;RORSPLocationCommuneCOG&lt;/h2&gt;&lt;p&gt;Paramètre &lt;code&gt;commune-cog&lt;/code&gt;:&lt;code&gt;token&lt;/code&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;Paramètre de recherche sur le code officiel géographique (cog) de la commune dans laquelle le lieu est situé&lt;/p&gt;
+&lt;/div&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;Ressource&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/location.html&quot;&gt;Location&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Expression&lt;/td&gt;&lt;td&gt;&lt;code&gt;Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog').value.as(CodeableConcept)&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Multiples&lt;/td&gt;&lt;td&gt;&lt;ul&gt;&lt;li&gt;multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies&lt;/li&gt;&lt;li&gt;multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#SearchParameter.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.url">url</a>
        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-commune-cog&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.7.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;RORSPLocationCommuneCOG&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-04-29T15:21:33+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-07-23T07:54:45+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ANS&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ANS&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://esante.gouv.fr&quot;/&gt;
-    &lt;/telecom&gt;
-  &lt;/contact&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.description">description</a>
                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Paramètre de recherche sur le code officiel géographique (cog) de la commune dans laquelle le lieu est situé&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.jurisdiction">jurisdiction</a>&gt;
@@ -322,14 +322,14 @@
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FR&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;France (la)&quot;/&gt;
-    &lt;/coding&gt;
-  &lt;/jurisdiction&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.jurisdiction">jurisdiction</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;commune-cog&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.base">base</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Location&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;token&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.expression">expression</a>
               <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog').value.as(CodeableConcept)&quot;/&gt;
-&lt;/SearchParameter&gt;</code></pre>
+&lt;/<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter">SearchParameter</a>&gt;</code></pre>
 
 
   <!-- insert notes if present -->
@@ -375,7 +375,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 29, 2026 15:22+0000">2026-04-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 07:54+0000">2026-07-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

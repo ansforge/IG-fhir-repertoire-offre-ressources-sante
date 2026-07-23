@@ -52,11 +52,11 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a","N/A"
-"Extension.extension:ageRange.value[x].low","Extension.extension.value[x].low","","","",1,1,"","","Y","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}
+"Extension.extension:ageRange.value[x].low","Extension.extension.value[x].low","","","",1,1,"","","Y","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity|4.0.1]]} {[]}
 ","Low limit","The low limit. The boundary is inclusive.","If the low element is missing, the low boundary is not known.","","","","","","","","",,,,,"",,,,"Range.low",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 qty-3:If a code for the unit is present, the system SHALL also be present {code.empty() or system.exists()}sqty-1:The comparator is not used on a SimpleQuantity {comparator.empty()}","n/a","PQ, IVL<PQ>, MO, CO, depending on the values","./low"
-"Extension.extension:ageRange.value[x].high","Extension.extension.value[x].high","","","",1,1,"","","Y","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}
+"Extension.extension:ageRange.value[x].high","Extension.extension.value[x].high","","","",1,1,"","","Y","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity|4.0.1]]} {[]}
 ","High limit","The high limit. The boundary is inclusive.","If the high element is missing, the high boundary is not known.","","","","","","","","",,,,,"",,,,"Range.high",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 qty-3:If a code for the unit is present, the system SHALL also be present {code.empty() or system.exists()}sqty-1:The comparator is not used on a SimpleQuantity {comparator.empty()}","n/a","PQ, IVL<PQ>, MO, CO, depending on the values","./high"

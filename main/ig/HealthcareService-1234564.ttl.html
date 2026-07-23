@@ -222,7 +222,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - Local Development build (v0.7.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/ror/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social - version de développement local (intégration continue v0.7.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/ror/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
 
 
 
@@ -278,284 +278,412 @@
 
 
 
-  <pre class="rdf" style="white-space: pre; overflow: hidden">
+  <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:HealthcareService ;
+&lt;http://hl7.org/fhir/HealthcareService/1234564&gt; a fhir:HealthcareService ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;1234564&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.meta">fhir:meta</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:v</a> &quot;2025-04-08T13:05:27.000+00:00&quot;^^xsd:dateTime ] ;
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice&gt;     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.tag">fhir:tag</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;06&quot; ]     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;extensions&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: HealthcareService 1234564&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;1234564\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc1234564\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;1234564-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Last updated: 2025-04-08 13:05:27+0000&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-ror-healthcareservice.html\&quot;&gt;RORHealthcareService&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Tag: Mayotte (Details: TRE-R30-RegionOM code 06 = 'Mayotte')&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;RORHealthcareServiceSensitiveUnit&lt;/b&gt;: false&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;RORHealthcareServicePatientType&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;ageRange: 15-150&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;RORMetaCreationDate&lt;/b&gt;: 2017-11-27 17:12:28+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORMetaQuestionnaireUsedAsATemplate&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;amp;canonical=https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1\&quot;&gt;https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;RORHealthcareServiceContact&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;&lt;a href=\&quot;https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/purposeContact\&quot;&gt;purposeContact&lt;/a&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact 06}\&quot;&gt;Standard&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;&lt;a href=\&quot;StructureDefinition-ror-confidentiality-level.html\&quot;&gt;RORConfidentialityLevel&lt;/a&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}\&quot;&gt;Accès libre&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORTelecomCommunicationChannel&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication 2}\&quot;&gt;Téléphone fixe&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORTelecomConfidentialityLevel&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}\&quot;&gt;Accès libre&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecomAddress&lt;/b&gt;: 0199999999&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;&lt;a href=\&quot;StructureDefinition-ror-healthcareservice-contact-telecom.html\&quot;&gt;RORHealthcareServiceContactTelecom&lt;/a&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant fonctionnel de l'offre connu par l'instance ROR/06/0099999&lt;/p&gt;&lt;p&gt;&lt;b&gt;providedBy&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Organization/999999\&quot;&gt;Organization/999999&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation 157}\&quot;&gt;Unité hospitalière de gynécologie&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite 01}\&quot;&gt;Médecine, Chirurgie, Obstétrique (MCO)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle 022}\&quot;&gt;Chirurgie gynécologique&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Location/888888\&quot;&gt;Location/888888&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: 5812  Chirurgie gynécologique - HOSPITALISATION COMPLETE&lt;/p&gt;&lt;p&gt;&lt;b&gt;characteristic&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite 04}\&quot;&gt;Maternité de type 3&lt;/span&gt;, &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle 02}\&quot;&gt;Semaine et week-end (de 211 à 364 jours par an)&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 1&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Monday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 2&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Tuesday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 3&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Wednesday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 4&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Thursday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 5&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Friday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 6&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Saturday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 7&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Sunday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.extension">fhir:extension</a> ( [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:boolean ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false     ]
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;ageRange&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Range">a</a> fhir:Range ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Range#Range.low">fhir:low</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:v</a> &quot;15&quot;^^xsd:decimal ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;a&quot; ]         ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Range#Range.high">fhir:high</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:v</a> &quot;150&quot;^^xsd:decimal ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;a&quot; ]         ]       ]     ] ) ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type&quot;^^xsd:anyURI ]
-  ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">a</a> fhir:dateTime ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2017-11-27T17:12:28+00:00&quot;^^xsd:dateTime     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-questionnaire-used-as-a-template&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">a</a> fhir:canonical ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1&gt;     ]
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;purposeContact&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;06&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Standard&quot; ]         ] )       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;1&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Accès libre&quot; ]         ] )       ]     ] [
-      ( <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-          ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;2&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Téléphone fixe&quot; ]           ] )         ]       ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-          ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;1&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Accès libre&quot; ]           ] )         ]       ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;telecomAddress&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:string ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0199999999&quot;         ]       ] ) ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom&quot;^^xsd:anyURI ]     ] ) ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact&quot;^^xsd:anyURI ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.identifier">fhir:identifier</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
-      ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;35&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Identifiant fonctionnel de l'offre connu par l'instance ROR&quot; ]       ] )     ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;06/0099999&quot; ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.providedBy">fhir:providedBy</a> [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/999999&quot; ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.category">fhir:category</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;157&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Unité hospitalière de gynécologie&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.type">fhir:type</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;01&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Médecine, Chirurgie, Obstétrique (MCO)&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.specialty">fhir:specialty</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;022&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Chirurgie gynécologique&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.location">fhir:location</a> ( [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Location/888888&quot; ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;5812  Chirurgie gynécologique - HOSPITALISATION COMPLETE&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.characteristic">fhir:characteristic</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;04&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Maternité de type 3&quot; ]     ] )
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;02&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Semaine et week-end (de 211 à 364 jours par an)&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime">fhir:availableTime</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">a</a> fhir:integer ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:v</a> 1       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-08&quot;^^xsd:date ]       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;01&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Horaire d'ouverture&quot; ]         ] )       ]     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:daysOfWeek</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;mon&quot; ] ) ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;00:00:00&quot;^^xsd:time ] ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;23:59:00&quot;^^xsd:time ]
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">a</a> fhir:integer ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:v</a> 2       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-08&quot;^^xsd:date ]       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;01&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Horaire d'ouverture&quot; ]         ] )       ]     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:daysOfWeek</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;tue&quot; ] ) ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;00:00:00&quot;^^xsd:time ] ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;23:59:00&quot;^^xsd:time ]
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">a</a> fhir:integer ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:v</a> 3       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-08&quot;^^xsd:date ]       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;01&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Horaire d'ouverture&quot; ]         ] )       ]     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:daysOfWeek</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;wed&quot; ] ) ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;00:00:00&quot;^^xsd:time ] ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;23:59:00&quot;^^xsd:time ]
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">a</a> fhir:integer ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:v</a> 4       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-08&quot;^^xsd:date ]       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;01&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Horaire d'ouverture&quot; ]         ] )       ]     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:daysOfWeek</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;thu&quot; ] ) ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;00:00:00&quot;^^xsd:time ] ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;23:59:00&quot;^^xsd:time ]
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">a</a> fhir:integer ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:v</a> 5       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-08&quot;^^xsd:date ]       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;01&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Horaire d'ouverture&quot; ]         ] )       ]     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:daysOfWeek</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;fri&quot; ] ) ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;00:00:00&quot;^^xsd:time ] ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;23:59:00&quot;^^xsd:time ]
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">a</a> fhir:integer ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:v</a> 6       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-08&quot;^^xsd:date ]       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;01&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Horaire d'ouverture&quot; ]         ] )       ]     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:daysOfWeek</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;sat&quot; ] ) ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;00:00:00&quot;^^xsd:time ] ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;23:59:00&quot;^^xsd:time ]
-  ] [
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">a</a> fhir:integer ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:v</a> 7       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period">a</a> fhir:Period ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-08&quot;^^xsd:date ]       ]     ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
-        ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;01&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Horaire d'ouverture&quot; ]         ] )       ]     ] ) ;
-    ( <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:daysOfWeek</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;sun&quot; ] ) ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;00:00:00&quot;^^xsd:time ] ;
-<a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:v</a> &quot;23:59:00&quot;^^xsd:time ]
-  ] ) . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#HealthcareService.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;1234564&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#HealthcareService.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2025-04-08T13:05:27.000+00:00&quot;^^xsd:dateTime ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice&gt;
+     ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.tag">fhir:Meta.tag</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;06&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#HealthcareService.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;extensions&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : ServiceDeSanté 1234564&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;1234564\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc1234564\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Dernière mise à jour : 2025-04-08 13:05:27+0000&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-ror-healthcareservice.html\&quot;&gt;RORHealthcareService&lt;/a&gt;&lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Balise: &lt;a href=\&quot;https://smt.esante.gouv.fr/fhir/ValueSet/TRE-R30-RegionOM\&quot;&gt;Mayotte (Détails : code TRE_R30_RegionOM 06 = 'Mayotte')&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;RORHealthcareServiceSensitiveUnit&lt;/b&gt;: false&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;RORHealthcareServicePatientType&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;ageRange: 15-150&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;RORMetaCreationDate&lt;/b&gt;: 2017-11-27 17:12:28+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORMetaQuestionnaireUsedAsATemplate&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;amp;canonical=https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1\&quot;&gt;https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;RORHealthcareServiceContact&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;&lt;a href=\&quot;https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/purposeContact\&quot;&gt;purposeContact&lt;/a&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact 06}\&quot;&gt;Standard&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;&lt;a href=\&quot;StructureDefinition-ror-confidentiality-level.html\&quot;&gt;RORConfidentialityLevel&lt;/a&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}\&quot;&gt;Accès libre&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORTelecomCommunicationChannel&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication 2}\&quot;&gt;Téléphone fixe&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORTelecomConfidentialityLevel&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite 1}\&quot;&gt;Accès libre&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecomAddress&lt;/b&gt;: 0199999999&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;&lt;a href=\&quot;StructureDefinition-ror-healthcareservice-contact-telecom.html\&quot;&gt;RORHealthcareServiceContactTelecom&lt;/a&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Identifiant fonctionnel de l'offre connu par l'instance ROR/06/0099999&lt;/p&gt;&lt;p&gt;&lt;b&gt;providedBy&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Organization/999999\&quot;&gt;Organization/999999&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation 157}\&quot;&gt;Unité hospitalière de gynécologie&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite 01}\&quot;&gt;Médecine, Chirurgie, Obstétrique (MCO)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle 022}\&quot;&gt;Chirurgie gynécologique&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&amp;amp;canonical=http://fhir.org/packages/ans.annuaire.fhir.r4/Location/888888\&quot;&gt;Location/888888&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: 5812  Chirurgie gynécologique - HOSPITALISATION COMPLETE&lt;/p&gt;&lt;p&gt;&lt;b&gt;characteristic&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite 04}\&quot;&gt;Maternité de type 3&lt;/span&gt;, &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle 02}\&quot;&gt;Semaine et week-end (de 211 à 364 jours par an)&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 1&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (en cours)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Monday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 2&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (en cours)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Tuesday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 3&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (en cours)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Wednesday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 4&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (en cours)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Thursday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 5&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (en cours)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Friday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 6&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (en cours)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Saturday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;availableTime&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeNumberDaysofWeek&lt;/b&gt;: 7&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeEffectiveOpeningClosingDate&lt;/b&gt;: 2025-04-08 --&amp;gt; (en cours)&lt;/p&gt;&lt;p&gt;&lt;b&gt;RORAvailableTimeTypeOfTime&lt;/b&gt;: &lt;span title=\&quot;Codes :{https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire 01}\&quot;&gt;Horaire d'ouverture&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;daysOfWeek&lt;/b&gt;: Sunday&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableStartTime&lt;/b&gt;: 00:00:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;availableEndTime&lt;/b&gt;: 23:59:00&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#HealthcareService.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-sensitive-unit&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueBoolean</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;ageRange&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueRange</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Range#Range.low">fhir:Range.low</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;15&quot;^^xsd:decimal ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">fhir:Quantity.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">fhir:Quantity.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;a&quot; ]
+         ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Range#Range.high">fhir:Range.high</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:value</a> &quot;150&quot;^^xsd:decimal ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">fhir:Quantity.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">fhir:Quantity.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;a&quot; ]
+         ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2017-11-27T17:12:28+00:00&quot;^^xsd:dateTime ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3 ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-questionnaire-used-as-a-template&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;purposeContact&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R287-NatureContact/FHIR/TRE-R287-NatureContact&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;06&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Standard&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidentiality-level&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Accès libre&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R200-CanalCommunication/FHIR/TRE-R200-CanalCommunication&quot; ] ;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;2&quot; ] ;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Téléphone fixe&quot; ]
+           ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+           <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+             <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R283-NiveauConfidentialite/FHIR/TRE-R283-NiveauConfidentialite&quot; ] ;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1&quot; ] ;
+             <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Accès libre&quot; ]
+           ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;telecomAddress&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0199999999&quot; ]
+       ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact-telecom&quot; ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-contact&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.identifier">fhir:HealthcareService.identifier</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:Identifier.type</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;35&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Identifiant fonctionnel de l'offre connu par l'instance ROR&quot; ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;06/0099999&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.providedBy">fhir:HealthcareService.providedBy</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Organization/999999&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Organization/999999&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.category">fhir:HealthcareService.category</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;157&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Unité hospitalière de gynécologie&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.type">fhir:HealthcareService.type</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;01&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Médecine, Chirurgie, Obstétrique (MCO)&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.specialty">fhir:HealthcareService.specialty</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;022&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Chirurgie gynécologique&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.location">fhir:HealthcareService.location</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/Location/888888&gt; ;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Location/888888&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.name">fhir:HealthcareService.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;5812  Chirurgie gynécologique - HOSPITALISATION COMPLETE&quot;] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.characteristic">fhir:HealthcareService.characteristic</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;04&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Maternité de type 3&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;02&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Semaine et week-end (de 211 à 364 jours par an)&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime">fhir:HealthcareService.availableTime</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#HealthcareService.availableTime.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:integer ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valuePeriod</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-04-08&quot;^^xsd:date ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;01&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Horaire d'ouverture&quot; ]
+         ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:HealthcareService.availableTime.daysOfWeek</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;mon&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:HealthcareService.availableTime.availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;00:00:00&quot;^^xsd:time ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:HealthcareService.availableTime.availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;23:59:00&quot;^^xsd:time ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#HealthcareService.availableTime.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;2&quot;^^xsd:integer ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valuePeriod</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-04-08&quot;^^xsd:date ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;01&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Horaire d'ouverture&quot; ]
+         ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:HealthcareService.availableTime.daysOfWeek</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;tue&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:HealthcareService.availableTime.availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;00:00:00&quot;^^xsd:time ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:HealthcareService.availableTime.availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;23:59:00&quot;^^xsd:time ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#HealthcareService.availableTime.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;3&quot;^^xsd:integer ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valuePeriod</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-04-08&quot;^^xsd:date ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;01&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Horaire d'ouverture&quot; ]
+         ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:HealthcareService.availableTime.daysOfWeek</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;wed&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:HealthcareService.availableTime.availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;00:00:00&quot;^^xsd:time ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:HealthcareService.availableTime.availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;23:59:00&quot;^^xsd:time ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#HealthcareService.availableTime.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;4&quot;^^xsd:integer ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valuePeriod</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-04-08&quot;^^xsd:date ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;01&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Horaire d'ouverture&quot; ]
+         ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:HealthcareService.availableTime.daysOfWeek</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;thu&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:HealthcareService.availableTime.availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;00:00:00&quot;^^xsd:time ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:HealthcareService.availableTime.availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;23:59:00&quot;^^xsd:time ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#HealthcareService.availableTime.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;5&quot;^^xsd:integer ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valuePeriod</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-04-08&quot;^^xsd:date ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;01&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Horaire d'ouverture&quot; ]
+         ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:HealthcareService.availableTime.daysOfWeek</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;fri&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:HealthcareService.availableTime.availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;00:00:00&quot;^^xsd:time ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:HealthcareService.availableTime.availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;23:59:00&quot;^^xsd:time ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#HealthcareService.availableTime.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;6&quot;^^xsd:integer ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valuePeriod</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-04-08&quot;^^xsd:date ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;01&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Horaire d'ouverture&quot; ]
+         ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:HealthcareService.availableTime.daysOfWeek</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sat&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:HealthcareService.availableTime.availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;00:00:00&quot;^^xsd:time ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:HealthcareService.availableTime.availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;23:59:00&quot;^^xsd:time ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Element#HealthcareService.availableTime.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;7&quot;^^xsd:integer ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valuePeriod</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:Period.start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2025-04-08&quot;^^xsd:date ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCodeableConcept</a> [
+         <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;01&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Horaire d'ouverture&quot; ]
+         ]
+       ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.daysOfWeek">fhir:HealthcareService.availableTime.daysOfWeek</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;sun&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+     ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableStartTime">fhir:HealthcareService.availableTime.availableStartTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;00:00:00&quot;^^xsd:time ] ;
+     <a href="http://hl7.org/fhir/R4/healthcareservice.html#HealthcareService.availableTime.availableEndTime">fhir:HealthcareService.availableTime.availableEndTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#time">fhir:value</a> &quot;23:59:00&quot;^^xsd:time ]
+  ] .
+
+&lt;http://hl7.org/fhir/Organization/999999&gt; a fhir:Organization .
+
+&lt;http://hl7.org/fhir/Location/888888&gt; a fhir:Location .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/HealthcareService/1234564.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/HealthcareService/1234564.ttl&gt; .
 
 </pre>
 
@@ -604,7 +732,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 29, 2026 15:22+0000">2026-04-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.ror#0.7.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 07:54+0000">2026-07-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

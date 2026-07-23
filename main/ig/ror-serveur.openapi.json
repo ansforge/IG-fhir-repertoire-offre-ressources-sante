@@ -2114,6 +2114,37 @@
           }
         ]
       }
+    },
+    "/$export": {
+      "summary": "System level operation $export",
+      "description": "Operation $export invoked at the system level",
+      "get": {
+        "summary": "$export (system)",
+        "description": "FHIR Operation to export data from a FHIR server whether or not it is associated with a patient. This supports use cases like backing up a server, or exporting terminology data by restricting the resources returned using the _type parameter. The FHIR server SHALL support invocation of this operation using the [FHIR Asynchronous Request Pattern](http://hl7.org/fhir/R4/async.html)",
+        "operationId": "op-export-system",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Operation response",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Parameters"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {

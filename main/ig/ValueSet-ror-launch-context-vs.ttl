@@ -1,6 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -8,47 +7,59 @@
 
 <https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs> a fhir:ValueSet ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ror-launch-context-vs"] ; # 
-  fhir:meta [
-     fhir:profile ( [
-       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+  fhir:Resource.id [ fhir:value "ror-launch-context-vs"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablevalueset" ;
+       fhir:index 0 ;
        fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
-     ] )
-  ] ; # 
-  fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ror-launch-context-vs</b></p><a name=\"ror-launch-context-vs\"> </a><a name=\"hcror-launch-context-vs\"> </a><a name=\"ror-launch-context-vs-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Include tous les codes définis dans <code>http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html</code></li><li>Include tous les codes définis dans <a href=\"CodeSystem-ror-launch-context-codesystem.html\"><code>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem</code></a></li></ul></div>"^^rdf:XMLLiteral
-  ] ; # 
-  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.7.0"] ; # 
-  fhir:name [ fhir:v "RORLaunchContextVS"] ; # 
-  fhir:title [ fhir:v "Value Set pour le contexte standard du lancement d'un questionnaire dans le cadre du ROR"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-04-29T15:21:33+00:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "ANS"] ; # 
-  fhir:contact ( [
-     fhir:name [ fhir:v "ANS" ] ;
-     fhir:telecom ( [
-       fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "https://esante.gouv.fr" ]
-     ] )
-  ] ) ; # 
-  fhir:description [ fhir:v "Extension du Value Set https://hl7.org/fhir/uv/sdc/ValueSet-launchContext.html afin de l'adapter au contexte de lancement des questionnaires dans le cadre du ROR"] ; # 
-  fhir:jurisdiction ( [
-     fhir:coding ( [
-       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "FR" ] ;
-       fhir:display [ fhir:v "France (la)" ]
-     ] )
-  ] ) ; # 
-  fhir:compose [
-     fhir:include ( [
-       fhir:system [ fhir:v "http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html"^^xsd:anyURI ]
-     ] [
-       fhir:system [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem"^^xsd:anyURI ]
-     ] )
-  ] . # 
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs ror-launch-context-vs</b></p><a name=\"ror-launch-context-vs\"> </a><a name=\"hcror-launch-context-vs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut tous les codes définis dans <code>http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html</code><span title=\"La version n'est pas explicitement indiquée. Aucun Système de codes (Code System) correspondant trouvé\"> version Non Précisé(e) (utilise la dernière version provenant du serveur de terminologie)</span></li><li>Inclut tous les codes définis dans <a href=\"CodeSystem-ror-launch-context-codesystem.html\"><code>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem</code></a><span title=\"La version n'est pas explicitement indiquée, ce qui signifie quelle est fixée à la version fournie dans cette spécification\"> version ?0.7.0</span></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs"] ;
+  fhir:ValueSet.version [ fhir:value "0.7.0"] ;
+  fhir:ValueSet.name [ fhir:value "RORLaunchContextVS"] ;
+  fhir:ValueSet.title [ fhir:value "Value Set pour le contexte standard du lancement d'un questionnaire dans le cadre du ROR"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-07-23T07:54:45+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "ANS"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "ANS" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Extension du Value Set https://hl7.org/fhir/uv/sdc/ValueSet-launchContext.html afin de l'adapter au contexte de lancement des questionnaires dans le cadre du ROR"] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 
