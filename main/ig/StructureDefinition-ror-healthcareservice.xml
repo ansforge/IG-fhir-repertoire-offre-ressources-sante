@@ -109,7 +109,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
   <version value="0.7.0"/>
   <name value="RORHealthcareService"/>
   <status value="draft"/>
-  <date value="2026-07-23T07:54:45+00:00"/>
+  <date value="2026-07-23T08:00:07+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -2807,7 +2807,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
       </constraint>
       <mustSupport value="true"/>
       <isSummary value="true"/>
@@ -3162,7 +3162,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
       </constraint>
       <mustSupport value="true"/>
       <isSummary value="true"/>
@@ -3329,7 +3329,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="If the Attachment has data, it SHALL have a contentType"/>
         <expression value="data.empty() or contentType.exists()"/>
         <xpath value="not(exists(f:data)) or exists(f:contentType)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/BodyStructure"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -3379,7 +3379,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="A system is required if a value is provided."/>
         <expression value="value.empty() or system.exists()"/>
         <xpath value="not(exists(f:value)) or exists(f:system)"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Location"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Patient"/>
       </constraint>
       <mapping>
         <identity value="specmetier-to-RORHealthcareService"/>
@@ -3787,7 +3787,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -3847,7 +3847,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -8756,7 +8756,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -8998,7 +8998,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -9250,7 +9250,7 @@ Cela inclus notamment les divisions territoriales dans lesquelles les profession
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/MeasureReport"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/AuditEvent"/>
       </constraint>
       <mapping>
         <identity value="rim"/>

@@ -26,7 +26,7 @@ Paramètre de recherche sur le code officiel géographique (cog) de la commune d
   "version" : "0.7.0",
   "name" : "RORSPLocationCommuneCOG",
   "status" : "active",
-  "date" : "2026-07-23T07:54:45+00:00",
+  "date" : "2026-07-23T08:00:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

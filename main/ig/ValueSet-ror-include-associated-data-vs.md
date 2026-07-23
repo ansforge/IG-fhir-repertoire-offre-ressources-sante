@@ -54,7 +54,7 @@ Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (pa
   "title" : "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-23T07:54:45+00:00",
+  "date" : "2026-07-23T08:00:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

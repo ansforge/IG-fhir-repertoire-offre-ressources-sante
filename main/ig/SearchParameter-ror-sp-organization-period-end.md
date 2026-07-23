@@ -26,7 +26,7 @@ Paramètre de recherche décrivant la date de fermeture de l’entité géograph
   "version" : "0.7.0",
   "name" : "ROROrganizationPeriodEnd",
   "status" : "active",
-  "date" : "2026-07-23T07:54:45+00:00",
+  "date" : "2026-07-23T08:00:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
