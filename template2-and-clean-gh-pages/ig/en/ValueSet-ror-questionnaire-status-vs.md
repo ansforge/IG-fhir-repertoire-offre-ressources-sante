@@ -36,7 +36,7 @@ Restriction des statuts de publication FHIR aux valeurs applicables aux modèles
   "title" : "Statuts autorisés pour les Questionnaires ROR",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-24T08:16:41+00:00",
+  "date" : "2026-07-24T08:25:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

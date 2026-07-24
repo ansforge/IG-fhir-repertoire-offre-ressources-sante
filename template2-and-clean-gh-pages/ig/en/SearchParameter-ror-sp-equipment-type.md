@@ -17,7 +17,7 @@ Paramètre de recherche pour récupérer le type d'un équipement.
   "version" : "0.7.0",
   "name" : "RORSPEquipmentType",
   "status" : "active",
-  "date" : "2026-07-24T08:16:41+00:00",
+  "date" : "2026-07-24T08:25:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

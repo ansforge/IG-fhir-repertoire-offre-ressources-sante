@@ -36,7 +36,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "title" : "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-24T08:16:41+00:00",
+  "date" : "2026-07-24T08:25:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

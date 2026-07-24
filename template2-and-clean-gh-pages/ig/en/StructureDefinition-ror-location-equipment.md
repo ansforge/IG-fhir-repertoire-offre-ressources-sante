@@ -34,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-ror-location-equi
   "version" : "0.7.0",
   "name" : "RORLocationEquipment",
   "status" : "draft",
-  "date" : "2026-07-24T08:16:41+00:00",
+  "date" : "2026-07-24T08:25:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

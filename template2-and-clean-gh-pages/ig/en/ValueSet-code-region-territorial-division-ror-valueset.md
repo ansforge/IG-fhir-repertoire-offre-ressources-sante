@@ -36,7 +36,7 @@ ValueSet regroupant des valuesets du NOS pour le code de la division territorial
   "title" : "Fusion des valuesets pour le code de la division territoriale",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-24T08:16:41+00:00",
+  "date" : "2026-07-24T08:25:42+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
