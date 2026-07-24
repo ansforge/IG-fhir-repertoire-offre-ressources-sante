@@ -22,8 +22,23 @@ copyrightYear: 2020+
 releaseLabel: trial-implementation
 jurisdiction: urn:iso:std:iso:3166#FR "France (la)"
 
-parameters:
+parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
     shownav: 'true'
+    path-expansion-params: '../../expansion-params.json'
+    pin-canonicals: pin-all
+    apply-contact: true
+    logging:
+      - tx
+      - html
+      - generate
+      - init
+      - progress
+    i18n-default-lang: fr
+    apply-jurisdiction: true
+    i18n-lang:
+      - en
+    translation-sources:
+      - input/translations/en
 
 
 
@@ -67,6 +82,8 @@ pages:
         title: Mapping FHIR du modèle de données du ROR
     change-log.md:
         title: Historique des versions
+    translationinfo.md:
+        title: Informations sur la traduction
     autres_ressources.md:
         securite.md:
             title: Sécurité
