@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="ror-sp-residential-number"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: SearchParameter ror-sp-residential-number</b></p><a name="en-ror-sp-residential-number"> </a><a name="en-hcror-sp-residential-number"> </a><h2>RORSPResidentialNumber</h2><p>Parameter <code>residential-number</code>:<code>number</code></p><div><p>Paramètre de recherche pour récupérer le nombre d'habitation</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/location.html">Location</a></td></tr><tr><td>Expression</td><td><code>Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-residential-capacity').extension.where(url='residentialNumber').value.as(integer)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-residential-number"/>
+  <version value="0.7.0"/>
+  <name value="RORSPResidentialNumber"/>
+  <status value="active"/>
+  <date value="2026-07-24T08:16:41+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Paramètre de recherche pour récupérer le nombre d'habitation"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <code value="residential-number"/>
+  <base value="Location"/>
+  <type value="number"/>
+  <expression value="Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-residential-capacity').extension.where(url='residentialNumber').value.as(integer)"/>
+</SearchParameter>

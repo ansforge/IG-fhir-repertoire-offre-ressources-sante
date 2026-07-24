@@ -1,0 +1,882 @@
+# RORPractitionerRole - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.7.0
+
+## Profil de ressource: RORPractitionerRole 
+
+ 
+Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre 
+
+**Utilisations:**
+
+* Référence ce Profil: [RORMeasureReport](StructureDefinition-ror-measurereport.md) and [RORTask](StructureDefinition-ror-task.md)
+* CapabilityStatements utilisant ce Profil: [ROR-Consommateur](CapabilityStatement-ror-consommateur.md) and [ROR-Serveur](CapabilityStatement-ror-serveur.md)
+
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.ror|current/StructureDefinition/ror-practitionerrole)
+
+### Vues formelles du contenu du profil
+
+ [Description des profils, des différentiels, des instantanés et de leurs représentations](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+*  [Tableau des éléments clés](#tabs-key) 
+*  [Tableau différentiel (differential)](#tabs-diff) 
+*  [Tableau récapitulatif (snapshot)](#tabs-snap) 
+*  [Statistiques/Références](#tabs-summ) 
+*  [Tous](#tabs-all) 
+
+#### Bindings terminologiques
+
+#### Contraintes
+
+Cette structure est dérivée de [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html) 
+
+#### Bindings terminologiques (différentiel)
+
+#### Bindings terminologiques
+
+#### Contraintes
+
+Cette structure est dérivée de [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html) 
+
+** Résumé **
+
+Obligatoire : 7 éléments(4 éléments obligatoire(s) imbriqué(s))
+ Must-Support : 35 éléments
+ Interdit : 1 élément
+
+**Structures**
+
+Cette structure fait référence à ces autres structures:
+
+* [Practitioner (http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1)](http://hl7.org/fhir/R4/practitioner.html)
+* [RORPractitioner (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner|0.7.0)](StructureDefinition-ror-practitioner.md)
+* [FrOrganization (http://interopsante.org/fhir/StructureDefinition/FrOrganization|1.0.1)](https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrOrganization)
+* [ROROrganization (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization|0.7.0)](StructureDefinition-ror-organization.md)
+* [Location (http://hl7.org/fhir/StructureDefinition/Location|4.0.1)](http://hl7.org/fhir/R4/location.html)
+* [RORLocation (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location|0.7.0)](StructureDefinition-ror-location.md)
+* [HealthcareService (http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1)](http://hl7.org/fhir/R4/healthcareservice.html)
+* [RORHealthcareService (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.7.0)](StructureDefinition-ror-healthcareservice.md)
+
+**Extensions**
+
+Cette structure fait référence à ces extensions:
+
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode|0.7.0](StructureDefinition-ror-practitionerrole-unit-exercise-mode.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-name|0.7.0](StructureDefinition-ror-practitionerrole-name.md)
+* [https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted|1.0](https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&canonical=https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted)
+* [https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS|1.0](https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&canonical=https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS)
+* [https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted|1.0](https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&canonical=https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date|0.7.0](StructureDefinition-ror-meta-creation-date.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-comment|0.7.0](StructureDefinition-ror-meta-comment.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel|0.7.0](StructureDefinition-ror-telecom-communication-channel.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage|0.7.0](StructureDefinition-ror-telecom-usage.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level|0.7.0](StructureDefinition-ror-telecom-confidentiality-level.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time|0.7.0](StructureDefinition-ror-available-time-type-of-time.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date|0.7.0](StructureDefinition-ror-available-time-effective-opening-closing-date.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week|0.7.0](StructureDefinition-ror-available-time-number-days-of-week.md)
+
+**Slices**
+
+Cette structure définit les [slices](http://hl7.org/fhir/R4/profiling.html#slices) suivantes:
+
+* The element 1 is sliced based on the value of PractitionerRole.meta.tag
+* The element 1 is sliced based on the value of PractitionerRole.specialty
+
+ **Vue des éléments clés** 
+
+#### Bindings terminologiques
+
+#### Contraintes
+
+ **Vue différentielle** 
+
+Cette structure est dérivée de [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html) 
+
+#### Bindings terminologiques (différentiel)
+
+ **Vue d'ensembleView** 
+
+#### Bindings terminologiques
+
+#### Contraintes
+
+Cette structure est dérivée de [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html) 
+
+** Résumé **
+
+Obligatoire : 7 éléments(4 éléments obligatoire(s) imbriqué(s))
+ Must-Support : 35 éléments
+ Interdit : 1 élément
+
+**Structures**
+
+Cette structure fait référence à ces autres structures:
+
+* [Practitioner (http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1)](http://hl7.org/fhir/R4/practitioner.html)
+* [RORPractitioner (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner|0.7.0)](StructureDefinition-ror-practitioner.md)
+* [FrOrganization (http://interopsante.org/fhir/StructureDefinition/FrOrganization|1.0.1)](https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrOrganization)
+* [ROROrganization (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization|0.7.0)](StructureDefinition-ror-organization.md)
+* [Location (http://hl7.org/fhir/StructureDefinition/Location|4.0.1)](http://hl7.org/fhir/R4/location.html)
+* [RORLocation (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location|0.7.0)](StructureDefinition-ror-location.md)
+* [HealthcareService (http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1)](http://hl7.org/fhir/R4/healthcareservice.html)
+* [RORHealthcareService (https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.7.0)](StructureDefinition-ror-healthcareservice.md)
+
+**Extensions**
+
+Cette structure fait référence à ces extensions:
+
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode|0.7.0](StructureDefinition-ror-practitionerrole-unit-exercise-mode.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-name|0.7.0](StructureDefinition-ror-practitionerrole-name.md)
+* [https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted|1.0](https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&canonical=https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted)
+* [https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS|1.0](https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&canonical=https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS)
+* [https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted|1.0](https://simplifier.net/resolve?scope=ANS.annuaire.fhir.r4@0.2.0&canonical=https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date|0.7.0](StructureDefinition-ror-meta-creation-date.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-comment|0.7.0](StructureDefinition-ror-meta-comment.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel|0.7.0](StructureDefinition-ror-telecom-communication-channel.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage|0.7.0](StructureDefinition-ror-telecom-usage.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level|0.7.0](StructureDefinition-ror-telecom-confidentiality-level.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time|0.7.0](StructureDefinition-ror-available-time-type-of-time.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date|0.7.0](StructureDefinition-ror-available-time-effective-opening-closing-date.md)
+* [https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week|0.7.0](StructureDefinition-ror-available-time-number-days-of-week.md)
+
+**Slices**
+
+Cette structure définit les [slices](http://hl7.org/fhir/R4/profiling.html#slices) suivantes:
+
+* The element 1 is sliced based on the value of PractitionerRole.meta.tag
+* The element 1 is sliced based on the value of PractitionerRole.specialty
+
+ 
+
+Autres représentations du profil : [CSV](../StructureDefinition-ror-practitionerrole.csv), [Excel](../StructureDefinition-ror-practitionerrole.xlsx), [Schematron](../StructureDefinition-ror-practitionerrole.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "ror-practitionerrole",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole",
+  "version" : "0.7.0",
+  "name" : "RORPractitionerRole",
+  "status" : "draft",
+  "date" : "2026-07-24T08:16:41+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du profesionnel dans la réalisation de l'offre",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+    "uri" : "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf",
+    "name" : "ExerciceProfessionnel du Modèle exposition ROR V3"
+  },
+  {
+    "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+    "name" : "SituationOperationnelle du Modèle exposition ROR V3"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "servd",
+    "uri" : "http://www.omg.org/spec/ServD/1.0/",
+    "name" : "ServD"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "PractitionerRole",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "PractitionerRole",
+      "path" : "PractitionerRole",
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "ExerciceProfessionnel",
+        "comment" : "Profils ayant Accès"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "SituationOperationnelle",
+        "comment" : "Profils ayant Accès"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.id",
+      "path" : "PractitionerRole.id",
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,  \nProfil 2 si uniteSensible = Non ,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "metadonnee.identifiant",
+        "comment" : "Profil 1,  \nProfil 2 si uniteSensible = Non ,  \nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,  \nProfil4,  \nProfil5 si uniteSensible = Non,  \nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
+      }]
+    },
+    {
+      "id" : "PractitionerRole.meta",
+      "path" : "PractitionerRole.meta",
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "metadonnee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.meta.lastUpdated",
+      "path" : "PractitionerRole.meta.lastUpdated",
+      "min" : 1,
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "dateMiseJour",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.meta.tag",
+      "path" : "PractitionerRole.meta.tag",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Slicing pour gérer le code région définissant la région source des données",
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "PractitionerRole.meta.tag:codeRegion",
+      "path" : "PractitionerRole.meta.tag",
+      "sliceName" : "codeRegion",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      },
+      {
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "regionSource",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.extension",
+      "path" : "PractitionerRole.extension",
+      "min" : 2
+    },
+    {
+      "id" : "PractitionerRole.extension:ror-practitionerrole-unit-exercise-mode",
+      "path" : "PractitionerRole.extension",
+      "sliceName" : "ror-practitionerrole-unit-exercise-mode",
+      "short" : "modeExerciceOffre (SituationOperationnelle) : statut du professionnel lorsqu'il exerce dans le cadre de l'offre décrite",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode|0.7.0"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "modeExerciceOffre",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.extension:ror-practitionerrole-name",
+      "path" : "PractitionerRole.extension",
+      "sliceName" : "ror-practitionerrole-name",
+      "short" : "civiliteExercie + nomExercice + prenomExercice (ExerciceProfessionnel)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-name|0.7.0"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "ExerciceProfessionnel (civiliteExercice,nomExercice,prenomExercice)",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.extension:contracted",
+      "path" : "PractitionerRole.extension",
+      "sliceName" : "contracted",
+      "short" : "secteurConventionnement (SituationOperationnelle) : Secteur de conventionnement du professionnel libéral auquel il a adhéré auprès de l'Assurance Maladie",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-contracted|1.0"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.extension:contracted.extension",
+      "path" : "PractitionerRole.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "PractitionerRole.extension:contracted.value[x]",
+      "path" : "PractitionerRole.extension.value[x]",
+      "binding" : {
+        "strength" : "required",
+        "description" : "JDV_J218-CNAMAmeliSecteurConventionnement-RASS dérivé de la TRE_ R282-CNAMAmeliSecteurConventionnement",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J218-CNAMAmeliSecteurConventionnement-ROR/FHIR/JDV-J218-CNAMAmeliSecteurConventionnement-ROR|20220826120000"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "secteurConventionnement",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.extension:optionCAS",
+      "path" : "PractitionerRole.extension",
+      "sliceName" : "optionCAS",
+      "short" : "optionContratAccèsAuxSoins (SituationOperationnelle) : L'Option pratique tarifaire maîtrisée (OPTAM) a remplacé le Contrat d'accès aux soins (CAS) en 2017",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-hasCAS|1.0"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.extension:optionCAS.value[x]",
+      "path" : "PractitionerRole.extension.value[x]",
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "optionContratAccèsAuxSoins",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.extension:vitalAccepted",
+      "path" : "PractitionerRole.extension",
+      "sliceName" : "vitalAccepted",
+      "short" : "carteVitaleAcceptee (SituationOperationnelle) : Précise si le professionnel, dans le cadre de cette situation opérationnelle, dispose des moyens techniques pour prendre en charge la carte vitale ou pas",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-vitaleAccepted|1.0"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.extension:vitalAccepted.value[x]",
+      "path" : "PractitionerRole.extension.value[x]",
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "carteVitaleAcceptee",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.extension:ror-meta-creation-date",
+      "path" : "PractitionerRole.extension",
+      "sliceName" : "ror-meta-creation-date",
+      "short" : "dateCreation (Metadonnee)",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date|0.7.0"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.extension:ror-meta-comment",
+      "path" : "PractitionerRole.extension",
+      "sliceName" : "ror-meta-comment",
+      "short" : "commentaire (Metadonnee)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-comment|0.7.0"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.identifier",
+      "path" : "PractitionerRole.identifier",
+      "short" : "identifiantSituationOperationnelle (SituationOperationnelle) : Identifiant de la situation opérationnelle, unique et persistant au niveau national",
+      "max" : "1",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "identifiantSituationOperationnelle",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.practitioner",
+      "path" : "PractitionerRole.practitioner",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner|0.7.0"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "Professionnel"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.organization",
+      "path" : "PractitionerRole.organization",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://interopsante.org/fhir/StructureDefinition/FrOrganization|1.0.1",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization|0.7.0"]
+      }]
+    },
+    {
+      "id" : "PractitionerRole.code",
+      "path" : "PractitionerRole.code",
+      "short" : "profession (ExerciceProfessionnel) : Profession exercée ou future profession de l'étudiant",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J229-ProfessionSante-ROR/FHIR/JDV-J229-ProfessionSante-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "profession",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty",
+      "path" : "PractitionerRole.specialty",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "rules" : "open"
+      },
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.specialty:expertiseType",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "expertiseType",
+      "short" : "typeSavoirFaire (SavoirFaire) : Type de savoir-faire (qualifications/autres attributions)",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J209-TypeSavoirFaire-ROR/FHIR/JDV-J209-TypeSavoirFaire-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.typeSavoirFaire",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:specialty",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "specialty",
+      "short" : "specialite (SavoirFaire) : Spécialité ordinale",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J210-SpecialiteOrdinale-ROR/FHIR/JDV-J210-SpecialiteOrdinale-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.specialite",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:competence",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "competence",
+      "short" : "competence (SavoirFaire) : Compétence acquise par le professionnel",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J232-Competence-ROR/FHIR/JDV-J232-Competence-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.competence",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:exclusiveCompetence",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "exclusiveCompetence",
+      "short" : "competenceExclusive (SavoirFaire) : Compétence exclusive",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J211-CompetenceExclusive-ROR/FHIR/JDV-J211-CompetenceExclusive-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.competenceExclusive",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:specificOrientation",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "specificOrientation",
+      "short" : "orientationParticuliere (SavoirFaire) : Orientation particulière",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J212-OrientationParticuliere-ROR/FHIR/JDV-J212-OrientationParticuliere-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.orientationParticuliere",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:expertiseCapacity",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "expertiseCapacity",
+      "short" : "capacite (SavoirFaire) : Capacité de médecine",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J213-CapaciteSavoirFaire-ROR/FHIR/JDV-J213-CapaciteSavoirFaire-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.capacite",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:qualificationPAC",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "qualificationPAC",
+      "short" : "qualificationPAC (SavoirFaire) : Qualification de praticien adjoint contractuel",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J214-QualificationPAC-ROR/FHIR/JDV-J214-QualificationPAC-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.qualificationPAC",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:nonQualifyingDESC",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "nonQualifyingDESC",
+      "short" : "DESCNonQualifiant (SavoirFaire) : Diplôme d'études spécialisées complémentaires (DESC)",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J215-DESCnonQualifiant-ROR/FHIR/JDV-J215-DESCnonQualifiant-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.DESCNonQualifiant",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:supplementaryExerciseRight",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "supplementaryExerciseRight",
+      "short" : "droitExerciceComplémentaire (SavoirFaire) : Droit d'exercice complémentaire du professionnel",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J216-DroitExerciceCompl-ROR/FHIR/JDV-J216-DroitExerciceCompl-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "SavoirFaire.droitExerciceComplémentaire",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.specialty:specificCompetence",
+      "path" : "PractitionerRole.specialty",
+      "sliceName" : "specificCompetence",
+      "short" : "competenceSpecifique (SituationOperationnelle) : Capacité ou connaissance reconnue qui permet ou facilite l’accueil d’une personne",
+      "min" : 0,
+      "max" : "*",
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR"
+      },
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-exercicePro",
+        "map" : "competenceSpecifique",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.location",
+      "path" : "PractitionerRole.location",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Location|4.0.1",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location|0.7.0"]
+      }]
+    },
+    {
+      "id" : "PractitionerRole.healthcareService",
+      "path" : "PractitionerRole.healthcareService",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1",
+        "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice|0.7.0"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "OffreOperationnelle"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.telecom",
+      "path" : "PractitionerRole.telecom",
+      "short" : "telecommunication (SituationOperationnelle) : Adresse(s) de télécommunication du professionnel dans le cadre de l'offre décrite",
+      "max" : "1",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "telecommunication",
+        "comment" : "Profil 1,  \nProfil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non  \nProfil 4 si niveau de confidentialité  de la telecommunication = 'public'  \nProfil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
+      }]
+    },
+    {
+      "id" : "PractitionerRole.telecom.extension",
+      "path" : "PractitionerRole.telecom.extension",
+      "min" : 2
+    },
+    {
+      "id" : "PractitionerRole.telecom.extension:ror-telecom-communication-channel",
+      "path" : "PractitionerRole.telecom.extension",
+      "sliceName" : "ror-telecom-communication-channel",
+      "short" : "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-communication-channel|0.7.0"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.telecom.extension:ror-telecom-usage",
+      "path" : "PractitionerRole.telecom.extension",
+      "sliceName" : "ror-telecom-usage",
+      "short" : "utilisation (Telecommunication) : Utilisation du canal de communication",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage|0.7.0"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.telecom.extension:ror-telecom-confidentiality-level",
+      "path" : "PractitionerRole.telecom.extension",
+      "sliceName" : "ror-telecom-confidentiality-level",
+      "short" : "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-confidentiality-level|0.7.0"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.telecom.value",
+      "path" : "PractitionerRole.telecom.value",
+      "short" : "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication",
+      "min" : 1,
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "adresseTelecom",
+        "comment" : "cf telecommunication"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.availableTime",
+      "path" : "PractitionerRole.availableTime",
+      "short" : "precisionHoraire (SituationOperationnelle) : planning d'activité du professionnel",
+      "max" : "1",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "horaire",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.availableTime.extension:ror-available-time-type-of-time",
+      "path" : "PractitionerRole.availableTime.extension",
+      "sliceName" : "ror-available-time-type-of-time",
+      "short" : "typePlageHoraire (Horaire) : Apporte un contexte à la plage horaire définie par la suite",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-type-of-time|0.7.0"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "typePlageHoraire",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.availableTime.extension:ror-available-time-effective-opening-closing-date",
+      "path" : "PractitionerRole.availableTime.extension",
+      "sliceName" : "ror-available-time-effective-opening-closing-date",
+      "short" : "debutDateEffective + finDateEffective (Horaire)",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date|0.7.0"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "debutDateEffective/finDateEffective",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.availableTime.extension:ror-available-time-number-days-of-week",
+      "path" : "PractitionerRole.availableTime.extension",
+      "sliceName" : "ror-available-time-number-days-of-week",
+      "short" : "jourSemaine (Horaire) : Numéro du jour dans la semaine",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week|0.7.0"]
+      }],
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "jourSemaine",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.availableTime.availableStartTime",
+      "path" : "PractitionerRole.availableTime.availableStartTime",
+      "short" : "heureDebut (Horaire) : Heure de début de la plage horaire",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "heureDebut",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
+      "id" : "PractitionerRole.availableTime.availableEndTime",
+      "path" : "PractitionerRole.availableTime.availableEndTime",
+      "short" : "heureFin (Horaire) : Heure de fin de la plage horaire",
+      "mustSupport" : true,
+      "mapping" : [{
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
+        "map" : "heureFin",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    }]
+  }
+}
+
+```

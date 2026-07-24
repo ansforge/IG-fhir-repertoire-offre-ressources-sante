@@ -1,0 +1,34 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "ror-sp-organization-drop-zone",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche ror-sp-organization-drop-zone</b></p><a name=\"ror-sp-organization-drop-zone\"> </a><a name=\"hcror-sp-organization-drop-zone\"> </a><h2>RORSPOrganizationDropZone</h2><p>Paramètre <code>drop-zone</code>:<code>token</code></p><div><p>Paramètre de recherche permettant d'indiquer s'il y a une zone poser sur le site concerné</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/organization.html\">Organization</a></td></tr><tr><td>Expression</td><td><code>Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-drop-zone').value.as(boolean)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-drop-zone",
+  "version" : "0.7.0",
+  "name" : "RORSPOrganizationDropZone",
+  "status" : "active",
+  "date" : "2026-07-24T08:16:41+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Paramètre de recherche permettant d'indiquer s'il y a une zone poser sur le site concerné",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "code" : "drop-zone",
+  "base" : ["Organization"],
+  "type" : "token",
+  "expression" : "Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-drop-zone').value.as(boolean)"
+}

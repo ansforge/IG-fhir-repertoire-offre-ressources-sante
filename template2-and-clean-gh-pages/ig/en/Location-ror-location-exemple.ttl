@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/Location/ror-location-exemple> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ror-location-exemple"] ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2023-12-20T10:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Location ror-location-exemple</b></p><a name=\"en-ror-location-exemple\"> </a><a name=\"en-hcror-location-exemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2023-12-20 10:00:00+0100</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ror-location.html\">RORLocation</a></p></div><p><b>RORCommuneCog</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM 78646}\">Versailles</span></p><p><b>RORMetaCreationDate</b>: 2022-01-01 00:00:00+0000</p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu 001}\">Hébergement</span></p><p><b>address</b>: 7 rue porte de Buc Versailles 78000 </p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM" ] ;
+         fhir:Coding.code [ fhir:value "78646" ] ;
+         fhir:Coding.display [ fhir:value "Versailles" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2022-01-01T00:00:00Z"^^xsd:dateTime ]
+  ] ;
+  fhir:Location.type [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu" ] ;
+       fhir:Coding.code [ fhir:value "001" ] ;
+       fhir:Coding.display [ fhir:value "Hébergement" ]
+     ]
+  ] ;
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "7 rue porte de Buc" ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" ] ;
+         fhir:Extension.valueString [ fhir:value "7" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameType" ] ;
+         fhir:Extension.valueString [ fhir:value "RUE" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetNameBase" ] ;
+         fhir:Extension.valueString [ fhir:value "porte de Buc" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Versailles" ] ;
+     fhir:Address.postalCode [ fhir:value "78000" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/Location/ror-location-exemple.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

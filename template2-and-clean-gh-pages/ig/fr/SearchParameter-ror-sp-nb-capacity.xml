@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="ror-sp-nb-capacity"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : ParamètreRecherche ror-sp-nb-capacity</b></p><a name="ror-sp-nb-capacity"> </a><a name="hcror-sp-nb-capacity"> </a><h2>RORSPNbCapacity</h2><p>Paramètre <code>nb-capacity</code>:<code>number</code></p><div><p>Paramètre de recherche pour récupérer le nombre de la capacité.</p>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/location.html">Location</a></td></tr><tr><td>Expression</td><td><code>Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='nbCapacity').value.as(integer)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-nb-capacity"/>
+  <version value="0.7.0"/>
+  <name value="RORSPNbCapacity"/>
+  <status value="active"/>
+  <date value="2026-07-24T08:16:41+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Paramètre de recherche pour récupérer le nombre de la capacité."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <code value="nb-capacity"/>
+  <base value="Location"/>
+  <type value="number"/>
+  <expression value="Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity').extension.where(url='nbCapacity').value.as(integer)"/>
+</SearchParameter>

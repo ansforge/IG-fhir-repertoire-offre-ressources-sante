@@ -1,0 +1,34 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "ror-sp-location-near-insee-code",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche ror-sp-location-near-insee-code</b></p><a name=\"ror-sp-location-near-insee-code\"> </a><a name=\"hcror-sp-location-near-insee-code\"> </a><h2>LocationNearINSEECode</h2><p>Paramètre <code>near-insee-code</code>:<code>special</code></p><div><p>Paramètre de recherche similaire au paramètre spécial &quot;near&quot;, à l'exception que celui-ci pointe sur l'adresse et non pas la position géographique</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/location.html\">Location</a></td></tr><tr><td>Expression</td><td><code>Location.address.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/structuredefinition/datatype/fr-address-insee-code').value.as(code)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-near-insee-code",
+  "version" : "0.7.0",
+  "name" : "LocationNearINSEECode",
+  "status" : "active",
+  "date" : "2026-07-24T08:16:41+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Paramètre de recherche similaire au paramètre spécial \"near\", à l'exception que celui-ci pointe sur l'adresse et non pas la position géographique",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "code" : "near-insee-code",
+  "base" : ["Location"],
+  "type" : "special",
+  "expression" : "Location.address.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/structuredefinition/datatype/fr-address-insee-code').value.as(code)"
+}

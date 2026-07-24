@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="ror-sp-organization-oi-name"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : ParamètreRecherche ror-sp-organization-oi-name</b></p><a name="ror-sp-organization-oi-name"> </a><a name="hcror-sp-organization-oi-name"> </a><h2>RORSPOrganizationOIName</h2><p>Paramètre <code>oi-name</code>:<code>string</code></p><div><p>Paramètre de recherche sur le nom de l'organisation interne</p>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/organization.html">Organization</a></td></tr><tr><td>Expression</td><td><code>Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-oi-name').value.as(string)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-oi-name"/>
+  <version value="0.7.0"/>
+  <name value="RORSPOrganizationOIName"/>
+  <status value="active"/>
+  <date value="2026-07-24T08:16:41+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Paramètre de recherche sur le nom de l'organisation interne"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <code value="oi-name"/>
+  <base value="Organization"/>
+  <type value="string"/>
+  <expression value="Organization.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-oi-name').value.as(string)"/>
+</SearchParameter>

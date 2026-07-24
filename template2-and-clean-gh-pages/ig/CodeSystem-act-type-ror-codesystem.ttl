@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/act-type-ror-codesystem> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "act-type-ror-codesystem"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem|4.0.1" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem|4.0.1>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CodeSystem act-type-ror-codesystem</b></p><a name=\"act-type-ror-codesystem\"> </a><a name=\"hcact-type-ror-codesystem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a> version : 4.0.1</p></div><p>This case-sensitive code system <code>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/act-type-ror-codesystem</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\">specificAct<a name=\"act-type-ror-codesystem-specificAct\"> </a></td><td>Acte spécifique</td></tr><tr><td style=\"white-space:nowrap\">outsideOfficeAct<a name=\"act-type-ror-codesystem-outsideOfficeAct\"> </a></td><td>Acte hors cabinet</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem act-type-ror-codesystem</b></p><a name=\"en-act-type-ror-codesystem\"> </a><a name=\"en-hcact-type-ror-codesystem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a> version: 4.0.1</p></div><p>This case-sensitive code system <code>https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/act-type-ror-codesystem</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">specificAct<a name=\"en-act-type-ror-codesystem-specificAct\"> </a></td><td>Acte spécifique</td></tr><tr><td style=\"white-space:nowrap\">outsideOfficeAct<a name=\"en-act-type-ror-codesystem-outsideOfficeAct\"> </a></td><td>Acte hors cabinet</td></tr></table></div></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/act-type-ror-codesystem"] ;
+  fhir:CodeSystem.version [ fhir:value "0.7.0"] ;
+  fhir:CodeSystem.name [ fhir:value "ActTypeRORCodeSystem"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-24T08:16:41+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "ANS"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "ANS" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem pour le type d'acte pour les slices de characteristic concernant les actes dans la ressource ROR HealthcareService"] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.compositional [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "2"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "specificAct" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "specificAct" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Acte spécifique" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "outsideOfficeAct" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "outsideOfficeAct" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Acte hors cabinet" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/act-type-ror-codesystem.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

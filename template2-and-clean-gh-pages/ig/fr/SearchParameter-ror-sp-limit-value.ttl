@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-limit-value> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ror-sp-limit-value"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche ror-sp-limit-value</b></p><a name=\"ror-sp-limit-value\"> </a><a name=\"hcror-sp-limit-value\"> </a><h2>RORSPLimitValue</h2><p>Paramètre <code>limit-value</code>:<code>quantity</code></p><div><p>Paramètre de recherche pour récupérer la valeur limite (poids, taille, etc..) de l'équipement</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/location.html\">Location</a></td></tr><tr><td>Expression</td><td><code>Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit').extension.where(url='limitValue').value.as(Quantity)</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : C'est au serveur de décider si le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : C'est au serveur de décider si le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:SearchParameter.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-limit-value"] ;
+  fhir:SearchParameter.version [ fhir:value "0.7.0"] ;
+  fhir:SearchParameter.name [ fhir:value "RORSPLimitValue"] ;
+  fhir:SearchParameter.status [ fhir:value "active"] ;
+  fhir:SearchParameter.date [ fhir:value "2026-07-24T08:16:41+00:00"^^xsd:dateTime] ;
+  fhir:SearchParameter.publisher [ fhir:value "ANS"] ;
+  fhir:SearchParameter.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "ANS" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:SearchParameter.description [ fhir:value "Paramètre de recherche pour récupérer la valeur limite (poids, taille, etc..) de l'équipement"] ;
+  fhir:SearchParameter.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:SearchParameter.code [ fhir:value "limit-value"] ;
+  fhir:SearchParameter.base [
+     fhir:value "Location" ;
+     fhir:index -1
+  ] ;
+  fhir:SearchParameter.type [ fhir:value "quantity"] ;
+  fhir:SearchParameter.expression [ fhir:value "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit').extension.where(url='limitValue').value.as(Quantity)"] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-limit-value.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
