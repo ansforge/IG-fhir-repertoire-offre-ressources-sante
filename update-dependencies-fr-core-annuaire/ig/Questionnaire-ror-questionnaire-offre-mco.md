@@ -1140,8 +1140,8 @@ Les questionnaires créés à partir de cette ressource sont utilisés par les �
                   "answerValueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J37-UcumUniteTemps/FHIR/JDV-J37-UcumUniteTemps",
                   "initial" : [{
                     "valueCoding" : {
-                      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure",
-                      "code" : "d\"",
+                      "system" : "http://unitsofmeasure.org",
+                      "code" : "d",
                       "display" : "jour"
                     }
                   }]
@@ -1208,8 +1208,8 @@ Les questionnaires créés à partir de cette ressource sont utilisés par les �
                   "answerValueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J37-UcumUniteTemps/FHIR/JDV-J37-UcumUniteTemps",
                   "initial" : [{
                     "valueCoding" : {
-                      "system" : "https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure",
-                      "code" : "a\"",
+                      "system" : "http://unitsofmeasure.org",
+                      "code" : "a",
                       "display" : "année"
                     }
                   }]

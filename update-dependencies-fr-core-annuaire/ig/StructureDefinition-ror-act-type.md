@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORActType |
+| Draft as of 2026-08-20 | *Computable Name*:RORActType |
 
 Extension créée dans le cadre du ROR pour discriminer le type d’acte (spécifique ou hors cabinet)
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-act-type.csv), [
   "version" : "0.7.0",
   "name" : "RORActType",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

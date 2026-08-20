@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORHealthcareServicePatientType |
+| Draft as of 2026-08-20 | *Computable Name*:RORHealthcareServicePatientType |
 
 Extension créée dans le cadre du ROR pour décrire un ensemble de personnes qui répondent à des critères leur permettant de bénéficier de la prestation décrite
 
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
   "version" : "0.7.0",
   "name" : "RORHealthcareServicePatientType",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -161,9 +161,39 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
       "min" : 1
     },
     {
+      "id" : "Extension.extension:ageRange.value[x].low.system",
+      "path" : "Extension.extension.value[x].low.system",
+      "min" : 1,
+      "fixedUri" : "http://unitsofmeasure.org"
+    },
+    {
+      "id" : "Extension.extension:ageRange.value[x].low.code",
+      "path" : "Extension.extension.value[x].low.code",
+      "min" : 1,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J37-UcumUniteTemps/FHIR/JDV-J37-UcumUniteTemps"
+      }
+    },
+    {
       "id" : "Extension.extension:ageRange.value[x].high",
       "path" : "Extension.extension.value[x].high",
       "min" : 1
+    },
+    {
+      "id" : "Extension.extension:ageRange.value[x].high.system",
+      "path" : "Extension.extension.value[x].high.system",
+      "min" : 1,
+      "fixedUri" : "http://unitsofmeasure.org"
+    },
+    {
+      "id" : "Extension.extension:ageRange.value[x].high.code",
+      "path" : "Extension.extension.value[x].high.code",
+      "min" : 1,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J37-UcumUniteTemps/FHIR/JDV-J37-UcumUniteTemps"
+      }
     },
     {
       "id" : "Extension.url",

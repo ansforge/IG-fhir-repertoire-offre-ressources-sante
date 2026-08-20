@@ -84,12 +84,12 @@ Balise: [Mayotte (Détails : code TRE_R30_RegionOM 06 = 'Mayotte')](https://inte
       "valueRange" : {
         "low" : {
           "value" : 15,
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure",
+          "system" : "http://unitsofmeasure.org",
           "code" : "a"
         },
         "high" : {
           "value" : 150,
-          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure",
+          "system" : "http://unitsofmeasure.org",
           "code" : "a"
         }
       }

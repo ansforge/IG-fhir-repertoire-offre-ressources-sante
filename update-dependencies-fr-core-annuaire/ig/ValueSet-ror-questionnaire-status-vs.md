@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-questionnaire-status-vs | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORQuestionnaireStatusVS |
+| Draft as of 2026-08-20 | *Computable Name*:RORQuestionnaireStatusVS |
 
  
 Restriction des statuts de publication FHIR aux valeurs applicables aux modèles de saisie ROR. La valeur ‘unknown’ est exclue. 
@@ -54,7 +54,7 @@ Restriction des statuts de publication FHIR aux valeurs applicables aux modèles
   "title" : "Statuts autorisés pour les Questionnaires ROR",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

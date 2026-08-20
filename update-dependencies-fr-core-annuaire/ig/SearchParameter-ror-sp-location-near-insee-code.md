@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-near-insee-code | *Version*:0.7.0 |
-| Active as of 2026-07-23 | *Computable Name*:LocationNearINSEECode |
+| Active as of 2026-08-20 | *Computable Name*:LocationNearINSEECode |
 
  
 Paramètre de recherche similaire au paramètre spécial “near”, à l’exception que celui-ci pointe sur l’adresse et non pas la position géographique 
@@ -26,7 +26,7 @@ Paramètre de recherche similaire au paramètre spécial “near”, à l’exce
   "version" : "0.7.0",
   "name" : "LocationNearINSEECode",
   "status" : "active",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

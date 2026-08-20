@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-launch-context-codesystem | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORLaunchContextCodeSystem |
+| Draft as of 2026-08-20 | *Computable Name*:RORLaunchContextCodeSystem |
 
  
 Code System pour étendre http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.html afin de l’adapter au contexte de lancement des questionnaires dans le cadre du ROR 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [RORLaunchContextVS](ValueSet-ror-launch-context-vs.md)
+* [Value Set pour le contexte standard du lancement d'un questionnaire dans le cadre du ROR](ValueSet-ror-launch-context-vs.md)
 
 
 
@@ -35,7 +35,7 @@ Code System pour étendre http://hl7.org/fhir/uv/sdc/CodeSystem-launchContext.ht
   "title" : "Code System définissant le contexte standard du lancement d'un questionnaire dans le cadre du ROR",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

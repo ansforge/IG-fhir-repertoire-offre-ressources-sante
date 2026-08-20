@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-location-commune-cog | *Version*:0.7.0 |
-| Active as of 2026-07-23 | *Computable Name*:RORSPLocationCommuneCOG |
+| Active as of 2026-08-20 | *Computable Name*:RORSPLocationCommuneCOG |
 
  
 Paramètre de recherche sur le code officiel géographique (cog) de la commune dans laquelle le lieu est situé 
@@ -26,7 +26,7 @@ Paramètre de recherche sur le code officiel géographique (cog) de la commune d
   "version" : "0.7.0",
   "name" : "RORSPLocationCommuneCOG",
   "status" : "active",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

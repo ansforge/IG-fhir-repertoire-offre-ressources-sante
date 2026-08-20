@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORLocationSupportedCapacity |
+| Draft as of 2026-08-20 | *Computable Name*:RORLocationSupportedCapacity |
 
 Extension créée dans le cadre du ROR qui indique une série d’enregistrements indiquant la quantité de lit (ou de place) de l’entité pour un statut et une temporalité donnés.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-location-support
   "version" : "0.7.0",
   "name" : "RORLocationSupportedCapacity",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

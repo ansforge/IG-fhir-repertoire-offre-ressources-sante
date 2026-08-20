@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-telecom-usage | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORTelecomUsage |
+| Draft as of 2026-08-20 | *Computable Name*:RORTelecomUsage |
 
 Extension créée dans le cadre du ROR qui précise l’utilisation du canal de communication
 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-telecom-usage.cs
   "version" : "0.7.0",
   "name" : "RORTelecomUsage",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

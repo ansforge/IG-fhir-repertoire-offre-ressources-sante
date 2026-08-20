@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/usage-context-ror-codesystem | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:UsageContextRORCodeSystem |
+| Draft as of 2026-08-20 | *Computable Name*:UsageContextRORCodeSystem |
 
  
 CodeSystem pour définir le type de catégorie du contexte d’usage des instances de questionnaire dans le cadre du ROR 
 
  This Code system is referenced in the content logical definition of the following value sets: 
 
-* [RORUsageContextTypeVS](ValueSet-ror-usage-context-type-vs.md)
+* [Value Set type pour le contexte d'usage du modèle de saisie](ValueSet-ror-usage-context-type-vs.md)
 
 
 
@@ -34,7 +34,7 @@ CodeSystem pour définir le type de catégorie du contexte d’usage des instanc
   "name" : "UsageContextRORCodeSystem",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

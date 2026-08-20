@@ -111,7 +111,7 @@
   * equipment-feature: limit-value
   * Non: Non
   * token: quantity
-  * Indique la caractéristique de l'équipement pour laquelle une valeur limite est précisée.JDV_J228-TypeCaracteristiqueEquipement-ROR: Correspond à la valeur extrême associée à une caractéristique de l'équipement.TRE_R247-UcumUniteMesure
+  * Indique la caractéristique de l'équipement pour laquelle une valeur limite est précisée.JDV_J228-TypeCaracteristiqueEquipement-ROR: Correspond à la valeur extrême associée à une caractéristique de l'équipement.http://unitsofmeasure.org
 * LimiteCaracteristiqueEquipement**/**typeCaracteristique: CapaciteHabitation/typeHabitation
   * equipment-feature: residential-type
   * Non: Non
@@ -192,12 +192,12 @@ Critères de recherches applicables à la ressource HealthcareService.
   * _tag: age-range-low
   * Oui: Non
   * token: quantity
-  * Code région de la source de la donnée.: Age minimum (inclus) des personnes leur permettant de bénéficier de la prestation décrite.JDV_J37-UcumUniteTemps issu de la TRE_R247-UcumUniteMesure
+  * Code région de la source de la donnée.: Age minimum (inclus) des personnes leur permettant de bénéficier de la prestation décrite.JDV_J37-UcumUniteTemps (système UCUM http://unitsofmeasure.org)
 * Metadonnee/regionSource****: Patientele/ageMax
   * _tag: age-range-high
   * Oui: Non
   * token: quantity
-  * Code région de la source de la donnée.: Age maximum (inclus) des personnes leur permettant de bénéficier de la prestation décrite.JDV_J37-UcumUniteTemps issu de la TRE_R247-UcumUniteMesure
+  * Code région de la source de la donnée.: Age maximum (inclus) des personnes leur permettant de bénéficier de la prestation décrite.JDV_J37-UcumUniteTemps (système UCUM http://unitsofmeasure.org)
 * Metadonnee/regionSource****: OffreOperationnelle/dateFermeture et datePrevisionnelleReouverture
   * _tag: notavailable-closing-reopeningdate
   * Oui: Non

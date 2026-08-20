@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-level-recours-orsan | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:ROROrganizationLevelRecourseORSAN |
+| Draft as of 2026-08-20 | *Computable Name*:ROROrganizationLevelRecourseORSAN |
 
 Extension créée dans le cadre du ROR pour décrire une hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization-lev
   "version" : "0.7.0",
   "name" : "ROROrganizationLevelRecourseORSAN",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-launchcontext | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORLaunchContextExtension |
+| Draft as of 2026-08-20 | *Computable Name*:RORLaunchContextExtension |
 
 Profil de l’extension http://hl7.org/fhir/uv/sdc/StructureDefinition-sdc-questionnaire-launchContext.html créé dans le cadre du ROR afin d’ajouter le name ‘structure’ acceptant les ressources FHIR ‘Organization’, ‘HealthcareService’ et ‘Location’
 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-launchcontext.cs
   "name" : "RORLaunchContextExtension",
   "title" : "Profil de LaunchContextExtension créé dans le cadre du ROR afin d'ajouter le name 'ror-structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

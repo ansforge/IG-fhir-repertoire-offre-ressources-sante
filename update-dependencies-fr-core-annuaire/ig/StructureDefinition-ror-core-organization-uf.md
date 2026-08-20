@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-core-organization-uf | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORCoreOrganizationUF |
+| Draft as of 2026-08-20 | *Computable Name*:RORCoreOrganizationUF |
 
  
 Profil créé dans le cadre du ROR pour décrire les unités fonctionnelles (UF) médicales, rattachées à un pôle/service ou à une entité géographique (EG) 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-core-organizatio
   "version" : "0.7.0",
   "name" : "RORCoreOrganizationUF",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

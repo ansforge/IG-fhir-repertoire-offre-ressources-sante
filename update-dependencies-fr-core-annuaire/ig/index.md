@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:ROR |
+| Draft as of 2026-08-20 | *Computable Name*:ROR |
 
  **Brief description of this Implementation Guide**
  The French directory of healthcare and medico-social support services and resources ([ROR](https://esante.gouv.fr/produits-services/repertoire-ror)) is the repository (in the sense of a repository of data) for describing the healthcare services offered by Health facility, medico-social establishments and services, and local structures in France. The aim of this implementation guide is to define the specifications of the ROR FHIR API, enabling any authorized application to search for a healthcare offer and its capabilities (availability, equipment, etc.). 
@@ -124,12 +124,12 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. [https://ucum.org/trac/wiki/TermsOfUse](https://ucum.org/trac/wiki/TermsOfUse)
 
-* [Unified Code for Units of Measure (UCUM)](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/CodeSystem-v3-ucum.html): [MS-141](Questionnaire-ror-questionnaire-offre-mco.md)
+* [Unified Code for Units of Measure (UCUM)](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/CodeSystem-v3-ucum.html): [5812 Chirurgie gynécologique - HOSPITALISATION COMPLETE](HealthcareService-1234564.md), [MS-141](Questionnaire-ror-questionnaire-offre-mco.md) and [RORHealthcareServicePatientType](StructureDefinition-ror-healthcareservice-patient-type.md)
 
 
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
 
-* [UsageContextType](http://terminology.hl7.org/7.2.0/CodeSystem-usage-context-type.html): [RORQuestionnaire](StructureDefinition-ror-questionnaire-healthcareservice.md) and [RORUsageContextTypeVS](ValueSet-ror-usage-context-type-vs.md)
+* [UsageContextType](http://terminology.hl7.org/7.3.0/CodeSystem-usage-context-type.html): [RORQuestionnaire](StructureDefinition-ror-questionnaire-healthcareservice.md) and [RORUsageContextTypeVS](ValueSet-ror-usage-context-type-vs.md)
 
 
 #### Documents de référence
@@ -160,7 +160,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -188,7 +188,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.2.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "ans_fhir_fr_annuaire",
@@ -801,6 +801,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-act-type-ror-codesystem.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/act-type-ror-codesystem"
@@ -813,6 +817,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-as-ext-lieu-dit.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/as-ext-lieu-dit"
@@ -825,6 +833,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ror-include-associated-data-code-system.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/ror-include-associated-data-code-system"
@@ -837,6 +849,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ror-launch-context-codesystem.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/ror-launch-context-codesystem"
@@ -849,6 +865,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-code-region-territorial-division-ror-valueset.html"
       }],
       "reference" : {
         "reference" : "ValueSet/code-region-territorial-division-ror-valueset"
@@ -861,6 +881,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-input-task-ror-codesystem.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/input-task-ror-codesystem"
@@ -873,6 +897,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-output-task-ror-codesystem.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/output-task-ror-codesystem"
@@ -885,6 +913,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-launchcontext.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-launchcontext"
@@ -897,6 +929,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-ror-consommateur.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/ror-consommateur"
@@ -909,6 +945,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "HealthcareService"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "HealthcareService-1234564.html"
       }],
       "reference" : {
         "reference" : "HealthcareService/1234564"
@@ -921,6 +961,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Location"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Location-ror-location-exemple.html"
       }],
       "reference" : {
         "reference" : "Location/ror-location-exemple"
@@ -933,6 +977,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-ror-serveur.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/ror-serveur"
@@ -945,6 +993,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-additional-bed-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-additional-bed-type"
@@ -957,6 +1009,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-capacity-closing-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-capacity-closing-type"
@@ -969,6 +1025,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-capacity-status.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-capacity-status"
@@ -981,6 +1041,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-capacity-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-capacity-type"
@@ -993,6 +1057,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-capacity-update-date.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-capacity-update-date"
@@ -1005,6 +1073,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-crisis-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-crisis-type"
@@ -1017,6 +1089,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-equipment-feature.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-equipment-feature"
@@ -1029,6 +1105,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-equipment-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-equipment-type"
@@ -1041,6 +1121,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-gender-capacity-available.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-gender-capacity-available"
@@ -1053,6 +1137,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-healthcareservice-age-range-high.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-healthcareservice-age-range-high"
@@ -1065,6 +1153,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-healthcareservice-age-range-low.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-healthcareservice-age-range-low"
@@ -1077,6 +1169,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-healthcareservice-equipment-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-healthcareservice-equipment-type"
@@ -1089,6 +1185,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-healthcareservice-intervention-zone.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-healthcareservice-intervention-zone"
@@ -1101,6 +1201,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-healthcareservice-notavailable-closing-reopeningdate.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-healthcareservice-notavailable-closing-reopeningdate"
@@ -1113,6 +1217,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-healthcareservice-patient-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-healthcareservice-patient-type"
@@ -1125,6 +1233,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-healthcareservice-psychiatric-sector.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-healthcareservice-psychiatric-sector"
@@ -1137,6 +1249,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-limit-value.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-limit-value"
@@ -1149,6 +1265,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-location-commune-cog.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-location-commune-cog"
@@ -1161,6 +1281,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-location-near-insee-code.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-location-near-insee-code"
@@ -1173,6 +1297,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-nb-capacity.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-nb-capacity"
@@ -1185,6 +1313,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-closing-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-closing-type"
@@ -1197,6 +1329,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-drop-zone.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-drop-zone"
@@ -1209,6 +1345,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-oi-name.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-oi-name"
@@ -1221,6 +1361,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-period-end.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-period-end"
@@ -1233,6 +1377,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-price-amount-value.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-price-amount-value"
@@ -1245,6 +1393,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-price-dependency-level.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-price-dependency-level"
@@ -1257,6 +1409,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-price-residential-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-price-residential-type"
@@ -1269,6 +1425,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-price-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-price-type"
@@ -1281,6 +1441,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-price-unit.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-price-unit"
@@ -1293,6 +1457,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-price-validity-start-date.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-price-validity-start-date"
@@ -1305,6 +1473,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-price-welcome-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-price-welcome-type"
@@ -1317,6 +1489,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-organization-special-price.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-organization-special-price"
@@ -1329,6 +1505,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-residential-number.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-residential-number"
@@ -1341,6 +1521,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-residential-type.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-residential-type"
@@ -1353,6 +1537,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-temporality-capacity.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-temporality-capacity"
@@ -1365,6 +1553,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-ror-sp-temporary-assignement.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/ror-sp-temporary-assignement"
@@ -1377,6 +1569,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Task"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Task-ror-task-exemple.html"
       }],
       "reference" : {
         "reference" : "Task/ror-task-exemple"
@@ -1389,6 +1585,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-act-type.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-act-type"
@@ -1401,6 +1601,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-available-time-effective-opening-closing-date.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-available-time-effective-opening-closing-date"
@@ -1413,6 +1617,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-available-time-number-days-of-week.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-available-time-number-days-of-week"
@@ -1425,6 +1633,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-available-time-type-of-time.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-available-time-type-of-time"
@@ -1437,6 +1649,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-comment.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-comment"
@@ -1449,6 +1665,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-commune-cog.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-commune-cog"
@@ -1461,6 +1681,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-confidence-geolocation.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-confidence-geolocation"
@@ -1473,6 +1697,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-confidentiality-level.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-confidentiality-level"
@@ -1485,6 +1713,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-contact-confidentiality-level.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-contact-confidentiality-level"
@@ -1497,6 +1729,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-contact-description.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-contact-description"
@@ -1509,6 +1745,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-contact-function-contact.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-contact-function-contact"
@@ -1521,6 +1761,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-contact-telecom-confidentiality-level.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-contact-telecom-confidentiality-level"
@@ -1533,6 +1777,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-contact-telecom-usage.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-contact-telecom-usage"
@@ -1545,6 +1793,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-coordinate-reliability.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-coordinate-reliability"
@@ -1557,6 +1809,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-core-organization-uf.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-core-organization-uf"
@@ -1569,6 +1825,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-healthcareservice.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-healthcareservice"
@@ -1581,6 +1841,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-healthcareservice-contact.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-healthcareservice-contact"
@@ -1593,6 +1857,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-healthcareservice-contact-telecom.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-healthcareservice-contact-telecom"
@@ -1605,6 +1873,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-healthcareservice-no-consent-habilitation.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-healthcareservice-no-consent-habilitation"
@@ -1617,6 +1889,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-healthcareservice-patient-type.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-healthcareservice-patient-type"
@@ -1629,6 +1905,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-healthcareservice-psychiatric-sector.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-healthcareservice-psychiatric-sector"
@@ -1641,6 +1921,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-healthcareservice-sensitive-unit.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-healthcareservice-sensitive-unit"
@@ -1653,6 +1937,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-internal-organization.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-internal-organization"
@@ -1665,6 +1953,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-location.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-location"
@@ -1677,6 +1969,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-location-equipment.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-location-equipment"
@@ -1689,6 +1985,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-location-equipment-limit.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-location-equipment-limit"
@@ -1701,6 +2001,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-location-residential-capacity.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-location-residential-capacity"
@@ -1713,6 +2017,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-location-supported-capacity.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-location-supported-capacity"
@@ -1725,6 +2033,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-measure.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-measure"
@@ -1737,6 +2049,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-measurereport.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-measurereport"
@@ -1749,6 +2065,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-meta-comment.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-meta-comment"
@@ -1761,6 +2081,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-meta-creation-date.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-meta-creation-date"
@@ -1773,6 +2097,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-meta-questionnaire-used-as-a-template.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-meta-questionnaire-used-as-a-template"
@@ -1785,6 +2113,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization"
@@ -1797,6 +2129,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-accessibility-location.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-accessibility-location"
@@ -1809,6 +2145,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-accomodation-family.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-accomodation-family"
@@ -1821,6 +2161,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-additional-name.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-additional-name"
@@ -1833,6 +2177,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-closing-type.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-closing-type"
@@ -1845,6 +2193,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-comment.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-comment"
@@ -1857,6 +2209,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-creation-date.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-creation-date"
@@ -1869,6 +2225,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-drop-zone.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-drop-zone"
@@ -1881,6 +2241,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-financial-help-type.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-financial-help-type"
@@ -1893,6 +2257,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-level-recours-orsan.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-level-recours-orsan"
@@ -1905,6 +2273,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-nb-permanent-social-help-place.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-nb-permanent-social-help-place"
@@ -1917,6 +2289,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-nb-temporary-social-help-place.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-nb-temporary-social-help-place"
@@ -1929,6 +2305,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-price.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-price"
@@ -1941,6 +2321,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-organization-reopening-date.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-organization-reopening-date"
@@ -1953,6 +2337,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-person.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-person"
@@ -1965,6 +2353,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-practitioner.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-practitioner"
@@ -1977,6 +2369,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-practitionerrole.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-practitionerrole"
@@ -1989,6 +2385,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-practitionerrole-unit-exercise-mode.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-practitionerrole-unit-exercise-mode"
@@ -2001,6 +2401,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-questionnaire-healthcareservice.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-questionnaire-healthcareservice"
@@ -2013,6 +2417,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-task.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-task"
@@ -2025,6 +2433,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-telecom-communication-channel.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-telecom-communication-channel"
@@ -2037,6 +2449,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-telecom-confidentiality-level.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-telecom-confidentiality-level"
@@ -2049,6 +2465,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-telecom-usage.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-telecom-usage"
@@ -2061,6 +2481,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ror-territorial-division.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ror-territorial-division"
@@ -2073,6 +2497,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ror-questionnaire-status-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/ror-questionnaire-status-vs"
@@ -2085,6 +2513,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Questionnaire-ror-questionnaire-offre-mco.html"
       }],
       "reference" : {
         "reference" : "Questionnaire/ror-questionnaire-offre-mco"
@@ -2097,6 +2529,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-usage-context-ror-codesystem.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/usage-context-ror-codesystem"
@@ -2109,6 +2545,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ror-include-associated-data-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/ror-include-associated-data-vs"
@@ -2121,6 +2561,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ror-launch-context-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/ror-launch-context-vs"
@@ -2133,6 +2577,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ror-usage-context-type-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/ror-usage-context-type-vs"
@@ -2145,6 +2593,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-act-type-ror-valueset.html"
       }],
       "reference" : {
         "reference" : "ValueSet/act-type-ror-valueset"

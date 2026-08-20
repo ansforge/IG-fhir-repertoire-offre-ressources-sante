@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment-limit | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORLocationEquipmentLimit |
+| Draft as of 2026-08-20 | *Computable Name*:RORLocationEquipmentLimit |
 
 Extension créée dans le cadre du ROR qui précise les limites que peut supporter l’équipement le plus tolérant parmi les équipements spécifiques de même type dans cette organisation.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-location-equipme
   "version" : "0.7.0",
   "name" : "RORLocationEquipmentLimit",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

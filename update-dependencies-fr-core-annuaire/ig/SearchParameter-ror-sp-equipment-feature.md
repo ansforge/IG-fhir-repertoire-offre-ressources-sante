@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-feature | *Version*:0.7.0 |
-| Active as of 2026-07-23 | *Computable Name*:RORSPEquipmentFeature |
+| Active as of 2026-08-20 | *Computable Name*:RORSPEquipmentFeature |
 
  
 Paramètre de recherche pour récupérer le type de caractéristique d’un equipement. 
@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer le type de caractéristique d’un equi
   "version" : "0.7.0",
   "name" : "RORSPEquipmentFeature",
   "status" : "active",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

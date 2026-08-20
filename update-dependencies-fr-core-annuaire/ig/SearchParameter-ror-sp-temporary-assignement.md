@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-temporary-assignement | *Version*:0.7.0 |
-| Active as of 2026-07-23 | *Computable Name*:RORSPTemporaryAssignement |
+| Active as of 2026-08-20 | *Computable Name*:RORSPTemporaryAssignement |
 
  
 Paramètre de recherche pour récupérer les affectations temporaires 
@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer les affectations temporaires
   "version" : "0.7.0",
   "name" : "RORSPTemporaryAssignement",
   "status" : "active",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

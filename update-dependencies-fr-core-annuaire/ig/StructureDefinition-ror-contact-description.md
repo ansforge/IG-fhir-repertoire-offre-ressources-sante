@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-description | *Version*:0.7.0 |
-| Draft as of 2026-07-23 | *Computable Name*:RORContactDescription |
+| Draft as of 2026-08-20 | *Computable Name*:RORContactDescription |
 
 Extension créée dans le cadre du ROR qui indique la description du Contact.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-contact-descript
   "version" : "0.7.0",
   "name" : "RORContactDescription",
   "status" : "draft",
-  "date" : "2026-07-23T08:09:55+00:00",
+  "date" : "2026-08-20T16:34:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
