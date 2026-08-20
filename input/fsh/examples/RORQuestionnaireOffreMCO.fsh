@@ -897,8 +897,8 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                 * answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J37-UcumUniteTemps/FHIR/JDV-J37-UcumUniteTemps"
                 * initial
                   * valueCoding
-                    * system = "https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure"
-                    * code = #d"
+                    * system = "http://unitsofmeasure.org"
+                    * code = #d
                     * display = "jour"
               * item[+]
                 * extension[+]
@@ -949,10 +949,10 @@ Description: "Extrait du questionnaire (modèle de saisie) permettant de renseig
                 * repeats = false
                 * readOnly = false
                 * answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J37-UcumUniteTemps/FHIR/JDV-J37-UcumUniteTemps"
-                * initial 
+                * initial
                   * valueCoding
-                    * system = "https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure"
-                    * code = #a"
+                    * system = "http://unitsofmeasure.org"
+                    * code = #a
                     * display = "année"
               * item[+]
                 * extension[+]

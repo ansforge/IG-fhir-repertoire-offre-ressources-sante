@@ -13,7 +13,16 @@ Description: "Extension créée dans le cadre du ROR pour décrire un ensemble d
 * extension[supportedPatientInfo].valueCodeableConcept from $JDV-J29-PublicPrisEnCharge-ROR (required)
 * extension[ageRange].value[x] only Range
 * extension[ageRange].value[x].low 1..1
+* extension[ageRange].value[x].low.system 1..1
+* extension[ageRange].value[x].low.system = "http://unitsofmeasure.org" (exactly)
+* extension[ageRange].value[x].low.code 1..1
+* extension[ageRange].value[x].low.code from $JDV-J37-UcumUniteTemps (required)
+
 * extension[ageRange].value[x].high 1..1
+* extension[ageRange].value[x].high.system 1..1
+* extension[ageRange].value[x].high.system = "http://unitsofmeasure.org" (exactly)
+* extension[ageRange].value[x].high.code 1..1
+* extension[ageRange].value[x].high.code from $JDV-J37-UcumUniteTemps (required)
 
 
 Mapping:  ConceptMetier_RORHealthcareServicePatientType

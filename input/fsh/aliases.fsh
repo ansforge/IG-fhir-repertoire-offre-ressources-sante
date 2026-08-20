@@ -46,6 +46,7 @@ Alias: $JDV-J32-TypeHabitation-ROR = https://mos.esante.gouv.fr/NOS/JDV_J32-Type
 Alias: $JDV-J33-CompetenceSpecifique-ROR = https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR
 Alias: $JDV-J35-SpecialisationDePriseEnCharge-ROR = https://mos.esante.gouv.fr/NOS/JDV_J35-SpecialisationDePriseEnCharge-ROR/FHIR/JDV-J35-SpecialisationDePriseEnCharge-ROR
 Alias: $JDV-J36-TypeTarif-ROR = https://mos.esante.gouv.fr/NOS/JDV_J36-TypeTarif-ROR/FHIR/JDV-J36-TypeTarif-ROR
+Alias: $JDV-J37-UcumUniteTemps = https://mos.esante.gouv.fr/NOS/JDV_J37-UcumUniteTemps/FHIR/JDV-J37-UcumUniteTemps
 Alias: $JDV-J39-ConditionTarifaire-ROR = https://mos.esante.gouv.fr/NOS/JDV_J39-ConditionTarifaire-ROR/FHIR/JDV-J39-ConditionTarifaire-ROR
 Alias: $JDV-J41-TypeHoraire-ROR = https://mos.esante.gouv.fr/NOS/JDV_J41-TypeHoraire-ROR/FHIR/JDV-J41-TypeHoraire-ROR
 Alias: $JDV-J50-AccessibiliteLieu-ROR = https://mos.esante.gouv.fr/NOS/JDV_J50-AccessibiliteLieu-ROR/FHIR/JDV-J50-AccessibiliteLieu-ROR

@@ -1905,7 +1905,7 @@
   <p class=MsoNormal style='margin-bottom:6.0pt;line-height:115%;mso-yfti-cnfc:
   64'><span style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
-  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>TRE_R247-UcumUniteMesure</span><span
+  color:black;mso-color-alt:windowtext;mso-fareast-language:FR'>http://unitsofmeasure.org</span><span
   style='font-size:8.0pt;line-height:115%;font-family:"Arial",sans-serif;
   mso-fareast-font-family:Calibri;mso-bidi-font-family:"Times New Roman";
   mso-fareast-language:FR'><o:p></o:p></span></p>
@@ -3292,7 +3292,7 @@ Critères de recherches applicables à la ressource HealthcareService.
   décrite.<o:p></o:p></span></span></p>
   <p class=MsoNormal align=left style='text-align:left'><span style='mso-bookmark:
   _Hlk126766943'><span style='font-size:8.0pt;line-height:115%'>JDV_J37-UcumUniteTemps
-  issu de la TRE_R247-UcumUniteMesure<o:p></o:p></span></span></p>
+  (système UCUM http://unitsofmeasure.org)<o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>
  </tr>
@@ -3356,8 +3356,8 @@ Critères de recherches applicables à la ressource HealthcareService.
   115%'><o:p></o:p></span></span></p>
   <p class=MsoNormal align=left style='text-align:left;mso-yfti-cnfc:64'><span
   style='mso-bookmark:_Hlk126766943'><span style='font-size:8.0pt;line-height:
-  115%;color:black;mso-color-alt:windowtext'>JDV_J37-UcumUniteTemps issu de la
-  TRE_R247-UcumUniteMesure</span></span><span style='mso-bookmark:_Hlk126766943'><span
+  115%;color:black;mso-color-alt:windowtext'>JDV_J37-UcumUniteTemps
+  (système UCUM http://unitsofmeasure.org)</span></span><span style='mso-bookmark:_Hlk126766943'><span
   style='font-size:8.0pt;line-height:115%'><o:p></o:p></span></span></p>
   </td>
   <span style='mso-bookmark:_Hlk126766943'></span>

@@ -1,6 +1,5 @@
 Alias: $TRE-R30-RegionOM = https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM
 Alias: $TRE-R244-CategorieOrganisation = https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation
-Alias: $TRE-R247-UcumUniteMesure = https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure
 Alias: $TRE-R238-OuvertureAnnuelle = https://mos.esante.gouv.fr/NOS/TRE_R238-OuvertureAnnuelle/FHIR/TRE-R238-OuvertureAnnuelle
 Alias: $TRE-R252-TypeHoraire = https://mos.esante.gouv.fr/NOS/TRE_R252-TypeHoraire/FHIR/TRE-R252-TypeHoraire
 Alias: $TRE-R253-TypeMaternite = https://mos.esante.gouv.fr/NOS/TRE_R253-TypeMaternite/FHIR/TRE-R253-TypeMaternite
@@ -21,10 +20,10 @@ Description: "Exemple de HealthcareService ROR - Unité hospitalière de gynéco
 * extension[ror-meta-questionnaire-used-as-a-template].valueCanonical = "https://interop.esante.gouv.fr/ig/fhir/ror/Questionnaire/MS-141|1"
 
 * extension[ror-healthcareservice-patient-type].extension[ageRange].valueRange.low.value = 15
-* extension[ror-healthcareservice-patient-type].extension[ageRange].valueRange.low.system = $TRE-R247-UcumUniteMesure
+* extension[ror-healthcareservice-patient-type].extension[ageRange].valueRange.low.system = "http://unitsofmeasure.org"
 * extension[ror-healthcareservice-patient-type].extension[ageRange].valueRange.low.code = #a
 * extension[ror-healthcareservice-patient-type].extension[ageRange].valueRange.high.value = 150
-* extension[ror-healthcareservice-patient-type].extension[ageRange].valueRange.high.system = $TRE-R247-UcumUniteMesure
+* extension[ror-healthcareservice-patient-type].extension[ageRange].valueRange.high.system = "http://unitsofmeasure.org"
 * extension[ror-healthcareservice-patient-type].extension[ageRange].valueRange.high.code = #a
 
 * extension[ror-healthcareservice-contact].extension[purposeContact].valueCodeableConcept = $TRE-R287-NatureContact#06 "Standard"
