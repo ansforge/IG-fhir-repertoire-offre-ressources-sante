@@ -54,12 +54,19 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'exercice profes
 * qualification[exercicePro].code.coding[profession] MS
 * qualification[exercicePro].code.coding[profession] from $JDV-J229-ProfessionSante-ROR (required)
 
-// Le savoir-faire est porté par des slices supplémentaires de qualification (une par facette : spécialité,
-// compétence, capacité...), chaque facette étant identifiée par un code fixe de TRE-R04-TypeSavoirFaire
-// (coding[typeSavoirFaire]) accompagné de la valeur codée de la facette (coding[valeur]). Ce sont des slices
-// ROR distinctes du slice natif "savoirFaire" d'AsPractitionerProfile (limitation technique du reslicing en
-// FSH constatée à l'implémentation), mais elles restent compatibles avec le slicing ouvert hérité sur qualification.
-* qualification contains
+// Le savoir-faire reslice le slice natif "qualification[savoirFaire]" d'AsPractitionerProfile (une case
+// générique répétable, discriminée par sa propre valeur), en 8 sous-slices (une par facette : spécialité,
+// compétence, capacité...). Le reslicing FHIR standard (syntaxe qualification[savoirFaire/xxx]) fonctionne
+// avec SUSHI 3.20 à condition (1) d'ajouter le discriminant supplémentaire sur l'élément de base "qualification"
+// plutôt que sur la slice "savoirFaire" elle-même (SUSHI avertit sinon : "An element with a slice name should
+// not define its own slicing"), et (2) de redéclarer localement, dans chaque reslice, le sous-slicing fermé de
+// "code.coding" déjà présent sur le slice natif "savoirFaire" (SUSHI ne le reporte pas automatiquement dans les
+// reslices). Chaque facette porte un couple de codings : code.coding[typeSavoirFaire] fixé sur le code
+// TRE-R04-TypeSavoirFaire correspondant (codes réellement récupérés depuis le serveur de terminologie ANS :
+// S, C, CEX, OP, CAPA, PAC, DNQ, DEC) et code.coding[valeur] lié au value set ROR historique (JDV-J210, JDV-J232, etc.).
+* qualification ^slicing.discriminator[+].type = #value
+* qualification ^slicing.discriminator[=].path = "code.coding.where(system = 'https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire').code"
+* qualification[savoirFaire] contains
     rorSpecialty 0..1 MS and
     rorCompetence 0..* MS and
     rorExclusiveCompetence 0..1 MS and
@@ -69,85 +76,85 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'exercice profes
     rorNonQualifyingDESC 0..1 MS and
     rorSupplementaryExerciseRight 0..1 MS
 
-* qualification[rorSpecialty] ^short = "specialite (SavoirFaire) : Spécialité ordinale"
-* qualification[rorSpecialty].code.coding ^slicing.discriminator.type = #value
-* qualification[rorSpecialty].code.coding ^slicing.discriminator.path = "system"
-* qualification[rorSpecialty].code.coding ^slicing.rules = #open
-* qualification[rorSpecialty].code.coding contains
+* qualification[savoirFaire/rorSpecialty] ^short = "specialite (SavoirFaire) : Spécialité ordinale"
+* qualification[savoirFaire/rorSpecialty].code.coding ^slicing.discriminator.type = #value
+* qualification[savoirFaire/rorSpecialty].code.coding ^slicing.discriminator.path = "$this"
+* qualification[savoirFaire/rorSpecialty].code.coding ^slicing.rules = #closed
+* qualification[savoirFaire/rorSpecialty].code.coding contains
     typeSavoirFaire 1..1 MS and
     valeur 1..1 MS
-* qualification[rorSpecialty].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#S
-* qualification[rorSpecialty].code.coding[valeur] from $JDV-J210-SpecialiteOrdinale-ROR (required)
+* qualification[savoirFaire/rorSpecialty].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#S
+* qualification[savoirFaire/rorSpecialty].code.coding[valeur] from $JDV-J210-SpecialiteOrdinale-ROR (required)
 
-* qualification[rorCompetence] ^short = "competence (SavoirFaire) : Compétence acquise par le professionnel"
-* qualification[rorCompetence].code.coding ^slicing.discriminator.type = #value
-* qualification[rorCompetence].code.coding ^slicing.discriminator.path = "system"
-* qualification[rorCompetence].code.coding ^slicing.rules = #open
-* qualification[rorCompetence].code.coding contains
+* qualification[savoirFaire/rorCompetence] ^short = "competence (SavoirFaire) : Compétence acquise par le professionnel"
+* qualification[savoirFaire/rorCompetence].code.coding ^slicing.discriminator.type = #value
+* qualification[savoirFaire/rorCompetence].code.coding ^slicing.discriminator.path = "$this"
+* qualification[savoirFaire/rorCompetence].code.coding ^slicing.rules = #closed
+* qualification[savoirFaire/rorCompetence].code.coding contains
     typeSavoirFaire 1..1 MS and
     valeur 1..1 MS
-* qualification[rorCompetence].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#C
-* qualification[rorCompetence].code.coding[valeur] from $JDV-J232-Competence-ROR (required)
+* qualification[savoirFaire/rorCompetence].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#C
+* qualification[savoirFaire/rorCompetence].code.coding[valeur] from $JDV-J232-Competence-ROR (required)
 
-* qualification[rorExclusiveCompetence] ^short = "competenceExclusive (SavoirFaire) : Compétence exclusive"
-* qualification[rorExclusiveCompetence].code.coding ^slicing.discriminator.type = #value
-* qualification[rorExclusiveCompetence].code.coding ^slicing.discriminator.path = "system"
-* qualification[rorExclusiveCompetence].code.coding ^slicing.rules = #open
-* qualification[rorExclusiveCompetence].code.coding contains
+* qualification[savoirFaire/rorExclusiveCompetence] ^short = "competenceExclusive (SavoirFaire) : Compétence exclusive"
+* qualification[savoirFaire/rorExclusiveCompetence].code.coding ^slicing.discriminator.type = #value
+* qualification[savoirFaire/rorExclusiveCompetence].code.coding ^slicing.discriminator.path = "$this"
+* qualification[savoirFaire/rorExclusiveCompetence].code.coding ^slicing.rules = #closed
+* qualification[savoirFaire/rorExclusiveCompetence].code.coding contains
     typeSavoirFaire 1..1 MS and
     valeur 1..1 MS
-* qualification[rorExclusiveCompetence].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#CEX
-* qualification[rorExclusiveCompetence].code.coding[valeur] from $JDV-J211-CompetenceExclusive-ROR (required)
+* qualification[savoirFaire/rorExclusiveCompetence].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#CEX
+* qualification[savoirFaire/rorExclusiveCompetence].code.coding[valeur] from $JDV-J211-CompetenceExclusive-ROR (required)
 
-* qualification[rorSpecificOrientation] ^short = "orientationParticuliere (SavoirFaire) : Orientation particulière"
-* qualification[rorSpecificOrientation].code.coding ^slicing.discriminator.type = #value
-* qualification[rorSpecificOrientation].code.coding ^slicing.discriminator.path = "system"
-* qualification[rorSpecificOrientation].code.coding ^slicing.rules = #open
-* qualification[rorSpecificOrientation].code.coding contains
+* qualification[savoirFaire/rorSpecificOrientation] ^short = "orientationParticuliere (SavoirFaire) : Orientation particulière"
+* qualification[savoirFaire/rorSpecificOrientation].code.coding ^slicing.discriminator.type = #value
+* qualification[savoirFaire/rorSpecificOrientation].code.coding ^slicing.discriminator.path = "$this"
+* qualification[savoirFaire/rorSpecificOrientation].code.coding ^slicing.rules = #closed
+* qualification[savoirFaire/rorSpecificOrientation].code.coding contains
     typeSavoirFaire 1..1 MS and
     valeur 1..1 MS
-* qualification[rorSpecificOrientation].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#OP
-* qualification[rorSpecificOrientation].code.coding[valeur] from $JDV-J212-OrientationParticuliere-ROR (required)
+* qualification[savoirFaire/rorSpecificOrientation].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#OP
+* qualification[savoirFaire/rorSpecificOrientation].code.coding[valeur] from $JDV-J212-OrientationParticuliere-ROR (required)
 
-* qualification[rorExpertiseCapacity] ^short = "capacite (SavoirFaire) : Capacité de médecine"
-* qualification[rorExpertiseCapacity].code.coding ^slicing.discriminator.type = #value
-* qualification[rorExpertiseCapacity].code.coding ^slicing.discriminator.path = "system"
-* qualification[rorExpertiseCapacity].code.coding ^slicing.rules = #open
-* qualification[rorExpertiseCapacity].code.coding contains
+* qualification[savoirFaire/rorExpertiseCapacity] ^short = "capacite (SavoirFaire) : Capacité de médecine"
+* qualification[savoirFaire/rorExpertiseCapacity].code.coding ^slicing.discriminator.type = #value
+* qualification[savoirFaire/rorExpertiseCapacity].code.coding ^slicing.discriminator.path = "$this"
+* qualification[savoirFaire/rorExpertiseCapacity].code.coding ^slicing.rules = #closed
+* qualification[savoirFaire/rorExpertiseCapacity].code.coding contains
     typeSavoirFaire 1..1 MS and
     valeur 1..1 MS
-* qualification[rorExpertiseCapacity].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#CAPA
-* qualification[rorExpertiseCapacity].code.coding[valeur] from $JDV-J213-CapaciteSavoirFaire-ROR (required)
+* qualification[savoirFaire/rorExpertiseCapacity].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#CAPA
+* qualification[savoirFaire/rorExpertiseCapacity].code.coding[valeur] from $JDV-J213-CapaciteSavoirFaire-ROR (required)
 
-* qualification[rorQualificationPAC] ^short = "qualificationPAC (SavoirFaire) : Qualification de praticien adjoint contractuel"
-* qualification[rorQualificationPAC].code.coding ^slicing.discriminator.type = #value
-* qualification[rorQualificationPAC].code.coding ^slicing.discriminator.path = "system"
-* qualification[rorQualificationPAC].code.coding ^slicing.rules = #open
-* qualification[rorQualificationPAC].code.coding contains
+* qualification[savoirFaire/rorQualificationPAC] ^short = "qualificationPAC (SavoirFaire) : Qualification de praticien adjoint contractuel"
+* qualification[savoirFaire/rorQualificationPAC].code.coding ^slicing.discriminator.type = #value
+* qualification[savoirFaire/rorQualificationPAC].code.coding ^slicing.discriminator.path = "$this"
+* qualification[savoirFaire/rorQualificationPAC].code.coding ^slicing.rules = #closed
+* qualification[savoirFaire/rorQualificationPAC].code.coding contains
     typeSavoirFaire 1..1 MS and
     valeur 1..1 MS
-* qualification[rorQualificationPAC].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#PAC
-* qualification[rorQualificationPAC].code.coding[valeur] from $JDV-J214-QualificationPAC-ROR (required)
+* qualification[savoirFaire/rorQualificationPAC].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#PAC
+* qualification[savoirFaire/rorQualificationPAC].code.coding[valeur] from $JDV-J214-QualificationPAC-ROR (required)
 
-* qualification[rorNonQualifyingDESC] ^short = "DESCNonQualifiant (SavoirFaire) : Diplôme d'études spécialisées complémentaires (DESC)"
-* qualification[rorNonQualifyingDESC].code.coding ^slicing.discriminator.type = #value
-* qualification[rorNonQualifyingDESC].code.coding ^slicing.discriminator.path = "system"
-* qualification[rorNonQualifyingDESC].code.coding ^slicing.rules = #open
-* qualification[rorNonQualifyingDESC].code.coding contains
+* qualification[savoirFaire/rorNonQualifyingDESC] ^short = "DESCNonQualifiant (SavoirFaire) : Diplôme d'études spécialisées complémentaires (DESC)"
+* qualification[savoirFaire/rorNonQualifyingDESC].code.coding ^slicing.discriminator.type = #value
+* qualification[savoirFaire/rorNonQualifyingDESC].code.coding ^slicing.discriminator.path = "$this"
+* qualification[savoirFaire/rorNonQualifyingDESC].code.coding ^slicing.rules = #closed
+* qualification[savoirFaire/rorNonQualifyingDESC].code.coding contains
     typeSavoirFaire 1..1 MS and
     valeur 1..1 MS
-* qualification[rorNonQualifyingDESC].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#DNQ
-* qualification[rorNonQualifyingDESC].code.coding[valeur] from $JDV-J215-DESCnonQualifiant-ROR (required)
+* qualification[savoirFaire/rorNonQualifyingDESC].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#DNQ
+* qualification[savoirFaire/rorNonQualifyingDESC].code.coding[valeur] from $JDV-J215-DESCnonQualifiant-ROR (required)
 
-* qualification[rorSupplementaryExerciseRight] ^short = "droitExerciceComplémentaire (SavoirFaire) : Droit d'exercice complémentaire du professionnel"
-* qualification[rorSupplementaryExerciseRight].code.coding ^slicing.discriminator.type = #value
-* qualification[rorSupplementaryExerciseRight].code.coding ^slicing.discriminator.path = "system"
-* qualification[rorSupplementaryExerciseRight].code.coding ^slicing.rules = #open
-* qualification[rorSupplementaryExerciseRight].code.coding contains
+* qualification[savoirFaire/rorSupplementaryExerciseRight] ^short = "droitExerciceComplémentaire (SavoirFaire) : Droit d'exercice complémentaire du professionnel"
+* qualification[savoirFaire/rorSupplementaryExerciseRight].code.coding ^slicing.discriminator.type = #value
+* qualification[savoirFaire/rorSupplementaryExerciseRight].code.coding ^slicing.discriminator.path = "$this"
+* qualification[savoirFaire/rorSupplementaryExerciseRight].code.coding ^slicing.rules = #closed
+* qualification[savoirFaire/rorSupplementaryExerciseRight].code.coding contains
     typeSavoirFaire 1..1 MS and
     valeur 1..1 MS
-* qualification[rorSupplementaryExerciseRight].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#DEC
-* qualification[rorSupplementaryExerciseRight].code.coding[valeur] from $JDV-J216-DroitExerciceCompl-ROR (required)
+* qualification[savoirFaire/rorSupplementaryExerciseRight].code.coding[typeSavoirFaire] = $TRE-R04-TypeSavoirFaire#DEC
+* qualification[savoirFaire/rorSupplementaryExerciseRight].code.coding[valeur] from $JDV-J216-DroitExerciceCompl-ROR (required)
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -183,11 +190,11 @@ Profil 0 uniquement si champs d'activité de l'offre 'Ville'  "
 
 * qualification[exercicePro].code.coding[profession] -> "profession" "Similaire aux accès de metadonnee.identifiant"
 
-* qualification[rorSpecialty] -> "SavoirFaire.specialite" "Similaire aux accès de metadonnee.identifiant"
-* qualification[rorCompetence] -> "SavoirFaire.competence" "Similaire aux accès de metadonnee.identifiant"
-* qualification[rorExclusiveCompetence] -> "SavoirFaire.competenceExclusive" "Similaire aux accès de metadonnee.identifiant"
-* qualification[rorSpecificOrientation] -> "SavoirFaire.orientationParticuliere" "Similaire aux accès de metadonnee.identifiant"
-* qualification[rorExpertiseCapacity] -> "SavoirFaire.capacite" "Similaire aux accès de metadonnee.identifiant"
-* qualification[rorQualificationPAC] -> "SavoirFaire.qualificationPAC" "Similaire aux accès de metadonnee.identifiant"
-* qualification[rorNonQualifyingDESC] -> "SavoirFaire.DESCNonQualifiant" "Similaire aux accès de metadonnee.identifiant"
-* qualification[rorSupplementaryExerciseRight] -> "SavoirFaire.droitExerciceComplémentaire" "Similaire aux accès de metadonnee.identifiant"
+* qualification[savoirFaire/rorSpecialty] -> "SavoirFaire.specialite" "Similaire aux accès de metadonnee.identifiant"
+* qualification[savoirFaire/rorCompetence] -> "SavoirFaire.competence" "Similaire aux accès de metadonnee.identifiant"
+* qualification[savoirFaire/rorExclusiveCompetence] -> "SavoirFaire.competenceExclusive" "Similaire aux accès de metadonnee.identifiant"
+* qualification[savoirFaire/rorSpecificOrientation] -> "SavoirFaire.orientationParticuliere" "Similaire aux accès de metadonnee.identifiant"
+* qualification[savoirFaire/rorExpertiseCapacity] -> "SavoirFaire.capacite" "Similaire aux accès de metadonnee.identifiant"
+* qualification[savoirFaire/rorQualificationPAC] -> "SavoirFaire.qualificationPAC" "Similaire aux accès de metadonnee.identifiant"
+* qualification[savoirFaire/rorNonQualifyingDESC] -> "SavoirFaire.DESCNonQualifiant" "Similaire aux accès de metadonnee.identifiant"
+* qualification[savoirFaire/rorSupplementaryExerciseRight] -> "SavoirFaire.droitExerciceComplémentaire" "Similaire aux accès de metadonnee.identifiant"

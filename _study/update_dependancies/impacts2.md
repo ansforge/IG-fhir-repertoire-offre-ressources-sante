@@ -13,19 +13,19 @@ Pour chaque cas : un exemple JSON **avant**, un exemple JSON **après**, et une 
 | # | Sujet | Rupture pour un client ? | Détail |
 |---|---|---|---|
 | 1 | `ROROrganization` (EJ/EG) : systèmes de code des identifiants | **Oui** | §1 — `identifier.type.coding.system`/`.code` changent de référentiel |
-| 2 | `ROROrganization` : pôles/services deviennent `RORInternalOrganization` | **Oui** | §2 — nouveau `resourceType`/profil, plus jamais renvoyé comme `ROROrganization` |
+| 2 | `ROROrganization` : pôles/services deviennent `RORInternalOrganization` | **Oui** | §2 — nouveau profil de la ressource Organization,  peu d'impact, l'attribut type[OIType] n'existe plus car n'est plus nécessaire.insi dans `ROROrganization` ne reste que les attributs concernant les EG/EJ. |
 | 3 | `ROROrganization` : UF médicales deviennent `RORCoreOrganizationUF` | **Oui** | §3 — idem |
-| 4 | `type[statutJuridiqueINSEE]` / `type[sphParticipation]` : extension `as-ext-organization-types` | **À valider** (impact potentiel, cf. §4) | Point non tranché, signalé aussi dans `impacts.md` §9.3 |
+| 4 | `type[statutJuridiqueINSEE]` / `type[sphParticipation]` : extension technique `as-ext-organization-types` (jeton fixe) obligatoire | **Oui (additif, mécanique)** | §4 — rien à corriger en FSH, à implémenter côté système producteur |
 | 5 | `RORHealthcareService.providedBy` : cible élargie/changée | **Oui** (côté résolution de référence) | §5 |
-| 6 | `RORHealthcareService.location` / `.coverageArea` : `Location` nue interdite | **Oui** (si un client envoyait/attendait `Location` non-ROR) | §5 |
-| 7 | `RORHealthcareServicePatientType` : système UCUM de `ageRange` | **Oui (silencieux)** | §6 — le système d'unité change de référentiel |
+| 6 | `RORHealthcareService.location` / `.coverageArea` : uniquement RORLocation est autorisé | **Non** (car aucun résultat ne retournait de `Location` non-ROR) | §5 |
+| 7 | `RORHealthcareServicePatientType` : système UCUM de `ageRange` | **Oui (le code system change)** | §6 — le système d'unité change de référentiel |
 | 8 | `RORLocation` : parent technique `FRCoreLocationProfile` | **Non** | §7 — transparent pour le JSON produit par le ROR |
-| 9 | `RORLocation.managingOrganization` : cible `fr-organization` → `fr-core-organization` | **Non pour la donnée, oui pour la validation** | §7 |
+| 9 | `RORLocation.managingOrganization` : cible `fr-organization` → `fr-core-organization` | **Non** | §7 |
 | 10 | `RORLocation.identifier[...].type` : `.system` désormais renseigné | **Non (additif / correctif)** | §7 |
 | 11 | `RORPractitioner`/`RORPractitionerRole` : éclatement en 3 ressources (`RORPerson` + `RORPractitioner` + `RORPractitionerRole`) | **Oui, majeur** | §8 |
 | 12 | Savoir-faire (spécialités, compétences...) : de `PractitionerRole.specialty` à `Practitioner.qualification` | **Oui, majeur** | §8.3 |
 | 13 | Extensions `contracted`/`hasCAS`/`vitalAccepted` : nouvelle URL | **Oui** | §8.4 |
-| 14 | Boîte MSS de `ROROrganization` (EJ/EG) : élément `telecom` supprimé du profil | **Oui** | §9a |
+| 14 | Boîte MSS de `ROROrganization` (EJ/EG) : élément `telecom` supprimé du profil | **Non car ne devait pas être renseigné pour les EJ/EG** | §9a |
 | 15 | Boîte MSS de `RORPractitioner`/`RORHealthcareService`/`RORInternalOrganization`/`RORCoreOrganizationUF` : migrées vers `AsMailboxMSSProfile` (`system`/`emailType` requis) | **Oui** | §9b |
 | 16 | `RORTask`/`RORMeasureReport` : nouvelles cibles de référence possibles | **Non-bloquant, additif** | §10 |
 | 17 | Dépendances (`sushi-config.yaml`) | **Indirect** | §11 |
@@ -125,7 +125,11 @@ Pour chaque cas : un exemple JSON **avant**, un exemple JSON **après**, et une 
 
 ## 2. Pôles et services : ils ne sont plus des `ROROrganization`, mais des `RORInternalOrganization`
 
-Avant, un pôle ou un service hospitalier était exposé comme une ressource `Organization` conforme à `ror-organization`, avec `type[OIType]` pour le distinguer d'une EJ/EG. Après, c'est toujours une ressrouce `Organization` mais conforme à un profil dédié `ror-internal-organization` (toujours `resourceType: Organization`, mais un autre `meta.profile`).
+Avant, un pôle ou un service était exposé comme une ressource `Organization` conforme à `ror-organization`, avec `type[OIType]` pour le distinguer d'une EJ/EG. 
+
+Après, c'est toujours une ressource `Organization` mais conforme à un profil dédié `ror-internal-organization` (toujours `resourceType: Organization`, mais un autre `meta.profile`).
+
+C'est l'héritage de FRCORE et cela permet de ne plus mélanger des attributs (comme la boite MSS) qui ne sont pas forcement communs entre les EJ/EG et les pôles ou services. 
 
 **Avant** (`meta.profile = ror-organization`) :
 
@@ -168,8 +172,8 @@ Avant, un pôle ou un service hospitalier était exposé comme une ressource `Or
 }
 ```
 
-**Impact client :** le contenu métier des pôles/services (identifiant OI, nom, type, boîte MSS, dates d'ouverture/fermeture) ne change pas de forme — c'est **`meta.profile`** (et, si le client filtre dessus, l'URL de canonical StructureDefinition) qui change. Tout client qui :
-- identifie « c'est un pôle/service » en testant `meta.profile == ror-organization` **et** `type[OIType]` présent, doit désormais tester `meta.profile == ror-internal-organization` ;
+**Impact client :** le contenu métier des pôles/services (identifiant OI, nom, type, dates d'ouverture/fermeture...) ne change pas de forme — c'est **`meta.profile`** (et, si le client filtre dessus, l'URL de canonical StructureDefinition) qui change. Tout client qui :
+- identifie « c'est un pôle/service » en testant `type[OIType]` présent, doit désormais tester `meta.profile == ror-internal-organization` ;
 - suit un `partOf` sur un pôle/service en s'attendant à une `ROROrganization` continue de fonctionner (le contenu de la ressource cible change de profil mais reste un `Organization`).
 
 A noter: meta.profile n'était pas renseigné dans les flux retournés par l'API FHIR du modèle métier V3.
@@ -192,9 +196,9 @@ Le contenu (identifiant OI, nom, `type[OIType]`, boîte MSS, dates) est structur
 
 ---
 
-## 4. `type[statutJuridiqueINSEE]` / `type[sphParticipation]` — point non tranché
+## 4. `type[statutJuridiqueINSEE]` / `type[sphParticipation]` : une extension technique obligatoire, sans ambiguïté métier
 
-`AsOrganizationProfile` porte nativement ces deux slices de `Organization.type`, mais impose une extension `as-ext-organization-types` (`min = 1`) sur le `CodeableConcept` lui-même, la valeur "officielle" étant censée être portée par `extension.value[x]` plutôt que directement par `type.coding`. Le ROR conserve son binding `required` directement sur `type[...].coding` sans peupler cette extension (`impacts.md` §2 et §9.3 demandent une revue métier sur ce point).
+`AsOrganizationProfile` porte nativement ces deux slices de `Organization.type` et impose une extension `as-ext-organization-types` (`min = 1`, héritée telle quelle par `ROROrganization` — une cardinalité minimale héritée ne peut jamais être relâchée par un profil dérivé). Après inspection précise de cette extension (`Extension.extension` interdit — `max = 0` —, `Extension.value[x]` de type `code` simple), il s'avère que **ce n'est pas une duplication de la valeur métier** : c'est un jeton technique **fixe**, identique sur toutes les instances, qui sert uniquement à distinguer les slices entre elles (`AsOrganizationProfile` fixe lui-même ce jeton par un `pattern` — `"statutJuridiqueINSEE"` pour l'un, `"sphParticipation"` pour l'autre). Le vrai code métier reste porté par `type.coding`, exactement comme avant.
 
 **Avant :**
 
@@ -204,27 +208,21 @@ Le contenu (identifiant OI, nom, `type[OIType]`, boîte MSS, dates) est structur
 }]
 ```
 
-**Après, tel que modélisé actuellement (extension non peuplée — à valider) :**
+**Après (forme requise par le profil hérité, sans marge d'interprétation) :**
 
 ```json
 "type": [{
-  "coding": [{ "system": ".../JDV_J199-StatutJuridique-ROR", "code": "01" }]
-}]
-```
-
-**Après, si la contrainte `min=1` d'`AsOrganizationProfile` sur l'extension est appliquée strictement (interprétation alternative) :**
-
-```json
-"type": [{
+  "coding": [{ "system": ".../JDV_J199-StatutJuridique-ROR", "code": "01" }],
   "extension": [{
     "url": "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
-    "valueCodeableConcept": { "coding": [{ "system": ".../JDV_J199-StatutJuridique-ROR", "code": "01" }] }
-  }],
-  "coding": [{ "system": ".../JDV_J199-StatutJuridique-ROR", "code": "01" }]
+    "valueCode": "statutJuridiqueINSEE"
+  }]
 }]
 ```
 
-**Impact client :** à ce stade, **aucun changement de forme n'est requis côté ROR** (le JSON produit reste la première forme), mais un client qui valide strictement les ressources contre `AsOrganizationProfile` avec un validateur FHIR pourrait signaler une non-conformité sur l'extension manquante. À surveiller jusqu'à ce que ce point (déjà identifié comme ouvert) soit tranché avec le métier.
+(`valueCode: "sphParticipation"` pour l'autre slice — la même logique s'applique.)
+
+**Impact client :** aucun risque de divergence sémantique (le jeton est fixe et mécanique, pas une seconde source de vérité). En revanche c'est un **nouvel élément obligatoire** pour qu'une ressource `Organization` soit conforme à `ror-organization` : `sushi .` ne le signale pas (0 erreur — SUSHI ne valide pas d'instances, et le projet n'a pas d'exemple FSH pour `ROROrganization`), mais tout validateur FHIR strict (IG Publisher, HAPI...) rejettera une ressource `Organization` réelle qui ne le porte pas. **Rien à corriger dans les fichiers FSH de ce projet** — la contrainte est déjà correctement héritée et pré-remplie (`pattern`) au niveau du profil publié ; le travail restant est côté système producteur (l'API/exposition du ROR, hors de ce dépôt) : commencer à émettre ce jeton fixe sur ces deux slices.
 
 ---
 
