@@ -25,8 +25,10 @@ Pour chaque cas : un exemple JSON **avant**, un exemple JSON **après**, et une 
 | 11 | `RORPractitioner`/`RORPractitionerRole` : éclatement en 3 ressources (`RORPerson` + `RORPractitioner` + `RORPractitionerRole`) | **Oui, majeur** | §8 |
 | 12 | Savoir-faire (spécialités, compétences...) : de `PractitionerRole.specialty` à `Practitioner.qualification` | **Oui, majeur** | §8.3 |
 | 13 | Extensions `contracted`/`hasCAS`/`vitalAccepted` : nouvelle URL | **Oui** | §8.4 |
-| 14 | `RORTask`/`RORMeasureReport` : nouvelles cibles de référence possibles | **Non-bloquant, additif** | §9 |
-| 15 | Dépendances (`sushi-config.yaml`) | **Indirect** | §10 |
+| 14 | Boîte MSS de `ROROrganization` (EJ/EG) : élément `telecom` supprimé du profil | **Oui** | §9a |
+| 15 | Boîte MSS de `RORPractitioner` : slice native `mailbox-mss` disponible mais non utilisée | **Non (forme inchangée)**, point de vigilance validation | §9b |
+| 16 | `RORTask`/`RORMeasureReport` : nouvelles cibles de référence possibles | **Non-bloquant, additif** | §10 |
+| 17 | Dépendances (`sushi-config.yaml`) | **Indirect** | §11 |
 
 ---
 
@@ -123,7 +125,7 @@ Pour chaque cas : un exemple JSON **avant**, un exemple JSON **après**, et une 
 
 ## 2. Pôles et services : ils ne sont plus des `ROROrganization`, mais des `RORInternalOrganization`
 
-Avant, un pôle ou un service hospitalier était exposé comme une ressource `Organization` conforme à `ror-organization`, avec `type[OIType]` pour le distinguer d'une EJ/EG. Après, c'est une ressource **distincte** conforme au nouveau profil `ror-internal-organization` (toujours `resourceType: Organization`, mais un autre `meta.profile`).
+Avant, un pôle ou un service hospitalier était exposé comme une ressource `Organization` conforme à `ror-organization`, avec `type[OIType]` pour le distinguer d'une EJ/EG. Après, c'est toujours une ressrouce `Organization` mais conforme à un profil dédié `ror-internal-organization` (toujours `resourceType: Organization`, mais un autre `meta.profile`).
 
 **Avant** (`meta.profile = ror-organization`) :
 
@@ -131,9 +133,6 @@ Avant, un pôle ou un service hospitalier était exposé comme une ressource `Or
 {
   "resourceType": "Organization",
   "id": "oi-pole-chirurgie",
-  "meta": {
-    "profile": ["https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization"]
-  },
   "partOf": { "reference": "Organization/eg-999999" },
   "identifier": [{
     "type": { "coding": [{ "system": ".../TRE_R345-TypeIdentifiantAutre", "code": "42" }] },
@@ -171,8 +170,10 @@ Avant, un pôle ou un service hospitalier était exposé comme une ressource `Or
 
 **Impact client :** le contenu métier des pôles/services (identifiant OI, nom, type, boîte MSS, dates d'ouverture/fermeture) ne change pas de forme — c'est **`meta.profile`** (et, si le client filtre dessus, l'URL de canonical StructureDefinition) qui change. Tout client qui :
 - identifie « c'est un pôle/service » en testant `meta.profile == ror-organization` **et** `type[OIType]` présent, doit désormais tester `meta.profile == ror-internal-organization` ;
-- fait une recherche FHIR `GET /Organization?_profile=.../ror-organization` **ne recevra plus les pôles/services** dans les résultats — il faut interroger séparément `.../ror-internal-organization` (et `.../ror-core-organization-uf` pour les UF, cf. §3) ;
 - suit un `partOf` sur un pôle/service en s'attendant à une `ROROrganization` continue de fonctionner (le contenu de la ressource cible change de profil mais reste un `Organization`).
+
+A noter: meta.profile n'était pas renseigné dans les flux retournés par l'API FHIR du modèle métier V3.
+Sur cette nouvelle version de l'IG, il sera possible de filtrer sur les pôles/services en testant  `meta.profile == ror-internal-organization` avec une recherche FHIR `GET /Organization?_profile=.../ror-internal-organization` (de façon similaire pour les EG/EJ avec `?_profile=.../ror--organization` et pour les UF avec `?_profile=.../ror-core-organization-uf`)
 
 ---
 
@@ -325,8 +326,8 @@ C'est le changement le plus structurant de cette mise à jour pour les consommat
 
 ### 8.1 Avant — 2 ressources
 
-- **`RORPractitioner`** (`Practitioner`) portait à la fois l'**identité pérenne** (civilité, nom, prénom natifs `Practitioner.name`) et l'**identifiant national** (`idNat_PS`/RPPS).
-- **`RORPractitionerRole`** (`PractitionerRole`) portait la **profession** (`code`), le **savoir-faire** (8 facettes sur `specialty[...]`), l'**identité d'exercice** dupliquée via l'extension `ror-practitionerrole-name`, et la **situation opérationnelle** (horaires, télécom, `contracted`/`hasCAS`/`vitalAccepted` avec des extensions ROR propres pointant vers `apifhir.annuaire.sante.fr`).
+- **`RORPractitioner`** (`Practitioner`) -- *personne physique et professionnel (le RPPS est rattaché au professionnel)* -- portait à la fois l'**identité pérenne** (civilité, nom, prénom natifs `Practitioner.name`) et l'**identifiant national** (`idNat_PS`/RPPS).
+- **`RORPractitionerRole`** (`PractitionerRole`) -- *exercice professionnel et situation d'exercice* -- portait la **profession** (`code`), le **savoir-faire** (8 facettes sur `specialty[...]`), l'**identité d'exercice** dupliquée via l'extension `ror-practitionerrole-name`, et la **situation opérationnelle** (horaires, télécom, `contracted`/`hasCAS`/`vitalAccepted` avec des extensions ROR propres pointant vers `apifhir.annuaire.sante.fr`).
 
 ```json
 {
@@ -377,9 +378,9 @@ C'est le changement le plus structurant de cette mise à jour pour les consommat
 
 ### 8.2 Après — 3 ressources
 
-- **`RORPerson`** (nouveau, `Person`, parent `AsPersonProfile`) : identité civile pérenne (nom de naissance, civilité).
-- **`RORPractitioner`** (redéfini, toujours `Practitioner`, mais parent `AsPractitionerProfile`) : identité **d'exercice** (`name.family`/`.given`/`.suffix` natifs), identifiant RPPS, **profession** et **savoir-faire** (déplacés depuis l'ancien `PractitionerRole`).
-- **`RORPractitionerRole`** (redéfini, `PractitionerRole`, parent `AsPractitionerRoleProfile`) : uniquement la **situation opérationnelle** (horaires, télécom, `contracted`/`hasCAS`/`vitalAccepted` — désormais nativement fournis par `AsPractitionerRoleProfile`).
+- **`RORPerson`** (nouveau, `Person`, parent `AsPersonProfile`) -- *personne physique* -- : identité civile pérenne (nom de naissance, civilité).
+- **`RORPractitioner`** (redéfini, toujours `Practitioner`, mais parent `AsPractitionerProfile`) -- *professionnel (RPPS) et son ou ses exercices professionnels (si plusieurs exercices professionnels, alors la recherche sur le RPPS retournera plusieurs résultats)* -- : identité **d'exercice** (`name.family`/`.given`/`.suffix` natifs), identifiant RPPS, **profession** et **savoir-faire** (déplacés depuis l'ancien `PractitionerRole`).
+- **`RORPractitionerRole`** (redéfini, `PractitionerRole`, parent `AsPractitionerRoleProfile`) -- *situation d'exercice* -- : uniquement la **situation opérationnelle** (horaires, télécom, `contracted`/`hasCAS`/`vitalAccepted` — désormais nativement fournis par `AsPractitionerRoleProfile`).
 
 ```json
 {
@@ -460,7 +461,48 @@ C'est un changement d'API cassant : tout client doit être mis à jour avant le 
 
 ---
 
-## 9. `RORTask` / `RORMeasureReport` : cibles de référence élargies (non cassant)
+## 9. Boîtes MSS (messagerie sécurisée de santé) : un impact réel, et un point non exploité
+
+Deux choses à corriger par rapport à une lecture rapide du §11 « Ce qui NE change PAS » : la boîte MSS des pôles/services/UF **suit bien** le changement de ressource conteneur (déjà classé « Oui, majeur » en §2/§3 — ce n'était pas manqué, mais valait d'être dit explicitement) ; et il existe un second point, non documenté jusqu'ici, sur `ROROrganization` (EJ/EG) et `RORPractitioner`.
+
+**a) `ROROrganization` (EJ/EG) perd purement et simplement `telecom`.** Dans l'ancien modèle, `ROROrganization` portait la boîte MSS pour les 3 objets métier qu'il regroupait (EJ, EG, OI) — y compris donc quand l'instance représentait une OI (pôle/service/UF, identifiable via `type[OIType]`). Dans le nouveau modèle, l'élément `telecom` a été **retiré du profil `ROROrganization`** (EJ/EG) : il n'apparaît plus du tout dans le FSH. Il n'est donc plus jamais présent sur une ressource `Organization` conforme à `ror-organization`, quelle que soit la donnée. Un client qui allait chercher la boîte MSS d'une OI sur `Organization/{id}` avec `meta.profile = ror-organization` doit désormais aller la chercher sur `Organization/{id}` avec `meta.profile = ror-internal-organization` (pôle/service) ou `ror-core-organization-uf` (UF) — cf. §2/§3.
+
+```diff
+  {
+    "resourceType": "Organization",
+-   "meta": { "profile": [".../ror-organization"] },
++   "meta": { "profile": [".../ror-internal-organization"] },
+    "name": "Pôle Chirurgie",
+    "telecom": [{ "value": "pole-chirurgie@xxx.mssante.fr", "extension": [ /* extensions ROR */ ] }]
+  }
+```
+
+**b) `AsOrganizationProfile` et `AsPractitionerProfile` définissent nativement une slice `telecom:mailbox-mss` que le ROR n'utilise pas.** Ces deux profils (nouveaux parents de `ROROrganization` et `RORPractitioner`) portent chacun, en plus de l'élément `telecom` générique, une slice nommée `mailbox-mss` (`ContactPoint` profilé `as-mailbox-mss`) qui impose `system` fixé à `"email"` et une extension FR Core obligatoire `fr-core-contact-point-email-type`, plus une extension optionnelle `as-ext-mailbox-mss-metadata` (type de boîte, description, responsable, service, liste rouge). C'est cette slice qui serait « la » façon standard AS/FR Core de porter une adresse MSS.
+
+Le ROR **ne l'utilise pas** : `RORPractitioner.telecom` continue de porter sa boîte MSS avec la même forme qu'avant (juste `.value` + les 3 extensions ROR `ror-telecom-communication-channel`/`ror-telecom-usage`/`ror-telecom-confidentiality-level`, sans `fr-core-contact-point-email-type` ni `as-ext-mailbox-mss-metadata`). C'est une divergence volontaire ou non tranchée (même famille de sujet que le point ouvert §4 sur `as-ext-organization-types`) :
+
+```json
+{
+  "resourceType": "Practitioner",
+  "telecom": [{
+    "value": "dr.martin@xxx.mssante.fr",
+    "extension": [
+      { "url": ".../ror-telecom-communication-channel", "valueCodeableConcept": { "coding": [{ "code": "1" }] } },
+      { "url": ".../ror-telecom-confidentiality-level", "valueCodeableConcept": { "coding": [{ "code": "1" }] } }
+    ]
+  }]
+}
+```
+
+**Impact client :**
+
+- Pour `RORPractitioner` : **aucun changement de forme** — la boîte MSS du professionnel garde exactement la même structure JSON qu'avant. Un client qui l'interprète déjà via les extensions ROR n'a rien à changer.
+- Pour `ROROrganization` (EJ/EG) : **rupture** si un client lisait la boîte MSS d'une OI sur ce profil (§2/§3, mais valait cette clarification explicite).
+- Pas d'impact de build : `sushi .` ne remonte aucune erreur ni avertissement sur ce point précis (contrairement à la réduction de cardinalité `mailbox-mss` documentée dans `impacts.md` §8 pour `RORPractitionerRole.telecom`, qui est un sujet différent — `RORPractitionerRole` ne porte pas de boîte MSS, sa slice `telecom` sert à la télécommunication de la situation d'exercice). À surveiller uniquement si un consommateur valide un jour les ressources avec un validateur FHIR strict directement contre `AsOrganizationProfile`/`AsPractitionerProfile`.
+
+---
+
+## 10. `RORTask` / `RORMeasureReport` : cibles de référence élargies (non cassant)
 
 - `RORTask.requester`, `.owner`, `.restriction.recipient` acceptent désormais aussi `RORInternalOrganization`/`RORCoreOrganizationUF` en plus de `ROROrganization`/`RORPractitioner`/`RORPractitionerRole`.
 - `RORMeasureReport.reporter` idem.
@@ -473,7 +515,7 @@ Ce genre de référence, invalide auparavant (un pôle ne pouvait pas être `req
 
 ---
 
-## 10. Dépendances (`sushi-config.yaml`)
+## 11. Dépendances (`sushi-config.yaml`)
 
 Rappel de `impacts.md` §1, avec la conséquence directe pour un client qui valide les ressources reçues avec son propre validateur FHIR (et pas seulement en consommant le JSON tel quel) :
 
@@ -487,9 +529,10 @@ Un client qui embarque ces packages pour valider les ressources reçues (plutôt
 
 ---
 
-## 11. Ce qui NE change PAS
+## 12. Ce qui NE change PAS
 
 - `RORQuestionnaire`, `RORMeasure` et la plupart des extensions ROR (`RORActType`, `RORHealthcareService*`, `ROROrganization*`...) : aucun changement de forme.
 - Les valeurs `identifier.system` de `ROROrganization` (FINESS, SIREN/SIRET, rppsRang, OI) : inchangées, seul `identifier.type` change (§1).
-- Le contenu fonctionnel des pôles/services/UF (identifiant OI, nom, type, boîte MSS, dates) : identique, seule la ressource conteneur (`resourceType`/`meta.profile`) change (§2, §3).
+- Le contenu fonctionnel des pôles/services/UF (identifiant OI, nom, type, dates) : identique, seule la ressource conteneur (`resourceType`/`meta.profile`) change (§2, §3) — la boîte MSS suit ce même changement de conteneur, avec une nuance supplémentaire détaillée en §9.
+- La forme de la boîte MSS du professionnel (`RORPractitioner.telecom`) : inchangée (§9).
 - `RORLocation` : forme du JSON inchangée à l'exception du correctif `identifier.type` (additif, §7).
