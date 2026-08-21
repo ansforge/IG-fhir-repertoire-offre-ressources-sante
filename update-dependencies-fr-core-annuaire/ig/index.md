@@ -160,7 +160,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "draft",
-  "date" : "2026-08-21T09:39:43+00:00",
+  "date" : "2026-08-21T14:30:36+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

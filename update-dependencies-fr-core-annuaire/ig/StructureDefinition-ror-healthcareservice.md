@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
   "version" : "0.7.0",
   "name" : "RORHealthcareService",
   "status" : "draft",
-  "date" : "2026-08-21T09:39:43+00:00",
+  "date" : "2026-08-21T14:30:36+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -499,7 +499,27 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
     {
       "id" : "HealthcareService.telecom",
       "path" : "HealthcareService.telecom",
-      "short" : "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’offre opérationnelle",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "profile",
+          "path" : "$this"
+        }],
+        "description" : "Slicing pour isoler la boîte MSS, conforme au profil standard AsMailboxMSSProfile",
+        "rules" : "open"
+      },
+      "short" : "boiteLettreMSS (OffreOperationnelle) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’offre opérationnelle"
+    },
+    {
+      "id" : "HealthcareService.telecom:mailbox-mss",
+      "path" : "HealthcareService.telecom",
+      "sliceName" : "mailbox-mss",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "ContactPoint",
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-mailbox-mss"]
+      }],
+      "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORHealthcareService",
         "map" : "boiteLettreMSS.adresseMSS",
@@ -507,12 +527,26 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
       }]
     },
     {
-      "id" : "HealthcareService.telecom.extension",
+      "id" : "HealthcareService.telecom:mailbox-mss.extension",
       "path" : "HealthcareService.telecom.extension",
-      "min" : 2
+      "min" : 3
     },
     {
-      "id" : "HealthcareService.telecom.extension:ror-telecom-communication-channel",
+      "id" : "HealthcareService.telecom:mailbox-mss.extension:emailType",
+      "path" : "HealthcareService.telecom.extension",
+      "sliceName" : "emailType"
+    },
+    {
+      "id" : "HealthcareService.telecom:mailbox-mss.extension:emailType.value[x]",
+      "path" : "HealthcareService.telecom.extension.value[x]",
+      "patternCoding" : {
+        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie",
+        "code" : "MSSANTE",
+        "display" : "MSSANTE"
+      }
+    },
+    {
+      "id" : "HealthcareService.telecom:mailbox-mss.extension:ror-telecom-communication-channel",
       "path" : "HealthcareService.telecom.extension",
       "sliceName" : "ror-telecom-communication-channel",
       "short" : "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication",
@@ -525,7 +559,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
       "mustSupport" : true
     },
     {
-      "id" : "HealthcareService.telecom.extension:ror-telecom-usage",
+      "id" : "HealthcareService.telecom:mailbox-mss.extension:ror-telecom-usage",
       "path" : "HealthcareService.telecom.extension",
       "sliceName" : "ror-telecom-usage",
       "short" : "utilisation (Telecommunication) : Utilisation du canal de communication",
@@ -538,7 +572,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
       "mustSupport" : true
     },
     {
-      "id" : "HealthcareService.telecom.extension:ror-telecom-confidentiality-level",
+      "id" : "HealthcareService.telecom:mailbox-mss.extension:ror-telecom-confidentiality-level",
       "path" : "HealthcareService.telecom.extension",
       "sliceName" : "ror-telecom-confidentiality-level",
       "short" : "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication",
@@ -551,10 +585,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
       "mustSupport" : true
     },
     {
-      "id" : "HealthcareService.telecom.value",
+      "id" : "HealthcareService.telecom:mailbox-mss.value",
       "path" : "HealthcareService.telecom.value",
-      "short" : "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication",
-      "mustSupport" : true
+      "short" : "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
     },
     {
       "id" : "HealthcareService.coverageArea",

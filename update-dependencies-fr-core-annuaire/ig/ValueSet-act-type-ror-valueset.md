@@ -54,7 +54,7 @@ Valueset type d’acte
   "title" : "Valueset type d'acte",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-21T09:39:43+00:00",
+  "date" : "2026-08-21T14:30:36+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

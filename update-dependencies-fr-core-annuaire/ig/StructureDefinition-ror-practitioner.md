@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
   "version" : "0.7.0",
   "name" : "RORPractitioner",
   "status" : "draft",
-  "date" : "2026-08-21T09:39:43+00:00",
+  "date" : "2026-08-21T14:30:36+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -267,7 +267,13 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
     {
       "id" : "Practitioner.telecom",
       "path" : "Practitioner.telecom",
-      "short" : "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel",
+      "short" : "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel"
+    },
+    {
+      "id" : "Practitioner.telecom:mailbox-mss",
+      "path" : "Practitioner.telecom",
+      "sliceName" : "mailbox-mss",
+      "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
         "map" : "boiteLettreMSS.adresseMSS",
@@ -275,12 +281,26 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.telecom.extension",
+      "id" : "Practitioner.telecom:mailbox-mss.extension",
       "path" : "Practitioner.telecom.extension",
-      "min" : 2
+      "min" : 3
     },
     {
-      "id" : "Practitioner.telecom.extension:ror-telecom-communication-channel",
+      "id" : "Practitioner.telecom:mailbox-mss.extension:emailType",
+      "path" : "Practitioner.telecom.extension",
+      "sliceName" : "emailType"
+    },
+    {
+      "id" : "Practitioner.telecom:mailbox-mss.extension:emailType.value[x]",
+      "path" : "Practitioner.telecom.extension.value[x]",
+      "patternCoding" : {
+        "system" : "https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie",
+        "code" : "MSSANTE",
+        "display" : "MSSANTE"
+      }
+    },
+    {
+      "id" : "Practitioner.telecom:mailbox-mss.extension:ror-telecom-communication-channel",
       "path" : "Practitioner.telecom.extension",
       "sliceName" : "ror-telecom-communication-channel",
       "short" : "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication",
@@ -293,7 +313,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.telecom.extension:ror-telecom-usage",
+      "id" : "Practitioner.telecom:mailbox-mss.extension:ror-telecom-usage",
       "path" : "Practitioner.telecom.extension",
       "sliceName" : "ror-telecom-usage",
       "short" : "utilisation (Telecommunication) : Utilisation du canal de communication",
@@ -306,7 +326,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.telecom.extension:ror-telecom-confidentiality-level",
+      "id" : "Practitioner.telecom:mailbox-mss.extension:ror-telecom-confidentiality-level",
       "path" : "Practitioner.telecom.extension",
       "sliceName" : "ror-telecom-confidentiality-level",
       "short" : "niveauConfidentialite (Telecommunication) : niveau de restriction de l'accès aux attributs de la classe Télécommunication",
@@ -319,25 +339,14 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.telecom.value",
+      "id" : "Practitioner.telecom:mailbox-mss.value",
       "path" : "Practitioner.telecom.value",
       "short" : "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication",
-      "mustSupport" : true,
       "mapping" : [{
         "identity" : "specmetier-to-RORPractitioner",
         "map" : "adresseTelecom",
         "comment" : "cf. boiteLettreMSS"
       }]
-    },
-    {
-      "id" : "Practitioner.telecom:mailbox-mss",
-      "path" : "Practitioner.telecom",
-      "sliceName" : "mailbox-mss"
-    },
-    {
-      "id" : "Practitioner.telecom:mailbox-mss.extension",
-      "path" : "Practitioner.telecom.extension",
-      "min" : 2
     },
     {
       "id" : "Practitioner.qualification",
