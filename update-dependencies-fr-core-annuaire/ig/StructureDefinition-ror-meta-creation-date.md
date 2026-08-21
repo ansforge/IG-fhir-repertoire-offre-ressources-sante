@@ -27,7 +27,7 @@ This extension may be used on the following element(s):
 
 **Utilisations:**
 
-* Utilise ce/t/te Extension: [RORCoreOrganizationUF](StructureDefinition-ror-core-organization-uf.md), [RORHealthcareService](StructureDefinition-ror-healthcareservice.md), [RORInternalOrganization](StructureDefinition-ror-internal-organization.md), [RORLocation](StructureDefinition-ror-location.md)... Show 4 more, [ROROrganization](StructureDefinition-ror-organization.md), [RORPerson](StructureDefinition-ror-person.md), [RORPractitionerProfile](StructureDefinition-ror-practitioner.md) and [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md)
+* Utilise ce/t/te Extension: [RORCoreOrganizationUF](StructureDefinition-ror-core-organization-uf.md), [RORHealthcareService](StructureDefinition-ror-healthcareservice.md), [RORInternalOrganization](StructureDefinition-ror-internal-organization.md), [RORLocation](StructureDefinition-ror-location.md)... Show 4 more, [ROROrganization](StructureDefinition-ror-organization.md), [RORPerson](StructureDefinition-ror-person.md), [RORPractitioner](StructureDefinition-ror-practitioner.md) and [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md)
 * Exemples pour ce/t/te Extension: [5812 Chirurgie gynécologique - HOSPITALISATION COMPLETE](HealthcareService-1234564.md) and [Location/ror-location-exemple](Location-ror-location-exemple.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.ror|current/StructureDefinition/ror-meta-creation-date)
@@ -54,7 +54,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-meta-creation-da
   "version" : "0.7.0",
   "name" : "RORMetaCreationDate",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -26,7 +26,7 @@ Paramètre de recherche décrivant le type d’équipement de l’offre opérati
   "version" : "0.7.0",
   "name" : "RORHealthcareServiceEquipmentType",
   "status" : "active",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

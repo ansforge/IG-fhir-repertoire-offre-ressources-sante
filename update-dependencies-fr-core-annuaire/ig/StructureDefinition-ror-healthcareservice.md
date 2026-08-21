@@ -16,7 +16,7 @@ Profil créé dans le cadre du ROR pour décrire les prestations que peut réali
 
 **Utilisations:**
 
-* Référence ce Profil: [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md) and [RORTask](StructureDefinition-ror-task.md)
+* Référence ce Profil: [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md) and [RORTask](StructureDefinition-ror-task.md)
 * Exemples pour ce/t/te Profil: [5812 Chirurgie gynécologique - HOSPITALISATION COMPLETE](HealthcareService-1234564.md)
 * CapabilityStatements utilisant ce Profil: [ROR-Consommateur](CapabilityStatement-ror-consommateur.md) and [ROR-Serveur](CapabilityStatement-ror-serveur.md)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
   "version" : "0.7.0",
   "name" : "RORHealthcareService",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

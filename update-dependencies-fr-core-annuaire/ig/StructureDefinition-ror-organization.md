@@ -16,7 +16,7 @@ Profil créé dans le cadre du ROR pour décrire les entités juridiques (EJ) et
 
 **Utilisations:**
 
-* Référence ce Profil: [RORCoreOrganizationUF](StructureDefinition-ror-core-organization-uf.md), [RORHealthcareService](StructureDefinition-ror-healthcareservice.md), [RORInternalOrganization](StructureDefinition-ror-internal-organization.md), [RORLocation](StructureDefinition-ror-location.md)... Show 4 more, [RORMeasureReport](StructureDefinition-ror-measurereport.md), [ROROrganization](StructureDefinition-ror-organization.md), [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md) and [RORTask](StructureDefinition-ror-task.md)
+* Référence ce Profil: [RORCoreOrganizationUF](StructureDefinition-ror-core-organization-uf.md), [RORHealthcareService](StructureDefinition-ror-healthcareservice.md), [RORInternalOrganization](StructureDefinition-ror-internal-organization.md), [RORLocation](StructureDefinition-ror-location.md)... Show 4 more, [RORMeasureReport](StructureDefinition-ror-measurereport.md), [ROROrganization](StructureDefinition-ror-organization.md), [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md) and [RORTask](StructureDefinition-ror-task.md)
 * CapabilityStatements utilisant ce Profil: [ROR-Consommateur](CapabilityStatement-ror-consommateur.md) and [ROR-Serveur](CapabilityStatement-ror-serveur.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.ror|current/StructureDefinition/ror-organization)
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization.csv
   "version" : "0.7.0",
   "name" : "ROROrganization",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

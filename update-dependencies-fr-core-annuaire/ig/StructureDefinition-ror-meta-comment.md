@@ -23,7 +23,7 @@ This extension may be used on the following element(s):
 
 **Utilisations:**
 
-* Utilise ce/t/te Extension: [RORCoreOrganizationUF](StructureDefinition-ror-core-organization-uf.md), [RORInternalOrganization](StructureDefinition-ror-internal-organization.md), [ROROrganization](StructureDefinition-ror-organization.md) and [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md)
+* Utilise ce/t/te Extension: [RORCoreOrganizationUF](StructureDefinition-ror-core-organization-uf.md), [RORInternalOrganization](StructureDefinition-ror-internal-organization.md), [ROROrganization](StructureDefinition-ror-organization.md) and [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.ror|current/StructureDefinition/ror-meta-comment)
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-meta-comment.csv
   "version" : "0.7.0",
   "name" : "RORMetaComment",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

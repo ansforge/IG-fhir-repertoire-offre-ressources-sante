@@ -24,7 +24,7 @@ This extension may be used on the following element(s):
 
 **Utilisations:**
 
-* Utilise ce/t/te Extension: [RORHealthcareService](StructureDefinition-ror-healthcareservice.md) and [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md)
+* Utilise ce/t/te Extension: [RORHealthcareService](StructureDefinition-ror-healthcareservice.md) and [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md)
 * Exemples pour ce/t/te Extension: [5812 Chirurgie gynécologique - HOSPITALISATION COMPLETE](HealthcareService-1234564.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.ror|current/StructureDefinition/ror-available-time-type-of-time)
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-available-time-t
   "version" : "0.7.0",
   "name" : "RORAvailableTimeTypeOfTime",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -23,7 +23,7 @@ This extension may be used on the following element(s):
 
 **Utilisations:**
 
-* Utilise ce/t/te Extension: [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md)
+* Utilise ce/t/te Extension: [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.ror|current/StructureDefinition/ror-practitionerrole-unit-exercise-mode)
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
   "version" : "0.7.0",
   "name" : "RORPractitionerRoleUnitExerciseMode",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

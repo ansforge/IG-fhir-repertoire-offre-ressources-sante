@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-launchcontext.cs
   "name" : "RORLaunchContextExtension",
   "title" : "Profil de LaunchContextExtension créé dans le cadre du ROR afin d'ajouter le name 'ror-structure' acceptant les ressources FHIR 'Organization', 'HealthcareService' et 'Location'",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

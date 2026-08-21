@@ -52,7 +52,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-commune-cog.csv)
   "version" : "0.7.0",
   "name" : "RORCommuneCog",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

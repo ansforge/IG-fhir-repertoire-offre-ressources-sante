@@ -16,7 +16,7 @@ Profil créé dans le cadre du ROR pour décrire l’espace disposant d’un ens
 
 **Utilisations:**
 
-* Référence ce Profil: [RORHealthcareService](StructureDefinition-ror-healthcareservice.md), [RORLocation](StructureDefinition-ror-location.md), [RORMeasureReport](StructureDefinition-ror-measurereport.md), [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md) and [RORTask](StructureDefinition-ror-task.md)
+* Référence ce Profil: [RORHealthcareService](StructureDefinition-ror-healthcareservice.md), [RORLocation](StructureDefinition-ror-location.md), [RORMeasureReport](StructureDefinition-ror-measurereport.md), [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md) and [RORTask](StructureDefinition-ror-task.md)
 * Exemples pour ce/t/te Profil: [Location/ror-location-exemple](Location-ror-location-exemple.md)
 * CapabilityStatements utilisant ce Profil: [ROR-Consommateur](CapabilityStatement-ror-consommateur.md) and [ROR-Serveur](CapabilityStatement-ror-serveur.md)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-location.csv), [
   "version" : "0.7.0",
   "name" : "RORLocation",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

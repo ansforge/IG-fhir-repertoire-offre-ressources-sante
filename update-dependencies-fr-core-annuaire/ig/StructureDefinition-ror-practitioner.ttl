@@ -14,9 +14,9 @@
   ] ;
   fhir:StructureDefinition.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner"] ;
   fhir:StructureDefinition.version [ fhir:value "0.7.0"] ;
-  fhir:StructureDefinition.name [ fhir:value "RORPractitionerProfile"] ;
+  fhir:StructureDefinition.name [ fhir:value "RORPractitioner"] ;
   fhir:StructureDefinition.status [ fhir:value "draft"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-08-21T09:28:33+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-08-21T09:39:43+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "ANS"] ;
   fhir:StructureDefinition.contact [
      fhir:index 0 ;
@@ -40,7 +40,7 @@
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"] ;
   fhir:StructureDefinition.mapping [
      fhir:index 0 ;
-     fhir:StructureDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+     fhir:StructureDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
      fhir:StructureDefinition.mapping.uri [ fhir:value "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf" ] ;
      fhir:StructureDefinition.mapping.name [ fhir:value "ExerciceProfessionnel du Modèle exposition ROR V3" ]
   ], [
@@ -195,7 +195,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "ExerciceProfessionnel" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Profils ayant Accès" ]
        ], [
@@ -270,7 +270,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "metadonnee.identifiant" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Profil 1,\nProfil 2 si uniteSensible = Non,\nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,\nProfil4,\nProfil5 si uniteSensible = Non,\nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  " ]
        ]
@@ -307,7 +307,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "metadonnee" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -475,7 +475,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "dateMiseJour" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -742,7 +742,7 @@
        ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "regionSource" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -5817,7 +5817,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "idNat_PS" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -7087,7 +7087,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "ExerciceProfessionnel.nomExercice" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -7150,7 +7150,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "ExerciceProfessionnel.prenomExercice" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -7265,7 +7265,7 @@
        ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "ExerciceProfessionnel.civiliteExercice" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -7379,7 +7379,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "boiteLettreMSS.adresseMSS" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -7775,7 +7775,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "adresseTelecom" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "cf. boiteLettreMSS" ]
        ], [
@@ -12917,7 +12917,7 @@
        ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "profession" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -14183,7 +14183,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.specialite" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -14944,7 +14944,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.competence" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -15705,7 +15705,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.competenceExclusive" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -16466,7 +16466,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.orientationParticuliere" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -17227,7 +17227,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.capacite" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -17988,7 +17988,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.qualificationPAC" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -18749,7 +18749,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.DESCNonQualifiant" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -19510,7 +19510,7 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.droitExerciceComplémentaire" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ], [
@@ -20304,7 +20304,7 @@
        fhir:ElementDefinition.path [ fhir:value "Practitioner" ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "ExerciceProfessionnel" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Profils ayant Accès" ]
        ]
@@ -20314,7 +20314,7 @@
        fhir:ElementDefinition.path [ fhir:value "Practitioner.id" ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "metadonnee.identifiant" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Profil 1,\nProfil 2 si uniteSensible = Non,\nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,\nProfil4,\nProfil5 si uniteSensible = Non,\nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  " ]
        ]
@@ -20324,7 +20324,7 @@
        fhir:ElementDefinition.path [ fhir:value "Practitioner.meta" ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "metadonnee" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20336,7 +20336,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "dateMiseJour" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20371,7 +20371,7 @@
        ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "regionSource" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20414,7 +20414,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "idNat_PS" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20425,7 +20425,7 @@
        fhir:ElementDefinition.short [ fhir:value "nomExercice (ExerciceProfessionnel) : Nom sous lequel exerce le professionnel" ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "ExerciceProfessionnel.nomExercice" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20436,7 +20436,7 @@
        fhir:ElementDefinition.short [ fhir:value "prenomExercice (ExerciceProfessionnel) : Prénom sous lequel exerce le professionnel" ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "ExerciceProfessionnel.prenomExercice" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20454,7 +20454,7 @@
        ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "ExerciceProfessionnel.civiliteExercice" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20465,7 +20465,7 @@
        fhir:ElementDefinition.short [ fhir:value "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel" ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "boiteLettreMSS.adresseMSS" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20536,7 +20536,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "adresseTelecom" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "cf. boiteLettreMSS" ]
        ]
@@ -20577,7 +20577,7 @@
        ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "profession" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20592,7 +20592,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.specialite" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20647,7 +20647,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.competence" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20702,7 +20702,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.competenceExclusive" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20757,7 +20757,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.orientationParticuliere" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20812,7 +20812,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.capacite" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20867,7 +20867,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.qualificationPAC" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20922,7 +20922,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.DESCNonQualifiant" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]
@@ -20977,7 +20977,7 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
        fhir:ElementDefinition.mapping [
          fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitionerProfile" ] ;
+         fhir:ElementDefinition.mapping.identity [ fhir:value "specmetier-to-RORPractitioner" ] ;
          fhir:ElementDefinition.mapping.map [ fhir:value "SavoirFaire.droitExerciceComplémentaire" ] ;
          fhir:ElementDefinition.mapping.comment [ fhir:value "Similaire aux accès de metadonnee.identifiant" ]
        ]

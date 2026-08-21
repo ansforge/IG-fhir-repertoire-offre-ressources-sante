@@ -73,8 +73,8 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [RORMeasureReport](StructureDefinition-ror-measurereport.md) | Valeur pour un indicateur de pilotage du ROR National |
 | [ROROrganization](StructureDefinition-ror-organization.md) | Profil créé dans le cadre du ROR pour décrire les entités juridiques (EJ) et entités géographiques (EG) du domaine sanitaire, médico-social et social immatriculées dans le FINESS |
 | [RORPerson](StructureDefinition-ror-person.md) | Profil créé dans le cadre du ROR pour décrire les données d’identité civile pérennes d’une personne physique qui exerce en tant que professionnel de santé |
-| [RORPractitionerProfile](StructureDefinition-ror-practitioner.md) | Profil créé dans le cadre du ROR pour décrire l’exercice professionnel d’une personne physique : identité d’exercice, profession et savoir-faire (spécialités, compétences…) |
-| [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md) | Profil créé dans le cadre du ROR pour décrire la situation d’exercice opérationnelle du professionnel dans la réalisation de l’offre |
+| [RORPractitioner](StructureDefinition-ror-practitioner.md) | Profil créé dans le cadre du ROR pour décrire l’exercice professionnel d’une personne physique : identité d’exercice, profession et savoir-faire (spécialités, compétences…) |
+| [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md) | Profil créé dans le cadre du ROR pour décrire la situation d’exercice opérationnelle du professionnel dans la réalisation de l’offre |
 | [RORQuestionnaire](StructureDefinition-ror-questionnaire-healthcareservice.md) | Modèle de saisie des Offres Opérationnelles. Les questionnaires créés à partir de cette ressource sont utilisés par les établissements pour saisir leurs offres opérationnelles. |
 | [RORTask](StructureDefinition-ror-task.md) | Anomalie concerant une donnée dans une ressource du ROR |
 

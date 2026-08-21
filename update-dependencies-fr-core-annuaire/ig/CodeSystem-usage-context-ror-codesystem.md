@@ -34,7 +34,7 @@ CodeSystem pour définir le type de catégorie du contexte d’usage des instanc
   "name" : "UsageContextRORCodeSystem",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer le type de caractéristique d’un equi
   "version" : "0.7.0",
   "name" : "RORSPEquipmentFeature",
   "status" : "active",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

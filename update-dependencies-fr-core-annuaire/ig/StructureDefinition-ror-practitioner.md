@@ -1,22 +1,22 @@
-# RORPractitionerProfile - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.7.0
+# RORPractitioner - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.7.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **RORPractitionerProfile**
+* **RORPractitioner**
 
-## Resource Profile: RORPractitionerProfile 
+## Resource Profile: RORPractitioner 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORPractitionerProfile |
+| Draft as of 2026-08-21 | *Computable Name*:RORPractitioner |
 
  
 Profil créé dans le cadre du ROR pour décrire l’exercice professionnel d’une personne physique : identité d’exercice, profession et savoir-faire (spécialités, compétences…) 
 
 **Utilisations:**
 
-* Référence ce Profil: [RORMeasureReport](StructureDefinition-ror-measurereport.md), [RORPerson](StructureDefinition-ror-person.md), [RORPractitionerRoleProfile](StructureDefinition-ror-practitionerrole.md) and [RORTask](StructureDefinition-ror-task.md)
+* Référence ce Profil: [RORMeasureReport](StructureDefinition-ror-measurereport.md), [RORPerson](StructureDefinition-ror-person.md), [RORPractitionerRole](StructureDefinition-ror-practitionerrole.md) and [RORTask](StructureDefinition-ror-task.md)
 * CapabilityStatements utilisant ce Profil: [ROR-Consommateur](CapabilityStatement-ror-consommateur.md) and [ROR-Serveur](CapabilityStatement-ror-serveur.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.ror|current/StructureDefinition/ror-practitioner)
@@ -39,9 +39,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
   "id" : "ror-practitioner",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitioner",
   "version" : "0.7.0",
-  "name" : "RORPractitionerProfile",
+  "name" : "RORPractitioner",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
-    "identity" : "specmetier-to-RORPractitionerProfile",
+    "identity" : "specmetier-to-RORPractitioner",
     "uri" : "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf",
     "name" : "ExerciceProfessionnel du Modèle exposition ROR V3"
   },
@@ -129,7 +129,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "id" : "Practitioner",
       "path" : "Practitioner",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "ExerciceProfessionnel",
         "comment" : "Profils ayant Accès"
       }]
@@ -138,7 +138,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "id" : "Practitioner.id",
       "path" : "Practitioner.id",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "metadonnee.identifiant",
         "comment" : "Profil 1,\nProfil 2 si uniteSensible = Non,\nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,\nProfil4,\nProfil5 si uniteSensible = Non,\nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
       }]
@@ -147,7 +147,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "id" : "Practitioner.meta",
       "path" : "Practitioner.meta",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "metadonnee",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -158,7 +158,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "min" : 1,
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "dateMiseJour",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -188,7 +188,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "regionSource",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -225,7 +225,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "min" : 1,
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "idNat_PS",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -235,7 +235,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "path" : "Practitioner.name.family",
       "short" : "nomExercice (ExerciceProfessionnel) : Nom sous lequel exerce le professionnel",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "ExerciceProfessionnel.nomExercice",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -245,7 +245,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "path" : "Practitioner.name.given",
       "short" : "prenomExercice (ExerciceProfessionnel) : Prénom sous lequel exerce le professionnel",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "ExerciceProfessionnel.prenomExercice",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -259,7 +259,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J208-CiviliteExercice-ROR/FHIR/JDV-J208-CiviliteExercice-ROR"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "ExerciceProfessionnel.civiliteExercice",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -269,7 +269,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "path" : "Practitioner.telecom",
       "short" : "boiteLettreMSS (Professionnel) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "boiteLettreMSS.adresseMSS",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -324,7 +324,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "short" : "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "adresseTelecom",
         "comment" : "cf. boiteLettreMSS"
       }]
@@ -361,7 +361,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J229-ProfessionSante-ROR/FHIR/JDV-J229-ProfessionSante-ROR"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "profession",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -375,7 +375,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "SavoirFaire.specialite",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -425,7 +425,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "max" : "*",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "SavoirFaire.competence",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -475,7 +475,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "SavoirFaire.competenceExclusive",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -525,7 +525,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "SavoirFaire.orientationParticuliere",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -575,7 +575,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "SavoirFaire.capacite",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -625,7 +625,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "SavoirFaire.qualificationPAC",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -675,7 +675,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "SavoirFaire.DESCNonQualifiant",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -725,7 +725,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerProfile",
+        "identity" : "specmetier-to-RORPractitioner",
         "map" : "SavoirFaire.droitExerciceComplémentaire",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]

@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-person.csv), [Ex
   "version" : "0.7.0",
   "name" : "RORPerson",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -214,7 +214,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-person.csv), [Ex
       "id" : "Person.link:as-practitioner-exercice-professionnel",
       "path" : "Person.link",
       "sliceName" : "as-practitioner-exercice-professionnel",
-      "short" : "Référence vers l'exercice professionnel (RORPractitionerProfile) de la personne",
+      "short" : "Référence vers l'exercice professionnel (RORPractitioner) de la personne",
       "mustSupport" : true
     },
     {

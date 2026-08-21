@@ -1,15 +1,15 @@
-# RORPractitionerRoleProfile - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.7.0
+# RORPractitionerRole - Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social v0.7.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **RORPractitionerRoleProfile**
+* **RORPractitionerRole**
 
-## Resource Profile: RORPractitionerRoleProfile 
+## Resource Profile: RORPractitionerRole 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORPractitionerRoleProfile |
+| Draft as of 2026-08-21 | *Computable Name*:RORPractitionerRole |
 
  
 Profil créé dans le cadre du ROR pour décrire la situation d’exercice opérationnelle du professionnel dans la réalisation de l’offre 
@@ -39,9 +39,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
   "id" : "ror-practitionerrole",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole",
   "version" : "0.7.0",
-  "name" : "RORPractitionerRoleProfile",
+  "name" : "RORPractitionerRole",
   "status" : "draft",
-  "date" : "2026-08-21T09:28:33+00:00",
+  "date" : "2026-08-21T09:39:43+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
   }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
-    "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+    "identity" : "specmetier-to-RORPractitionerRole-situationOp",
     "name" : "SituationOperationnelle du Modèle exposition ROR V3"
   },
   {
@@ -98,7 +98,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "id" : "PractitionerRole",
       "path" : "PractitionerRole",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "SituationOperationnelle",
         "comment" : "Profils ayant Accès"
       }]
@@ -107,7 +107,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "id" : "PractitionerRole.id",
       "path" : "PractitionerRole.id",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "metadonnee.identifiant",
         "comment" : "Profil 1,\nProfil 2 si uniteSensible = Non ,\nProfil 3 si champ d'activité de l'offre = MS et si uniteSensible = Non,\nProfil4,\nProfil5 si uniteSensible = Non,\nProfil 0 uniquement si champs d'activité de l'offre 'Ville'  "
       }]
@@ -116,7 +116,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "id" : "PractitionerRole.meta",
       "path" : "PractitionerRole.meta",
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "metadonnee",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -127,7 +127,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "min" : 1,
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "dateMiseJour",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -157,7 +157,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J237-RegionOM-ROR/FHIR/JDV-J237-RegionOM-ROR"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "regionSource",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -182,7 +182,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J218-CNAMAmeliSecteurConventionnement-ROR/FHIR/JDV-J218-CNAMAmeliSecteurConventionnement-ROR"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "secteurConventionnement",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -194,7 +194,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "short" : "optionContratAccèsAuxSoins (SituationOperationnelle) : L'Option pratique tarifaire maîtrisée (OPTAM) a remplacé le Contrat d'accès aux soins (CAS) en 2017",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "optionContratAccèsAuxSoins",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -206,7 +206,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "short" : "carteVitaleAcceptee (SituationOperationnelle) : Précise si le professionnel, dans le cadre de cette situation opérationnelle, dispose des moyens techniques pour prendre en charge la carte vitale ou pas",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "carteVitaleAcceptee",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -224,7 +224,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "modeExerciceOffre",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -263,7 +263,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "identifiantSituationOperationnelle",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -278,7 +278,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "Professionnel"
       }]
     },
@@ -315,7 +315,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J33-CompetenceSpecifique-ROR/FHIR/JDV-J33-CompetenceSpecifique-ROR"
       },
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "competenceSpecifique",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -339,7 +339,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "OffreOperationnelle"
       }]
     },
@@ -350,7 +350,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "telecommunication",
         "comment" : "Profil 1,\nProfil 2 et Profil 5 si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non\nProfil 3 si champ d'activité MS et si si niveau de confidentialité de la telecommunication différent de 'très restreint' et uniteSensible = Non\nProfil 4 si niveau de confidentialité  de la telecommunication = 'public'\nProfil 0 si niveau de confidentialité  de la telecommunication = 'public' et uniteSensible = Non  "
       }]
@@ -405,7 +405,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "short" : "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "adresseTelecom",
         "comment" : "cf telecommunication"
       }]
@@ -428,7 +428,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "max" : "1",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "horaire",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -457,7 +457,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "typePlageHoraire",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -475,7 +475,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "debutDateEffective/finDateEffective",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -493,7 +493,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       }],
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "jourSemaine",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -504,7 +504,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "short" : "heureDebut (Horaire) : Heure de début de la plage horaire",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "heureDebut",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
@@ -515,7 +515,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
       "short" : "heureFin (Horaire) : Heure de fin de la plage horaire",
       "mustSupport" : true,
       "mapping" : [{
-        "identity" : "specmetier-to-RORPractitionerRoleProfile-situationOp",
+        "identity" : "specmetier-to-RORPractitionerRole-situationOp",
         "map" : "heureFin",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
