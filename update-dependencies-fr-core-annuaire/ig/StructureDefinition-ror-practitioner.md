@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
   "version" : "0.7.0",
   "name" : "RORPractitioner",
   "status" : "draft",
-  "date" : "2026-08-21T14:30:36+00:00",
+  "date" : "2026-08-21T16:03:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -376,9 +376,21 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorSpecialty",
+      "id" : "Practitioner.qualification:savoirFaire",
       "path" : "Practitioner.qualification",
-      "sliceName" : "rorSpecialty",
+      "sliceName" : "savoirFaire",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "code.coding.where(system = 'https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire').code"
+        }],
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Practitioner.qualification:savoirFaire/rorSpecialty",
+      "path" : "Practitioner.qualification",
+      "sliceName" : "savoirFaire/rorSpecialty",
       "short" : "specialite (SavoirFaire) : Spécialité ordinale",
       "min" : 0,
       "max" : "1",
@@ -390,19 +402,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorSpecialty.code.coding",
+      "id" : "Practitioner.qualification:savoirFaire/rorSpecialty.code.coding",
       "path" : "Practitioner.qualification.code.coding",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "system"
+          "path" : "$this"
         }],
-        "rules" : "open"
+        "rules" : "closed"
       },
       "min" : 2
     },
     {
-      "id" : "Practitioner.qualification:rorSpecialty.code.coding:typeSavoirFaire",
+      "id" : "Practitioner.qualification:savoirFaire/rorSpecialty.code.coding:typeSavoirFaire",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "typeSavoirFaire",
       "min" : 1,
@@ -414,7 +426,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.qualification:rorSpecialty.code.coding:valeur",
+      "id" : "Practitioner.qualification:savoirFaire/rorSpecialty.code.coding:valeur",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "valeur",
       "min" : 1,
@@ -426,9 +438,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }
     },
     {
-      "id" : "Practitioner.qualification:rorCompetence",
+      "id" : "Practitioner.qualification:savoirFaire/rorCompetence",
       "path" : "Practitioner.qualification",
-      "sliceName" : "rorCompetence",
+      "sliceName" : "savoirFaire/rorCompetence",
       "short" : "competence (SavoirFaire) : Compétence acquise par le professionnel",
       "min" : 0,
       "max" : "*",
@@ -440,19 +452,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorCompetence.code.coding",
+      "id" : "Practitioner.qualification:savoirFaire/rorCompetence.code.coding",
       "path" : "Practitioner.qualification.code.coding",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "system"
+          "path" : "$this"
         }],
-        "rules" : "open"
+        "rules" : "closed"
       },
       "min" : 2
     },
     {
-      "id" : "Practitioner.qualification:rorCompetence.code.coding:typeSavoirFaire",
+      "id" : "Practitioner.qualification:savoirFaire/rorCompetence.code.coding:typeSavoirFaire",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "typeSavoirFaire",
       "min" : 1,
@@ -464,7 +476,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.qualification:rorCompetence.code.coding:valeur",
+      "id" : "Practitioner.qualification:savoirFaire/rorCompetence.code.coding:valeur",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "valeur",
       "min" : 1,
@@ -476,9 +488,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }
     },
     {
-      "id" : "Practitioner.qualification:rorExclusiveCompetence",
+      "id" : "Practitioner.qualification:savoirFaire/rorExclusiveCompetence",
       "path" : "Practitioner.qualification",
-      "sliceName" : "rorExclusiveCompetence",
+      "sliceName" : "savoirFaire/rorExclusiveCompetence",
       "short" : "competenceExclusive (SavoirFaire) : Compétence exclusive",
       "min" : 0,
       "max" : "1",
@@ -490,19 +502,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorExclusiveCompetence.code.coding",
+      "id" : "Practitioner.qualification:savoirFaire/rorExclusiveCompetence.code.coding",
       "path" : "Practitioner.qualification.code.coding",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "system"
+          "path" : "$this"
         }],
-        "rules" : "open"
+        "rules" : "closed"
       },
       "min" : 2
     },
     {
-      "id" : "Practitioner.qualification:rorExclusiveCompetence.code.coding:typeSavoirFaire",
+      "id" : "Practitioner.qualification:savoirFaire/rorExclusiveCompetence.code.coding:typeSavoirFaire",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "typeSavoirFaire",
       "min" : 1,
@@ -514,7 +526,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.qualification:rorExclusiveCompetence.code.coding:valeur",
+      "id" : "Practitioner.qualification:savoirFaire/rorExclusiveCompetence.code.coding:valeur",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "valeur",
       "min" : 1,
@@ -526,9 +538,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }
     },
     {
-      "id" : "Practitioner.qualification:rorSpecificOrientation",
+      "id" : "Practitioner.qualification:savoirFaire/rorSpecificOrientation",
       "path" : "Practitioner.qualification",
-      "sliceName" : "rorSpecificOrientation",
+      "sliceName" : "savoirFaire/rorSpecificOrientation",
       "short" : "orientationParticuliere (SavoirFaire) : Orientation particulière",
       "min" : 0,
       "max" : "1",
@@ -540,19 +552,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorSpecificOrientation.code.coding",
+      "id" : "Practitioner.qualification:savoirFaire/rorSpecificOrientation.code.coding",
       "path" : "Practitioner.qualification.code.coding",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "system"
+          "path" : "$this"
         }],
-        "rules" : "open"
+        "rules" : "closed"
       },
       "min" : 2
     },
     {
-      "id" : "Practitioner.qualification:rorSpecificOrientation.code.coding:typeSavoirFaire",
+      "id" : "Practitioner.qualification:savoirFaire/rorSpecificOrientation.code.coding:typeSavoirFaire",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "typeSavoirFaire",
       "min" : 1,
@@ -564,7 +576,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.qualification:rorSpecificOrientation.code.coding:valeur",
+      "id" : "Practitioner.qualification:savoirFaire/rorSpecificOrientation.code.coding:valeur",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "valeur",
       "min" : 1,
@@ -576,9 +588,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }
     },
     {
-      "id" : "Practitioner.qualification:rorExpertiseCapacity",
+      "id" : "Practitioner.qualification:savoirFaire/rorExpertiseCapacity",
       "path" : "Practitioner.qualification",
-      "sliceName" : "rorExpertiseCapacity",
+      "sliceName" : "savoirFaire/rorExpertiseCapacity",
       "short" : "capacite (SavoirFaire) : Capacité de médecine",
       "min" : 0,
       "max" : "1",
@@ -590,19 +602,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorExpertiseCapacity.code.coding",
+      "id" : "Practitioner.qualification:savoirFaire/rorExpertiseCapacity.code.coding",
       "path" : "Practitioner.qualification.code.coding",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "system"
+          "path" : "$this"
         }],
-        "rules" : "open"
+        "rules" : "closed"
       },
       "min" : 2
     },
     {
-      "id" : "Practitioner.qualification:rorExpertiseCapacity.code.coding:typeSavoirFaire",
+      "id" : "Practitioner.qualification:savoirFaire/rorExpertiseCapacity.code.coding:typeSavoirFaire",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "typeSavoirFaire",
       "min" : 1,
@@ -614,7 +626,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.qualification:rorExpertiseCapacity.code.coding:valeur",
+      "id" : "Practitioner.qualification:savoirFaire/rorExpertiseCapacity.code.coding:valeur",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "valeur",
       "min" : 1,
@@ -626,9 +638,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }
     },
     {
-      "id" : "Practitioner.qualification:rorQualificationPAC",
+      "id" : "Practitioner.qualification:savoirFaire/rorQualificationPAC",
       "path" : "Practitioner.qualification",
-      "sliceName" : "rorQualificationPAC",
+      "sliceName" : "savoirFaire/rorQualificationPAC",
       "short" : "qualificationPAC (SavoirFaire) : Qualification de praticien adjoint contractuel",
       "min" : 0,
       "max" : "1",
@@ -640,19 +652,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorQualificationPAC.code.coding",
+      "id" : "Practitioner.qualification:savoirFaire/rorQualificationPAC.code.coding",
       "path" : "Practitioner.qualification.code.coding",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "system"
+          "path" : "$this"
         }],
-        "rules" : "open"
+        "rules" : "closed"
       },
       "min" : 2
     },
     {
-      "id" : "Practitioner.qualification:rorQualificationPAC.code.coding:typeSavoirFaire",
+      "id" : "Practitioner.qualification:savoirFaire/rorQualificationPAC.code.coding:typeSavoirFaire",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "typeSavoirFaire",
       "min" : 1,
@@ -664,7 +676,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.qualification:rorQualificationPAC.code.coding:valeur",
+      "id" : "Practitioner.qualification:savoirFaire/rorQualificationPAC.code.coding:valeur",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "valeur",
       "min" : 1,
@@ -676,9 +688,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }
     },
     {
-      "id" : "Practitioner.qualification:rorNonQualifyingDESC",
+      "id" : "Practitioner.qualification:savoirFaire/rorNonQualifyingDESC",
       "path" : "Practitioner.qualification",
-      "sliceName" : "rorNonQualifyingDESC",
+      "sliceName" : "savoirFaire/rorNonQualifyingDESC",
       "short" : "DESCNonQualifiant (SavoirFaire) : Diplôme d'études spécialisées complémentaires (DESC)",
       "min" : 0,
       "max" : "1",
@@ -690,19 +702,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorNonQualifyingDESC.code.coding",
+      "id" : "Practitioner.qualification:savoirFaire/rorNonQualifyingDESC.code.coding",
       "path" : "Practitioner.qualification.code.coding",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "system"
+          "path" : "$this"
         }],
-        "rules" : "open"
+        "rules" : "closed"
       },
       "min" : 2
     },
     {
-      "id" : "Practitioner.qualification:rorNonQualifyingDESC.code.coding:typeSavoirFaire",
+      "id" : "Practitioner.qualification:savoirFaire/rorNonQualifyingDESC.code.coding:typeSavoirFaire",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "typeSavoirFaire",
       "min" : 1,
@@ -714,7 +726,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.qualification:rorNonQualifyingDESC.code.coding:valeur",
+      "id" : "Practitioner.qualification:savoirFaire/rorNonQualifyingDESC.code.coding:valeur",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "valeur",
       "min" : 1,
@@ -726,9 +738,9 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }
     },
     {
-      "id" : "Practitioner.qualification:rorSupplementaryExerciseRight",
+      "id" : "Practitioner.qualification:savoirFaire/rorSupplementaryExerciseRight",
       "path" : "Practitioner.qualification",
-      "sliceName" : "rorSupplementaryExerciseRight",
+      "sliceName" : "savoirFaire/rorSupplementaryExerciseRight",
       "short" : "droitExerciceComplémentaire (SavoirFaire) : Droit d'exercice complémentaire du professionnel",
       "min" : 0,
       "max" : "1",
@@ -740,19 +752,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       }]
     },
     {
-      "id" : "Practitioner.qualification:rorSupplementaryExerciseRight.code.coding",
+      "id" : "Practitioner.qualification:savoirFaire/rorSupplementaryExerciseRight.code.coding",
       "path" : "Practitioner.qualification.code.coding",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
-          "path" : "system"
+          "path" : "$this"
         }],
-        "rules" : "open"
+        "rules" : "closed"
       },
       "min" : 2
     },
     {
-      "id" : "Practitioner.qualification:rorSupplementaryExerciseRight.code.coding:typeSavoirFaire",
+      "id" : "Practitioner.qualification:savoirFaire/rorSupplementaryExerciseRight.code.coding:typeSavoirFaire",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "typeSavoirFaire",
       "min" : 1,
@@ -764,7 +776,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitioner.csv
       "mustSupport" : true
     },
     {
-      "id" : "Practitioner.qualification:rorSupplementaryExerciseRight.code.coding:valeur",
+      "id" : "Practitioner.qualification:savoirFaire/rorSupplementaryExerciseRight.code.coding:valeur",
       "path" : "Practitioner.qualification.code.coding",
       "sliceName" : "valeur",
       "min" : 1,

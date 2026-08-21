@@ -26,7 +26,7 @@ Paramètre de recherche sur la dernière date de début de validité du tarif in
   "version" : "0.7.0",
   "name" : "RORSPOrganizationPriceValidityStartDate",
   "status" : "active",
-  "date" : "2026-08-21T14:30:36+00:00",
+  "date" : "2026-08-21T16:03:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

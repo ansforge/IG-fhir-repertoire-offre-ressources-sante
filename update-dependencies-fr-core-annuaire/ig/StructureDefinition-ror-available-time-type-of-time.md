@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-available-time-t
   "version" : "0.7.0",
   "name" : "RORAvailableTimeTypeOfTime",
   "status" : "draft",
-  "date" : "2026-08-21T14:30:36+00:00",
+  "date" : "2026-08-21T16:03:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

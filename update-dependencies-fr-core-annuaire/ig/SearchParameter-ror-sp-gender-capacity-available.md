@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer le genre disponible de la capacité.
   "version" : "0.7.0",
   "name" : "RORSPGenderCapacityAvailable",
   "status" : "active",
-  "date" : "2026-08-21T14:30:36+00:00",
+  "date" : "2026-08-21T16:03:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
