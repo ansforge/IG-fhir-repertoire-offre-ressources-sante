@@ -56,16 +56,25 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'exercice profes
 
 // Le savoir-faire reslice le slice natif "qualification[savoirFaire]" d'AsPractitionerProfile (une case
 // générique répétable, discriminée par sa propre valeur), en 8 sous-slices (une par facette : spécialité,
-// compétence, capacité...). Le reslicing FHIR standard (syntaxe qualification[savoirFaire/xxx]) fonctionne
-// avec SUSHI 3.20 à condition (1) d'ajouter le discriminant supplémentaire sur l'élément de base "qualification"
-// plutôt que sur la slice "savoirFaire" elle-même (SUSHI avertit sinon : "An element with a slice name should
-// not define its own slicing"), et (2) de redéclarer localement, dans chaque reslice, le sous-slicing fermé de
-// "code.coding" déjà présent sur le slice natif "savoirFaire" (SUSHI ne le reporte pas automatiquement dans les
-// reslices). Chaque facette porte un couple de codings : code.coding[typeSavoirFaire] fixé sur le code
-// TRE-R04-TypeSavoirFaire correspondant (codes réellement récupérés depuis le serveur de terminologie ANS :
-// S, C, CEX, OP, CAPA, PAC, DNQ, DEC) et code.coding[valeur] lié au value set ROR historique (JDV-J210, JDV-J232, etc.).
-* qualification ^slicing.discriminator[+].type = #value
-* qualification ^slicing.discriminator[=].path = "code.coding.where(system = 'https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire').code"
+// compétence, capacité...), via la syntaxe FHIR standard qualification[savoirFaire/xxx]. Deux points non
+// évidents pour que ça fonctionne : (1) le nouveau discriminant doit être déclaré sur la SLICE "savoirFaire"
+// elle-même (^slicing sur qualification[savoirFaire]), pas sur l'élément de base "qualification" — c'est le
+// mécanisme de reslicing standard FHIR (on tranche une slice existante en lui donnant sa propre slicing).
+// SUSHI émet un avertissement contraire ("An element with a slice name should not define its own slicing.
+// Instead, append additional discriminators to the original slicing on the base element.") : NE PAS le suivre,
+// il induit en erreur — ajouter le discriminant via `qualification ^slicing.discriminator[+]` sur l'élément de
+// base écrase silencieusement (dans SUSHI) le discriminant hérité au lieu de l'étendre, ce que SUSHI ne détecte
+// pas mais que le générateur de snapshot de l'IG Publisher rejette explicitement à la publication ("Slicing
+// rules on differential ... do not match those on base"). Vérifié avec le vrai IG Publisher (2.3.2) : l'approche
+// retenue ici passe la génération de snapshot et la validation de conformité sans erreur. (2) Il faut aussi
+// redéclarer localement, dans chaque reslice, le sous-slicing fermé de "code.coding" déjà présent sur le slice
+// natif "savoirFaire" (ni SUSHI ni le mécanisme de reslicing ne le reportent automatiquement dans les reslices).
+// Chaque facette porte un couple de codings : code.coding[typeSavoirFaire] fixé sur le code TRE-R04-TypeSavoirFaire
+// correspondant (codes réellement récupérés depuis le serveur de terminologie ANS : S, C, CEX, OP, CAPA, PAC, DNQ,
+// DEC) et code.coding[valeur] lié au value set ROR historique (JDV-J210, JDV-J232, etc.).
+* qualification[savoirFaire] ^slicing.discriminator.type = #value
+* qualification[savoirFaire] ^slicing.discriminator.path = "code.coding.where(system = 'https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire').code"
+* qualification[savoirFaire] ^slicing.rules = #open
 * qualification[savoirFaire] contains
     rorSpecialty 0..1 MS and
     rorCompetence 0..* MS and
