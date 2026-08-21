@@ -46,18 +46,29 @@ Description: "Profil créé dans le cadre du ROR pour décrire les organisations
 
 * telecom MS
 * telecom ^short = "boiteLettreMSS (OrganisationInterne) : Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l’organisation interne"
-* telecom.value 1..1 MS
-* telecom.value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
-* telecom.extension ^slicing.discriminator.type = #value
-* telecom.extension ^slicing.discriminator.path = "url"
-* telecom.extension ^slicing.rules = #open
-* telecom.extension contains
+// AsMailboxMSSProfile est un profil de type de données (ContactPoint), non lié à une ressource particulière :
+// il peut donc être réutilisé ici pour s'aligner sur le mécanisme standard AS/FR Core de représentation d'une
+// adresse de messagerie sécurisée, même si FRCoreOrganizationProfile ne slice pas nativement telecom.
+* telecom ^slicing.discriminator.type = #profile
+* telecom ^slicing.discriminator.path = "$this"
+* telecom ^slicing.rules = #open
+* telecom ^slicing.description = "Slicing pour isoler la boîte MSS, conforme au profil standard AsMailboxMSSProfile"
+* telecom contains
+    mailbox-mss 0..* MS
+* telecom[mailbox-mss] only AsMailboxMSSProfile
+* telecom[mailbox-mss].value 1..1 MS
+* telecom[mailbox-mss].value ^short = "adresseTelecom (Telecommunication) : Valeur de l'adresse de télécommunication dans le format induit par le canal de communication"
+* telecom[mailbox-mss].extension[emailType].valueCoding = $TRE-R256-TypeMessagerie#MSSANTE "MSSANTE"
+* telecom[mailbox-mss].extension ^slicing.discriminator.type = #value
+* telecom[mailbox-mss].extension ^slicing.discriminator.path = "url"
+* telecom[mailbox-mss].extension ^slicing.rules = #open
+* telecom[mailbox-mss].extension contains
     RORTelecomCommunicationChannel named ror-telecom-communication-channel 1..1 MS and
     RORTelecomUsage named ror-telecom-usage 0..1 MS and
     RORTelecomConfidentialityLevel named ror-telecom-confidentiality-level 1..1 MS
-* telecom.extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
-* telecom.extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
-* telecom.extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
+* telecom[mailbox-mss].extension[ror-telecom-communication-channel] ^short = "canal (Telecommunication) : Code spécifiant le canal ou la manière dont s'établit la communication"
+* telecom[mailbox-mss].extension[ror-telecom-usage] ^short = "utilisation (Telecommunication) : Utilisation du canal de communication"
+* telecom[mailbox-mss].extension[ror-telecom-confidentiality-level] ^short = "niveauConfidentialite (Telecommunication) : Niveau de restriction de l'accès aux attributs de la classe Télécommunication"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -97,8 +108,8 @@ Title:    "OrganisationInterne (pôle / service) du Modèle exposition ROR V3"
 
 * type[OIType] -> "typeOI" "Similaire aux accès de metadonnee.identifiant"
 
-* telecom -> "boiteLettreMSS" "Similaire aux accès de metadonnee.identifiant"
-* telecom.value -> "adresseTelecom" "cf boiteLettreMSS"
+* telecom[mailbox-mss] -> "boiteLettreMSS" "Similaire aux accès de metadonnee.identifiant"
+* telecom[mailbox-mss].value -> "adresseTelecom" "cf boiteLettreMSS"
 
 * extension[ROROrganizationReopeningDate] -> "datePrevisionnelleReouverture" "Similaire aux accès de metadonnee.identifiant"
 * extension[OrgPeriod].valuePeriod.end -> "dateOuverture" "Similaire aux accès de metadonnee.identifiant"

@@ -26,7 +26,7 @@ Pour chaque cas : un exemple JSON **avant**, un exemple JSON **après**, et une 
 | 12 | Savoir-faire (spécialités, compétences...) : de `PractitionerRole.specialty` à `Practitioner.qualification` | **Oui, majeur** | §8.3 |
 | 13 | Extensions `contracted`/`hasCAS`/`vitalAccepted` : nouvelle URL | **Oui** | §8.4 |
 | 14 | Boîte MSS de `ROROrganization` (EJ/EG) : élément `telecom` supprimé du profil | **Oui** | §9a |
-| 15 | Boîte MSS de `RORPractitioner` : slice native `mailbox-mss` disponible mais non utilisée | **Non (forme inchangée)**, point de vigilance validation | §9b |
+| 15 | Boîte MSS de `RORPractitioner`/`RORHealthcareService`/`RORInternalOrganization`/`RORCoreOrganizationUF` : migrées vers `AsMailboxMSSProfile` (`system`/`emailType` requis) | **Oui** | §9b |
 | 16 | `RORTask`/`RORMeasureReport` : nouvelles cibles de référence possibles | **Non-bloquant, additif** | §10 |
 | 17 | Dépendances (`sushi-config.yaml`) | **Indirect** | §11 |
 
@@ -461,9 +461,9 @@ C'est un changement d'API cassant : tout client doit être mis à jour avant le 
 
 ---
 
-## 9. Boîtes MSS (messagerie sécurisée de santé) : un impact réel, et un point non exploité
+## 9. Boîtes MSS (messagerie sécurisée de santé) : un impact réel, et un alignement sur le standard AS
 
-Deux choses à corriger par rapport à une lecture rapide du §11 « Ce qui NE change PAS » : la boîte MSS des pôles/services/UF **suit bien** le changement de ressource conteneur (déjà classé « Oui, majeur » en §2/§3 — ce n'était pas manqué, mais valait d'être dit explicitement) ; et il existe un second point, non documenté jusqu'ici, sur `ROROrganization` (EJ/EG) et `RORPractitioner`.
+Deux choses à corriger par rapport à une lecture rapide du §11 « Ce qui NE change PAS » : la boîte MSS des pôles/services/UF **suit bien** le changement de ressource conteneur (déjà classé « Oui, majeur » en §2/§3 — ce n'était pas manqué, mais valait d'être dit explicitement) ; et il existe un second point, non documenté au départ, sur `ROROrganization` (EJ/EG) et `RORPractitioner`, désormais traité (b).
 
 **a) `ROROrganization` (EJ/EG) perd purement et simplement `telecom`.** Dans l'ancien modèle, `ROROrganization` portait la boîte MSS pour les 3 objets métier qu'il regroupait (EJ, EG, OI) — y compris donc quand l'instance représentait une OI (pôle/service/UF, identifiable via `type[OIType]`). Dans le nouveau modèle, l'élément `telecom` a été **retiré du profil `ROROrganization`** (EJ/EG) : il n'apparaît plus du tout dans le FSH. Il n'est donc plus jamais présent sur une ressource `Organization` conforme à `ror-organization`, quelle que soit la donnée. Un client qui allait chercher la boîte MSS d'une OI sur `Organization/{id}` avec `meta.profile = ror-organization` doit désormais aller la chercher sur `Organization/{id}` avec `meta.profile = ror-internal-organization` (pôle/service) ou `ror-core-organization-uf` (UF) — cf. §2/§3.
 
@@ -477,28 +477,40 @@ Deux choses à corriger par rapport à une lecture rapide du §11 « Ce qui NE c
   }
 ```
 
-**b) `AsOrganizationProfile` et `AsPractitionerProfile` définissent nativement une slice `telecom:mailbox-mss` que le ROR n'utilise pas.** Ces deux profils (nouveaux parents de `ROROrganization` et `RORPractitioner`) portent chacun, en plus de l'élément `telecom` générique, une slice nommée `mailbox-mss` (`ContactPoint` profilé `as-mailbox-mss`) qui impose `system` fixé à `"email"` et une extension FR Core obligatoire `fr-core-contact-point-email-type`, plus une extension optionnelle `as-ext-mailbox-mss-metadata` (type de boîte, description, responsable, service, liste rouge). C'est cette slice qui serait « la » façon standard AS/FR Core de porter une adresse MSS.
+**b) Toutes les boîtes MSS restantes du projet ont été migrées vers le profil standard `AsMailboxMSSProfile`.** `AsOrganizationProfile` et `AsPractitionerProfile` (nouveaux parents de `ROROrganization` et `RORPractitioner`) portent nativement, en plus de l'élément `telecom` générique, une slice nommée `mailbox-mss` conforme au profil `AsMailboxMSSProfile` (`ContactPoint` : `system` fixé à `"email"` + extension FR Core obligatoire `fr-core-contact-point-email-type`, liée à `TRE-R256-TypeMessagerie` — ex. `MSSANTE` — plus une extension optionnelle `as-ext-mailbox-mss-metadata` que le ROR n'exploite pas, faute d'équivalent métier). C'est cette slice qui est « la » façon standard AS/FR Core de porter une adresse MSS.
 
-Le ROR **ne l'utilise pas** : `RORPractitioner.telecom` continue de porter sa boîte MSS avec la même forme qu'avant (juste `.value` + les 3 extensions ROR `ror-telecom-communication-channel`/`ror-telecom-usage`/`ror-telecom-confidentiality-level`, sans `fr-core-contact-point-email-type` ni `as-ext-mailbox-mss-metadata`). C'est une divergence volontaire ou non tranchée (même famille de sujet que le point ouvert §4 sur `as-ext-organization-types`) :
+`AsMailboxMSSProfile` est un profil de **type de données** (`ContactPoint`), pas un profil de ressource : il n'est donc pas réservé aux ressources qui héritent d'`AsOrganizationProfile`/`AsPractitionerProfile`. Rien n'empêche un profil qui hérite de `hl7.fhir.fr.core` (donc sans cette slice native) de le référencer explicitement sur son propre `telecom`, en le déclarant lui-même via `only AsMailboxMSSProfile`. Les 4 profils du projet qui portent une boîte MSS ont donc tous été alignés :
 
-```json
-{
-  "resourceType": "Practitioner",
-  "telecom": [{
-    "value": "dr.martin@xxx.mssante.fr",
-    "extension": [
-      { "url": ".../ror-telecom-communication-channel", "valueCodeableConcept": { "coding": [{ "code": "1" }] } },
-      { "url": ".../ror-telecom-confidentiality-level", "valueCodeableConcept": { "coding": [{ "code": "1" }] } }
-    ]
-  }]
-}
+| Profil | Parent | Slice `mailbox-mss` |
+|---|---|---|
+| `RORPractitioner` | `AsPractitionerProfile` (AS) | héritée nativement, référencée par `telecom[mailbox-mss]` |
+| `RORHealthcareService` | `FRCoreHealthcareServiceProfile` (FR Core) | déclarée par le ROR (`telecom contains mailbox-mss ... only AsMailboxMSSProfile`) |
+| `RORInternalOrganization` | `FRCoreOrganizationProfile` (FR Core) | déclarée par le ROR, idem |
+| `RORCoreOrganizationUF` | `FRCoreOrganizationUFProfile` (FR Core) | déclarée par le ROR, idem |
+
+Dans les 4 cas, le slicing d'extensions étant `open`, les 3 extensions ROR (`ror-telecom-communication-channel`/`ror-telecom-usage`/`ror-telecom-confidentiality-level`) — dont le **niveau de confidentialité**, qui pilote le filtrage d'accès aux données dans l'API — restent portées sur cette même slice, en plus des exigences natives :
+
+```diff
+  {
+    "resourceType": "Practitioner",
+    "telecom": [{
+      "value": "dr.martin@xxx.mssante.fr",
++     "system": "email",
+      "extension": [
++       { "url": "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point-email-type",
++         "valueCoding": { "system": "https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie", "code": "MSSANTE" } },
+        { "url": ".../ror-telecom-communication-channel", "valueCodeableConcept": { "coding": [{ "code": "1" }] } },
+        { "url": ".../ror-telecom-confidentiality-level", "valueCodeableConcept": { "coding": [{ "code": "1" }] } }
+      ]
+    }]
+  }
 ```
 
-**Impact client :**
+(Même diff pour `RORHealthcareService`, `RORInternalOrganization` et `RORCoreOrganizationUF`, en remplaçant `resourceType` et l'adresse par le contexte concerné.)
 
-- Pour `RORPractitioner` : **aucun changement de forme** — la boîte MSS du professionnel garde exactement la même structure JSON qu'avant. Un client qui l'interprète déjà via les extensions ROR n'a rien à changer.
-- Pour `ROROrganization` (EJ/EG) : **rupture** si un client lisait la boîte MSS d'une OI sur ce profil (§2/§3, mais valait cette clarification explicite).
-- Pas d'impact de build : `sushi .` ne remonte aucune erreur ni avertissement sur ce point précis (contrairement à la réduction de cardinalité `mailbox-mss` documentée dans `impacts.md` §8 pour `RORPractitionerRole.telecom`, qui est un sujet différent — `RORPractitionerRole` ne porte pas de boîte MSS, sa slice `telecom` sert à la télécommunication de la situation d'exercice). À surveiller uniquement si un consommateur valide un jour les ressources avec un validateur FHIR strict directement contre `AsOrganizationProfile`/`AsPractitionerProfile`.
+Vérifié par un build SUSHI local (`sushi .`, 0 erreur) sur les 4 profils : chaque `StructureDefinition` généré confirme que `telecom:mailbox-mss` porte bien, dans l'ordre, l'extension native `emailType` (fixée à `MSSANTE`) et les 3 extensions ROR, avec les mêmes contraintes de cardinalité qu'avant (`value` 1..1, `ror-telecom-communication-channel`/`ror-telecom-confidentiality-level` 1..1, `ror-telecom-usage` 0..1).
+
+**Impact client :** rupture identique sur les 4 profils — un `telecom` de boîte MSS doit désormais avoir `system: "email"` et porter l'extension `fr-core-contact-point-email-type` (fixée à `MSSANTE`) en plus des extensions ROR déjà attendues. Un client qui *envoie* des données vers l'API doit produire ces champs ; un client qui *lit* la boîte MSS et ignorait déjà `system`/les extensions inconnues n'est pas affecté en lecture (ajout de champs), mais un client qui valide strictement doit s'attendre à ces nouveaux éléments obligatoires. Pour `ROROrganization` (EJ/EG), la question est sans objet : `telecom` a disparu de ce profil (a).
 
 ---
 
@@ -534,5 +546,4 @@ Un client qui embarque ces packages pour valider les ressources reçues (plutôt
 - `RORQuestionnaire`, `RORMeasure` et la plupart des extensions ROR (`RORActType`, `RORHealthcareService*`, `ROROrganization*`...) : aucun changement de forme.
 - Les valeurs `identifier.system` de `ROROrganization` (FINESS, SIREN/SIRET, rppsRang, OI) : inchangées, seul `identifier.type` change (§1).
 - Le contenu fonctionnel des pôles/services/UF (identifiant OI, nom, type, dates) : identique, seule la ressource conteneur (`resourceType`/`meta.profile`) change (§2, §3) — la boîte MSS suit ce même changement de conteneur, avec une nuance supplémentaire détaillée en §9.
-- La forme de la boîte MSS du professionnel (`RORPractitioner.telecom`) : inchangée (§9).
 - `RORLocation` : forme du JSON inchangée à l'exception du correctif `identifier.type` (additif, §7).
