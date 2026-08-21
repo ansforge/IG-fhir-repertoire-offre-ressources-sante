@@ -1,11 +1,11 @@
-Profile: RORPractitionerRoleProfile
+Profile: RORPractitionerRole
 Parent: AsPractitionerRoleProfile
 Id: ror-practitionerrole
 Description: "Profil créé dans le cadre du ROR pour décrire la situation d'exercice opérationnelle du professionnel dans la réalisation de l'offre"
 
 /* Références*/
 * practitioner 1..1 MS
-* practitioner only Reference(RORPractitionerProfile)
+* practitioner only Reference(RORPractitioner)
 * organization only Reference(ROROrganization)
 * organization ^short = "Rattachement à l'entité géographique (EG) ou juridique (EJ) - cible héritée d'AsPractitionerRoleProfile"
 * healthcareService 1..1 MS
@@ -83,9 +83,9 @@ Description: "Profil créé dans le cadre du ROR pour décrire la situation d'ex
 * extension[as-ext-practitionerrole-vitale-accepted] MS
 * extension[as-ext-practitionerrole-vitale-accepted] ^short = "carteVitaleAcceptee (SituationOperationnelle) : Précise si le professionnel, dans le cadre de cette situation opérationnelle, dispose des moyens techniques pour prendre en charge la carte vitale ou pas"
 
-Mapping:  ConceptMetier_RORPractitionerRoleProfile_SituationOp
-Source:   RORPractitionerRoleProfile
-Id:       specmetier-to-RORPractitionerRoleProfile-situationOp
+Mapping:  ConceptMetier_RORPractitionerRole_SituationOp
+Source:   RORPractitionerRole
+Id:       specmetier-to-RORPractitionerRole-situationOp
 Title:    "SituationOperationnelle du Modèle exposition ROR V3"
 * -> "SituationOperationnelle" "Profils ayant Accès"
 

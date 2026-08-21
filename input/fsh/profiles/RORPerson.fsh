@@ -25,8 +25,8 @@ Description: "Profil créé dans le cadre du ROR pour décrire les données d'id
 /* Références */
 * link MS
 * link[as-practitioner-exercice-professionnel] MS
-* link[as-practitioner-exercice-professionnel].target only Reference(RORPractitionerProfile)
-* link[as-practitioner-exercice-professionnel] ^short = "Référence vers l'exercice professionnel (RORPractitionerProfile) de la personne"
+* link[as-practitioner-exercice-professionnel].target only Reference(RORPractitioner)
+* link[as-practitioner-exercice-professionnel] ^short = "Référence vers l'exercice professionnel (RORPractitioner) de la personne"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"

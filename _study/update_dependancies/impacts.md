@@ -37,44 +37,47 @@ L'ancien `ROROrganization` mélangeait 3 objets métier (EJ, EG, OI) en un seul 
 
 La demande précise que `RORLocation` ne doit **pas changer** (héritage direct de `Location`), car les compléments FR Core sur `Location` concernent la description d'une chambre, un usage différent de celui du ROR.
 
-**Problème constaté à la construction (SUSHI) :** `FRCoreHealthcareServiceProfile.location` et `AsPractitionerRoleProfile.location` **restreignent déjà** leur cible à `fr-core-location` uniquement. Une fois `RORHealthcareService` et `RORPractitionerRoleProfile` alignés sur ces parents FR Core (demandé explicitement), ils ne peuvent plus référencer un profil `Location` qui ne descend pas de `fr-core-location` : le build échoue si `RORLocation` reste sur `Location` nu.
+**Problème constaté à la construction (SUSHI) :** `FRCoreHealthcareServiceProfile.location` et `AsPractitionerRoleProfile.location` **restreignent déjà** leur cible à `fr-core-location` uniquement. Une fois `RORHealthcareService` et `RORPractitionerRole` alignés sur ces parents FR Core (demandé explicitement), ils ne peuvent plus référencer un profil `Location` qui ne descend pas de `fr-core-location` : le build échoue si `RORLocation` reste sur `Location` nu.
 
 **Résolution appliquée :** `RORLocation` hérite maintenant de `FRCoreLocationProfile` plutôt que de `Location`. Les compléments FR Core ajoutés par ce profil (`typeChambre`, `positionLit`) sont tous **optionnels (0..1)** et restent simplement non utilisés/non peuplés par le ROR — la sémantique fonctionnelle voulue (une Location ROR = un ensemble de chambres, pas une chambre) n'est pas affectée, seule la ligne d'héritage technique change.
 
-**⚠️ Point à faire valider explicitement** : c'est un écart par rapport à l'instruction initiale ("pas de changement"), rendu nécessaire par les autres évolutions demandées (RORHealthcareService et RORPractitionerRoleProfile alignés sur FR Core/AS). Sans ce changement, l'IG ne compile pas.
+**⚠️ Point à faire valider explicitement** : c'est un écart par rapport à l'instruction initiale ("pas de changement"), rendu nécessaire par les autres évolutions demandées (RORHealthcareService et RORPractitionerRole alignés sur FR Core/AS). Sans ce changement, l'IG ne compile pas.
 
 ## 5. RORPractitioner → RORPerson
 
 - Renommé et changement de ressource support : `Practitioner` → **`Person`** (parent `AsPersonProfile`).
 - L'identité pérenne (nom de naissance, civilité, sexe, date de naissance) reste sur `RORPerson`.
-- L'identifiant national du professionnel (`idNat_PS`/RPPS, système `urn:oid:1.2.250.1.71.4.2.1`) et la boîte MSS professionnelle **déménagent** vers `RORPractitionerProfile` (voir §6) car `AsPersonProfile` ne porte pas ces informations — c'est `AsPractitionerProfile` qui les définit nativement.
-- Lien natif ajouté : `RORPerson.link[as-practitioner-exercice-professionnel].target` resserré sur `RORPractitionerProfile`.
-- **Impact référentiel** : `Person` n'est **pas** un type de cible valide pour `Task.requester/owner/restriction.recipient` ni pour `MeasureReport.subject/reporter` (contrainte FHIR de base, indépendante du ROR). `RORTask` et `RORMeasureReport` référencent donc désormais `RORPractitionerProfile`/`RORPractitionerRoleProfile` mais **pas** `RORPerson` sur ces éléments.
+- L'identifiant national du professionnel (`idNat_PS`/RPPS, système `urn:oid:1.2.250.1.71.4.2.1`) et la boîte MSS professionnelle **déménagent** vers `RORPractitioner` (voir §6) car `AsPersonProfile` ne porte pas ces informations — c'est `AsPractitionerProfile` qui les définit nativement.
+- Lien natif ajouté : `RORPerson.link[as-practitioner-exercice-professionnel].target` resserré sur `RORPractitioner`.
+- **Impact référentiel** : `Person` n'est **pas** un type de cible valide pour `Task.requester/owner/restriction.recipient` ni pour `MeasureReport.subject/reporter` (contrainte FHIR de base, indépendante du ROR). `RORTask` et `RORMeasureReport` référencent donc désormais `RORPractitioner`/`RORPractitionerRole` mais **pas** `RORPerson` sur ces éléments.
 
-## 6. RORPractitionerRole → 2 profils
+## 6. L'ancien RORPractitionerRole (parent PractitionerRole nu) → 2 profils
+
+Ces deux profils réutilisent les noms `RORPractitioner`/`RORPractitionerRole` (libérés par le renommage du §5),
+mais leur parent et leur périmètre métier sont désormais différents de l'ancien modèle.
 
 | Nouveau profil | Id | Parent | Objet métier |
 |---|---|---|---|
-| `RORPractitionerProfile` | `ror-practitioner` (id repris de l'ancien RORPractitioner) | `AsPractitionerProfile` | Exercice professionnel (profession, savoir-faire, identité d'exercice) |
-| `RORPractitionerRoleProfile` | `ror-practitionerrole` (id inchangé) | `AsPractitionerRoleProfile` | Situation d'exercice opérationnelle |
+| `RORPractitioner` | `ror-practitioner` | `AsPractitionerProfile` | Exercice professionnel (profession, savoir-faire, identité d'exercice) |
+| `RORPractitionerRole` | `ror-practitionerrole` | `AsPractitionerRoleProfile` | Situation d'exercice opérationnelle |
 
 **Répartition des données (basée sur la structure réelle d'`AsPractitionerProfile`/`AsPractitionerRoleProfile`) :**
 
 - **Identité d'exercice** (`civiliteExercice`/`nomExercice`/`prenomExercice`) : portée nativement par `Practitioner.name.suffix/family/given` dans `AsPractitionerProfile`. L'extension `RORPractitionerRoleName` (créée pour porter cette même donnée sur `PractitionerRole`) est **devenue redondante et a été supprimée**.
-- **Profession** (`code` sur l'ancien `RORPractitionerRole`, lié à `JDV-J229-ProfessionSante-ROR`) : déplacée vers `RORPractitionerProfile.qualification[exercicePro].code.coding[profession]`, car `PractitionerRole.code` dans le modèle AS porte désormais d'autres notions (`genreActivite`, `modeExercice`, `typeActiviteLiberale`, `statutHospitalier`, `fonction`...) sans rapport avec l'ancienne "profession" du ROR.
-- **Savoir-faire** (les 8 facettes `specialty`/`competence`/`exclusiveCompetence`/`specificOrientation`/`expertiseCapacity`/`qualificationPAC`/`nonQualifyingDESC`/`supplementaryExerciseRight`, plus `expertiseType` qui disparaît en tant que tel) : déplacées vers `RORPractitionerProfile.qualification`, sous la forme de slices `qualification[rorXxx]` portant chacun un couple de codings — `coding[typeSavoirFaire]` fixé sur le code `TRE-R04-TypeSavoirFaire` correspondant (codes réellement récupérés depuis le serveur de terminologie ANS : `S`, `C`, `CEX`, `OP`, `CAPA`, `PAC`, `DNQ`, `DEC`) et `coding[valeur]` lié au value set ROR historique (`JDV-J210`, `JDV-J232`, etc.).
+- **Profession** (`code` sur l'ancien `RORPractitionerRole`, lié à `JDV-J229-ProfessionSante-ROR`) : déplacée vers `RORPractitioner.qualification[exercicePro].code.coding[profession]`, car `PractitionerRole.code` dans le modèle AS porte désormais d'autres notions (`genreActivite`, `modeExercice`, `typeActiviteLiberale`, `statutHospitalier`, `fonction`...) sans rapport avec l'ancienne "profession" du ROR.
+- **Savoir-faire** (les 8 facettes `specialty`/`competence`/`exclusiveCompetence`/`specificOrientation`/`expertiseCapacity`/`qualificationPAC`/`nonQualifyingDESC`/`supplementaryExerciseRight`, plus `expertiseType` qui disparaît en tant que tel) : déplacées vers `RORPractitioner.qualification`, sous la forme de slices `qualification[rorXxx]` portant chacun un couple de codings — `coding[typeSavoirFaire]` fixé sur le code `TRE-R04-TypeSavoirFaire` correspondant (codes réellement récupérés depuis le serveur de terminologie ANS : `S`, `C`, `CEX`, `OP`, `CAPA`, `PAC`, `DNQ`, `DEC`) et `coding[valeur]` lié au value set ROR historique (`JDV-J210`, `JDV-J232`, etc.).
   - **Limite technique constatée** : le reslicing FSH du slice natif `qualification[savoirFaire]` d'`AsPractitionerProfile` (syntaxe `qualification[savoirFaire/xxx]` ou `qualification[savoirFaire][xxx]`) n'a pas pu être fait fonctionner avec SUSHI 3.20 malgré plusieurs approches. Ces 8 facettes sont donc modélisées comme des **slices `qualification` de plein droit** (`rorSpecialty`, `rorCompetence`, ...), sœurs du slice natif `savoirFaire` plutôt que descendantes de celui-ci. Le contenu clinique/les codes sont corrects et identiques à ce qui était prévu ; seule l'arborescence technique du `StructureDefinition` diffère de ce qu'aurait donné un reslicing réussi. *Un développeur FSH plus expérimenté sur ce point précis pourra retenter le reslicing natif si souhaité — non bloquant pour la publication.*
-  - `specialty[specificCompetence]` (compétence spécifique facilitant l'accueil, `JDV-J33`) reste en revanche sur **`RORPractitionerRoleProfile.specialty`** (élément natif `PractitionerRole.specialty`, non utilisé par le modèle AS) : c'est une capacité propre à la situation d'exercice, pas une qualification professionnelle pérenne.
-- **Le reste** (identifiant de situation opérationnelle, `availableTime`, `telecom` situationnel, `healthcareService`, `organization`, `location`, extensions `contracted`/`hasCAS`/`vitaleAccepted`/mode d'exercice/commentaire/date de création) reste sur `RORPractitionerRoleProfile`.
+  - `specialty[specificCompetence]` (compétence spécifique facilitant l'accueil, `JDV-J33`) reste en revanche sur **`RORPractitionerRole.specialty`** (élément natif `PractitionerRole.specialty`, non utilisé par le modèle AS) : c'est une capacité propre à la situation d'exercice, pas une qualification professionnelle pérenne.
+- **Le reste** (identifiant de situation opérationnelle, `availableTime`, `telecom` situationnel, `healthcareService`, `organization`, `location`, extensions `contracted`/`hasCAS`/`vitaleAccepted`/mode d'exercice/commentaire/date de création) reste sur `RORPractitionerRole`.
 - `AsPractitionerRoleProfile` fournit déjà nativement les extensions `as-ext-practitionerrole-contracted`, `as-ext-practitionerrole-hascas`, `as-ext-practitionerrole-vitale-accepted` et le slice d'identifiant `idSituationExercice` : le ROR ne fait plus que les resserrer (MS + bindings), au lieu de redéfinir ses propres extensions pointant vers `apifhir.annuaire.sante.fr` (alias `$practitionerRole-contracted`/`-hasCAS`/`-vitaleAccepted`, **devenus inutiles et supprimés** de `aliases.fsh`).
 - **Cibles de référence resserrées** par les parents AS/FR Core (contrainte FHIR, pas un choix ROR) :
-  - `RORPractitionerRoleProfile.organization` : `AsPractitionerRoleProfile` restreint déjà à `AsOrganizationProfile` → uniquement `ROROrganization` (EG/EJ), **pas** `RORInternalOrganization`/`RORCoreOrganizationUF`. Un professionnel n'a donc une situation d'exercice rattachée qu'à une EG/EJ, jamais directement à un pôle/service/UF.
-  - `RORPractitionerRoleProfile.healthcareService`/`.location` : restreints à `RORHealthcareService`/`RORLocation` uniquement (plus de cible `HealthcareService`/`Location` nue).
+  - `RORPractitionerRole.organization` : `AsPractitionerRoleProfile` restreint déjà à `AsOrganizationProfile` → uniquement `ROROrganization` (EG/EJ), **pas** `RORInternalOrganization`/`RORCoreOrganizationUF`. Un professionnel n'a donc une situation d'exercice rattachée qu'à une EG/EJ, jamais directement à un pôle/service/UF.
+  - `RORPractitionerRole.healthcareService`/`.location` : restreints à `RORHealthcareService`/`RORLocation` uniquement (plus de cible `HealthcareService`/`Location` nue).
 
 ## 7. Autres profils impactés (références croisées)
 
-- **`RORTask`** : `requester`/`owner`/`restriction.recipient` mis à jour vers `ROROrganization or RORInternalOrganization or RORCoreOrganizationUF or RORPractitionerProfile or RORPractitionerRoleProfile` (`RORPerson` exclu, cf. §5).
-- **`RORMeasureReport`** : `subject` → `RORPractitionerProfile or RORPractitionerRoleProfile or RORLocation` ; `reporter` → idem + les 3 profils d'organisation.
+- **`RORTask`** : `requester`/`owner`/`restriction.recipient` mis à jour vers `ROROrganization or RORInternalOrganization or RORCoreOrganizationUF or RORPractitioner or RORPractitionerRole` (`RORPerson` exclu, cf. §5).
+- **`RORMeasureReport`** : `subject` → `RORPractitioner or RORPractitionerRole or RORLocation` ; `reporter` → idem + les 3 profils d'organisation.
 - **`RORQuestionnaire`**, **`RORMeasure`**, extensions (`RORActType`, `RORHealthcareService*`, `ROROrganization*`, etc.) : **aucun changement nécessaire**, ils ne référencent pas directement les profils restructurés.
 
 ## 8. Non-régression

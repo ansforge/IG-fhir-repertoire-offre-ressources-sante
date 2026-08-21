@@ -1,4 +1,4 @@
-Profile: RORPractitionerProfile
+Profile: RORPractitioner
 Parent: AsPractitionerProfile
 Id: ror-practitioner
 Description: "Profil créé dans le cadre du ROR pour décrire l'exercice professionnel d'une personne physique : identité d'exercice, profession et savoir-faire (spécialités, compétences...)"
@@ -152,10 +152,10 @@ Description: "Profil créé dans le cadre du ROR pour décrire l'exercice profes
     RORMetaCreationDate named ror-meta-creation-date 1..1 MS
 * extension[ror-meta-creation-date] ^short = "dateCreation (Metadonnee)"
 
-Mapping:  ConceptMetier_RORPractitionerProfile
-Source:   RORPractitionerProfile
+Mapping:  ConceptMetier_RORPractitioner
+Source:   RORPractitioner
 Target:   "https://esante.gouv.fr/sites/default/files/media/document/ROR_ME_V3.0.1_ModeleExposition_VFD_20260316.pdf"
-Id:       specmetier-to-RORPractitionerProfile
+Id:       specmetier-to-RORPractitioner
 Title:    "ExerciceProfessionnel du Modèle exposition ROR V3"
 * -> "ExerciceProfessionnel" "Profils ayant Accès"
 
