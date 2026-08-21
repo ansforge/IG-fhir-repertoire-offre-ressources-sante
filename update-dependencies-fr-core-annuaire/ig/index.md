@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/ImplementationGuide/ans.fhir.fr.ror | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:ROR |
+| Draft as of 2026-08-21 | *Computable Name*:ROR |
 
  **Brief description of this Implementation Guide**
  The French directory of healthcare and medico-social support services and resources ([ROR](https://esante.gouv.fr/produits-services/repertoire-ror)) is the repository (in the sense of a repository of data) for describing the healthcare services offered by Health facility, medico-social establishments and services, and local structures in France. The aim of this implementation guide is to define the specifications of the ROR FHIR API, enabling any authorized application to search for a healthcare offer and its capabilities (availability, equipment, etc.). 
@@ -160,7 +160,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ROR",
   "title" : "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

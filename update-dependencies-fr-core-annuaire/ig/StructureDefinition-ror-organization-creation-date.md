@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-creation-date | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:ROROrganizationCreationDate |
+| Draft as of 2026-08-21 | *Computable Name*:ROROrganizationCreationDate |
 
 Extension créée dans le cadre du ROR pour définir la date de création de l’entité juridique.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization-cre
   "version" : "0.7.0",
   "name" : "ROROrganizationCreationDate",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

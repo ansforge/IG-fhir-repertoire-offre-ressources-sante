@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole-unit-exercise-mode | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORPractitionerRoleUnitExerciseMode |
+| Draft as of 2026-08-21 | *Computable Name*:RORPractitionerRoleUnitExerciseMode |
 
 Extension créée dans le cadre du ROR qui correspond au statut du professionnel lorsqu’il exerce dans le cadre de l’offre décrite.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
   "version" : "0.7.0",
   "name" : "RORPractitionerRoleUnitExerciseMode",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

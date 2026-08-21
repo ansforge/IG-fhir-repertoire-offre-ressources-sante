@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-closing-type | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:ROROrganizationClosingType |
+| Draft as of 2026-08-21 | *Computable Name*:ROROrganizationClosingType |
 
 Extension créée dans le cadre du ROR pour définir le type de fermeture de l’organisation.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization-clo
   "version" : "0.7.0",
   "name" : "ROROrganizationClosingType",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

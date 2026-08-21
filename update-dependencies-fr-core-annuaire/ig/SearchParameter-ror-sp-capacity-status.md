@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-capacity-status | *Version*:0.7.0 |
-| Active as of 2026-08-20 | *Computable Name*:RORSPCapacityStatus |
+| Active as of 2026-08-21 | *Computable Name*:RORSPCapacityStatus |
 
  
 Paramètre de recherche pour récupérer le statut de la capacité. 
@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer le statut de la capacité.
   "version" : "0.7.0",
   "name" : "RORSPCapacityStatus",
   "status" : "active",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

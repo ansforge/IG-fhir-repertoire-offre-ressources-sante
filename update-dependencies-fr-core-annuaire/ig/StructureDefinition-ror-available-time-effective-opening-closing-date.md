@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-effective-opening-closing-date | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORAvailableTimeEffectiveOpeningClosingDate |
+| Draft as of 2026-08-21 | *Computable Name*:RORAvailableTimeEffectiveOpeningClosingDate |
 
 Extension créée dans le cadre du ROR pour décrire le planning d’activité d’un professionnel ou d’une offre.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-available-time-e
   "version" : "0.7.0",
   "name" : "RORAvailableTimeEffectiveOpeningClosingDate",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

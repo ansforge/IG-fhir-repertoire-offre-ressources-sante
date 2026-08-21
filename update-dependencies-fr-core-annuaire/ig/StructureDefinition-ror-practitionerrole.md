@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-practitionerrole | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORPractitionerRoleProfile |
+| Draft as of 2026-08-21 | *Computable Name*:RORPractitionerRoleProfile |
 
  
 Profil créé dans le cadre du ROR pour décrire la situation d’exercice opérationnelle du professionnel dans la réalisation de l’offre 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-practitionerrole
   "version" : "0.7.0",
   "name" : "RORPractitionerRoleProfile",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

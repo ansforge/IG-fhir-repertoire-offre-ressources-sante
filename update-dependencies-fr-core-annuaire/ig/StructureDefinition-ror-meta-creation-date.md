@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-creation-date | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORMetaCreationDate |
+| Draft as of 2026-08-21 | *Computable Name*:RORMetaCreationDate |
 
 Extension créée dans le cadre du ROR qui correspond à la date de création (dans le ROR régional) présente dans les métadonnées.
 
@@ -54,7 +54,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-meta-creation-da
   "version" : "0.7.0",
   "name" : "RORMetaCreationDate",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

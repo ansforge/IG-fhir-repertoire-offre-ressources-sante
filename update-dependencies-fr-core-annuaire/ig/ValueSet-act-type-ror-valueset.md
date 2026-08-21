@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/act-type-ror-valueset | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:ActTypeRORValueSet |
+| Draft as of 2026-08-21 | *Computable Name*:ActTypeRORValueSet |
 
  
 Valueset type d’acte 
@@ -54,7 +54,7 @@ Valueset type d’acte
   "title" : "Valueset type d'acte",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

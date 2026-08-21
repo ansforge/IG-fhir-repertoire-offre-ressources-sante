@@ -82,6 +82,12 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:HealthcareService/f:identifier</sch:title>
+    <sch:rule context="f:HealthcareService/f:identifier">
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>f:HealthcareService/f:telecom</sch:title>
     <sch:rule context="f:HealthcareService/f:telecom">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>

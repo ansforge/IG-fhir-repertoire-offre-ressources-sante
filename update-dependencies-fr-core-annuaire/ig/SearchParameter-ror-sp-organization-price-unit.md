@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-unit | *Version*:0.7.0 |
-| Active as of 2026-08-20 | *Computable Name*:RORSPOrganizationPriceUnit |
+| Active as of 2026-08-21 | *Computable Name*:RORSPOrganizationPriceUnit |
 
  
 Paramètre de recherche sur l’unité de référence pour évaluer le prix des prestations et services 
@@ -26,7 +26,7 @@ Paramètre de recherche sur l’unité de référence pour évaluer le prix des 
   "version" : "0.7.0",
   "name" : "RORSPOrganizationPriceUnit",
   "status" : "active",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

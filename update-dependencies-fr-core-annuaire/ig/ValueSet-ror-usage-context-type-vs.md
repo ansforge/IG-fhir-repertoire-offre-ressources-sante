@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-usage-context-type-vs | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORUsageContextTypeVS |
+| Draft as of 2026-08-21 | *Computable Name*:RORUsageContextTypeVS |
 
  
 Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixer le type de contexte d’usage du modèle de saisie avec le code EG ou le S pour Spécialité ordinale ou P01 pour le type de profession 
@@ -54,7 +54,7 @@ Extension du Value Set http://hl7.org/fhir/ValueSet/usage-context-type pour fixe
   "title" : "Value Set type pour le contexte d'usage du modèle de saisie",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

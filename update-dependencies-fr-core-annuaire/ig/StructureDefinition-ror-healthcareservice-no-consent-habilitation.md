@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-no-consent-habilitation | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORHealthcareServiceNoConsentHabilitation |
+| Draft as of 2026-08-21 | *Computable Name*:RORHealthcareServiceNoConsentHabilitation |
 
 Extension créée dans le cadre du ROR qui permet d’identifier les offres pour lesquelles un établissement est autorisé par le directeur général de l’ARS après avis du préfet, à prendre en charge des patients sans leur consentement.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
   "version" : "0.7.0",
   "name" : "RORHealthcareServiceNoConsentHabilitation",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

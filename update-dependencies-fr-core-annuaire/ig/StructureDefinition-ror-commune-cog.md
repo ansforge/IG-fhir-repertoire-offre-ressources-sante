@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-commune-cog | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORCommuneCog |
+| Draft as of 2026-08-21 | *Computable Name*:RORCommuneCog |
 
 Extension créée dans le cadre du ROR pour représenter le code officiel géographique (COG) de la commune dans laquelle le lieu est situé.
 
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-commune-cog.csv)
   "version" : "0.7.0",
   "name" : "RORCommuneCog",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

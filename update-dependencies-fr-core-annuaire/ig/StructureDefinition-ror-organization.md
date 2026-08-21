@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:ROROrganization |
+| Draft as of 2026-08-21 | *Computable Name*:ROROrganization |
 
  
 Profil créé dans le cadre du ROR pour décrire les entités juridiques (EJ) et entités géographiques (EG) du domaine sanitaire, médico-social et social immatriculées dans le FINESS 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization.csv
   "version" : "0.7.0",
   "name" : "ROROrganization",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

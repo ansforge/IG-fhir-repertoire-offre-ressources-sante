@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice-patient-type | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORHealthcareServicePatientType |
+| Draft as of 2026-08-21 | *Computable Name*:RORHealthcareServicePatientType |
 
 Extension créée dans le cadre du ROR pour décrire un ensemble de personnes qui répondent à des critères leur permettant de bénéficier de la prestation décrite
 
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
   "version" : "0.7.0",
   "name" : "RORHealthcareServicePatientType",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

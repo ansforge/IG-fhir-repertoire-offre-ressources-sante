@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-internal-organization | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORInternalOrganization |
+| Draft as of 2026-08-21 | *Computable Name*:RORInternalOrganization |
 
  
 Profil créé dans le cadre du ROR pour décrire les organisations internes de type pôle ou service, rattachées à une entité géographique (EG) 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-internal-organiz
   "version" : "0.7.0",
   "name" : "RORInternalOrganization",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-contact-confidentiality-level | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORContactConfidentialityLevel |
+| Draft as of 2026-08-21 | *Computable Name*:RORContactConfidentialityLevel |
 
 Extension créée dans le cadre du ROR qui permet de définir le niveau de restriction de l’accès aux attributs de la classe Contact
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-contact-confiden
   "version" : "0.7.0",
   "name" : "RORContactConfidentialityLevel",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

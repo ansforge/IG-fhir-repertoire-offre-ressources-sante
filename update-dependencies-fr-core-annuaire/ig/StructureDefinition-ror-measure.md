@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-measure | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORMeasure |
+| Draft as of 2026-08-21 | *Computable Name*:RORMeasure |
 
  
 Définition de l’indicateur de pilotage du ROR National 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-measure.csv), [E
   "version" : "0.7.0",
   "name" : "RORMeasure",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/output-task-ror-codesystem | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:OutputTaskRORCodeSystem |
+| Draft as of 2026-08-21 | *Computable Name*:OutputTaskRORCodeSystem |
 
  
 Code System pour la définition des éléments spécifiques de output dans ressource RORTask 
@@ -34,7 +34,7 @@ Code System pour la définition des éléments spécifiques de output dans resso
   "name" : "OutputTaskRORCodeSystem",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

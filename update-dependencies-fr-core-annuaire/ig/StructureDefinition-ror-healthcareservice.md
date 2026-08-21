@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORHealthcareService |
+| Draft as of 2026-08-21 | *Computable Name*:RORHealthcareService |
 
  
 Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d’une personne 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
   "version" : "0.7.0",
   "name" : "RORHealthcareService",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -335,6 +335,19 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
         "map" : "identifiantOffre",
         "comment" : "Similaire aux accès de metadonnee.identifiant"
       }]
+    },
+    {
+      "id" : "HealthcareService.identifier.type",
+      "path" : "HealthcareService.identifier.type",
+      "min" : 1,
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R355-TypeIdentifiantOffre/FHIR/TRE-R355-TypeIdentifiantOffre",
+          "code" : "35",
+          "display" : "Identifiant fonctionnel de l'offre connu par l'instance ROR"
+        }]
+      },
+      "mustSupport" : true
     },
     {
       "id" : "HealthcareService.active",

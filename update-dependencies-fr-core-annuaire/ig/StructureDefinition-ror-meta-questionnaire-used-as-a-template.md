@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-meta-questionnaire-used-as-a-template | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORMetaQuestionnaireUsedAsATemplate |
+| Draft as of 2026-08-21 | *Computable Name*:RORMetaQuestionnaireUsedAsATemplate |
 
 Extension créée dans le cadre du ROR qui correspond au questionnaire de saisie utilisé comme modèle associé à la ressource.
 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-meta-questionnai
   "version" : "0.7.0",
   "name" : "RORMetaQuestionnaireUsedAsATemplate",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

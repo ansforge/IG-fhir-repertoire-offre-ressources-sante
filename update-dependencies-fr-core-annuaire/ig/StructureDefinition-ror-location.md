@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORLocation |
+| Draft as of 2026-08-21 | *Computable Name*:RORLocation |
 
  
 Profil créé dans le cadre du ROR pour décrire l’espace disposant d’un ensemble de ressources pour réaliser une offre. Hérite techniquement de FRCoreLocationProfile (au lieu de la ressource Location nue) uniquement pour rester une cible de référence valide pour FRCoreHealthcareServiceProfile.location et AsPractitionerRoleProfile.location ; les compléments FR Core relatifs à la description d’une chambre (typeChambre, positionLit), qui répondent à un besoin différent de celui du ROR, restent 0..0/non utilisés. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-location.csv), [
   "version" : "0.7.0",
   "name" : "RORLocation",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -305,13 +305,13 @@ Other representations of profile: [CSV](StructureDefinition-ror-location.csv), [
       "id" : "Location.identifier:idExterneSynchro.type",
       "path" : "Location.identifier.type",
       "min" : 1,
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R354-TypeIdentifiantRessourceOperationnelle/FHIR/TRE-R354-TypeIdentifiantRessourceOperationnelle",
+          "code" : "26"
+        }]
+      },
       "mustSupport" : true
-    },
-    {
-      "id" : "Location.identifier:idExterneSynchro.type.coding.code",
-      "path" : "Location.identifier.type.coding.code",
-      "min" : 1,
-      "patternCode" : "26"
     },
     {
       "id" : "Location.identifier:idLocation",
@@ -331,13 +331,13 @@ Other representations of profile: [CSV](StructureDefinition-ror-location.csv), [
       "id" : "Location.identifier:idLocation.type",
       "path" : "Location.identifier.type",
       "min" : 1,
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_R354-TypeIdentifiantRessourceOperationnelle/FHIR/TRE-R354-TypeIdentifiantRessourceOperationnelle",
+          "code" : "25"
+        }]
+      },
       "mustSupport" : true
-    },
-    {
-      "id" : "Location.identifier:idLocation.type.coding.code",
-      "path" : "Location.identifier.type.coding.code",
-      "min" : 1,
-      "patternCode" : "25"
     },
     {
       "id" : "Location.status",

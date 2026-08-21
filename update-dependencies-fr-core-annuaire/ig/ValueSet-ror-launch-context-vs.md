@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-launch-context-vs | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORLaunchContextVS |
+| Draft as of 2026-08-21 | *Computable Name*:RORLaunchContextVS |
 
  
 Extension du Value Set https://hl7.org/fhir/uv/sdc/ValueSet-launchContext.html afin de l’adapter au contexte de lancement des questionnaires dans le cadre du ROR 
@@ -56,7 +56,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "Value Set pour le contexte standard du lancement d'un questionnaire dans le cadre du ROR",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

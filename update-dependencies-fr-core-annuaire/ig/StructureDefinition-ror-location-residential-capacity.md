@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-residential-capacity | *Version*:0.7.0 |
-| Draft as of 2026-08-20 | *Computable Name*:RORLocationResidentialCapacity |
+| Draft as of 2026-08-21 | *Computable Name*:RORLocationResidentialCapacity |
 
 Extension créée dans le cadre du ROR qui décrit un type d’habitation adapté à la réalisation d’une offre.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-location-residen
   "version" : "0.7.0",
   "name" : "RORLocationResidentialCapacity",
   "status" : "draft",
-  "date" : "2026-08-20T16:34:37+00:00",
+  "date" : "2026-08-21T09:28:33+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
