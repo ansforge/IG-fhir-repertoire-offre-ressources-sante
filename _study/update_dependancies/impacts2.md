@@ -200,7 +200,7 @@ Le contenu (identifiant OI, nom, `type[OIType]`, boîte MSS, dates) est structur
 
 `AsOrganizationProfile` porte nativement ces deux slices de `Organization.type` et impose une extension `as-ext-organization-types` (`min = 1`, héritée telle quelle par `ROROrganization` — une cardinalité minimale héritée ne peut jamais être relâchée par un profil dérivé). Après inspection précise de cette extension (`Extension.extension` interdit — `max = 0` —, `Extension.value[x]` de type `code` simple), il s'avère que **ce n'est pas une duplication de la valeur métier** : c'est un jeton technique **fixe**, identique sur toutes les instances, qui sert uniquement à distinguer les slices entre elles (`AsOrganizationProfile` fixe lui-même ce jeton par un `pattern` — `"statutJuridiqueINSEE"` pour l'un, `"sphParticipation"` pour l'autre). Le vrai code métier reste porté par `type.coding`, exactement comme avant.
 
-**Avant :**
+**Avant — `type[statutJuridiqueINSEE]` (statut juridique de l'EJ, `JDV-J199-StatutJuridique-ROR`) :**
 
 ```json
 "type": [{
@@ -220,7 +220,27 @@ Le contenu (identifiant OI, nom, `type[OIType]`, boîte MSS, dates) est structur
 }]
 ```
 
-(`valueCode: "sphParticipation"` pour l'autre slice — la même logique s'applique.)
+**Avant — `type[sphParticipation]` (modalité de participation au service public hospitalier de l'EG, `JDV-J202-ESPIC-ROR`) :**
+
+```json
+"type": [{
+  "coding": [{ "system": ".../JDV_J202-ESPIC-ROR", "code": "1" }]
+}]
+```
+
+**Après :**
+
+```json
+"type": [{
+  "coding": [{ "system": ".../JDV_J202-ESPIC-ROR", "code": "1" }],
+  "extension": [{
+    "url": "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-organization-types",
+    "valueCode": "sphParticipation"
+  }]
+}]
+```
+
+Même logique dans les deux cas : `valueCode` est un jeton fixe qui reprend littéralement le nom de la slice (`"statutJuridiqueINSEE"` ou `"sphParticipation"`), indépendant du code métier réellement porté par `.coding`.
 
 **Impact client :** aucun risque de divergence sémantique (le jeton est fixe et mécanique, pas une seconde source de vérité). En revanche c'est un **nouvel élément obligatoire** pour qu'une ressource `Organization` soit conforme à `ror-organization` : `sushi .` ne le signale pas (0 erreur — SUSHI ne valide pas d'instances, et le projet n'a pas d'exemple FSH pour `ROROrganization`), mais tout validateur FHIR strict (IG Publisher, HAPI...) rejettera une ressource `Organization` réelle qui ne le porte pas. **Rien à corriger dans les fichiers FSH de ce projet** — la contrainte est déjà correctement héritée et pré-remplie (`pattern`) au niveau du profil publié ; le travail restant est côté système producteur (l'API/exposition du ROR, hors de ce dépôt) : commencer à émettre ce jeton fixe sur ces deux slices.
 
@@ -231,13 +251,7 @@ Le contenu (identifiant OI, nom, `type[OIType]`, boîte MSS, dates) est structur
 - `providedBy` : `Reference(fr-organization or ROROrganization)` → `Reference(ROROrganization or RORInternalOrganization or RORCoreOrganizationUF)`
 - `location` / `coverageArea` : `Reference(Location or RORLocation)` → `Reference(RORLocation)` uniquement
 
-Le champ JSON `providedBy`/`location` lui-même (`{ "reference": "Organization/xxx" }`) ne change pas de forme, mais :
-
-```diff
-  "providedBy": { "reference": "Organization/oi-pole-chirurgie" }
-```
-
-est **désormais valide** (avant, seule une `ROROrganization` — EJ/EG — ou une `fr-organization` générique était une cible autorisée ; une offre portée par un pôle/service/UF n'était pas modélisable proprement). À l'inverse :
+Ces 2 références `providedBy`et `location` lui-même (`{ "reference": "Organization/xxx" }`) ne change pas de forme, mais leurs références sont resserées au strict nécessaire, il n'est plus possible, par exemple, de reférencé une Location qui autre qu'une RORLocation:
 
 ```diff
 - "location": { "reference": "Location/generic-fr-core-location-42" }
@@ -245,7 +259,7 @@ est **désormais valide** (avant, seule une `ROROrganization` — EJ/EG — ou u
 
 n'est **plus valide** si cette `Location` n'est pas conforme à `RORLocation` — auparavant une `Location` FHIR R4 nue (non-ROR) pouvait être référencée.
 
-**Impact client :** un client qui déréférence `providedBy` doit être prêt à recevoir une ressource `Organization/{id}` conforme à l'un de 3 profils désormais (contre 1 seul avant), et adapter en conséquence son affichage (« cette offre est portée par un pôle, pas par l'établissement lui-même »). Un client qui *envoie* des données vers l'API doit vérifier qu'il ne référence plus de `Location` générique.
+**Impact client :** un client qui déréférence `providedBy` doit être prêt à recevoir une ressource `Organization/{id}` conforme à l'un de 3 profils désormais (contre 1 seul auparavant qui mélangeait des attributs des EG/EJ et des OI).
 
 Par ailleurs `identifier.type` de `RORHealthcareService` devient formellement `1..1 MS` (fixé à `TRE-R355-TypeIdentifiantOffre#35`) — dans la pratique, l'exemple projet le renseignait déjà avant ce changement, donc **aucune rupture réelle attendue** pour des données déjà conformes aux bonnes pratiques du projet, mais c'est désormais une exigence de validation stricte.
 
