@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/ValueSet/ror-include-associated-data-vs | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RorIncludeAssociatedDataVS |
+| Draft as of 2026-08-26 | *Computable Name*:RorIncludeAssociatedDataVS |
 
  
 Value Set pour étendre http://hl7.org/fhir/uv/bulkdata/ValueSet/include-associated-data et utiliser _[custom value] pour utiliser le query parameter includeAssociatedData 
@@ -54,7 +54,7 @@ Ce jeu de valeurs n'est pas utilisé ici ; il peut être utilisé autre part (pa
   "title" : "Value Set afin d'étendre le Value Set pour query parameter includeAssociatedData",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

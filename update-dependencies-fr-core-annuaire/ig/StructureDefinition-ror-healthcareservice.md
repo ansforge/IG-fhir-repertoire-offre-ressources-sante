@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-healthcareservice | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORHealthcareService |
+| Draft as of 2026-08-26 | *Computable Name*:RORHealthcareService |
 
  
 Profil créé dans le cadre du ROR pour décrire les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d’une personne 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-healthcareservic
   "version" : "0.7.0",
   "name" : "RORHealthcareService",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

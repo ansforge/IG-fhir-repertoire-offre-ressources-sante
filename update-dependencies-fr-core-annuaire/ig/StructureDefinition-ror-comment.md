@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-comment | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORComment |
+| Draft as of 2026-08-26 | *Computable Name*:RORComment |
 
 Extension créée dans le cadre du ROR pour décrire le commentaire qui permet à la structure de donner des informations complémentaires
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-comment.csv), [E
   "version" : "0.7.0",
   "name" : "RORComment",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-welcome-type | *Version*:0.7.0 |
-| Active as of 2026-08-21 | *Computable Name*:RORSPOrganizationPriceWelcomeType |
+| Active as of 2026-08-26 | *Computable Name*:RORSPOrganizationPriceWelcomeType |
 
  
 Paramètre de recherche décrivant si le tarif s’applique à un hébergement permanent ou à un hébergement temporaire 
@@ -26,7 +26,7 @@ Paramètre de recherche décrivant si le tarif s’applique à un hébergement p
   "version" : "0.7.0",
   "name" : "RORSPOrganizationPriceWelcomeType",
   "status" : "active",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-equipment | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORLocationEquipment |
+| Draft as of 2026-08-26 | *Computable Name*:RORLocationEquipment |
 
 Extension créée dans le cadre du ROR pour décrire une ressource matérielle discriminante pour la réalisation d’une prestation. Cette extension a été créée, car Device ne correspondait pas à la définition de l’équipement pour le ROR. Device représente une instance d’un équipement alors l’équipement pour le ROR correspond juste au nombre d’équipement de même type.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-location-equipme
   "version" : "0.7.0",
   "name" : "RORLocationEquipment",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

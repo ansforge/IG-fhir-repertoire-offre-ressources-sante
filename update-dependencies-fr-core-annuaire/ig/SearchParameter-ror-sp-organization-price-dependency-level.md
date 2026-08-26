@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-organization-price-dependency-level | *Version*:0.7.0 |
-| Active as of 2026-08-21 | *Computable Name*:RORSPOrganizationPriceDependecyLevel |
+| Active as of 2026-08-26 | *Computable Name*:RORSPOrganizationPriceDependecyLevel |
 
  
 Paramètre de recherche sur le niveau de dépendance de la personne âgée accueillie 
@@ -26,7 +26,7 @@ Paramètre de recherche sur le niveau de dépendance de la personne âgée accue
   "version" : "0.7.0",
   "name" : "RORSPOrganizationPriceDependecyLevel",
   "status" : "active",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

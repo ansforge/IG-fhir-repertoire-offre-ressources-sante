@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:ROROrganization |
+| Draft as of 2026-08-26 | *Computable Name*:ROROrganization |
 
  
 Profil créé dans le cadre du ROR pour décrire les entités juridiques (EJ) et entités géographiques (EG) du domaine sanitaire, médico-social et social immatriculées dans le FINESS 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization.csv
   "version" : "0.7.0",
   "name" : "ROROrganization",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -202,6 +202,21 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization.csv
       "id" : "Organization.extension",
       "path" : "Organization.extension",
       "min" : 1
+    },
+    {
+      "id" : "Organization.extension:usePeriod",
+      "path" : "Organization.extension",
+      "sliceName" : "usePeriod",
+      "mapping" : [{
+        "identity" : "specmetier-to-ROROrganization-ej",
+        "map" : "dateFermeture (uniquement)",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      },
+      {
+        "identity" : "specmetier-to-ROROrganization-eg",
+        "map" : "dateOuverture et dateFermeture",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
     },
     {
       "id" : "Organization.extension:ror-organization-price",
@@ -432,17 +447,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization.csv
         "code" : "Extension",
         "profile" : ["http://hl7.org/fhir/StructureDefinition/organization-period"]
       }],
-      "mustSupport" : true,
-      "mapping" : [{
-        "identity" : "specmetier-to-ROROrganization-ej",
-        "map" : "dateFermeture (uniquement)",
-        "comment" : "Similaire aux accès de metadonnee.identifiant"
-      },
-      {
-        "identity" : "specmetier-to-ROROrganization-eg",
-        "map" : "dateOuverture et dateFermeture",
-        "comment" : "Similaire aux accès de metadonnee.identifiant"
-      }]
+      "mustSupport" : true
     },
     {
       "id" : "Organization.extension:ror-meta-comment",

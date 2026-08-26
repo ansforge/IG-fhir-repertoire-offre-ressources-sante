@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/CodeSystem/ror-include-associated-data-code-system | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RorIncludeAssociatedDataCodeSystem |
+| Draft as of 2026-08-26 | *Computable Name*:RorIncludeAssociatedDataCodeSystem |
 
  
 Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-associated-data.html pour ajouter l’opération export pour le ROR 
@@ -35,7 +35,7 @@ Code system pour étendre https://hl7.org/fhir/uv/bulkdata/CodeSystem-include-as
   "title" : "Code System (CS) utilisé pour étendre le CS original avec le query parameter includeAssociatedData",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

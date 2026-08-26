@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-confidence-geolocation | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORConfidenceGeolocation |
+| Draft as of 2026-08-26 | *Computable Name*:RORConfidenceGeolocation |
 
 Extension créée dans le cadre du ROR. Il s’agit d’une information supplémentaire pour signaler si la longitude et la latitude sont fiables.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-confidence-geolo
   "version" : "0.7.0",
   "name" : "RORConfidenceGeolocation",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

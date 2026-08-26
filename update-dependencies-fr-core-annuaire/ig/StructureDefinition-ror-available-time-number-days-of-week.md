@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-available-time-number-days-of-week | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORAvailableTimeNumberDaysofWeek |
+| Draft as of 2026-08-26 | *Computable Name*:RORAvailableTimeNumberDaysofWeek |
 
 Extension créée dans le cadre du ROR pour indiquer le numéro du jour dans la semaine.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-available-time-n
   "version" : "0.7.0",
   "name" : "RORAvailableTimeNumberDaysofWeek",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

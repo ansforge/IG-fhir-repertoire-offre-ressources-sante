@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-drop-zone | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:ROROrganizationDropZone |
+| Draft as of 2026-08-26 | *Computable Name*:ROROrganizationDropZone |
 
 Extension créée dans le cadre du ROR pour préciser l’existence d’une zone de poser pour hélicoptère sur le site concerné.
 
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization-dro
   "version" : "0.7.0",
   "name" : "ROROrganizationDropZone",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

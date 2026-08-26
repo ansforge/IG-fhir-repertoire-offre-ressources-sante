@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORLocation |
+| Draft as of 2026-08-26 | *Computable Name*:RORLocation |
 
  
 Profil créé dans le cadre du ROR pour décrire l’espace disposant d’un ensemble de ressources pour réaliser une offre. Hérite techniquement de FRCoreLocationProfile (au lieu de la ressource Location nue) uniquement pour rester une cible de référence valide pour FRCoreHealthcareServiceProfile.location et AsPractitionerRoleProfile.location ; les compléments FR Core relatifs à la description d’une chambre (typeChambre, positionLit), qui répondent à un besoin différent de celui du ROR, restent 0..0/non utilisés. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-location.csv), [
   "version" : "0.7.0",
   "name" : "RORLocation",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

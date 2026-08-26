@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-healthcareservice-psychiatric-sector | *Version*:0.7.0 |
-| Active as of 2026-08-21 | *Computable Name*:RORHealthcareServicePsychiatricSector |
+| Active as of 2026-08-26 | *Computable Name*:RORHealthcareServicePsychiatricSector |
 
  
 Paramètre de recherche décrivrant le secteur psychiatrique de l’offre opérationnelle 
@@ -26,7 +26,7 @@ Paramètre de recherche décrivrant le secteur psychiatrique de l’offre opéra
   "version" : "0.7.0",
   "name" : "RORHealthcareServicePsychiatricSector",
   "status" : "active",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

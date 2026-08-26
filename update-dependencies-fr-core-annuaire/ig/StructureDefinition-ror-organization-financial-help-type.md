@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-financial-help-type | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:ROROrganizationFinancialHelpType |
+| Draft as of 2026-08-26 | *Computable Name*:ROROrganizationFinancialHelpType |
 
 Extension créée dans le cadre du ROR pour préciser l’aide financière pour laquelle l’EG dispose d’une habilitation ou conventionnement qui permet aux personnes accueillies d’en bénéficier si elles remplissent les conditions.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization-fin
   "version" : "0.7.0",
   "name" : "ROROrganizationFinancialHelpType",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

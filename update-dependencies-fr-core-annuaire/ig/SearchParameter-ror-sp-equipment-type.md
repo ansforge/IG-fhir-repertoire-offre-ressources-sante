@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-equipment-type | *Version*:0.7.0 |
-| Active as of 2026-08-21 | *Computable Name*:RORSPEquipmentType |
+| Active as of 2026-08-26 | *Computable Name*:RORSPEquipmentType |
 
  
 Paramètre de recherche pour récupérer le type d’un équipement. 
@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer le type d’un équipement.
   "version" : "0.7.0",
   "name" : "RORSPEquipmentType",
   "status" : "active",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

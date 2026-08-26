@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-coordinate-reliability | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORCoordinateReliability |
+| Draft as of 2026-08-26 | *Computable Name*:RORCoordinateReliability |
 
 Extension créée dans le cadre du ROR pour signaler si les informations des coordonnées géographiques sont issues d’un mode de production qui assure un certain niveau de fiabilité
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-coordinate-relia
   "version" : "0.7.0",
   "name" : "RORCoordinateReliability",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

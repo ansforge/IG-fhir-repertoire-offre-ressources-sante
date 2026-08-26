@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-organization-accessibility-location | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:ROROrganizationAccessibilityLocation |
+| Draft as of 2026-08-26 | *Computable Name*:ROROrganizationAccessibilityLocation |
 
 Extension créée dans le cadre du ROR qui précise dans quelle mesure les locaux sont conformes aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public.
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-organization-acc
   "version" : "0.7.0",
   "name" : "ROROrganizationAccessibilityLocation",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-core-organization-uf | *Version*:0.7.0 |
-| Draft as of 2026-08-21 | *Computable Name*:RORCoreOrganizationUF |
+| Draft as of 2026-08-26 | *Computable Name*:RORCoreOrganizationUF |
 
  
 Profil créé dans le cadre du ROR pour décrire les unités fonctionnelles (UF) médicales, rattachées à un pôle/service ou à une entité géographique (EG) 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-ror-core-organizatio
   "version" : "0.7.0",
   "name" : "RORCoreOrganizationUF",
   "status" : "draft",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -163,6 +163,20 @@ Other representations of profile: [CSV](StructureDefinition-ror-core-organizatio
       "min" : 1
     },
     {
+      "id" : "Organization.extension:usePeriod",
+      "path" : "Organization.extension",
+      "sliceName" : "usePeriod"
+    },
+    {
+      "id" : "Organization.extension:usePeriod.value[x].end",
+      "path" : "Organization.extension.value[x].end",
+      "mapping" : [{
+        "identity" : "specmetier-to-RORCoreOrganizationUF-oi",
+        "map" : "dateOuverture",
+        "comment" : "Similaire aux accès de metadonnee.identifiant"
+      }]
+    },
+    {
       "id" : "Organization.extension:ror-organization-reopening-date",
       "path" : "Organization.extension",
       "sliceName" : "ror-organization-reopening-date",
@@ -210,15 +224,6 @@ Other representations of profile: [CSV](StructureDefinition-ror-core-organizatio
         "profile" : ["http://hl7.org/fhir/StructureDefinition/organization-period"]
       }],
       "mustSupport" : true
-    },
-    {
-      "id" : "Organization.extension:organization-period.value[x].end",
-      "path" : "Organization.extension.value[x].end",
-      "mapping" : [{
-        "identity" : "specmetier-to-RORCoreOrganizationUF-oi",
-        "map" : "dateOuverture",
-        "comment" : "Similaire aux accès de metadonnee.identifiant"
-      }]
     },
     {
       "id" : "Organization.extension:ror-meta-comment",

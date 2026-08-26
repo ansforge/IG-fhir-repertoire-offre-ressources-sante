@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/ror/SearchParameter/ror-sp-limit-value | *Version*:0.7.0 |
-| Active as of 2026-08-21 | *Computable Name*:RORSPLimitValue |
+| Active as of 2026-08-26 | *Computable Name*:RORSPLimitValue |
 
  
 Paramètre de recherche pour récupérer la valeur limite (poids, taille, etc..) de l’équipement 
@@ -26,7 +26,7 @@ Paramètre de recherche pour récupérer la valeur limite (poids, taille, etc..)
   "version" : "0.7.0",
   "name" : "RORSPLimitValue",
   "status" : "active",
-  "date" : "2026-08-21T16:03:39+00:00",
+  "date" : "2026-08-26T13:04:13+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
