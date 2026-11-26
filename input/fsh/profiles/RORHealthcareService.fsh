@@ -76,7 +76,7 @@ Description: "Profil créé dans le cadre du ROR pour décrire les prestations q
 * characteristic ^slicing.discriminator[0].type = #value
 * characteristic ^slicing.discriminator[=].path = "coding.system"
 * characteristic ^slicing.discriminator[+].type = #value
-* characteristic ^slicing.discriminator[=].path = "extension(https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type)"
+* characteristic ^slicing.discriminator[=].path = "extension('https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-act-type').value"
 * characteristic ^slicing.rules = #open
 * characteristic contains
     receptionType 0..1 MS and
